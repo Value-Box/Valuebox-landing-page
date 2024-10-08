@@ -336,7 +336,7 @@ body{
 
 .leftArrow,.rightArrow{
   background-color: #002882 !important;
-  color: white;
+  color: white  !important;
 }
 .card-text {
   height: 85px;
