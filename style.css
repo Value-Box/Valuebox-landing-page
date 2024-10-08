@@ -18,7 +18,7 @@
     gap: 20px;
     background-color: white; /* Background for visibility */
 }
-main,header{
+main{
   overflow: hidden;
 }
 .logo {
@@ -586,7 +586,7 @@ main,header{
         transition: .3s ease;
         position: absolute;
         width: 100vw; /* Full width viewport */
-        top: 77px;
+        top: 69px;
         left: 0;
         width: 100%;
         text-align: end;
@@ -637,7 +637,7 @@ main,header{
     .checkBox:not(:checked) ~ .links {
         max-height: 0; /* Collapsed height */
         opacity: 0; /* Hidden */
-        width: 100vw; /* Maintain full width */
+        width: 96vw; /* Maintain full width */
     }
 
     /* Show the pseudo-elements with animation */
