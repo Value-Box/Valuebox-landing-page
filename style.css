@@ -18,7 +18,9 @@
     gap: 20px;
     background-color: white; /* Background for visibility */
 }
-
+main,header{
+  overflow: hidden;
+}
 .logo {
   display: flex;
   width: 267.473px;
@@ -1014,7 +1016,7 @@ footer .row {
     text-align: right;
  }
  .header{
-    padding: 15px 65px 15px 20px;
+    padding: 15px 15px 15px 20px;
  }
  .headerButtons button{
     padding: 5px 15px;
@@ -1198,7 +1200,7 @@ left: 10px;
     left: 10px;
     }
      .headerButtons button{
-        padding: 3px 8px;
+        padding: 5px 12px;
         border-radius: 5px;
         font-size: 14px;
         margin-left: 5px;
