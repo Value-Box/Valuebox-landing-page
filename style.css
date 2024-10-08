@@ -4,9 +4,7 @@
   margin: 0;
   padding: 0;
 }
-body{
-  overflow-x: hidden;
-}
+
 .header {
   position: sticky;
   top: 0;
@@ -20,9 +18,9 @@ body{
   gap: 20px;
   background-color: white; /* Background for visibility */
 }
-/* main,header {
+main {
   overflow: hidden;
-} */
+}
 .logo {
   display: flex;
   width: 267.473px;
@@ -336,7 +334,7 @@ body{
 
 .leftArrow,.rightArrow{
   background-color: #002882 !important;
-  color: white  !important;
+  color: white;
 }
 .card-text {
   height: 85px;
