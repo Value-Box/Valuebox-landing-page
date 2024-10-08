@@ -4,23 +4,25 @@
   margin: 0;
   padding: 0;
 }
-
+body{
+  overflow-x: hidden;
+}
 .header {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000; /* Ensure it stays above other content */
-    display: flex;
-    padding: 15px 50px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-    background-color: white; /* Background for visibility */
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it stays above other content */
+  display: flex;
+  padding: 15px 50px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  background-color: white; /* Background for visibility */
 }
-main{
+/* main,header {
   overflow: hidden;
-}
+} */
 .logo {
   display: flex;
   width: 267.473px;
@@ -37,11 +39,12 @@ main{
   line-height: 36px;
 }
 .links {
+  margin-left: 28px;
   display: flex;
   align-items: center;
   gap: 40px;
   padding: 0px auto;
-  transition:0.5s ease;
+  transition: 0.5s ease;
 }
 .links a {
   text-decoration: none;
@@ -69,31 +72,31 @@ main{
   color: white;
 }
 .links .loginBtn {
-    background-color: white;
-    border: 1.5px solid #002882;
-    color: #33539b;
-    transition: 0.5s;
-  }
-  .links .loginBtn:hover {
-    background-color: #002882;
-    color: white;
-  }
-  .links button {
-    display: none; /* Button hidden initially */
-    padding: 10px 40px;
-    border-radius: 10px;
-    cursor: pointer;
-  }
+  background-color: white;
+  border: 1.5px solid #002882;
+  color: #33539b;
+  transition: 0.5s;
+}
+.links .loginBtn:hover {
+  background-color: #002882;
+  color: white;
+}
+.links button {
+  display: none; /* Button hidden initially */
+  padding: 10px 40px;
+  border-radius: 10px;
+  cursor: pointer;
+}
 .headerButtons .joinBtn {
   background-color: #002882;
   color: white;
   border: 1.5px solid #002882;
 }
-.hamburger{
-    display: none;
+.hamburger {
+  display: none;
 }
-.closeIcon{
-    display: none;
+.closeIcon {
+  display: none;
 }
 #carouselExampleCaptions {
   height: 430px;
@@ -201,13 +204,12 @@ main{
 }
 
 .imgText .showcase-your-products {
-  
   position: relative;
   font-size: 23px;
   line-height: 32px;
   font-weight: 500;
   color: #fff;
-  text-align: left;
+  /* text-align: left; */
   display: inline-block;
 }
 
@@ -222,13 +224,13 @@ main{
   top: 40px;
   cursor: pointer;
 }
-.responsiveBg{
-    display: none;
+.responsiveBg {
+  display: none;
 }
-.crouselImgbg{
-    background-color: #E6EAF3;
-    border-radius: 50%;
-    height: 235px;
+.crouselImgbg {
+  background-color: #e6eaf3;
+  border-radius: 50%;
+  height: 235px;
 }
 .span {
   font-weight: 500;
@@ -256,36 +258,34 @@ main{
   text-align: center;
   font-size: 19.1px;
   color: #999;
-  font-family: Sarabun;
 }
 
 .sellers-guide {
-    position: relative;
-    letter-spacing: -0.02em;
-    line-height: 60px;
-  }
-  .explore-the-content {
-    align-self: stretch;
-    position: relative;
-    font-size: 24px;
-    line-height: 32px;
-    color: #999;
-  }
-  .sellers-guide-parent {
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 20px;
-    text-align: left;
-    font-size: 48px;
-    color: #1a1a1a;
-    font-family: Sarabun;
-  }
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 60px;
+}
+.explore-the-content {
+  align-self: stretch;
+  position: relative;
+  font-size: 24px;
+  line-height: 32px;
+  color: #999;
+}
+.sellers-guide-parent {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+  text-align: left;
+  font-size: 48px;
+  color: #1a1a1a;
+  /* font-family: Sarabun; */
+}
 
-  
 .cardSection {
   width: 100%;
   position: relative;
@@ -301,23 +301,45 @@ main{
   text-align: left;
   font-size: 48px;
   color: #1a1a1a;
-  font-family: Sarabun;
+  /* font-family: Sarabun; */
 }
 .cards {
   display: flex;
   gap: 0px;
 }
 .card {
-    position: absolute;
-    right: -20px;
-    
-  }
-  .cardCrousel{
-    position: absolute;
-    right: 0px;
-  }
+  position: absolute;
+  right: -20px;
+}
+.cardCrousel {
+  position: absolute;
+  right: -14px;
+}
+
+/* Override Bootstrap default indicator styling */
+.carousel-indicators [data-bs-target] {
+  background-color: #0032a3 !important; /* Apply your color */
+  width: 11px !important;  /* Custom width */
+  height: 11px !important; /* Custom height */
+  border-radius: 50%;
+  margin: 0 5px ; /* Spacing between indicators */
+  border: none; /* Remove border */
+  opacity: 0.5; /* Lower opacity for inactive indicators */
+  transition: opacity 0.6s ease;
+}
+
+/* Active state for the current indicator */
+.carousel-indicators .active {
+  background-color: #0032a3 !important; /* Keep the active one blueviolet */
+  opacity: 1 !important; /* Full opacity for the active indicator */
+}
+
+.leftArrow,.rightArrow{
+  background-color: #002882 !important;
+  color: white;
+}
 .card-text {
-    height: 85px;
+  height: 85px;
   font-size: 16.2px;
   line-height: 20px;
   color: #999;
@@ -335,7 +357,7 @@ main{
   box-sizing: border-box;
   text-align: left;
   font-size: 16px;
-  font-family: Sarabun;
+  /* font-family: Sarabun; */
 }
 .card-title div {
   position: relative;
@@ -347,9 +369,8 @@ main{
   -webkit-text-fill-color: transparent;
 }
 
-
 .card a {
-  font-family: Sarabun;
+  /* font-family: Sarabun; */
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -364,8 +385,8 @@ main{
   gap: 2px;
   align-self: stretch;
 }
-.cardSmScreen{
-    display: none;
+.cardSmScreen {
+  display: none;
 }
 .utubeVideo {
   position: relative; /* Positioning context for absolute elements */
@@ -388,13 +409,13 @@ main{
 }
 
 .utubeVideo iframe {
-    position: relative;
-    top: -7%;
-    z-index: 2; /* Above the image */
-    width: 50%; /* Adjust width as needed */
-    height: 50%; /* Adjust height as needed */
-    border: none; /* Remove default border */
-  }
+  position: relative;
+  top: -7%;
+  z-index: 2; /* Above the image */
+  width: 50%; /* Adjust width as needed */
+  height: 50%; /* Adjust height as needed */
+  border: none; /* Remove default border */
+}
 
 .service {
   display: flex;
@@ -495,7 +516,6 @@ main{
   );
 }
 
-
 .quoteIcon {
   background: linear-gradient(
     90deg,
@@ -514,275 +534,268 @@ main{
 }
 
 .storyText {
-    position: absolute;
-    left: 10%;
-    top: 10%;
-  }
+  position: absolute;
+  left: 10%;
+  top: 10%;
+}
 
-  .founderImg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    align-items: flex-end;
-  }
-  
-  /* Existing styles remain unchanged */
+.founderImg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Existing styles remain unchanged */
 
 .founderImg img {
-    max-width: 75%;
-    margin-right: -50px;
+  max-width: 75%;
+  margin-right: -50px;
 }
 
 /* Ensure the background image maintains a consistent height */
 .heroSection1 {
-    width: 100%;
-    height: 400px; /* Set a default height */
-    object-fit: cover; /* Ensures the image covers the area without distorting */
-    display: block; /* Ensure heroSection1 is displayed initially */
+  width: 100%;
+  height: 400px; /* Set a default height */
+  object-fit: cover; /* Ensures the image covers the area without distorting */
+  display: block; /* Ensure heroSection1 is displayed initially */
 }
 
 .heroSection2 {
-    display: none; /* Hide heroSection2 by default */
+  display: none; /* Hide heroSection2 by default */
 }
-.checkBox{
-    display: none;
+.checkBox {
+  display: none;
 }
 
-  
-  
-   
 @media (max-width: 1100px) {
-    .hamburger {
-        display: inline;
-        padding: 10px 20px;
-        cursor: pointer;
-        background-color: #F2F2F2;
-        color: #666666;
-        border-radius: 10px;
-    }
-  
-    .closeIcon {
-        display: none;
-        padding: 10px 20px;
-        cursor: pointer;
-        background-color: #F2F2F2;
-        color: #666666;
-        border-radius: 10px;
-    }
+  .hamburger {
+    display: inline;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #f2f2f2;
+    color: #666666;
+    border-radius: 10px;
+  }
 
-    .closeIcon i {
-        font-size: 24px;
-    }
+  .closeIcon {
+    display: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #f2f2f2;
+    color: #666666;
+    border-radius: 10px;
+  }
 
-    /* Links container */
-    .links {
-        display: flex;
-        flex-direction: column;
-        max-height: 0; /* Initially collapsed */
-        opacity: 0;
-        overflow: hidden;
-        transition: .3s ease;
-        position: absolute;
-        width: 100vw; /* Full width viewport */
-        top: 69px;
-        left: 0;
-        width: 100%;
-        text-align: end;
-        background-color: #002882;
-        z-index: 1;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Depth effect */
-        border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
-    }
-    .links a{
-        color: white;
-    }
-    .links .loginBtn{
-        display: none;
-    }
-    /* Animating before and after pseudo-elements for a smooth opening effect */
-    .links::before,
-    .links::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        right: 0;
-        height: 4px;
-        opacity: 0;
-        width: 100vw;
-        transition: .5s;
-    }
+  .closeIcon i {
+    font-size: 24px;
+  }
 
-    /* Before pseudo-element for top border animation */
-    .links::before {
-        top: 0;
-    }
+  /* Links container */
+  .links {
+    display: flex;
+    flex-direction: column;
+    max-height: 0; /* Initially collapsed */
+    opacity: 0;
+    overflow: hidden;
+    transition: 0.3s ease;
+    position: absolute;
+    width: 100vw; /* Full width viewport */
+    top: 69px;
+    left: 0;
+    width: 100%;
+    text-align: end;
+    background-color: #002882;
+    z-index: 1;
+    margin-left: 0px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Depth effect */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  }
+  .links a {
+    color: white;
+  }
+  .links .loginBtn {
+    display: none;
+  }
+  /* Animating before and after pseudo-elements for a smooth opening effect */
+  .links::before,
+  .links::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 4px;
+    opacity: 0;
+    width: 100vw;
+    transition: 0.5s;
+  }
 
-    /* After pseudo-element for bottom border animation */
-    .links::after {
-        bottom: 0;
-        transition: .5s;
-    }
+  /* Before pseudo-element for top border animation */
+  .links::before {
+    top: 0;
+  }
 
-    /* Checkbox checked: animate links open */
-    .checkBox:checked ~ .links {
-        max-height: 400px; /* Final expanded height */
-        opacity: 1; /* Fully visible */
-        width: 100vw; /* Full viewport width when open */
-        padding: 50px 0px;
-    }
+  /* After pseudo-element for bottom border animation */
+  .links::after {
+    bottom: 0;
+    transition: 0.5s;
+  }
 
-    /* When not checked, still keep width 100vw */
-    .checkBox:not(:checked) ~ .links {
-        max-height: 0; /* Collapsed height */
-        opacity: 0; /* Hidden */
-        width: 96vw; /* Maintain full width */
-    }
+  /* Checkbox checked: animate links open */
+  .checkBox:checked ~ .links {
+    max-height: 400px; /* Final expanded height */
+    opacity: 1; /* Fully visible */
+    max-width: 100%; /* Full viewport width when open */
+    padding: 50px 0px;
+  }
 
-    /* Show the pseudo-elements with animation */
-    .checkBox:checked ~ .links::before,
-    .checkBox:checked ~ .links::after {
-        opacity: 1;
-        transform: translateY(0); /* Move into view */
-    }
+  /* When not checked, still keep width 100vw */
+  .checkBox:not(:checked) ~ .links {
+    max-height: 0; /* Collapsed height */
+    opacity: 0; /* Hidden */
+    width: 96vw; /* Maintain full width */
+  }
 
-    /* Buttons inside links should display */
-    /* .checkBox:checked ~ .links button {
+  /* Show the pseudo-elements with animation */
+  .checkBox:checked ~ .links::before,
+  .checkBox:checked ~ .links::after {
+    opacity: 1;
+    transform: translateY(0); /* Move into view */
+  }
+
+  /* Buttons inside links should display */
+  /* .checkBox:checked ~ .links button {
         display: inline-block;
     } */
-    .checkBox:checked ~ .links button:hover {
-        border: 1px solid white;
-    }
+  .checkBox:checked ~ .links button:hover {
+    border: 1px solid white;
+  }
 
-    /* Show close icon and hide hamburger */
-    .checkBox:checked ~ .closeIcon {
-        display: inline; /* Show close icon */
-    }
+  /* Show close icon and hide hamburger */
+  .checkBox:checked ~ .closeIcon {
+    display: inline; /* Show close icon */
+  }
 
-    .checkBox:checked ~ .hamburger {
-        display: none; /* Hide hamburger icon */
-    }
+  .checkBox:checked ~ .hamburger {
+    display: none; /* Hide hamburger icon */
+  }
 
-    .headerButtons {
-        text-align: center;
-    }
+  .headerButtons {
+    margin-left: auto;
+    text-align: center;
+  }
 }
 
-
-
 @media (max-width: 1120px) {
-    .heroSection1 {
-        display: none; /* Hide the first hero section on smaller screens */
-    }
+  .heroSection1 {
+    display: none; /* Hide the first hero section on smaller screens */
+  }
 
-    .heroSection2 {
-        display: block; /* Show heroSection2 on smaller screens */
-        width: 100%;
-        height: 380px; /* Adjust the height as needed */
-        object-fit: cover; /* Make sure it fits the container properly */
-    }
+  .heroSection2 {
+    display: block; /* Show heroSection2 on smaller screens */
+    width: 100%;
+    height: 380px; /* Adjust the height as needed */
+    object-fit: cover; /* Make sure it fits the container properly */
+  }
 
-    .founderImg img {
-        max-width: 80%; /* Reduce the founder image size */
-        margin-top: 20px; /* Add spacing between text and image */
-    }
-
+  .founderImg img {
+    max-width: 80%; /* Reduce the founder image size */
+    margin-top: 20px; /* Add spacing between text and image */
+  }
 }
 
 @media (max-width: 1024px) {
-    .heroSection1 {
-        display: none; /* Hide the first hero section on smaller screens */
-    }
+  .heroSection1 {
+    display: none; /* Hide the first hero section on smaller screens */
+  }
 
-    .heroSection2 {
-        display: block; /* Show heroSection2 on smaller screens */
-        width: 100%;
-        height: 400px; /* Adjust the height as needed */
-        object-fit: cover; /* Make sure it fits the container properly */
-    }
+  .heroSection2 {
+    display: block; /* Show heroSection2 on smaller screens */
+    width: 100%;
+    height: 400px; /* Adjust the height as needed */
+    object-fit: cover; /* Make sure it fits the container properly */
+  }
 
-    /* Adjust the founder image size */
-    .founderImg img {
-        max-width: 32%; /* Reduce the founder image size */
-        margin-top: 20px; /* Add spacing between text and image */
-    }
-    .reach-more{
-        margin-bottom: 0px;
-    }
-    #carouselExampleCaptions{
-        height: 400px;
-    }
+  /* Adjust the founder image size */
+  .founderImg img {
+    max-width: 32%; /* Reduce the founder image size */
+    margin-top: 20px; /* Add spacing between text and image */
+  }
+  .reach-more {
+    margin-bottom: 0px;
+  }
+  #carouselExampleCaptions {
+    height: 400px;
+  }
 }
 
-
-
 @media (max-width: 768px) {
-    .heroSection1 {
-        display: none; /* Hide the first hero section on smaller screens */
-    }
+  .heroSection1 {
+    display: none; /* Hide the first hero section on smaller screens */
+  }
 
-    /* Reduce the height further for mobile devices */
-    .heroSection2 {
-        height: 250px;
-    }
+  /* Reduce the height further for mobile devices */
+  .heroSection2 {
+    height: 250px;
+  }
 
-    /* Adjust founder image */
-    .founderImg img {
-        max-width: 26%;
-        margin-top: 15px;
-    }
-    .successText{
-        width: 100%;
-    }
+  /* Adjust founder image */
+  .founderImg img {
+    max-width: 26%;
+    margin-top: 15px;
+  }
+  .successText {
+    width: 100%;
+  }
 }
 
 /* New media query for 992px to 1024px */
 @media (min-width: 992px) and (max-width: 1024px) {
-    .founderImg{
-        max-width: 100%;
-    }
-    .storyText{
-        width: 100%;
-    }
-    .founderImg img {
-        max-width: 66%;
-        margin-top: 15px;
-    }
+  .founderImg {
+    max-width: 100%;
+  }
+  .storyText {
+    width: 100%;
+  }
+  .founderImg img {
+    max-width: 66%;
+    margin-top: 15px;
+  }
 }
 .cards .card-container {
-    flex: 0 0 25%;  /* This will allow 4 cards per row on large screens */
-    max-width: 25%; /* Adjusted to fit four cards */
+  flex: 0 0 25%; /* This will allow 4 cards per row on large screens */
+  max-width: 25%; /* Adjusted to fit four cards */
+  margin-bottom: 20px;
+}
+
+/* On small, medium, and large screens, set the width to 46% */
+@media (min-width: 576px) and (max-width: 992px) {
+  .cards .card-container {
+    flex: 0 0 49%; /* This will allow 2 cards per row on medium screens */
+    max-width: 49%; /* Adjusted to fit two cards */
     margin-bottom: 20px;
   }
-  
-  /* On small, medium, and large screens, set the width to 46% */
-  @media (min-width: 576px) and (max-width: 992px) {
-    .cards .card-container {
-      flex: 0 0 49%; /* This will allow 2 cards per row on medium screens */
-      max-width: 49%; /* Adjusted to fit two cards */
-      margin-bottom: 20px;
-    }
-    .card-text{
-        height: 60px;
-    }
+  .card-text {
+    height: 60px;
   }
   
-  /* For extra small screens, no additional styling needed as Bootstrap handles it */
-  
-  
-@media (max-width: 950px) {
-    .headerButtons .loginBtn{
-        display: none;
-    }
-    .headerButtons{
-       text-align: right;
-    }
-    .checkBox:checked ~ .links button {
-        display: inline-block;
-    }
 }
-  
+
+/* For extra small screens, no additional styling needed as Bootstrap handles it */
+
+@media (max-width: 950px) {
+  .headerButtons .loginBtn {
+    display: none;
+  }
+  .headerButtons {
+    text-align: right;
+  }
+  .checkBox:checked ~ .links button {
+    display: inline-block;
+  }
+}
 
 .siteExperience {
   background-color: #e6eaf3;
@@ -904,7 +917,6 @@ footer .row {
   border-radius: 24px;
 }
 
-
 @media (max-width: 1200px) {
   .serviceImg {
     text-align: center;
@@ -932,7 +944,6 @@ footer .row {
     position: absolute;
     left: -36%;
   }
-
 }
 @media (max-width: 992px) {
   .serviceImg {
@@ -945,47 +956,47 @@ footer .row {
     display: block;
   }
   .founderImg img {
-    max-width: 46%; 
-    margin-top: 20px; 
-}
-.heroSection2 {
-    display: block; 
-    width: 100%;
-    height: 650px; 
-    object-fit: cover; 
-}
-.row {
-    padding: 80px 20px 80px 20px;
-    
+    max-width: 46%;
+    margin-top: 20px;
   }
-  
+  .heroSection2 {
+    display: block;
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+  }
+  .row {
+    padding: 80px 20px 80px 20px;
+  }
+
   .utubeVideo iframe {
-   position: absolute;
-   top: 7%;
-   width: 50%;
+    position: absolute;
+    top: 7%;
+    width: 50%;
     height: 80%;
   }
   .utubeVideo {
     width: 100%;
-    height: 50vh; 
+    height: 50vh;
   }
-  #carouselExampleCaptions{
+  #carouselExampleCaptions {
     height: 350px;
   }
-  .reach-more-sell-better-container .reach-more, .sell-better{
+  .reach-more-sell-better-container .reach-more,
+  .sell-better {
     font-size: 40px;
   }
-  .imgText button{
+  .imgText button {
     top: 16px;
   }
-  .imgText .showcase-your-products{
+  .imgText .showcase-your-products {
     line-height: 28px;
   }
 }
 @media (max-width: 900px) {
-    #carouselExampleCaptions{
-        height: 310px;
-    }
+  #carouselExampleCaptions {
+    height: 310px;
+  }
 }
 @media (max-width: 768px) {
   .row {
@@ -1004,72 +1015,72 @@ footer .row {
     width: 100%;
     height: 650px; /* Adjust the height as needed */
     object-fit: cover; /* Make sure it fits the container properly */
-}
-.utubeVideo iframe {
+  }
+  .utubeVideo iframe {
     position: absolute;
     top: 8%;
     width: 57%; /* Adjust width as needed */
     height: 77%; /* Adjust height as needed */
-    
-   }
-   .headerButtons{
+  }
+  .headerButtons {
     text-align: right;
- }
- .header{
+  }
+  .header {
     padding: 15px 15px 15px 20px;
- }
- .headerButtons button{
-    padding: 5px 15px;
- }
- .hamburger{
-    padding: 5px 13px;
- }
- .closeIcon{
-    padding: 5px 13px;
-    font-size:20px;
- }
- .logo img{
-    width: 97px;
- }
- .logo p{
+  }
+  .headerButtons button {
+    padding: 10px 32px;
+  }
+  .hamburger {
+    padding: 10px 13px;
+  }
+  .closeIcon {
+    padding: 8px 13px;
     font-size: 20px;
- }
- #carouselExampleCaptions{
+  }
+  .logo img {
+    width: 97px;
+  }
+  .logo p {
+    font-size: 20px;
+  }
+  #carouselExampleCaptions {
     height: 310px;
-}
-.imgText .showcase-your-products{
+  }
+  .imgText .showcase-your-products {
     font-size: 17px;
-}
-.reach-more-sell-better-container .reach-more, .sell-better{
+  }
+  .reach-more-sell-better-container .reach-more,
+  .sell-better {
     font-size: 40px;
     margin-bottom: 0px;
-}
-.imgText button{
+  }
+  .imgText button {
     top: 10px;
     padding: 8px 16px;
     border-radius: 5px;
     font-size: 16px;
-}
+  }
 }
 @media (max-width: 650px) {
-    #carouselExampleCaptions{
-        height: 280px;
-    }
-    .reach-more-sell-better-container{
-        margin-top: 18px;
-    }
+  #carouselExampleCaptions {
+    height: 280px;
+  }
+  .reach-more-sell-better-container {
+    margin-top: 18px;
+  }
 }
 @media (max-width: 594px) {
-    .logo img {
-        width: 90px;
-    }
-    .logo p {
-        font-size: 18px;
-        right: 10px;
-    }
-    .logo{
-        width: auto;
-    }
+  .logo img {
+    width: 90px;
+  }
+  .logo p {
+    font-size: 18px;
+    right: 10px;
+  }
+  .logo {
+    width: auto;
+  }
 }
 @media (max-width: 576px) {
   .row {
@@ -1106,217 +1117,243 @@ footer .row {
     width: 100%;
     height: 750px; /* Adjust the height as needed */
     object-fit: cover; /* Make sure it fits the container properly */
-}
-.founderImg img {
+  }
+  .founderImg img {
     max-width: 64%; /* Reduce the founder image size */
     margin-top: 20px; /* Add spacing between text and image */
     margin-left: -18px;
-}
-.year span {
-rotate: -90deg;
+  }
+  .year span {
+    rotate: -90deg;
   }
   .year img {
     margin-top: 27px;
-    z-index: 1; 
-}
-.year{
+    z-index: 1;
+  }
+  .year {
     margin-top: 5px;
-}
-.utubeVideo iframe {
+  }
+  .utubeVideo iframe {
     position: absolute;
     top: 3%;
     width: 57%; /* Adjust width as needed */
     height: 60%; /* Adjust height as needed */
-   }
-   .header{
+  }
+  .header {
     padding: 15px 15px 15px 15px;
- }
- .headerButtons{
-position: relative;
-left: 10px;
-}
- .headerButtons button{
-    padding: 3px 8px;
+  }
+  .headerButtons {
+    position: relative;
+    left: 10px;
+  }
+  .headerButtons button {
+    padding: 10px 12px;
     border-radius: 5px;
     font-size: 17px;
     margin-left: 5px;
- }
- .hamburger{
+  }
+  .hamburger {
+    padding: 10px 12px;
+  }
+  .closeIcon {
+    font-size: 20px;
     padding: 4px 10px;
- }
- .closeIcon{
-    font-size:20px;
-    padding: 4px 10px;
- }
- .logo img{
+  }
+  .logo img {
     width: 90px;
- }
- .logo p{
+  }
+  .logo p {
     font-size: 18px;
     position: relative;
     right: 10px;
- }
- .row.cards {
+  }
+  .row.cards {
     display: none;
-}
- .cardSmScreen{
+  }
+  .cardSmScreen {
     display: inline-block;
- }
- .bgSmScreen .imgText{
+  }
+  .bgSmScreen .imgText {
     margin-top: 20px;
-    left: 100px;
- }
- .bgSmScreen .imgText .showcase-your-products{
+    left: 0px;
+     text-align: center;
+  }
+  .bgSmScreen .imgText .showcase-your-products {
     margin: 23px 0px;
- }
- #carouselExampleCaptions{
+  }
+  #carouselExampleCaptions {
     display: none;
- }
- .responsiveBg{
+  }
+  .responsiveBg {
     display: block;
- }
+  }
+  .about {
+    padding-top: 30px;
+  }
+  .service {
+    padding: 0px 10px;
+  }
+}
+@media (max-width: 536px) {
+  .headerButtons button{
+    font-size: 13px;
+  }
+  .hamburger {
+    padding: 8px 12px;
+    border-radius: 5px;
+}
 }
 @media (max-width: 507px) {
-    .logo img {
-        width: 80px;
-    }
-    .logo p {
-        font-size: 16px;
-        right: 8px;
-    }
-    .logo{
-        width: auto;
-    }
-    .headerButtons button {
-        margin-left: -11px;
-    }
+  .logo img {
+    width: 80px;
+  }
+  .logo p {
+    font-size: 16px;
+    right: 8px;
+  }
+  .logo {
+    width: auto;
+  }
+  .headerButtons button {
+    margin-left: -11px;
+  }
 }
 @media (max-width: 485px) {
-    .header{
-        padding: 15px 15px 15px 15px;
-     }
-     .headerButtons{
+  .header {
+    padding: 15px 15px 15px 15px;
+  }
+  .headerButtons {
     position: relative;
     left: 10px;
-    }
-     .headerButtons button{
-        padding: 5px 12px;
-        border-radius: 5px;
-        font-size: 14px;
-        margin-left: 5px;
-     }
-     .hamburger{
-        padding: 2px 7px;
-     }
-     .closeIcon{
-        padding: 2px 7px;
-        font-size:20px;
-     }
-     .logo img{
-        width: 80px;
-     }
-     .logo p{
-        font-size: 16px;
-        position: relative;
-        right: 0px;
-        top: -20px;
-     }
-     .bgSmScreen .imgText{
-        left: 60px;
-     }
-     .bgSmScreen .imgText .showcase-your-products{
-        margin: 23px 0px;
-     }
-     .logo {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        width: auto;
-    }
+  }
+  .headerButtons button {
+    padding: 5px 9px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 5px;
+  }
+  .hamburger {
+    padding: 4px 9px;
+  }
+  .closeIcon {
+    padding: 2px 7px;
+    font-size: 20px;
+  }
+  .logo img {
+    width: 80px;
+  }
+  .logo p {
+    font-size: 16px;
+    position: relative;
+    right: 0px;
+    top: -20px;
+  }
+  .bgSmScreen .imgText {
+    left: 0px;
+  }
+  .bgSmScreen .imgText .showcase-your-products {
+    margin: 23px 0px;
+    margin: 0px auto;
+  }
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: auto;
+  }
 }
 
 @media (max-width: 451px) {
-    .utubeVideo iframe {
-        position: absolute;
-        top: 4%;
-        width: 57%;
-        height: 50%;
-       }
-       .logo {
-        display: flex;
-        flex-direction: column;
-        align-items: start; /* Optionally center the text and image */
-        width: auto;
-    }
-    .logo p{
-       
-        position: relative;
-        right: 10px;
-        top: -23px;
-        left: 3px;
-        font-size: 11px;
-     }
-     .header{
-        padding: 15px 15px 15px 15px;
-        height: 70px;
-     }
-     .bgSmScreen .imgText{
-        left: 35px;
-     }
-     .bgSmScreen .imgText .showcase-your-products{
-        margin: 23px 0px;
-     }
+  .utubeVideo iframe {
+    position: absolute;
+    top: 4%;
+    width: 57%;
+    height: 50%;
+  }
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: start; /* Optionally center the text and image */
+    width: auto;
+  }
+  .logo p {
+    position: relative;
+    right: 10px;
+    top: -23px;
+    left: 3px;
+    font-size: 11px;
+  }
+  .header {
+    padding: 15px 15px 15px 15px;
+    height: 70px;
+  }
+  .bgSmScreen .imgText {
+    left: 0px;
+  }
+  .bgscreen img{
+    width: 103%;
+  }
+  .bgSmScreen .imgText .showcase-your-products {
+    width: 90%;
+    margin: 13px 0px;
+  }
 }
 
 /* Style for centering the indicators */
 .carousel-indicators {
-    position: absolute;
-    bottom: 10px; /* Adjust the distance from the bottom */
-    left: 50%;
-    transform: translateX(0%); /* Center horizontally */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  /* Remove the background for indicators */
-  .carousel-indicators li {
-    background-color: transparent; /* No background */
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    margin: 0 5px;
-    border: none; /* Remove the border */
-  }
-  
-  /* Active indicator */
-  .carousel-indicators .active {
-    background-color: transparent; /* No background for active as well */
-  }
-  
+  position: absolute;
+  bottom: 10px; /* Adjust the distance from the bottom */
+  left: 50%;
+  transform: translateX(0%); /* Center horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove the background for indicators */
+.carousel-indicators li {
+  background-color: transparent; /* No background */
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  border: none; /* Remove the border */
+}
+
+/* Active indicator */
+.carousel-indicators .active {
+  background-color: transparent; /* No background for active as well */
+}
+
 @media (max-width: 400px) {
-    .utubeVideo iframe {
-        position: absolute;
-        top: 4%;
-        width: 57%;
-        height: 43%;
-       }
-       .bgSmScreen .imgText{
-        left: 25px;
-     }
-     .bgSmScreen .imgText .showcase-your-products{
-        width: 85%;
-        margin: 23px 0px;
-     }
-     .imgText .join-btn{
-        width: 80%;
-     }
-     .bgSmScreen .bgscreen img{
-        width: 102%;
-     }
+  .utubeVideo iframe {
+    position: absolute;
+    top: 4%;
+    width: 57%;
+    height: 43%;
+  }
+  .bgSmScreen .imgText {
+    left: 0px;
+    text-align: center;
+  }
+  .bgSmScreen .imgText .showcase-your-products {
+    width: 90%;
+    margin: 0px 0px;
+  }
+  .showcase-your-products p{
+    margin-bottom: 0px;
+  }
+  .reach-more-sell-better-container {
+    margin-top: 0px;
+}
+  .imgText .join-btn {
+    width: 100%;
+  }
+  .bgSmScreen .bgscreen img {
+    width: 102%;
+  }
 }
 @media (max-width: 350px) {
   .bottomText {
@@ -1331,5 +1368,5 @@ left: 10px;
     top: 3%;
     width: 57%;
     height: 40%;
-   }
+  }
 }

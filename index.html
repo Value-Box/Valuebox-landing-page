@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ValueBox</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="/images/Valuebox logo 1 1.svg">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -34,7 +35,7 @@
         <button class="loginBtn">Login</button>
       </div>
 
-      <div class="headerButtons">
+      <div class="ml-1 headerButtons">
         <button class="loginBtn">Login</button>
         <button class="joinBtn">Join Marketplace</button>
       </div>
@@ -150,18 +151,20 @@
           </div>
           <div class="imgText">
             <div class="reach-more-sell-better-container">
-              <p class="reach-more">REACH MORE</p>
-              <p class="sell-better">SELL BETTER</p>
+              <p class="w-100 reach-more">REACH MORE</p>
+              <p class="w-100 sell-better">SELL BETTER</p>
             </div>
 
             <div
-              class="col-7 col-lg-8 col-md-8 col-sm-4 col-xl-11 showcase-your-products"
+              class="col-8 col-lg-8 col-md-8 col-sm-4 col-xl-11 showcase-your-products"
             >
+             <p>
               Showcase your products to millions of potential customers on
               ValueBox with zero setup hassle.
+             </p>
             </div>
 
-            <div class="col-7 join-btn text-center">
+            <div class="col-12 join-btn text-center">
               <button>Join Marketplace</button>
             </div>
           </div>
@@ -173,17 +176,19 @@
           </div>
           <div class="imgText">
             <div class="reach-more-sell-better-container">
-              <p class="reach-more">Pick, Pack, Ship</p>
+              <p class="w-100 reach-more">Pick, Pack, Ship</p>
             </div>
 
             <div
-              class="col-7 col-lg-8 col-md-8 col-sm-4 col-xl-11 showcase-your-products"
+              class="col-8 col-lg-8 col-md-8 col-sm-4 col-xl-11 showcase-your-products"
             >
+             <p>
               We'll pick the item from your shop, pack it with care, and deliver
               it straight to your customer, hassle-free!
+             </p>
             </div>
 
-            <div class="col-7 join-btn text-center">
+            <div class="col-12 join-btn text-center">
               <button>Read it Now</button>
             </div>
           </div>
@@ -286,6 +291,8 @@
             </div>
           </div>
         </div>
+
+        
         <section class="pt-5 pb-5 cardSmScreen">
             <div class="container">
               <div class="row">
@@ -326,7 +333,7 @@
                       <div class="carousel-item">
                         <div class="row justify-content-center">
                           <div class="col-md-4 mb-3">
-                            <div class="card rounded-4">
+                            <div class="cardCrousel card rounded-4">
                               <img
                                 class="img-fluid"
                                 alt="100%x280"
@@ -349,7 +356,7 @@
                       <div class="carousel-item">
                         <div class="row justify-content-center">
                           <div class="col-md-4 mb-3">
-                            <div class="card rounded-4">
+                            <div class="cardCrousel card rounded-4">
                               <img
                                 class="img-fluid"
                                 alt="100%x280"
@@ -374,7 +381,7 @@
                       <div class="carousel-item">
                         <div class="row justify-content-center">
                           <div class="col-md-4 mb-3">
-                            <div class="card rounded-4">
+                            <div class="cardCrousel card rounded-4">
                               <img
                                 class="img-fluid"
                                 alt="100%x280"
@@ -400,33 +407,31 @@
                     <div class="d-flex justify-content-between align-items-center mx-2">
                         <!-- Left arrow -->
                         <a
-                          class="btn btn-primary"
+                          class="btn leftArrow"
                           href="#carouselExampleIndicators2"
                           role="button"
                           data-bs-slide="prev"
                         >
-                          <i class="fa fa-arrow-left"></i>
+                          <i class="fa fa-arrow-left text-light"></i>
                         </a>
                       
                         <!-- Carousel Indicators (Black Circles, Centered) -->
-                        <ul class=" carousel-indicators">
-                          <li
-                            data-bs-target="#carouselExampleIndicators2"
-                            data-bs-slide-to="0"
-                            class="bg-dark active"></li>
-                          <li data-bs-target="#carouselExampleIndicators2" class="bg-dark" data-bs-slide-to="1"></li>
-                          <li data-bs-target="#carouselExampleIndicators2" class="bg-dark" data-bs-slide-to="2"></li>
-                          <li data-bs-target="#carouselExampleIndicators2" class="bg-dark" data-bs-slide-to="3"></li>
+                        <ul class="carousel-indicators my-auto">
+                          <li data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active"></li>
+                          <li data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1"></li>
+                          <li data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2"></li>
+                          <li data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="3"></li>
                         </ul>
+                        
                       
                         <!-- Right arrow -->
                         <a
-                          class="btn btn-primary"
+                          class="btn rightArrow"
                           href="#carouselExampleIndicators2"
                           role="button"
                           data-bs-slide="next"
                         >
-                          <i class="fa fa-arrow-right"></i>
+                          <i class="fa fa-arrow-right text-light"></i>
                         </a>
                       </div>
                       
@@ -524,7 +529,7 @@
             accessible, trustworthy, and truly convenient.
           </p>
 
-          <div class="col-12 text-center">
+          <div class="col-12 m-3 text-center">
             <div
               class="row justify-content-center px-lg-5 pb-0 px-lg-0 pl-lg-2 yearinfo"
             >
