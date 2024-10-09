@@ -416,10 +416,11 @@ main {
 
 .utubeVideo iframe {
   position: relative;
-  top: -7%;
+  top: 0%;
+  padding: 20px 0px;
   z-index: 2; /* Above the image */
-  width: 50%; /* Adjust width as needed */
-  height: 50%; /* Adjust height as needed */
+  width: 70%; /* Adjust width as needed */
+  height: 77%; /* Adjust height as needed */
   border: none; /* Remove default border */
 }
 
@@ -693,6 +694,15 @@ main {
   .headerButtons {
     margin-left: auto;
     text-align: center;
+  }
+  .utubeVideo iframe {
+    position: relative;
+    top: -7%;
+    padding: 20px 0px;
+    z-index: 2; /* Above the image */
+    width: 70%; /* Adjust width as needed */
+    height: 77%; /* Adjust height as needed */
+    border: none; /* Remove default border */
   }
 }
 
@@ -979,9 +989,9 @@ footer .row {
 
   .utubeVideo iframe {
     position: absolute;
-    top: 7%;
-    width: 50%;
-    height: 80%;
+    top: 5%;
+    width: 65%;
+    height: 90%;
   }
   .utubeVideo {
     width: 100%;
