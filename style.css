@@ -21,6 +21,10 @@
 main {
   overflow: hidden;
 }
+.row > * {
+  padding-left: 0px !important;
+}
+
 .logo {
   display: flex;
   width: 267.473px;
@@ -224,6 +228,10 @@ main {
 }
 .responsiveBg {
   display: none;
+  margin: 9px !important;
+}
+.sellers-guide-parent, .services, .story, .footerSection{
+  margin-left: 14px;
 }
 .crouselImgbg {
   background-color: #e6eaf3;
@@ -443,7 +451,9 @@ main {
 .text2 b {
   color: #002882;
 }
-
+#carouselExampleIndicators2{
+  margin: 0px 14px;
+}
 .row {
   padding: 100px 80px 100px 80px;
   background-color: #f9f9f9;
@@ -653,7 +663,7 @@ main {
   .checkBox:not(:checked) ~ .links {
     max-height: 0; /* Collapsed height */
     opacity: 0; /* Hidden */
-    width: 96vw; /* Maintain full width */
+    width: 94vw; /* Maintain full width */
   }
 
   /* Show the pseudo-elements with animation */
@@ -699,7 +709,7 @@ main {
   }
 
   .founderImg img {
-    max-width: 80%; /* Reduce the founder image size */
+    /* max-width: 80%;  */
     margin-top: 20px; /* Add spacing between text and image */
   }
 }
@@ -954,7 +964,7 @@ footer .row {
     display: block;
   }
   .founderImg img {
-    max-width: 46%;
+    max-width: 42%;
     margin-top: 20px;
   }
   .heroSection2 {
@@ -1117,7 +1127,7 @@ footer .row {
     object-fit: cover; /* Make sure it fits the container properly */
   }
   .founderImg img {
-    max-width: 64%; /* Reduce the founder image size */
+    max-width: 60%; /* Reduce the founder image size */
     margin-top: 20px; /* Add spacing between text and image */
     margin-left: -18px;
   }
@@ -1352,6 +1362,17 @@ footer .row {
   .bgSmScreen .bgscreen img {
     width: 102%;
   }
+  .founderImg img {
+    max-width: 60%; /* Reduce the founder image size */
+    margin-top: 20px; /* Add spacing between text and image */
+    margin-left: -18px;
+  }
+  .heroSection2{
+    height: 800px;
+  }
+  .sellers-guide-parent{
+    font-size: 39px;
+  }
 }
 @media (max-width: 350px) {
   .bottomText {
@@ -1366,5 +1387,8 @@ footer .row {
     top: 3%;
     width: 57%;
     height: 40%;
+  }
+  .joinButton {
+    top: 75%;
   }
 }
