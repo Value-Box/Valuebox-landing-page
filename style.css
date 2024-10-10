@@ -230,7 +230,10 @@ main {
   display: none;
   margin: 9px !important;
 }
-.sellers-guide-parent, .services, .story, .footerSection{
+.sellers-guide-parent,
+.services,
+.story,
+.footerSection {
   margin-left: 14px;
 }
 .crouselImgbg {
@@ -325,10 +328,10 @@ main {
 /* Override Bootstrap default indicator styling */
 .carousel-indicators [data-bs-target] {
   background-color: #0032a3 !important; /* Apply your color */
-  width: 11px !important;  /* Custom width */
+  width: 11px !important; /* Custom width */
   height: 11px !important; /* Custom height */
   border-radius: 50%;
-  margin: 0 5px ; /* Spacing between indicators */
+  margin: 0 5px; /* Spacing between indicators */
   border: none; /* Remove border */
   opacity: 0.5; /* Lower opacity for inactive indicators */
   transition: opacity 0.6s ease;
@@ -340,7 +343,8 @@ main {
   opacity: 1 !important; /* Full opacity for the active indicator */
 }
 
-.leftArrow,.rightArrow{
+.leftArrow,
+.rightArrow {
   background-color: #002882 !important;
   color: white;
 }
@@ -452,7 +456,7 @@ main {
 .text2 b {
   color: #002882;
 }
-#carouselExampleIndicators2{
+#carouselExampleIndicators2 {
   margin: 0px 14px;
 }
 .row {
@@ -798,7 +802,6 @@ main {
   .card-text {
     height: 60px;
   }
-  
 }
 
 /* For extra small screens, no additional styling needed as Bootstrap handles it */
@@ -935,6 +938,138 @@ footer .row {
   border-radius: 24px;
 }
 
+.form {
+  padding: 30px 33px;
+}
+.formParent {
+  width: 345px;
+  height: 430px;
+  margin: auto 50px;
+  border-radius: 16px;
+}
+.loginBtn {
+  background-color: #002882;
+}
+.signupBtn {
+  border: 1.5px solid #002882;
+  background-color: white;
+  color: #002882;
+  font-weight: bold; /* Ensure the text is bold */
+  transition: 0.5s; /* Apply transition for all changes */
+}
+svg path {
+  transition: 0.5s;
+}
+.signupBtn:hover {
+  background-color: #002882; /* Change background on hover */
+  color: white; /* Change text color on hover */
+  border-color: white; /* Optional: change the border to white on hover */
+}
+
+/* Change the SVG color on hover */
+.signupBtn:hover svg path {
+  stroke: white; /* Change the stroke color to white on hover */
+}
+.LoginBgPoster {
+  max-height: 120%;
+}
+.hrLine {
+  position: relative;
+  height: 40px;
+  background: linear-gradient(
+    90deg,
+    #0032a3 0%,
+    #1a51cb 25%,
+    #3b66c8 50%,
+    #1a51cb 75%,
+    #0032a3 100%
+  );
+  overflow: hidden; /* Ensure the pseudo-element doesn't overflow */
+}
+
+.hrLine::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20%;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    #ffc136 0%,
+    #fac142 19.76%,
+    #ffd168 52.5%,
+    #f5bc3a 77.13%,
+    #e09b00 100%
+  );
+  z-index: 1; /* Ensure the gradient is above the background */
+}
+.sellingSection, 
+.sellingSection2 {
+  padding: 20px 30px;
+  border-radius: 20px;
+  border-style: solid;
+  border-top-width: 2px;
+  border-left-width: 8px;
+  border-bottom-width: 8px;
+  border-right-width: 4px;
+  border-color: #FFC136; /* For sellingSection */
+}
+
+.sellingSection2 {
+  border-color: #0032A3; /* Different color for sellingSection2 */
+}
+
+.text-section {
+  text-align: left; /* Ensure the text stays aligned to the left */
+  padding-left: 20px; /* Add padding to create space between text and image */
+}
+.text-section p{
+  font-size: 20px;
+  color: #999999;
+}
+.reviewSection{
+  background-color: #FEF6E6;
+  border-radius: 12px;
+}
+.reviewSection2{
+  background-color: #FEF6E6;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  margin-top: -6px;
+}
+.parentRewSection .reviewSection{
+  margin: 10px;
+}
+.reviewerName{
+  font-size: 14px;
+font-style: normal;
+font-weight: 600;
+}
+.reviewerpost{
+  font-size: 12px;
+font-style: normal;
+font-weight: 600;
+}
+.reviewerDescription{
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+}
+.rectangle p{
+  width: 50px;
+  height: 5px;
+}
+.rectangle p:first-child{
+  background: linear-gradient(90deg, #0032A3 0%, #1A51CB 25%, #3B66C8 50%, #1A51CB 75%, #0032A3 100%);
+}
+.rectangle p:last-child{
+  background: linear-gradient(90deg, #FFC136 0%, #FAC142 19.76%, #FFD168 52.5%, #F5BC3A 77.13%, #E09B00 100%);
+}
+.sellerCard{
+  position: relative;
+  right: 15px;
+}
 @media (max-width: 1200px) {
   .serviceImg {
     text-align: center;
@@ -962,6 +1097,13 @@ footer .row {
     position: absolute;
     left: -36%;
   }
+  .previewSection{
+    padding: 0px;
+  }
+  .previewParent{
+    margin: 40px;
+  }
+
 }
 @media (max-width: 992px) {
   .serviceImg {
@@ -1009,6 +1151,9 @@ footer .row {
   }
   .imgText .showcase-your-products {
     line-height: 28px;
+  }
+  .previewSection .previewText{
+    height: 60%;
   }
 }
 @media (max-width: 900px) {
@@ -1079,6 +1224,12 @@ footer .row {
     border-radius: 5px;
     font-size: 16px;
   }
+  .reviewbg{
+    max-height: 50%;
+  }
+  .previewSection .previewText{
+    height: 40%;
+  }
 }
 @media (max-width: 650px) {
   #carouselExampleCaptions {
@@ -1086,6 +1237,12 @@ footer .row {
   }
   .reach-more-sell-better-container {
     margin-top: 18px;
+  }
+  .reviewbg{
+    max-height: 60%;
+  }
+  .previewSection .previewText{
+    height: 44%;
   }
 }
 @media (max-width: 594px) {
@@ -1194,7 +1351,7 @@ footer .row {
   .bgSmScreen .imgText {
     margin-top: 20px;
     left: 0px;
-     text-align: center;
+    text-align: center;
   }
   .bgSmScreen .imgText .showcase-your-products {
     margin: 23px 0px;
@@ -1211,15 +1368,21 @@ footer .row {
   .service {
     padding: 0px 10px;
   }
+  .reviewbg{
+    max-height: 75%;
+  }
+  .previewSection .previewText{
+    height: 60%;
+  }
 }
 @media (max-width: 536px) {
-  .headerButtons button{
+  .headerButtons button {
     font-size: 13px;
   }
   .hamburger {
     padding: 8px 12px;
     border-radius: 5px;
-}
+  }
 }
 @media (max-width: 507px) {
   .logo img {
@@ -1279,6 +1442,12 @@ footer .row {
     align-items: start;
     width: auto;
   }
+  .reviewbg{
+    max-height: 85%;
+  }
+  .previewSection .previewText{
+    height: 67%;
+  }
 }
 
 @media (max-width: 451px) {
@@ -1308,12 +1477,18 @@ footer .row {
   .bgSmScreen .imgText {
     left: 0px;
   }
-  .bgscreen img{
+  .bgscreen img {
     width: 103%;
   }
   .bgSmScreen .imgText .showcase-your-products {
     width: 90%;
     margin: 13px 0px;
+  }
+  .reviewbg{
+    max-height: 95%;
+  }
+  .previewSection .previewText{
+    height: 74%;
   }
 }
 
@@ -1360,12 +1535,12 @@ footer .row {
     width: 90%;
     margin: 0px 0px;
   }
-  .showcase-your-products p{
+  .showcase-your-products p {
     margin-bottom: 0px;
   }
   .reach-more-sell-better-container {
     margin-top: 0px;
-}
+  }
   .imgText .join-btn {
     width: 100%;
   }
@@ -1377,12 +1552,22 @@ footer .row {
     margin-top: 20px; /* Add spacing between text and image */
     margin-left: -18px;
   }
-  .heroSection2{
+  .heroSection2 {
     height: 800px;
   }
-  .sellers-guide-parent{
+  .sellers-guide-parent {
     font-size: 39px;
   }
+  .reviewbg{
+    max-height: 100%;
+  }
+  .previewSection .previewText{
+    height: 74%;
+  }
+  .appLinks img{
+    width: 120px;
+  }
+  /* .previewSection  */
 }
 @media (max-width: 350px) {
   .bottomText {
