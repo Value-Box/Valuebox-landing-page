@@ -583,6 +583,73 @@ main {
   display: none;
 }
 
+.accordion-button::after {
+  display: none;
+}
+
+.accordion-header {
+  background-color: #F2F2F2 !important;
+  border-radius: 12px 12px 0 0;
+}
+
+.accordion-button i {
+  border: 1px solid black;
+  padding: 8px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.accordion-button {
+  background-color: #F2F2F2 !important;
+  border: none !important;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.accordion-item {
+  margin: 10px 0;
+  border: none !important;
+}
+
+/* Change background color of the accordion item when open */
+.accordion-item .accordion-button:not(.collapsed) {
+  background: linear-gradient(90deg, #0032A3 0%, #1A51CB 25%, #3B66C8 50%, #1A51CB 75%, #0032A3 100%);
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) i {
+  border: 2px solid #FFC136;
+  color: #FFC136;
+  transform: rotate(180deg);
+}
+
+/* Change background color when the accordion body is shown */
+.accordion-collapse.show {
+  color: white;
+  background: linear-gradient(90deg, #0032A3 0%, #1A51CB 25%, #3B66C8 50%, #1A51CB 75%, #0032A3 100%);
+}
+
+/* Hover effects */
+.accordion-button:hover {
+  background-color: rgba(0, 50, 163, 0.1);
+}
+
+/* Accordion body styles */
+.accordion-body {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+}
+
+
+
 @media (max-width: 1100px) {
   .hamburger {
     display: inline;
@@ -677,11 +744,6 @@ main {
     opacity: 1;
     transform: translateY(0); /* Move into view */
   }
-
-  /* Buttons inside links should display */
-  /* .checkBox:checked ~ .links button {
-        display: inline-block;
-    } */
   .checkBox:checked ~ .links button:hover {
     border: 1px solid white;
   }
@@ -707,6 +769,12 @@ main {
     width: 70%; /* Adjust width as needed */
     height: 77%; /* Adjust height as needed */
     border: none; /* Remove default border */
+  }
+  .LoginBgPoster img{
+    height: 108% !important;
+  }
+  .formParent{
+    margin-top: 45px;
   }
 }
 
@@ -970,9 +1038,7 @@ svg path {
 .signupBtn:hover svg path {
   stroke: white; /* Change the stroke color to white on hover */
 }
-.LoginBgPoster {
-  max-height: 120%;
-}
+
 .hrLine {
   position: relative;
   height: 40px;
@@ -1070,6 +1136,16 @@ font-weight: 600;
   position: relative;
   right: 15px;
 }
+.cardCrousel iframe{
+  height: 300px !important;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.cardBG{
+  background-color: #FEF6E6;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
 @media (max-width: 1200px) {
   .serviceImg {
     text-align: center;
@@ -1155,6 +1231,18 @@ font-weight: 600;
   .previewSection .previewText{
     height: 60%;
   }
+  .LoginBgPoster img{
+    height: 104% !important;
+  }
+  .loginForm{
+    height: 104% !important;
+  }
+  .LoginBgPoster {
+    max-height: 600px;
+  }
+  .formParent {
+    margin: auto 50px 30px 50px;
+}
 }
 @media (max-width: 900px) {
   #carouselExampleCaptions {
@@ -1225,10 +1313,16 @@ font-weight: 600;
     font-size: 16px;
   }
   .reviewbg{
-    max-height: 50%;
+    max-height: 100%;
   }
   .previewSection .previewText{
-    height: 40%;
+    height: 70%;
+  }
+  .LoginBgPoster {
+    max-height: 600px;
+  }
+  .previewImg{
+    max-height: 400px;
   }
 }
 @media (max-width: 650px) {
@@ -1239,11 +1333,31 @@ font-weight: 600;
     margin-top: 18px;
   }
   .reviewbg{
-    max-height: 60%;
+    max-height: 100%;
   }
-  .previewSection .previewText{
+  /* .previewSection .previewText{
     height: 44%;
+  } */
+  .previewSection .previewText{
+    height: 68%;
   }
+
+  .LoginBgPoster img{
+    height: 108% !important;
+  }
+  .loginForm{
+    height: 108% !important;
+  }
+  .LoginBgPoster {
+    max-height: 600px;
+  }
+  .formParent {
+    margin: auto 50px 0px 50px;
+}
+
+.previewImg{
+  height: 320px;
+}
 }
 @media (max-width: 594px) {
   .logo img {
@@ -1369,11 +1483,17 @@ font-weight: 600;
     padding: 0px 10px;
   }
   .reviewbg{
-    max-height: 75%;
+    max-height: 100%;
   }
   .previewSection .previewText{
-    height: 60%;
+    height: 86%;
   }
+  .previewSection{
+    padding-bottom: 0px;
+  }
+  .formParent {
+    border-radius: 8px;
+}
 }
 @media (max-width: 536px) {
   .headerButtons button {
@@ -1443,10 +1563,10 @@ font-weight: 600;
     width: auto;
   }
   .reviewbg{
-    max-height: 85%;
+    max-height: 100%;
   }
   .previewSection .previewText{
-    height: 67%;
+    height: 85%;
   }
 }
 
@@ -1485,10 +1605,10 @@ font-weight: 600;
     margin: 13px 0px;
   }
   .reviewbg{
-    max-height: 95%;
+    max-height: 100%;
   }
   .previewSection .previewText{
-    height: 74%;
+    height: 85%;
   }
 }
 
@@ -1562,12 +1682,17 @@ font-weight: 600;
     max-height: 100%;
   }
   .previewSection .previewText{
-    height: 74%;
+    height: 83%;
   }
   .appLinks img{
     width: 120px;
   }
-  /* .previewSection  */
+  .form {
+    padding: 20px 15px;
+}
+.formParent {
+  margin: auto 50px -26px 50px;
+}
 }
 @media (max-width: 350px) {
   .bottomText {
@@ -1586,4 +1711,8 @@ font-weight: 600;
   .joinButton {
     top: 75%;
   }
+}
+.loginBtn {
+  z-index: 1000; /* Ensures the button is on top */
+  pointer-events: auto; /* Makes sure it's clickable */
 }

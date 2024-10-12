@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ValueBox</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/x-icon" href="/images/Valuebox logo 1 1.svg">
+    <link rel="icon" type="image/x-icon" href="/images/Valuebox logo 1 1.svg" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -32,11 +32,11 @@
       <div class="links">
         <a href="#">Sell Better Blog</a>
         <a href="#">Marketplace Learn</a>
-        <button class="loginBtn">Login</button>
+        <button class="loginBtn" onclick="loginPage()">Login</button>
       </div>
 
       <div class="ml-1 headerButtons">
-        <button class="loginBtn">Login</button>
+        <button class="loginBtn" onclick="loginPage()">Login</button>
         <button class="joinBtn">Join Marketplace</button>
       </div>
 
@@ -82,7 +82,7 @@
               class="d-block h-100 w-100"
               alt="..."
             />
-            <div class="row position-absolute top-0 bg-transparent">
+            <div class="row position-absolute w-100 top-0 bg-transparent">
               <div class="col-8">
                 <!-- <div class="reach-more-sell-better-container"></div> -->
                 <div class="col-5 imgText">
@@ -100,7 +100,7 @@
                 </div>
               </div>
               <div
-                class="col-3 h-100 p-2 d-flex justify-content-center align-items-center crouselImgbg"
+                class="col-3 col-xl-2 h-100 p-2 d-flex justify-content-center align-items-center crouselImgbg"
               >
                 <img class="w-100" src="images/home delivery.gif" alt="" />
               </div>
@@ -113,7 +113,7 @@
           data-bs-target="#carouselExampleCaptions"
           data-bs-slide="prev"
         >
-        <!-- <img src="images/Component 14.svg" alt=""> -->
+          <!-- <img src="images/Component 14.svg" alt=""> -->
           <!-- <svg width="82" height="322" viewBox="0 0 22 322" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="hover-path" d="M0.000427246 0.497321C0.000427246 0.222663 0.223082 0 0.497739 0C0.774488 0 0.997998 0.225927 0.995023 0.502659L0.248248 69.9527C0.0873775 84.9136 5.08179 99.444 11.2437 113.078C16.7382 125.235 22.1522 141.867 22.0004 160C21.8494 178.047 15.6701 196.079 9.89952 209.035C4.21581 221.796 0.0795751 235.44 0.228179 249.409L0.99508 321.497C0.998024 321.774 0.77451 322 0.497768 322C0.223094 322 0.000427246 321.777 0.000427246 321.503V0.497321Z" fill="red" fill-opacity="1"/>
             </svg> -->
@@ -158,10 +158,10 @@
             <div
               class="col-8 col-lg-8 col-md-8 col-sm-4 col-xl-11 showcase-your-products"
             >
-             <p>
-              Showcase your products to millions of potential customers on
-              ValueBox with zero setup hassle.
-             </p>
+              <p>
+                Showcase your products to millions of potential customers on
+                ValueBox with zero setup hassle.
+              </p>
             </div>
 
             <div class="col-12 join-btn text-center">
@@ -182,10 +182,10 @@
             <div
               class="col-8 col-lg-8 col-md-8 col-sm-4 col-xl-11 showcase-your-products"
             >
-             <p>
-              We'll pick the item from your shop, pack it with care, and deliver
-              it straight to your customer, hassle-free!
-             </p>
+              <p>
+                We'll pick the item from your shop, pack it with care, and
+                deliver it straight to your customer, hassle-free!
+              </p>
             </div>
 
             <div class="col-12 join-btn text-center">
@@ -292,152 +292,165 @@
           </div>
         </div>
 
-        
         <section class="cardSmScreen">
-              <div class="row">
-                
-                  <!-- Carousel Start -->
-                  <div
-                    id="carouselExampleIndicators2"
-                    class="pl-0 pr-0 carousel slide"
-                    data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                      <!-- First carousel item -->
-                      <div class="carousel-item active">
-                        <div class="row justify-content-center">
-                          <div class="col-md-4 mb-3">
-                            <div class="cardCrousel card rounded-4">
-                              <img
-                                class="img-fluid"
-                                alt="100%x280"
-                                src="images/Image-1.png"
-                              />
-                              <div class="card-body">
-                                <h5 class="card-title">
-                                  <div>Listing optimization</div>
-                                </h5>
-                                <p class="card-text">
-                                  In this guide, you will discover how ratings and reviews
-                                  are created and how to effectively manage them.
-                                </p>
-                                <a href="#">Learn More</a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-          
-                      <!-- Second carousel item -->
-                      <div class="carousel-item">
-                        <div class="row justify-content-center">
-                          <div class="col-md-4 mb-3">
-                            <div class="cardCrousel card rounded-4">
-                              <img
-                                class="img-fluid"
-                                alt="100%x280"
-                                src="images/Image-2.png"
-                              />
-                              <div class="card-body">
-                                <h5 class="card-title"><div>Item setup</div></h5>
-                                <p class="card-text">
-                                  Categorization and item attribution are essential for
-                                  defining how your products will be displayed ...
-                                </p>
-                                <a href="#">Learn More</a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-          
-                      <!-- Third carousel item -->
-                      <div class="carousel-item">
-                        <div class="row justify-content-center">
-                          <div class="col-md-4 mb-3">
-                            <div class="cardCrousel card rounded-4">
-                              <img
-                                class="img-fluid"
-                                alt="100%x280"
-                                src="images/Image.png"
-                              />
-                              <div class="card-body">
-                                <h5 class="card-title">
-                                  <div>Taxes & payments</div>
-                                </h5>
-                                <p class="card-text">
-                                  This guide offers an overview of the payout providers
-                                  partnered with the platform and addresses frequent...
-                                </p>
-                                <a href="#">Learn More</a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-          
-                      <!-- Fourth carousel item -->
-                      <div class="carousel-item">
-                        <div class="row justify-content-center">
-                          <div class="col-md-4 mb-3">
-                            <div class="cardCrousel card rounded-4">
-                              <img
-                                class="img-fluid"
-                                alt="100%x280"
-                                src="images/Image-3.png"
-                              />
-                              <div class="card-body">
-                                <h5 class="card-title">
-                                  <div>Order Management</div>
-                                </h5>
-                                <p class="card-text">
-                                  This guide explains the policy and exemptions, including
-                                  which marketplace items are returna...
-                                </p>
-                                <a href="#">Learn More</a>
-                              </div>
-                            </div>
-                          </div>
+          <div class="row">
+            <!-- Carousel Start -->
+            <div
+              id="carouselExampleIndicators2"
+              class="pl-0 pr-0 carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <!-- First carousel item -->
+                <div class="carousel-item active">
+                  <div class="row justify-content-center">
+                    <div class="col-md-4 mb-3">
+                      <div class="cardCrousel card rounded-4">
+                        <img
+                          class="img-fluid"
+                          alt="100%x280"
+                          src="images/Image-1.png"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">
+                            <div>Listing optimization</div>
+                          </h5>
+                          <p class="card-text">
+                            In this guide, you will discover how ratings and
+                            reviews are created and how to effectively manage
+                            them.
+                          </p>
+                          <a href="#">Learn More</a>
                         </div>
                       </div>
                     </div>
-          
-                    <!-- Carousel controls & indicators -->
-                    <div class="d-flex justify-content-between align-items-center mx-2">
-                        <!-- Left arrow -->
-                        <a
-                          class="btn leftArrow"
-                          href="#carouselExampleIndicators2"
-                          role="button"
-                          data-bs-slide="prev"
-                        >
-                          <i class="fa fa-arrow-left text-light"></i>
-                        </a>
-                      
-                        <!-- Carousel Indicators (Black Circles, Centered) -->
-                        <ul class="carousel-indicators my-auto">
-                          <li data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active"></li>
-                          <li data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1"></li>
-                          <li data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2"></li>
-                          <li data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="3"></li>
-                        </ul>
-                        
-                      
-                        <!-- Right arrow -->
-                        <a
-                          class="btn rightArrow"
-                          href="#carouselExampleIndicators2"
-                          role="button"
-                          data-bs-slide="next"
-                        >
-                          <i class="fa fa-arrow-right text-light"></i>
-                        </a>
-                      </div>
-                      
                   </div>
-                  <!-- Carousel End -->
+                </div>
+
+                <!-- Second carousel item -->
+                <div class="carousel-item">
+                  <div class="row justify-content-center">
+                    <div class="col-md-4 mb-3">
+                      <div class="cardCrousel card rounded-4">
+                        <img
+                          class="img-fluid"
+                          alt="100%x280"
+                          src="images/Image-2.png"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title"><div>Item setup</div></h5>
+                          <p class="card-text">
+                            Categorization and item attribution are essential
+                            for defining how your products will be displayed ...
+                          </p>
+                          <a href="#">Learn More</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Third carousel item -->
+                <div class="carousel-item">
+                  <div class="row justify-content-center">
+                    <div class="col-md-4 mb-3">
+                      <div class="cardCrousel card rounded-4">
+                        <img
+                          class="img-fluid"
+                          alt="100%x280"
+                          src="images/Image.png"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">
+                            <div>Taxes & payments</div>
+                          </h5>
+                          <p class="card-text">
+                            This guide offers an overview of the payout
+                            providers partnered with the platform and addresses
+                            frequent...
+                          </p>
+                          <a href="#">Learn More</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Fourth carousel item -->
+                <div class="carousel-item">
+                  <div class="row justify-content-center">
+                    <div class="col-md-4 mb-3">
+                      <div class="cardCrousel card rounded-4">
+                        <img
+                          class="img-fluid"
+                          alt="100%x280"
+                          src="images/Image-3.png"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">
+                            <div>Order Management</div>
+                          </h5>
+                          <p class="card-text">
+                            This guide explains the policy and exemptions,
+                            including which marketplace items are returna...
+                          </p>
+                          <a href="#">Learn More</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-          </section>
-          
+
+              <!-- Carousel controls & indicators -->
+              <div
+                class="d-flex justify-content-between align-items-center mx-2"
+              >
+                <!-- Left arrow -->
+                <a
+                  class="btn leftArrow"
+                  href="#carouselExampleIndicators2"
+                  role="button"
+                  data-bs-slide="prev"
+                >
+                  <i class="fa fa-arrow-left text-light"></i>
+                </a>
+
+                <!-- Carousel Indicators (Black Circles, Centered) -->
+                <ul class="carousel-indicators my-auto">
+                  <li
+                    data-bs-target="#carouselExampleIndicators2"
+                    data-bs-slide-to="0"
+                    class="active"
+                  ></li>
+                  <li
+                    data-bs-target="#carouselExampleIndicators2"
+                    data-bs-slide-to="1"
+                  ></li>
+                  <li
+                    data-bs-target="#carouselExampleIndicators2"
+                    data-bs-slide-to="2"
+                  ></li>
+                  <li
+                    data-bs-target="#carouselExampleIndicators2"
+                    data-bs-slide-to="3"
+                  ></li>
+                </ul>
+
+                <!-- Right arrow -->
+                <a
+                  class="btn rightArrow"
+                  href="#carouselExampleIndicators2"
+                  role="button"
+                  data-bs-slide="next"
+                >
+                  <i class="fa fa-arrow-right text-light"></i>
+                </a>
+              </div>
+            </div>
+            <!-- Carousel End -->
+          </div>
+        </section>
       </div>
 
       <div class="row p-0">
@@ -699,7 +712,7 @@
         </div>
 
         <!-- Founder Image Section -->
-        <div class="col-8 col-xl-3 col-lg-4 founderImg">
+        <div class="col-8 col-xl-3 col-xxl-2 col-lg-4 founderImg">
           <img src="images/Rectangle 109445.png" alt="Founder Image" />
         </div>
       </div>
@@ -741,7 +754,7 @@
 
     <!-- footer Section -->
     <footer>
-      <div class="container-fluid  px-0">
+      <div class="container-fluid px-0">
         <div class="row px-4 px-sm-5 pb-5">
           <div class="col-12 col-lg-6 about">
             <h3 class="text-warning">About ValueBox</h3>
@@ -833,6 +846,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

@@ -32,11 +32,11 @@
         <div class="links">
           <a href="#">Sell Better Blog</a>
           <a href="#">Marketplace Learn</a>
-          <button class="loginBtn">Login</button>
+          <button class="loginBtn" onclick="loginPage()">Login</button>
         </div>
   
         <div class="ml-1 headerButtons">
-          <button class="loginBtn">Login</button>
+          <button class="loginBtn" onclick="loginPage()">Login</button>
           <button class="joinBtn">Join Marketplace</button>
         </div>
   
@@ -52,18 +52,19 @@
     <!-- main section -->
     <main>
     <div class="container-fluid p-0">
-        <div class="row m-0 p-0 position-relative h-100">
+        <div class="row h-50 m-0 p-0 position-relative">
             <div class="px-0 LoginBgPoster">
-                <img class="w-100 h-100" src="images/loginbg.png" alt="">
+                <img class="w-100 d-none d-lg-block" src="images/loginbg.png" alt="">
+                <img class="w-100 d-lg-none" src="images/loginPoster2.png" alt="">
             </div>
-            <div class="col-12 col-lg-7 col-xl-7 h-100 d-flex flex-column p-0 ps-5 pt-xl-5 pt-4 position-absolute">
-                <h1 class="fw-bold text-white my-4">BECOME A VALUEBOX SELLER TODAY</h1>
-                <h5 class="w-75 text-white">
+            <div class="col-12 col-lg-6  col-xl-7 d-flex flex-column p-0 pb-2 pr-2 ps-4 ps-sm-5 pt-xl-5 pt-4 position-absolute">
+                <h1 class="fw-bold text-white mb-sm-4 my-lg-4">BECOME A VALUEBOX SELLER TODAY</h1>
+                <h5 class="w-xl-75 text-white">
                     Create a ValueBox seller account now and reach millions of customers!
                 </h5>
             </div>
-            <div class="col-12 col-lg-5 h-100 col-xl-5 position-absolute end-0 d-flex align-items-center justify-content-center">
-                <div class="col-6 col-lg-12 bg-light p-0 formParent">
+            <div class="col-12 col-lg-6 h-100 mt-lg-2 mt-xl-0 loginForm p-0 col-xl-5 position-absolute end-0 d-flex align-items-center justify-content-center ">
+                <div class="col-11 col-sm-8 col-md-6 col-lg-10 bg-light p-0 formParent">
                     <form action="#" class="form">
                         <h2 class="text-center">Login as ValueBox Seller</h2>
                         <div class="form-group my-3">
@@ -98,8 +99,8 @@
     </div>
 
     <!-- sel section start -->
-    <div class="container-lg container-fluid pt-5">
-        <h1 class="my-4 px-4">Why Sell on ValueBox?</h1>
+    <div class="container-lg p-0 container-fluid pt-5">
+        <h1 class="my-4 px-3 px-sm-4">Why Sell on ValueBox?</h1>
         <div class="row px-4 p-0 py-5 bg-white">
             <!-- 1st -->
             <div class="col-12 col-md-6 col-xl-4 d-flex mb-4">
@@ -219,14 +220,14 @@
  <div class="container mb-5">
     <h1 class="text-center">Seller Stories</h1>
 
-    <div class="row bg-white p-0">
-        <div class="col-3 p-0">
+    <div class="row d-none d-md-flex bg-white p-0">
+        <div class="col-md-6 col-xl-3 p-0">
             <iframe class="h-100 w-100 rounded-4"
             src="https://www.youtube.com/embed/0a47I9xFIHU"
             allowfullscreen
           ></iframe>
         </div>
-        <div class="col-4 p-0">
+        <div class="col-md-6 col-xl-4 p-0">
             <div class="px-2 my-4 ml-3 mt-0">
                 <div class="px-2 py-3 reviewSection">
                     <div class="d-flex gap-2">
@@ -255,7 +256,7 @@
         </div>
 
         </div>
-        <div class="col-5 p-0">
+        <div class="col-md-12 col-xl-5 p-0">
             <iframe class="h-50 w-100"
             src="https://www.youtube.com/embed/0a47I9xFIHU"
             allowfullscreen
@@ -277,14 +278,128 @@
                     </span>
                 </div>
             </div>
-        
             <!-- Review Section 2 -->
-            
         </div>
-        
-        
         </div>
     </div>
+    <section class="cardSmScreen d-block d-md-none">
+      <div class="row p-0 mt-3 bg-white">
+          <!-- Carousel Start -->
+          <div id="carouselExampleIndicators2" class="pl-0 pr-0 carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                  <!-- First carousel item -->
+                  <div class="carousel-item active">
+                      <div class="row bg-white p-0 justify-content-center">
+                          <div class="col-md-4 mb-3">
+                              <div class="cardCrousel border-0 card rounded-4">
+                                <iframe class="h-50 w-100"
+                                src="https://www.youtube.com/embed/0a47I9xFIHU"
+                                allowfullscreen
+                              ></iframe>
+                              <div class="card-body p-0">
+                                <div class="d-flex cardBG py-5 gap-2 p-3">
+                                  <img class="h-25" src="images/quotation-marks-svgrepo-com 1.png" alt="">
+                                  <span class="reviewerDescription">
+                                      ValueBox Marketplace has been a game-changer for my business! The platform is incredibly user-friendly, making it easy to manage my listings.
+                                  </span>
+                                </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Second carousel item -->
+                  <div class="carousel-item">
+                    <div class="row bg-white p-0 justify-content-center">
+                        <div class="col-md-4 mb-3">
+                            <div class="cardCrousel border-0 card rounded-4">
+                              <iframe class="h-50 w-100"
+                              src="https://www.youtube.com/embed/0a47I9xFIHU"
+                              allowfullscreen
+                            ></iframe>
+                            <div class="card-body p-0">
+                              <div class="d-flex cardBG py-5 gap-2 p-3">
+                                <img class="h-25" src="images/quotation-marks-svgrepo-com 1.png" alt="">
+                                <span class="reviewerDescription">
+                                    ValueBox Marketplace has been a game-changer for my business! The platform is incredibly user-friendly, making it easy to manage my listings.
+                                </span>
+                              </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                  <!-- Third carousel item -->
+                  <div class="carousel-item">
+                    <div class="row bg-white p-0 justify-content-center">
+                        <div class="col-md-4 mb-3">
+                            <div class="cardCrousel border-0 card rounded-4">
+                              <iframe class="h-50 w-100"
+                              src="https://www.youtube.com/embed/0a47I9xFIHU"
+                              allowfullscreen
+                            ></iframe>
+                            <div class="card-body p-0">
+                              <div class="d-flex cardBG py-5 gap-2 p-3">
+                                <img class="h-25" src="images/quotation-marks-svgrepo-com 1.png" alt="">
+                                <span class="reviewerDescription">
+                                    ValueBox Marketplace has been a game-changer for my business! The platform is incredibly user-friendly, making it easy to manage my listings.
+                                </span>
+                              </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                  <!-- Fourth carousel item -->
+                  <div class="carousel-item">
+                    <div class="row bg-white p-0 justify-content-center">
+                        <div class="col-md-4 mb-3">
+                            <div class="cardCrousel border-0 card rounded-4">
+                              <iframe class="h-50 w-100"
+                              src="https://www.youtube.com/embed/0a47I9xFIHU"
+                              allowfullscreen
+                            ></iframe>
+                            <div class="card-body p-0">
+                              <div class="d-flex cardBG py-5 gap-2 p-3">
+                                <img class="h-25" src="images/quotation-marks-svgrepo-com 1.png" alt="">
+                                <span class="reviewerDescription">
+                                    ValueBox Marketplace has been a game-changer for my business! The platform is incredibly user-friendly, making it easy to manage my listings.
+                                </span>
+                              </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+
+              <!-- Carousel controls & indicators -->
+              <div class="d-flex justify-content-between align-items-center mx-2">
+                  <!-- Left arrow -->
+                  <a class="btn leftArrow" href="#carouselExampleIndicators2" role="button" data-bs-slide="prev">
+                      <i class="fa fa-arrow-left text-light"></i>
+                  </a>
+
+                  <!-- Carousel Indicators -->
+                  <ul class="carousel-indicators my-auto">
+                      <li data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active"></li>
+                      <li data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1"></li>
+                      <li data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2"></li>
+                      <li data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="3"></li>
+                  </ul>
+
+                  <!-- Right arrow -->
+                  <a class="btn rightArrow" href="#carouselExampleIndicators2" role="button" data-bs-slide="next">
+                      <i class="fa fa-arrow-right text-light"></i>
+                  </a>
+              </div>
+          </div>
+          <!-- Carousel End -->
+      </div>
+  </section>
  </div>
  <!-- seller story section end -->
 
@@ -317,7 +432,7 @@
 
  <!-- seller support and seller center start -->
   <div class="container p-0">
-    <div class="row p-3 p-lg-5 bg-white">
+    <div class="row m-0 p-3 p-lg-5 bg-white">
         <div class="col-12 p-0 text-center">
             <h3>But wait, there’s more!</h3>
             <span>Looking for developer tools? Or seller support? Look no further!</span>
@@ -348,6 +463,81 @@
         </div>
     </div>
   </div>
+
+  <div class="container mt-5">
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <a class="accordion-button rounded-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            What is UX design?
+            <i class="fa-solid fa-arrow-down ms-auto"></i>
+          </a>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            UX design stands for User Experience design. It is the process of designing digital or physical products that are easy to use, intuitive, and enjoyable for the user.
+          </div>
+        </div>
+      </div>
+  
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <a class="accordion-button rounded-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            What are the key principles of UX design?
+            <i class="fa-solid fa-arrow-down ms-auto"></i>
+          </a>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            The key principles include user-centered design, accessibility, usability, and research-based decisions.
+          </div>
+        </div>
+      </div>
+  
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <a class="accordion-button rounded-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            What is the difference between UX and UI design?
+            <i class="fa-solid fa-arrow-down ms-auto"></i>
+          </a>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            UX design focuses on the overall experience, while UI design focuses on the visual layout and interactive elements.
+          </div>
+        </div>
+      </div>
+  
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+          <a class="accordion-button rounded-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            What is a wireframe?
+            <i class="fa-solid fa-arrow-down ms-auto"></i>
+          </a>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            A wireframe is a visual guide that represents the skeletal framework of a digital product.
+          </div>
+        </div>
+      </div>
+  
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFive">
+          <a class="accordion-button rounded-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            What is user testing?
+            <i class="fa-solid fa-arrow-down ms-auto"></i>
+          </a>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            User testing involves evaluating a product by testing it with real users to gather feedback on usability.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
  <!-- seller support and seller center end -->
 </main>
 
@@ -446,6 +636,7 @@
           </div>
         </div>
       </footer>
+      <script src="script.js"></script>
       <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
