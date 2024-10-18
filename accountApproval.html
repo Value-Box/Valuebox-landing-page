@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ValueBox</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="/images/Valuebox logo 1 1.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <input type="checkbox" class="checkBox" id="menuToggle" />
+
+      <div class="logo">
+        <img src="images/Group 1.svg" alt="Marketplace Logo" />
+        <p class="mb-0">MARKETPLACE</p>
+      </div>
+
+      <div class="links">
+        <a href="#">Sell Better Blog</a>
+        <a href="#">Marketplace Learn</a>
+        <button class="loginBtn" onclick="loginPage()">Login</button>
+      </div>
+
+      <div class="ml-1 headerButtons">
+        <button class="loginBtn" onclick="loginPage()">Login</button>
+        <button class="joinBtn">Join Marketplace</button>
+      </div>
+
+      <label for="menuToggle" class="hamburger">
+        <img src="images/hamburgerMenu.svg" alt="Menu" />
+      </label>
+      <label for="menuToggle" class="closeIcon">
+        <i class="fa fa-close"></i>
+      </label>
+    </header>
+
+    <main>
+      <div class="container-fluid p-0">
+        <div class="row m-0 accountapprovalBg px-2 py-3 py-sm-4 py-md-5">
+          <div
+            class="col-12 col-lg-8 d-flex px-2 px-lg-5 pt-2 align-items-center order-2 order-lg-1"
+          >
+            <div
+              class="row m-0 bg-whitw w-100 g-5 rounded-4 p-4 pt-md-5 rightIconsParent"
+            >
+              <div class="container p-0">
+                <div class="steps">
+                  <div class="circleParent">
+                    <span class="circle completed" data-step="1"
+                      ><span class="inner"
+                        ><i class="fa-solid fa-check"></i></span
+                    ></span>
+                    <p class="text-center">Verify Phone Number</p>
+                  </div>
+                  <div class="circleParent">
+                    <span class="circle" data-step="2"
+                      ><span class="inner"
+                        ><i class="fa-solid fa-check"></i></span
+                    ></span>
+                    <p class="text-center">Enter Personal Info</p>
+                  </div>
+                  <div class="circleParent">
+                    <span class="circle" data-step="3"
+                      ><span class="inner"
+                        ><i class="fa-solid fa-check"></i></span
+                    ></span>
+                    <p class="text-center">Enter Business Info</p>
+                  </div>
+                  <div class="circleParent">
+                    <span class="circle" data-step="4"
+                      ><span class="inner"
+                        ><i class="fa-solid fa-check"></i></span
+                    ></span>
+                    <p class="text-center">Account Status</p>
+                  </div>
+                  <div class="progress-bar">
+                    <span class="indicator">
+                      <span class="inner"></span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-md-4 mx-auto px-2 px-lg-5 order-1 pb-4 pb-lg-0 order-lg-2"
+          >
+            <img width="100%" src="images/accountApproval.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid p-0 congratulationMsg">
+        <div class="row m-0 bg-transparent py-5 justify-content-center">
+          <div class="col-12 p-0">
+            <h1 class="text-center">Congratulations!</h1>
+            <p class="text-center col-lg-7 mx-auto mt-4">
+              Fantastic! You've successfully submitted your business
+              information. You're now closer than ever to becoming a part of our
+              thriving marketplace.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-11 my-2 mx-auto">
+            <div class="row m-0 align-items-center applicationStatus">
+                <div class="col-md-5 col-xl-7 p-0 applicationStatusText">
+                  <h3>Application Status</h3>
+                  <p class="mx-1 col-md-12 col-lg-12 col-xl-12">NOTE: You can edit your profile until the status becomes “In Processing”</p>
+                </div>
+                <div class="col-md-7 col-xl-5 p-0 d-flex gap-3 text-center text-md-end editApplicationBtn">
+                    <button class="editButton">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                            <path d="M19.089 14.941V19.381C19.0888 20.0092 18.8391 20.6116 18.3949 21.0558C17.9507 21.5 17.3483 21.7497 16.72 21.75H5.11904C4.8068 21.7499 4.49765 21.688 4.20938 21.568C3.9211 21.4481 3.65937 21.2723 3.43923 21.0509C3.21909 20.8294 3.04488 20.5667 2.92661 20.2777C2.80833 19.9887 2.74833 19.6792 2.75004 19.367V7.77898C2.74818 7.46723 2.80822 7.1582 2.92666 6.86982C3.04511 6.58144 3.21961 6.31944 3.44006 6.09899C3.6605 5.87855 3.92251 5.70404 4.21089 5.5856C4.49927 5.46715 4.80829 5.40712 5.12004 5.40898H9.55904" stroke="#002882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19.089 14.941V19.381C19.0888 20.0092 18.8391 20.6116 18.3949 21.0558C17.9507 21.5 17.3483 21.7497 16.72 21.75H5.11904C4.8068 21.7499 4.49765 21.688 4.20938 21.568C3.9211 21.4481 3.65937 21.2723 3.43923 21.0509C3.21909 20.8294 3.04488 20.5667 2.92661 20.2777C2.80833 19.9887 2.74833 19.6792 2.75004 19.367V7.77898C2.74818 7.46723 2.80822 7.1582 2.92666 6.86982C3.04511 6.58144 3.21961 6.31944 3.44006 6.09899C3.6605 5.87855 3.92251 5.70404 4.21089 5.5856C4.49927 5.46715 4.80829 5.40712 5.12004 5.40898H9.55904" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19.089 9.49497L15.004 5.40897M6.83399 16.303V14.138C6.83599 13.781 6.97799 13.438 7.22899 13.185L16.761 3.65297C16.8875 3.52507 17.0381 3.42354 17.204 3.35424C17.37 3.28495 17.5481 3.24927 17.728 3.24927C17.9079 3.24927 18.0859 3.28495 18.2519 3.35424C18.4179 3.42354 18.5685 3.52507 18.695 3.65297L20.846 5.80397C20.9739 5.93045 21.0754 6.08104 21.1447 6.24702C21.214 6.41301 21.2497 6.5911 21.2497 6.77097C21.2497 6.95084 21.214 7.12892 21.1447 7.29491C21.0754 7.4609 20.9739 7.61149 20.846 7.73797L11.314 17.27C11.0605 17.5217 10.7182 17.6636 10.361 17.665H8.19599C8.01705 17.6652 7.83982 17.6302 7.67446 17.5618C7.5091 17.4935 7.35884 17.3932 7.23232 17.2666C7.10579 17.1401 7.00548 16.9899 6.93713 16.8245C6.86877 16.6591 6.83372 16.4819 6.83399 16.303Z" stroke="#002882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Edit Application
+                    </button>
+                    <button class="pendingApproval">Pending Approval</button>
+                </div>
+                
+              </div>
+              <p class="processedText">Your Application will be processed within next 3 working days</p>
+        </div>
+      </div>
+
+      <div class="container-fluid querySection">
+<div class="row bg-transparent m-0 py-2 py-sm-5">
+    <div class="col-12 col-sm-2 text-center my-auto">
+        <img class="w-100 d-none d-sm-block" src="images/helpImage.png" alt="">
+        <img class="w-50 py-3 d-sm-none" src="images/helpImage.png" alt="">
+    </div>
+    <div class="col-12 col-sm-10 d-flex flex-column  my-auto queryText">
+        <h2 class="text-sm-start text-center">Have any Queries? Contact Us</h2>
+        <div class="row p-0 m-0 bg-transparent">
+            <div class="col-12 col-lg-7 text-start">
+                <p class="d-flex gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                    <path d="M29.8125 5.625H6.1875C5.14355 5.62612 4.14268 6.04132 3.4045 6.7795C2.66632 7.51768 2.25112 8.51855 2.25 9.5625V26.4375C2.25112 27.4814 2.66632 28.4823 3.4045 29.2205C4.14268 29.9587 5.14355 30.3739 6.1875 30.375H29.8125C30.8564 30.3739 31.8573 29.9587 32.5955 29.2205C33.3337 28.4823 33.7489 27.4814 33.75 26.4375V9.5625C33.7489 8.51855 33.3337 7.51768 32.5955 6.7795C31.8573 6.04132 30.8564 5.62612 29.8125 5.625ZM28.8155 12.138L18.6905 20.013C18.493 20.1665 18.2501 20.2499 18 20.2499C17.7499 20.2499 17.507 20.1665 17.3095 20.013L7.18453 12.138C7.06557 12.0482 6.96565 11.9356 6.89058 11.8068C6.81551 11.6781 6.76678 11.5356 6.74722 11.3879C6.72767 11.2401 6.73768 11.0899 6.77667 10.946C6.81567 10.8021 6.88287 10.6674 6.97437 10.5497C7.06587 10.4321 7.17984 10.3337 7.30967 10.2605C7.4395 10.1872 7.5826 10.1405 7.73064 10.123C7.87868 10.1056 8.02872 10.1177 8.17203 10.1587C8.31535 10.1997 8.44908 10.2688 8.56547 10.362L18 17.6998L27.4345 10.362C27.6704 10.1838 27.967 10.1057 28.2601 10.1444C28.5531 10.1832 28.8192 10.3358 29.0006 10.5692C29.1821 10.8026 29.2644 11.098 29.2297 11.3916C29.1951 11.6852 29.0463 11.9533 28.8155 12.138Z" fill="#EEA500"/>
+                  </svg> <span class="d-flex">Email us:</span> <span class="text-white"> sellersupport@valuebox.pk</span></p>
+            </div>
+            <div class="col-12 col-lg-5 text-start">
+                <p class="d-flex gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                    <path d="M31.5016 23.19L23.5966 22.275L19.8166 26.055C15.5587 23.8889 12.0977 20.4279 9.93156 16.17L13.7266 12.375L12.8116 4.5H4.54656C3.67656 19.77 16.2316 32.325 31.5016 31.455V23.19Z" fill="#EEA500"/>
+                  </svg> <span class="d-flex">Call us:</span><span class="text-white"> +92123456789</span></p>
+            </div>
+        </div>
+    </div>
+
+</div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row p-4">
+            <div class="col-12">
+                <p class="text-center col-12 col-lg-9 mx-auto mt-5"><span class="yellowText">You're just</span> <span class="blueText">3 steps</span> <span class="yellowText">away from boosting your business and</span> <span class="blueText">unlocking more orders</span> <span class="yellowText">with ValueBox!</span></p>
+            </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container-fluid px-0">
+        <div class="row px-4 px-sm-5 pb-5">
+          <div class="col-12 col-lg-6 about">
+            <h3 class="text-warning">About ValueBox</h3>
+            <p class="text-light mt-3">
+              ValueBox Marketplace is all about helping sellers succeed and
+              connecting them with customers anytime and anywhere through our
+              easy-to-use online platform and mobile app. Every week, thousands
+              of shoppers explore our marketplace, finding unique products and
+              great deals. We’re passionate about making eCommerce a better
+              experience for both sellers and buyers. Our supportive community
+              provides tools and guidance to help you thrive. Plus, we're
+              committed to sustainability and giving back, creating
+              opportunities for everyone in our marketplace. Join us and be part
+              of a vibrant community that cares!
+            </p>
+            <button class="mt-3">Join Marketplace</button>
+          </div>
+          <div class="col-lg-2 mt-lg-0 mt-3 col-xl-3 px-xl-5 px-lg-4">
+            <h6 class="text-warning">Seller Resources</h6>
+            <a href="#" class="text-light d-block text-decoration-none mt-4"
+              >Seller Center</a
+            >
+            <a href="#" class="text-light text-decoration-none mt-3"
+              >Seller Support</a
+            >
+          </div>
+          <div class="col-lg-3 mt-lg-0 mt-5 px-xl-5 px-lg-4">
+            <h6 class="text-warning">About</h6>
+            <a href="#" class="text-light d-block text-decoration-none mt-4"
+              >Shop ValueBox.pk</a
+            >
+            <a href="#" class="text-light d-block text-decoration-none mt-4"
+              >Our Social Handles</a
+            >
+            <div class="mt-3 col-12 socialIcons">
+              <a
+                href="https://www.facebook.com/valueboxdotpk/"
+                class="text-decoration-none"
+                target="_blank"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/valueboxdootpk/"
+                class="text-decoration-none"
+                target="_blank"
+                ><i class="fa-brands fa-square-instagram"></i
+              ></a>
+              <a
+                href="https://www.tiktok.com/@valuebox.pk"
+                class="text-decoration-none"
+                target="_blank"
+                ><i class="fa-brands fa-tiktok"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/@valueboxdotpk"
+                class="text-decoration-none"
+                target="_blank"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row px-lg-5 py-4 px-1">
+          <hr class="text-light py-1" />
+
+          <!-- Logo Section -->
+          <div
+            class="col-12 col-lg-4 text-center text-lg-left px-0 logoVlaueBox mb-3 mb-lg-0"
+          >
+            <span class="bg-light">
+              <img src="images/Group 1.svg" alt="ValueBox Logo" />
+            </span>
+          </div>
+
+          <!-- Links Section -->
+          <div class="col-12 col-lg-4 text-center px-0 mb-3 mb-lg-0">
+            <a href="#" class="text-decoration-none text-light px-3">English</a>
+            <a href="#" class="text-decoration-none text-light px-3">Privacy</a>
+            <a href="#" class="text-decoration-none text-light px-3">Legal</a>
+          </div>
+
+          <!-- Copyright Section -->
+          <div class="col-12 col-lg-4 text-center text-lg-end px-0">
+            <span class="text-light"
+              >&copy; 2024 ValueBox. All Rights Reserved.</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

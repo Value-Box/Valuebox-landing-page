@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton SC:wght@400&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -975,7 +977,109 @@ input::placeholder {
   line-height: 28px;
   color: #CCC !important;
 }
-
+.accountapprovalBg{
+  background: linear-gradient(90deg, #0032A3 0%, #1A51CB 25%, #3B66C8 50%, #1A51CB 75%, #0032A3 100%);
+}
+.congratulationMsg h1{
+  color: #002882;
+  font-size: 60px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.applicationStatus{
+  background-color: #F2F2F2;
+  border-radius: 8px;
+  padding: 20px;
+  /* margin: 0px auto; */
+}
+.editApplicationBtn button {
+  display: flex;
+  padding: 15px 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  border-radius: 10px;
+  border: none;
+}
+.editApplicationBtn .editButton{
+  background-color: white;
+  color: #002882;
+  font-weight: 500;
+  margin-left: auto;
+}
+.editApplicationBtn .pendingApproval{
+  background-color: #999;
+  color: white;
+  font-weight: 700;
+}
+.applicationStatusText h3{
+  font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: 38px;
+}
+.applicationStatusText p{
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 30px;
+  color: #999;
+}
+ .processedText{
+  font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 32px;
+margin-top: 20px;
+color: #002882;
+}
+.querySection{
+  background: linear-gradient(90deg, #0032A3 0%, #1A51CB 25%, #3B66C8 50%, #1A51CB 75%, #0032A3 100%);
+}
+.queryText h2{
+  color: white;
+  font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: 44px; /* 122.222% */
+letter-spacing: -0.72px;
+}
+.queryText p ,.queryQuestion p{
+  font-size: 21px;
+font-style: normal;
+font-weight: 500;
+line-height: 38px;
+color: #E09B00;
+}
+.yellowText,.blueText{
+  text-align: center;
+font-size: 30px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+font-family: 'Anton SC';
+}
+.yellowText{
+  background: linear-gradient(90deg, #FFC136 0%, #FAC142 19.76%, #FFD168 52.5%, #F5BC3A 77.13%, #E09B00 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.blueText{
+  background: linear-gradient(90deg, #0032A3 0%, #1A51CB 25%, #3B66C8 50%, #1A51CB 75%, #0032A3 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.yellowBlueText{
+  margin-top: 80px;
+}
 @media (max-width: 1100px) {
   .hamburger {
     display: inline;
@@ -1164,6 +1268,13 @@ input::placeholder {
   }
   .successText {
     width: 100%;
+  }
+  .editApplicationBtn .editButton{
+    margin-left: 0px;
+  }
+  .editApplicationBtn{
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -1819,6 +1930,9 @@ font-weight: 600;
   }
   .formParent {
     border-radius: 8px;
+}
+.applicationStatus{
+  padding: 10px;
 }
 }
 @media (max-width: 536px) {
