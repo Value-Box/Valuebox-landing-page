@@ -20,6 +20,8 @@
 }
 main {
   overflow: hidden;
+  max-width: 1728px;
+  margin: 0px auto;
 }
 .row > * {
   padding-left: 0px !important;
@@ -648,7 +650,331 @@ main {
   padding: 0; /* Remove any default padding */
 }
 
+.personalSignup{
+  background: linear-gradient(90deg, #0032A3 0%, #1A51CB 25%, #3B66C8 50%, #1A51CB 75%, #0032A3 100%);
+}
 
+.personalSignupText{
+  color: white;
+}
+.personalSignupText span {
+  background: linear-gradient(
+    90deg,
+    #ffc136 0%,
+    #fac142 19.76%,
+    #ffd168 52.5%,
+    #f5bc3a 77.13%,
+    #e09b00 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.personalSignupForm{
+  border-radius: 20px;
+}
+
+
+/* example progress bar */
+.rightIconsParent{
+  padding: 40px 40px 0px 40px;
+}
+.container .steps {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.steps .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  color: #999;
+  font-size: 22px;
+  font-weight: 500;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  transition: all 200ms ease;
+  transition-delay: 0s;
+  padding:4px;
+  margin: 0px auto;
+}
+.steps .circle.active {
+  transition-delay: 100ms;
+  border-color: #002882;
+  color: white;
+}
+.steps .progress-bar {
+  position: absolute;
+  top: 24px;
+  height: 3px;
+  width: 84%;
+  left: 10%;
+  background:#999;
+}
+.circleParent{
+  z-index: 1;
+}
+.progress-bar .indicator {
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  background: #12B76A;
+  transition: all 300ms ease;
+}
+.container .buttons {
+  display: flex;
+  gap: 20px;
+}
+.buttons button {
+  padding: 8px 25px;
+  background: #4070f4;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  transition: all 200ms linear;
+}
+.buttons button:active {
+  transform: scale(0.97);
+}
+.buttons button:disabled {
+  background: #87a5f8;
+  cursor: not-allowed;
+}
+.inner{
+background-color: #999;
+width:100%;
+height:100%;
+color: white;
+border-radius:50%;
+display:flex;
+justify-content: center;
+align-items:center;
+}
+.steps .circle.active .inner{
+  background-color: #002882;
+}
+.form-check .form-check-input:checked{
+  background-color: #002882;
+  border: 1px solid #002882;
+}
+.description{
+  font-size: 16px;
+  color: #CCC;
+}
+
+.formFields {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.formFields label {
+  width: 330px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.formFields input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+#country-code {
+  width: 50px; /* Set width for country code input */
+}
+#phone {
+  flex-grow: 1; /* Allow the phone number input to grow */
+}
+.iti {
+  width: 100%;
+}
+.formRow{
+  background-color: #FCFCFC;
+}
+.starik{
+  color: #EEA500;
+}
+.upload-wrapper {
+  display: inline-block;
+  cursor: pointer;
+  padding: 7px 20px;
+  color: #002882;
+  border: 1.5px solid #EEA500;
+  font-size: 18px !important;
+  text-align: center;
+  width: 100% !important;
+  margin-left: 5px;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s;
+}
+
+.upload-wrapper:hover {
+  background-color: #002882;
+  color: white;
+  border: 1.5px solid #002882;
+}
+.upload-wrapper svg path{
+  transition: background-color 0.3s;
+}
+.upload-wrapper:hover svg path {
+  stroke: white; /* Change the stroke color on hover */
+}
+.upload-wrapper i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.nextBtn{
+  width: 100%;
+  border-radius: 8px;
+  padding: 10px;
+  border: none;
+  background-color: #002882;
+  color: white;
+  margin-top: 80px;
+}
+
+/* Hide the actual file input */
+input[type="file"] {
+  display: none;
+}
+
+.personalInfoForm h1{
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.businessFormFields{
+  display: flex;
+}
+.bussinessInfoText{
+  font-size: 20px;
+  color: #999;
+}
+.businessFormFields label:first-child {
+  width: 330px;
+  font-size: 24px;
+  font-weight: 500;
+}
+.businessInputFields{
+  width: 100%;
+  padding: 0px 9px;
+}
+.businessFormFields label:last-child {
+  font-size: 18px;
+  font-weight: 500;
+}
+.businessFormFields input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #002882; 
+  background-color: #002882 !important; 
+  padding: 0; 
+  margin-right: 8px; 
+}
+.bankDetailLink{
+  color: #002882;
+  font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 32px;
+display: block;
+text-decoration-line: underline;
+margin: 80px 0px 40px 0px !important;
+}
+.BusinessInInfoIndForm button:disabled{
+  background-color: #666666;
+}
+.BusinessInInfoIndForm .backBtn, .BusinessInfoBussAccForm .backBtn,.bankDetail .backBtn{
+  background-color: white;
+  color: #002882;
+  border-radius: 8px;
+  padding: 8px 10px 8px 10px;
+  border: 2px solid #002882;
+  margin-top: 20px;
+  font-size: 18px;
+font-style: normal;
+width: 100%;
+font-weight: 600;
+line-height: 28px;
+transition: background-color 0.3s;
+display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.BusinessInInfoIndForm .backBtn:hover, .BusinessInfoBussAccForm .backBtn:hover,.bankDetail .backBtn:hover{
+  color: white;
+  background-color: #002882;
+}
+.BusinessInInfoIndForm .backBtn svg path,.BusinessInfoBussAccForm .backBtn svg path ,.bankDetail .backBtn svg path{
+  transition: background-color 0.3s;
+}
+.BusinessInInfoIndForm .backBtn:hover svg path,.BusinessInfoBussAccForm .backBtn:hover svg path,.bankDetail .backBtn:hover svg path{
+  stroke: white; /* Change the stroke color on hover */
+}
+.bussAddText{
+  font-size: 24px;
+}
+.form-check-input.is-valid:checked, .was-validated .form-check-input:valid:checked{
+  background-color: #002882 !important;
+}
+.personalInfoForm .nextBtn{
+  margin-top: 80px;
+}
+.bankDetail .bankDetBackBtn{
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  color: #002882;
+  margin: 40px 0px 80px 0px;
+}
+.bankDetailRow{
+  margin: 40px 0px 0px 0px !important;
+}
+.personalInfoForm button:disabled,.bankDetail button:disabled{
+  background-color: #666666;
+}
+.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: gray; /* Default color for uncompleted */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.circle.completed .inner{
+    background-color: #12B76A; /* Color for completed steps */
+}
+.steps .circle.completed{
+    border: 2px solid #12B76A;
+}
+
+.circle.completed .indicator {
+    width: 0;
+    height: 5px;
+    background-color: #12B76A ; /* Progress bar color */
+    transition: width 0.3s;
+}
+input::placeholder {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  color: #CCC !important;
+}
 
 @media (max-width: 1100px) {
   .hamburger {
