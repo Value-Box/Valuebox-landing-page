@@ -7,19 +7,43 @@ function loginPage() {
 // persoanl Information sign Up Form Page JS
 const circles = document.querySelectorAll(".circle"),
   progressBar = document.querySelector(".indicator"),
-  progressBarInner = progressBar.querySelector(".inner"), // Target inner element for color
+  progressBarInner = progressBar.querySelector(".inner"), 
   buttons = document.querySelectorAll("button");
 
-let currentStep = 2; // Start from step 2 since step 1 is already completed
+let currentStep = 2; 
 
-// Initialize first circle as completed and second circle as active
-circles[0].classList.add("completed"); // First step completed
-circles[1].classList.add("active"); // Second step active
+circles[0].classList.add("completed"); 
+circles[1].classList.add("active");
 
-// Set the initial progress bar width for step 2 (since step 1 is completed)
-const initialProgressPercentage = 33.3333; // Set progress for the first step
+const initialProgressPercentage = 33.3333; 
 progressBar.style.width = `${initialProgressPercentage}%`;
-progressBarInner.style.backgroundColor = "#12B76A"; // Set progress bar color to green
+progressBarInner.style.backgroundColor = "#12B76A"; 
+
+// Check if the Account Approval page is present
+
+const accountApprovalSection = document.querySelector(".accountApprovalPage");
+
+if (accountApprovalSection) {
+  const circles = accountApprovalSection.querySelectorAll(".circle"),
+    progressBar = accountApprovalSection.querySelector(".indicator"),
+    progressBarInner = progressBar.querySelector(".inner"); // Target inner element for color
+
+  // Mark first three circles as completed and remove any active state
+  circles.forEach((circle, index) => {
+    if (index < 3) {
+      circle.classList.add("completed"); // Mark steps 1, 2, 3 as completed
+      circle.classList.remove("active"); // Ensure the 'active' class is removed
+    } else if (index === 3) {
+      circle.classList.add("active"); // Mark step 4 as active
+    }
+  });
+
+  // Set the progress bar to 99%
+  progressBar.style.width = "99%"; // Set progress bar width to 99%
+  progressBarInner.style.backgroundColor = "#12B76A"; // Set the color to green
+}
+
+
 
 // const updateSteps = (e) => {
 //   // Update current step based on the button clicked

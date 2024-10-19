@@ -735,7 +735,7 @@ main {
 }
 .buttons button {
   padding: 8px 25px;
-  background: #4070f4;
+  background: #12B76A;
   border: none;
   border-radius: 8px;
   color: #fff;
@@ -1080,6 +1080,95 @@ background-clip: text;
 .yellowBlueText{
   margin-top: 80px;
 }
+.stepCircle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stepContent {
+  border: 2px solid #002882;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #f9f9f9;
+}
+.stepContent span{
+  color: #999;
+  font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px;
+}
+.stepContent h4{
+  color:  #002882;
+text-align: center;
+font-family: "Anton SC";
+font-size: 30px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.progressBarSection {
+  position: relative;
+  padding: 0px;
+  z-index: 1;
+}
+
+.stepProgressBar {
+  position: absolute;
+  top: 50%;
+  left: 17%;
+  width: 66% !important;
+  height: 3px;
+  background: linear-gradient(90deg, #FFC136 0%, #FAC142 19.76%, #FFD168 52.5%, #F5BC3A 77.13%, #E09B00 100%);
+  z-index: -1;
+}
+
+.stepsCards .stCard {
+  padding: 40px 30px;
+  background-color: white; /* Default background color for all cards */
+}
+.stepsCards .stCard span{
+  color:  #1A1A1A;
+/* Display sm/Bold */
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: 38px;
+}
+
+.stepsCards .stCard p{
+  color:  #999;
+font-family: Sarabun;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 30px; /* 150% */
+}
+
+/* Targeting the center card (2nd column) */
+.stepsCards .stCard:nth-child(1),.stepsCards .stCard:nth-child(3) {
+  border-radius: 20px;
+  border-top: 2px solid #0032A3;
+  border-right: 4px solid  #0032A3;
+  border-bottom: 8px solid  #0032A3;
+  border-left: 8px solid  #0032A3;
+  background:  #FFF;
+}
+.stepsCards .stCard:nth-child(2) {
+  border-radius: 20px;
+border-top: 2px solid  #FFC136;
+border-right: 4px solid  #FFC136;
+border-bottom: 8px solid #FFC136;
+border-left: 8px solid  #FFC136;
+background:  #FFF;
+}
+
 @media (max-width: 1100px) {
   .hamburger {
     display: inline;
@@ -1686,6 +1775,15 @@ font-weight: 600;
     height: 310px;
   }
 }
+@media (max-width: 767px) { /* When in column layout for smaller screens */
+  .stepProgressBar {
+    left: -89%;
+    transform: rotate(90deg) translateX(0%);
+    max-width: 700px !important;
+    width: 270% !important;
+    height: 3px;
+  }
+}
 @media (max-width: 768px) {
   .row {
     padding: 50px 20px 50px 20px;
@@ -1794,6 +1892,24 @@ font-weight: 600;
 
 .previewImg{
   height: 320px;
+}
+.stepProgressBar {
+  left: -128%;
+  transform: rotate(90deg) translateX(0%);
+  max-width: 700px !important;
+  width: 355% !important;
+  height: 3px;
+}
+.stepContent {
+  border: 2px solid #002882;
+  width: 85px;
+  height: 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #f9f9f9;
 }
 }
 @media (max-width: 594px) {
@@ -1934,6 +2050,70 @@ font-weight: 600;
 .applicationStatus{
   padding: 10px;
 }
+.steps .circle{
+    height: 40px;
+    width: 40px;
+    font-size: 17px;
+}
+.steps .progress-bar{
+    top: 19px;
+    height: 3px;
+    width: 81%;
+    left: 12%;
+}
+.circleParent p{
+  font-size: 12px;
+  margin-bottom: 0px;
+}
+.congratulationMsg h1{
+  font-size: 40px;
+}
+.applicationStatusText h3 {
+  font-size: 20px;
+}
+.applicationStatusText p {
+  font-size: 16px;
+}
+.editApplicationBtn button {
+  padding: 8px 7px;
+  font-size: 15px;
+  border-radius: 5px;
+}
+.stepsCards .stCard span {
+  font-size: 20px;
+}
+.stepsCards .stCard p {
+  font-size: 16px;
+}
+.stImg{
+  max-width: 50% !important;
+  width: 170px !important;
+}
+.stepProgressBar {
+  top: 48%;
+  left: -198%;
+  transform: rotate(90deg) translateX(0%);
+  max-width: 700px !important;
+  width: 500% !important;
+  height: 3px;
+}
+.stepContent {
+  border: 2px solid #002882;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #f9f9f9;
+}
+.stepContent span {
+  font-size: 14px;
+}
+.stepContent h4 {
+  font-size: 22px;
+}
 }
 @media (max-width: 536px) {
   .headerButtons button {
@@ -1957,6 +2137,12 @@ font-weight: 600;
   }
   .headerButtons button {
     margin-left: -11px;
+  }
+  .stepProgressBar {
+    top: 47%;
+    left: -218%;
+    max-width: 700px !important;
+    width: 540% !important;
   }
 }
 @media (max-width: 485px) {
@@ -2050,6 +2236,14 @@ font-weight: 600;
   .previewSection .previewText{
     height: 85%;
   }
+  .stepsCards .stCard p {
+    font-size: 16px;
+    line-height: 22px;
+}
+.stepsCards .stCard span {
+  font-size: 20px;
+  line-height: 22px;
+}
 }
 
 /* Style for centering the indicators */
@@ -2132,6 +2326,12 @@ font-weight: 600;
 }
 .formParent {
   margin: auto 50px -26px 50px;
+}
+.stepProgressBar {
+  top: 47%;
+  left: -268%;
+  max-width: 700px !important;
+  width: 640% !important;
 }
 }
 @media (max-width: 350px) {

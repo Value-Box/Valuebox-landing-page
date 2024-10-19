@@ -52,39 +52,40 @@
       <div class="container-fluid p-0">
         <div class="row m-0 accountapprovalBg px-2 py-3 py-sm-4 py-md-5">
           <div
-            class="col-12 col-lg-8 d-flex px-2 px-lg-5 pt-2 align-items-center order-2 order-lg-1"
-          >
-            <div
-              class="row m-0 bg-whitw w-100 g-5 rounded-4 p-4 pt-md-5 rightIconsParent"
-            >
+            class="col-12 col-lg-8 d-flex px-sm-2 px-lg-5 pt-2 align-items-center order-2 order-lg-1">
+            <div class="row m-0 bg-whitw w-100 g-5 rounded-4 p-3 p-sm-4 pt-md-5 rightIconsParent">
               <div class="container p-0">
-                <div class="steps">
+                <div class="steps accountApprovalPage">
                   <div class="circleParent">
-                    <span class="circle completed" data-step="1"
-                      ><span class="inner"
-                        ><i class="fa-solid fa-check"></i></span
-                    ></span>
+                    <span class="circle completed" data-step="1">
+                      <span class="inner">
+                        <i class="fa-solid fa-check"></i>
+                      </span>
+                    </span>
                     <p class="text-center">Verify Phone Number</p>
                   </div>
                   <div class="circleParent">
-                    <span class="circle" data-step="2"
-                      ><span class="inner"
-                        ><i class="fa-solid fa-check"></i></span
-                    ></span>
+                    <span class="circle completed" data-step="2">
+                      <span class="inner">
+                        <i class="fa-solid fa-check"></i>
+                      </span>
+                    </span>
                     <p class="text-center">Enter Personal Info</p>
                   </div>
                   <div class="circleParent">
-                    <span class="circle" data-step="3"
-                      ><span class="inner"
-                        ><i class="fa-solid fa-check"></i></span
-                    ></span>
+                    <span class="circle completed" data-step="3">
+                      <span class="inner">
+                        <i class="fa-solid fa-check"></i>
+                      </span>
+                    </span>
                     <p class="text-center">Enter Business Info</p>
                   </div>
                   <div class="circleParent">
-                    <span class="circle" data-step="4"
-                      ><span class="inner"
-                        ><i class="fa-solid fa-check"></i></span
-                    ></span>
+                    <span class="circle active" data-step="4">
+                      <span class="inner">
+                        <i class="fa-solid fa-check"></i>
+                      </span>
+                    </span>
                     <p class="text-center">Account Status</p>
                   </div>
                   <div class="progress-bar">
@@ -93,6 +94,7 @@
                     </span>
                   </div>
                 </div>
+                
               </div>
             </div>
           </div>
@@ -135,7 +137,7 @@
                 </div>
                 
               </div>
-              <p class="processedText">Your Application will be processed within next 3 working days</p>
+              <p class="processedText text-center text-md-left">Your Application will be processed within next 3 working days</p>
         </div>
       </div>
 
@@ -164,11 +166,83 @@
 </div>
       </div>
 
-      <div class="container-fluid">
-        <div class="row p-4">
+      <div class="container-fluid p-0">
+        <div class="row m-0 p-4">
             <div class="col-12">
                 <p class="text-center col-12 col-lg-9 mx-auto mt-5"><span class="yellowText">You're just</span> <span class="blueText">3 steps</span> <span class="yellowText">away from boosting your business and</span> <span class="blueText">unlocking more orders</span> <span class="yellowText">with ValueBox!</span></p>
             </div>
+        </div>
+      </div>
+      
+      
+      <div class="row gap-lg-5 m-0 stepsCards">
+        
+        <div class="col-3 col-md-12 p-0">
+          <div class="row m-0 d-flex flex-column justify-content-around h-100 flex-md-row progressBarSection text-center ">
+            <div class="col-12 col-md-4 p-0">
+              <div class="stepCircle">
+                <div class="stepContent">
+                  <span>Step</span>
+                  <h4>01</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 p-0">
+              <div class="stepCircle">
+                <div class="stepContent">
+                  <span>Step</span>
+                  <h4>02</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 p-0">
+              <div class="stepCircle">
+                <div class="stepContent">
+                  <span>Step</span>
+                  <h4>03</h4>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Progress Bar -->
+            <div class="stepProgressBar"></div>
+          </div>
+        </div>
+
+        <div class="col-9 col-md-12 gap-3 gap-lg-5 d-md-flex">
+          <div class="col-12 col-md py-4 px-4 stCard">
+    <div class="row m-0 bg-transparent p-0">
+      <div class="col-sm-8 col-md-12">
+       <span>Document Verification</span>
+       <p>Your documents will be verified to ensure everything is set up for success.</p>
+      </div>
+       <div class="col-sm-4 col-md-12">
+         <img class="w-100 stImg" src="images/DocumentVerification.png" alt="">
+       </div>
+    </div>
+           </div>
+           <div class="col-12 col-md my-3 my-md-0 py-4 px-4 stCard">
+            <div class="row m-0 bg-transparent p-0">
+     <div class="col-sm-7 col-md-12">
+       <span>Call with ValueBox</span>
+     <p>A quick call with one of our representatives will be scheduled to verify your details.</p>
+    </div>
+    <div class="col-sm-5 col-md-12">
+       <img class="w-100 stImg" src="images/CallWithValueBox.png" alt="">
+     </div>
+            </div>
+           </div>
+           <div class="col-12 col-md py-4 px-4 stCard">
+    <div class="row m-0 bg-transparent p-0">
+    <div class="col-sm-8 col-md-12">
+     <span>Get Approved</span>
+     <p>Once everything is verified, your account will be activated, and you’re ready to sell on ValueBox!</p>
+    </div>
+     <div class="col-sm-4 col-md-12">
+       <img class="w-100 stImg" src="images/GetApproved.png" alt="">
+     </div>
+    </div>
+           </div>
         </div>
       </div>
     </main>
