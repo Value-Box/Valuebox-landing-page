@@ -108,9 +108,6 @@ main {
   height: 430px;
 }
 
-.lessThan #lessthan2 {
-  display: none;
-}
 .lessThan {
   width: 45px;
   height: 45px;
@@ -123,16 +120,32 @@ main {
   background-color: rgba(252, 252, 252, 0.4);
   position: absolute;
   cursor: pointer;
-  top: 170px;
+  top: 170px; /* Adjust position */
   left: 30px;
-  transition: 0.5s;
+  transition: opacity 0.8s ease;
 }
+
+#lessthan1 {
+  opacity: 1; /* Initially visible */
+  transition: opacity 0.8s ease; /* Transition for the first element */
+}
+
+#lessthan2 {
+  opacity: 0; /* Initially hidden */
+  visibility: hidden; /* Hidden until hovered */
+  position: absolute; /* Absolute positioning */
+  top: 0; /* Position it to overlap with the first element */
+  left: 0; /* Position it to overlap with the first element */
+  transition: opacity 0.8s ease; /* Transition for the second element */
+}
+
 .lessThan:hover #lessthan1 {
-  display: none;
+  opacity: 0; /* Fade out first element */
 }
 
 .lessThan:hover #lessthan2 {
-  display: block;
+  opacity: 1; /* Fade in second element */
+  visibility: visible; /* Make the second element visible */
   background-color: white;
   width: 45px;
   height: 45px;
@@ -142,9 +155,6 @@ main {
   align-items: center;
 }
 
-.greaterThan #lessthan2 {
-  display: none;
-}
 .greaterThan {
   rotate: 180deg;
   width: 45px;
@@ -155,19 +165,24 @@ main {
   font-size: 35px;
   color: #002882;
   border-radius: 50%;
+  cursor: pointer;
+
   background-color: rgba(252, 252, 252, 0.4);
   position: absolute;
-  top: 170px;
-  cursor: pointer;
+  top: 170px; /* Adjust position */
   right: 30px;
+  transition: opacity 0.8s ease;
 }
 
 .greaterThan:hover #lessthan1 {
-  display: none;
+  opacity: 0; /* Fade out first element */
 }
 
 .greaterThan:hover #lessthan2 {
-  display: block;
+  opacity: 1; /* Fade in second element */
+  visibility: visible; /* Make the second element visible */
+  top: 0; /* Position it to overlap with the first element */
+  left: 0; /* Position it to overlap with the first element */
   background-color: white;
   width: 45px;
   height: 45px;
@@ -176,6 +191,7 @@ main {
   justify-content: center;
   align-items: center;
 }
+
 .imgText {
   width: 650px;
   height: 350px;
@@ -1853,7 +1869,7 @@ font-weight: 600;
 }
 @media (max-width: 900px) {
   #carouselExampleCaptions {
-    height: 310px;
+    height: 350px;
   }
 }
 @media (max-width: 767px) { /* When in column layout for smaller screens */
@@ -1912,7 +1928,7 @@ font-weight: 600;
     font-size: 20px;
   }
   #carouselExampleCaptions {
-    height: 310px;
+    height: 350px;
   }
   .imgText .showcase-your-products {
     font-size: 17px;
@@ -1943,7 +1959,7 @@ font-weight: 600;
 }
 @media (max-width: 650px) {
   #carouselExampleCaptions {
-    height: 280px;
+    height: 350px;
   }
   .reach-more-sell-better-container {
     margin-top: 18px;
