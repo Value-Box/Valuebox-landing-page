@@ -883,17 +883,29 @@ input[type="file"] {
   margin-right: 8px; 
 }
 .bankDetailLink{
-  color: #002882;
+  /* color: #002882;
   font-size: 24px;
 font-style: normal;
 font-weight: 600;
 line-height: 32px;
 display: block;
 text-decoration-line: underline;
-margin: 80px 0px 40px 0px !important;
+margin: 80px 0px 40px 0px !important; */
+width: 100%;
+border-radius: 8px;
+padding: 10px;
+border: none;
+background-color: #002882;
+color: white;
+margin-top: 80px;
 }
 .BusinessInInfoIndForm button:disabled{
   background-color: #666666;
+}
+.disabledButton button:disabled{
+  background-color: #666666;
+  color: white;
+  border-color:white ;
 }
 .BusinessInInfoIndForm .backBtn, .BusinessInfoBussAccForm .backBtn,.bankDetail .backBtn{
   background-color: white;
@@ -1169,6 +1181,74 @@ border-left: 8px solid  #FFC136;
 background:  #FFF;
 }
 
+#frontSidePhoto, #backSidePhoto{
+  max-width: 414px;
+  width: 100%;
+  margin-left: auto;
+  color: #999999;
+}
+.forgotPassword{
+  font-size: 16px;
+font-style: italic;
+font-weight: 500;
+line-height: 24px;
+color: #002882;
+}
+.eyeIconBtn{
+  border: none;
+  outline: none;
+}
+.eyeIconBtn:focus{
+  border: none;
+  outline: none;
+}
+
+.phVerifyLabel{
+  color: #002882;
+  font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px;
+padding: 5px 0px;
+}
+.white-alert {
+  background-color: white !important; /* White background */
+  color: black !important; /* Black text for visibility */
+}
+.fourDigitText{
+  font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px;
+}
+.fourDigitText span{
+  color: #002882;
+}
+.spanTimer .timer{
+  color:  #002882;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px;
+}
+.otpNum{
+  padding: 12px 20px !important;
+  font-size: 24px;
+}
+.white-alert .swal2-title, 
+.white-alert .swal2-content {
+  color: black !important; /* Ensures title and text are visible */
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 @media (max-width: 1100px) {
   .hamburger {
     display: inline;
@@ -1294,6 +1374,7 @@ background:  #FFF;
   }
   .formParent{
     margin-top: 45px;
+    height: auto !important;
   }
 }
 
@@ -1478,10 +1559,10 @@ background:  #FFF;
   font-size: 20px;
 }
 footer {
-  background-color: #1a1a1a;
+  background-color: #F2F2F2;
 }
 footer .row {
-  background-color: #1a1a1a;
+  background-color: #F2F2F2;
 }
 .socialIcons {
   display: flex;

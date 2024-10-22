@@ -1,3 +1,4 @@
+
 const loginBtn = document.querySelector(".loginBtn");
 
 function loginPage() {
@@ -5,19 +6,19 @@ function loginPage() {
 }
 
 // persoanl Information sign Up Form Page JS
-const circles = document.querySelectorAll(".circle"),
-  progressBar = document.querySelector(".indicator"),
-  progressBarInner = progressBar.querySelector(".inner"), 
-  buttons = document.querySelectorAll("button");
+const circles = document.querySelectorAll(".circle")
+const progressBar = document.querySelector(".indicator")
+const progressBarInner = progressBar.querySelector(".inner")
+const buttons = document.querySelectorAll("button");
 
-let currentStep = 2; 
+let currentStep = 2;
 
-circles[0].classList.add("completed"); 
+circles[0].classList.add("completed");
 circles[1].classList.add("active");
 
-const initialProgressPercentage = 33.3333; 
+const initialProgressPercentage = 33.3333;
 progressBar.style.width = `${initialProgressPercentage}%`;
-progressBarInner.style.backgroundColor = "#12B76A"; 
+progressBarInner.style.backgroundColor = "#12B76A";
 
 // Check if the Account Approval page is present
 
@@ -42,8 +43,6 @@ if (accountApprovalSection) {
   progressBar.style.width = "99%"; // Set progress bar width to 99%
   progressBarInner.style.backgroundColor = "#12B76A"; // Set the color to green
 }
-
-
 
 // const updateSteps = (e) => {
 //   // Update current step based on the button clicked
@@ -166,6 +165,7 @@ document
       warehouseAddress.style.display = "block"; // Show the address when unchecked
     }
   });
+
 document
   .getElementById("returnAddressCheck")
   .addEventListener("change", function () {
@@ -203,34 +203,6 @@ document
     }
   });
 
-function getFrontSidePhoto() {
-  const fileInput = document.getElementById("cnicFrontSidePhoto");
-  const frontSidePhoto = document.getElementById("frontSidePhoto");
-  // Get the file name without the extension
-  const fileName = fileInput.files[0]
-    ? fileInput.files[0].name
-    : "No file chosen";
-  const fileNameWithoutExtension = fileInput.files[0]
-    ? fileName.split(".")[0]
-    : "";
-  const extension = fileInput.files[0] ? fileName.split(".")[1] : "";
-  frontSidePhoto.textContent = `File Name: ${fileNameWithoutExtension}, Extension: ${extension}`;
-}
-
-function getBackSidePhoto() {
-  const fileInput = document.getElementById("cnicFrontBackPhoto");
-  const backSidePhoto = document.getElementById("backSidePhoto");
-  // Get the file name without the extension
-  const fileName = fileInput.files[0]
-    ? fileInput.files[0].name
-    : "No file chosen";
-  const fileNameWithoutExtension = fileInput.files[0]
-    ? fileName.split(".")[0]
-    : "";
-  const extension = fileInput.files[0] ? fileName.split(".")[1] : "";
-  backSidePhoto.textContent = `File Name: ${fileNameWithoutExtension}, Extension: ${extension}`;
-}
-
 // bank cheque Photo
 function bankChequePhoto() {
   const fileInput = document.getElementById("chequeCopy");
@@ -247,7 +219,9 @@ function bankChequePhoto() {
 }
 
 // bank Check Fields
-const bankDetailSection = document.querySelectorAll(".bankDetail .bankRequired");
+const bankDetailSection = document.querySelectorAll(
+  ".bankDetail .bankRequired"
+);
 const submitButton = document.getElementById("bussAccNxtBtnSubmit");
 
 function checkBankFields() {
@@ -284,58 +258,138 @@ bankDetailSection.forEach((input) => {
   }
 });
 
-submitButton.addEventListener('click',(event)=>{
-    event.preventDefault();
-    document.querySelector(".bankDetail").style.display = "none";
+submitButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  document.querySelector(".bankDetail").style.display = "none";
 
-    const selectedRadio = document.querySelector('input[name="individualForm"]:checked');
+  const selectedRadio = document.querySelector(
+    'input[name="individualForm"]:checked'
+  );
 
-    if (selectedRadio) {
-      document.querySelector(".BusinessInInfoIndForm").style.display = "block"; // Show the next section for individual
-    } else {
-      document.querySelector(".BusinessInfoBussAccForm").style.display = "block"; // Show the next section for business
-    }
-})
+  if (selectedRadio) {
+    document.querySelector(".BusinessInInfoIndForm").style.display = "block"; // Show the next section for individual
+  } else {
+    document.querySelector(".BusinessInfoBussAccForm").style.display = "block"; // Show the next section for business
+  }
+});
 
 // Get all submit buttons with the class 'nextBtn'
-const personalNextBtn=document.getElementById('personalNextBtn');
-let inputs = document.querySelectorAll(".required");
+
+function getFrontSidePhoto() {
+  const fileInput = document.getElementById("cnicFrontSidePhoto");
+  const frontSidePhoto = document.getElementById("frontSidePhoto");
+  // Get the file name without the extension
+  const fileName = fileInput.files[0]
+    ? fileInput.files[0].name
+    : "No file chosen";
+  const fileNameWithoutExtension = fileInput.files[0]
+    ? fileName.split(".")[0]
+    : "";
+  const extension = fileInput.files[0] ? fileName.split(".")[1] : "";
+  frontSidePhoto.textContent = `File Name: ${fileNameWithoutExtension}, Extension: ${extension}`;
+}
+
+function getBackSidePhoto() {
+  const fileInput = document.getElementById("cnicFrontBackPhoto");
+  const backSidePhoto = document.getElementById("backSidePhoto");
+  // Get the file name without the extension
+  const fileName = fileInput.files[0]
+    ? fileInput.files[0].name
+    : "No file chosen";
+  const fileNameWithoutExtension = fileInput.files[0]
+    ? fileName.split(".")[0]
+    : "";
+  const extension = fileInput.files[0] ? fileName.split(".")[1] : "";
+  backSidePhoto.textContent = `File Name: ${fileNameWithoutExtension}, Extension: ${extension}`;
+}
+const personalNextBtn = document.getElementById("personalNextBtn");
+let inputs = document.querySelectorAll(".personalInfoForm .required");
 
 function checkPerInfoFields() {
-    let allFieldsFilled = true;
-  
-    inputs.forEach((input) => {
-      if (input.type === "file") {
-        if (input.files.length === 0) {
-          allFieldsFilled = false; // No file selected
-        } else {
-          const fileType = input.files[0].type.split("/")[0];
-          if (fileType !== "image") {
-            allFieldsFilled = false; // Invalid file type
-            alert("Please upload a valid image file.");
-          }
-        }
-      } else {
-        if (input.value.trim() === "") {
-          allFieldsFilled = false; // Empty text input
-        }
-      }
-    });
-  
-    // Enable button only if all fields are filled and a valid image is selected
-    personalNextBtn.disabled = !allFieldsFilled;
-  }
+  let allFieldsFilled = true;
 
   inputs.forEach((input) => {
     if (input.type === "file") {
-      input.addEventListener("change", checkPerInfoFields);
+      if (input.files.length === 0) {
+        allFieldsFilled = false; // No file selected
+      } else {
+        const fileType = input.files[0].type;
+        const fileSize = input.files[0].size;
+        const errorMsgTag =
+          input.id === "cnicFrontSidePhoto"
+            ? document.getElementById("frontSidePhoto")
+            : document.getElementById("backSidePhoto");
+        // Accept both image and PDF file types
+        if (
+          fileType !== "image/jpeg" &&
+          fileType !== "image/png" &&
+          fileType !== "application/pdf"
+        ) {
+          allFieldsFilled = false; // Invalid file type
+          errorMsgTag.innerHTML = `<span style="color: red;">You can upload only JPG, JPEG, PNG, and PDF formats.</span>`;
+        } else if (fileSize > 2097152) {
+          // 2 MB = 2097152 bytes
+          allFieldsFilled = false; // File too large
+        }
+      }
     } else {
-      input.addEventListener("input", checkPerInfoFields);
+      if (input.value.trim() === "") {
+        allFieldsFilled = false; // Empty text input
+      }
     }
   });
 
+  // Enable button only if all fields are filled and valid images are selected
+  personalNextBtn.disabled = !allFieldsFilled;
+}
 
-document.getElementById("personalNextBtn").addEventListener("click", function (event) {
+// Function to handle CNIC front side image upload
+function getFrontSidePhoto() {
+  const input = document.getElementById("cnicFrontSidePhoto");
+  const file = input.files[0]; // Get the first selected file
+  const fileSize = file.size / (1024 * 1024); // Convert size to MB
+  const fileName = file.name;
+  const frontSidePhotoMsg = document.getElementById("frontSidePhoto");
+
+  if (fileSize > 2) {
+    // Show red alert if size is more than 2 MB
+    frontSidePhotoMsg.innerHTML = `<span style="color: red;">The selected file (${fileName}) is too large. Please upload a file smaller than 2 MB.</span>`;
+    input.value = ""; // Clear the input
+  } else {
+    // Show file name if valid
+    frontSidePhotoMsg.innerHTML = `Selected: ${fileName}`;
+  }
+}
+
+// Function to handle CNIC back side image upload
+function getBackSidePhoto() {
+  const input = document.getElementById("cnicFrontBackPhoto");
+  const file = input.files[0]; // Get the first selected file
+  const fileSize = file.size / (1024 * 1024); // Convert size to MB
+  const fileName = file.name;
+  const backSidePhotoMsg = document.getElementById("backSidePhoto");
+
+  if (fileSize > 2) {
+    // Show red alert if size is more than 2 MB
+    backSidePhotoMsg.innerHTML = `<span style="color: red;">The selected file (${fileName}) is too large. Please upload a file smaller than 2 MB.</span>`;
+    input.value = ""; // Clear the input
+  } else {
+    // Show file name if valid
+    backSidePhotoMsg.innerHTML = `Selected: ${fileName}`;
+  }
+}
+
+inputs.forEach((input) => {
+  if (input.type === "file") {
+    input.addEventListener("change", checkPerInfoFields);
+  } else {
+    input.addEventListener("input", checkPerInfoFields);
+  }
+});
+
+document
+  .getElementById("personalNextBtn")
+  .addEventListener("click", function (event) {
     // Prevent form submission
     event.preventDefault();
 
@@ -343,8 +397,11 @@ document.getElementById("personalNextBtn").addEventListener("click", function (e
 
     let emailInput = document.getElementById("personalEmail");
     let password = document.getElementById("personalPassword").value;
-    let confirmPassword = document.getElementById("personalConfirmPassword").value;
-
+    let confirmPassword = document.getElementById(
+      "personalConfirmPassword"
+    ).value;
+    // Define the special character pattern
+    let specialCharPattern = /[!@#$%^&*(),.?":{}|<>]/;
     // Close any previous alerts
     Swal.close();
 
@@ -357,12 +414,14 @@ document.getElementById("personalNextBtn").addEventListener("click", function (e
           icon: "error",
           confirmButtonText: "OK",
           showCloseButton: true,
-          timer: 5000, // Optional: Automatically close after 5 seconds
+          timer: 5000,
+          customClass: {
+            popup: "white-alert", // Custom class for the popup
+          },
         });
         return; // Exit the loop early
       }
     });
-    
 
     // Check for valid email format
     let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -375,11 +434,13 @@ document.getElementById("personalNextBtn").addEventListener("click", function (e
         confirmButtonText: "OK",
         showCloseButton: true,
         timer: 5000,
+        customClass: {
+          popup: "white-alert", // Custom class for the popup
+        },
       });
       return;
     }
 
-    // Check if passwords match
     if (password !== confirmPassword) {
       isValid = false;
       Swal.fire({
@@ -388,37 +449,76 @@ document.getElementById("personalNextBtn").addEventListener("click", function (e
         icon: "error",
         confirmButtonText: "OK",
         showCloseButton: true,
-        timer: 5000, // Optional: Automatically close after 5 seconds
+        timer: 5000,
+        customClass: {
+          popup: "white-alert", // Custom class for the popup
+        },
+      });
+      return;
+    }
+    // Check if passwords match
+    if (password.length < 8) {
+      isValid = false;
+      Swal.fire({
+        title: "Weak Password",
+        text: "Password must be at least 8 characters long.",
+        icon: "error",
+        confirmButtonText: "OK",
+        showCloseButton: true,
+        timer: 5000,
+        customClass: {
+          popup: "white-alert", // Custom class for the popup
+        },
+      });
+      return;
+    }
+
+    if (!specialCharPattern.test(password)) {
+      isValid = false;
+      Swal.fire({
+        title: "Invalid Password",
+        text: "Password must contain at least one special character.",
+        icon: "error",
+        confirmButtonText: "OK",
+        showCloseButton: true,
+        timer: 5000,
+        customClass: {
+          popup: "white-alert", // Custom class for the popup
+        },
       });
       return;
     }
 
     // If all fields are valid, proceed
     if (isValid) {
-        personalNextBtn.disabled=false;
-        circles[0].classList.add("completed");
-        circles[1].classList.remove("active"); // Complete the second circle
-        circles[1].classList.add("completed"); // Complete the second circle
-        circles[2].classList.add("active"); // Set third circle as active
-    
-        const progressPercentage = 66.6667; // Progress bar to 66.67%
-        progressBar.style.width = `${progressPercentage}%`;
-        progressBarInner.style.backgroundColor = "#12B76A"; // Set progress bar color
+      personalNextBtn.disabled = false;
+      circles[0].classList.add("completed");
+      circles[1].classList.remove("active"); // Complete the second circle
+      circles[1].classList.add("completed"); // Complete the second circle
+      circles[2].classList.add("active"); // Set third circle as active
+
+      const progressPercentage = 66.6667; // Progress bar to 66.67%
+      progressBar.style.width = `${progressPercentage}%`;
+      progressBarInner.style.backgroundColor = "#12B76A"; // Set progress bar color
 
       console.log("All fields are valid. Proceeding...");
 
       // Hide the current section
       document.querySelector(".personalInfoForm").style.display = "none";
-      const selectedRadio = document.querySelector('input[name="accountType"]:checked');
+      const selectedRadio = document.querySelector(
+        'input[name="accountType"]:checked'
+      );
 
       if (selectedRadio && selectedRadio.id === "individualForm") {
-        document.querySelector(".BusinessInInfoIndForm").style.display = "block"; // Show the next section for individual
-        document.querySelector(".BusinessInfoBussAccForm").style.display = "none"; // Hide business section
+        document.querySelector(".BusinessInInfoIndForm").style.display =
+          "block"; // Show the next section for individual
+        document.querySelector(".BusinessInfoBussAccForm").style.display =
+          "none"; // Hide business section
       } else {
-        document.querySelector(".BusinessInfoBussAccForm").style.display = "block"; // Show the next section for business
+        document.querySelector(".BusinessInfoBussAccForm").style.display =
+          "block"; // Show the next section for business
         document.querySelector(".BusinessInInfoIndForm").style.display = "none"; // Hide individual section
       }
-      
     }
   });
 
@@ -435,48 +535,59 @@ backBtns.forEach(function (backBtn) {
   });
 });
 
-bankDetailLinks.forEach(link => {
-    link.addEventListener("click", (event) => {
-      event.preventDefault(); // Prevent default link behavior
-  
-      // Hide all forms
-      document.querySelector(".BusinessInInfoIndForm").style.display = "none"; // Ensure this is the correct selector
-      document.querySelector(".BusinessInfoBussAccForm").style.display = "none"; // Ensure this is the correct selector
-      document.querySelector(".personalInfoForm").style.display = "none";
-      
-      // Show the bank detail section
-      document.querySelector(".bankDetail").style.display = "block";
-      
-      console.log("Bank detail link clicked");
-    });
+bankDetailLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault(); // Prevent default link behavior
+
+    // Hide all forms
+    document.querySelector(".BusinessInInfoIndForm").style.display = "none"; // Ensure this is the correct selector
+    document.querySelector(".BusinessInfoBussAccForm").style.display = "none"; // Ensure this is the correct selector
+    document.querySelector(".personalInfoForm").style.display = "none";
+
+    // Show the bank detail section
+    document.querySelector(".bankDetail").style.display = "block";
+
+    console.log("Bank detail link clicked");
   });
+});
 
 bankDetBackBtn.forEach(function (backBtn) {
-    backBtn.addEventListener("click", function () {
-        const selectedRadio = document.querySelector('input[name="accountType"]:checked');
-
-        if (selectedRadio && selectedRadio.id === "individualForm") {
-          document.querySelector(".BusinessInInfoIndForm").style.display = "block"; // Show the next section for individual
-          document.querySelector(".bankDetail").style.display = "none";
-          document.querySelector(".personalInfoForm").style.display = "none";
-        } else {
-          document.querySelector(".BusinessInfoBussAccForm").style.display = "block"; // Show the next section for business
-          document.querySelector(".bankDetail").style.display = "none";
-          document.querySelector(".personalInfoForm").style.display = "none";
-        }
-    });
-  });
-  
-bankAccBackBtn.addEventListener("click", () => {
-    const selectedRadio = document.querySelector('input[name="accountType"]:checked');
+  backBtn.addEventListener("click", function () {
+    const selectedRadio = document.querySelector(
+      'input[name="accountType"]:checked'
+    );
 
     if (selectedRadio && selectedRadio.id === "individualForm") {
       document.querySelector(".BusinessInInfoIndForm").style.display = "block"; // Show the next section for individual
       document.querySelector(".bankDetail").style.display = "none";
       document.querySelector(".personalInfoForm").style.display = "none";
     } else {
-      document.querySelector(".BusinessInfoBussAccForm").style.display = "block"; // Show the next section for business
+      document.querySelector(".BusinessInfoBussAccForm").style.display =
+        "block"; // Show the next section for business
       document.querySelector(".bankDetail").style.display = "none";
       document.querySelector(".personalInfoForm").style.display = "none";
     }
+  });
 });
+
+bankAccBackBtn.addEventListener("click", () => {
+  const selectedRadio = document.querySelector(
+    'input[name="accountType"]:checked'
+  );
+
+  if (selectedRadio && selectedRadio.id === "individualForm") {
+    document.querySelector(".BusinessInInfoIndForm").style.display = "block"; // Show the next section for individual
+    document.querySelector(".bankDetail").style.display = "none";
+    document.querySelector(".personalInfoForm").style.display = "none";
+  } else {
+    document.querySelector(".BusinessInfoBussAccForm").style.display = "block"; // Show the next section for business
+    document.querySelector(".bankDetail").style.display = "none";
+    document.querySelector(".personalInfoForm").style.display = "none";
+  }
+});
+
+// show password With Icon
+
+
+
+
