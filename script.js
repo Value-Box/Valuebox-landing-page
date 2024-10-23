@@ -5,6 +5,7 @@ function loginPage() {
   window.location.href = "dashboardLogin.html";
 }
 
+
 // persoanl Information sign Up Form Page JS
 const circles = document.querySelectorAll(".circle")
 const progressBar = document.querySelector(".indicator")

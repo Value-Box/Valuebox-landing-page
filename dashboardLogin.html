@@ -65,7 +65,7 @@
             </div>
             <div class="col-12 col-lg-6 mt-lg-2 mt-xl-0 loginForm p-0 col-xl-5 position-absolute end-0 d-flex align-items-center justify-content-center ">
                 <div class="col-11 col-sm-8 col-md-6 col-lg-10 bg-light p-0 mt-lg-3 mt-xl-5 formParent">
-                    <form action="#" class="form" >
+                    <form onsubmit="signUpPage(event)" class="form" >
                        <div class="logInForm " >
                         <h2 >Login as ValueBox Seller</h2>
 
@@ -87,12 +87,12 @@
                       <div class="px-0 text-end">
                           <a href="#" class="text-decoration-none forgotPassword">Forgot password?</a>
                       </div>
-                      <button class="w-100 py-2 border-0 my-3 rounded text-white fw-bold loginBtn">
+                      <button type="button" class="w-100 py-2 border-0 my-3 rounded text-white fw-bold loginBtn">
                           <img src="images/Log_Out.svg" alt=""> Log in
                       </button>
                       <div class="px-0 my-1">
                           <span class="d-block my-2">Haven’t got an account?</span>
-                          <button class="w-100 py-2 rounded fw-bold signupBtn" onclick="toggleSignUpForm()">
+                          <button type="button" class="w-100 py-2 rounded fw-bold signupBtn" onclick="toggleSignUpForm()">
                               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                                   <path d="M4.5 21V20C4.5 16.69 7.19 14 10.5 14H14.5C17.81 14 20.5 16.69 20.5 20V21" stroke="#002882" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                   <path d="M4.5 21V20C4.5 16.69 7.19 14 10.5 14H14.5C17.81 14 20.5 16.69 20.5 20V21" stroke="black" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -112,7 +112,7 @@
                       </div>
                      
                      
-                      <button class="w-100 py-2 border-0 my-3 rounded text-white fw-bold loginBtn" id="getOTP">
+                      <button type="button" class="w-100 py-2 border-0 my-3 rounded text-white fw-bold loginBtn" id="getOTP">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
                           <path d="M17.05 3.41005C16.1331 2.48416 15.041 1.75002 13.8375 1.25042C12.634 0.750812 11.3431 0.495737 10.04 0.500054C4.57999 0.500054 0.129988 4.95005 0.129988 10.4101C0.129988 12.1601 0.589988 13.8601 1.44999 15.3601L0.0499878 20.5001L5.29999 19.1201C6.74999 19.9101 8.37999 20.3301 10.04 20.3301C15.5 20.3301 19.95 15.8801 19.95 10.4201C19.95 7.77005 18.92 5.28005 17.05 3.41005ZM10.04 18.6501C8.55999 18.6501 7.10999 18.2501 5.83999 17.5001L5.53999 17.3201L2.41999 18.1401L3.24999 15.1001L3.04999 14.7901C2.22754 13.4771 1.79091 11.9593 1.78999 10.4101C1.78999 5.87005 5.48999 2.17005 10.03 2.17005C12.23 2.17005 14.3 3.03005 15.85 4.59005C16.6176 5.35392 17.2259 6.2626 17.6396 7.26338C18.0533 8.26417 18.2642 9.33714 18.26 10.4201C18.28 14.9601 14.58 18.6501 10.04 18.6501ZM14.56 12.4901C14.31 12.3701 13.09 11.7701 12.87 11.6801C12.64 11.6001 12.48 11.5601 12.31 11.8001C12.14 12.0501 11.67 12.6101 11.53 12.7701C11.39 12.9401 11.24 12.9601 10.99 12.8301C10.74 12.7101 9.93999 12.4401 8.99999 11.6001C8.25999 10.9401 7.76999 10.1301 7.61999 9.88005C7.47999 9.63005 7.59999 9.50005 7.72999 9.37005C7.83999 9.26005 7.97999 9.08005 8.09999 8.94005C8.21999 8.80005 8.26999 8.69005 8.34999 8.53005C8.42999 8.36005 8.38999 8.22005 8.32999 8.10005C8.26999 7.98005 7.76999 6.76005 7.56999 6.26005C7.36999 5.78005 7.15999 5.84005 7.00999 5.83005H6.52999C6.35999 5.83005 6.09999 5.89005 5.86999 6.14005C5.64999 6.39005 5.00999 6.99005 5.00999 8.21005C5.00999 9.43005 5.89999 10.6101 6.01999 10.7701C6.13999 10.9401 7.76999 13.4401 10.25 14.5101C10.84 14.7701 11.3 14.9201 11.66 15.0301C12.25 15.2201 12.79 15.1901 13.22 15.1301C13.7 15.0601 14.69 14.5301 14.89 13.9501C15.1 13.3701 15.1 12.8801 15.03 12.7701C14.96 12.6601 14.81 12.6101 14.56 12.4901Z" fill="#FCFCFC"/>
                         </svg> Get OTP via WhatsApp
@@ -121,7 +121,7 @@
                         <a href="#" class="text-decoration-none text-dark">Already have an account?</a>
                     </div>
                       <div class="px-0 my-1">
-                          <button class="w-100 py-2 rounded fw-bold signupBtn" onclick="toggleSignUpForm()">
+                          <button type="button" class="w-100 py-2 rounded fw-bold signupBtn" onclick="toggleSignUpForm()">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                               <path d="M12 15.5L15 12.5L12 15.5Z" fill="#002882"/>
                               <path d="M12 15.5L15 12.5L12 15.5Z" fill="black" fill-opacity="0.2"/>
@@ -156,7 +156,7 @@
                           </div>
                         </div>
 
-                      <button class="w-100 py-2 border-0 my-3 rounded text-white fw-bold loginBtn" id="verifyBtn">
+                      <button type="submit" class="w-100 py-2 border-0 my-3 rounded text-white fw-bold loginBtn"  id="verifyBtn">
                         Verify
                       </button>
                       <div class="text-center spanTimer">
@@ -166,7 +166,7 @@
                         <a href="#" class="text-decoration-none text-dark">Didn’t get the code?</a>
                     </div>
                       <div class="px-0 my-1 disabledButton">
-                          <button class="w-100 py-2 rounded fw-bold signupBtn" id="resendOTP" disabled>
+                          <button type="button" class="w-100 py-2 rounded fw-bold signupBtn" id="resendOTP" disabled>
                             Resend Code
                           </button>
                       </div>
@@ -722,8 +722,10 @@
         </div>
       </footer>
       <!-- <script src="script.js"></script> -->
+      <script src="dashboardLogin.js"></script>
+
 <script src="script.js"></script>
-<script src="dashboardLogin.js"></script>
+
 
       <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

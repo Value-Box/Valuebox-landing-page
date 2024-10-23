@@ -1,3 +1,10 @@
+// const verifyBtn=document.getElementById('verifyBtn')
+// verifyBtn.addEventListener('click',signUpPage)
+// function signUpPage() {
+//   window.location.href = "personalInfoSignUp.html";
+// }
+
+
 function passwordShower() {
     var loginPassword = document.getElementById("loginPassword");
     if (loginPassword.type === "password") {
@@ -69,10 +76,13 @@ function passwordShower() {
     startCountdown(); // Start the countdown again
   });
   
+  console.log('hello')
 
 
+  function signUpPage(event) {
+    // Prevent the default form submission
+    event.preventDefault();
+    console.log('clicked');
+    window.location.href = "personalInfoSignUp.html";
+  }
   
-//   setTimeout(() => {
-//     otpButton.disabled = false; // Enable the button
-//     otpButton.classList.remove('disabledButton'); // Optionally, remove any classes that indicate it's disabled
-//     }, 10000);
