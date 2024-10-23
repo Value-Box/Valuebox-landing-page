@@ -797,13 +797,13 @@ align-items:center;
 }
 .formFields label {
   width: 330px;
-  font-size: 20px;
+  /* font-size: 20px; */
   font-weight: 500;
 }
 .formFields input {
   width: 100%;
   padding: 10px;
-  font-size: 16px;
+  font-size: 18px;
 }
 #country-code {
   width: 50px; /* Set width for country code input */
@@ -879,7 +879,7 @@ input[type="file"] {
 }
 .businessFormFields label:first-child {
   width: 330px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 500;
 }
 .businessInputFields{
@@ -1197,7 +1197,7 @@ border-left: 8px solid  #FFC136;
 background:  #FFF;
 }
 
-#frontSidePhoto, #backSidePhoto{
+#frontSidePhoto, #backSidePhoto, #password, #confirmPassword{
   max-width: 414px;
   width: 100%;
   margin-left: auto;
@@ -1267,6 +1267,12 @@ input[type=number] {
 }
 .formParent{
   height: auto !important;
+}
+select{
+  padding: 10px !important;
+}
+#toggleConfirmPassword,#togglePassword{
+  cursor: pointer;
 }
 @media (max-width: 1100px) {
   .hamburger {

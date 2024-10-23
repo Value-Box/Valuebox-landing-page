@@ -388,6 +388,73 @@ inputs.forEach((input) => {
   }
 });
 
+
+document.getElementById("personalPhoneNumber").addEventListener("input", function (event) {
+  // Remove all non-numeric characters from input
+  let input = event.target.value.replace(/\D/g, '');
+  let formattedInput = '';
+
+  // Format the input as XXX-XXXXXXX (only one hyphen after the first 3 digits)
+  if (input.length > 0) {
+      formattedInput += input.substring(0, 3);
+  }
+  if (input.length > 3) {
+      formattedInput += '-' + input.substring(3);
+  }
+
+  // Set the formatted value back to the input field
+  event.target.value = formattedInput;
+});
+
+document.getElementById("cnicNumber").addEventListener("input", function (event) {
+  let input = event.target.value.replace(/\D/g, ''); // Remove all non-numeric characters
+  let formattedInput = '';
+
+  // Format the input as XXXXX-XXXXXXX-X
+  if (input.length > 0) {
+      formattedInput += input.substring(0, 5); // First 5 characters
+  }
+  if (input.length > 5) {
+      formattedInput += '-' + input.substring(5, 12); // Next 7 characters after first hyphen
+  }
+  if (input.length > 12) {
+      formattedInput += '-' + input.substring(12, 13); // One character after second hyphen
+  }
+
+  event.target.value = formattedInput; // Set the formatted value back to the input field
+});
+
+document.getElementById("togglePassword").addEventListener("click", function () {
+  let passwordInput = document.getElementById("personalPassword");
+  let toggleIcon = this.querySelector("i");
+
+  // Toggle password visibility
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    toggleIcon.classList.remove("fa-eye");
+    toggleIcon.classList.add("fa-eye-slash");
+  } else {
+    passwordInput.type = "password";
+    toggleIcon.classList.remove("fa-eye-slash");
+    toggleIcon.classList.add("fa-eye");
+  }
+});
+document.getElementById("toggleConfirmPassword").addEventListener("click", function () {
+  let passworpersonalConfirmPassworddInput = document.getElementById("personalConfirmPassword");
+  let toggleIcon = this.querySelector("i");
+
+  // Toggle password visibility
+  if (personalConfirmPassword.type === "password") {
+    personalConfirmPassword.type = "text";
+    toggleIcon.classList.remove("fa-eye");
+    toggleIcon.classList.add("fa-eye-slash");
+  } else {
+    personalConfirmPassword.type = "password";
+    toggleIcon.classList.remove("fa-eye-slash");
+    toggleIcon.classList.add("fa-eye");
+  }
+});
+
 document
   .getElementById("personalNextBtn")
   .addEventListener("click", function (event) {
@@ -398,9 +465,9 @@ document
 
     let emailInput = document.getElementById("personalEmail");
     let password = document.getElementById("personalPassword").value;
-    let confirmPassword = document.getElementById(
-      "personalConfirmPassword"
-    ).value;
+    const phoneNumberInput = document.getElementById("personalPhoneNumber").value;
+    let personalCnicNumber = document.getElementById("cnicNumber").value.trim();
+    let confirmPassword = document.getElementById("personalConfirmPassword").value;
     // Define the special character pattern
     let specialCharPattern = /[!@#$%^&*(),.?":{}|<>]/;
     // Close any previous alerts
@@ -437,6 +504,41 @@ document
         timer: 5000,
         customClass: {
           popup: "white-alert", // Custom class for the popup
+        },
+      });
+      return;
+    }
+
+
+
+    // Check if the phone number has exactly 11 digits
+    if (phoneNumberInput.length !== 11) {
+        Swal.fire({
+            title: "Invalid Phone Number",
+            text: "Phone number must be exactly 10 digits.",
+            icon: "error",
+            confirmButtonText: "OK",
+            showCloseButton: true,
+            timer: 5000,
+            customClass: {
+                popup: "white-alert",
+            },
+        });
+        return; // Stop the function if the validation fails
+    }
+
+
+    if (personalCnicNumber.length !== 15 ) {
+      isValid = false;
+      Swal.fire({
+        title: "Invalid CNIC Number",
+        text: "CNIC number must be exactly 13 digits.",
+        icon: "error",
+        confirmButtonText: "OK",
+        showCloseButton: true,
+        timer: 5000,
+        customClass: {
+          popup: "white-alert",
         },
       });
       return;
@@ -511,15 +613,21 @@ document
       );
 
       if (selectedRadio && selectedRadio.id === "individualForm") {
-        document.querySelector(".BusinessInInfoIndForm").style.display =
-          "block"; // Show the next section for individual
-        document.querySelector(".BusinessInfoBussAccForm").style.display =
-          "none"; // Hide business section
+        document.querySelector(".BusinessInInfoIndForm").style.display ="block"; // Show the next section for individual
+        document.querySelector(".BusinessInfoBussAccForm").style.display ="none"; // Hide business section
+        document.querySelector(".BusinessInInfoIndForm").scrollIntoView({ behavior: 'smooth' });
+
       } else {
-        document.querySelector(".BusinessInfoBussAccForm").style.display =
-          "block"; // Show the next section for business
+        document.querySelector(".BusinessInfoBussAccForm").style.display ="block"; // Show the next section for business
         document.querySelector(".BusinessInInfoIndForm").style.display = "none"; // Hide individual section
+        document.querySelector(".BusinessInfoBussAccForm").scrollIntoView({ behavior: 'smooth' });
+
       }
+
+      // Or if you want to scroll to the business section regardless of selection:
+      // document.querySelector(".BusinessInfoBussAccForm").scrollIntoView({ behavior: 'smooth' });
+
+       //document.querySelector('personalInfoForm').scrollIntoView({ behavior: 'smooth' });
     }
   });
 
@@ -530,9 +638,21 @@ const bankAccBackBtn = document.getElementById("bankAccBackBtn");
 
 backBtns.forEach(function (backBtn) {
   backBtn.addEventListener("click", function () {
-    document.querySelector(".BusinessInInfoIndForm").style.display = "none"; // Ensure this is the correct selector
-    document.querySelector(".BusinessInfoBussAccForm").style.display = "none"; // Ensure this is the correct selector
-    document.querySelector(".personalInfoForm").style.display = "block";
+    // Hide the business info forms
+    document.querySelector(".BusinessInInfoIndForm").style.display = "none"; 
+    document.querySelector(".BusinessInfoBussAccForm").style.display = "none"; 
+    
+    // Show the personal info form
+    const personalInfoForm = document.querySelector(".personalInfoForm");
+    personalInfoForm.style.display = "block";
+    
+    // Ensure the personal info form is displayed before scrolling
+    if (personalInfoForm) {
+      console.log("Scrolling to personal info form...");
+      personalInfoForm.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      console.error("Personal info form not found!");
+    }
   });
 });
 
