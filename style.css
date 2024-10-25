@@ -1427,7 +1427,9 @@ select{
     height: auto !important;
   }
 }
-
+#loginPasswordIcon{
+  cursor: pointer;
+}
 @media (max-width: 1120px) {
   .heroSection1 {
     display: none; /* Hide the first hero section on smaller screens */

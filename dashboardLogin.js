@@ -6,14 +6,19 @@
 
 
 function passwordShower() {
-    var loginPassword = document.getElementById("loginPassword");
-    if (loginPassword.type === "password") {
-      loginPassword.type = "text";
-    } else {
-      loginPassword.type = "password";
-    }
-  }
+  var loginPassword = document.getElementById("loginPassword");
+  var toggleIcon = document.getElementById("toggleIcon");
   
+  if (loginPassword.type === "password") {
+    loginPassword.type = "text";
+    toggleIcon.classList.remove("fa-eye");
+    toggleIcon.classList.add("fa-eye-slash");
+  } else {
+    loginPassword.type = "password";
+    toggleIcon.classList.remove("fa-eye-slash");
+    toggleIcon.classList.add("fa-eye");
+  }
+}
   function toggleSignUpForm() {
     const loginForm = document.querySelector(".logInForm");
     const signUpForm = document.querySelector(".signUpForm");
