@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ValueBox</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/x-icon" href="/images/Valuebox logo 1 1.svg">
+    <link rel="icon" type="image/x-icon" href="/images/Valuebox logo 1 1.svg" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -19,720 +19,1150 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-</head>
-<body>
+  </head>
+  <body>
     <header class="header">
-        <input type="checkbox" class="checkBox" id="menuToggle" />
-  
-        <div class="logo">
-          <img src="images/Group 1.svg" alt="Marketplace Logo" />
-          <p class="mb-0">MARKETPLACE</p>
-        </div>
-  
-        <div class="links">
-          <a href="#">Sell Better Blog</a>
-          <a href="#">Marketplace Learn</a>
-          <button class="loginBtn" onclick="loginPage()">Login</button>
-        </div>
-  
-        <div class="ml-1 headerButtons">
-          <button class="loginBtn" onclick="loginPage()">Login</button>
-          <button class="joinBtn">Join Marketplace</button>
-        </div>
-  
-        <label for="menuToggle" class="hamburger">
-          <img src="images/hamburgerMenu.svg" alt="Menu" />
-        </label>
-        <label for="menuToggle" class="closeIcon">
-          <i class="fa fa-close"></i>
-        </label>
-      </header>
+      <input type="checkbox" class="checkBox" id="menuToggle" />
 
+      <div class="logo">
+        <img src="images/Group 1.svg" alt="Marketplace Logo" />
+        <p class="mb-0">MARKETPLACE</p>
+      </div>
+
+      <div class="links">
+        <a href="#">Sell Better Blog</a>
+        <a href="#">Marketplace Learn</a>
+        <button class="loginBtn" onclick="loginPage()">Login</button>
+      </div>
+
+      <div class="ml-1 headerButtons">
+        <button class="loginBtn" onclick="loginPage()">Login</button>
+        <button class="joinBtn" onclick="loginPage('#signUpForm')">
+          Join Marketplace
+        </button>
+      </div>
+
+      <label for="menuToggle" class="hamburger">
+        <img src="images/hamburgerMenu.svg" alt="Menu" />
+      </label>
+      <label for="menuToggle" class="closeIcon">
+        <i class="fa fa-close"></i>
+      </label>
+    </header>
 
     <!-- main section -->
     <main>
-    <div class="container-fluid p-0">
+      <div class="container-fluid p-0">
         <div class="row h-50 m-0 p-0 position-relative">
-            <div class="px-0 LoginBgPoster">
-                <img class="w-100 d-none d-lg-block" src="images/loginbg.png" alt="">
-                <img class="w-100 d-lg-none" src="images/loginPoster2.png" alt="">
-            </div>
-            <div class="col-12 col-lg-6  col-xl-7 d-flex flex-column p-0 pb-2 pr-2 ps-4 ps-sm-5 pt-xl-5 pt-4 position-absolute">
-                <h1 class="fw-bold text-white mb-sm-4 my-lg-4">BECOME A VALUEBOX SELLER TODAY</h1>
-                <h5 class="w-xl-75 text-white">
-                    Create a ValueBox seller account now and reach millions of customers!
-                </h5>
-            </div>
-            <div class="col-12 col-lg-6 mt-lg-2 mt-xl-0 loginForm p-0 col-xl-5 position-absolute end-0 d-flex align-items-center justify-content-center ">
-                <div class="col-11 col-sm-8 col-md-6 col-lg-10 bg-light p-0 mt-lg-3 mt-xl-5 formParent">
-                    <form onsubmit="signUpPage(event)" class="form" >
-                       <div class="logInForm " >
-                        <h2 >Login as ValueBox Seller</h2>
+          <div class="px-0 LoginBgPoster">
+            <img
+              class="w-100 d-none d-lg-block"
+              src="images/loginbg.png"
+              alt=""
+            />
+            <img class="w-100 d-lg-none" src="images/loginPoster2.png" alt="" />
+          </div>
+          <div
+            class="col-12 col-lg-6 col-xl-7 d-flex flex-column p-0 pb-2 pr-2 ps-4 ps-sm-5 pt-xl-5 pt-4 position-absolute"
+          >
+            <h1 class="fw-bold text-white mb-sm-4 my-lg-4">
+              BECOME A VALUEBOX SELLER TODAY
+            </h1>
+            <h5 class="w-xl-75 text-white">
+              Create a ValueBox seller account now and reach millions of
+              customers!
+            </h5>
+          </div>
+          <div
+            class="col-12 col-lg-6 mt-lg-2 mt-xl-0 loginForm p-0 col-xl-5 position-absolute end-0 d-flex align-items-center justify-content-center"
+          >
+            <div
+              class="col-11 col-sm-8 col-md-6 col-lg-10 bg-light p-0 mt-lg-3 mt-xl-5 formParent"
+            >
+              <form onsubmit="signUpPage(event)" class="form">
+                <div class="logInForm">
+                  <h2>Login as ValueBox Seller</h2>
 
-                        <div class="form-group my-3">
-                          <label for="exampleInputEmail1">Email</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email">
-                      </div>
-                      <!-- <div class="form-group mt-3">
+                  <div class="form-group my-3">
+                    <label for="exampleInputEmail1">Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleInputEmail1"
+                      aria-describedby="emailHelp"
+                      placeholder="Enter your email"
+                    />
+                  </div>
+                  <!-- <div class="form-group mt-3">
                           <label for="exampleInputPassword1">Password</label>
                           <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your Password">
                       </div> -->
-                      <div class="form-group mt-3 position-relative">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="loginPassword" placeholder="Enter your Password">
-                        <button type="button" id="togglePassword" onclick="passwordShower()" class="bg-transparent position-absolute top-50 mt-2 pt-2 end-0 mx-3 translate-middle-y eyeIconBtn">
-                            <img src="images/eyeIcon.svg" alt="Show Password" id="passwordIcon" width="20">
-                        </button>
-                    </div>
-                      <div class="px-0 text-end">
-                          <a href="#" class="text-decoration-none forgotPassword">Forgot password?</a>
-                      </div>
-                      <button type="button" class="w-100 py-2 border-0 my-3 rounded text-white fw-bold loginBtn">
-                          <img src="images/Log_Out.svg" alt=""> Log in
-                      </button>
-                      <div class="px-0 my-1">
-                          <span class="d-block my-2">Haven’t got an account?</span>
-                          <button type="button" class="w-100 py-2 rounded fw-bold signupBtn" onclick="toggleSignUpForm()">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                                  <path d="M4.5 21V20C4.5 16.69 7.19 14 10.5 14H14.5C17.81 14 20.5 16.69 20.5 20V21" stroke="#002882" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                  <path d="M4.5 21V20C4.5 16.69 7.19 14 10.5 14H14.5C17.81 14 20.5 16.69 20.5 20V21" stroke="black" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                  <path d="M12.5 11C10.29 11 8.5 9.21 8.5 7C8.5 4.79 10.29 3 12.5 3C14.71 3 16.5 4.79 16.5 7C16.5 9.21 14.71 11 12.5 11Z" stroke="#002882" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                  <path d="M12.5 11C10.29 11 8.5 9.21 8.5 7C8.5 4.79 10.29 3 12.5 3C14.71 3 16.5 4.79 16.5 7C16.5 9.21 14.71 11 12.5 11Z" stroke="black" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg> Sign Up
-                          </button>
-                      </div>
-                       </div>
-
-                       <div class="signUpForm" style="display: none;">
-                        <h2 >Sign Up as ValueBox Seller</h2>
-
-                        <div class="form-group my-3">
-                          <label class="phVerifyLabel">Phone number Verification</label>
-                          <input type="number" class="form-control" id="phoneNumVerify" aria-describedby="emailHelp" placeholder="Enter your phone Number">
-                      </div>
-                     
-                     
-                      <button type="button" class="w-100 py-2 border-0 my-3 rounded text-white fw-bold loginBtn" id="getOTP">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
-                          <path d="M17.05 3.41005C16.1331 2.48416 15.041 1.75002 13.8375 1.25042C12.634 0.750812 11.3431 0.495737 10.04 0.500054C4.57999 0.500054 0.129988 4.95005 0.129988 10.4101C0.129988 12.1601 0.589988 13.8601 1.44999 15.3601L0.0499878 20.5001L5.29999 19.1201C6.74999 19.9101 8.37999 20.3301 10.04 20.3301C15.5 20.3301 19.95 15.8801 19.95 10.4201C19.95 7.77005 18.92 5.28005 17.05 3.41005ZM10.04 18.6501C8.55999 18.6501 7.10999 18.2501 5.83999 17.5001L5.53999 17.3201L2.41999 18.1401L3.24999 15.1001L3.04999 14.7901C2.22754 13.4771 1.79091 11.9593 1.78999 10.4101C1.78999 5.87005 5.48999 2.17005 10.03 2.17005C12.23 2.17005 14.3 3.03005 15.85 4.59005C16.6176 5.35392 17.2259 6.2626 17.6396 7.26338C18.0533 8.26417 18.2642 9.33714 18.26 10.4201C18.28 14.9601 14.58 18.6501 10.04 18.6501ZM14.56 12.4901C14.31 12.3701 13.09 11.7701 12.87 11.6801C12.64 11.6001 12.48 11.5601 12.31 11.8001C12.14 12.0501 11.67 12.6101 11.53 12.7701C11.39 12.9401 11.24 12.9601 10.99 12.8301C10.74 12.7101 9.93999 12.4401 8.99999 11.6001C8.25999 10.9401 7.76999 10.1301 7.61999 9.88005C7.47999 9.63005 7.59999 9.50005 7.72999 9.37005C7.83999 9.26005 7.97999 9.08005 8.09999 8.94005C8.21999 8.80005 8.26999 8.69005 8.34999 8.53005C8.42999 8.36005 8.38999 8.22005 8.32999 8.10005C8.26999 7.98005 7.76999 6.76005 7.56999 6.26005C7.36999 5.78005 7.15999 5.84005 7.00999 5.83005H6.52999C6.35999 5.83005 6.09999 5.89005 5.86999 6.14005C5.64999 6.39005 5.00999 6.99005 5.00999 8.21005C5.00999 9.43005 5.89999 10.6101 6.01999 10.7701C6.13999 10.9401 7.76999 13.4401 10.25 14.5101C10.84 14.7701 11.3 14.9201 11.66 15.0301C12.25 15.2201 12.79 15.1901 13.22 15.1301C13.7 15.0601 14.69 14.5301 14.89 13.9501C15.1 13.3701 15.1 12.8801 15.03 12.7701C14.96 12.6601 14.81 12.6101 14.56 12.4901Z" fill="#FCFCFC"/>
-                        </svg> Get OTP via WhatsApp
-                      </button>
-                      <div class="px-0 ">
-                        <a href="#" class="text-decoration-none text-dark">Already have an account?</a>
-                    </div>
-                      <div class="px-0 my-1">
-                          <button type="button" class="w-100 py-2 rounded fw-bold signupBtn" onclick="toggleSignUpForm()">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-                              <path d="M12 15.5L15 12.5L12 15.5Z" fill="#002882"/>
-                              <path d="M12 15.5L15 12.5L12 15.5Z" fill="black" fill-opacity="0.2"/>
-                              <path d="M15 12.5L12 9.5L15 12.5Z" fill="#002882"/>
-                              <path d="M15 12.5L12 9.5L15 12.5Z" fill="black" fill-opacity="0.2"/>
-                              <path d="M15 12.5L4 12.5L15 12.5Z" fill="#002882"/>
-                              <path d="M15 12.5L4 12.5L15 12.5Z" fill="black" fill-opacity="0.2"/>
-                              <path d="M12 15.5L15 12.5M15 12.5L12 9.5M15 12.5L4 12.5M9 17.5C9 18.4319 9 18.8978 9.15224 19.2654C9.35523 19.7554 9.74432 20.1448 10.2344 20.3478C10.6019 20.5 11.0681 20.5 12 20.5H16.8C17.9201 20.5 18.48 20.5 18.9078 20.282C19.2841 20.0902 19.5905 19.7844 19.7822 19.408C20.0002 18.9802 20 18.4201 20 17.3V7.69995C20 6.57985 20.0002 6.01986 19.7822 5.59204C19.5905 5.21572 19.2841 4.90973 18.9078 4.71799C18.48 4.5 17.9201 4.5 16.8 4.5H12C11.0681 4.5 10.6019 4.5 10.2344 4.65224C9.74432 4.85523 9.35523 5.24456 9.15224 5.73462C9 6.10216 9 6.5681 9 7.49999" stroke="#002882" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              <path d="M12 15.5L15 12.5M15 12.5L12 9.5M15 12.5L4 12.5M9 17.5C9 18.4319 9 18.8978 9.15224 19.2654C9.35523 19.7554 9.74432 20.1448 10.2344 20.3478C10.6019 20.5 11.0681 20.5 12 20.5H16.8C17.9201 20.5 18.48 20.5 18.9078 20.282C19.2841 20.0902 19.5905 19.7844 19.7822 19.408C20.0002 18.9802 20 18.4201 20 17.3V7.69995C20 6.57985 20.0002 6.01986 19.7822 5.59204C19.5905 5.21572 19.2841 4.90973 18.9078 4.71799C18.48 4.5 17.9201 4.5 16.8 4.5H12C11.0681 4.5 10.6019 4.5 10.2344 4.65224C9.74432 4.85523 9.35523 5.24456 9.15224 5.73462C9 6.10216 9 6.5681 9 7.49999" stroke="black" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg> Log in
-                          </button>
-                      </div>
-                       </div>
-
-                       <div class="varificationForm" style="display: none;">
-                        <h2 >Verification</h2>
-
-                        <p class="fourDigitText">Enter the <span>4-digit verification code</span> we sent you at your WhatsApp.</p>
-
-                        <div id="otpContainer" class="row m-0 p-0 bg-transparent">
-                          <div class="form-group col my-3 mx-auto">
-                            <input type="number" class="form-control text-center otpNum" placeholder="0">
-                          </div>
-                          <div class="form-group col my-3">
-                            <input type="number" class="form-control text-center otpNum" placeholder="0">
-                          </div>
-                          <div class="form-group col my-3">
-                            <input type="number" class="form-control text-center otpNum" placeholder="0">
-                          </div>
-                          <div class="form-group col my-3">
-                            <input type="number" class="form-control text-center otpNum" placeholder="0">
-                          </div>
-                        </div>
-
-                      <button type="submit" class="w-100 py-2 border-0 my-3 rounded text-white fw-bold loginBtn"  id="verifyBtn">
-                        Verify
-                      </button>
-                      <div class="text-center spanTimer">
-                        <span class="timer">03:00</span>
-                      </div>
-                      <div class="px-0 mt-3">
-                        <a href="#" class="text-decoration-none text-dark">Didn’t get the code?</a>
-                    </div>
-                      <div class="px-0 my-1 disabledButton">
-                          <button type="button" class="w-100 py-2 rounded fw-bold signupBtn" id="resendOTP" disabled>
-                            Resend Code
-                          </button>
-                      </div>
-                       </div>
-                    </form>
+                  <div class="form-group mt-3 position-relative">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="loginPassword"
+                      placeholder="Enter your Password"
+                    />
+                    <button
+                      type="button"
+                      id="togglePassword"
+                      onclick="passwordShower()"
+                      class="bg-transparent position-absolute top-50 mt-2 pt-2 end-0 mx-3 translate-middle-y eyeIconBtn"
+                    >
+                      <img
+                        src="images/eyeIcon.svg"
+                        alt="Show Password"
+                        id="passwordIcon"
+                        width="20"
+                      />
+                    </button>
+                  </div>
+                  <div class="px-0 text-end">
+                    <a href="#" class="text-decoration-none forgotPassword"
+                      >Forgot password?</a
+                    >
+                  </div>
+                  <button
+                    type="button"
+                    class="w-100 py-2 border-0 my-3 rounded text-white fw-bold loginBtn"
+                  >
+                    <img src="images/Log_Out.svg" alt="" /> Log in
+                  </button>
+                  <div class="px-0 my-1">
+                    <span class="d-block my-2">Haven’t got an account?</span>
+                    <button
+                      type="button"
+                      class="w-100 py-2 rounded fw-bold signupBtn"
+                      onclick="toggleSignUpForm()"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="25"
+                        height="24"
+                        viewBox="0 0 25 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M4.5 21V20C4.5 16.69 7.19 14 10.5 14H14.5C17.81 14 20.5 16.69 20.5 20V21"
+                          stroke="#002882"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M4.5 21V20C4.5 16.69 7.19 14 10.5 14H14.5C17.81 14 20.5 16.69 20.5 20V21"
+                          stroke="black"
+                          stroke-opacity="0.2"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M12.5 11C10.29 11 8.5 9.21 8.5 7C8.5 4.79 10.29 3 12.5 3C14.71 3 16.5 4.79 16.5 7C16.5 9.21 14.71 11 12.5 11Z"
+                          stroke="#002882"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M12.5 11C10.29 11 8.5 9.21 8.5 7C8.5 4.79 10.29 3 12.5 3C14.71 3 16.5 4.79 16.5 7C16.5 9.21 14.71 11 12.5 11Z"
+                          stroke="black"
+                          stroke-opacity="0.2"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      Sign Up
+                    </button>
+                  </div>
                 </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- sel section start -->
-    <div class="container-lg p-0 container-fluid pt-5">
+                <div class="signUpForm" id="signUpForm" style="display: none">
+                  <h2>Sign Up as ValueBox Seller</h2>
+
+                  <div class="form-group my-3">
+                    <label class="phVerifyLabel"
+                      >Phone number Verification</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="phoneNumVerify"
+                      aria-describedby="emailHelp"
+                      placeholder="Enter your phone Number"
+                    />
+                  </div>
+
+                  <button
+                    type="button"
+                    class="w-100 py-2 border-0 my-3 rounded text-white fw-bold loginBtn"
+                    id="getOTP"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="21"
+                      viewBox="0 0 20 21"
+                      fill="none"
+                    >
+                      <path
+                        d="M17.05 3.41005C16.1331 2.48416 15.041 1.75002 13.8375 1.25042C12.634 0.750812 11.3431 0.495737 10.04 0.500054C4.57999 0.500054 0.129988 4.95005 0.129988 10.4101C0.129988 12.1601 0.589988 13.8601 1.44999 15.3601L0.0499878 20.5001L5.29999 19.1201C6.74999 19.9101 8.37999 20.3301 10.04 20.3301C15.5 20.3301 19.95 15.8801 19.95 10.4201C19.95 7.77005 18.92 5.28005 17.05 3.41005ZM10.04 18.6501C8.55999 18.6501 7.10999 18.2501 5.83999 17.5001L5.53999 17.3201L2.41999 18.1401L3.24999 15.1001L3.04999 14.7901C2.22754 13.4771 1.79091 11.9593 1.78999 10.4101C1.78999 5.87005 5.48999 2.17005 10.03 2.17005C12.23 2.17005 14.3 3.03005 15.85 4.59005C16.6176 5.35392 17.2259 6.2626 17.6396 7.26338C18.0533 8.26417 18.2642 9.33714 18.26 10.4201C18.28 14.9601 14.58 18.6501 10.04 18.6501ZM14.56 12.4901C14.31 12.3701 13.09 11.7701 12.87 11.6801C12.64 11.6001 12.48 11.5601 12.31 11.8001C12.14 12.0501 11.67 12.6101 11.53 12.7701C11.39 12.9401 11.24 12.9601 10.99 12.8301C10.74 12.7101 9.93999 12.4401 8.99999 11.6001C8.25999 10.9401 7.76999 10.1301 7.61999 9.88005C7.47999 9.63005 7.59999 9.50005 7.72999 9.37005C7.83999 9.26005 7.97999 9.08005 8.09999 8.94005C8.21999 8.80005 8.26999 8.69005 8.34999 8.53005C8.42999 8.36005 8.38999 8.22005 8.32999 8.10005C8.26999 7.98005 7.76999 6.76005 7.56999 6.26005C7.36999 5.78005 7.15999 5.84005 7.00999 5.83005H6.52999C6.35999 5.83005 6.09999 5.89005 5.86999 6.14005C5.64999 6.39005 5.00999 6.99005 5.00999 8.21005C5.00999 9.43005 5.89999 10.6101 6.01999 10.7701C6.13999 10.9401 7.76999 13.4401 10.25 14.5101C10.84 14.7701 11.3 14.9201 11.66 15.0301C12.25 15.2201 12.79 15.1901 13.22 15.1301C13.7 15.0601 14.69 14.5301 14.89 13.9501C15.1 13.3701 15.1 12.8801 15.03 12.7701C14.96 12.6601 14.81 12.6101 14.56 12.4901Z"
+                        fill="#FCFCFC"
+                      />
+                    </svg>
+                    Get OTP via WhatsApp
+                  </button>
+                  <div class="px-0">
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Already have an account?</a
+                    >
+                  </div>
+                  <div class="px-0 my-1">
+                    <button
+                      type="button"
+                      class="w-100 py-2 rounded fw-bold signupBtn"
+                      onclick="toggleSignUpForm()"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="25"
+                        viewBox="0 0 24 25"
+                        fill="none"
+                      >
+                        <path d="M12 15.5L15 12.5L12 15.5Z" fill="#002882" />
+                        <path
+                          d="M12 15.5L15 12.5L12 15.5Z"
+                          fill="black"
+                          fill-opacity="0.2"
+                        />
+                        <path d="M15 12.5L12 9.5L15 12.5Z" fill="#002882" />
+                        <path
+                          d="M15 12.5L12 9.5L15 12.5Z"
+                          fill="black"
+                          fill-opacity="0.2"
+                        />
+                        <path d="M15 12.5L4 12.5L15 12.5Z" fill="#002882" />
+                        <path
+                          d="M15 12.5L4 12.5L15 12.5Z"
+                          fill="black"
+                          fill-opacity="0.2"
+                        />
+                        <path
+                          d="M12 15.5L15 12.5M15 12.5L12 9.5M15 12.5L4 12.5M9 17.5C9 18.4319 9 18.8978 9.15224 19.2654C9.35523 19.7554 9.74432 20.1448 10.2344 20.3478C10.6019 20.5 11.0681 20.5 12 20.5H16.8C17.9201 20.5 18.48 20.5 18.9078 20.282C19.2841 20.0902 19.5905 19.7844 19.7822 19.408C20.0002 18.9802 20 18.4201 20 17.3V7.69995C20 6.57985 20.0002 6.01986 19.7822 5.59204C19.5905 5.21572 19.2841 4.90973 18.9078 4.71799C18.48 4.5 17.9201 4.5 16.8 4.5H12C11.0681 4.5 10.6019 4.5 10.2344 4.65224C9.74432 4.85523 9.35523 5.24456 9.15224 5.73462C9 6.10216 9 6.5681 9 7.49999"
+                          stroke="#002882"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M12 15.5L15 12.5M15 12.5L12 9.5M15 12.5L4 12.5M9 17.5C9 18.4319 9 18.8978 9.15224 19.2654C9.35523 19.7554 9.74432 20.1448 10.2344 20.3478C10.6019 20.5 11.0681 20.5 12 20.5H16.8C17.9201 20.5 18.48 20.5 18.9078 20.282C19.2841 20.0902 19.5905 19.7844 19.7822 19.408C20.0002 18.9802 20 18.4201 20 17.3V7.69995C20 6.57985 20.0002 6.01986 19.7822 5.59204C19.5905 5.21572 19.2841 4.90973 18.9078 4.71799C18.48 4.5 17.9201 4.5 16.8 4.5H12C11.0681 4.5 10.6019 4.5 10.2344 4.65224C9.74432 4.85523 9.35523 5.24456 9.15224 5.73462C9 6.10216 9 6.5681 9 7.49999"
+                          stroke="black"
+                          stroke-opacity="0.2"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      Log in
+                    </button>
+                  </div>
+                </div>
+
+                <div class="varificationForm" style="display: none">
+                  <h2>Verification</h2>
+
+                  <p class="fourDigitText">
+                    Enter the <span>4-digit verification code</span> we sent you
+                    at your WhatsApp.
+                  </p>
+
+                  <div id="otpContainer" class="row m-0 p-0 bg-transparent">
+                    <div class="form-group col my-3 mx-auto">
+                      <input
+                        type="number"
+                        class="form-control text-center otpNum"
+                        placeholder="0"
+                      />
+                    </div>
+                    <div class="form-group col my-3">
+                      <input
+                        type="number"
+                        class="form-control text-center otpNum"
+                        placeholder="0"
+                      />
+                    </div>
+                    <div class="form-group col my-3">
+                      <input
+                        type="number"
+                        class="form-control text-center otpNum"
+                        placeholder="0"
+                      />
+                    </div>
+                    <div class="form-group col my-3">
+                      <input
+                        type="number"
+                        class="form-control text-center otpNum"
+                        placeholder="0"
+                      />
+                    </div>
+                  </div>
+
+                  <button
+                    type="submit"
+                    class="w-100 py-2 border-0 my-3 rounded text-white fw-bold loginBtn"
+                    id="verifyBtn"
+                  >
+                    Verify
+                  </button>
+                  <div class="text-center spanTimer">
+                    <span class="timer">03:00</span>
+                  </div>
+                  <div class="px-0 mt-3">
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Didn’t get the code?</a
+                    >
+                  </div>
+                  <div class="px-0 my-1 disabledButton">
+                    <button
+                      type="button"
+                      class="w-100 py-2 rounded fw-bold signupBtn"
+                      id="resendOTP"
+                      disabled
+                    >
+                      Resend Code
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- sel section start -->
+      <div class="container-lg p-0 container-fluid pt-5">
         <h1 class="my-4 px-3 px-sm-4">Why Sell on ValueBox?</h1>
         <div class="row px-4 p-0 py-5 bg-white">
-            <!-- 1st -->
-            <div class="col-12 col-md-6 col-xl-4 d-flex mb-4">
-                <div class="d-flex align-items-center">
-                <img src="images/basket-svgrepo-com 1.svg" alt="">
-              </div>
-                <div class="px-3">
-                    <h3 class="py-2">REACH</h3>
-                    <p>Millions of buyers turn to ValueBox daily, Pakistan's leading online shopping platform</p>
-                </div>
+          <!-- 1st -->
+          <div class="col-12 col-md-6 col-xl-4 d-flex mb-4">
+            <div class="d-flex align-items-center">
+              <img src="images/basket-svgrepo-com 1.svg" alt="" />
             </div>
-            <!-- 2nd -->
-            <div class="col-12 col-md-6 col-xl-4 d-flex mb-4">
-                <div class="d-flex align-items-center">
-                  <img src="images/sign-in-register-svgrepo-com 1.svg" alt="">
-                </div>
-                  <div class="px-3">
-                      <h3 class="py-2">Free Registration</h3>
-                      <p>Creating an account and listing products for sale is completely free</p>
-                  </div>
-              </div>
-              <!-- 3rd -->
-              <div class="col-12 col-md-6 col-xl-4 d-flex mb-4">
-                <div class="d-flex align-items-center">
-                  <img src="images/delivery-transport-svgrepo-com 1.svg" alt="">
-                </div>
-                  <div class="px-3">
-                      <h3 class="py-2">Reliable Shipping</h3>
-                      <p>Quick, dependable, and stress-free delivery via the ValueBox logistics network</p>
-                  </div>
-              </div>
-             <!-- 4th -->
-             <div class="col-12 col-md-6 col-xl-4 d-flex mb-4">
-                <div class="d-flex align-items-center">
-                  <img src="images/wallet-svgrepo-com 1.svg" alt="">
-                </div>
-                  <div class="px-3">
-                      <h3 class="py-2">Timely Payments</h3>
-                      <p>Your funds are securely transferred to your bank account every week</p>
-                  </div>
-              </div>
-              <!-- 5th -->
-              <div class="col-12 col-md-6 col-xl-4 d-flex mb-4">
-                <div class="d-flex align-items-center">
-                  <img src="images/marketing-advertising-svgrepo-com 1.svg" alt="">
-                </div>
-                  <div class="px-3">
-                      <h3 class="py-2">Marketing Tools</h3>
-                      <p>Reach new customers and expand your business using our advertising and full suite of marketing tools</p>
-                  </div>
-              </div>
-              <!-- 6th -->
-              <div class="col-12 col-md-6 col-xl-4 d-flex mb-4">
-                <div class="d-flex align-items-center">
-                  <img src="images/chat-chat-svgrepo-com 1.svg" alt="">
-                </div>
-                  <div class="px-3">
-                      <h3 class="py-2">Support & Training</h3>
-                      <p>Learn everything about eCommerce for free and get support through Seller Support and ValueBox University</p>
-                  </div>
-              </div>
-        </div>
-        </div>
-
-<!-- sel section end -->
-
-<p class="w-100 mb-0 hrLine"></p>
-
-<!-- simple start selling -->
-<div class="container-fluid my-5 p-0 bg-light">
-    <h1 class="p-5 mx-4">4 Simple Steps to Start Selling</h1>
-    <div class="row p-0 mx-0">
-        <div class="col-10 col-lg-4 col-xl-4 ">
-            <img class="w-100" src="images/humanPhoto.png" alt="">
-        </div>
-        <div class="col-12 col-lg-8 col-xl-8 px-3 p-0">
-            <div class="row my-5 mx-0 justify-content-center gap-md-4 gap-lg-2 w-auto p-0">
-                <!-- selling section card 1 -->
-                <div class="col-12 col-md-5 col-xl-5 bg-white sellingSection d-flex flex-column align-items-end">
-                    <div class="pl-2 text-section">
-                        <h5 class="fw-bold">Signup for Free</h5>
-                        <p>Sign up on our website or mobile app using only your phone number.</p>
-                    </div>
-                    <img src="images/login-svgrepo-com 1.png" alt="" class="ml-auto">
-                </div>
-                <!-- selling section card 2 -->
-                <div class="col-12 col-md-5 col-xl-5 bg-white sellingSection2 d-flex flex-column align-items-end">
-                    <div class="text-section">
-                        <h5 class="fw-bold">Add Profile Information</h5>
-                        <p>Finish setting up your profile by adding your email and store name so we can recognize your business.</p>
-                    </div>
-                    <img src="images/user-person-profile-check-svgrepo-com 1.png" alt="" class="ml-auto">
-                </div>
-                <!-- selling section card 3 -->
-                <div class="col-12 col-md-5 col-xl-5 bg-white sellingSection2 d-flex flex-column align-items-end">
-                    <div class="text-section">
-                        <h5 class="fw-bold">Add Business Info & Bank Details</h5>
-                        <p>Fill in your business and bank details to verify your store and receive payments directly to your account.</p>
-                    </div>
-                    <img src="images/shop-2-svgrepo-com 1.png" alt="" class="ml-auto">
-                </div>
-                <!-- selling section card 4 -->
-                <div class="col-12 col-md-5 col-xl-5 bg-white sellingSection d-flex flex-column align-items-end">
-                    <div class="text-section">
-                        <h5 class="fw-bold">List Products</h5>
-                        <p>Add products to your store via the Seller Center. Once they pass quality checks, they'll go live, and you can start selling immediately.</p>
-                    </div>
-                    <img src="images/quality-parcel-svgrepo-com 1.png" alt="" class="ml-auto">
-                </div>
+            <div class="px-3">
+              <h3 class="py-2">REACH</h3>
+              <p>
+                Millions of buyers turn to ValueBox daily, Pakistan's leading
+                online shopping platform
+              </p>
             </div>
+          </div>
+          <!-- 2nd -->
+          <div class="col-12 col-md-6 col-xl-4 d-flex mb-4">
+            <div class="d-flex align-items-center">
+              <img src="images/sign-in-register-svgrepo-com 1.svg" alt="" />
+            </div>
+            <div class="px-3">
+              <h3 class="py-2">Free Registration</h3>
+              <p>
+                Creating an account and listing products for sale is completely
+                free
+              </p>
+            </div>
+          </div>
+          <!-- 3rd -->
+          <div class="col-12 col-md-6 col-xl-4 d-flex mb-4">
+            <div class="d-flex align-items-center">
+              <img src="images/delivery-transport-svgrepo-com 1.svg" alt="" />
+            </div>
+            <div class="px-3">
+              <h3 class="py-2">Reliable Shipping</h3>
+              <p>
+                Quick, dependable, and stress-free delivery via the ValueBox
+                logistics network
+              </p>
+            </div>
+          </div>
+          <!-- 4th -->
+          <div class="col-12 col-md-6 col-xl-4 d-flex mb-4">
+            <div class="d-flex align-items-center">
+              <img src="images/wallet-svgrepo-com 1.svg" alt="" />
+            </div>
+            <div class="px-3">
+              <h3 class="py-2">Timely Payments</h3>
+              <p>
+                Your funds are securely transferred to your bank account every
+                week
+              </p>
+            </div>
+          </div>
+          <!-- 5th -->
+          <div class="col-12 col-md-6 col-xl-4 d-flex mb-4">
+            <div class="d-flex align-items-center">
+              <img
+                src="images/marketing-advertising-svgrepo-com 1.svg"
+                alt=""
+              />
+            </div>
+            <div class="px-3">
+              <h3 class="py-2">Marketing Tools</h3>
+              <p>
+                Reach new customers and expand your business using our
+                advertising and full suite of marketing tools
+              </p>
+            </div>
+          </div>
+          <!-- 6th -->
+          <div class="col-12 col-md-6 col-xl-4 d-flex mb-4">
+            <div class="d-flex align-items-center">
+              <img src="images/chat-chat-svgrepo-com 1.svg" alt="" />
+            </div>
+            <div class="px-3">
+              <h3 class="py-2">Support & Training</h3>
+              <p>
+                Learn everything about eCommerce for free and get support
+                through Seller Support and ValueBox University
+              </p>
+            </div>
+          </div>
         </div>
-    </div>
-</div>
-<!-- end selling section -->
+      </div>
 
-<!-- seller story section start -->
- <div class="container mb-5">
-    <h1 class="text-center">Seller Stories</h1>
+      <!-- sel section end -->
 
-    <div class="row d-none d-md-flex bg-white p-0">
-        <div class="col-md-6 col-xl-3 p-0">
-            <iframe class="h-100 w-100 rounded-4"
-            src="https://www.youtube.com/embed/0a47I9xFIHU"
-            allowfullscreen
-          ></iframe>
+      <p class="w-100 mb-0 hrLine"></p>
+
+      <!-- simple start selling -->
+      <div class="container-fluid my-5 p-0 bg-light">
+        <h1 class="p-5 mx-4">4 Simple Steps to Start Selling</h1>
+        <div class="row p-0 mx-0">
+          <div class="col-10 col-lg-4 col-xl-4">
+            <img class="w-100" src="images/humanPhoto.png" alt="" />
+          </div>
+          <div class="col-12 col-lg-8 col-xl-8 px-3 p-0">
+            <div
+              class="row my-5 mx-0 justify-content-center gap-md-4 gap-lg-2 w-auto p-0"
+            >
+              <!-- selling section card 1 -->
+              <div
+                class="col-12 col-md-5 col-xl-5 bg-white sellingSection d-flex flex-column align-items-end"
+              >
+                <div class="pl-2 text-section">
+                  <h5 class="fw-bold">Signup for Free</h5>
+                  <p>
+                    Sign up on our website or mobile app using only your phone
+                    number.
+                  </p>
+                </div>
+                <img
+                  src="images/login-svgrepo-com 1.png"
+                  alt=""
+                  class="ml-auto"
+                />
+              </div>
+              <!-- selling section card 2 -->
+              <div
+                class="col-12 col-md-5 col-xl-5 bg-white sellingSection2 d-flex flex-column align-items-end"
+              >
+                <div class="text-section">
+                  <h5 class="fw-bold">Add Profile Information</h5>
+                  <p>
+                    Finish setting up your profile by adding your email and
+                    store name so we can recognize your business.
+                  </p>
+                </div>
+                <img
+                  src="images/user-person-profile-check-svgrepo-com 1.png"
+                  alt=""
+                  class="ml-auto"
+                />
+              </div>
+              <!-- selling section card 3 -->
+              <div
+                class="col-12 col-md-5 col-xl-5 bg-white sellingSection2 d-flex flex-column align-items-end"
+              >
+                <div class="text-section">
+                  <h5 class="fw-bold">Add Business Info & Bank Details</h5>
+                  <p>
+                    Fill in your business and bank details to verify your store
+                    and receive payments directly to your account.
+                  </p>
+                </div>
+                <img
+                  src="images/shop-2-svgrepo-com 1.png"
+                  alt=""
+                  class="ml-auto"
+                />
+              </div>
+              <!-- selling section card 4 -->
+              <div
+                class="col-12 col-md-5 col-xl-5 bg-white sellingSection d-flex flex-column align-items-end"
+              >
+                <div class="text-section">
+                  <h5 class="fw-bold">List Products</h5>
+                  <p>
+                    Add products to your store via the Seller Center. Once they
+                    pass quality checks, they'll go live, and you can start
+                    selling immediately.
+                  </p>
+                </div>
+                <img
+                  src="images/quality-parcel-svgrepo-com 1.png"
+                  alt=""
+                  class="ml-auto"
+                />
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-md-6 col-xl-4 p-0">
+      </div>
+      <!-- end selling section -->
+
+      <!-- seller story section start -->
+      <div class="container mb-5">
+        <h1 class="text-center">Seller Stories</h1>
+
+        <div class="row d-none d-md-flex bg-white p-0">
+          <div class="col-md-6 col-xl-3 p-0">
+            <iframe
+              class="h-100 w-100 rounded-4"
+              src="https://www.youtube.com/embed/0a47I9xFIHU"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="col-md-6 col-xl-4 p-0">
             <div class="px-2 my-4 ml-3 mt-0">
-                <div class="px-2 py-3 reviewSection">
-                    <div class="d-flex gap-2">
-                        <img class="h-25" src="images/Ellipse 26.png" alt="">
-                        <div class="d-flex flex-column">
-                            <span class="reviewerName">HAMAD ANWAR</span>
-                            <span class="reviewerpost">Founder & CEO HAMARI CHHAT</span>
-                        </div>
-                    </div>
-                    <div class="d-flex gap-2 mt-3">
-                        <img class="h-25" src="images/quotation-marks-svgrepo-com 1.png" alt="">
-                        <span class="reviewerDescription">
-                            ValueBox Marketplace has been a game-changer for my business! The platform is incredibly user-friendly, making it easy to manage my listings.
-                        </span>
-                    </div>
-                </div>
-                <iframe class="h-100 w-100 mt-4 rounded-top-4"
-            src="https://www.youtube.com/embed/0a47I9xFIHU"
-            allowfullscreen
-          ></iframe>
-          <div class="d-flex gap-2 reviewSection2 p-3">
-            <img class="h-25" src="images/quotation-marks-svgrepo-com 1.png" alt="">
-            <span class="reviewerDescription">
-                ValueBox Marketplace has been a game-changer for my business! The platform is incredibly user-friendly, making it easy to manage my listings                </span>
-           </div>
-        </div>
-
-        </div>
-        <div class="col-md-12 col-xl-5 p-0">
-            <iframe class="h-50 w-100"
-            src="https://www.youtube.com/embed/0a47I9xFIHU"
-            allowfullscreen
-          ></iframe>
-          <div class="row d-flex flex-wrap parentRewSection m-0 bg-white p-0">
-            <!-- Review Section 1 -->
-            <div class="col-12 h-100 py-5 p-3 reviewSection">
+              <div class="px-2 py-3 reviewSection">
                 <div class="d-flex gap-2">
-                    <img class="h-25" src="images/Ellipse 26.png" alt="">
-                    <div class="d-flex flex-column">
-                        <span class="reviewerName">HAMAD ANWAR</span>
-                        <span class="reviewerpost">Founder & CEO HAMARI CHHAT</span>
-                    </div>
+                  <img class="h-25" src="images/Ellipse 26.png" alt="" />
+                  <div class="d-flex flex-column">
+                    <span class="reviewerName">HAMAD ANWAR</span>
+                    <span class="reviewerpost">Founder & CEO HAMARI CHHAT</span>
+                  </div>
+                </div>
+                <div class="d-flex gap-2 mt-3">
+                  <img
+                    class="h-25"
+                    src="images/quotation-marks-svgrepo-com 1.png"
+                    alt=""
+                  />
+                  <span class="reviewerDescription">
+                    ValueBox Marketplace has been a game-changer for my
+                    business! The platform is incredibly user-friendly, making
+                    it easy to manage my listings.
+                  </span>
+                </div>
+              </div>
+              <iframe
+                class="h-100 w-100 mt-4 rounded-top-4"
+                src="https://www.youtube.com/embed/0a47I9xFIHU"
+                allowfullscreen
+              ></iframe>
+              <div class="d-flex gap-2 reviewSection2 p-3">
+                <img
+                  class="h-25"
+                  src="images/quotation-marks-svgrepo-com 1.png"
+                  alt=""
+                />
+                <span class="reviewerDescription">
+                  ValueBox Marketplace has been a game-changer for my business!
+                  The platform is incredibly user-friendly, making it easy to
+                  manage my listings
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-xl-5 p-0">
+            <iframe
+              class="h-50 w-100"
+              src="https://www.youtube.com/embed/0a47I9xFIHU"
+              allowfullscreen
+            ></iframe>
+            <div class="row d-flex flex-wrap parentRewSection m-0 bg-white p-0">
+              <!-- Review Section 1 -->
+              <div class="col-12 h-100 py-5 p-3 reviewSection">
+                <div class="d-flex gap-2">
+                  <img class="h-25" src="images/Ellipse 26.png" alt="" />
+                  <div class="d-flex flex-column">
+                    <span class="reviewerName">HAMAD ANWAR</span>
+                    <span class="reviewerpost">Founder & CEO HAMARI CHHAT</span>
+                  </div>
                 </div>
                 <div class="d-flex gap-2 mt-2">
-                    <img class="h-25" src="images/quotation-marks-svgrepo-com 1.png" alt="">
-                    <span class="reviewerDescription">
-                        ValueBox Marketplace has been a game-changer for my business! The platform is incredibly user-friendly, making it easy to manage my listings.
-                    </span>
+                  <img
+                    class="h-25"
+                    src="images/quotation-marks-svgrepo-com 1.png"
+                    alt=""
+                  />
+                  <span class="reviewerDescription">
+                    ValueBox Marketplace has been a game-changer for my
+                    business! The platform is incredibly user-friendly, making
+                    it easy to manage my listings.
+                  </span>
                 </div>
+              </div>
+              <!-- Review Section 2 -->
             </div>
-            <!-- Review Section 2 -->
+          </div>
         </div>
-        </div>
-    </div>
-    <section class="cardSmScreen d-block d-md-none">
-      <div class="row p-0 mt-3 bg-white">
-          <!-- Carousel Start -->
-          <div id="carouselExampleIndicators2" class="pl-0 pr-0 carousel slide" data-bs-ride="carousel">
+        <section class="cardSmScreen d-block d-md-none">
+          <div class="row p-0 mt-3 bg-white">
+            <!-- Carousel Start -->
+            <div
+              id="carouselExampleIndicators2"
+              class="pl-0 pr-0 carousel slide"
+              data-bs-ride="carousel"
+            >
               <div class="carousel-inner">
-                  <!-- First carousel item -->
-                  <div class="carousel-item active">
-                      <div class="row bg-white p-0 justify-content-center">
-                          <div class="col-md-4 mb-3">
-                              <div class="cardCrousel border-0 card rounded-4">
-                                <iframe class="h-50 w-100"
-                                src="https://www.youtube.com/embed/0a47I9xFIHU"
-                                allowfullscreen
-                              ></iframe>
-                              <div class="card-body p-0">
-                                <div class="d-flex cardBG py-5 gap-2 p-3">
-                                  <img class="h-25" src="images/quotation-marks-svgrepo-com 1.png" alt="">
-                                  <span class="reviewerDescription">
-                                      ValueBox Marketplace has been a game-changer for my business! The platform is incredibly user-friendly, making it easy to manage my listings.
-                                  </span>
-                                </div>
-                                  </div>
-                              </div>
+                <!-- First carousel item -->
+                <div class="carousel-item active">
+                  <div class="row bg-white p-0 justify-content-center">
+                    <div class="col-md-4 mb-3">
+                      <div class="cardCrousel border-0 card rounded-4">
+                        <iframe
+                          class="h-50 w-100"
+                          src="https://www.youtube.com/embed/0a47I9xFIHU"
+                          allowfullscreen
+                        ></iframe>
+                        <div class="card-body p-0">
+                          <div class="d-flex cardBG py-5 gap-2 p-3">
+                            <img
+                              class="h-25"
+                              src="images/quotation-marks-svgrepo-com 1.png"
+                              alt=""
+                            />
+                            <span class="reviewerDescription">
+                              ValueBox Marketplace has been a game-changer for
+                              my business! The platform is incredibly
+                              user-friendly, making it easy to manage my
+                              listings.
+                            </span>
                           </div>
+                        </div>
                       </div>
+                    </div>
                   </div>
-
-                  <!-- Second carousel item -->
-                  <div class="carousel-item">
-                    <div class="row bg-white p-0 justify-content-center">
-                        <div class="col-md-4 mb-3">
-                            <div class="cardCrousel border-0 card rounded-4">
-                              <iframe class="h-50 w-100"
-                              src="https://www.youtube.com/embed/0a47I9xFIHU"
-                              allowfullscreen
-                            ></iframe>
-                            <div class="card-body p-0">
-                              <div class="d-flex cardBG py-5 gap-2 p-3">
-                                <img class="h-25" src="images/quotation-marks-svgrepo-com 1.png" alt="">
-                                <span class="reviewerDescription">
-                                    ValueBox Marketplace has been a game-changer for my business! The platform is incredibly user-friendly, making it easy to manage my listings.
-                                </span>
-                              </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
-                  <!-- Third carousel item -->
-                  <div class="carousel-item">
-                    <div class="row bg-white p-0 justify-content-center">
-                        <div class="col-md-4 mb-3">
-                            <div class="cardCrousel border-0 card rounded-4">
-                              <iframe class="h-50 w-100"
-                              src="https://www.youtube.com/embed/0a47I9xFIHU"
-                              allowfullscreen
-                            ></iframe>
-                            <div class="card-body p-0">
-                              <div class="d-flex cardBG py-5 gap-2 p-3">
-                                <img class="h-25" src="images/quotation-marks-svgrepo-com 1.png" alt="">
-                                <span class="reviewerDescription">
-                                    ValueBox Marketplace has been a game-changer for my business! The platform is incredibly user-friendly, making it easy to manage my listings.
-                                </span>
-                              </div>
-                                </div>
-                            </div>
+                <!-- Second carousel item -->
+                <div class="carousel-item">
+                  <div class="row bg-white p-0 justify-content-center">
+                    <div class="col-md-4 mb-3">
+                      <div class="cardCrousel border-0 card rounded-4">
+                        <iframe
+                          class="h-50 w-100"
+                          src="https://www.youtube.com/embed/0a47I9xFIHU"
+                          allowfullscreen
+                        ></iframe>
+                        <div class="card-body p-0">
+                          <div class="d-flex cardBG py-5 gap-2 p-3">
+                            <img
+                              class="h-25"
+                              src="images/quotation-marks-svgrepo-com 1.png"
+                              alt=""
+                            />
+                            <span class="reviewerDescription">
+                              ValueBox Marketplace has been a game-changer for
+                              my business! The platform is incredibly
+                              user-friendly, making it easy to manage my
+                              listings.
+                            </span>
+                          </div>
                         </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
 
-                  <!-- Fourth carousel item -->
-                  <div class="carousel-item">
-                    <div class="row bg-white p-0 justify-content-center">
-                        <div class="col-md-4 mb-3">
-                            <div class="cardCrousel border-0 card rounded-4">
-                              <iframe class="h-50 w-100"
-                              src="https://www.youtube.com/embed/0a47I9xFIHU"
-                              allowfullscreen
-                            ></iframe>
-                            <div class="card-body p-0">
-                              <div class="d-flex cardBG py-5 gap-2 p-3">
-                                <img class="h-25" src="images/quotation-marks-svgrepo-com 1.png" alt="">
-                                <span class="reviewerDescription">
-                                    ValueBox Marketplace has been a game-changer for my business! The platform is incredibly user-friendly, making it easy to manage my listings.
-                                </span>
-                              </div>
-                                </div>
-                            </div>
+                <!-- Third carousel item -->
+                <div class="carousel-item">
+                  <div class="row bg-white p-0 justify-content-center">
+                    <div class="col-md-4 mb-3">
+                      <div class="cardCrousel border-0 card rounded-4">
+                        <iframe
+                          class="h-50 w-100"
+                          src="https://www.youtube.com/embed/0a47I9xFIHU"
+                          allowfullscreen
+                        ></iframe>
+                        <div class="card-body p-0">
+                          <div class="d-flex cardBG py-5 gap-2 p-3">
+                            <img
+                              class="h-25"
+                              src="images/quotation-marks-svgrepo-com 1.png"
+                              alt=""
+                            />
+                            <span class="reviewerDescription">
+                              ValueBox Marketplace has been a game-changer for
+                              my business! The platform is incredibly
+                              user-friendly, making it easy to manage my
+                              listings.
+                            </span>
+                          </div>
                         </div>
+                      </div>
                     </div>
+                  </div>
+                </div>
+
+                <!-- Fourth carousel item -->
+                <div class="carousel-item">
+                  <div class="row bg-white p-0 justify-content-center">
+                    <div class="col-md-4 mb-3">
+                      <div class="cardCrousel border-0 card rounded-4">
+                        <iframe
+                          class="h-50 w-100"
+                          src="https://www.youtube.com/embed/0a47I9xFIHU"
+                          allowfullscreen
+                        ></iframe>
+                        <div class="card-body p-0">
+                          <div class="d-flex cardBG py-5 gap-2 p-3">
+                            <img
+                              class="h-25"
+                              src="images/quotation-marks-svgrepo-com 1.png"
+                              alt=""
+                            />
+                            <span class="reviewerDescription">
+                              ValueBox Marketplace has been a game-changer for
+                              my business! The platform is incredibly
+                              user-friendly, making it easy to manage my
+                              listings.
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <!-- Carousel controls & indicators -->
-              <div class="d-flex justify-content-between align-items-center mx-2">
-                  <!-- Left arrow -->
-                  <a class="btn leftArrow" href="#carouselExampleIndicators2" role="button" data-bs-slide="prev">
-                      <i class="fa fa-arrow-left text-light"></i>
-                  </a>
+              <div
+                class="d-flex justify-content-between align-items-center mx-2"
+              >
+                <!-- Left arrow -->
+                <a
+                  class="btn leftArrow"
+                  href="#carouselExampleIndicators2"
+                  role="button"
+                  data-bs-slide="prev"
+                >
+                  <i class="fa fa-arrow-left text-light"></i>
+                </a>
 
-                  <!-- Carousel Indicators -->
-                  <ul class="carousel-indicators my-auto">
-                      <li data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active"></li>
-                      <li data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1"></li>
-                      <li data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2"></li>
-                      <li data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="3"></li>
-                  </ul>
+                <!-- Carousel Indicators -->
+                <ul class="carousel-indicators my-auto">
+                  <li
+                    data-bs-target="#carouselExampleIndicators2"
+                    data-bs-slide-to="0"
+                    class="active"
+                  ></li>
+                  <li
+                    data-bs-target="#carouselExampleIndicators2"
+                    data-bs-slide-to="1"
+                  ></li>
+                  <li
+                    data-bs-target="#carouselExampleIndicators2"
+                    data-bs-slide-to="2"
+                  ></li>
+                  <li
+                    data-bs-target="#carouselExampleIndicators2"
+                    data-bs-slide-to="3"
+                  ></li>
+                </ul>
 
-                  <!-- Right arrow -->
-                  <a class="btn rightArrow" href="#carouselExampleIndicators2" role="button" data-bs-slide="next">
-                      <i class="fa fa-arrow-right text-light"></i>
-                  </a>
+                <!-- Right arrow -->
+                <a
+                  class="btn rightArrow"
+                  href="#carouselExampleIndicators2"
+                  role="button"
+                  data-bs-slide="next"
+                >
+                  <i class="fa fa-arrow-right text-light"></i>
+                </a>
               </div>
+            </div>
+            <!-- Carousel End -->
           </div>
-          <!-- Carousel End -->
+        </section>
       </div>
-  </section>
- </div>
- <!-- seller story section end -->
+      <!-- seller story section end -->
 
- <!-- preview section start -->
-  <div class="container-fluid container-lg previewParent">
-    <div class="row m-0 previewSection bg-white position-relative">
-        <div class="col-12 p-0 previewImg">
+      <!-- preview section start -->
+      <div class="container-fluid container-lg previewParent">
+        <div class="row m-0 previewSection bg-white position-relative">
+          <div class="col-12 p-0 previewImg">
             <!-- Image visible only on md and larger screens -->
-            <img class="h-100 w-100 d-none d-lg-block" src="images/Review.png" alt="Image for md and larger screens">
-        
+            <img
+              class="h-100 w-100 d-none d-lg-block"
+              src="images/Review.png"
+              alt="Image for md and larger screens"
+            />
+
             <!-- Image visible only on small screens (below md) -->
-            <img class="h-100 w-100 d-none d-md-block d-lg-none" src="images/previewBg2.png" alt="Image for smaller screens">
-            <img class="h-sm-75 w-sm-50 w-100 d-block d-md-none reviewbg" src="images/previewBg3.png" alt="Image for smaller screens">
-        </div>
-        
-        <div class="col col-lg-10 col-md-7 px-2 py-3 px-sm-3 py-sm-2 col-xl-12 h-lg-100 px-xl-5 py-xl-4 previewText d-flex flex-column justify-content-center text-white position-absolute">
+            <img
+              class="h-100 w-100 d-none d-md-block d-lg-none"
+              src="images/previewBg2.png"
+              alt="Image for smaller screens"
+            />
+            <img
+              class="h-sm-75 w-sm-50 w-100 d-block d-md-none reviewbg"
+              src="images/previewBg3.png"
+              alt="Image for smaller screens"
+            />
+          </div>
+
+          <div
+            class="col col-lg-10 col-md-7 px-2 py-3 px-sm-3 py-sm-2 col-xl-12 h-lg-100 px-xl-5 py-xl-4 previewText d-flex flex-column justify-content-center text-white position-absolute"
+          >
             <span>GO MOBILE</span>
             <h2 class="col-11">Take advantage of free ValueBox Seller App</h2>
             <p class="col-11 col-lg-10 col-xl-7 my-lg-2 my-0">
-                The ValueBox Seller app is filled with features to assist you in managing and expanding your eCommerce business on the go. It allows you to handle all your business tasks directly from your phone.
+              The ValueBox Seller app is filled with features to assist you in
+              managing and expanding your eCommerce business on the go. It
+              allows you to handle all your business tasks directly from your
+              phone.
             </p>
-           <div class="appLinks">
-            <a href="#"><img src="images/app store.png" alt=""></a>
-            <a class="mx-3" href="#"><img src="images/google Plye store.png" alt=""></a>
-           </div>
+            <div class="appLinks">
+              <a href="#"><img src="images/app store.png" alt="" /></a>
+              <a class="mx-3" href="#"
+                ><img src="images/google Plye store.png" alt=""
+              /></a>
+            </div>
+          </div>
         </div>
-    </div>
-  </div>
- <!-- preview section end -->
+      </div>
+      <!-- preview section end -->
 
- <!-- seller support and seller center start -->
-  <div class="container p-0">
-    <div class="row m-0 p-3 p-lg-5 bg-white">
-        <div class="col-12 p-0 text-center">
+      <!-- seller support and seller center start -->
+      <div class="container p-0">
+        <div class="row m-0 p-3 p-lg-5 bg-white">
+          <div class="col-12 p-0 text-center">
             <h3>But wait, there’s more!</h3>
-            <span>Looking for developer tools? Or seller support? Look no further!</span>
+            <span
+              >Looking for developer tools? Or seller support? Look no
+              further!</span
+            >
             <div class="d-flex rectangle justify-content-center my-3">
-                <p></p>
-                <p></p>
-            </div>
-        </div>
-        <div class="col-md-6 sellerCard">
-          <div class="card p-3 text-center">
-            <img src="images/sellerCenter.png" class="card-img-top" alt="...">
-            <div class="card-body d-flex flex-column align-items-center ">
-              <h5 >Seller Center</h5>
-              <p class="card-text m-0">Manage your store with ease! The Seller Center helps you list products, track sales, and grow your business on the ValueBox Marketplace.</p>
-              <a href="#" class="p-3">Go to Seller Center</a>
+              <p></p>
+              <p></p>
             </div>
           </div>
-        </div>
-        <div class="col-md-6 my-4 my-md-0 sellerCard">
-          <div class="card p-3 text-center">
-            <img src="images/sellerSupport.png" class="card-img-top" alt="...">
-            <div class="card-body d-flex flex-column align-items-center ">
-              <h5 >Seller Support</h5>
-              <p class="card-text m-0">Got an issue? Our Seller Support team is here to assist you with any questions or problems to ensure smooth selling on ValueBox.</p>
-              <a href="#" class="p-3">Get Support</a>
-            </div>
-          </div>
-        </div>
-    </div>
-  </div>
-
-  <div class="container mt-5">
-    <div class="accordion" id="accordionExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <a class="accordion-button rounded-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            What is UX design?
-            <i class="fa-solid fa-arrow-down ms-auto"></i>
-          </a>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            UX design stands for User Experience design. It is the process of designing digital or physical products that are easy to use, intuitive, and enjoyable for the user.
-          </div>
-        </div>
-      </div>
-  
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-          <a class="accordion-button rounded-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            What are the key principles of UX design?
-            <i class="fa-solid fa-arrow-down ms-auto"></i>
-          </a>
-        </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            The key principles include user-centered design, accessibility, usability, and research-based decisions.
-          </div>
-        </div>
-      </div>
-  
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingThree">
-          <a class="accordion-button rounded-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            What is the difference between UX and UI design?
-            <i class="fa-solid fa-arrow-down ms-auto"></i>
-          </a>
-        </h2>
-        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            UX design focuses on the overall experience, while UI design focuses on the visual layout and interactive elements.
-          </div>
-        </div>
-      </div>
-  
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingFour">
-          <a class="accordion-button rounded-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-            What is a wireframe?
-            <i class="fa-solid fa-arrow-down ms-auto"></i>
-          </a>
-        </h2>
-        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            A wireframe is a visual guide that represents the skeletal framework of a digital product.
-          </div>
-        </div>
-      </div>
-  
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingFive">
-          <a class="accordion-button rounded-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-            What is user testing?
-            <i class="fa-solid fa-arrow-down ms-auto"></i>
-          </a>
-        </h2>
-        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            User testing involves evaluating a product by testing it with real users to gather feedback on usability.
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
- <!-- seller support and seller center end -->
-</main>
-
-
-
-    
-    <!-- footer Section -->
-    <footer>
-        <div class="container-fluid  px-0">
-          <div class="row px-4 px-sm-5 pb-5">
-            <div class="col-12 col-lg-6 about">
-              <h3 class="text-warning">About ValueBox</h3>
-              <p class=" mt-3">
-                ValueBox Marketplace is all about helping sellers succeed and
-                connecting them with customers anytime and anywhere through our
-                easy-to-use online platform and mobile app. Every week, thousands
-                of shoppers explore our marketplace, finding unique products and
-                great deals. We’re passionate about making eCommerce a better
-                experience for both sellers and buyers. Our supportive community
-                provides tools and guidance to help you thrive. Plus, we're
-                committed to sustainability and giving back, creating
-                opportunities for everyone in our marketplace. Join us and be part
-                of a vibrant community that cares!
-              </p>
-              <button class="mt-3">Join Marketplace</button>
-            </div>
-            <div class="col-lg-2 mt-lg-0 mt-3 col-xl-3 px-xl-5 px-lg-4">
-              <h6 class="text-warning">Seller Resources</h6>
-              <a href="#" class="text-dark d-block text-decoration-none mt-4"
-                >Seller Center <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M3 13L13 3M13 3L5.5 3M13 3V10.5" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg></a
-              >
-              <a href="#" class="text-dark text-decoration-none mt-3"
-                >Seller Support <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M3 13L13 3M13 3L5.5 3M13 3V10.5" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg></a
-              >
-            </div>
-            <div class="col-lg-3 mt-lg-0 mt-5 px-xl-5 px-lg-4">
-              <h6 class="text-warning">About</h6>
-              <a href="#" class="text-dark d-block text-decoration-none mt-4"
-                >Shop ValueBox.pk</a
-              >
-              <a href="#" class="text-dark d-block text-decoration-none mt-4"
-                >Our Social Handles</a
-              >
-              <div class="mt-3 col-12 socialIcons">
-                <a
-                  href="https://www.facebook.com/valueboxdotpk/"
-                  class="text-decoration-none"
-                  target="_blank"
-                  ><i class="fa-brands fa-facebook-f"></i
-                ></a>
-                <a
-                  href="https://www.instagram.com/valueboxdootpk/"
-                  class="text-decoration-none"
-                  target="_blank"
-                  ><i class="fa-brands fa-square-instagram"></i
-                ></a>
-                <a
-                  href="https://www.tiktok.com/@valuebox.pk"
-                  class="text-decoration-none"
-                  target="_blank"
-                  ><i class="fa-brands fa-tiktok"></i
-                ></a>
-                <a
-                  href="https://www.youtube.com/@valueboxdotpk"
-                  class="text-decoration-none"
-                  target="_blank"
-                  ><i class="fa-brands fa-youtube"></i
-                ></a>
+          <div class="col-md-6 sellerCard">
+            <div class="card p-3 text-center">
+              <img
+                src="images/sellerCenter.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body d-flex flex-column align-items-center">
+                <h5>Seller Center</h5>
+                <p class="card-text m-0">
+                  Manage your store with ease! The Seller Center helps you list
+                  products, track sales, and grow your business on the ValueBox
+                  Marketplace.
+                </p>
+                <a href="#" class="p-3">Go to Seller Center</a>
               </div>
             </div>
           </div>
-  
-          <div class="row px-lg-5 py-4 px-1">
-            <hr class="text-light py-1" />
-  
-            <!-- Logo Section -->
-            <div
-              class="col-12 col-lg-4 text-center text-lg-left px-0 logoVlaueBox mb-3 mb-lg-0"
-            >
-              <span class="bg-light">
-                <img src="images/Group 1.svg" alt="ValueBox Logo" />
-              </span>
-            </div>
-  
-            <!-- Links Section -->
-            <div class="col-12 col-lg-4 text-center px-0 mb-3 mb-lg-0">
-              <a href="#" class="text-decoration-none text-dark px-3">English</a>
-              <a href="#" class="text-decoration-none text-dark px-3">Privacy</a>
-              <a href="#" class="text-decoration-none text-dark px-3">Legal</a>
-            </div>
-  
-            <!-- Copyright Section -->
-            <div class="col-12 col-lg-4 text-center text-lg-end px-0">
-              <span class="text-dark"
-                >&copy; 2024 ValueBox. All Rights Reserved.</span
-              >
+          <div class="col-md-6 my-4 my-md-0 sellerCard">
+            <div class="card p-3 text-center">
+              <img
+                src="images/sellerSupport.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body d-flex flex-column align-items-center">
+                <h5>Seller Support</h5>
+                <p class="card-text m-0">
+                  Got an issue? Our Seller Support team is here to assist you
+                  with any questions or problems to ensure smooth selling on
+                  ValueBox.
+                </p>
+                <a href="#" class="p-3">Get Support</a>
+              </div>
             </div>
           </div>
         </div>
-      </footer>
-      <!-- <script src="script.js"></script> -->
-      <script src="dashboardLogin.js"></script>
+      </div>
 
-<script src="script.js"></script>
+      <div class="container mt-5">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <a
+                class="accordion-button rounded-2"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                What is UX design?
+                <i class="fa-solid fa-arrow-down ms-auto"></i>
+              </a>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                UX design stands for User Experience design. It is the process
+                of designing digital or physical products that are easy to use,
+                intuitive, and enjoyable for the user.
+              </div>
+            </div>
+          </div>
 
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <a
+                class="accordion-button rounded-2 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                What are the key principles of UX design?
+                <i class="fa-solid fa-arrow-down ms-auto"></i>
+              </a>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                The key principles include user-centered design, accessibility,
+                usability, and research-based decisions.
+              </div>
+            </div>
+          </div>
 
-      <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"
-      ></script>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <a
+                class="accordion-button rounded-2 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                What is the difference between UX and UI design?
+                <i class="fa-solid fa-arrow-down ms-auto"></i>
+              </a>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                UX design focuses on the overall experience, while UI design
+                focuses on the visual layout and interactive elements.
+              </div>
+            </div>
+          </div>
 
-      
-</body>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <a
+                class="accordion-button rounded-2 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFour"
+                aria-expanded="false"
+                aria-controls="collapseFour"
+              >
+                What is a wireframe?
+                <i class="fa-solid fa-arrow-down ms-auto"></i>
+              </a>
+            </h2>
+            <div
+              id="collapseFour"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFour"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                A wireframe is a visual guide that represents the skeletal
+                framework of a digital product.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <a
+                class="accordion-button rounded-2 collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFive"
+                aria-expanded="false"
+                aria-controls="collapseFive"
+              >
+                What is user testing?
+                <i class="fa-solid fa-arrow-down ms-auto"></i>
+              </a>
+            </h2>
+            <div
+              id="collapseFive"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFive"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                User testing involves evaluating a product by testing it with
+                real users to gather feedback on usability.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- seller support and seller center end -->
+    </main>
+
+    <!-- footer Section -->
+    <footer>
+      <div class="container-fluid px-0">
+        <div class="row px-4 px-sm-5 pb-5">
+          <div class="col-12 col-lg-6 about">
+            <h3 class="text-warning">About ValueBox</h3>
+            <p class="mt-3">
+              ValueBox Marketplace is all about helping sellers succeed and
+              connecting them with customers anytime and anywhere through our
+              easy-to-use online platform and mobile app. Every week, thousands
+              of shoppers explore our marketplace, finding unique products and
+              great deals. We’re passionate about making eCommerce a better
+              experience for both sellers and buyers. Our supportive community
+              provides tools and guidance to help you thrive. Plus, we're
+              committed to sustainability and giving back, creating
+              opportunities for everyone in our marketplace. Join us and be part
+              of a vibrant community that cares!
+            </p>
+            <button class="mt-3">Join Marketplace</button>
+          </div>
+          <div class="col-lg-2 mt-lg-0 mt-3 col-xl-3 px-xl-5 px-lg-4">
+            <h6 class="text-warning">Seller Resources</h6>
+            <a href="#" class="text-dark d-block text-decoration-none mt-4"
+              >Seller Center
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M3 13L13 3M13 3L5.5 3M13 3V10.5"
+                  stroke="#333333"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+            ></a>
+            <a href="#" class="text-dark text-decoration-none mt-3"
+              >Seller Support
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M3 13L13 3M13 3L5.5 3M13 3V10.5"
+                  stroke="#333333"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+            ></a>
+          </div>
+          <div class="col-lg-3 mt-lg-0 mt-5 px-xl-5 px-lg-4">
+            <h6 class="text-warning">About</h6>
+            <a href="#" class="text-dark d-block text-decoration-none mt-4"
+              >Shop ValueBox.pk</a
+            >
+            <a href="#" class="text-dark d-block text-decoration-none mt-4"
+              >Our Social Handles</a
+            >
+            <div class="mt-3 col-12 socialIcons">
+              <a
+                href="https://www.facebook.com/valueboxdotpk/"
+                class="text-decoration-none"
+                target="_blank"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/valueboxdootpk/"
+                class="text-decoration-none"
+                target="_blank"
+                ><i class="fa-brands fa-square-instagram"></i
+              ></a>
+              <a
+                href="https://www.tiktok.com/@valuebox.pk"
+                class="text-decoration-none"
+                target="_blank"
+                ><i class="fa-brands fa-tiktok"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/@valueboxdotpk"
+                class="text-decoration-none"
+                target="_blank"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row px-lg-5 py-4 px-1">
+          <hr class="text-light py-1" />
+
+          <!-- Logo Section -->
+          <div
+            class="col-12 col-lg-4 text-center text-lg-left px-0 logoVlaueBox mb-3 mb-lg-0"
+          >
+            <span class="bg-light">
+              <img src="images/Group 1.svg" alt="ValueBox Logo" />
+            </span>
+          </div>
+
+          <!-- Links Section -->
+          <div class="col-12 col-lg-4 text-center px-0 mb-3 mb-lg-0">
+            <a href="#" class="text-decoration-none text-dark px-3">English</a>
+            <a href="#" class="text-decoration-none text-dark px-3">Privacy</a>
+            <a href="#" class="text-decoration-none text-dark px-3">Legal</a>
+          </div>
+
+          <!-- Copyright Section -->
+          <div class="col-12 col-lg-4 text-center text-lg-end px-0">
+            <span class="text-dark"
+              >&copy; 2024 ValueBox. All Rights Reserved.</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- <script src="script.js"></script> -->
+    <script src="dashboardLogin.js"></script>
+
+    <script src="script.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

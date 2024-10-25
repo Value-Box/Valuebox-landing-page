@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anton SC:wght@400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
 
 * {
   box-sizing: border-box;
@@ -669,11 +670,14 @@ main {
 }
 
 .personalSignup{
-  background: linear-gradient(90deg, #0032A3 0%, #1A51CB 25%, #3B66C8 50%, #1A51CB 75%, #0032A3 100%);
+  /* background: linear-gradient(90deg, #0032A3 0%, #1A51CB 25%, #3B66C8 50%, #1A51CB 75%, #0032A3 100%); */
+  /* overflow-y: auto; */
+  /* height: 100vh; */
 }
 
 .personalSignupText{
   color: white;
+  font-family: "Anton SC";
 }
 .personalSignupText span {
   background: linear-gradient(
@@ -796,7 +800,7 @@ align-items:center;
   gap: 10px;
 }
 .formFields label {
-  width: 330px;
+  width: 300px;
   /* font-size: 20px; */
   font-weight: 500;
 }
@@ -915,7 +919,7 @@ background-color: #002882;
 color: white;
 margin-top: 80px;
 }
-.BusinessInInfoIndForm button:disabled{
+.BusinessInInfoIndForm button:disabled,.BusinessInfoBussAccForm button:disabled{
   background-color: #666666;
 }
 .disabledButton button:disabled{
@@ -950,6 +954,9 @@ display: flex;
 }
 .BusinessInInfoIndForm .backBtn:hover svg path,.BusinessInfoBussAccForm .backBtn:hover svg path,.bankDetail .backBtn:hover svg path{
   stroke: white; /* Change the stroke color on hover */
+}
+.BusinessInInfoIndForm h1,.BusinessInfoBussAccForm h1,.bankDetail h1{
+margin: 60px 0px 30px 0px;
 }
 .bussAddText{
   font-size: 24px;
@@ -1197,12 +1204,19 @@ border-left: 8px solid  #FFC136;
 background:  #FFF;
 }
 
-#frontSidePhoto, #backSidePhoto, #password, #confirmPassword{
-  max-width: 414px;
-  width: 100%;
+#frontSidePhoto, #backSidePhoto, #password, #confirmPassword,#indNumberErrTxt,.cnicText,#personalEmailErrTxt{
+  /* max-width: 414px; */
+  /* width: 100%; */
   margin-left: auto;
   color: #999999;
 }
+#indNumberErrTxt,#indEmailErrTxt,#bussNumberErrTxt,#bussEmailErrTxt,#contactMobileErrTxt,#personalPhoneErrTxt,#bankCheckCopy,.ibanText{
+  /* max-width: 370px; */
+  width: 100%;
+  /* margin-left: auto; */
+  color: #999999;
+}
+
 .forgotPassword{
   font-size: 16px;
 font-style: italic;
@@ -1274,6 +1288,17 @@ select{
 #toggleConfirmPassword,#togglePassword{
   cursor: pointer;
 }
+.parent-section {
+  
+  overflow-y: auto; /* Enable scrolling within the parent container */
+}
+
+.sticky-container {
+  position: sticky;
+  top: 20px; /* Adjust the distance from the top as needed */
+  z-index: 10;
+}
+
 @media (max-width: 1100px) {
   .hamburger {
     display: inline;
@@ -2017,6 +2042,11 @@ font-weight: 600;
   border-radius: 50%;
   background-color: #f9f9f9;
 }
+.formFields {
+  display: block;
+  align-items: center;
+  gap: 10px;
+}
 }
 @media (max-width: 594px) {
   .logo img {
@@ -2220,6 +2250,15 @@ font-weight: 600;
 .stepContent h4 {
   font-size: 22px;
 }
+.rightIconsParent{
+  padding: 20px 20px 0px 20px;
+}
+.personalInfoForm .nextBtn{
+  margin-top: 40px;
+}
+.personalSignupForm {
+  border-radius: 12px;
+}
 }
 @media (max-width: 536px) {
   .headerButtons button {
@@ -2350,6 +2389,9 @@ font-weight: 600;
   font-size: 20px;
   line-height: 22px;
 }
+.rightIconsParent{
+  padding: 15px 15px 0px 15px;
+}
 }
 
 /* Style for centering the indicators */
@@ -2438,6 +2480,15 @@ font-weight: 600;
   left: -268%;
   max-width: 700px !important;
   width: 640% !important;
+}
+.rightIconsParent{
+  padding: 15px 10px 0px 0px;
+}
+#personalForm{
+  padding: 10px !important;
+}
+.signUpFormHead{
+  padding: 0px 10px !important;
 }
 }
 @media (max-width: 350px) {

@@ -1,15 +1,13 @@
-
 const loginBtn = document.querySelector(".loginBtn");
 
-function loginPage() {
-  window.location.href = "dashboardLogin.html";
+function loginPage(value) {
+  window.location.href = "dashboardLogin.html" + id;
 }
 
-
 // persoanl Information sign Up Form Page JS
-const circles = document.querySelectorAll(".circle")
-const progressBar = document.querySelector(".indicator")
-const progressBarInner = progressBar.querySelector(".inner")
+const circles = document.querySelectorAll(".circle");
+const progressBar = document.querySelector(".indicator");
+const progressBarInner = progressBar.querySelector(".inner");
 const buttons = document.querySelectorAll("button");
 
 let currentStep = 2;
@@ -87,26 +85,39 @@ document.addEventListener("DOMContentLoaded", function () {
     autoPlaceholder: "polite",
     separateDialCode: true,
     initialCountry: "pk",
+    onlyCountries: ["pk"], // Only show Pakistan in the dropdown
     utilsScript:
       "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js",
   });
 
   // Initialize intl-tel-input for the second phone input
-  const contactInput = document.querySelector("#contactMobile");
+  const contactInput = document.querySelector("#contactMobileNumber");
   const itiContact = window.intlTelInput(contactInput, {
     autoPlaceholder: "polite",
     separateDialCode: true,
     initialCountry: "pk",
+    onlyCountries: ["pk"], // Only show Pakistan in the dropdown
     utilsScript:
       "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js",
   });
 
-  // Add form validation logic for both phone inputs
+  // Initialize intl-tel-input for the third phone input
+  const personContactNumber = document.querySelector("#personContactNumber");
+  const itiPersonContact = window.intlTelInput(personContactNumber, {
+    autoPlaceholder: "polite",
+    separateDialCode: true,
+    initialCountry: "pk",
+    onlyCountries: ["pk"], // Only show Pakistan in the dropdown
+    utilsScript:
+      "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js",
+  });
+
+  // Add form validation logic for all phone inputs
   const formValidation = FormValidation.formValidation(
     document.getElementById("demoForm"),
     {
       fields: {
-        phone: {
+        personalPhoneNumber: {
           validators: {
             notEmpty: {
               message: "The phone number is required",
@@ -119,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
             },
           },
         },
-        contactMobile: {
+        contactMobileNumber: {
           validators: {
             notEmpty: {
               message: "The mobile number is required",
@@ -132,103 +143,97 @@ document.addEventListener("DOMContentLoaded", function () {
             },
           },
         },
+        personContactNumber: {
+          validators: {
+            notEmpty: {
+              message: "The person's contact number is required",
+            },
+            callback: {
+              message: "The person's contact number is not valid",
+              callback: function (value, validator, $field) {
+                return itiPersonContact.isValidNumber();
+              },
+            },
+          },
+        },
       },
       plugins: {
-        internationalTelephoneInput:
+        internationalTelephoneInput: [
           new FormValidation.plugins.InternationalTelephoneInput({
-            field: "phone",
+            field: "personalPhoneNumber",
             message: "The phone number is not valid",
             hiddenPhoneInput: "fullPhoneNumber",
             utilsScript:
               "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js",
           }),
-        internationalTelephoneInput:
           new FormValidation.plugins.InternationalTelephoneInput({
-            field: "contactMobile",
+            field: "contactMobileNumber",
             message: "The mobile number is not valid",
             hiddenPhoneInput: "fullContactNumber",
             utilsScript:
               "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js",
           }),
+          new FormValidation.plugins.InternationalTelephoneInput({
+            field: "personContactNumber",
+            message: "The person's contact number is not valid",
+            hiddenPhoneInput: "fullPersonContactNumber",
+            utilsScript:
+              "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js",
+          }),
+        ],
       },
     }
   );
 });
+// Function to validate phone numbers
+// const validatePhoneNumber = (inputField, errorMessageElement) => {
+//   const phoneValue = inputField.value.replace(/-/g, ""); // Remove hyphen for length check
+//   if (phoneValue.length !== 10) {
+//     errorMessageElement.innerText = "Phone number must be exactly 10 digits.";
+//     errorMessageElement.style.color = "red";
+//     return false; // Invalid
+//   } else {
+//     errorMessageElement.innerText = ""; // Clear error message
+//     return true; // Valid
+//   }
+// };
 
-document
-  .getElementById("warehouseAddressCheck")
-  .addEventListener("change", function () {
-    const warehouseAddress = document.querySelector(".warehouseAddress");
+// // Get references to input fields and error message elements
+// const phoneInputs = [
+//   {
+//     input: document.getElementById("personalPhoneNumber"),
+//     error: document.getElementById("personalPhoneErrTxt"),
+//   },
+//   {
+//     input: document.getElementById("contactMobileNumber"),
+//     error: document.getElementById("contactMobileErrTxt"),
+//   },
+//   {
+//     input: document.getElementById("personContactNumber"),
+//     error: document.getElementById("bussNumberErrTxt"),
+//   },
+// ];
 
-    if (this.checked) {
-      warehouseAddress.style.display = "none"; // Hide the address when checked
-    } else {
-      warehouseAddress.style.display = "block"; // Show the address when unchecked
-    }
-  });
+// // Add event listeners for each input field
+// phoneInputs.forEach(({ input, error }) => {
+//   // Clear error message while typing
+//   input.addEventListener("input", () => {
+//     error.innerText = ""; // Clear error message
+//   });
 
-document
-  .getElementById("returnAddressCheck")
-  .addEventListener("change", function () {
-    const returnAddress = document.querySelector(".returnAddress");
+//   // Validate on blur
+//   input.addEventListener("blur", () => validatePhoneNumber(input, error));
+// });
 
-    if (this.checked) {
-      returnAddress.style.display = "none"; // Hide the address when checked
-    } else {
-      returnAddress.style.display = "block"; // Show the address when unchecked
-    }
-  });
-
-document
-  .getElementById("bussinessWarehouseAddress")
-  .addEventListener("change", function () {
-    const bussWarehouseAddress = document.querySelector(
-      ".bussWarehouseAddress"
-    );
-
-    if (this.checked) {
-      bussWarehouseAddress.style.display = "none"; // Hide the address when checked
-    } else {
-      bussWarehouseAddress.style.display = "block"; // Show the address when unchecked
-    }
-  });
-document
-  .getElementById("bussReturnAddressCheck")
-  .addEventListener("change", function () {
-    const bussReturnAddress = document.querySelector(".bussReturnAddress");
-
-    if (this.checked) {
-      bussReturnAddress.style.display = "none"; // Hide the address when checked
-    } else {
-      bussReturnAddress.style.display = "block"; // Show the address when unchecked
-    }
-  });
-
-// bank cheque Photo
-function bankChequePhoto() {
-  const fileInput = document.getElementById("chequeCopy");
-  const bankCheckCopy = document.getElementById("bankCheckCopy");
-
-  if (fileInput.files.length > 0) {
-    const fileName = fileInput.files[0].name;
-    const fileNameWithoutExtension = fileName.split(".")[0];
-    const extension = fileName.split(".").pop();
-    bankCheckCopy.textContent = `File Name: ${fileNameWithoutExtension}, Extension: ${extension}`;
-  } else {
-    bankCheckCopy.textContent = "No file chosen";
-  }
-}
-
-// bank Check Fields
-const bankDetailSection = document.querySelectorAll(
-  ".bankDetail .bankRequired"
+const BusinessIndvidualSection = document.querySelectorAll(
+  ".BusinessInInfoIndForm .required"
 );
-const submitButton = document.getElementById("bussAccNxtBtnSubmit");
+const bussindIndAccNxtBtn = document.getElementById("bussindIndAccNxtBtn");
 
-function checkBankFields() {
+function bussIndividualFields() {
   let allFieldsFilled = true;
 
-  bankDetailSection.forEach((input) => {
+  BusinessIndvidualSection.forEach((input) => {
     if (input.type === "file") {
       if (input.files.length === 0) {
         allFieldsFilled = false; // No file selected
@@ -247,6 +252,544 @@ function checkBankFields() {
   });
 
   // Enable button only if all fields are filled and a valid image is selected
+  bussindIndAccNxtBtn.disabled = !allFieldsFilled;
+}
+
+// Add event listeners to each input field, including file input
+BusinessIndvidualSection.forEach((input) => {
+  if (input.type === "file") {
+    input.addEventListener("change", bussIndividualFields);
+  } else {
+    input.addEventListener("input", bussIndividualFields);
+  }
+});
+document
+  .getElementById("contactMobileNumber")
+  .addEventListener("input", function (event) {
+    // Remove all non-numeric characters from input
+    let input = event.target.value.replace(/\D/g, "");
+    let formattedInput = "";
+
+    // Format the input as XXX-XXXXXXX (only one hyphen after the first 3 digits)
+    if (input.length > 0) {
+      formattedInput += input.substring(0, 3);
+    }
+    if (input.length > 3) {
+      formattedInput += "-" + input.substring(3);
+    }
+
+    // Set the formatted value back to the input field
+    event.target.value = formattedInput;
+  });
+
+bussindIndAccNxtBtn.addEventListener("click", () => {
+  let isValid = true;
+  const contactEmailAddress = document.getElementById("contactEmailAddress");
+  const indEmailErrTxt = document.getElementById("indEmailErrTxt");
+  const contactMobileNumber = document.getElementById("contactMobileNumber");
+  const indNumberErrTxt = document.getElementById("contactMobileErrTxt");
+  let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+(\.[a-zA-Z]{2,})?$/; // Modified pattern to allow optional top-level domain
+
+  console.log(contactMobileNumber.value.length);
+  // Validate contact mobile number length
+  if (contactMobileNumber.value.length !== 11) {
+    isValid = false;
+    indNumberErrTxt.innerText = "Phone number must be exactly 10 digits.";
+    indNumberErrTxt.style.color = "red";
+    contactMobileNumber.focus();
+    return; // Stop the function if the validation fails
+  } else {
+    indNumberErrTxt.innerText = ""; // Clear error message if valid
+  }
+
+  // Validate email format
+  if (!emailPattern.test(contactEmailAddress.value)) {
+    isValid = false;
+    indEmailErrTxt.innerText = "Please enter a valid email address";
+    indEmailErrTxt.style.color = "red";
+    contactEmailAddress.focus();
+    return; // Stop the function if the validation fails
+  } else {
+    indEmailErrTxt.innerText = ""; // Clear error message if valid
+  }
+
+  // If all validations pass
+  if (isValid) {
+    indNumberErrTxt.innerText = "";
+    indEmailErrTxt.innerText = "";
+    document.querySelector(".BusinessInInfoIndForm").style.display = "none"; // Ensure this is the correct selector
+    document.querySelector(".BusinessInfoBussAccForm").style.display = "none"; // Ensure this is the correct selector
+    document.querySelector(".personalInfoForm").style.display = "none";
+
+    // Show the bank detail section
+    document.querySelector(".bankDetail").style.display = "block";
+    document
+      .querySelector(".personalSignup")
+      .scrollIntoView({ behavior: "smooth" });
+    console.log("Bank detail link clicked");
+  }
+});
+
+document
+  .querySelector("#indwarehouseAddCheck")
+  .addEventListener("change", function () {
+    const individualWarehouseAddress = document.querySelector(
+      ".indWarehouseAddress"
+    );
+
+    // Shop Address fields
+    const shopBasedState = document.querySelector(
+      ".BusinessInInfoIndForm #shopBasedState"
+    );
+    const shopCity = document.querySelector(".BusinessInInfoIndForm #shopCity");
+    const shopArea = document.querySelector(".BusinessInInfoIndForm #shopArea");
+    const shopAddress = document.querySelector(
+      ".BusinessInInfoIndForm #shopAddress"
+    );
+    const shopPostCode = document.querySelector(
+      ".BusinessInInfoIndForm #shopPostCode"
+    );
+
+    // Warehouse Address fields
+    const indWarehouseState = document.querySelector(
+      ".indWarehouseAddress #warehouseState"
+    );
+    const indWarehouseCity = document.querySelector(
+      ".indWarehouseAddress #warehouseCity"
+    );
+    const indWarehouseArea = document.querySelector(
+      ".indWarehouseAddress #warehouseArea"
+    );
+    const indWarehAddress = document.querySelector(
+      ".indWarehouseAddress #warehouseAddress"
+    );
+    const indWarehousePostCode = document.querySelector(
+      ".indWarehouseAddress #warehousePostCode"
+    );
+
+    if (this.checked) {
+      // individualWarehouseAddress.style.display = "none";
+
+      // Copy the values from Shop Address to Warehouse Address
+      indWarehouseState.value = shopBasedState.value;
+      indWarehouseCity.value = shopCity.value;
+      indWarehouseArea.value = shopArea.value;
+      indWarehAddress.value = shopAddress.value;
+      indWarehousePostCode.value = shopPostCode.value;
+      bussIndividualFields();
+      indWarehouseState.disabled = true;
+      indWarehouseCity.disabled = true;
+      indWarehouseArea.disabled = true;
+      indWarehAddress.disabled = true;
+      indWarehousePostCode.disabled = true;
+    } else {
+      // individualWarehouseAddress.style.display = "block";
+
+      // Clear the warehouse address fields when unchecked
+      indWarehouseState.value = "";
+      indWarehouseCity.value = "";
+      indWarehouseArea.value = "";
+      indWarehAddress.value = "";
+      indWarehousePostCode.value = "";
+      bussIndividualFields();
+      indWarehouseState.disabled = false;
+      indWarehouseCity.disabled = false;
+      indWarehouseArea.disabled = false;
+      indWarehAddress.disabled = false;
+      indWarehousePostCode.disabled = false;
+    }
+  });
+// Return Address Check
+document
+  .querySelector("#indReturnAddCheck")
+  .addEventListener("change", function () {
+    const individualReturnAddress = document.querySelector(".indReturnAdd");
+
+    // Shop Address fields
+    const shopBasedState = document.querySelector(
+      ".BusinessInInfoIndForm #shopBasedState"
+    );
+    const shopCity = document.querySelector(".BusinessInInfoIndForm #shopCity");
+    const shopArea = document.querySelector(".BusinessInInfoIndForm #shopArea");
+    const shopAddress = document.querySelector(
+      ".BusinessInInfoIndForm #shopAddress"
+    );
+    const shopPostCode = document.querySelector(
+      ".BusinessInInfoIndForm #shopPostCode"
+    );
+
+    // Return Address fields
+    const indReturnState = document.querySelector(".indReturnAdd #returnState");
+    const indReturnCity = document.querySelector(".indReturnAdd #returnCity");
+    const indReturnArea = document.querySelector(".indReturnAdd #returnArea");
+    const indReturnAddress = document.querySelector(
+      ".indReturnAdd #returnAddress"
+    );
+    const indReturnPostCode = document.querySelector(
+      ".indReturnAdd #returnPostCode"
+    );
+
+    if (this.checked) {
+      // Copy the values from Shop Address to Return Address
+      indReturnState.value = shopBasedState.value;
+      indReturnCity.value = shopCity.value;
+      indReturnArea.value = shopArea.value;
+      indReturnAddress.value = shopAddress.value;
+      indReturnPostCode.value = shopPostCode.value;
+      bussIndividualFields();
+      indReturnState.disabled = true;
+      indReturnCity.disabled = true;
+      indReturnArea.disabled = true;
+      indReturnAddress.disabled = true;
+      indReturnPostCode.disabled = true;
+    } else {
+      // Clear the return address fields when unchecked
+      indReturnState.value = "";
+      indReturnCity.value = "";
+      indReturnArea.value = "";
+      indReturnAddress.value = "";
+      indReturnPostCode.value = "";
+      bussIndividualFields();
+      indReturnState.disabled = false;
+      indReturnCity.disabled = false;
+      indReturnArea.disabled = false;
+      indReturnAddress.disabled = false;
+      indReturnPostCode.disabled = false;
+    }
+  });
+
+const BusinessInfoBussAccSection = document.querySelectorAll(
+  ".BusinessInfoBussAccForm .required"
+);
+const bussAccNxtBtn = document.getElementById("bussAccNxtBtn");
+
+function bussInfoAccountFields() {
+  let allFieldsFilled = true;
+
+  BusinessInfoBussAccSection.forEach((input) => {
+    if (input.type === "file") {
+      if (input.files.length === 0) {
+        allFieldsFilled = false; // No file selected
+      } else {
+        const fileType = input.files[0].type.split("/")[0];
+        if (fileType !== "image") {
+          allFieldsFilled = false; // Invalid file type
+          alert("Please upload a valid image file.");
+        }
+      }
+    } else {
+      if (input.value.trim() === "") {
+        allFieldsFilled = false; // Empty text input
+      }
+    }
+  });
+
+  // Enable button only if all fields are filled and a valid image is selected
+  bussAccNxtBtn.disabled = !allFieldsFilled;
+}
+
+// Add event listeners to each input field, including file input
+BusinessInfoBussAccSection.forEach((input) => {
+  if (input.type === "file") {
+    input.addEventListener("change", bussInfoAccountFields);
+  } else {
+    input.addEventListener("input", bussInfoAccountFields);
+  }
+});
+
+document
+  .getElementById("personContactNumber")
+  .addEventListener("input", function (event) {
+    // Remove all non-numeric characters from input
+    let input = event.target.value.replace(/\D/g, "");
+    let formattedInput = "";
+
+    // Format the input as XXX-XXXXXXX (only one hyphen after the first 3 digits)
+    if (input.length > 0) {
+      formattedInput += input.substring(0, 3);
+    }
+    if (input.length > 3) {
+      formattedInput += "-" + input.substring(3);
+    }
+
+    // Set the formatted value back to the input field
+    event.target.value = formattedInput;
+  });
+
+bussAccNxtBtn.addEventListener("click", () => {
+  let isValid = true;
+  const bussEmailAddress = document.getElementById("personChargeEmail");
+  const bussEmailErrTxt = document.getElementById("bussEmailErrTxt");
+  const bussMobileNumber = document.getElementById("personContactNumber");
+  const bussNumberErrTxt = document.getElementById("bussNumberErrTxt");
+  let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+(.[a-zA-Z]{2,})?$/; // Modified pattern to allow optional top-level domain
+
+  if (bussMobileNumber.value.length !== 11) {
+    isValid = false;
+    bussNumberErrTxt.innerText = "Phone number must be exactly 10 digits.";
+    bussNumberErrTxt.style.color = "red";
+    bussMobileNumber.focus();
+    return; // Stop the function if the validation fails
+  }
+  if (!emailPattern.test(bussEmailAddress.value)) {
+    isValid = false;
+    bussEmailErrTxt.innerText = "Please enter a valid email address";
+    bussEmailErrTxt.style.color = "red";
+    bussEmailAddress.focus();
+    return;
+  }
+
+  if (isValid) {
+    bussNumberErrTxt.innerText = "";
+    bussEmailErrTxt.innerText = "";
+    document.querySelector(".BusinessInInfoIndForm").style.display = "none"; // Ensure this is the correct selector
+    document.querySelector(".BusinessInfoBussAccForm").style.display = "none"; // Ensure this is the correct selector
+    document.querySelector(".personalInfoForm").style.display = "none";
+
+    // Show the bank detail section
+    document.querySelector(".bankDetail").style.display = "block";
+    document
+      .querySelector(".personalSignup")
+      .scrollIntoView({ behavior: "smooth" });
+    console.log("Bank detail link clicked");
+  }
+});
+
+document
+  .querySelector("#bussinessWarehouseAddress")
+  .addEventListener("change", function () {
+    const individualWarehouseAddress = document.querySelector(
+      ".indWarehouseAddress"
+    );
+
+    // Shop Address fields
+    const shopBasedState = document.querySelector(
+      ".BusinessInfoBussAccForm #bussinessState"
+    );
+    const shopCity = document.querySelector(
+      ".BusinessInfoBussAccForm #bussinessCity"
+    );
+    const shopArea = document.querySelector(
+      ".BusinessInfoBussAccForm #bussinessArea"
+    );
+    const shopAddress = document.querySelector(
+      ".BusinessInfoBussAccForm #bussinessAddress"
+    );
+    const shopPostCode = document.querySelector(
+      ".BusinessInfoBussAccForm #businessPostCode"
+    );
+
+    // Warehouse Address fields
+    const indWarehouseState = document.querySelector(
+      ".bussWarehouseAddress #warehouseState"
+    );
+    const indWarehouseCity = document.querySelector(
+      ".bussWarehouseAddress #warehouseCity"
+    );
+    const indWarehouseArea = document.querySelector(
+      ".bussWarehouseAddress #warehouseArea"
+    );
+    const indWarehAddress = document.querySelector(
+      ".bussWarehouseAddress #warehouseAddress"
+    );
+    const indWarehousePostCode = document.querySelector(
+      ".bussWarehouseAddress #warehousePostCode"
+    );
+
+    if (this.checked) {
+      // individualWarehouseAddress.style.display = "none";
+
+      // Copy the values from Shop Address to Warehouse Address
+      indWarehouseState.value = shopBasedState.value;
+      indWarehouseCity.value = shopCity.value;
+      indWarehouseArea.value = shopArea.value;
+      indWarehAddress.value = shopAddress.value;
+      indWarehousePostCode.value = shopPostCode.value;
+      bussInfoAccountFields();
+      indWarehouseState.disabled = true;
+      indWarehouseCity.disabled = true;
+      indWarehouseArea.disabled = true;
+      indWarehAddress.disabled = true;
+      indWarehousePostCode.disabled = true;
+    } else {
+      // individualWarehouseAddress.style.display = "block";
+
+      // Clear the warehouse address fields when unchecked
+      indWarehouseState.value = "";
+      indWarehouseCity.value = "";
+      indWarehouseArea.value = "";
+      indWarehAddress.value = "";
+      indWarehousePostCode.value = "";
+      bussInfoAccountFields();
+      indWarehouseState.disabled = false;
+      indWarehouseCity.disabled = false;
+      indWarehouseArea.disabled = false;
+      indWarehAddress.disabled = false;
+      indWarehousePostCode.disabled = false;
+    }
+  });
+
+document
+  .querySelector("#bussReturnAddressCheck")
+  .addEventListener("change", function () {
+    const individualReturnAddress = document.querySelector(".indReturnAdd");
+
+    // Shop Address fields
+    const shopBasedState = document.querySelector(
+      ".BusinessInfoBussAccForm #bussinessState"
+    );
+    const shopCity = document.querySelector(
+      ".BusinessInfoBussAccForm #bussinessCity"
+    );
+    const shopArea = document.querySelector(
+      ".BusinessInfoBussAccForm #bussinessArea"
+    );
+    const shopAddress = document.querySelector(
+      ".BusinessInfoBussAccForm #bussinessAddress"
+    );
+    const shopPostCode = document.querySelector(
+      ".BusinessInfoBussAccForm #businessPostCode"
+    );
+
+    // Return Address fields
+    const indReturnState = document.querySelector(
+      ".bussReturnAddress #returnState"
+    );
+    const indReturnCity = document.querySelector(
+      ".bussReturnAddress #returnCity"
+    );
+    const indReturnArea = document.querySelector(
+      ".bussReturnAddress #returnArea"
+    );
+    const indReturnAddress = document.querySelector(
+      ".bussReturnAddress #returnAddress"
+    );
+    const indReturnPostCode = document.querySelector(
+      ".bussReturnAddress #returnPostCode"
+    );
+
+    if (this.checked) {
+      // Copy the values from Shop Address to Return Address
+      indReturnState.value = shopBasedState.value;
+      indReturnCity.value = shopCity.value;
+      indReturnArea.value = shopArea.value;
+      indReturnAddress.value = shopAddress.value;
+      indReturnPostCode.value = shopPostCode.value;
+      bussInfoAccountFields();
+      indReturnState.disabled = true;
+      indReturnCity.disabled = true;
+      indReturnArea.disabled = true;
+      indReturnAddress.disabled = true;
+      indReturnPostCode.disabled = true;
+    } else {
+      // Clear the return address fields when unchecked
+      indReturnState.value = "";
+      indReturnCity.value = "";
+      indReturnArea.value = "";
+      indReturnAddress.value = "";
+      indReturnPostCode.value = "";
+      bussInfoAccountFields();
+      indReturnState.disabled = false;
+      indReturnCity.disabled = false;
+      indReturnArea.disabled = false;
+      indReturnAddress.disabled = false;
+      indReturnPostCode.disabled = false;
+    }
+  });
+// const shopBasedState=document.querySelector('.BusinessInInfoIndForm #shopBasedState')
+// const shopCity=document.querySelector('.BusinessInInfoIndForm #shopCity')
+// const shopArea=document.querySelector('.BusinessInInfoIndForm #shopArea')
+// const shopAddress=document.querySelector('.BusinessInInfoIndForm #shopAddress')
+// const shopPostCode=document.querySelector('.BusinessInInfoIndForm #shopPostCode')
+
+// Warehouse Address Check
+
+// document.getElementById("bussinessWarehouseAddress").addEventListener("change", function () {
+//     const bussWarehouseAddress = document.querySelector(
+//       ".bussWarehouseAddress"
+//     );
+
+//     if (this.checked) {
+//       bussWarehouseAddress.style.display = "none"; // Hide the address when checked
+//     } else {
+//       bussWarehouseAddress.style.display = "block"; // Show the address when unchecked
+//     }
+//   });
+// document.getElementById("bussReturnAddressCheck").addEventListener("change", function () {
+//     const bussReturnAddress = document.querySelector(".bussReturnAddress");
+
+//     if (this.checked) {
+//       bussReturnAddress.style.display = "none"; // Hide the address when checked
+//     } else {
+//       bussReturnAddress.style.display = "block"; // Show the address when unchecked
+//     }
+//   });
+
+// bank cheque Photo
+function bankChequePhoto() {
+  const fileInput = document.getElementById("chequeCopy");
+  const bankCheckCopy = document.getElementById("bankCheckCopy");
+
+  if (fileInput.files.length > 0) {
+    const file = fileInput.files[0];
+    const fileName = file.name;
+    const fileNameWithoutExtension = fileName.split(".")[0];
+    const extension = fileName.split(".").pop().toLowerCase();
+    const fileSizeInMB = file.size / (1024 * 1024); // Convert to MB
+
+    // Check for allowed extensions
+    const allowedExtensions = ["png", "jpg", "jpeg"];
+    if (!allowedExtensions.includes(extension)) {
+      bankCheckCopy.innerHTML = `<span style="color: red;">You can upload only JPG, JPEG, PNG formats.</span>`;
+      return;
+    }
+
+    // Check for file size limit
+    if (fileSizeInMB > 2) {
+      bankCheckCopy.innerHTML = `<span style="color: red;">The selected file is too large. Please upload a file smaller than 2 MB.</span>`;
+      return;
+    }
+
+    // If both checks pass, display the file name and extension
+    bankCheckCopy.innerHTML = `File Name: ${fileNameWithoutExtension}, Extension: ${extension}`;
+  } else {
+    bankCheckCopy.innerHTML = "No file chosen";
+  }
+}
+
+
+
+// bank Check Fields
+const bankDetailSection = document.querySelectorAll(
+  ".bankDetail .bankRequired"
+);
+const submitButton = document.getElementById("bussAccNxtBtnSubmit");
+
+function checkBankFields() {
+  let allFieldsFilled = true;
+
+  bankDetailSection.forEach((input) => {
+    if (input.type === "file") {
+      if (input.files.length === 0) {
+        allFieldsFilled = false; // No file selected
+      } else {
+        const file = input.files[0];
+        const fileType = file.type.split("/")[0];
+        const fileSizeInMB = file.size / (1024 * 1024); // Convert to MB
+        
+        // Check file type and size
+        if (fileType !== "image" || fileSizeInMB > 2) {
+          allFieldsFilled = false; // Invalid file type or size too large
+        }
+      }
+    } else {
+      if (input.value.trim() === "") {
+        allFieldsFilled = false; // Empty text input
+      }
+    }
+  });
+
+  // Enable button only if all fields are filled, a valid image is selected, and size is under 2 MB
   submitButton.disabled = !allFieldsFilled;
 }
 
@@ -259,20 +802,51 @@ bankDetailSection.forEach((input) => {
   }
 });
 
-submitButton.addEventListener("click", (event) => {
-  event.preventDefault();
-  document.querySelector(".bankDetail").style.display = "none";
-
-  const selectedRadio = document.querySelector(
-    'input[name="individualForm"]:checked'
-  );
-
-  if (selectedRadio) {
-    document.querySelector(".BusinessInInfoIndForm").style.display = "block"; // Show the next section for individual
-  } else {
-    document.querySelector(".BusinessInfoBussAccForm").style.display = "block"; // Show the next section for business
+function clsAlphaNoOnly (e) {  // Accept only alpha numerics, no special characters 
+  var regex = new RegExp("^[a-zA-Z0-9 ]+$");
+  var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+  if (regex.test(str)) {
+      return true;
   }
-});
+
+  e.preventDefault();
+  return false;
+}
+// submitButton.addEventListener("click", (event) => {
+//   // event.preventDefault();
+//   // document.querySelector(".bankDetail").style.display = "none";
+
+//   // const selectedRadio = document.querySelector(
+//   //   'input[name="individualForm"]:checked'
+//   // );
+
+//   // if (selectedRadio) {
+//   //   document.querySelector(".BusinessInInfoIndForm").style.display = "block"; // Show the next section for individual
+//   // } else {
+//   //   document.querySelector(".BusinessInfoBussAccForm").style.display = "block"; // Show the next section for business
+//   // }
+
+// });
+function accountApprovalPage(event) {
+  event.preventDefault();
+
+  const ibanInput = document.getElementById("bankIBAN").value.trim();
+  const ibanErrText = document.getElementsByClassName("ibanText")[0]; // Access the first element
+
+  // Check if IBAN is exactly 24 characters long
+  if (ibanInput.length !== 24) {
+    ibanErrText.style.color = 'red';
+    ibanErrText.innerText = 'IBAN must be exactly 24 characters.';
+    document.getElementById("bankIBAN").focus();
+    return; // Stop the function to prevent navigation
+  } else {
+    ibanErrText.innerText = ''; // Clear error if IBAN is valid
+  }
+
+  // If IBAN is valid, proceed to the account approval page
+  window.location.href = "accountApproval.html";
+}
+
 
 // Get all submit buttons with the class 'nextBtn'
 
@@ -324,10 +898,10 @@ function checkPerInfoFields() {
         if (
           fileType !== "image/jpeg" &&
           fileType !== "image/png" &&
-          fileType !== "application/pdf"
+          fileType !== "image/jpg"
         ) {
           allFieldsFilled = false; // Invalid file type
-          errorMsgTag.innerHTML = `<span style="color: red;">You can upload only JPG, JPEG, PNG, and PDF formats.</span>`;
+          errorMsgTag.innerHTML = `<span style="color: red;">You can upload only JPG, JPEG, PNG, formats.</span>`;
         } else if (fileSize > 2097152) {
           // 2 MB = 2097152 bytes
           allFieldsFilled = false; // File too large
@@ -388,76 +962,83 @@ inputs.forEach((input) => {
   }
 });
 
+document
+  .getElementById("personalPhoneNumber")
+  .addEventListener("input", function (event) {
+    // Remove all non-numeric characters from input
+    let input = event.target.value.replace(/\D/g, "");
+    let formattedInput = "";
 
-document.getElementById("personalPhoneNumber").addEventListener("input", function (event) {
-  // Remove all non-numeric characters from input
-  let input = event.target.value.replace(/\D/g, '');
-  let formattedInput = '';
-
-  // Format the input as XXX-XXXXXXX (only one hyphen after the first 3 digits)
-  if (input.length > 0) {
+    // Format the input as XXX-XXXXXXX (only one hyphen after the first 3 digits)
+    if (input.length > 0) {
       formattedInput += input.substring(0, 3);
-  }
-  if (input.length > 3) {
-      formattedInput += '-' + input.substring(3);
-  }
+    }
+    if (input.length > 3) {
+      formattedInput += "-" + input.substring(3);
+    }
 
-  // Set the formatted value back to the input field
-  event.target.value = formattedInput;
-});
-
-document.getElementById("cnicNumber").addEventListener("input", function (event) {
-  let input = event.target.value.replace(/\D/g, ''); // Remove all non-numeric characters
-  let formattedInput = '';
-
-  // Format the input as XXXXX-XXXXXXX-X
-  if (input.length > 0) {
-      formattedInput += input.substring(0, 5); // First 5 characters
-  }
-  if (input.length > 5) {
-      formattedInput += '-' + input.substring(5, 12); // Next 7 characters after first hyphen
-  }
-  if (input.length > 12) {
-      formattedInput += '-' + input.substring(12, 13); // One character after second hyphen
-  }
-
-  event.target.value = formattedInput; // Set the formatted value back to the input field
-});
-
-document.getElementById("togglePassword").addEventListener("click", function () {
-  let passwordInput = document.getElementById("personalPassword");
-  let toggleIcon = this.querySelector("i");
-
-  // Toggle password visibility
-  if (passwordInput.type === "password") {
-    passwordInput.type = "text";
-    toggleIcon.classList.remove("fa-eye");
-    toggleIcon.classList.add("fa-eye-slash");
-  } else {
-    passwordInput.type = "password";
-    toggleIcon.classList.remove("fa-eye-slash");
-    toggleIcon.classList.add("fa-eye");
-  }
-});
-document.getElementById("toggleConfirmPassword").addEventListener("click", function () {
-  let passworpersonalConfirmPassworddInput = document.getElementById("personalConfirmPassword");
-  let toggleIcon = this.querySelector("i");
-
-  // Toggle password visibility
-  if (personalConfirmPassword.type === "password") {
-    personalConfirmPassword.type = "text";
-    toggleIcon.classList.remove("fa-eye");
-    toggleIcon.classList.add("fa-eye-slash");
-  } else {
-    personalConfirmPassword.type = "password";
-    toggleIcon.classList.remove("fa-eye-slash");
-    toggleIcon.classList.add("fa-eye");
-  }
-});
+    // Set the formatted value back to the input field
+    event.target.value = formattedInput;
+  });
 
 document
-  .getElementById("personalNextBtn")
-  .addEventListener("click", function (event) {
+  .getElementById("cnicNumber")
+  .addEventListener("input", function (event) {
+    let input = event.target.value.replace(/\D/g, ""); // Remove all non-numeric characters
+    let formattedInput = "";
+
+    // Format the input as XXXXX-XXXXXXX-X
+    if (input.length > 0) {
+      formattedInput += input.substring(0, 5); // First 5 characters
+    }
+    if (input.length > 5) {
+      formattedInput += "-" + input.substring(5, 12); // Next 7 characters after first hyphen
+    }
+    if (input.length > 12) {
+      formattedInput += "-" + input.substring(12, 13); // One character after second hyphen
+    }
+
+    event.target.value = formattedInput; // Set the formatted value back to the input field
+  });
+
+document
+  .getElementById("togglePassword")
+  .addEventListener("click", function () {
+    let passwordInput = document.getElementById("personalPassword");
+    let toggleIcon = this.querySelector("i");
+
+    // Toggle password visibility
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      toggleIcon.classList.remove("fa-eye");
+      toggleIcon.classList.add("fa-eye-slash");
+    } else {
+      passwordInput.type = "password";
+      toggleIcon.classList.remove("fa-eye-slash");
+      toggleIcon.classList.add("fa-eye");
+    }
+  });
+document
+  .getElementById("toggleConfirmPassword")
+  .addEventListener("click", function () {
+    let passworpersonalConfirmPassworddInput = document.getElementById(
+      "personalConfirmPassword"
+    );
+    let toggleIcon = this.querySelector("i");
+
+    // Toggle password visibility
+    if (personalConfirmPassword.type === "password") {
+      personalConfirmPassword.type = "text";
+      toggleIcon.classList.remove("fa-eye");
+      toggleIcon.classList.add("fa-eye-slash");
+    } else {
+      personalConfirmPassword.type = "password";
+      toggleIcon.classList.remove("fa-eye-slash");
+      toggleIcon.classList.add("fa-eye");
+    }
+  });
+
+document.getElementById("personalNextBtn").addEventListener("click", function (event) {
     // Prevent form submission
     event.preventDefault();
 
@@ -468,8 +1049,17 @@ document
     const phoneNumberInput = document.getElementById("personalPhoneNumber").value;
     let personalCnicNumber = document.getElementById("cnicNumber").value.trim();
     let confirmPassword = document.getElementById("personalConfirmPassword").value;
+    const personalPhoneErrTxt=document.getElementById('personalPhoneErrTxt')
+    const personalEmailErrTxt=document.getElementById('personalEmailErrTxt')
+    const passwordErrText=document.getElementById('password')
+    const confirmPassErrText=document.getElementById('confirmPassword')
+    const cnicErrText = document.querySelector('.cnicText'); // Use querySelector to select by class
+
     // Define the special character pattern
     let specialCharPattern = /[!@#$%^&*(),.?":{}|<>]/;
+    let uppercasePattern = /[A-Z]/; // At least one uppercase letter
+let lowercasePattern = /[a-z]/; // At least one lowercase letter
+let numberPattern = /[0-9]/;
     // Close any previous alerts
     Swal.close();
 
@@ -492,104 +1082,89 @@ document
     });
 
     // Check for valid email format
-    let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+(.[a-zA-Z]{2,})?$/; // Modified pattern to allow optional top-level domain
+
     if (!emailPattern.test(emailInput.value)) {
       isValid = false;
-      Swal.fire({
-        title: "Invalid Email Format",
-        text: "Please enter a valid email address",
-        icon: "error",
-        confirmButtonText: "OK",
-        showCloseButton: true,
-        timer: 5000,
-        customClass: {
-          popup: "white-alert", // Custom class for the popup
-        },
-      });
+      personalEmailErrTxt.style.color='red'
+      personalEmailErrTxt.innerText='Invalid Email Format'
+      emailInput.focus();
       return;
+    }else {
+      isValid = true;
+      personalEmailErrTxt.innerText = ''; // Clear the error message if valid
     }
-
-
 
     // Check if the phone number has exactly 11 digits
-    if (phoneNumberInput.length !== 11) {
-        Swal.fire({
-            title: "Invalid Phone Number",
-            text: "Phone number must be exactly 10 digits.",
-            icon: "error",
-            confirmButtonText: "OK",
-            showCloseButton: true,
-            timer: 5000,
-            customClass: {
-                popup: "white-alert",
-            },
-        });
-        return; // Stop the function if the validation fails
+if (phoneNumberInput.length !== 11) {
+      isValid = false;
+      personalPhoneErrTxt.style.color = 'red';
+      personalPhoneErrTxt.innerText = 'Phone number must be exactly 11 digits.'; // Ensure the message is correct
+      document.getElementById("personalPhoneNumber").focus(); // Focus on the input element
+      return; 
+    } else {
+      isValid = true;
+      personalPhoneErrTxt.innerText = ''; // Clear the error message if valid
     }
-
 
     if (personalCnicNumber.length !== 15 ) {
       isValid = false;
-      Swal.fire({
-        title: "Invalid CNIC Number",
-        text: "CNIC number must be exactly 13 digits.",
-        icon: "error",
-        confirmButtonText: "OK",
-        showCloseButton: true,
-        timer: 5000,
-        customClass: {
-          popup: "white-alert",
-        },
-      });
+      cnicErrText.style.color = 'red';
+      cnicErrText.innerText = 'CNIC number must contain exactly 13 digits.';
+      document.getElementById("cnicNumber").focus(); // Set focus to the input
       return;
+    } else {
+      cnicErrText.innerText = ''; // Clear error message
     }
 
+    let missingRequirements = [];
+
+    // Password mismatch check
     if (password !== confirmPassword) {
       isValid = false;
-      Swal.fire({
-        title: "Password Mismatch",
-        text: "Passwords do not match. Please try again.",
-        icon: "error",
-        confirmButtonText: "OK",
-        showCloseButton: true,
-        timer: 5000,
-        customClass: {
-          popup: "white-alert", // Custom class for the popup
-        },
-      });
+      confirmPassErrText.style.color = 'red';
+      confirmPassErrText.innerText = 'Password Mismatch';
+      document.getElementById('personalConfirmPassword').focus();
       return;
+    } else {
+      confirmPassErrText.innerText = '';
     }
-    // Check if passwords match
+    
+    // Minimum length check
     if (password.length < 8) {
-      isValid = false;
-      Swal.fire({
-        title: "Weak Password",
-        text: "Password must be at least 8 characters long.",
-        icon: "error",
-        confirmButtonText: "OK",
-        showCloseButton: true,
-        timer: 5000,
-        customClass: {
-          popup: "white-alert", // Custom class for the popup
-        },
-      });
-      return;
+      missingRequirements.push('at least 8 characters long');
     }
-
+    
+    // Uppercase letter check
+    if (!uppercasePattern.test(password)) {
+      missingRequirements.push('an uppercase letter');
+    }
+    
+    // Lowercase letter check
+    if (!lowercasePattern.test(password)) {
+      missingRequirements.push('a lowercase letter');
+    }
+    
+    // Number check
+    if (!numberPattern.test(password)) {
+      missingRequirements.push('a number');
+    }
+    
+    // Special character check
     if (!specialCharPattern.test(password)) {
+      missingRequirements.push('a special character');
+    }
+    
+    // Display all missing requirements in a single error message
+    if (missingRequirements.length > 0) {
       isValid = false;
-      Swal.fire({
-        title: "Invalid Password",
-        text: "Password must contain at least one special character.",
-        icon: "error",
-        confirmButtonText: "OK",
-        showCloseButton: true,
-        timer: 5000,
-        customClass: {
-          popup: "white-alert", // Custom class for the popup
-        },
-      });
-      return;
+      passwordErrText.style.color = 'red';
+      passwordErrText.innerText = `Password must contain: ${missingRequirements.join(', ')}.`;
+      document.getElementById('personalPassword').focus();
+    } else {
+      // Clear error if all conditions are met
+      passwordErrText.innerText = '';
+      isValid = true;
     }
 
     // If all fields are valid, proceed
@@ -613,21 +1188,21 @@ document
       );
 
       if (selectedRadio && selectedRadio.id === "individualForm") {
-        document.querySelector(".BusinessInInfoIndForm").style.display ="block"; // Show the next section for individual
-        document.querySelector(".BusinessInfoBussAccForm").style.display ="none"; // Hide business section
-        document.querySelector(".BusinessInInfoIndForm").scrollIntoView({ behavior: 'smooth' });
-
+        document.querySelector(".BusinessInInfoIndForm").style.display =
+          "block"; // Show the next section for individual
+        document.querySelector(".BusinessInfoBussAccForm").style.display =
+          "none"; // Hide business section
+        document
+          .querySelector(".personalSignup")
+          .scrollIntoView({ behavior: "smooth" });
       } else {
-        document.querySelector(".BusinessInfoBussAccForm").style.display ="block"; // Show the next section for business
+        document.querySelector(".BusinessInfoBussAccForm").style.display =
+          "block"; // Show the next section for business
         document.querySelector(".BusinessInInfoIndForm").style.display = "none"; // Hide individual section
-        document.querySelector(".BusinessInfoBussAccForm").scrollIntoView({ behavior: 'smooth' });
-
+        document
+          .querySelector(".personalSignup")
+          .scrollIntoView({ behavior: "smooth" });
       }
-
-      // Or if you want to scroll to the business section regardless of selection:
-      // document.querySelector(".BusinessInfoBussAccForm").scrollIntoView({ behavior: 'smooth' });
-
-       //document.querySelector('personalInfoForm').scrollIntoView({ behavior: 'smooth' });
     }
   });
 
@@ -639,38 +1214,40 @@ const bankAccBackBtn = document.getElementById("bankAccBackBtn");
 backBtns.forEach(function (backBtn) {
   backBtn.addEventListener("click", function () {
     // Hide the business info forms
-    document.querySelector(".BusinessInInfoIndForm").style.display = "none"; 
-    document.querySelector(".BusinessInfoBussAccForm").style.display = "none"; 
-    
+    document.querySelector(".BusinessInInfoIndForm").style.display = "none";
+    document.querySelector(".BusinessInfoBussAccForm").style.display = "none";
+
     // Show the personal info form
     const personalInfoForm = document.querySelector(".personalInfoForm");
     personalInfoForm.style.display = "block";
-    
+
     // Ensure the personal info form is displayed before scrolling
     if (personalInfoForm) {
       console.log("Scrolling to personal info form...");
-      personalInfoForm.scrollIntoView({ behavior: 'smooth' });
+      document
+        .querySelector(".personalSignup")
+        .scrollIntoView({ behavior: "smooth" });
     } else {
       console.error("Personal info form not found!");
     }
   });
 });
 
-bankDetailLinks.forEach((link) => {
-  link.addEventListener("click", (event) => {
-    event.preventDefault(); // Prevent default link behavior
+// bankDetailLinks.forEach((link) => {
+//   link.addEventListener("click", (event) => {
+//     event.preventDefault(); // Prevent default link behavior
 
-    // Hide all forms
-    document.querySelector(".BusinessInInfoIndForm").style.display = "none"; // Ensure this is the correct selector
-    document.querySelector(".BusinessInfoBussAccForm").style.display = "none"; // Ensure this is the correct selector
-    document.querySelector(".personalInfoForm").style.display = "none";
+//     // Hide all forms
+//     document.querySelector(".BusinessInInfoIndForm").style.display = "none"; // Ensure this is the correct selector
+//     document.querySelector(".BusinessInfoBussAccForm").style.display = "none"; // Ensure this is the correct selector
+//     document.querySelector(".personalInfoForm").style.display = "none";
 
-    // Show the bank detail section
-    document.querySelector(".bankDetail").style.display = "block";
-
-    console.log("Bank detail link clicked");
-  });
-});
+//     // Show the bank detail section
+//     document.querySelector(".bankDetail").style.display = "block";
+//     document.querySelector(".personalSignup").scrollIntoView({ behavior: 'smooth' });
+//     console.log("Bank detail link clicked");
+//   });
+// });
 
 bankDetBackBtn.forEach(function (backBtn) {
   backBtn.addEventListener("click", function () {
@@ -700,15 +1277,15 @@ bankAccBackBtn.addEventListener("click", () => {
     document.querySelector(".BusinessInInfoIndForm").style.display = "block"; // Show the next section for individual
     document.querySelector(".bankDetail").style.display = "none";
     document.querySelector(".personalInfoForm").style.display = "none";
+    document
+      .querySelector(".personalSignup")
+      .scrollIntoView({ behavior: "smooth" });
   } else {
     document.querySelector(".BusinessInfoBussAccForm").style.display = "block"; // Show the next section for business
     document.querySelector(".bankDetail").style.display = "none";
     document.querySelector(".personalInfoForm").style.display = "none";
+    document
+      .querySelector(".personalSignup")
+      .scrollIntoView({ behavior: "smooth" });
   }
 });
-
-// show password With Icon
-
-
-
-
