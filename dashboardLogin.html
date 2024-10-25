@@ -36,10 +36,8 @@
       </div>
 
       <div class="ml-1 headerButtons">
-        <button class="loginBtn" onclick="loginPage()">Login</button>
-        <button class="joinBtn" onclick="loginPage('#signUpForm')">
-          Join Marketplace
-        </button>
+        <button class="loginBtn" onclick="loginPage('1')">Login</button>
+        <button class="joinBtn" onclick="loginPage('2')">Join Marketplace</button>
       </div>
 
       <label for="menuToggle" class="hamburger">
@@ -80,7 +78,7 @@
               class="col-11 col-sm-8 col-md-6 col-lg-10 bg-light p-0 mt-lg-3 mt-xl-5 formParent"
             >
               <form onsubmit="signUpPage(event)" class="form">
-                <div class="logInForm">
+                <div class="logInForm" style="display: none">
                   <h2>Login as ValueBox Seller</h2>
 
                   <div class="form-group my-3">
@@ -1068,9 +1066,7 @@
                   stroke="#333333"
                   stroke-width="1.5"
                   stroke-linecap="round"
-                  stroke-linejoin="round"
-                /></svg
-            ></a>
+                  stroke-linejoin="round"/></svg></a>
             <a href="#" class="text-dark text-decoration-none mt-3"
               >Seller Support
               <svg
@@ -1085,9 +1081,7 @@
                   stroke="#333333"
                   stroke-width="1.5"
                   stroke-linecap="round"
-                  stroke-linejoin="round"
-                /></svg
-            ></a>
+                  stroke-linejoin="round"/></svg></a>
           </div>
           <div class="col-lg-3 mt-lg-0 mt-5 px-xl-5 px-lg-4">
             <h6 class="text-warning">About</h6>
@@ -1131,8 +1125,7 @@
 
           <!-- Logo Section -->
           <div
-            class="col-12 col-lg-4 text-center text-lg-left px-0 logoVlaueBox mb-3 mb-lg-0"
-          >
+            class="col-12 col-lg-4 text-center text-lg-left px-0 logoVlaueBox mb-3 mb-lg-0">
             <span class="bg-light">
               <img src="images/Group 1.svg" alt="ValueBox Logo" />
             </span>
@@ -1154,9 +1147,29 @@
         </div>
       </div>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Parse the URL query parameters
+        const params = new URLSearchParams(window.location.search);
+        const formId = params.get("form");  // Get the "form" parameter from the URL
+    
+        // Select the form elements
+        const logInForm = document.getElementsByClassName('logInForm')[0];
+        const signUpFormSection = document.getElementsByClassName('signUpForm')[0];
+    
+        // Display the appropriate form based on the URL parameter
+        if (formId === '1') {
+          logInForm.style.display = 'block';
+          signUpFormSection.style.display = 'none';
+        } else if (formId === '2') {
+          signUpFormSection.style.display = 'block';
+          logInForm.style.display = 'none';
+        }
+      });
+      
+    </script>
     <!-- <script src="script.js"></script> -->
     <script src="dashboardLogin.js"></script>
-
     <script src="script.js"></script>
 
     <script

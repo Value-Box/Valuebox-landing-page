@@ -1,8 +1,24 @@
 const loginBtn = document.querySelector(".loginBtn");
+// const logInForm = document.getElementsByClassName('logInForm')[0];
+//   const signUpFormSection = document.getElementsByClassName('signUpForm')[0];
 
-function loginPage(value) {
-  window.location.href = "dashboardLogin.html" + id;
+//   function loginPage(formId) {
+//     window.location.href='dashboardLogin.html'
+//     if (formId === '1') {
+//       logInForm.style.display = 'block';
+//       signUpFormSection.style.display = 'none';
+//     } else if (formId === '2') {
+//       signUpFormSection.style.display = 'block';
+//       logInForm.style.display = 'none';
+//     }
+//   }
+function loginPage(formId) {
+  // Redirects to dashboardLogin.html with a query parameter to specify the form
+  window.location.href = `dashboardLogin.html?form=${formId}`;
 }
+
+// sessionStorage.setItem("targetForm", formId);
+  // window.location.href = "dashboardLogin.html";
 
 // persoanl Information sign Up Form Page JS
 const circles = document.querySelectorAll(".circle");
