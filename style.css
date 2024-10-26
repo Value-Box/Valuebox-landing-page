@@ -2020,7 +2020,7 @@ font-weight: 600;
     max-height: 600px;
   }
   .formParent {
-    margin: auto 50px 0px 50px;
+    margin: auto 50px 30px 50px;
 }
 
 .previewImg{
@@ -2475,7 +2475,7 @@ font-weight: 600;
     padding: 20px 15px;
 }
 .formParent {
-  margin: auto 50px -26px 50px;
+  margin: auto 50px 26px 50px;
 }
 .stepProgressBar {
   top: 47%;
