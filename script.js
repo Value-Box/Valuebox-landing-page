@@ -16,6 +16,9 @@ function loginPage(formId) {
   // Redirects to dashboardLogin.html with a query parameter to specify the form
   window.location.href = `dashboardLogin.html?form=${formId}`;
 }
+function redirectHomePage() {
+  window.location.href = "index.html";
+}
 
 // sessionStorage.setItem("targetForm", formId);
   // window.location.href = "dashboardLogin.html";

@@ -37,6 +37,9 @@ main {
   gap: 20px;
   flex-shrink: 0;
 }
+.logo img{
+  cursor: pointer;
+}
 .logo p {
   color: #002882;
   font-family: Outfit;
@@ -2140,6 +2143,11 @@ svg path {
     align-items: center;
     gap: 10px;
   }
+  .BusinessInInfoIndForm h1,
+.BusinessInfoBussAccForm h1,
+.bankDetail h1 {
+  margin: 20px 0px 30px 0px;
+}
 }
 @media (max-width: 594px) {
   .logo img {
@@ -2351,6 +2359,11 @@ svg path {
   }
   .personalSignupForm {
     border-radius: 12px;
+  }
+  .BusinessInInfoIndForm ,
+  .BusinessInfoBussAccForm ,
+  .bankDetail  {
+    padding: 10px !important;
   }
 }
 @media (max-width: 536px) {
@@ -2582,6 +2595,16 @@ svg path {
   }
   .signUpFormHead {
     padding: 0px 10px !important;
+  }
+  .BusinessInInfoIndForm h1,
+  .BusinessInfoBussAccForm h1,
+  .bankDetail h1 {
+    margin: 10px 0px 30px 0px;
+  }
+  .BusinessInInfoIndForm ,
+  .BusinessInfoBussAccForm ,
+  .bankDetail  {
+    padding: 0px !important;
   }
 }
 @media (max-width: 350px) {
