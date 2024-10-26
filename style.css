@@ -814,6 +814,7 @@ main {
   display: flex;
   align-items: center;
   gap: 10px;
+  padding-right: 0px !important;
 }
 .formFields label {
   width: 300px;
