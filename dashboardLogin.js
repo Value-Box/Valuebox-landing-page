@@ -84,10 +84,15 @@ function passwordShower() {
   console.log('hello')
 
 
-  function signUpPage(event) {
-    // Prevent the default form submission
-    event.preventDefault();
-    console.log('clicked');
-    window.location.href = "personalInfoSignUp.html";
-  }
+  // function signUpPage(event) {
+  //   // Prevent the default form submission
+  //   event.preventDefault();
+  //   console.log('clicked');
+  //   window.location.href = "personalInfoSignUp.html";
+  // }
   
+  document.getElementById("verifyBtn").addEventListener("click", function () {
+    // Form submit karne ke baad page ko redirect karna
+    document.getElementById("myForm").submit();
+    window.location.href = "personalInfoSignUp.html";
+  });

@@ -1305,3 +1305,13 @@ bankAccBackBtn.addEventListener("click", () => {
       .scrollIntoView({ behavior: "smooth" });
   }
 });
+  // function signUpPage(event) {
+  //   // Prevent the default form submission
+  //   event.preventDefault();
+  //   console.log('clicked');
+  //   window.location.href = "personalInfoSignUp.html";
+  // }
+
+  document.getElementById("verifyBtn").addEventListener("click", function () {
+    document.getElementById("myForm").submit();
+});

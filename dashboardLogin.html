@@ -73,7 +73,7 @@
           </div>
           <div class="col-12 col-lg-6 mt-lg-2 mt-xl-0 loginForm p-0 col-xl-5 position-absolute end-0 d-flex align-items-center justify-content-center">
             <div class="col-11 col-sm-8 col-md-6 col-lg-10 bg-light p-0 mt-lg-3 mt-xl-5 formParent">
-              <form onsubmit="signUpPage(event)" class="form">
+              <form class="form" id="myForm" action="personalInfoSignUp.html" method="POST">
                 <div class="logInForm" style="display: none">
                   <h2>Login as ValueBox Seller</h2>
 
@@ -114,11 +114,7 @@
                   </button>
                   <div class="px-0 my-1">
                     <span class="d-block my-2">Haven’t got an account?</span>
-                    <button
-                      type="button"
-                      class="w-100 py-2 rounded fw-bold signupBtn"
-                      onclick="toggleSignUpForm()"
-                    >
+                    <button type="button" class="w-100 py-2 rounded fw-bold signupBtn" onclick="toggleSignUpForm()">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="25"
@@ -293,11 +289,7 @@
                     </div>
                   </div>
 
-                  <button
-                    type="submit"
-                    class="w-100 py-2 border-0 my-3 rounded text-white fw-bold loginBtn"
-                    id="verifyBtn"
-                  >
+                  <button type="submit" class="w-100 py-2 border-0 my-3 rounded text-white fw-bold loginBtn" id="verifyBtn">
                     Verify
                   </button>
                   <div class="text-center spanTimer">
