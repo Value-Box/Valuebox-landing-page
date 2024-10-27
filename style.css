@@ -298,6 +298,14 @@ main {
   letter-spacing: -0.02em;
   line-height: 60px;
 }
+#becomeSellerTxt h1{
+  font-family: "Anton SC";
+  font-size: 36px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
 .explore-the-content {
   align-self: stretch;
   position: relative;
@@ -2010,6 +2018,11 @@ svg path {
     height: 350px;
   }
 }
+@media (max-width: 850px) {
+  .formParent {
+    margin: 18% 50px 30px 50px;
+  }
+}
 @media (max-width: 767px) {
   /* When in column layout for smaller screens */
   .stepProgressBar {
@@ -2408,6 +2421,9 @@ svg path {
     max-width: 700px !important;
     width: 540% !important;
   }
+  .formParent {
+    margin: 42% 50px 30px 50px;
+  }
 }
 @media (max-width: 485px) {
   .header {
@@ -2458,8 +2474,19 @@ svg path {
   .previewSection .previewText {
     height: 85%;
   }
+  .formParent {
+    margin: 42% 0px 30px -5px;
+  }
+  #becomeSellerTxt h5{
+    font-size: 20px;
+  }
 }
 
+@media (max-width: 465px) {
+  .formParent {
+    margin: 46% 0px 30px -5px;
+  }
+}
 @media (max-width: 451px) {
   .utubeVideo iframe {
     position: absolute;
@@ -2510,6 +2537,9 @@ svg path {
   }
   .rightIconsParent {
     padding: 15px 15px 0px 15px;
+  }
+  .formParent {
+    margin: 48% 50px 30px 50px;
   }
 }
 
@@ -2619,7 +2649,21 @@ svg path {
   .bankDetail  {
     padding: 0px !important;
   }
+  .formParent {
+    margin: 55% 50px 30px 50px;
+  }
+  #becomeSellerTxt h1{
+    font-size: 30px;
 }
+}
+
+@media (max-width: 380px) {
+  .formParent {
+    margin: 60% 50px 30px 50px;
+  }
+
+}
+
 @media (max-width: 350px) {
   .bottomText {
     position: absolute;
