@@ -1512,7 +1512,7 @@ select {
     height: 108% !important;
   }
   .formParent {
-    margin-top: 45px;
+    /* margin-top: 45px; */
     height: auto !important;
   }
 }
@@ -1767,7 +1767,7 @@ footer .row {
 .formParent {
   width: 345px;
   height: 430px;
-  margin: auto 50px;
+  /* margin: auto 50px; */
   border-radius: 16px;
 }
 .loginBtn {
@@ -2009,20 +2009,20 @@ svg path {
   .LoginBgPoster {
     max-height: 600px;
   }
-  .formParent {
+  /* .formParent {
     margin: 16% 50px 30px 50px;
-  }
+  } */
 }
 @media (max-width: 900px) {
   #carouselExampleCaptions {
     height: 350px;
   }
 }
-@media (max-width: 850px) {
+/* @media (max-width: 850px) {
   .formParent {
     margin: 18% 50px 30px 50px;
   }
-}
+} */
 @media (max-width: 767px) {
   /* When in column layout for smaller screens */
   .stepProgressBar {
@@ -2108,9 +2108,9 @@ svg path {
   .previewImg {
     max-height: 400px;
   }
-  .formParent {
+  /* .formParent {
     margin: 23% 50px 30px 50px;
-    }
+    } */
 }
 @media (max-width: 650px) {
   #carouselExampleCaptions {
@@ -2138,9 +2138,9 @@ svg path {
   .LoginBgPoster {
     max-height: 600px;
   }
-  .formParent {
+  /* .formParent {
     margin: 33% 50px 30px 50px;
-  }
+  } */
 
 
   .previewImg {
@@ -2391,6 +2391,11 @@ svg path {
   .bankDetail  {
     padding: 10px !important;
   }
+  .sellingSection,
+.sellingSection2 {
+
+  max-width: 100% !important;
+}
 }
 @media (max-width: 536px) {
   .headerButtons button {
@@ -2421,9 +2426,9 @@ svg path {
     max-width: 700px !important;
     width: 540% !important;
   }
-  .formParent {
+  /* .formParent {
     margin: 42% 50px 30px 50px;
-  }
+  } */
 }
 @media (max-width: 485px) {
   .header {
@@ -2474,19 +2479,19 @@ svg path {
   .previewSection .previewText {
     height: 85%;
   }
-  .formParent {
+  /* .formParent {
     margin: 42% 0px 30px -5px;
-  }
+  } */
   #becomeSellerTxt h5{
     font-size: 20px;
   }
 }
-
+/* 
 @media (max-width: 465px) {
   .formParent {
     margin: 46% 0px 30px -5px;
   }
-}
+} */
 @media (max-width: 451px) {
   .utubeVideo iframe {
     position: absolute;
@@ -2538,9 +2543,9 @@ svg path {
   .rightIconsParent {
     padding: 15px 15px 0px 15px;
   }
-  .formParent {
+  /* .formParent {
     margin: 48% 50px 30px 50px;
-  }
+  } */
 }
 
 /* Style for centering the indicators */
@@ -2621,9 +2626,9 @@ svg path {
   .form {
     padding: 20px 15px;
   }
-  .formParent {
+  /* .formParent {
     margin: auto 50px 26px 50px;
-  }
+  } */
   .stepProgressBar {
     top: 47%;
     left: -268%;
@@ -2649,20 +2654,19 @@ svg path {
   .bankDetail  {
     padding: 0px !important;
   }
-  .formParent {
+  /* .formParent {
     margin: 55% 50px 30px 50px;
-  }
+  } */
   #becomeSellerTxt h1{
     font-size: 30px;
 }
 }
 
-@media (max-width: 380px) {
+/* @media (max-width: 380px) {
   .formParent {
     margin: 60% 50px 30px 50px;
   }
-
-}
+} */
 
 @media (max-width: 350px) {
   .bottomText {
