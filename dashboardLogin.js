@@ -27,11 +27,45 @@ function passwordShower() {
     signUpForm.style.display =
       signUpForm.style.display === "none" ? "block" : "none";
   }
+
+
+  const otpInputs = document.querySelectorAll('.otpNum');
+
+  otpInputs.forEach((input, index) => {
+    input.addEventListener('input', (e) => {
+      // Ensure only one digit is entered
+      input.value = input.value.replace(/[^0-9]/g, '').slice(0, 1);
+
+      // Move to the next input if one digit is entered
+      if (input.value && index < otpInputs.length - 1) {
+        otpInputs[index + 1].focus();
+      }
+    });
+
+    // Optional: Move to the previous input on Backspace if the current input is empty
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Backspace' && input.value === '' && index > 0) {
+        otpInputs[index - 1].focus();
+      }
+    });
+  });
+
   
   const getOTP = document.getElementById('getOTP');
   const signUpForm = document.querySelector(".signUpForm");
   const varificationForm = document.querySelector(".varificationForm");
-  
+  const phoneNumInput = document.getElementById('phoneNumVerify');
+  function validatePhoneNumber(input) {
+    // Allow only numbers (remove any non-numeric characters)
+    input.value = input.value.replace(/\D/g, "");
+
+    // Display error message if not 11 digits
+    if (input.value.length === 11) {
+      phoneNumError.textContent = "";
+    } else {
+      phoneNumError.textContent = "Phone number must be exactly 11 digits.";
+    }
+  }
   // Timer and Resend OTP
   const otpButton = document.getElementById('resendOTP');
   const otpTimer = document.getElementsByClassName('timer')[0]; 
@@ -61,6 +95,14 @@ function passwordShower() {
   
   // Event listener for Get OTP button
   getOTP.addEventListener('click', () => {
+    // Check if the phone number has exactly 11 digits before proceeding
+    if (phoneNumInput.value.length !== 11) {
+      phoneNumError.textContent = "Phone number must be exactly 11 digits.";
+      return; // Stop further execution
+    }else{
+      phoneNumError.textContent = "";
+    }
+
     // Hide the sign-up form and show the verification form
     signUpForm.style.display = 'none';
     varificationForm.style.display = 'block';
@@ -91,8 +133,24 @@ function passwordShower() {
   //   window.location.href = "personalInfoSignUp.html";
   // }
   
-  document.getElementById("verifyBtn").addEventListener("click", function () {
-    // Form submit karne ke baad page ko redirect karna
+
+  const otpErrorMsg=document.getElementById('otpErrorMsg');
+document.getElementById("verifyBtn").addEventListener("click", function () {
+  // Check if all OTP inputs are filled
+  let allFilled = true;
+  otpInputs.forEach((input) => {
+    if (input.value === '') {
+      allFilled = false; // At least one input is empty
+    }
+  });
+
+  if (allFilled) {
+    // All inputs are filled, so submit the form and redirect
     document.getElementById("myForm").submit();
     window.location.href = "personalInfoSignUp.html";
-  });
+  } else {
+    // If not all inputs are filled, display an error or keep the form on the same page
+    otpErrorMsg.innerText='Please fill in all OTP fields before proceeding.'
+    otpErrorMsg.style.color='red'
+  }
+});

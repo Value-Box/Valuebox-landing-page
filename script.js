@@ -516,9 +516,7 @@ BusinessInfoBussAccSection.forEach((input) => {
   }
 });
 
-document
-  .getElementById("personContactNumber")
-  .addEventListener("input", function (event) {
+document.getElementById("personContactNumber").addEventListener("input", function (event) {
     // Remove all non-numeric characters from input
     let input = event.target.value.replace(/\D/g, "");
     let formattedInput = "";
@@ -754,23 +752,10 @@ function bankChequePhoto() {
     const fileName = file.name;
     const fileNameWithoutExtension = fileName.split(".")[0];
     const extension = fileName.split(".").pop().toLowerCase();
-    const fileSizeInMB = file.size / (1024 * 1024); // Convert to MB
-
-    // Check for allowed extensions
-    const allowedExtensions = ["png", "jpg", "jpeg"];
-    if (!allowedExtensions.includes(extension)) {
-      bankCheckCopy.innerHTML = `<span style="color: red;">You can upload only JPG, JPEG, PNG formats.</span>`;
-      return;
-    }
-
-    // Check for file size limit
-    if (fileSizeInMB > 2) {
-      bankCheckCopy.innerHTML = `<span style="color: red;">The selected file is too large. Please upload a file smaller than 2 MB.</span>`;
-      return;
-    }
 
     // If both checks pass, display the file name and extension
     bankCheckCopy.innerHTML = `File Name: ${fileNameWithoutExtension}, Extension: ${extension}`;
+    bankCheckCopy.style.color='#002882'
   } else {
     bankCheckCopy.innerHTML = "No file chosen";
   }
@@ -778,11 +763,42 @@ function bankChequePhoto() {
 
 
 
+
+
+// function checkBankFields() {
+//   let allFieldsFilled = true;
+
+//   bankDetailSection.forEach((input) => {
+//     if (input.type === "file") {
+//       if (input.files.length === 0) {
+//         allFieldsFilled = false; // No file selected
+//       } else {
+//         const file = input.files[0];
+//         const fileType = file.type.split("/")[0];
+//         const fileSizeInMB = file.size / (1024 * 1024); // Convert to MB
+        
+//         // Check file type and size
+//         if (fileType !== "image" || fileSizeInMB > 2) {
+//           allFieldsFilled = false; // Invalid file type or size too large
+//         }
+//       }
+//     } else {
+//       if (input.value.trim() === "") {
+//         allFieldsFilled = false; // Empty text input
+//       }
+//     }
+//   });
+
+//   // Enable button only if all fields are filled, a valid image is selected, and size is under 2 MB
+//   submitButton.disabled = !allFieldsFilled;
+// }
+
 // bank Check Fields
-const bankDetailSection = document.querySelectorAll(
-  ".bankDetail .bankRequired"
-);
+
+
+const bankDetailSection = document.querySelectorAll(".bankDetail .bankRequired");
 const submitButton = document.getElementById("bussAccNxtBtnSubmit");
+const ibanInput = document.getElementById("bankIBAN");
 
 function checkBankFields() {
   let allFieldsFilled = true;
@@ -792,13 +808,23 @@ function checkBankFields() {
       if (input.files.length === 0) {
         allFieldsFilled = false; // No file selected
       } else {
-        const file = input.files[0];
-        const fileType = file.type.split("/")[0];
-        const fileSizeInMB = file.size / (1024 * 1024); // Convert to MB
-        
-        // Check file type and size
-        if (fileType !== "image" || fileSizeInMB > 2) {
-          allFieldsFilled = false; // Invalid file type or size too large
+        const fileType = input.files[0].type;
+        const fileSize = input.files[0].size;
+        const errorMsgTag =
+          input.id === "cnicFrontSidePhoto"
+            ? document.getElementById("frontSidePhoto")
+            : document.getElementById("backSidePhoto");
+        // Accept both image and PDF file types
+        if (
+          fileType !== "image/jpeg" &&
+          fileType !== "image/png" &&
+          fileType !== "image/jpg"
+        ) {
+          allFieldsFilled = false; // Invalid file type
+          errorMsgTag.innerHTML = `<span style="color: red;">You can upload only JPG, JPEG, PNG, formats.</span>`;
+        } else if (fileSize > 2097152) {
+          // 2 MB = 2097152 bytes
+          allFieldsFilled = false; // File too large
         }
       }
     } else {
@@ -808,10 +834,9 @@ function checkBankFields() {
     }
   });
 
-  // Enable button only if all fields are filled, a valid image is selected, and size is under 2 MB
+  // Enable button only if all fields are filled and valid images are selected
   submitButton.disabled = !allFieldsFilled;
 }
-
 // Add event listeners to each input field, including file input
 bankDetailSection.forEach((input) => {
   if (input.type === "file") {
@@ -947,7 +972,7 @@ function getFrontSidePhoto() {
 
   if (fileSize > 2) {
     // Show red alert if size is more than 2 MB
-    frontSidePhotoMsg.innerHTML = `<span style="color: red;">The selected file (${fileName}) is too large. Please upload a file smaller than 2 MB.</span>`;
+    frontSidePhotoMsg.innerHTML = `<span style="color: red;">The selected file is too large. Please upload a file smaller than 2 MB.</span>`;
     input.value = ""; // Clear the input
   } else {
     // Show file name if valid
@@ -965,7 +990,7 @@ function getBackSidePhoto() {
 
   if (fileSize > 2) {
     // Show red alert if size is more than 2 MB
-    backSidePhotoMsg.innerHTML = `<span style="color: red;">The selected file (${fileName}) is too large. Please upload a file smaller than 2 MB.</span>`;
+    backSidePhotoMsg.innerHTML = `<span style="color: red;">The selected file is too large. Please upload a file smaller than 2 MB.</span>`;
     input.value = ""; // Clear the input
   } else {
     // Show file name if valid

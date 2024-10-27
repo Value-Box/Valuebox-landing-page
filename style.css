@@ -1511,6 +1511,13 @@ select {
 #loginPasswordIcon {
   cursor: pointer;
 }
+.loginForm, .signUpForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 1.5rem; */
+  border-radius: 10px;
+}
 @media (max-width: 1120px) {
   .heroSection1 {
     display: none; /* Hide the first hero section on smaller screens */
@@ -1820,6 +1827,7 @@ svg path {
   border-bottom-width: 8px;
   border-right-width: 4px;
   border-color: #ffc136; /* For sellingSection */
+  max-width: 48% !important;
 }
 
 .sellingSection2 {
@@ -1988,13 +1996,13 @@ svg path {
     height: 104% !important;
   }
   .loginForm {
-    height: 104% !important;
+    /* height: 104% !important; */
   }
   .LoginBgPoster {
     max-height: 600px;
   }
   .formParent {
-    margin: auto 50px 30px 50px;
+    margin: 16% 50px 30px 50px;
   }
 }
 @media (max-width: 900px) {
@@ -2087,6 +2095,9 @@ svg path {
   .previewImg {
     max-height: 400px;
   }
+  .formParent {
+    margin: 23% 50px 30px 50px;
+    }
 }
 @media (max-width: 650px) {
   #carouselExampleCaptions {
@@ -2109,14 +2120,15 @@ svg path {
     height: 108% !important;
   }
   .loginForm {
-    height: 108% !important;
+    /* height: 108% !important; */
   }
   .LoginBgPoster {
     max-height: 600px;
   }
   .formParent {
-    margin: auto 50px 30px 50px;
+    margin: 33% 50px 30px 50px;
   }
+
 
   .previewImg {
     height: 320px;
