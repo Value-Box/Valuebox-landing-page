@@ -742,24 +742,7 @@ document
 //     }
 //   });
 
-// bank cheque Photo
-function bankChequePhoto() {
-  const fileInput = document.getElementById("chequeCopy");
-  const bankCheckCopy = document.getElementById("bankCheckCopy");
 
-  if (fileInput.files.length > 0) {
-    const file = fileInput.files[0];
-    const fileName = file.name;
-    const fileNameWithoutExtension = fileName.split(".")[0];
-    const extension = fileName.split(".").pop().toLowerCase();
-
-    // If both checks pass, display the file name and extension
-    bankCheckCopy.innerHTML = `File Name: ${fileNameWithoutExtension}, Extension: ${extension}`;
-    bankCheckCopy.style.color='#002882'
-  } else {
-    bankCheckCopy.innerHTML = "No file chosen";
-  }
-}
 
 
 
@@ -795,49 +778,52 @@ function bankChequePhoto() {
 
 // bank Check Fields
 
+// bank cheque Photo
+
 
 const bankDetailSection = document.querySelectorAll(".bankDetail .bankRequired");
 const submitButton = document.getElementById("bussAccNxtBtnSubmit");
-const ibanInput = document.getElementById("bankIBAN");
+const errorMsgTag = document.getElementById("bankCheckCopy"); // Error message tag
 
 function checkBankFields() {
   let allFieldsFilled = true;
+  // errorMsgTag.innerHTML = "";
 
   bankDetailSection.forEach((input) => {
     if (input.type === "file") {
       if (input.files.length === 0) {
-        allFieldsFilled = false; // No file selected
+        allFieldsFilled = false;
+        errorMsgTag.innerHTML = "Please upload a file.";
       } else {
         const fileType = input.files[0].type;
         const fileSize = input.files[0].size;
-        const errorMsgTag =
-          input.id === "cnicFrontSidePhoto"
-            ? document.getElementById("frontSidePhoto")
-            : document.getElementById("backSidePhoto");
-        // Accept both image and PDF file types
+
+        // Validate file type and size
         if (
           fileType !== "image/jpeg" &&
           fileType !== "image/png" &&
           fileType !== "image/jpg"
         ) {
-          allFieldsFilled = false; // Invalid file type
-          errorMsgTag.innerHTML = `<span style="color: red;">You can upload only JPG, JPEG, PNG, formats.</span>`;
+          allFieldsFilled = false;
+          errorMsgTag.innerHTML = "You can upload only JPG, JPEG, PNG formats.";
+          errorMsgTag.style.color = 'red';
         } else if (fileSize > 2097152) {
-          // 2 MB = 2097152 bytes
-          allFieldsFilled = false; // File too large
+          allFieldsFilled = false;
+          errorMsgTag.innerHTML = "File size must be less than 2 MB.";
+          errorMsgTag.style.color = 'red';
         }
       }
     } else {
       if (input.value.trim() === "") {
-        allFieldsFilled = false; // Empty text input
+        allFieldsFilled = false;
       }
     }
   });
 
-  // Enable button only if all fields are filled and valid images are selected
   submitButton.disabled = !allFieldsFilled;
 }
-// Add event listeners to each input field, including file input
+
+// Add event listeners to each input field
 bankDetailSection.forEach((input) => {
   if (input.type === "file") {
     input.addEventListener("change", checkBankFields);
@@ -846,8 +832,27 @@ bankDetailSection.forEach((input) => {
   }
 });
 
+
+function bankChequePhoto() {
+  const fileInput = document.getElementById("chequeCopy");
+  const bankCheckCopy = document.getElementById("bankCheckCopy");
+
+  if (fileInput.files.length > 0) {
+    const file = fileInput.files[0];
+    const fileName = file.name;
+    const fileNameWithoutExtension = fileName.split(".")[0];
+    const extension = fileName.split(".").pop().toLowerCase();
+
+    // If both checks pass, display the file name and extension
+    bankCheckCopy.innerHTML = `File Name: ${fileNameWithoutExtension}, Extension: ${extension}`;
+    bankCheckCopy.style.color='#002882'
+  } else {
+    bankCheckCopy.innerHTML = "No file chosen";
+  }
+}
+
 function clsAlphaNoOnly (e) {  // Accept only alpha numerics, no special characters 
-  var regex = new RegExp("^[a-zA-Z0-9 ]+$");
+  var regex = new RegExp("^[a-zA-Z0-9]+$");
   var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
   if (regex.test(str)) {
       return true;
