@@ -336,9 +336,11 @@
                                 <input type="text" placeholder="Enter Address" class="form-control required" id="shopAddress" aria-describedby="emailHelp" required>
                             </div>
                             <div class="mb-3 formFields">
-                                <label class="form-label">Post Code<span class="starik">*</span></label>
-                                <input type="text" placeholder="Enter Post Code" class="form-control required" id="shopPostCode" maxlength="5" minlength="5" aria-describedby="emailHelp" required>
+                              <label class="form-label">Post Code<span class="starik">*</span></label>
+                              <input type="text" placeholder="Enter Post Code" class="form-control required" id="shopPostCode" maxlength="5" minlength="5" aria-describedby="emailHelp" required oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                              >
                             </div>
+                            
                             <div class="mb-3 businessFormFields">
                                 <label class="form-label">Warehouse Address<span class="starik">*</span></label>
                                <div class="businessInputFields">
@@ -385,7 +387,7 @@
                                 </div>
                                 <div class="mb-3 formFields">
                                     <label class="form-label">Post Code<span class="starik">*</span></label>
-                                    <input type="text" placeholder="Enter Post Code" class="form-control required" id="warehousePostCode" minlength="5" maxlength="5" name="warehousePostCode" aria-describedby="emailHelp" required>
+                                    <input type="text" placeholder="Enter Post Code" class="form-control required" id="warehousePostCode" oninput="this.value = this.value.replace(/[^0-9]/g, '')" minlength="5" maxlength="5" name="warehousePostCode" aria-describedby="emailHelp" required>
                                 </div>
                             </div>
                             <div class="mb-3 businessFormFields">
@@ -434,7 +436,7 @@
                                 </div>
                                 <div class="mb-3 formFields">
                                     <label  class="form-label">Post Code<span class="starik">*</span></label>
-                                    <input type="text" placeholder="Enter Post Code" class="form-control required" id="returnPostCode" name="returnPostCode" minlength="5" maxlength="5" aria-describedby="emailHelp" required>
+                                    <input type="text" placeholder="Enter Post Code" class="form-control required" oninput="this.value = this.value.replace(/[^0-9]/g, '')" id="returnPostCode" name="returnPostCode" minlength="5" maxlength="5" aria-describedby="emailHelp" required>
                                 </div>
                             </div>
                         </div>
@@ -453,7 +455,7 @@
                           </button>
                     </section>
                       <!-- Business Information (Business Account) Form -->
-                      <section class="BusinessInfoBussAccForm p-sm-4 pt-0"  style="display: none;">
+                      <section class="BusinessInfoBussAccForm p-sm-4 pt-0" style="display: none;" >
                         <h1>Business Information <span class="bussinessInfoText">(Business Account)</span></h1>
                         <div class="row formRow p-2 p-sm-3 m-0 rounded-4">
 
@@ -555,7 +557,7 @@
                             </div>
                             <div class="mb-3 formFields">
                                 <label class="form-label">Post Code<span class="starik">*</span></label>
-                                <input type="text" placeholder="Enter Post Code" class="form-control required" id="businessPostCode" minlength="5" maxlength="5" name="businessPostCode" aria-describedby="emailHelp" required>
+                                <input type="text" placeholder="Enter Post Code" class="form-control required" oninput="this.value = this.value.replace(/[^0-9]/g, '')" id="businessPostCode" minlength="5" maxlength="5" name="businessPostCode" aria-describedby="emailHelp" required>
                             </div>
                             <div class="mb-3 businessFormFields">
                                 <label class="form-label">Warehouse Address<span class="starik">*</span></label>
@@ -603,7 +605,7 @@
                             </div>
                             <div class="mb-3 formFields">
                                 <label class="form-label">Post Code<span class="starik">*</span></label>
-                                <input type="text" placeholder="Enter Post Code" class="form-control required" id="warehousePostCode" minlength="5" maxlength="5" name="warehousePostCode" aria-describedby="emailHelp" required>
+                                <input type="text" placeholder="Enter Post Code" class="form-control required" oninput="this.value = this.value.replace(/[^0-9]/g, '')" id="warehousePostCode" minlength="5" maxlength="5" name="warehousePostCode" aria-describedby="emailHelp" required>
                             </div>
                             </div>
 
@@ -653,7 +655,7 @@
                               </div>
                               <div class="mb-3 formFields">
                                 <label  class="form-label">Post Code<span class="starik">*</span></label>
-                                <input type="text" placeholder="Enter Post Code" class="form-control required" id="returnPostCode" name="returnPostCode" minlength="5" maxlength="5" aria-describedby="emailHelp" required>
+                                <input type="text" placeholder="Enter Post Code" class="form-control required" oninput="this.value = this.value.replace(/[^0-9]/g, '')" id="returnPostCode" name="returnPostCode" minlength="5" maxlength="5" aria-describedby="emailHelp" required>
                               </div>
                             </div>
                         </div>
