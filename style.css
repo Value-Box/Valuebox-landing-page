@@ -60,7 +60,7 @@ main {
   text-decoration: none;
   color: #666666;
   font-family: Sarabun;
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 30px; /* 150% */
@@ -1387,8 +1387,12 @@ select {
   top: 20px; /* Adjust the distance from the top as needed */
   z-index: 10;
 }
-
-@media (max-width: 1100px) {
+.verticleLine{
+  width: 1px;
+height: 24px;
+background: #CCC;
+}
+@media (max-width: 1435px) {
   .hamburger {
     display: inline;
     padding: 10px 20px;
@@ -1499,6 +1503,113 @@ select {
     margin-left: auto;
     text-align: center;
   }
+  .verticleLine{
+    display: none;
+  }
+}
+@media (max-width: 1100px) {
+  /* .hamburger {
+    display: inline;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #f2f2f2;
+    color: #666666;
+    border-radius: 10px;
+  }
+
+  .closeIcon {
+    display: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #f2f2f2;
+    color: #666666;
+    border-radius: 10px;
+  }
+
+  .closeIcon i {
+    font-size: 24px;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    max-height: 0; 
+    opacity: 0;
+    overflow: hidden;
+    transition: 0.3s ease;
+    position: absolute;
+    width: 100vw; 
+    top: 69px;
+    left: 0;
+    width: 100%;
+    text-align: end;
+    background-color: #002882;
+    z-index: 1;
+    margin-left: 0px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+  }
+  .links a {
+    color: white;
+  }
+  .links .loginBtn {
+    display: none;
+  }
+  .links::before,
+  .links::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 4px;
+    opacity: 0;
+    width: 100vw;
+    transition: 0.5s;
+  }
+
+  .links::before {
+    top: 0;
+  }
+
+  .links::after {
+    bottom: 0;
+    transition: 0.5s;
+  }
+
+  .checkBox:checked ~ .links {
+    max-height: 400px; 
+    opacity: 1; 
+    max-width: 100%;
+    padding: 50px 0px;
+  }
+
+  .checkBox:not(:checked) ~ .links {
+    max-height: 0; 
+    opacity: 0; 
+    width: 94vw; 
+  }
+
+  .checkBox:checked ~ .links::before,
+  .checkBox:checked ~ .links::after {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+  .checkBox:checked ~ .links button:hover {
+    border: 1px solid white;
+  }
+
+  .checkBox:checked ~ .closeIcon {
+    display: inline; 
+  }
+
+  .checkBox:checked ~ .hamburger {
+    display: none; 
+  }
+
+  .headerButtons {
+    margin-left: auto;
+    text-align: center;
+  } */
   .utubeVideo iframe {
     position: relative;
     top: -7%;
@@ -1515,7 +1626,11 @@ select {
     /* margin-top: 45px; */
     height: auto !important;
   }
+  /* .verticleLine{
+    display: none;
+  } */
 }
+
 #loginPasswordIcon {
   cursor: pointer;
 }
