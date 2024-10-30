@@ -19,6 +19,9 @@ function loginPage(formId) {
 function redirectHomePage() {
   window.location.href = "index.html";
 }
+function dashboard() {
+  window.location.href = "Dashboard/index.html";
+}
 
 // sessionStorage.setItem("targetForm", formId);
   // window.location.href = "dashboardLogin.html";

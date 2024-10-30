@@ -1090,7 +1090,8 @@ input::placeholder {
   margin-left: auto;
 }
 .editApplicationBtn .pendingApproval {
-  background-color: #999;
+  background-color: #002882;
+  /* background-color: #999; */
   color: white;
   font-weight: 700;
 }

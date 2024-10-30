@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton SC:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton+SC&display=swap");
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FAFAFA !important;
+  }
+  .sidebar {
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 56px; /* Adjust for fixed navbar height */
+    left: 0;
+    overflow-y: auto;
+  }
+  .sidebar-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .sidebar-header {
+    padding: 15px;
+    background-color: #3e444a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .sidebar-brand {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+  .sidebar-toggler {
+    color: white;
+    cursor: pointer;
+  }
+  .sidebar-nav {
+    flex: 1;
+    padding: 20px 0;
+    background-color: white;
+  }
+  .sidenav{
+    padding: 10px 0px;
+  }
+  .sidenav .sidebar-item {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 20px 20px;
+    transition: background 0.3s;
+  }
+/* Style for hovered dropdown item */
+.sidenav .sidebar-item.open .sidebar-item-content {
+    background: linear-gradient(
+      90deg,
+      #ffc136 0%,
+      #fac142 19.76%,
+      #ffd168 52.5%,
+      #f5bc3a 77.13%,
+      #e09b00 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sidenav .sidebar-item.active .sidebar-item-content svg path {
+    stroke: #e09b00; /* Change stroke color to white when active */
+}
+
+
+.sidenav .sidebar-item.active .sidebar-item-content span {
+    color: #e09b00; /* Change this color as needed */
+}
+
+.sidenav .sidebar-item.active .sidebar-item-content .rotate-icon {
+    color: #e09b00; /* Change this color as needed */
+}
+
+  /* Style for dropdown items */
+  .dropdown-item {
+    display: flex;
+padding: 10px 20px 10px 50px !important;
+align-items: center;
+gap: 10px;
+align-self: stretch;
+
+  }
+  .sidebar-item-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  .sidebar-icon {
+    margin-right: 10px;
+    font-size: 1.1rem;
+  }
+  .sidebar-footer {
+    padding: 15px;
+    background-color: #3e444a;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  /* Dropdown Styling with Smooth Animation */
+  .dropdown-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+  }
+  .dropdown-container.open {
+    max-height: 200px; /* Adjust based on dropdown content size */
+    opacity: 1;
+  }
+  .dropdown-item {
+    padding: 8px 20px;
+    color: #d1d1d1;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-item:hover {
+    color: white;
+  }
+  /* Rotate arrow for active dropdown */
+  .rotate-icon {
+    transition: transform 0.4s ease;
+  }
+  /* Main content offset to accommodate sidebar */
+  .main-content {
+    margin-left: 300px;
+    padding: 20px;
+  }
+
+.navbar-brand{
+    display: flex;
+width: 171.315px;
+height: 60px;
+padding: 5.769px 23.077px;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 11.538px;
+flex-shrink: 0;
+border-radius: 1153.846px;
+background: #F2F2F2;
+}
+.searchInput{
+    display: flex;
+width: 600px;
+height: 56px;
+padding: 5px 5px 5px 20px;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+border-radius: 10px;
+border: 1px solid #CCC;
+background: #F5F5F5;
+}
+.searchInput input{
+color:  #666;
+text-shadow: 0px 75px 150px rgba(52, 64, 84, 0.14);
+font-family: Sarabun;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; 
+outline: none;
+}
+#navbar{
+    padding: 20px 40px;
+}
+
+.navbar-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.navbar-nav .nav-item{
+    display: flex;
+width: 56px;
+height: 56px;
+padding: 10px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 100000px;
+background:  #F2F2F2;
+}
+.userProfileName .name{
+    color: var(--Natural-Color-80, #333);
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 30px; /* 150% */
+}
+.userProfileName .title{
+    color: var(--Natural-Color-40, #999);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+}
