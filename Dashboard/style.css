@@ -11,7 +11,7 @@ body {
     width: 300px;
     height: 100vh;
     position: fixed;
-    top: 56px; /* Adjust for fixed navbar height */
+    top: 80px; /* Adjust for fixed navbar height */
     left: 0;
     overflow-y: auto;
   }
@@ -22,7 +22,7 @@ body {
   }
   .sidebar-header {
     padding: 15px;
-    background-color: #3e444a;
+    /* background-color: #3e444a; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -38,7 +38,7 @@ body {
   }
   .sidebar-nav {
     flex: 1;
-    padding: 20px 0;
+    padding: 20px 20px;
     background-color: white;
   }
   .sidenav{
@@ -51,6 +51,7 @@ body {
     align-items: center;
     padding: 20px 20px;
     transition: background 0.3s;
+    font-weight: 500;
   }
 /* Style for hovered dropdown item */
 .sidenav .sidebar-item.open .sidebar-item-content {
@@ -78,15 +79,36 @@ body {
 .sidenav .sidebar-item.active .sidebar-item-content .rotate-icon {
     color: #e09b00; /* Change this color as needed */
 }
+.sidenav .dropdown-container.open .dropdown-item.active{
+  border-radius: 8px;
+  color: #333; 
+  font-style: normal;
+font-weight: 500;
+line-height: 24px;
+background:  linear-gradient(90deg, #FFC136 0%, #FAC142 19.76%, #FFD168 52.5%, #F5BC3A 77.13%, #E09B00 100%);
+}
+.dropdown-item.active,
+.dropdown-item:active {
+  color: #333 !important; 
+  border-radius: 8px;
+  background: linear-gradient(90deg, #FFC136 0%, #FAC142 19.76%, #FFD168 52.5%, #F5BC3A 77.13%, #E09B00 100%) !important; /* Applies the gradient */
+  outline: none; /* Removes the default outline */
+}
+
 
   /* Style for dropdown items */
   .dropdown-item {
     display: flex;
+    color: #333; 
 padding: 10px 20px 10px 50px !important;
 align-items: center;
 gap: 10px;
 align-self: stretch;
-
+  }
+  .dropdown-item{
+    font-style: normal;
+font-weight: 500 !important;
+line-height: 24px;
   }
   .sidebar-item-content {
     display: flex;
@@ -135,10 +157,10 @@ align-self: stretch;
 
 .navbar-brand{
     display: flex;
-width: 171.315px;
-height: 60px;
-padding: 5.769px 23.077px;
-flex-direction: column;
+width: 150px;
+height: 50px;
+/* padding: 5.769px 23.077px;
+flex-direction: column; */
 justify-content: center;
 align-items: flex-start;
 gap: 11.538px;
@@ -148,8 +170,8 @@ background: #F2F2F2;
 }
 .searchInput{
     display: flex;
-width: 600px;
-height: 56px;
+width: 450px;
+height: 48px;
 padding: 5px 5px 5px 20px;
 align-items: center;
 gap: 10px;
@@ -169,7 +191,7 @@ line-height: 24px;
 outline: none;
 }
 #navbar{
-    padding: 20px 40px;
+    padding: 13px 40px;
 }
 
 .navbar-nav{
@@ -181,8 +203,8 @@ outline: none;
 }
 .navbar-nav .nav-item{
     display: flex;
-width: 56px;
-height: 56px;
+width: 50px;
+height: 50px;
 padding: 10px;
 flex-direction: column;
 justify-content: center;
@@ -204,4 +226,93 @@ line-height: 30px; /* 150% */
     font-style: normal;
     font-weight: 500;
     line-height: 20px; /* 142.857% */
+}
+.notification{
+  position: absolute;
+  top: -6px;
+  right: -4px;
+  width: 18px;
+height: 18px;
+flex-shrink: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 50%;
+background-color:  #EEA500;
+color: white;
+opacity: 1;
+}
+
+.anchortags a{
+  text-decoration: none !important;
+  padding: 0px;
+  color:  #999;
+font-size: 16px;
+font-style: normal;
+line-height: 24px; 
+}
+.addProNextBtn{
+  border-radius: 5px;
+ background-color: #002882 !important;
+ color: white !important;
+}
+.addproduct .addProHeading{
+  font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: 38px;
+color:  #1A1A1A;
+}
+
+.addproduct .basicinformation{
+  color:  #1A1A1A !important;
+font-size: 16px;
+font-style: normal;
+padding: 20px;
+font-weight: 700;
+line-height: 32px;
+border-radius: 12px;
+background:#FFF;
+box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.10), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+}
+.addproduct .basicinformation h1{
+  color:  #1A1A1A !important;
+
+}
+.recentlyFeatures span{
+  color: #666;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; 
+}
+.recentlyFeatures button{
+  color: #666 ;
+  background-color: #F2F2F2;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px;
+}
+.categorySuggestion{
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+  border-radius: 12px;
+  background: #F2F2F2;
+  margin-top: 20px;
+}
+.basicinformation form .form-group label{
+  
+}
+
+.form-check-input:checked{
+  background-color: #002882;
+  border-color: #002882;
+}
+.important{
+  color: #EEA500;
 }

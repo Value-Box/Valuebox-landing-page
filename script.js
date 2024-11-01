@@ -20,7 +20,7 @@ function redirectHomePage() {
   window.location.href = "index.html";
 }
 function dashboard() {
-  window.location.href = "Dashboard/index.html";
+  window.location.href = "Dashboard/Products/addProduct.html";
 }
 
 // sessionStorage.setItem("targetForm", formId);
