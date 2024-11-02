@@ -274,7 +274,7 @@ text-align: center;
     right: 0;
 }
 .LoginBgPoster{}
-@media(max-width:660px){
+@media(max-width:605px){
     .zinattable table{
     display: block;
     overflow-x: auto;
@@ -282,7 +282,7 @@ text-align: center;
     }
 } 
 
-@media(max-width:660px){
+@media(max-width:605px){
      table{
      display: block;
     overflow-x: auto;
@@ -1084,8 +1084,8 @@ line-height: 32px; /* 133.333% */
   
 }
 .crousalimage{
-    margin: auto;
-    height: fit-content;
+    margin: auto !important;
+    height: fit-content !important;
 }
 @media(max-width:768px){
     .secondparagraph{
