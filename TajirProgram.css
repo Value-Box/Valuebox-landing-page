@@ -9,6 +9,175 @@
 body{
     overflow-x: hidden;
 }
+.header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays above other content */
+    display: flex;
+    padding: 15px 50px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: white; /* Background for visibility */
+  }
+
+  .logo {
+    display: flex;
+    width: 267.473px;
+    align-items: flex-start;
+    gap: 20px;
+    flex-shrink: 0;
+  }
+  .logo img{
+    cursor: pointer;
+  }
+  .logo p {
+    color: #002882;
+    font-family: Outfit;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px;
+  }
+  .links {
+    margin-left: 28px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 0px auto;
+    transition: 0.5s ease;
+  }
+  .links a {
+    text-decoration: none;
+    color: #666666;
+    font-family: Sarabun;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px; /* 150% */
+  }
+  
+  .headerButtons button {
+    padding: 10px 40px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .headerButtons .loginBtn {
+    background-color: white;
+    border: 1.5px solid #002882;
+    color: #33539b;
+    transition: 0.5s;
+  }
+  .headerButtons .loginBtn:hover {
+    background-color: #002882;
+    color: white;
+  }
+  .headerButtons {
+    margin-left: auto;
+    text-align: center;
+  }
+  .links .loginBtn {
+    background-color: white;
+    border: 1.5px solid #002882;
+    color: #33539b;
+    transition: 0.5s;
+  }
+  .links .loginBtn:hover {
+    background-color: #002882;
+    color: white;
+  }
+  .links button {
+    display: none; /* Button hidden initially */
+    padding: 10px 40px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .headerButtons .joinBtn {
+    background-color: #002882;
+    color: white;
+    border: 1.5px solid #002882;
+  }
+  .hamburger {
+    display: none;
+  }
+  .closeIcon {
+    display: none;
+  }
+  .checkBox {
+    display: none;
+  }
+
+  footer {
+    background-color: #f2f2f2;
+  }
+  footer .row {
+    background-color: #f2f2f2;
+  }
+
+  .socialIcons {
+    display: flex;
+    flex-direction: row;
+    /* width: 280px; */
+    gap: 30px; /* Adds space between the icons */
+  }
+  
+  .socialIcons i {
+    background: linear-gradient(
+      90deg,
+      #0032a3 0%,
+      #1a51cb 25%,
+      #3b66c8 50%,
+      #1a51cb 75%,
+      #0032a3 100%
+    ); /* Background color for the icons */
+    color: white; /* Fallback color if gradient doesn't apply */
+    border-radius: 50%; /* Circular shape */
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .socialIcons i::before {
+    background: linear-gradient(
+      90deg,
+      #ffc136 0%,
+      #fac142 19.76%,
+      #ffd168 52.5%,
+      #f5bc3a 77.13%,
+      #e09b00 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+  }
+  .about button {
+    background: linear-gradient(
+      90deg,
+      #ffc136 0%,
+      #fac142 19.76%,
+      #ffd168 52.5%,
+      #f5bc3a 77.13%,
+      #e09b00 100%
+    );
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+  }
+  .socialIcons i:hover {
+    transform: scale(1.1);
+  }
+  .logoVlaueBox span {
+    padding: 10px 10px;
+    border-radius: 24px;
+  }
+  
 .sellerbenifitprogram{
 color: #F4F3FF !important;
 font-family: Anton;
@@ -1138,5 +1307,324 @@ line-height: 32px; /* 133.333% */
         font-style: normal;
         font-weight: 400;
         line-height: 25px;
+    }
+}
+@media (max-width: 1435px) {
+    .hamburger {
+      display: inline;
+      padding: 10px 20px;
+      cursor: pointer;
+      background-color: #f2f2f2;
+      color: #666666;
+      border-radius: 10px;
+    }
+  
+    .closeIcon {
+      display: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      background-color: #f2f2f2;
+      color: #666666;
+      border-radius: 10px;
+    }
+  
+    .closeIcon i {
+      font-size: 24px;
+    }
+  
+    /* Links container */
+    .links {
+      display: flex;
+      flex-direction: column;
+      max-height: 0; /* Initially collapsed */
+      opacity: 0;
+      overflow: hidden;
+      transition: 0.3s ease;
+      position: absolute;
+      width: 100vw; /* Full width viewport */
+      top: 69px;
+      left: 0;
+      width: 100%;
+      text-align: end;
+      background-color: #002882;
+      z-index: 1;
+      margin-left: 0px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Depth effect */
+      border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    }
+    .links a {
+      color: white;
+    }
+    .links .loginBtn {
+      display: none;
+    }
+    /* Animating before and after pseudo-elements for a smooth opening effect */
+    .links::before,
+    .links::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 4px;
+      opacity: 0;
+      width: 100vw;
+      transition: 0.5s;
+    }
+  
+    /* Before pseudo-element for top border animation */
+    .links::before {
+      top: 0;
+    }
+  
+    /* After pseudo-element for bottom border animation */
+    .links::after {
+      bottom: 0;
+      transition: 0.5s;
+    }
+  
+    /* Checkbox checked: animate links open */
+    .checkBox:checked ~ .links {
+      max-height: 400px; /* Final expanded height */
+      opacity: 1; /* Fully visible */
+      max-width: 100%; /* Full viewport width when open */
+      padding: 50px 0px;
+    }
+  
+    /* When not checked, still keep width 100vw */
+    .checkBox:not(:checked) ~ .links {
+      max-height: 0; /* Collapsed height */
+      opacity: 0; /* Hidden */
+      width: 94vw; /* Maintain full width */
+    }
+  
+    /* Show the pseudo-elements with animation */
+    .checkBox:checked ~ .links::before,
+    .checkBox:checked ~ .links::after {
+      opacity: 1;
+      transform: translateY(0); /* Move into view */
+    }
+    .checkBox:checked ~ .links button:hover {
+      border: 1px solid white;
+    }
+  
+    /* Show close icon and hide hamburger */
+    .checkBox:checked ~ .closeIcon {
+      display: inline; /* Show close icon */
+    }
+  
+    .checkBox:checked ~ .hamburger {
+      display: none; /* Hide hamburger icon */
+    }
+  
+    .headerButtons {
+      margin-left: auto;
+      text-align: center;
+    }
+    .verticleLine{
+      display: none;
+    }
+  }
+  @media (max-width: 576px) {
+   
+    
+    .bottomText {
+      position: absolute;
+      top: 24%;
+      padding: 0px 10px;
+      left: 3%;
+      gap: 11px;
+    }
+    .heroSection2 {
+      display: block; /* Show heroSection2 on smaller screens */
+      width: 100%;
+      height: 750px; /* Adjust the height as needed */
+      object-fit: cover; /* Make sure it fits the container properly */
+    }
+    .founderImg img {
+      max-width: 60%; /* Reduce the founder image size */
+      margin-top: 20px; /* Add spacing between text and image */
+      margin-left: -18px;
+    }
+    .year span {
+      rotate: -90deg;
+    }
+    .year img {
+      margin-top: 27px;
+      z-index: 1;
+    }
+    .year {
+      margin-top: 5px;
+    }
+    .utubeVideo iframe {
+      position: absolute;
+      top: 3%;
+      width: 57%; /* Adjust width as needed */
+      height: 60%; /* Adjust height as needed */
+    }
+    .header {
+      padding: 15px 15px 15px 15px;
+    }
+    .headerButtons {
+      position: relative;
+      left: 10px;
+    }
+    .headerButtons button {
+      padding: 10px 12px;
+      border-radius: 5px;
+      font-size: 17px;
+      margin-left: 5px;
+    }
+    .hamburger {
+      padding: 10px 12px;
+    }
+    .closeIcon {
+      font-size: 20px;
+      padding: 4px 10px;
+    }
+    .logo img {
+      width: 90px;
+    }
+    .logo p {
+      font-size: 18px;
+      position: relative;
+      right: 10px;
+    }
+    
+    .about {
+      padding-top: 30px;
+    }
+    .service {
+      padding: 0px 10px;
+    }
+    
+  }
+
+  @media (max-width: 950px) {
+    .headerButtons .loginBtn {
+      display: none;
+    }
+    .headerButtons {
+      text-align: right;
+    }
+    .checkBox:checked ~ .links button {
+      display: inline-block;
+    }
+  }
+
+  @media (max-width: 768px) {
+
+    .headerButtons {
+        text-align: right;
+      }
+      .header {
+        padding: 15px 15px 15px 20px;
+      }
+      .headerButtons button {
+        padding: 10px 32px;
+      }
+      .hamburger {
+        padding: 10px 13px;
+      }
+      .closeIcon {
+        padding: 8px 13px;
+        font-size: 20px;
+      }
+  }
+  @media (max-width: 768px) {
+    .logo p {
+        font-size: 20px;
+    }
+
+}
+  @media (max-width: 576px) {
+    .header {
+        padding: 15px 15px 15px 15px;
+    }
+    .headerButtons button {
+        padding: 10px 12px;
+        border-radius: 5px;
+        font-size: 17px;
+        margin-left: 5px;
+    }
+    .hamburger {
+        padding: 10px 12px;
+    }
+    .logo p {
+        font-size: 18px;
+        position: relative;
+        right: 10px;
+    }
+    .logo img {
+        width: 90px;
+    }
+}
+@media (max-width: 594px) {
+    .logo p {
+        font-size: 18px;
+        right: 10px;
+    }
+    .logo {
+        width: auto;
+    }
+    .logo img {
+        width: 90px;
+    }
+}
+@media (max-width: 536px) {
+    .hamburger {
+        padding: 8px 12px;
+        border-radius: 5px;
+    }
+    .headerButtons button {
+        font-size: 13px;
+    }
+}
+@media (max-width: 507px) {
+    .headerButtons button {
+        margin-left: -11px;
+    }
+    .logo img {
+        width: 80px;
+    }
+    .logo p {
+        font-size: 16px;
+        right: 8px;
+    }
+}
+@media (max-width: 485px) {
+    .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: auto;
+    }
+    .logo p {
+        font-size: 16px;
+        position: relative;
+        right: 0px;
+        top: -20px;
+    }
+    .logo img {
+        width: 80px;
+    }
+}
+@media (max-width: 485px) {
+    .hamburger {
+        padding: 4px 9px;
+    }
+    .headerButtons button {
+        padding: 5px 9px;
+        border-radius: 5px;
+        font-size: 14px;
+        margin-left: 5px;
+    }
+    .logo img {
+        width: 80px;
+    }
+    .logo p {
+        font-size: 11px;
+        position: relative;
+        right: 0px;
+        top: -20px;
     }
 }
