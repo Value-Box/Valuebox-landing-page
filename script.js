@@ -519,6 +519,18 @@ BusinessInfoBussAccSection.forEach((input) => {
   }
 });
 
+
+function disablePastDates() {
+  var today = new Date();
+  var dd = String(today.getDate()).padStart(2, '0');
+  var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+  var yyyy = today.getFullYear();
+
+  today = yyyy + '-' + mm + '-' + dd;
+  document.getElementById("cnicExpiryDate").setAttribute("min", today);
+}
+
+
 document.getElementById("personContactNumber").addEventListener("input", function (event) {
     // Remove all non-numeric characters from input
     let input = event.target.value.replace(/\D/g, "");
