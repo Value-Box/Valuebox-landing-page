@@ -137,6 +137,17 @@ body {
   th, td {
     padding: 15px;
   }
+  .manageproducttable th{
+    color: #1A1A1A;
+text-align: center;
+
+/* Text md/Medium */
+/* font-family: Sarabun; */
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
+  }
   .tableicons span{
   color: var(--Natural-Color-100, #1A1A1A);
   font-family: Sarabun;
@@ -150,14 +161,14 @@ body {
   }
   .tablecell1 h6{
   color:  #1A1A1A;
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: 28px; 
   }
   .RS span{
-    color: var(--Natural-Color-100, #1A1A1A);
-    font-size: 30px;
+    color: #1A1A1A;
+    font-size: 25px;
   }
   .manageproducttableheading{
     border-spacing: 5px;
