@@ -45,7 +45,7 @@ body{
     margin-left: 28px;
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 34px;
     padding: 0px auto;
     transition: 0.5s ease;
   }
@@ -821,6 +821,11 @@ line-height: 24px;
     border: none;
     }
 }
+.verticleLine{
+    width: 1px;
+  height: 24px;
+  background: #CCC;
+  }
 /* Center the arrows vertically */
 .leftArrow,
 .rightArrow {

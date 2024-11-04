@@ -19,6 +19,16 @@ function loginPage(formId) {
 function redirectHomePage() {
   window.location.href = "index.html";
 }
+function redirectSanatPage() {
+  window.location.href = "sanat.html";
+}
+function redirectTajirPage() {
+  window.location.href = "TajirProgram.html";
+}
+
+function redirectZinatPage() {
+  window.location.href = "zinat.html";
+}
 function dashboard() {
   window.location.href = "Dashboard/Products/addProduct.html";
 }
