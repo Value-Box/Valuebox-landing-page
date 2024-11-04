@@ -457,11 +457,12 @@ line-height: 24px; /* 150% */
   background-color: #F2F2F2;
 }
 .tablecell1 h6{
-color: var(--Natural-Color-100, #1A1A1A);
+color:  #1A1A1A;
 font-size: 18px;
 font-style: normal;
 font-weight: 700;
 line-height: 28px; 
+text-align: start;
 }
 .RS span{
   color: var(--Natural-Color-100, #1A1A1A);
@@ -474,16 +475,17 @@ line-height: 28px;
   border-radius: 10px;
   background-color: #D1FADF;
    padding: 4px 20px;
-
 }
 .manageproducttable{
   border: 1px solid #DBDBDB;
   width: 100%;
   text-align: center;
   border-radius: 7px !important;
- 
-}
+ }
 .manageproducttable th{
 background-color: #DBDBDB;
+}
+tablecell1 p{
+  text-align: justify;
 
 }
