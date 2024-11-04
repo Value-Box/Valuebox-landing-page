@@ -334,7 +334,7 @@ gap: 5px;
 border-radius: 5px;
 border: 1px solid #002882;
 color: #002882;
-font-family: Sarabun;
+/* font-family: Sarabun; */
 font-size: 14px;
 font-style: normal;
 font-weight: 500;
@@ -462,7 +462,6 @@ font-size: 18px;
 font-style: normal;
 font-weight: 700;
 line-height: 28px; 
-text-align: start;
 }
 .RS span{
   color: var(--Natural-Color-100, #1A1A1A);
@@ -475,6 +474,9 @@ text-align: start;
   border-radius: 10px;
   background-color: #D1FADF;
    padding: 4px 20px;
+   color: #12B76A;
+
+   
 }
 .manageproducttable{
   border: 1px solid #DBDBDB;
@@ -485,7 +487,109 @@ text-align: start;
 .manageproducttable th{
 background-color: #DBDBDB;
 }
-tablecell1 p{
-  text-align: justify;
+.tableimage img{
+  height: fit-content !important;
+}
+.checkBox1{
+  margin-top: auto;
+}
+.RS svg{
+  vertical-align: text-bottom;
+}
+.number1{
+  color: var(--Natural-Color-40, #999);
+
+/* Display xs/Medium */
+font-family: Sarabun;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 32px; /* 133.333% */
+}
+.outofstockbtn{
+  display: flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-radius: 5px;
+background: #F2F2F2;
+color: var(--Natural-Color-40, #999);
+font-family: Sarabun;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
+}
+.filterproduct span{
+  color: var(--Natural-Color-60, #666);
+
+/* Text xl/Medium */
+font-family: Sarabun;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 30px; /* 150% */
+}
+.title{
+  font-size: 15px;
+}
+.inputtitle label{
+  border-right: 1px solid  #CCC;
+  background:  #F2F2F2;
+}
+.titlebtn{
+  border-right: 1px solid  #CCC;
+  background:  #F2F2F2;
+  outline: none;
+}
+.manageproductmain{
+  background-color: #f2f4f7;
+}
+.inputtitle span{
+  border-left: 0px;
+  background-color: transparent;
+}
+.allbar a{
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  color: #666666;
 
 }
+.allbar a.active {
+  position: relative;
+}
+
+.allbar a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: -1px;
+  width: 100%;
+  height: 4px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #FFC136 0%, #FAC142 19.76%, #FFD168 52.5%, #F5BC3A 77.13%, #E09B00 100%);
+}
+
+  .active{
+    color: #002882 !important;
+  }
+  .allbar a .notification-badge {
+    display: inline-block;
+    min-width: 20px;           /* Adjust size as needed */
+    height: 20px;
+    padding: 2px 6px;
+    font-size: 12px;           /* Adjust font size */
+    font-weight: bold;
+    color: #fff;
+    background-color: #002882 ;     /* Notification background color */
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    top: -5px;                 /* Adjust vertical positioning */
+    left: 5px;                 /* Adjust horizontal positioning */
+  }
+  
