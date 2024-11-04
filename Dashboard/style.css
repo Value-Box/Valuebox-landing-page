@@ -316,61 +316,8 @@ line-height: 24px;
 .important{
   color: #EEA500;
 }
-/* Manage Product Page Css */
-.importexportbtn{
-  /* display: flex; */
-padding: 8px 16px;
-justify-content: center;
-align-items: center;
-gap: 10px;
-border-radius: 5px;
-background: #F2F2F2;
-}
-.bulkmanagebtn{
-padding: 10px 20px;
-justify-content: center;
-align-items: center;
-gap: 5px;
-border-radius: 5px;
-border: 1px solid #002882;
-color: #002882;
-font-family: Sarabun;
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: 24px; 
-}
-.viewcollectionbtn{
-  padding: 10px 20px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border-radius: 5px;
-background: #33539B;
-color: #E6EAF3;
-font-family: Sarabun;
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: 24px; /* 150% */
-}
-.newproduct{
-padding: 10px 20px;
-justify-content: center;
-align-items: center;
-gap: 10px;
-border-radius: 5px;
-background: var(--Primary-Color-Dark-Blue, linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), #002882);
-color: #E6EAF3;
-font-family: Sarabun;
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: 24px;
-}
-.productsselectedbtn{
-  color: var(--Natural-Color-60, #666);
 
+<<<<<<< HEAD
 /* Text xl/Medium */
 font-family: Sarabun;
 font-size: 20px;
@@ -531,3 +478,5 @@ line-height: 24px;
   border-radius: 7.2px;
 background: var(--Blue-light-100, #E0F2FE);
 }
+=======
+>>>>>>> origin/Sajeela-Waseem
