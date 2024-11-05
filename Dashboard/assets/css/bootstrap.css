@@ -34,6 +34,8 @@
   --bs-warning-100: #FEF0C7;
   --bs-danger-100: #FEE4E2;
   --bs-success-100: #D1FADF;
+  --bs-blue-100: #E0F2FE;
+  --bs-purple-100: #E6EAF3;
   --Natural-Color-10: #F2F2F2;
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
@@ -9252,6 +9254,31 @@ fieldset:disabled .btn {
 .bg-success-light {
   background-color: var(--bs-success-100, #FEF0C7); /* Fallback color */
   color: var(--bs-success); /* Text color from Bootstrap */
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: block;
+  font-size: 12px;
+  width: 115px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-purple-light {
+  background-color: var(--bs-purple-100, #FEF0C7); /* Fallback color */
+  color:  #667EB4;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: block;
+  font-size: 12px;
+  width: 115px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bg-blue-light {
+  background-color: var(--bs-blue-100, #FEF0C7); /* Fallback color */
+  color: #0BA5EC;
   padding: 5px 10px;
   border-radius: 5px;
   display: block;

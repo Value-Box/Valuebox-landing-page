@@ -744,7 +744,24 @@
 #sidebar.active .sidebar-wrapper {
   left: 0;
   position: fixed;
-  margin-top: 72px;
+  margin-top: 76px;
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 #sidebar:not(.active) .sidebar-wrapper {
   left: -300px;
@@ -1222,7 +1239,8 @@ line-height: 24px;
   color: #EEA500;
 }
 #main {
-  margin-left: 300px;
+  /* margin-left: 300px; */
+  margin-left: 0px;
   padding: 2rem;
 }
 @media screen and (max-width: 1199px) {
@@ -1394,5 +1412,8 @@ outline: none;
   display: none;
 }
 .dataTable-top{
+  display: none;
+}
+.dataTable-bottom{
   display: none;
 }
