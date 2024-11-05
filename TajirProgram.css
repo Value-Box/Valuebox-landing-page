@@ -382,7 +382,7 @@ line-height: 90px;
 }
 .joinvalueboxgroup{
     position: absolute;
-    top: 2%;
+    top: 5%;
 }
 .joinvaluebox span{
     color: var(--Secondary-Color-Mon-Yellow-80, #F1B733);
@@ -578,15 +578,44 @@ line-height: 24px;
 }
 @media(max-width:1150px){
     .zinat span{
-       
+       font-size: 45px;
     line-height: 55px; /* 125% */
     }
     .zinat h1{
-        
+     font-size: 36px;   
     line-height: 55px;
     }
     .zinat p{
-    
+    font-size: 24px;
+    line-height: 25px; /* 133.333% */
+    }
+}
+@media(max-width:1024px){
+    .zinat span{
+       font-size: 42px;
+    line-height: 55px; /* 125% */
+    }
+    .zinat h1{
+     font-size: 30px;   
+    line-height: 45px;
+    }
+    .zinat p{
+    font-size: 20px;
+    line-height: 25px; /* 133.333% */
+    font-weight: 300;
+    }
+}
+@media(max-width:776px){
+    .zinat span{
+       font-size: 42px;
+    line-height: 55px; /* 125% */
+    }
+    .zinat h1{
+     font-size: 30px;   
+    line-height: 55px;
+    }
+    .zinat p{
+    font-size: 20px;
     line-height: 25px; /* 133.333% */
     }
 }
@@ -596,21 +625,32 @@ line-height: 24px;
 .leftArrow{
     background-color: #7a5af8 !important;
 }
-@media(max-width:768px){
+@media(max-width:1259px){
+    .joinvalueboxgroup h1{
+        color: #F4F3FF;
+        font-family: Anton;
+        font-size: 55px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 70px;
+    }
+  } 
+
+@media(max-width:772px){
     .video{
         width: 100%;
     }
     .joinvalueboxgroup h1{
         color: var(--Purple-50, #F4F3FF);
         font-family: Anton;
-        font-size: 30px;
+        font-size: 28px;
         font-style: normal;
-        font-weight: 400;
+        font-weight: 300;
         line-height: 40px;
     }
     .joinvalueboxgroup{
-        position: absolute;
-        top: 10%;
+        position: relative;
+        top: 5%;
     }
     .joinvaluebox span{
         color: var(--Secondary-Color-Mon-Yellow-80, #F1B733);
@@ -653,6 +693,7 @@ line-height: 24px;
         line-height: 40px;
     }
 }
+
 @media(max-width:562px){
     .video{
         width: 100%;
@@ -732,6 +773,14 @@ line-height: 24px;
         }
 
 }
+@media(max-width:382px){
+    .joinvalueboxgroup{
+        position: absolute;
+        top: 2%;
+        justify-content: center !important;
+    }
+}
+
 @media(max-width:514px){
     .zinattableheading h1{
         color: var(--Natural-Color-80, #333);
