@@ -6,6 +6,11 @@
     padding: 0;
     margin: 0;
 }
+main {
+    overflow: hidden;
+    max-width: 1728px;
+    margin: 0px auto;
+  }
 body{
     overflow-x: hidden;
 }
@@ -661,10 +666,11 @@ line-height: 24px;
         line-height: 40px;
     }
 }
+
 @media(max-width:650px){
     .joinvalueboxgroup{
         position: absolute;
-        top: 5%;
+        top: 8%;
     }
 }
 @media(max-width:613px){
@@ -681,7 +687,7 @@ line-height: 24px;
     }
     .joinvalueboxgroup{
         position: absolute;
-        top: 5%;
+        top: 8%;
         justify-content: center !important;
     }
     .joinvaluebox span{
@@ -694,7 +700,7 @@ line-height: 24px;
     }
 }
 
-@media(max-width:562px){
+@media(max-width:576px){
     .video{
         width: 100%;
     }
@@ -772,13 +778,6 @@ line-height: 24px;
         border: none;
         }
 
-}
-@media(max-width:382px){
-    .joinvalueboxgroup{
-        position: absolute;
-        top: 2%;
-        justify-content: center !important;
-    }
 }
 
 @media(max-width:514px){
@@ -886,11 +885,11 @@ line-height: 24px;
 
 /* Position left and right arrows */
 .leftArrow {
-  left: -20px;
+  left: -30px;
 }
 
 .rightArrow {
-  right: -20px;
+  right: 10px;
 }
 
 /* Center indicators */
@@ -1256,11 +1255,11 @@ line-height: 32px; /* 133.333% */
 }
 @media(max-width:576px){
     .leftArrow {
-        left: -20px;
+        left: -30px;
       }
       
       .rightArrow {
-        right: -15px;
+        right: 10px;
       }
 }
 @media(max-width:768px){
@@ -1673,3 +1672,29 @@ line-height: 32px; /* 133.333% */
         top: -20px;
     }
 }
+@media(max-width:382px){
+    .video{
+        width: 100%;
+    }
+    .joinvalueboxgroup h1{
+        color: var(--Purple-50, #F4F3FF);
+        font-family: Anton;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 40px;
+    }
+    .joinvalueboxgroup{
+        position: absolute;
+        top: 5%;
+    }
+    .joinvaluebox span{
+        color: var(--Secondary-Color-Mon-Yellow-80, #F1B733);
+        font-family: Anton;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px;
+    }
+}
+
