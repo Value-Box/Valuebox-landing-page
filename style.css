@@ -254,6 +254,7 @@ main {
 .responsiveBg {
   display: none;
   margin: 9px !important;
+  background-color: #f9f9f9;
 }
 .sellers-guide-parent,
 .services,
@@ -287,7 +288,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 80px 120px;
+  /* padding: 80px 120px; */
   box-sizing: border-box;
   text-align: center;
   font-size: 19.1px;
@@ -337,7 +338,7 @@ line-height: normal;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 45px 80px;
+  /* padding: 45px 80px; */
   box-sizing: border-box;
   gap: 40px;
   text-align: left;
@@ -490,10 +491,10 @@ line-height: normal;
   color: #002882;
 }
 #carouselExampleIndicators2 {
-  margin: 0px 14px;
+  margin: 0px 10px;
 }
 .row {
-  padding: 100px 80px 100px 80px;
+  /* padding: 100px 80px 100px 80px; */
   background-color: #f9f9f9;
   margin-right: 0px !important;
 }
@@ -1768,7 +1769,7 @@ background: #CCC;
     margin-bottom: 20px;
   }
   .card-text {
-    height: 60px;
+    /* height: 60px; */
   }
 }
 
@@ -2115,7 +2116,7 @@ svg path {
     object-fit: cover;
   }
   .row {
-    padding: 80px 20px 80px 20px;
+    /* padding: 80px 20px 80px 20px; */
   }
 
   .utubeVideo iframe {
@@ -2179,7 +2180,7 @@ svg path {
 }
 @media (max-width: 768px) {
   .row {
-    padding: 50px 20px 50px 20px;
+    /* padding: 50px 20px 50px 20px; */
   }
   .serviceImg {
     text-align: center;
@@ -2333,7 +2334,7 @@ svg path {
 }
 @media (max-width: 576px) {
   .row {
-    padding: 0px 5px 50px 5px;
+    /* padding: 0px 5px 50px 5px; */
   }
   .service img {
     height: 40px;
@@ -2436,9 +2437,9 @@ svg path {
   .responsiveBg {
     display: block;
   }
-  .about {
+  /* .about {
     padding-top: 30px;
-  }
+  } */
   .service {
     padding: 0px 10px;
   }

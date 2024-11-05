@@ -743,7 +743,8 @@
 }
 #sidebar.active .sidebar-wrapper {
   left: 0;
-  margin-top: 76px;
+  position: fixed;
+  margin-top: 72px;
 }
 #sidebar:not(.active) .sidebar-wrapper {
   left: -300px;
@@ -1214,6 +1215,11 @@ line-height: 24px;
 }
 .burger-btn {
   display: none;
+  color: #EEA500;
+  margin: 0px 10px;
+}
+.burger-btn:hover {
+  color: #EEA500;
 }
 #main {
   margin-left: 300px;
