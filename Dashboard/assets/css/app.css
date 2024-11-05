@@ -301,10 +301,10 @@
   position: relative;
 }
 .card .card-title {
-  font-size: 1.2rem;
+  font-size: 20px !important;
 }
 .card .card-body {
-  padding: 1.5rem;
+  padding: 20px;
 }
 .card .card-heading {
   color: #555;
@@ -743,7 +743,8 @@
 }
 #sidebar.active .sidebar-wrapper {
   left: 0;
-  margin-top: 76px;
+  position: fixed;
+  margin-top: 72px;
 }
 #sidebar:not(.active) .sidebar-wrapper {
   left: -300px;
@@ -1214,6 +1215,11 @@ line-height: 24px;
 }
 .burger-btn {
   display: none;
+  color: #EEA500;
+  margin: 0px 10px;
+}
+.burger-btn:hover {
+  color: #EEA500;
 }
 #main {
   margin-left: 300px;
@@ -1221,7 +1227,7 @@ line-height: 24px;
 }
 @media screen and (max-width: 1199px) {
   #main {
-    margin-left: 0;
+    /* margin-left: 0; */
   }
 }
 #main.layout-navbar {
@@ -1372,4 +1378,21 @@ outline: none;
 }
 .navbarEnd .menu .sidebar-item .sidebar-link .downArrowSvg{
   margin-left: auto;
+}
+.apexcharts-canvas{
+  width: 100% !important;
+}
+.apexcharts-canvas svg{
+  width: 100% !important;
+}
+.resize-triggers,
+.resize-triggers > div,
+.contract-trigger:before {
+    display: none !important;
+}
+.dataTable-search{
+  display: none;
+}
+.dataTable-top{
+  display: none;
 }
