@@ -639,16 +639,17 @@
 
         <section class="section mt-5">
           <div class="card">
-              <div class="card-header d-flex justify-content-between">
+              <div class="card-header pb-0 d-flex justify-content-between">
                  <p>Orders  Shipping Today</p>
                  <a href="#" class="moreLink">More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M3.33594 7.99967H12.6693M12.6693 7.99967L8.0026 3.33301M12.6693 7.99967L8.0026 12.6663" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 </a>
               </div>
+              <p class="mx-4 hrLine"></p>
               <div class="card-body">
-                <table class="table table-striped" id="table1">
-                  <thead>
+                <table class="table" id="table1">
+                  <thead class="bg-NColor">
                       <tr>
                           <th rowspan="3">Product</th> <!-- Extend "Product" column to span multiple rows -->
                           <th>Price</th>
@@ -659,17 +660,17 @@
                       <tr>
                           <td>vehicula.aliquet@semconsequat.co.uk</td>
                           <td>vehicula</td>
-                          <td><span class="badge bg-success">Active</span></td>
+                          <td><span class="bg-success-light">Available</span></td>
                       </tr>
                       <tr>
                           <td>fringilla.euismod.enim@quam.ca</td>
                           <td>fringilla</td>
-                          <td><span class="badge bg-success">Active</span></td>
+                          <td><span class="bg-danger-light">Out of stock</span></td>
                       </tr>
                       <tr>
                           <td>mi.Duis@diam.edu</td>
                           <td>mi.Duis@diam.edu</td>
-                          <td><span class="badge bg-danger">Inactive</span></td>
+                          <td><span class=" bg-warning-light">Soon Out of stock</span></td>
                       </tr>
                   </tbody>
               </table>

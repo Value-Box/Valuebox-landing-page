@@ -31,6 +31,10 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
+  --bs-warning-100: #FEF0C7;
+  --bs-danger-100: #FEE4E2;
+  --bs-success-100: #D1FADF;
+  --Natural-Color-10: #F2F2F2;
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -9218,4 +9222,48 @@ fieldset:disabled .btn {
   .d-print-none {
     display: none !important;
   }
+}
+.bg-warning-light {
+  background-color: var(--bs-warning-100, #FEF0C7); /* Fallback color */
+  color: var(--bs-warning); /* Text color from Bootstrap */
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: block;
+  font-size: 12px;
+  width: 115px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-danger-light {
+  background-color: var(--bs-danger-100, #FEF0C7); /* Fallback color */
+  color: var(--bs-danger); /* Text color from Bootstrap */
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: block;
+  font-size: 12px;
+  width: 115px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-success-light {
+  background-color: var(--bs-success-100, #FEF0C7); /* Fallback color */
+  color: var(--bs-success); /* Text color from Bootstrap */
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: block;
+  font-size: 12px;
+  width: 115px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-NColor{
+  color: var(--Natural-Color-10);
+}
+.bg-NColor{
+  background-color: var(--Natural-Color-10);
 }
