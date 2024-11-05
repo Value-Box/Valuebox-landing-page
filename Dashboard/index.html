@@ -647,44 +647,33 @@
                 </a>
               </div>
               <div class="card-body">
-                  <table class="table table-striped" id="table1">
-                      <thead>
-                          <tr>
-                              <th>Product</th>
-                              <th>Price</th>
-                              <th>Status</th>
-                              
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <tr>
-                              <td>Graiden</td>
-                              <td>vehicula.aliquet@semconsequat.co.uk</td>
-                              
-                              <td>
-                                  <span class="badge bg-success">Active</span>
-                              </td>
-                          </tr>
-                          <tr>
-                              <td>Dale</td>
-                              <td>fringilla.euismod.enim@quam.ca</td>
-                              
-                              <td>
-                                  <span class="badge bg-success">Active</span>
-                              </td>
-                          </tr>
-                          <tr>
-                              <td>Nathaniel</td>
-                              <td>mi.Duis@diam.edu</td>
-                              
-                              <td>
-                                  <span class="badge bg-danger">Inactive</span>
-                              </td>
-                          </tr>
-                          
-                          
-                      </tbody>
-                  </table>
+                <table class="table table-striped" id="table1">
+                  <thead>
+                      <tr>
+                          <th rowspan="3">Product</th> <!-- Extend "Product" column to span multiple rows -->
+                          <th>Price</th>
+                          <th>Status</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>vehicula.aliquet@semconsequat.co.uk</td>
+                          <td>vehicula</td>
+                          <td><span class="badge bg-success">Active</span></td>
+                      </tr>
+                      <tr>
+                          <td>fringilla.euismod.enim@quam.ca</td>
+                          <td>fringilla</td>
+                          <td><span class="badge bg-success">Active</span></td>
+                      </tr>
+                      <tr>
+                          <td>mi.Duis@diam.edu</td>
+                          <td>mi.Duis@diam.edu</td>
+                          <td><span class="badge bg-danger">Inactive</span></td>
+                      </tr>
+                  </tbody>
+              </table>
+              
               </div>
           </div>
 
