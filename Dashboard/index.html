@@ -14,9 +14,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/vendors/apexcharts/apexcharts.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />  <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
   <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
   <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="stylesheet" href="assets/vendors/simple-datatables/style.css">
+
   <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -30,9 +33,9 @@
     <a href="#" class="burger-btn d-block d-xl-none">
       <i class="bi bi-justify fs-3"></i>
   </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-    </button>
+    </button> -->
     <div class="collapse navbar-collapse" id="navbarNav">
       <div class="d-flex gap-4 mx-auto searchInput">
           <svg xmlns="http://www.w3.org/2000/svg" width="23" height="22" viewBox="0 0 23 22" fill="none">
@@ -56,7 +59,7 @@
         </li>
         <li class="nav-item p-0">
           <a class="nav-link p-0" href="#">
-              <img class="w-100" src="../Images/UserProfile.svg" alt="">
+              <img class="w-100" src="Images/UserProfile.svg" alt="">
               
           </a>
         </li>
@@ -435,9 +438,9 @@
         </div>
 
         <div class="row mt-5 ">
-<div class="col-8">
-  <div class="row gap-4">
-    <div class="col-7 bg-white orderStatusSec">
+             <div class="col-md-8 pe-0">
+               <div class="row m-0 gap-4">
+                  <div class="col-md-7 bg-white orderStatusSec">
       <p class="d-flex align-items-center fw-bold text-dark m-0 gap-2">
         <span class="boxSvg">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22" fill="none">
@@ -475,8 +478,8 @@
          <span>0.5% </span>Up from yesterday
        </p>
       </div>
-   </div>
-   <div class="col-4 bg-white earningSec">
+                 </div>
+                 <div class="col-md-4 bg-white earningSec">
      <p class="d-flex align-items-center m-0 fw-bold text-dark gap-2">
        <span class="walletSvg">
          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -494,90 +497,212 @@
 <p class="mb-0">To be Released</p>
 <p class="text-dark fw-bold text-end mb-0">15,000 PKR</span>
 </div>
-   </div>
-  </div>
-</div>
-          <div class="col-4 bg-white accHealthSec">
-            <div class="d-flex justify-content-between align-items-center w-100">
-              <p class="m-0 healthTitle">Account Health</p>
-              <button class="healthBtn">Healthy</button>
-            </div>
-            <p class="hrLine"></p>
-            <div class="ratingSec w-100">
-              <h3 class="text-dark">5.00</h3>
-              <div class="starIcon d-flex gap-3">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-            </div>
-            <p class="hrLine"></p>
-            <div class="d-flex justify-content-between align-items-center w-100">
-              <p class="m-0 healthTitle">Reviews</p>
-              <p class="h5 text-dark">4,562</p>
-            </div>
-            <div class="d-flex justify-content-between align-items-center w-100">
-              <p class="m-0 healthTitle">Followers</p>
-              <p class="h5 text-dark">293</p>
-            </div>
-            <div class="d-flex justify-content-between align-items-center w-100">
-              <p class="m-0 healthTitle">Seller Level</p>
-              <p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="27" viewBox="0 0 19 27" fill="none">
-                  <g filter="url(#filter0_d_5656_87189)">
-                    <path d="M8.78125 15.2852L4.92527 15.2852L4.92527 24.7499L8.78125 22.8056L8.78125 15.2852Z" fill="#73488D"/>
-                    <path d="M8.78125 15.2852L12.6372 15.2852L12.6372 24.7499L8.78125 22.8056L8.78125 15.2852Z" fill="#AA75CB"/>
-                    <path d="M8.78224 17.262C13.3619 17.262 17.0744 13.5494 17.0744 8.96977C17.0744 4.39012 13.3619 0.677584 8.78224 0.677584C4.20261 0.677584 0.490084 4.39012 0.490084 8.96977C0.490084 13.5494 4.20261 17.262 8.78224 17.262Z" fill="#DC9E42" stroke="#774700" stroke-width="0.144831"/>
-                    <ellipse cx="8.78344" cy="8.96999" rx="6.41625" ry="6.41627" fill="#734C12"/>
-                    <mask id="mask0_5656_87189" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="2" y="3" width="14" height="14">
-                      <ellipse cx="9.1265" cy="9.65484" rx="6.43118" ry="6.43121" fill="#C28B37"/>
-                    </mask>
-                    <g mask="url(#mask0_5656_87189)">
-                      <ellipse cx="8.78275" cy="8.97027" rx="6.43118" ry="6.43121" fill="#002882"/>
-                      <ellipse cx="8.78275" cy="8.97027" rx="6.43118" ry="6.43121" fill="black" fill-opacity="0.2"/>
-                    </g>
-                    <path d="M8.81814 4.49609L10.2054 7.2707L12.98 7.61752L11.0748 9.75397L11.5927 12.8199L8.81814 11.4326L6.04355 12.8199L6.5661 9.75397L4.65625 7.61752L7.43085 7.2707L8.81814 4.49609Z" fill="url(#paint0_linear_5656_87189)"/>
-                  </g>
-                  <defs>
-                    <filter id="filter0_d_5656_87189" x="0.300587" y="0.491994" width="18.55" height="25.9601" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                      <feOffset dx="0.794326" dy="0.794326"/>
-                      <feGaussianBlur stdDeviation="0.453901"/>
-                      <feComposite in2="hardAlpha" operator="out"/>
-                      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0"/>
-                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_5656_87189"/>
-                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_5656_87189" result="shape"/>
-                    </filter>
-                    <linearGradient id="paint0_linear_5656_87189" x1="8.81814" y1="4.49609" x2="8.81814" y2="12.8199" gradientUnits="userSpaceOnUse">
-                      <stop stop-color="#FCFF80"/>
-                      <stop offset="0.401042" stop-color="#FDE870"/>
-                      <stop offset="1" stop-color="#FFC759"/>
-                    </linearGradient>
-                  </defs>
-                </svg>
-                Rising Seller
-              </p>
-            </div>
-            <p class="hrLine"></p>
-            <div class="d-flex gap-2 iceTrendingUp">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M16 6L18.29 8.29L13.41 13.17L9.41 9.17L2 16.59L3.41 18L9.41 12L13.41 16L19.71 9.71L22 12V6H16Z" fill="#12B76A"/>
-              </svg>
-              <p class="m-0">
-                <span>0.5% </span>Up from yesterday
-              </p>
+                 </div>
+                 <div class="col-md-12 chartCard p-0">
+                     <div class="card w-100 mb-0">
+                       <div class="card-header">
+                           <p class="cardTitle">Total Sale</p>
+                           <h3 class="text-dark">205,789 PKR</h3>
+                       </div>
+                       <div class="card-body">
+                           <div id="bar"></div>
+                           <div class="d-flex gap-2 iceTrendingDown">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                              <path d="M16 18L18.29 15.71L13.41 10.83L9.41 14.83L2 7.41L3.41 6L9.41 12L13.41 8L19.71 14.29L22 12V18H16Z" fill="#F04438"/>
+                            </svg>
+                            <p class="m-0">
+                              <span>1.46% </span> Down from yesterday
+                            </p>
+                           </div>
+                       </div>
+                    </div>
+                 </div>
+               </div>
              </div>
-          </div>
+             <div class="col-md-4">
+              <div class="row">
+                <div class="col-md-12 bg-white accHealthSec">
+                  <div class="d-flex justify-content-between align-items-center w-100">
+                    <p class="m-0 healthTitle">Account Health</p>
+                    <button class="healthBtn">Healthy</button>
+                  </div>
+                  <p class="hrLine"></p>
+                  <div class="ratingSec w-100">
+                    <h3 class="text-dark">5.00</h3>
+                    <div class="starIcon d-flex gap-3">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                  <p class="hrLine"></p>
+                  <div class="d-flex justify-content-between align-items-center w-100">
+                    <p class=" healthTitle">Reviews</p>
+                    <p class="h5 text-dark">4,562</p>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center w-100">
+                    <p class=" healthTitle">Followers</p>
+                    <p class="h5 text-dark">293</p>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center w-100">
+                    <p class=" healthTitle">Seller Level</p>
+                    <p>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="19" height="27" viewBox="0 0 19 27" fill="none">
+                        <g filter="url(#filter0_d_5656_87189)">
+                          <path d="M8.78125 15.2852L4.92527 15.2852L4.92527 24.7499L8.78125 22.8056L8.78125 15.2852Z" fill="#73488D"/>
+                          <path d="M8.78125 15.2852L12.6372 15.2852L12.6372 24.7499L8.78125 22.8056L8.78125 15.2852Z" fill="#AA75CB"/>
+                          <path d="M8.78224 17.262C13.3619 17.262 17.0744 13.5494 17.0744 8.96977C17.0744 4.39012 13.3619 0.677584 8.78224 0.677584C4.20261 0.677584 0.490084 4.39012 0.490084 8.96977C0.490084 13.5494 4.20261 17.262 8.78224 17.262Z" fill="#DC9E42" stroke="#774700" stroke-width="0.144831"/>
+                          <ellipse cx="8.78344" cy="8.96999" rx="6.41625" ry="6.41627" fill="#734C12"/>
+                          <mask id="mask0_5656_87189" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="2" y="3" width="14" height="14">
+                            <ellipse cx="9.1265" cy="9.65484" rx="6.43118" ry="6.43121" fill="#C28B37"/>
+                          </mask>
+                          <g mask="url(#mask0_5656_87189)">
+                            <ellipse cx="8.78275" cy="8.97027" rx="6.43118" ry="6.43121" fill="#002882"/>
+                            <ellipse cx="8.78275" cy="8.97027" rx="6.43118" ry="6.43121" fill="black" fill-opacity="0.2"/>
+                          </g>
+                          <path d="M8.81814 4.49609L10.2054 7.2707L12.98 7.61752L11.0748 9.75397L11.5927 12.8199L8.81814 11.4326L6.04355 12.8199L6.5661 9.75397L4.65625 7.61752L7.43085 7.2707L8.81814 4.49609Z" fill="url(#paint0_linear_5656_87189)"/>
+                        </g>
+                        <defs>
+                          <filter id="filter0_d_5656_87189" x="0.300587" y="0.491994" width="18.55" height="25.9601" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset dx="0.794326" dy="0.794326"/>
+                            <feGaussianBlur stdDeviation="0.453901"/>
+                            <feComposite in2="hardAlpha" operator="out"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_5656_87189"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_5656_87189" result="shape"/>
+                          </filter>
+                          <linearGradient id="paint0_linear_5656_87189" x1="8.81814" y1="4.49609" x2="8.81814" y2="12.8199" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FCFF80"/>
+                            <stop offset="0.401042" stop-color="#FDE870"/>
+                            <stop offset="1" stop-color="#FFC759"/>
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                      Rising Seller
+                    </p>
+                  </div>
+                  <p class="hrLine"></p>
+                  <div class="d-flex gap-2 iceTrendingUp">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M16 6L18.29 8.29L13.41 13.17L9.41 9.17L2 16.59L3.41 18L9.41 12L13.41 16L19.71 9.71L22 12V6H16Z" fill="#12B76A"/>
+                    </svg>
+                    <p class="m-0">
+                      <span>0.5% </span>Up from yesterday
+                    </p>
+                   </div>
+                </div>
+                <div class="col-md-12 mt-4 bg-white peningProdSec">
+                  <div class="d-flex justify-content-between align-items-center w-100">
+                    <div class="my-2">
+                      <p class="m-0 penProdTitle">Pending Product Approval</p>
+                      <p class="h5 mb-0 mt-2 text-dark fw-bold">100</p>
+                    </div>
+                    <span class="approvalSvg d-flex justify-content-center align-items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M17.275 20.25L20.75 16.8L19.7 15.75L17.275 18.125L16.3 17.15L15.25 18.225L17.275 20.25ZM6 9H18V7H6V9ZM18 23C16.6167 23 15.4377 22.5123 14.463 21.537C13.4883 20.5617 13.0007 19.3827 13 18C12.9993 16.6173 13.487 15.4383 14.463 14.463C15.439 13.4877 16.618 13 18 13C19.382 13 20.5613 13.4877 21.538 14.463C22.5147 15.4383 23.002 16.6173 23 18C22.998 19.3827 22.5103 20.562 21.537 21.538C20.5637 22.514 19.3847 23.0013 18 23ZM3 22V5C3 4.45 3.196 3.97933 3.588 3.588C3.98 3.19667 4.45067 3.00067 5 3H19C19.55 3 20.021 3.196 20.413 3.588C20.805 3.98 21.0007 4.45067 21 5V11.675C20.5333 11.4417 20.0457 11.2707 19.537 11.162C19.0283 11.0533 18.516 10.9993 18 11H6V13H13.1C12.8167 13.2833 12.5543 13.5917 12.313 13.925C12.0717 14.2583 11.859 14.6167 11.675 15H6V17H11.075C11.0417 17.1667 11.021 17.3293 11.013 17.488C11.005 17.6467 11.0007 17.8173 11 18C11 18.7 11.096 19.371 11.288 20.013C11.48 20.655 11.7673 21.2673 12.15 21.85L12 22L10.5 20.5L9 22L7.5 20.5L6 22L4.5 20.5L3 22Z" fill="url(#paint0_linear_5656_86762)"/>
+                        <defs>
+                          <linearGradient id="paint0_linear_5656_86762" x1="3" y1="13" x2="23" y2="13" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#0032A3"/>
+                            <stop offset="0.25" stop-color="#1A51CB"/>
+                            <stop offset="0.5" stop-color="#3B66C8"/>
+                            <stop offset="0.75" stop-color="#1A51CB"/>
+                            <stop offset="1" stop-color="#0032A3"/>
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </span>
+                    
+                  </div>
+                  <p class="m-0 mt-2 penProdTitle">23 Products are in process of QA <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <g clip-path="url(#clip0_5656_86766)">
+                        <path d="M9.9974 18.3337C14.5998 18.3337 18.3307 14.6027 18.3307 10.0003C18.3307 5.39795 14.5998 1.66699 9.9974 1.66699C5.39502 1.66699 1.66406 5.39795 1.66406 10.0003C1.66406 14.6027 5.39502 18.3337 9.9974 18.3337Z" stroke="#333333" stroke-width="1.66667"/>
+                        <path d="M10 5.83398H10.0083" stroke="#333333" stroke-width="1.66667" stroke-linecap="round"/>
+                        <path d="M8.32812 9.16699H9.99479V13.3337M8.32812 13.3337H11.6615" stroke="#333333" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_5656_86766">
+                          <rect width="20" height="20" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </span></p>
+                </div>
+              </div>
+             </div>
+         
         </div>
+
+        <section class="section mt-5">
+          <div class="card">
+              <div class="card-header d-flex justify-content-between">
+                 <p>Orders  Shipping Today</p>
+                 <a href="#" class="moreLink">More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M3.33594 7.99967H12.6693M12.6693 7.99967L8.0026 3.33301M12.6693 7.99967L8.0026 12.6663" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                </a>
+              </div>
+              <div class="card-body">
+                  <table class="table table-striped" id="table1">
+                      <thead>
+                          <tr>
+                              <th>Product</th>
+                              <th>Price</th>
+                              <th>Status</th>
+                              
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>Graiden</td>
+                              <td>vehicula.aliquet@semconsequat.co.uk</td>
+                              
+                              <td>
+                                  <span class="badge bg-success">Active</span>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>Dale</td>
+                              <td>fringilla.euismod.enim@quam.ca</td>
+                              
+                              <td>
+                                  <span class="badge bg-success">Active</span>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>Nathaniel</td>
+                              <td>mi.Duis@diam.edu</td>
+                              
+                              <td>
+                                  <span class="badge bg-danger">Inactive</span>
+                              </td>
+                          </tr>
+                          
+                          
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+
+      </section>
     </main>
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
     <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/apexcharts/apexcharts.js"></script>
+    <script src="assets/js/pages/ui-apexchart.js"></script>
+    <script src="assets/vendors/simple-datatables/simple-datatables.js"></script>
 
     <script src="assets/js/main.js"></script>
+    <script>
+      // Simple Datatable
+      let table1 = document.querySelector('#table1');
+      let dataTable = new simpleDatatables.DataTable(table1);
+  </script>
 </body>
 </html>

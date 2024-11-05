@@ -301,10 +301,10 @@
   position: relative;
 }
 .card .card-title {
-  font-size: 1.2rem;
+  font-size: 20px !important;
 }
 .card .card-body {
-  padding: 1.5rem;
+  padding: 20px;
 }
 .card .card-heading {
   color: #555;
@@ -1378,4 +1378,21 @@ outline: none;
 }
 .navbarEnd .menu .sidebar-item .sidebar-link .downArrowSvg{
   margin-left: auto;
+}
+.apexcharts-canvas{
+  width: 100% !important;
+}
+.apexcharts-canvas svg{
+  width: 100% !important;
+}
+.resize-triggers,
+.resize-triggers > div,
+.contract-trigger:before {
+    display: none !important;
+}
+.dataTable-search{
+  display: none;
+}
+.dataTable-top{
+  display: none;
 }

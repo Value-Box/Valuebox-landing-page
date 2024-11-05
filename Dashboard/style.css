@@ -192,7 +192,7 @@ line-height: 24px;
 outline: none;
 }
 #navbar{
-    padding: 13px 40px;
+    padding: 13px 30px;
 }
 
 .navbar-nav{
@@ -285,7 +285,7 @@ color: #33539B;
 .sellID svg{
   cursor: pointer;
 }
-.orderStatusSec,.earningSec,.accHealthSec {
+.orderStatusSec,.earningSec,.accHealthSec,.peningProdSec,.chartCard {
   display: flex;
 /* height: 230px; */
 padding: 20px;
@@ -293,6 +293,7 @@ flex-direction: column;
 justify-content: space-between;
 align-items: flex-start;
 border-radius: 12px;
+box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.10), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);
 }
 .orderStatusSec p .boxSvg{
   display: flex;
@@ -355,4 +356,41 @@ font-family: Sarabun;
   );
   -webkit-background-clip: text;
   background-clip: text;
+}
+.peningProdSec .penProdTitle,.chartCard .cardTitle,.moreLink{
+  color: #666;
+}
+.moreLink:hover{
+  color: #666;
+}
+.peningProdSec .approvalSvg{
+  width: 48px;
+height: 48px;
+padding: 8px;
+border-radius: 9px;
+background: rgba(130, 128, 255, 0.21);
+}
+.chartCard{
+  max-width: 95%;
+}
+.iceTrendingDown p span{
+  color:  #F04438;
+}
+
+
+
+
+@media (max-width: 1090px) {
+  .searchInput {
+      display: flex;
+      width: auto;
+      height: 48px;
+      padding: 5px 5px 5px 20px;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+      border-radius: 10px;
+      border: 1px solid #CCC;
+      background: #F5F5F5;
+  }
 }
