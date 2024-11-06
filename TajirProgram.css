@@ -48,7 +48,7 @@ body{
     line-height: 36px;
   }
   .links {
-    margin-left: 28px;
+    /* margin-left: 28px; */
     display: flex;
     align-items: center;
     gap: 34px;
@@ -933,7 +933,7 @@ text-align: center;
 
 /* Display xs/Regular */
 font-family: Sarabun;
-font-size: 17px;
+font-size: 20px;
 font-style: normal;
 font-weight: 400;
 line-height: 35px; /* 133.333% */
@@ -944,7 +944,7 @@ text-align: center;
 
 /* Text lg/Medium */
 font-family: Sarabun;
-font-size: 15px;
+font-size: 18px;
 font-style: normal;
 font-weight: 500;
 line-height: 28px; /* 155.556% */
@@ -954,7 +954,7 @@ line-height: 28px; /* 155.556% */
 
 /* Text lg/Medium */
 font-family: Sarabun;
-font-size: 15px;
+font-size: 18px;
 font-style: normal;
 font-weight: 500;
 line-height: 28px;
@@ -986,7 +986,7 @@ text-align: center;
 
 /* Display sm/Bold */
 font-family: Sarabun;
-font-size: 20px;
+font-size: 30px;
 font-style: normal;
 font-weight: 700;
 line-height: 38px; /* 126.667% */
@@ -994,10 +994,8 @@ line-height: 38px; /* 126.667% */
 .business p{
     color: var(--Natural-Color-80, #333);
 text-align: center;
-
-/* Text xl/Medium */
 font-family: Sarabun;
-font-size: 18px;
+font-size: 20px;
 font-style: normal;
 font-weight: 500;
 line-height: 20px; /* 150% */
@@ -1005,25 +1003,25 @@ line-height: 20px; /* 150% */
 .empoweringyourbusinessheading h1{
     color: var(--Natural-Color-100, #1A1A1A);
     font-family: Anton;
-    font-size: 30px;
+    font-size: 40px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
 .empoweringyourbusinessheading p{
-    color: var(--Natural-Color-40, #999);
+    color: #999;
 text-align: center;
 
 /* Display xs/Regular */
 font-family: Sarabun;
-font-size: 20px;
+font-size: 24px;
 font-style: normal;
 font-weight: 400;
 line-height: 32px; /* 133.333% */
 }
 .iconbg{
-background: linear-gradient(90deg, #0032A3 0%, #1A51CB 25%, #3B66C8 50%, #1A51CB 75%, #0032A3 100%);
-width: 56px;
+    background: linear-gradient(90deg, #0032A3 0%, #1A51CB 25%, #3B66C8 50%, #1A51CB 75%, #0032A3 100%);
+    width: 56px;
     height: 56px;
     display: flex;
     justify-content: center;
@@ -1043,10 +1041,43 @@ align-items: center !important;
 
 /* Display xs/Regular */
 font-family: Sarabun;
-font-size: 20px;
+font-size: 24px;
 font-style: normal;
 font-weight: 400;
 line-height: 32px; /* 133.333% */
+}
+@media(max-width:992px){
+    .pickpackship h3{
+        color: #333;
+        font-family: Sarabun;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 32px; /* 133.333% */
+        align-items: center !important;
+        }
+        .pickpackship2 p{
+            color: #999 !important;
+        
+        /* Display xs/Regular */
+        font-family: Sarabun;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px; /* 133.333% */
+        }
+        .iconbg{
+            background: linear-gradient(90deg, #0032A3 0%, #1A51CB 25%, #3B66C8 50%, #1A51CB 75%, #0032A3 100%);
+            width: 36px;
+            height: 36px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .iconbg svg{
+            width: 75%;
+        }
+
 }
 .premiumproduct1 h2{
     font-family: Anton;
@@ -1119,23 +1150,118 @@ font-weight: 500;
 line-height: 32px; /* 133.333% */
 }
 .business{
-    padding: 50px !important;
+    padding: 50px 50px !important;
 }
+
 
 .smScreenEmpowering svg {
     width: 100%; /* Make SVG take full width */
     height: auto; /* Adjust height proportionally */
   }
-  
+ 
+  @media (max-width:1400px) {
+    .business{
+        padding: 40px 40px !important;
+    }
+    .business img{
+        width: 20%;
+      }
+}
+@media (max-width:1330px) {
+    .business{
+        padding: 30px 30px !important;
+    }
+   }
+@media (max-width:1300px){
+    .business h3{
+        color: #002882 !important;
+    text-align: center;
+    
+    /* Display sm/Bold */
+    font-family: Sarabun;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38px; /* 126.667% */
+    }
+    .business p{
+        color: var(--Natural-Color-80, #333);
+    text-align: center;
+    
+    /* Text xl/Medium */
+    font-family: Sarabun;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 150% */
+    }
+    .business{
+        padding: 18px 18px !important;
+    }
+    
+}
 @media (max-width:992px) {
     .business{
-        padding: 30px !important;
+        padding: 10px 10px !important;
+    }
+    .business h3{
+        color: #002882 !important;
+    text-align: center;
+    
+    /* Display sm/Bold */
+    font-family: Sarabun;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px; /* 126.667% */
+    }
+    .business p{
+        color: var(--Natural-Color-80, #333);
+    text-align: center;
+    
+    /* Text xl/Medium */
+    font-family: Sarabun;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 15px; /* 150% */
+    }
+    .business img{
+        width: 20%;
+    }
+}
+@media(max-width:576px){
+    .business{
+        padding: 20px !important;
+    }
+    .business h3{
+        color: #002882 !important;
+    text-align: center;
+    font-family: Sarabun;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 35px; /* 126.667% */
+    }
+    .business p{
+        color: var(--Natural-Color-80, #333);
+    text-align: center;
+    
+    /* Text xl/Medium */
+    font-family: Sarabun;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 15px; /* 150% */
+    }
+    .business img{
+        width: 20%;
     }
 }
 @media(max-width:992px){
     .premiumproduct1 h2{
         font-family: Anton;
-    font-size: 20px;
+    font-size: 30px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -1150,13 +1276,14 @@ line-height: 32px; /* 133.333% */
     }
     .premiumproduct li{
         list-style: none;
+        font-size: 16px;
     }
     .premiumproduct p{
         color: #E6EAF3;
     
     /* Display sm/Semibold */
     font-family: Sarabun;
-    font-size: 15px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 600;
     line-height: 38px; /* 126.667% */
@@ -1178,7 +1305,7 @@ line-height: 32px; /* 133.333% */
 @media(max-width:768px){
     .premiumproduct1 h2{
         font-family: Anton;
-    font-size: 40px;
+    font-size: 30px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -1192,7 +1319,7 @@ line-height: 32px; /* 133.333% */
     
     /* Display sm/Semibold */
     font-family: Sarabun;
-    font-size: 24px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 600;
     line-height: 38px; /* 126.667% */
@@ -1254,11 +1381,7 @@ line-height: 32px; /* 133.333% */
     line-height: 32px; /* 133.333% */
     }
 }
-@media(max-width:576px) {
-    .business{
-        padding: 10px !important;
-    }
-}
+
 @media(max-width:576px){
     .leftArrow {
         left: -30px;
@@ -1360,7 +1483,7 @@ line-height: 32px; /* 133.333% */
     }
 }
 @media (max-width: 1264px) {
-    .links {
+    /* .links {
       gap: 20px;
       margin-left: 0px;
   }
@@ -1376,7 +1499,25 @@ line-height: 32px; /* 133.333% */
   }
   .headerButtons button {
     padding: 10px 20px;
-  }
+  } */
+  .links {
+    gap: 20px;
+    margin-left: 0px;
+}
+.header {
+  padding: 15px 30px;
+}
+.logo {
+  gap: 12px;
+  width: auto;
+}
+.logo p{
+  font-size: 20px;
+}
+.headerButtons button {
+  padding: 10px 20px;
+}
+  
   }
   @media (max-width: 1070px) {
     .header {
@@ -1748,3 +1889,6 @@ line-height: 32px; /* 133.333% */
     }
 }
 
+@media (max-width: 1264px) {
+   
+  }

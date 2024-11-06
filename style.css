@@ -60,7 +60,7 @@ main {
 .links a {
   text-decoration: none;
   color: #666666;
-  font-family: Sarabun;
+  /* font-family: Sarabun; */
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -705,7 +705,25 @@ line-height: normal;
 .personalSignupText {
   color: white;
   font-family: "Anton SC";
+  font-size: 50px;
+  /* text-align: center; */
 }
+@media(max-width:992px){
+  .personalSignupText{
+    font-size: 50px;
+    text-align: center;
+  }
+ 
+}
+@media(max-width:576px){
+  .personalSignupText {
+    color: white;
+    font-family: "Anton SC";
+    font-size: 30px;
+    /* text-align: center; */
+  }
+}
+
 .personalSignupText span {
   background: linear-gradient(
     90deg,
@@ -994,7 +1012,7 @@ margin: 80px 0px 40px 0px !important; */
 .BusinessInInfoIndForm h1,
 .BusinessInfoBussAccForm h1,
 .bankDetail h1 {
-  margin: 60px 0px 30px 0px;
+  margin: 0px 0px 30px 0px;
 }
 .bussAddText {
   font-size: 24px;
@@ -2834,5 +2852,10 @@ svg path {
 .loginBtn {
   z-index: 1000; /* Ensures the button is on top */
   pointer-events: auto; /* Makes sure it's clickable */
+}
+@media (max-width:992px){
+  .personalinfoimg img{
+    padding: 10%;
+  }
 }
 
