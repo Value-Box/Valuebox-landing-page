@@ -1239,13 +1239,13 @@ line-height: 24px;
   color: #EEA500;
 }
 #main {
-  /* margin-left: 300px; */
-  margin-left: 0px;
+  margin-left: 300px;
+  /* margin-left: 0px; */
   padding: 2rem;
 }
 @media screen and (max-width: 1199px) {
   #main {
-    /* margin-left: 0; */
+    margin-left: 0;
   }
 }
 #main.layout-navbar {
