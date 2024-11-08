@@ -455,8 +455,15 @@ line-height: 24px; /* 150% */
   border-color: red !important;
   background-color: #f8d7da; /* Optional: Light red background */
 }
-
-#basicInfo,.status,.productOrganiz{
+.addProductSection .form-group label{
+  color:  #666;
+  font-family: Sarabun;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+}
+#basicInfo,.status,.productOrganiz,.pricingSec,.createVariantSec{
   display: flex;
   padding: 20px;
   flex-direction: column;
@@ -467,7 +474,14 @@ line-height: 24px; /* 150% */
   border-radius: 12px;
   box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.10), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);
 }
-
+#basicInfo h5,.status h5,.productOrganiz h5,.pricingSec h5,.createVariantSec h5{
+  color:  #1A1A1A;
+font-family: Sarabun;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 32px;
+}
 .customerInputTxt input{
 width: 20px;
 height: 20px;
@@ -475,7 +489,7 @@ accent-color: #33539B;
 }
 
 .customerInputTxt label{
-  color: var(--Natural-Color-60, #666);
+  color:  #666;
   font-family: Sarabun;
   font-size: 18px;
   font-style: normal;
@@ -485,8 +499,7 @@ accent-color: #33539B;
   }
 
   .heading{
-    color: var(--Natural-Color-60, #666);
-/* Text lg/Semibold */
+    color:  #666;
 font-family: Sarabun;
 font-size: 18px;
 font-style: normal;
@@ -586,4 +599,55 @@ line-height: 24px;
   display: none; /* Keep file input hidden */
   position: absolute; /* Ensure it's clickable */
   z-index: 1; /* Make sure it's above any other elements if needed */
+}
+.pricingSec .priceTableHead{
+  color: #666;
+font-family: Sarabun;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 28px; 
+}
+.priceTableWrapper {
+  border-radius: 8px; /* Apply border-radius to the wrapper */
+  overflow: hidden;   /* Ensure the border-radius is respected */
+  border: 1px solid #CCC; /* Add border to the wrapper */
+}
+
+.priceTable {
+  border-collapse: collapse; /* Collapse borders to remove spacing */
+  width: 100%; /* Ensure the table takes full width */
+}
+
+.priceTable thead tr th{
+  background: var(--Natural-Color-10, #F2F2F2);
+}
+.priceTable th, td{
+  padding: 0px;
+}
+.priceTable th{
+  padding: 10px;
+}
+.priceTable td{
+  padding: 10px !important;
+}
+.form-switch .availabilityCheck{
+  width: 40px;
+  height: 20px;
+  cursor: pointer;
+}
+#specialPriceTxt{
+  display: flex;
+  gap: 5px;
+}
+#specialPriceTxt span{
+  font-size: 14px;
+}
+.addVariantBtn{
+  padding: 10px 20px;
+  border-radius: 5px;
+background: var(--Primary-Color-Dark-Blue, linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), #002882);
+color:  #E6EAF3;
+border: none;
+outline: none;
 }

@@ -426,7 +426,7 @@
       </div>
       <h1 class="addProHeading my-4">Add Product</h1>
       <form>
-        <div class="container-xl p-0" id="basicInformationForm" style="display: none;">
+      <div class="container-xl p-0" id="basicInformationForm" style="display: none;">
           <div class="basicinformation">
             <h2 class="text-dark">Basic Information</h2>
       
@@ -506,136 +506,236 @@
 
       <div class="container-fluid addProductSection">
         <div class="row">
-          <div class="col-8 bg-white" id="basicInfo">
-            <h5 class="text-dark">Basic Information</h5>
-            <div class="form-group w-100">
-              <label for="productName" class="text-dark"><span class="important">*</span> Product Name</label>
-              <input type="text" class="form-control form-control-lg required" id="productName" placeholder="Enter Product name" required>
-            </div>
-      
-          <!-- Category Field -->
-          <div class="form-group w-100">
-              <label for="categoryDropDown" class="text-dark"><span class="important">*</span> Category</label>
-              <select class="choices form-select required" id="categoryDropDown" required>
-                <option value="">-- Select --</option>
-                <optgroup label="Figures">
-                    <option value="Cloths">Cloths</option>
-                    <option value="Cloth>Mens">Cloth > Mens</option>
-                    <option value="Cloth>Womens">Cloth > Womens</option>
-                    <option value="Cloth>Mens>Jeans">Cloth > Mens > Jeans</option>
-                    <option value="Cloth>Womens>Jeans">Cloth > Womens > Jeans</option>
-                </optgroup>
-                <optgroup label="Colors">
-                    <option value="red">Red</option>
-                    <option value="green">Green</option>
-                    <option value="blue">Blue</option>
-                    <option value="purple">Purple</option>
-                </optgroup>
-            </select>
-                           
+          <div class="col-8 ps-0">
+               <div class="bg-white" id="basicInfo">
+                 <h5>Basic Information</h5>
+                 <div class="form-group mt-4 w-100">
+                   <label for="productName" class="text-dark mb-2"><span class="important">*</span> Product Name</label>
+                   <input type="text" class="form-control form-control-lg required" id="productName" placeholder="Enter Product name" required>
+                 </div>
+               
+               <div class="form-group w-100 mt-4">
+    <label for="categoryDropDown" class="text-dark mb-2"><span class="important">*</span> Category</label>
+    <select class="choices form-select required" id="categoryDropDown" required>
+      <option value="">-- Select --</option>
+      <optgroup label="Figures">
+          <option value="Cloths">Cloths</option>
+          <option value="Cloth>Mens">Cloth > Mens</option>
+          <option value="Cloth>Womens">Cloth > Womens</option>
+          <option value="Cloth>Mens>Jeans">Cloth > Mens > Jeans</option>
+          <option value="Cloth>Womens>Jeans">Cloth > Womens > Jeans</option>
+      </optgroup>
+      <optgroup label="Colors">
+          <option value="red">Red</option>
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+          <option value="purple">Purple</option>
+      </optgroup>
+  </select>
+                 
+               </div>
+               <div class="recentlyFeatures mt-4">
+  <span class="recentlyused">Recently used:</span>
+  <button class="btn featurebtn" type="button">Features Phones</button>
+               </div>
+               <div class="d-flex gap-2 align-items-center customerInputTxt mt-4">
+                 <input type="checkbox" name="" id="customerInput">
+                 <label for="customerInput">Enable customers to enter Input Text</label>
+               </div>
+               <div class="card mb-0 w-100 mt-4">
+<p class="heading">Product Description <span>*</span></p>
+<div class="card-body p-0">
+    <div id="productDesc">
+        <!-- <p>This is some sample content.</p> -->
+    </div>
+</div>
+               </div>
+               <div class="card mb-0 w-100 mt-4">
+<p class="heading">Highlights <span>*</span></p>
+<div class="card-body p-0">
+    <div id="highlight">
+        <!-- <p>This is some sample content.</p> -->
+    </div>
+</div>
+               </div>
+               
+               <div class="w-100 mt-4">
+<p class="heading"><span>*</span> Upload Product Image</p>
+<div class="uploadImgSec">
+  <div class="d-flex gap-3 uploadImgSecBtns">
+    <label class="newFileBTn" for="uploadImgSecinput">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+        <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="#E6EAF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="#E6EAF3" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      Upload New Files
+      <!-- <button type="button" >
+
+      </button> -->
+    </label>
+    <input type="file" class="d-none" id="uploadImgSecinput" accept=".jpg, .jpeg, .png">
+    <label class="mediaCenterBtn bg-transparent" for="mediaCenterinput">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+        <path d="M16.5 10C17.6046 10 18.5 9.10457 18.5 8C18.5 6.89543 17.6046 6 16.5 6C15.3954 6 14.5 6.89543 14.5 8C14.5 9.10457 15.3954 10 16.5 10Z" stroke="#002882" stroke-width="1.5"/>
+        <path d="M16.5 10C17.6046 10 18.5 9.10457 18.5 8C18.5 6.89543 17.6046 6 16.5 6C15.3954 6 14.5 6.89543 14.5 8C14.5 9.10457 15.3954 10 16.5 10Z" stroke="black" stroke-opacity="0.2" stroke-width="1.5"/>
+        <path d="M2.5 12.4999L4.252 10.9669C4.69114 10.583 5.25974 10.3802 5.84272 10.3997C6.4257 10.4192 6.97949 10.6595 7.392 11.0719L11.682 15.3619C12.0149 15.6947 12.4546 15.8995 12.9235 15.9401C13.3925 15.9807 13.8608 15.8546 14.246 15.5839L14.545 15.3739C15.1006 14.9837 15.7721 14.7935 16.4498 14.8343C17.1275 14.8752 17.7713 15.1447 18.276 15.5989L21.5 18.4999" stroke="#002882" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M2.5 12.4999L4.252 10.9669C4.69114 10.583 5.25974 10.3802 5.84272 10.3997C6.4257 10.4192 6.97949 10.6595 7.392 11.0719L11.682 15.3619C12.0149 15.6947 12.4546 15.8995 12.9235 15.9401C13.3925 15.9807 13.8608 15.8546 14.246 15.5839L14.545 15.3739C15.1006 14.9837 15.7721 14.7935 16.4498 14.8343C17.1275 14.8752 17.7713 15.1447 18.276 15.5989L21.5 18.4999" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M22.5 12C22.5 16.714 22.5 19.071 21.035 20.535C19.572 22 17.214 22 12.5 22C7.786 22 5.429 22 3.964 20.535C2.5 19.072 2.5 16.714 2.5 12C2.5 7.286 2.5 4.929 3.964 3.464C5.43 2 7.786 2 12.5 2C17.214 2 19.571 2 21.035 3.464C22.009 4.438 22.335 5.807 22.445 8" stroke="#002882" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M22.5 12C22.5 16.714 22.5 19.071 21.035 20.535C19.572 22 17.214 22 12.5 22C7.786 22 5.429 22 3.964 20.535C2.5 19.072 2.5 16.714 2.5 12C2.5 7.286 2.5 4.929 3.964 3.464C5.43 2 7.786 2 12.5 2C17.214 2 19.571 2 21.035 3.464C22.009 4.438 22.335 5.807 22.445 8" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      Select from Media Center
+      <input type="file" class="d-none" id="mediaCenterinput" accept=".jpg, .jpeg, .png">
+
+    </label>
+  </div>
+  <span>Only PNG, JPG and WEBp files are Accepted less then 500kb</span>
+</div>
+               </div>
+               
+               <div class="w-100 mt-4">
+<p class="heading"><span>*</span> Upload Video</p>
+<div class="uploadVidSec">
+  <div class="d-flex gap-3 uploadVidSecBtns">
+    <label class="newVidFileBTn" for="newVidFileBTn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+        <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="#E6EAF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="#E6EAF3" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      Upload New Files
+      <!-- <button type="button" >
+
+      </button> -->
+    </label>
+    <input type="file" class="d-none" id="newVidFileBTn" accept=".jpg, .jpeg, .png">
+
+    <label class="mediaVidCenterBtn bg-transparent" for="mediaVidCenterBtn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+        <path d="M16.5 10C17.6046 10 18.5 9.10457 18.5 8C18.5 6.89543 17.6046 6 16.5 6C15.3954 6 14.5 6.89543 14.5 8C14.5 9.10457 15.3954 10 16.5 10Z" stroke="#002882" stroke-width="1.5"/>
+        <path d="M16.5 10C17.6046 10 18.5 9.10457 18.5 8C18.5 6.89543 17.6046 6 16.5 6C15.3954 6 14.5 6.89543 14.5 8C14.5 9.10457 15.3954 10 16.5 10Z" stroke="black" stroke-opacity="0.2" stroke-width="1.5"/>
+        <path d="M2.5 12.4999L4.252 10.9669C4.69114 10.583 5.25974 10.3802 5.84272 10.3997C6.4257 10.4192 6.97949 10.6595 7.392 11.0719L11.682 15.3619C12.0149 15.6947 12.4546 15.8995 12.9235 15.9401C13.3925 15.9807 13.8608 15.8546 14.246 15.5839L14.545 15.3739C15.1006 14.9837 15.7721 14.7935 16.4498 14.8343C17.1275 14.8752 17.7713 15.1447 18.276 15.5989L21.5 18.4999" stroke="#002882" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M2.5 12.4999L4.252 10.9669C4.69114 10.583 5.25974 10.3802 5.84272 10.3997C6.4257 10.4192 6.97949 10.6595 7.392 11.0719L11.682 15.3619C12.0149 15.6947 12.4546 15.8995 12.9235 15.9401C13.3925 15.9807 13.8608 15.8546 14.246 15.5839L14.545 15.3739C15.1006 14.9837 15.7721 14.7935 16.4498 14.8343C17.1275 14.8752 17.7713 15.1447 18.276 15.5989L21.5 18.4999" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M22.5 12C22.5 16.714 22.5 19.071 21.035 20.535C19.572 22 17.214 22 12.5 22C7.786 22 5.429 22 3.964 20.535C2.5 19.072 2.5 16.714 2.5 12C2.5 7.286 2.5 4.929 3.964 3.464C5.43 2 7.786 2 12.5 2C17.214 2 19.571 2 21.035 3.464C22.009 4.438 22.335 5.807 22.445 8" stroke="#002882" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M22.5 12C22.5 16.714 22.5 19.071 21.035 20.535C19.572 22 17.214 22 12.5 22C7.786 22 5.429 22 3.964 20.535C2.5 19.072 2.5 16.714 2.5 12C2.5 7.286 2.5 4.929 3.964 3.464C5.43 2 7.786 2 12.5 2C17.214 2 19.571 2 21.035 3.464C22.009 4.438 22.335 5.807 22.445 8" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      Select from Media Center
+      <input type="file" class="d-none" id="mediaVidCenterBtn" accept=".jpg, .jpeg, .png">
+
+    </label>
+  </div>
+  <span>Mp4 format for videos with file size less then 5MB</span>
+  <p class="m-0">OR</p>
+  <div class="form-group m-0 w-100">
+    <input type="url" class="form-control form-control-lg required" id="utubeUrl" placeholder="Enter YouTube Link" required>
+    <p id="errorMessage" style="color: red; display: none;">Please enter a valid YouTube video link.</p>
+  </div>
+  
+</div>
+               </div>
+               </div>
+
+        <div class="pricingSec bg-white mt-4">
+          <h5 class="mb-0">Pricing</h5>
+          <span class="priceTableHead">Price Table</span>
+          
+          <div class="form-group w-100 priceTableWrapper">
+            <table class="priceTable">
+              <thead>
+                <tr>
+                  <th>Cost Price</th>
+                  <th>Selling Price</th> 
+                  <th>Profit</th>
+                  <th id="specialPriceTxt">Special Price <span>(Optional)</span></th>
+                  <th>Availability</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="text" oninput="calculatPricing()" id="costPrice" class="form-control" placeholder="RS." required oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td>
+                  <td><input type="text" oninput="calculatPricing()" id="sellingPrice" class="form-control" placeholder="RS." required oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td>
+                  <td><p class="mb-0" id="Profit">Profit</p></td>
+                  <td><input type="text" oninput="calculatPricing()" id="specialPrice" class="form-control" placeholder="RS." required oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td>
+
+                  <!-- <td><input type="text" oninput="calculatPricing()" id="specialPrice" class="form-control" placeholder="RS." required oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td> -->
+                  <td class="text-center">
+                      <div class="form-check form-switch p-0 d-flex justify-content-center">
+                          <input class="form-check-input mx-auto availabilityCheck" type="checkbox" id="flexSwitchCheckChecked">
+                      </div>
+                  </td>
+              </tr>
+              
+                </tr>
+              </tbody>
+              
+              
+            </table>
+          </select>
+                         
+        </div>
+        </div>
+
+        <div class="createVariantSec bg-white mt-4">
+          <h5 class="mb-0">Create Variants</h5>
+          <span class="priceTableHead">Select Option Type</span>
+          
+          <div class="d-flex gap-3 w-100">
+            <fieldset class="form-group w-100 d-flex gap-2">
+                <select class="form-select form-select-lg" onchange="selectedOptionDropdown()" id="selOptType">
+                    <option value="">Please Select</option>
+                    <option value="color">Color</option>
+                    <option value="size">Size</option>
+                    <option value="custom">Custom</option>
+                </select>
+                <input class="form-control form-control-lg" id="customInput1" style="display: none;" type="text">
+            </fieldset>
+            <fieldset class="form-group w-100 " id="customInput2" style="display: none;">
+              <input class="form-control form-control-lg " type="text" >
+            </fieldset>
+            <div class="form-group w-100" id="colorDropDown" style="display: none;">
+              <select class="choices form-select multiple-remove colorDropDown"
+                  multiple="multiple" oninput="selectedColor()">
+                  <optgroup label="Figures">
+                      <option value="red">Red</option>
+                      <option value="green">Green</option>
+                      <option value="blue">Blue</option>
+                      
+                  </optgroup>
+                  <optgroup label="Colors">
+                      <option value="red">Red</option>
+                      <option value="green">Green</option>
+                      <option value="blue">Blue</option>
+                      <option value="purple">Purple</option>
+                  </optgroup>
+              </select>
           </div>
-          <div class="recentlyFeatures">
-            <span class="recentlyused">Recently used:</span>
-            <button class="btn featurebtn" type="button">Features Phones</button>
-         </div>
-         <div class="d-flex gap-2 align-items-center customerInputTxt">
-          <input type="checkbox" name="" id="customerInput">
-          <label for="customerInput">Enable customers to enter Input Text</label>
-         </div>
-         <div class="card mb-0 w-100">
-          <p class="heading">Product Description <span>*</span></p>
-          <div class="card-body p-0">
-              <div id="productDesc">
-                  <!-- <p>This is some sample content.</p> -->
-              </div>
+           
+            <div class="form-group w-100" id="sizeDropDown" style="display: none;">
+              <select class="choices form-select multiple-remove"
+                  multiple="multiple">
+                  <optgroup label="Sizes">
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                  </optgroup>
+                  <optgroup label="Sizes">
+                    <option value="md">MD</option>
+                    <option value="lg">LG</option>
+                    <option value="xl">XL</option>
+                  </optgroup>
+              </select>
           </div>
-         </div>
-         <div class="card mb-0 w-100">
-          <p class="heading">Highlights <span>*</span></p>
-          <div class="card-body p-0">
-              <div id="highlight">
-                  <!-- <p>This is some sample content.</p> -->
-              </div>
-          </div>
-         </div>
-
-         <div class="w-100">
-          <p class="heading"><span>*</span> Upload Product Image</p>
-          <div class="uploadImgSec">
-            <div class="d-flex gap-3 uploadImgSecBtns">
-              <label class="newFileBTn" for="uploadImgSecinput">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                  <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="#E6EAF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="#E6EAF3" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-                Upload New Files
-                <!-- <button type="button" >
-
-                </button> -->
-              </label>
-              <input type="file" class="d-none" id="uploadImgSecinput" accept=".jpg, .jpeg, .png">
-              <label class="mediaCenterBtn bg-transparent" for="mediaCenterinput">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                  <path d="M16.5 10C17.6046 10 18.5 9.10457 18.5 8C18.5 6.89543 17.6046 6 16.5 6C15.3954 6 14.5 6.89543 14.5 8C14.5 9.10457 15.3954 10 16.5 10Z" stroke="#002882" stroke-width="1.5"/>
-                  <path d="M16.5 10C17.6046 10 18.5 9.10457 18.5 8C18.5 6.89543 17.6046 6 16.5 6C15.3954 6 14.5 6.89543 14.5 8C14.5 9.10457 15.3954 10 16.5 10Z" stroke="black" stroke-opacity="0.2" stroke-width="1.5"/>
-                  <path d="M2.5 12.4999L4.252 10.9669C4.69114 10.583 5.25974 10.3802 5.84272 10.3997C6.4257 10.4192 6.97949 10.6595 7.392 11.0719L11.682 15.3619C12.0149 15.6947 12.4546 15.8995 12.9235 15.9401C13.3925 15.9807 13.8608 15.8546 14.246 15.5839L14.545 15.3739C15.1006 14.9837 15.7721 14.7935 16.4498 14.8343C17.1275 14.8752 17.7713 15.1447 18.276 15.5989L21.5 18.4999" stroke="#002882" stroke-width="1.5" stroke-linecap="round"/>
-                  <path d="M2.5 12.4999L4.252 10.9669C4.69114 10.583 5.25974 10.3802 5.84272 10.3997C6.4257 10.4192 6.97949 10.6595 7.392 11.0719L11.682 15.3619C12.0149 15.6947 12.4546 15.8995 12.9235 15.9401C13.3925 15.9807 13.8608 15.8546 14.246 15.5839L14.545 15.3739C15.1006 14.9837 15.7721 14.7935 16.4498 14.8343C17.1275 14.8752 17.7713 15.1447 18.276 15.5989L21.5 18.4999" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
-                  <path d="M22.5 12C22.5 16.714 22.5 19.071 21.035 20.535C19.572 22 17.214 22 12.5 22C7.786 22 5.429 22 3.964 20.535C2.5 19.072 2.5 16.714 2.5 12C2.5 7.286 2.5 4.929 3.964 3.464C5.43 2 7.786 2 12.5 2C17.214 2 19.571 2 21.035 3.464C22.009 4.438 22.335 5.807 22.445 8" stroke="#002882" stroke-width="1.5" stroke-linecap="round"/>
-                  <path d="M22.5 12C22.5 16.714 22.5 19.071 21.035 20.535C19.572 22 17.214 22 12.5 22C7.786 22 5.429 22 3.964 20.535C2.5 19.072 2.5 16.714 2.5 12C2.5 7.286 2.5 4.929 3.964 3.464C5.43 2 7.786 2 12.5 2C17.214 2 19.571 2 21.035 3.464C22.009 4.438 22.335 5.807 22.445 8" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-                Select from Media Center
-                <input type="file" class="d-none" id="mediaCenterinput" accept=".jpg, .jpeg, .png">
-
-              </label>
-            </div>
-            <span>Only PNG, JPG and WEBp files are Accepted less then 500kb</span>
-          </div>
-         </div>
-
-         <div class="w-100">
-          <p class="heading"><span>*</span> Upload Video</p>
-          <div class="uploadVidSec">
-            <div class="d-flex gap-3 uploadVidSecBtns">
-              <label class="newVidFileBTn" for="newVidFileBTn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                  <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="#E6EAF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="#E6EAF3" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-                Upload New Files
-                <!-- <button type="button" >
-
-                </button> -->
-              </label>
-              <input type="file" class="d-none" id="newVidFileBTn" accept=".jpg, .jpeg, .png">
-
-              <label class="mediaVidCenterBtn bg-transparent" for="mediaVidCenterBtn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                  <path d="M16.5 10C17.6046 10 18.5 9.10457 18.5 8C18.5 6.89543 17.6046 6 16.5 6C15.3954 6 14.5 6.89543 14.5 8C14.5 9.10457 15.3954 10 16.5 10Z" stroke="#002882" stroke-width="1.5"/>
-                  <path d="M16.5 10C17.6046 10 18.5 9.10457 18.5 8C18.5 6.89543 17.6046 6 16.5 6C15.3954 6 14.5 6.89543 14.5 8C14.5 9.10457 15.3954 10 16.5 10Z" stroke="black" stroke-opacity="0.2" stroke-width="1.5"/>
-                  <path d="M2.5 12.4999L4.252 10.9669C4.69114 10.583 5.25974 10.3802 5.84272 10.3997C6.4257 10.4192 6.97949 10.6595 7.392 11.0719L11.682 15.3619C12.0149 15.6947 12.4546 15.8995 12.9235 15.9401C13.3925 15.9807 13.8608 15.8546 14.246 15.5839L14.545 15.3739C15.1006 14.9837 15.7721 14.7935 16.4498 14.8343C17.1275 14.8752 17.7713 15.1447 18.276 15.5989L21.5 18.4999" stroke="#002882" stroke-width="1.5" stroke-linecap="round"/>
-                  <path d="M2.5 12.4999L4.252 10.9669C4.69114 10.583 5.25974 10.3802 5.84272 10.3997C6.4257 10.4192 6.97949 10.6595 7.392 11.0719L11.682 15.3619C12.0149 15.6947 12.4546 15.8995 12.9235 15.9401C13.3925 15.9807 13.8608 15.8546 14.246 15.5839L14.545 15.3739C15.1006 14.9837 15.7721 14.7935 16.4498 14.8343C17.1275 14.8752 17.7713 15.1447 18.276 15.5989L21.5 18.4999" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
-                  <path d="M22.5 12C22.5 16.714 22.5 19.071 21.035 20.535C19.572 22 17.214 22 12.5 22C7.786 22 5.429 22 3.964 20.535C2.5 19.072 2.5 16.714 2.5 12C2.5 7.286 2.5 4.929 3.964 3.464C5.43 2 7.786 2 12.5 2C17.214 2 19.571 2 21.035 3.464C22.009 4.438 22.335 5.807 22.445 8" stroke="#002882" stroke-width="1.5" stroke-linecap="round"/>
-                  <path d="M22.5 12C22.5 16.714 22.5 19.071 21.035 20.535C19.572 22 17.214 22 12.5 22C7.786 22 5.429 22 3.964 20.535C2.5 19.072 2.5 16.714 2.5 12C2.5 7.286 2.5 4.929 3.964 3.464C5.43 2 7.786 2 12.5 2C17.214 2 19.571 2 21.035 3.464C22.009 4.438 22.335 5.807 22.445 8" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-                Select from Media Center
-                <input type="file" class="d-none" id="mediaVidCenterBtn" accept=".jpg, .jpeg, .png">
-
-              </label>
-            </div>
-            <span>Mp4 format for videos with file size less then 5MB</span>
-            <p class="m-0">OR</p>
-            <div class="form-group m-0 w-100">
-              <input type="url" class="form-control form-control-lg required" id="utubeUrl" placeholder="Enter YouTube Link" required>
-              <p id="errorMessage" style="color: red; display: none;">Please enter a valid YouTube video link.</p>
-            </div>
             
-          </div>
-         </div>
+        </div>
+        <button class="addVariantBtn" onclick="addVariant()" type="button">Add Variant</button>
+
+        <div id="variantList"></div> <!-- This is where the new rows will be added -->
+
+      </div>
 
           </div>
-          <div class="col-4 ">
+
+          <div class="col-4 pe-0">
             <div class="status bg-white">
-              <h5 class="text-dark mb-0">Status</h5>
+              <h5 class="mb-0">Status</h5>
               
               <div class="form-group w-100">
                 <select class="form-select form-select-lg " id="categoryDropDown" required>
@@ -647,7 +747,7 @@
             </div>
 
             <div class="productOrganiz mt-3 bg-white">
-              <h5 class="text-dark mb-0">Product Organization</h5>
+              <h5 class="mb-0">Product Organization</h5>
               <div class="form-group w-100">
                 <label for="productName" class="text-dark">Product type</label>
                 <input type="text" class="form-control form-control-lg" id="productOrganization" placeholder="" required>
@@ -681,7 +781,7 @@
     <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/vendors/choices.js/choices.min.js"></script>
-<script src="script.js"></script>
+    <script src="script.js"></script>
     <script src="../assets/js/main.js"></script>
     <script>
       ClassicEditor
@@ -746,3 +846,110 @@
   </script>
 </body>
 </html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Search Dropdown</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    <select class="form-select required" id="categoryDropDown" required>
+        <option value="">-- Select --</option>
+        <optgroup label="Figures">
+            <option value="Cloths">Cloths</option>
+            <option value="Cloth>Mens">Cloth > Mens</option>
+            <option value="Cloth>Womens">Cloth > Womens</option>
+            <option value="Cloth>Mens>Jeans">Cloth > Mens > Jeans</option>
+            <option value="Cloth>Womens>Jeans">Cloth > Womens > Jeans</option>
+        </optgroup>
+        <optgroup label="Colors">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="purple">Purple</option>
+        </optgroup>
+    </select>
+
+    <div class="row categorySuggestion mx-0">
+        <h2 class="text-dark">Category Suggestion</h2>
+
+        <div class="form-check d-flex gap-3">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="Cloths">
+            <label class="form-check-label" for="flexRadioDefault1">
+                Cloths
+            </label>
+        </div>
+
+        <div class="form-check d-flex gap-3">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="Cloth>Mens">
+            <label class="form-check-label" for="flexRadioDefault2">
+                Cloth > Mens
+            </label>
+        </div>
+
+        <div class="form-check d-flex gap-3">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" value="Cloth>Womens">
+            <label class="form-check-label" for="flexRadioDefault3">
+                Cloth > Womens
+            </label>
+        </div>
+
+        <div class="form-check d-flex gap-3">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" value="Cloth>Mens>Jeans">
+            <label class="form-check-label" for="flexRadioDefault4">
+                Cloth > Mens > Jeans
+            </label>
+        </div>
+
+        <div class="form-check d-flex gap-3">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5" value="Cloth>Womens>Jeans">
+            <label class="form-check-label" for="flexRadioDefault5">
+                Cloth > Womens > Jeans
+            </label>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    
+    <script>
+        // Initialize Choices.js for the select element
+        const categoryDropdown = document.getElementById('categoryDropDown');
+        const choices = new Choices(categoryDropdown, {
+            searchEnabled: true,  // Enable the search functionality
+            itemSelectText: '',  // Remove the default "Select" text in the search box
+            removeItemButton: true, // Optional: Allow item removal
+            placeholder: true, // Optional: Enable placeholder behavior
+        });
+
+        // Add event listeners to the radio buttons
+        document.querySelectorAll('input[name="flexRadioDefault"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const selectedValue = this.value;  // Get the value of the selected radio button
+                const dropdown = document.getElementById('categoryDropDown');
+
+                // Set the dropdown value to match the selected radio button value
+                dropdown.value = selectedValue;
+
+                // Optionally, if you want to highlight the selected option
+                const options = dropdown.querySelectorAll('option');
+                options.forEach(option => {
+                    if (option.value === selectedValue) {
+                        option.selected = true;  // Mark the option as selected
+                    }
+                });
+
+                // Trigger the 'change' event to update the Choices.js selection
+                choices.setChoiceByValue(selectedValue);
+            });
+        });
+    </script>
+
+</body>
+</html> -->
