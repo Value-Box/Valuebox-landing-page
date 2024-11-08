@@ -11,6 +11,8 @@
     crossorigin="anonymous"
   />
   <link rel="stylesheet" href="TajirProgram.css"/>
+  <link rel="stylesheet" href="headFooter.css" />
+
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -38,8 +40,8 @@
   <header class="header">
     <input type="checkbox" class="checkBox" id="menuToggle" />
 
-    <div class="logo">
-      <img src="images/Group 1.svg" alt="Marketplace Logo" onclick="redirectHomePage()"/>
+    <div class="logo" onclick="redirectHomePage()">
+      <img src="images/Group 1.svg" alt="Marketplace Logo" />
       <p class="mb-0">MARKETPLACE</p>
     </div>
 
@@ -64,7 +66,8 @@
       <i class="fa fa-close"></i>
     </label>
   </header>
-    <div class="container-fluid p-0">
+    <main>
+      <div class="container-fluid p-0">
         <div class="row h-50 m-0 p-0 position-relative">
         <div class="px-0 LoginBgPoster">
            <div class="d-none d-xl-block"> 
@@ -79,11 +82,9 @@
             
         </div>
           <div
-            class="col-12 col-lg-12 col-xl-7 d-flex flex-column p-0 pb-2 pr-2 ps-4 ps-sm-5 pt-xl-5 pt-4 position-absolute sellerbenifitprogram"
-          >
-            <span class="fw-bold text-white mb-sm-4 my-lg-4">
+            class="col-12 col-lg-12 col-xl-7 d-flex flex-column p-0 pb-2 px-2 px-sm-0 ps-sm-5 pt-xl-5 pt-4 px-1 px-sm-0  position-absolute sellerbenifitprogram">
+            <span class="fw-normal fw-sm-bold text-white mb-sm-4 my-lg-4">
               Seller Benefit Program 
-            
             </span>
             <h1>
                 <svg xmlns="http://www.w3.org/2000/svg" width="241" height="33" viewBox="0 0 214 33" fill="none">
@@ -91,7 +92,7 @@
                     <path d="M213.935 4.38396C213.935 4.38396 214.106 4.46888 213.892 4.89335C213.778 4.95025 213.336 5.23289 212.225 5.74225C210.6 6.76097 145.838 4.47647 108.404 8.37395L0.521011 18.4764C-0.476523 18.5594 0.264452 17.7548 0.264452 17.7548C14.1144 13.406 28.3149 8.79848 65.9862 5.61503C91.8131 2.64511 139.879 -0.209166 149.71 0.0120782C164.376 0.0120782 195.61 2.07692 213.935 4.38396Z" fill="#F8DB99"/>
                   </svg>
               </h1>
-            <h5 class="w-xl-75 text-white">
+            <h5 class="fw-light fw-sm-normal w-xl-75 text-white">
                 Earn a mark of excellence and rewards as scale your business.
             </h5>
           </div>
@@ -99,7 +100,7 @@
             class="col-12 col-lg-12 mt-lg-2 mt-xl-0 loginForm p-0 col-xl-5 position-absolute end-0 d-flex align-items-center justify-content-center"
           >
             <div
-              class="col-12 col-sm-10 col-md-10 col-lg-10  p-0 mt-lg-3 mt-xl-5 formParent"
+              class="col-12 col-sm-10 col-md-10 col-lg-10 mt-4 mt-sm-0 p-0 mt-lg-3 mt-xl-5 formParent"
             >
              <img class="w-100" src="images/Image (2).png">
             </div>
@@ -277,7 +278,7 @@
         <h1 class="text-center Eligibility">New <span>Benefit</span> Program<h1 class="text-center benefitimg position-relative"><svg xmlns="http://www.w3.org/2000/svg" width="225" height="60" viewBox="0 0 321 60" fill="none">
             <path d="M101.128 22.8049C22.7721 25.491 1.62005 8.09485 0.896535 3.68135C0.41527 0.745569 2.57127 -1.3423 4.15869 1.31523C4.46431 1.82688 4.03076 2.85022 4.79832 3.68135C20.3509 12.8076 33.9316 14.0443 99.7205 16.0254C154.729 17.6818 307.73 -23.5632 319.692 20.1821C330.002 58.0829 238.586 64.6524 222.467 57.4052C218.821 55.7659 214.111 54.7646 214.216 52.7364C214.32 50.7082 215.215 50.6543 217.67 51.5852C254.769 55.7423 310.782 48.7711 313.359 23.8283C316.53 -6.86487 209.908 13.6788 101.128 22.8049Z" fill="#F1B733"/>
           </svg></h1></h1>
-         <div class="row shadow p-sm-3 p-0 mb-5 bg-body rounded py-4 mt-1">
+         <div class="row shadow p-sm-3 p-0 mb-5 bg-body rounded py-4 mt-1 m-0">
          <div class="col-12 text-start">
             <table class="table3">
                 <thead>
@@ -362,112 +363,131 @@
 </div>
 <div class="container">
   <div class="row treeprogram rounded-2 justify-content-evenly my-5 m-0">
-    <div class="col-md-9 col-12 treeprogramheading mt-5 d-flex flex-column justify-content-center px-4">
+    <div class="col-md-9 col-12 treeprogramheading d-flex flex-column justify-content-center px-4 p-0 mt-4 mt-lg-0">
     <h1>Billion Trees Program: Growing a Greener Future</h1>
     <p>With every order, we donate 10 Rupees to plant a tree, making each purchase a step toward a healthier planet. Join us in creating lasting change, one tree at a time.</p>
     </div>
-    <div class="col-md-3 col-12 d-flex text-center align-items-center mt-4">
+    <div class="col-md-3 col-12 d-flex text-center align-items-center mt-4 p-0">
       <img class="w-100" src="images/objects.svg" alt="">
     </div>
   </div>
   </div>
-  <footer>
-    <div class="container-fluid  px-0">
-      <div class="row px-4 px-sm-5 py-4 py-sm-5 pb-5">
-        <div class="col-12 col-lg-6 about">
-          <h3 class="text-warning">About ValueBox</h3>
-          <p class=" mt-3">
-            ValueBox Marketplace is all about helping sellers succeed and
-            connecting them with customers anytime and anywhere through our
-            easy-to-use online platform and mobile app. Every week, thousands
-            of shoppers explore our marketplace, finding unique products and
-            great deals. We’re passionate about making eCommerce a better
-            experience for both sellers and buyers. Our supportive community
-            provides tools and guidance to help you thrive. Plus, we're
-            committed to sustainability and giving back, creating
-            opportunities for everyone in our marketplace. Join us and be part
-            of a vibrant community that cares!
-          </p>
-          <button class="mt-3" onclick="loginPage('2')">Join Marketplace</button>
+  <div class="container-fluid youdelivertopnotchproducts1 p-0 ">
+    <div class="d-flex justify-content-end align-items-end">
+     <img class="curveImg" src="images/Group (2).svg" alt="">
+    </div>           
+<div class="row px-5 d-flex justify-content-evenly">
+   <div class="col-lg-8 col-12 youdelivertopnotchproductsheading">
+   <h1>You deliver top-notch products. We deliver them to millions of customers</h1>
+   <p>Join our community of professional sellers today!</p>
+   </div>
+   <div class="col-lg-3 col-12 d-flex justify-content-center mt-4 mt-lg-0">
+   <button class="btn youdelivertopnotchproductsbtn">Join Marketplace</button>
+   </div>
+   </div>
+   <div>
+   <img class="curveImg" src="images/Group (1).svg" alt="">
+   </div>
+</div>
+
+    </main>
+    <footer>
+      <div class="container-fluid px-0">
+        <div class="row px-4 px-sm-5 py-4 py-sm-5 pb-5">
+          <div class="col-12 col-lg-6 about">
+            <h3 class="text-warning">About ValueBox</h3>
+            <p class=" mt-3">
+              ValueBox Marketplace is all about helping sellers succeed and
+              connecting them with customers anytime and anywhere through our
+              easy-to-use online platform and mobile app. Every week, thousands
+              of shoppers explore our marketplace, finding unique products and
+              great deals. We’re passionate about making eCommerce a better
+              experience for both sellers and buyers. Our supportive community
+              provides tools and guidance to help you thrive. Plus, we're
+              committed to sustainability and giving back, creating
+              opportunities for everyone in our marketplace. Join us and be part
+              of a vibrant community that cares!
+            </p>
+            <button class="mt-3" onclick="loginPage('2')">Join Marketplace</button>
+          </div>
+          <div class="col-lg-2 mt-lg-0 mt-3 col-xl-3 px-xl-5 px-lg-4">
+            <h6 class="text-warning">Seller Resources</h6>
+            <a href="#" class="text-dark d-block text-decoration-none mt-4"
+              >Seller Center <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 13L13 3M13 3L5.5 3M13 3V10.5" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg></a
+            >
+            <a href="#" class="text-dark text-decoration-none mt-3"
+              >Seller Support <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 13L13 3M13 3L5.5 3M13 3V10.5" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg></a
+            >
+          </div>
+          <div class="col-lg-3 mt-lg-0 mt-5 px-xl-5 px-lg-4">
+            <h6 class="text-warning">About</h6>
+            <a href="#" class="text-dark d-block text-decoration-none mt-4"
+              >Shop ValueBox.pk</a
+            >
+            <a href="#" class="text-dark d-block text-decoration-none mt-4"
+              >Our Social Handles</a
+            >
+            <div class="mt-3 col-12 socialIcons">
+              <a
+                href="https://www.facebook.com/valueboxdotpk/"
+                class="text-decoration-none"
+                target="_blank"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/valueboxdootpk/"
+                class="text-decoration-none"
+                target="_blank"
+                ><i class="fa-brands fa-square-instagram"></i
+              ></a>
+              <a
+                href="https://www.tiktok.com/@valuebox.pk"
+                class="text-decoration-none"
+                target="_blank"
+                ><i class="fa-brands fa-tiktok"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/@valueboxdotpk"
+                class="text-decoration-none"
+                target="_blank"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </div>
+          </div>
         </div>
-        <div class="col-lg-2 mt-lg-0 mt-3 col-xl-3 px-xl-5 px-lg-4">
-          <h6 class="text-warning">Seller Resources</h6>
-          <a href="#" class="text-dark d-block text-decoration-none mt-4"
-            >Seller Center <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M3 13L13 3M13 3L5.5 3M13 3V10.5" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg></a
+
+        <div class="row px-4 px-sm-5 py-4 py-sm-5 m-0">
+          <hr class="py-1 " />
+
+          <!-- Logo Section -->
+          <div
+            class="col-12 col-lg-4 text-center text-lg-left px-0 logoVlaueBox mb-3 mb-lg-0"
           >
-          <a href="#" class="text-dark text-decoration-none mt-3"
-            >Seller Support <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M3 13L13 3M13 3L5.5 3M13 3V10.5" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg></a
-          >
-        </div>
-        <div class="col-lg-3 mt-lg-0 mt-5 px-xl-5 px-lg-4">
-          <h6 class="text-warning">About</h6>
-          <a href="#" class="text-dark d-block text-decoration-none mt-4"
-            >Shop ValueBox.pk</a
-          >
-          <a href="#" class="text-dark d-block text-decoration-none mt-4"
-            >Our Social Handles</a
-          >
-          <div class="mt-3 col-12 socialIcons">
-            <a
-              href="https://www.facebook.com/valueboxdotpk/"
-              class="text-decoration-none"
-              target="_blank"
-              ><i class="fa-brands fa-facebook-f"></i
-            ></a>
-            <a
-              href="https://www.instagram.com/valueboxdootpk/"
-              class="text-decoration-none"
-              target="_blank"
-              ><i class="fa-brands fa-square-instagram"></i
-            ></a>
-            <a
-              href="https://www.tiktok.com/@valuebox.pk"
-              class="text-decoration-none"
-              target="_blank"
-              ><i class="fa-brands fa-tiktok"></i
-            ></a>
-            <a
-              href="https://www.youtube.com/@valueboxdotpk"
-              class="text-decoration-none"
-              target="_blank"
-              ><i class="fa-brands fa-youtube"></i
-            ></a>
+            <span class="bg-light">
+              <img src="images/Group 1.svg" alt="ValueBox Logo" />
+            </span>
+          </div>
+
+          <!-- Links Section -->
+          <div class="col-12 col-lg-4 text-center px-0 mb-3 mb-lg-0">
+            <a href="#" class="text-decoration-none text-dark px-3">English</a>
+            <a href="#" class="text-decoration-none text-dark px-3">Privacy</a>
+            <a href="#" class="text-decoration-none text-dark px-3">Legal</a>
+          </div>
+
+          <!-- Copyright Section -->
+          <div class="col-12 col-lg-4 text-center text-lg-end px-0">
+            <span class="text-dark"
+              >&copy; 2024 ValueBox. All Rights Reserved.</span
+            >
           </div>
         </div>
       </div>
-
-      <div class="row px-lg-5 py-4 px-1">
-        <hr class="text-light py-1" />
-
-        <!-- Logo Section -->
-        <div
-          class="col-12 col-lg-4 text-center text-lg-left px-0 logoVlaueBox mb-3 mb-lg-0"
-        >
-          <span class="bg-light">
-            <img src="images/Group 1.svg" alt="ValueBox Logo" />
-          </span>
-        </div>
-
-        <!-- Links Section -->
-        <div class="col-12 col-lg-4 text-center px-0 mb-3 mb-lg-0">
-          <a href="#" class="text-decoration-none text-dark px-3">English</a>
-          <a href="#" class="text-decoration-none text-dark px-3">Privacy</a>
-          <a href="#" class="text-decoration-none text-dark px-3">Legal</a>
-        </div>
-
-        <!-- Copyright Section -->
-        <div class="col-12 col-lg-4 text-center text-lg-end px-0">
-          <span class="text-dark"
-            >&copy; 2024 ValueBox. All Rights Reserved.</span
-          >
-        </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
   <script src="script.js"></script>
 
