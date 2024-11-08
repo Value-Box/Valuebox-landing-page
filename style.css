@@ -9,19 +9,7 @@
   padding: 0;
 }
 
-.header {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  z-index: 1000; /* Ensure it stays above other content */
-  display: flex;
-  padding: 15px 50px;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  background-color: white; /* Background for visibility */
-}
+
 main {
   overflow: hidden;
   max-width: 1728px;
@@ -37,7 +25,6 @@ main {
   align-items: flex-start;
   gap: 20px;
   flex-shrink: 0;
-  margin: auto 0px;
 }
 .logo img{
   cursor: pointer;
@@ -614,9 +601,7 @@ line-height: normal;
 .heroSection2 {
   display: none; /* Hide heroSection2 by default */
 }
-.checkBox {
-  display: none;
-}
+
 
 .accordion-button::after {
   display: none;
@@ -706,7 +691,25 @@ line-height: normal;
 .personalSignupText {
   color: white;
   font-family: "Anton SC";
+  font-size: 50px;
+  /* text-align: center; */
 }
+@media(max-width:992px){
+  .personalSignupText{
+    font-size: 50px;
+    text-align: center;
+  }
+ 
+}
+@media(max-width:576px){
+  .personalSignupText {
+    color: white;
+    font-family: "Anton SC";
+    font-size: 30px;
+    /* text-align: center; */
+  }
+}
+
 .personalSignupText span {
   background: linear-gradient(
     90deg,
@@ -995,7 +998,7 @@ margin: 80px 0px 40px 0px !important; */
 .BusinessInInfoIndForm h1,
 .BusinessInfoBussAccForm h1,
 .bankDetail h1 {
-  margin: 60px 0px 30px 0px;
+  margin: 0px 0px 30px 0px;
 }
 .bussAddText {
   font-size: 24px;
@@ -1139,11 +1142,21 @@ input::placeholder {
 }
 .queryText p,
 .queryQuestion p {
-  font-size: 21px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: 38px;
   color: #e09b00;
+}
+@media(max-width:418px){
+  .queryText p,
+.queryQuestion p {
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 38px;
+  color: #e09b00;
+}
 }
 .yellowText,
 .blueText {
@@ -1250,7 +1263,7 @@ input::placeholder {
 .stepsCards .stCard span {
   color: #1a1a1a;
   /* Display sm/Bold */
-  font-size: 30px;
+  font-size: 25px;
   font-style: normal;
   font-weight: 700;
   line-height: 38px;
@@ -1259,7 +1272,7 @@ input::placeholder {
 .stepsCards .stCard p {
   color: #999;
   font-family: Sarabun;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 30px; /* 150% */
@@ -1398,7 +1411,7 @@ background: #CCC;
 }
 @media (max-width: 1264px) {
   .links {
-    gap: 12px;
+    gap: 20px;
     margin-left: 0px;
 }
 .header {
@@ -1421,14 +1434,8 @@ background: #CCC;
     gap: 12px;
 }
 .links {
-  gap: 12px;
+  gap: 15px;
 }
-.logo p {
-  font-size: 18px;
-}
-}
-.logo p {
-  font-size: 20px;
 }
 @media (max-width: 1024px) {
   .hamburger {
@@ -1782,17 +1789,7 @@ background: #CCC;
 
 /* For extra small screens, no additional styling needed as Bootstrap handles it */
 
-@media (max-width: 950px) {
-  .headerButtons .loginBtn {
-    display: none;
-  }
-  .headerButtons {
-    text-align: right;
-  }
-  .checkBox:checked ~ .links button {
-    display: inline-block;
-  }
-}
+
 
 .siteExperience {
   background-color: #e6eaf3;
@@ -2150,7 +2147,7 @@ svg path {
     line-height: 28px;
   }
   .previewSection .previewText {
-    height: 60%;
+    height: 80%;
   }
   .LoginBgPoster img {
     height: 104% !important;
@@ -2209,28 +2206,7 @@ svg path {
     width: 57%; /* Adjust width as needed */
     height: 77%; /* Adjust height as needed */
   }
-  .headerButtons {
-    text-align: right;
-  }
-  .header {
-    padding: 15px 15px 15px 20px;
-  }
-  .headerButtons button {
-    padding: 10px 32px;
-  }
-  .hamburger {
-    padding: 10px 13px;
-  }
-  .closeIcon {
-    padding: 8px 13px;
-    font-size: 20px;
-  }
-  .logo img {
-    width: 97px;
-  }
-  .logo p {
-    font-size: 20px;
-  }
+ 
   #carouselExampleCaptions {
     height: 350px;
   }
@@ -2252,7 +2228,7 @@ svg path {
     max-height: 100%;
   }
   .previewSection .previewText {
-    height: 70%;
+    height: 82%;
   }
   .LoginBgPoster {
     max-height: 600px;
@@ -2278,7 +2254,7 @@ svg path {
     height: 44%;
   } */
   .previewSection .previewText {
-    height: 68%;
+    height: 82%;
   }
 
   .LoginBgPoster img {
@@ -2327,18 +2303,7 @@ svg path {
   margin: 20px 0px 30px 0px;
 }
 }
-@media (max-width: 594px) {
-  .logo img {
-    width: 90px;
-  }
-  .logo p {
-    font-size: 18px;
-    right: 10px;
-  }
-  .logo {
-    width: auto;
-  }
-}
+
 @media (max-width: 576px) {
   .service img {
     height: 40px;
@@ -2393,7 +2358,7 @@ svg path {
     width: 57%; /* Adjust width as needed */
     height: 60%; /* Adjust height as needed */
   }
-  .header {
+  /* .header {
     padding: 15px 15px 15px 15px;
     gap: 20px;
   }
@@ -2421,7 +2386,7 @@ svg path {
     font-size: 18px;
     position: relative;
     right: 10px;
-  }
+  } */
   .row.cards {
     display: none;
   }
@@ -2453,6 +2418,15 @@ svg path {
   }
   .previewSection .previewText {
     height: 86%;
+  }
+  .previewSection .previewText p{
+    color: var(--Natural-Color-00, #FCFCFC);
+
+/* Text md/Regular */
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
   }
   .previewSection {
     padding-bottom: 0px;
@@ -2548,28 +2522,7 @@ svg path {
 }
 }
 @media (max-width: 536px) {
-  .headerButtons button {
-    font-size: 13px;
-  }
-  .hamburger {
-    padding: 8px 12px;
-    border-radius: 5px;
-  }
-}
-@media (max-width: 507px) {
-  .logo img {
-    width: 80px;
-  }
-  .logo p {
-    font-size: 16px;
-    right: 8px;
-  }
-  .logo {
-    width: auto;
-  }
-  .headerButtons button {
-    margin-left: -11px;
-  }
+  
   .stepProgressBar {
     top: 47%;
     left: -218%;
@@ -2581,7 +2534,7 @@ svg path {
   } */
 }
 @media (max-width: 485px) {
-  .header {
+  /* .header {
     padding: 15px 15px 15px 15px;
   }
   .headerButtons {
@@ -2609,7 +2562,7 @@ svg path {
     position: relative;
     right: 0px;
     top: -20px;
-  }
+  } */
   .bgSmScreen .imgText {
     left: 0px;
   }
@@ -2617,12 +2570,11 @@ svg path {
     margin: 23px 0px;
     margin: 0px auto;
   }
-  .logo {
+  /* .logo {
     display: flex;
     flex-direction: column;
     align-items: start;
     width: auto;
-    margin: auto 0px;
   }
   .reviewbg {
     max-height: 100%;
@@ -2650,10 +2602,10 @@ svg path {
     width: 57%;
     height: 50%;
   }
-  .logo {
+  /* .logo {
     display: flex;
     flex-direction: column;
-    align-items: start; /* Optionally center the text and image */
+    align-items: start; 
     width: auto;
   }
   .logo p {
@@ -2666,7 +2618,7 @@ svg path {
   .header {
     padding: 15px 15px 15px 15px;
     height: 70px;
-  }
+  } */
   .bgSmScreen .imgText {
     left: 0px;
   }
@@ -2840,5 +2792,126 @@ svg path {
 .loginBtn {
   z-index: 1000; /* Ensures the button is on top */
   pointer-events: auto; /* Makes sure it's clickable */
+}
+@media (max-width:992px){
+  .personalinfoimg img{
+    padding: 10%;
+  }
+}
+.youdelivertopnotchproducts1{
+  background-color: #002882;
+ 
+   }
+.youdelivertopnotchproductsheading h1{
+  color: var(--Secondary-Color-Mon-Yellow, #EEA500);
+  font-family: Anton;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.youdelivertopnotchproductsheading p{
+  color: var(--Secondary-Color-Mon-Yellow-10, #FEF6E6);
+
+/* Display xs/Medium */
+
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 32px; /* 133.333% */
+} 
+.youdelivertopnotchproductsbtn{
+  color:  #002882 !important;
+  /* Display xs/Semibold */
+ 
+  font-size: 24px ;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: 32px !important; /* 133.333% */
+  display: flex !important;
+height: 68px !important;
+padding: 10px 20px !important;
+justify-content: center !important;
+align-items: center !important;
+gap: 10px !important;
+border-radius: 10px !important;
+background:  #E6EAF3 !important;
+}
+.curveImg{
+  max-width: 100%;
+}
+@media(max-width:1446px){
+  .curveImg{
+      width: 150px;
+  }
+  .youdelivertopnotchproductsheading h1{
+      color: var(--Secondary-Color-Mon-Yellow, #EEA500);
+      font-family: Anton;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+   }
+   .youdelivertopnotchproductsheading p{
+      color: var(--Secondary-Color-Mon-Yellow-10, #FEF6E6);
+/* Display xs/Medium */
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 32px; /* 133.333% */
+   } 
+  .youdelivertopnotchproductsbtn{
+      color: var(--Primary-Color-Dark-Blue, #002882);
+
+      /* Text md/Semibold */
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 24px; /* 150% */
+      display: flex;
+height: 68px;
+padding: 10px 20px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+   }  
+}
+
+@media(max-width:768px){
+  .curveImg{
+      width: 100px;
+  }
+  .youdelivertopnotchproductsheading h1{
+      color: var(--Secondary-Color-Mon-Yellow, #EEA500);
+      font-family: Anton;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+   }
+   .youdelivertopnotchproductsheading p{
+      color: var(--Secondary-Color-Mon-Yellow-10, #FEF6E6);
+/* Display xs/Medium */
+font-family: Sarabun;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 32px; /* 133.333% */
+   } 
+   .youdelivertopnotchproductsbtn{
+      color: var(--Primary-Color-Dark-Blue, #002882);
+
+      /* Text md/Semibold */
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 24px; /* 150% */
+      display: flex;
+height: 60px;
+padding: 10px 20px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+   }  
 }
 

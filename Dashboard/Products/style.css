@@ -450,3 +450,204 @@ line-height: 24px; /* 150% */
     background: #F5F5F5;
     }
     }
+    /* Style for the red border when a field is invalid */
+.is-invalid {
+  border-color: red !important;
+  background-color: #f8d7da; /* Optional: Light red background */
+}
+.addProductSection .form-group label{
+  color:  #666;
+  font-family: Sarabun;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+}
+#basicInfo,.status,.productOrganiz,.pricingSec,.createVariantSec{
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.10), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+}
+#basicInfo h5,.status h5,.productOrganiz h5,.pricingSec h5,.createVariantSec h5{
+  color:  #1A1A1A;
+font-family: Sarabun;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 32px;
+}
+.customerInputTxt input{
+width: 20px;
+height: 20px;
+accent-color: #33539B;
+}
+
+.customerInputTxt label{
+  color:  #666;
+  font-family: Sarabun;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  user-select: none;
+  }
+
+  .heading{
+    color:  #666;
+font-family: Sarabun;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 28px; 
+  }
+
+  .heading span{
+    color:  #EEA500;
+    font-family: Sarabun;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+  }
+
+  .tags-input-wrapper {
+    background: transparent;
+    padding: 10px;
+    border-radius: 4px;
+    max-width: 400px;
+    border: 1px solid #ccc;
+}
+.tags-input-wrapper input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 140px;
+    margin-left: 8px;
+}
+.tags-input-wrapper .tag {
+    display: inline-block;
+    background-color: #002882;
+    color: white;
+    border-radius: 4px;
+    padding: 0px 6px 0px 7px;
+    margin-right: 5px;
+    font-size:16px;
+    margin-bottom: 5px;
+    
+}
+.tags-input-wrapper .tag a {
+    margin: 0 7px 3px;
+    display: inline-block;
+    cursor: pointer;
+    color:white;
+    text-decoration:none;
+}
+.uploadImgSec,.uploadVidSec {
+  display: flex;
+  padding: 30px 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+  border-radius: 5px;
+  border: 2px dashed #CCC; /* Increase the width of the dashed border */
+  background: var(--00, #FFF);
+}
+
+.uploadImgSec span{
+  color: #999;
+font-family: Sarabun;
+font-size: 16px;
+font-style: italic;
+font-weight: 400;
+line-height: 24px;
+}
+.uploadImgSec .uploadImgSecBtns  .newFileBTn, 
+.uploadImgSec .uploadImgSecBtns  .mediaCenterBtn,
+.uploadVidSec .uploadVidSecBtns  .newVidFileBTn, 
+.uploadVidSec .uploadVidSecBtns  .mediaVidCenterBtn
+ {
+  display: flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;  /* Add cursor to indicate the buttons are clickable */
+}
+
+.uploadImgSec .uploadImgSecBtns .newFileBTn,.uploadVidSec .uploadVidSecBtns .newVidFileBTn {
+  color:  #E6EAF3;
+  background:  linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), #002882;
+  border: none;
+}
+
+.uploadImgSec .uploadImgSecBtns .mediaCenterBtn,.uploadVidSec .uploadVidSecBtns .mediaVidCenterBtn {
+  border: 1px solid  #EEA500;
+  color:  #002882;
+}
+
+.uploadImgSec input[type="file"] {
+  display: none; /* Keep file input hidden */
+  position: absolute; /* Ensure it's clickable */
+  z-index: 1; /* Make sure it's above any other elements if needed */
+}
+.pricingSec .priceTableHead{
+  color: #666;
+font-family: Sarabun;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 28px; 
+}
+.priceTableWrapper {
+  border-radius: 8px; /* Apply border-radius to the wrapper */
+  overflow: hidden;   /* Ensure the border-radius is respected */
+  border: 1px solid #CCC; /* Add border to the wrapper */
+}
+
+.priceTable {
+  border-collapse: collapse; /* Collapse borders to remove spacing */
+  width: 100%; /* Ensure the table takes full width */
+}
+
+.priceTable thead tr th{
+  background: var(--Natural-Color-10, #F2F2F2);
+}
+.priceTable th, td{
+  padding: 0px;
+}
+.priceTable th{
+  padding: 10px;
+}
+.priceTable td{
+  padding: 10px !important;
+}
+.form-switch .availabilityCheck{
+  width: 40px;
+  height: 20px;
+  cursor: pointer;
+}
+#specialPriceTxt{
+  display: flex;
+  gap: 5px;
+}
+#specialPriceTxt span{
+  font-size: 14px;
+}
+.addVariantBtn{
+  padding: 10px 20px;
+  border-radius: 5px;
+background: var(--Primary-Color-Dark-Blue, linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), #002882);
+color:  #E6EAF3;
+border: none;
+outline: none;
+}

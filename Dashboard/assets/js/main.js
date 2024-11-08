@@ -65,3 +65,7 @@ if(typeof PerfectScrollbar == 'function') {
 
 // Scroll into active sidebar
 document.querySelector('.sidebar-item.active').scrollIntoView(false)
+document.getElementById('burger-btn').addEventListener('click', function(event) {
+    event.preventDefault();  // Prevent the default behavior (page reload or scroll)
+    // Add any other actions you want to trigger on click (e.g., opening a menu)
+  });

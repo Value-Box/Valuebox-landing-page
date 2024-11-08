@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ValueBox</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="headFooter.css" />
+
     <link rel="icon" type="image/x-icon" href="/images/Valuebox logo 1 1.svg" />
     <link
       rel="stylesheet"
@@ -24,8 +26,8 @@
     <header class="header">
       <input type="checkbox" class="checkBox" id="menuToggle" />
 
-      <div class="logo">
-        <img src="images/Group 1.svg" alt="Marketplace Logo" onclick="redirectHomePage()"/>
+      <div class="logo" onclick="redirectHomePage()">
+        <img src="images/Group 1.svg" alt="Marketplace Logo" />
         <p class="mb-0">MARKETPLACE</p>
       </div>
 
@@ -55,7 +57,7 @@
       <div class="container-fluid p-0">
         <div class="row m-0 accountapprovalBg px-2 py-3 py-sm-4 py-md-5">
           <div
-            class="col-12 col-lg-8 d-flex px-sm-2 px-lg-5 pt-2 align-items-center order-2 order-lg-1">
+            class="col-12 col-lg-7 d-flex px-sm-2 px-lg-5 pt-2 align-items-center order-2 order-lg-1">
             <div class="row m-0 bg-whitw w-100 g-5 rounded-4 p-3 p-sm-4 pt-md-5 rightIconsParent">
               <div class="container p-0">
                 <div class="steps accountApprovalPage">
@@ -113,7 +115,7 @@
         <div class="row m-0 bg-transparent py-5 justify-content-center">
           <div class="col-12 p-0">
             <h1 class="text-center">Congratulations!</h1>
-            <p class="text-center col-lg-7 mx-auto mt-4">
+            <p class="text-center col-lg-7 mx-auto mt-4 text-secondary">
               Fantastic! You've successfully submitted your business
               information. You're now closer than ever to becoming a part of our
               thriving marketplace.
@@ -122,7 +124,7 @@
         </div>
 
         <div class="col-11 my-2 mx-auto">
-            <div class="row m-0 align-items-center applicationStatus">
+            <div class="row m-0 align-items-center applicationStatus border border-secondary mb-5 mb-sm-0">
                 <div class="col-md-5 col-xl-7 p-0 applicationStatusText">
                   <h3>Application Status</h3>
                   <p class="mx-1 col-md-12 col-lg-12 col-xl-12">NOTE: You can edit your profile until the status becomes “In Processing”</p>
@@ -140,12 +142,12 @@
                 </div>
                 
               </div>
-              <p class="processedText text-center text-md-left">Your Application will be processed within next 3 working days</p>
+              <p class="processedText text-md-left mb-5 d-none d-md-block">Your Application will be processed within next 3 working days</p>
         </div>
       </div>
 
-      <div class="container-fluid querySection">
-<div class="row bg-transparent m-0 py-2 py-sm-5">
+      <div class="container-fluid querySection ">
+    <div class="row bg-transparent m-0 py-3 py-sm-5 px-5">
     <div class="col-12 col-sm-2 text-center my-auto">
         <img class="w-100 d-none d-sm-block" src="images/helpImage.png" alt="">
         <img class="w-50 py-3 d-sm-none" src="images/helpImage.png" alt="">
@@ -169,7 +171,7 @@
 </div>
       </div>
 
-      <div class="container-fluid p-0">
+      <div class="container-fluid p-0 ">
         <div class="row m-0 p-4">
             <div class="col-12">
                 <p class="text-center col-12 col-lg-9 mx-auto mt-5"><span class="yellowText">You're just</span> <span class="blueText">3 steps</span> <span class="yellowText">away from boosting your business and</span> <span class="blueText">unlocking more orders</span> <span class="yellowText">with ValueBox!</span></p>
@@ -212,7 +214,7 @@
           </div>
         </div>
 
-        <div class="col-9 col-md-12 gap-3 gap-lg-5 d-md-flex">
+        <div class="col-9 col-md-12 gap-3 gap-lg-5 d-md-flex px-sm-5 mb-5 py-sm-5">
           <div class="col-12 col-md py-4 px-4 stCard">
     <div class="row m-0 bg-transparent p-0">
       <div class="col-sm-8 col-md-12">
@@ -251,8 +253,8 @@
     </main>
 
     <footer>
-      <div class="container-fluid  px-0">
-        <div class="row px-4 px-sm-5 pb-5">
+      <div class="container-fluid px-0">
+        <div class="row px-4 px-sm-5 py-4 py-sm-5 pb-5">
           <div class="col-12 col-lg-6 about">
             <h3 class="text-warning">About ValueBox</h3>
             <p class=" mt-3">
@@ -319,8 +321,8 @@
           </div>
         </div>
 
-        <div class="row px-lg-5 py-4 px-1">
-          <hr class="text-light py-1" />
+        <div class="row px-4 px-sm-5 py-4 py-sm-5 m-0">
+          <hr class="py-1 " />
 
           <!-- Logo Section -->
           <div
