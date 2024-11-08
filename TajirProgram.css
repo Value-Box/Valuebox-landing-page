@@ -428,9 +428,9 @@ text-align: center;
     } 
 }
 @media(max-width:513px){
-    .sellerbenifitprogram{
+    /* .sellerbenifitprogram{
         text-align: left;
-    }
+    } */
    .sellerbenifitprogram svg{
         width: 100px;
    }
@@ -1369,7 +1369,7 @@ line-height: 32px; /* 133.333% */
    
     .joinvaluebox h1{
     font-family: Anton;
-    font-size: 30px;
+    font-size: 35px;
     font-style: normal;
     font-weight: 400;
     line-height: 50px;
@@ -1381,7 +1381,7 @@ line-height: 32px; /* 133.333% */
     .joinvaluebox span{
         color: var(--Secondary-Color-Mon-Yellow-80, #F1B733);
         font-family: Anton;
-        font-size: 40px;
+        font-size: 35px;
         font-style: normal;
         font-weight: 400;
         line-height: 25px;
@@ -1443,7 +1443,7 @@ line-height: 32px; /* 133.333% */
     .joinvalueboxgroup h1{
         color: var(--Purple-50, #F4F3FF);
         font-family: Anton;
-        font-size: 28px;
+        font-size: 35px;
         font-style: normal;
         font-weight: 300;
         line-height: 40px;
@@ -1455,7 +1455,7 @@ line-height: 32px; /* 133.333% */
     .joinvaluebox span{
         color: var(--Secondary-Color-Mon-Yellow-80, #F1B733);
         font-family: Anton;
-        font-size: 40px;
+        font-size: 35px;
         font-style: normal;
         font-weight: 400;
         line-height: 40px;
@@ -1637,4 +1637,10 @@ align-items: center;
 gap: 10px;
 margin-top: 10px;
          }  
+     }
+     @media (max-width:400px){
+        .formParent img{
+         margin-top: 10%;
+         margin-left: -22px;
+        }
      }
