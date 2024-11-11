@@ -735,8 +735,8 @@ outline: none;
   cursor: move;
 }
 #colorDropDown,#sizeDropDown{
-  max-width: 300px;
-    width: 100%;
+  /* max-width: 300px;
+    width: 100%; */
     /* height: 50px;
     overflow-x: auto; */
 }
@@ -746,4 +746,80 @@ outline: none;
 }
 .variantRow .form-group{
   width: 100%;
+}
+.variantTableWrapper {
+  border-radius: 8px; /* Apply border-radius to the wrapper */
+  overflow: hidden;   /* Ensure the border-radius is respected */
+  border: 1px solid #CCC; /* Add border to the wrapper */
+}
+
+.variantTable {
+  border-collapse: collapse; /* Collapse borders to remove spacing */
+  width: 100%; /* Ensure the table takes full width */
+}
+
+.variantTable thead tr th{
+  background: var(--Natural-Color-10, #F2F2F2);
+}
+#bulkManagDropDown {
+  border-radius: 5px;
+  border: 1px solid #002882;
+  background-color: #E6EAF3;
+  color: #002882;
+  background-image: url("../Images/weui_arrow-filled.svg");
+  background-repeat: no-repeat;
+  background-position: right 10px center; /* Positioning the arrow */
+  padding-right: 30px; /* Space for the arrow */
+  appearance: none; /* Hides the default dropdown arrow */
+  -webkit-appearance: none; /* Hides arrow in WebKit browsers */
+  -moz-appearance: none; /* Hides arrow in Firefox */
+}
+.variantCeckBox input{
+  display: flex;
+width: 24px;
+height: 24px;
+padding: 2px;
+justify-content: center;
+align-items: center;
+}
+.variantCheckBox input:checked {
+  background-color: #002882 !important;
+}
+.saveVariantDiv{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+
+}
+.saveVariantDiv span{
+  border-radius: 5px;
+  background: #E6EAF3;
+  display: flex;
+  padding: 0px 20px;
+  align-items: center;
+  gap: 5px;
+  align-self: stretch;
+  color: #002882;
+font-family: Sarabun;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px;
+}
+.saveVariantDiv #discardBtn,#saveBtn{
+  display: flex;
+padding: 10px 40px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 5px;
+border: none;
+outline: none;
+}
+.saveVariantDiv #discardBtn{
+  background: var(--Natural-Color-10, #F2F2F2);
+}
+.saveVariantDiv #saveBtn{
+  background: var(--Secondary-Color-Mon-Yellow, #EEA500);
 }

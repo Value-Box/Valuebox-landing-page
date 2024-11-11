@@ -151,6 +151,7 @@ function addVariant() {
   var options = colorSelect.getElementsByTagName("option");
   let customInput1 = document.getElementById("customInput1").value;
   let customInput2 = document.getElementById("custInput2").value;
+  let saveVariantDiv = document.getElementById("saveVariantDiv");
   var selectedValues = [];
 
   // Get selected values from MultiSelectColor
@@ -206,8 +207,12 @@ if (selectedOption === "custom" && variantList.querySelector(".customRow")) {
   // }
 
   let newRow = document.createElement("div");
-  newRow.classList.add("variantRow", "d-flex", "gap-2", "mt-2", "w-100");
+  newRow.classList.add("variantRow", "d-flex", "gap-2", "w-100");
   newRow.id = "row-" + Date.now(); // Unique ID for each row
+  if (variantList.childElementCount > 0) {
+    newRow.style.marginTop = "20px";
+  }
+  
   if (selectedOption === "color") {
     newRow.innerHTML = `
         <fieldset class="form-group d-flex gap-2 mb-0" disabled>
@@ -312,30 +317,32 @@ if (selectedOption === "custom" && variantList.querySelector(".customRow")) {
     });
 }
 
+saveVariantDiv.style.display='flex';
   // Select the drag button and set up drag events
   const dragButton = newRow.querySelector(".drag-btn");
 
   dragButton.addEventListener("dragstart", (e) => {
       newRow.classList.add("dragging");
+      updateTopRowClass(); // Check top row on drag start
       e.stopPropagation(); // Only allow drag from button
   });
 
   dragButton.addEventListener("dragend", () => {
       newRow.classList.remove("dragging");
+      updateTopRowClass(); // Check top row on drag start
   });
+  updateTopRowClass(); // Initial call to assign "top-row" to the first element after addition
+
 }
 
 // Function to handle updating the top row class
 function updateTopRowClass() {
-  // Remove the class from any currently top row
   const variantList = document.getElementById("variantList");
   const rows = Array.from(variantList.children);
 
-  rows.forEach(row => row.classList.remove("top-row"));
-
-  // If there are rows, add the class to the first one
+  rows.forEach(row => row.classList.remove("top-row")); // Remove "top-row" class from all rows
   if (rows.length > 0) {
-    rows[0].classList.add("top-row");
+    rows[0].classList.add("top-row"); // Assign "top-row" class to the first row
   }
 }
 

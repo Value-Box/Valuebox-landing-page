@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
   <link rel="stylesheet" href="../assets/css/app.css">
   <link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/x-icon">
-  <link rel="stylesheet" href="style.css" />
+  <!-- <link rel="stylesheet" href="style.css" /> -->
   <link rel="stylesheet" href="../style.css" />
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
 <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script> -->
@@ -122,13 +122,13 @@
                             <a href="manageProducts.html">Manage Products</a>
                         </li>
                         <li class="submenu-item active">
-                            <a href="component-badge.html">Add Products</a>
+                            <a href="addProduct.html">Add Products</a>
                         </li>
                         <li class="submenu-item ">
-                            <a href="component-breadcrumb.html">Media Center</a>
+                            <a href="mediaCenter.html">Media Center</a>
                         </li>
                         <li class="submenu-item ">
-                            <a href="component-button.html">Brand Management</a>
+                            <a href="brandInformation.html">Brand Management</a>
                         </li>
                         
                     </ul>
@@ -673,7 +673,7 @@
               
               
             </table>
-          </select>
+          <!-- </select> -->
                          
         </div>
         </div>
@@ -722,9 +722,74 @@
           </div>
             
          </div>
-          <button class="addVariantBtn" onclick="addVariant()" type="button">Add Variant</button>
+          <button class="addVariantBtn" id="addVariantBtn" onclick="addVariant()" type="button">Add Variant</button>
 
-          <div id="variantList" class="w-100 variantList"></div> <!-- This is where the new rows will be added -->
+          <div  class="w-100">
+            <div id="variantList" class="w-100 variantList"></div>
+            <div class="saveVariantDiv p-0" id="saveVariantDiv" style="display: none;">
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <g clip-path="url(#clip0_6142_4883)">
+                    <path d="M9.9974 18.3327C14.5998 18.3327 18.3307 14.6017 18.3307 9.99935C18.3307 5.39698 14.5998 1.66602 9.9974 1.66602C5.39502 1.66602 1.66406 5.39698 1.66406 9.99935C1.66406 14.6017 5.39502 18.3327 9.9974 18.3327Z" stroke="#002882" stroke-width="1.66667"/>
+                    <path d="M9.9974 18.3327C14.5998 18.3327 18.3307 14.6017 18.3307 9.99935C18.3307 5.39698 14.5998 1.66602 9.9974 1.66602C5.39502 1.66602 1.66406 5.39698 1.66406 9.99935C1.66406 14.6017 5.39502 18.3327 9.9974 18.3327Z" stroke="black" stroke-opacity="0.2" stroke-width="1.66667"/>
+                    <path d="M10 5.83301H10.0083" stroke="#002882" stroke-width="1.66667" stroke-linecap="round"/>
+                    <path d="M10 5.83301H10.0083" stroke="black" stroke-opacity="0.2" stroke-width="1.66667" stroke-linecap="round"/>
+                    <path d="M8.32812 9.16602H9.99479V13.3327M8.32812 13.3327H11.6615" stroke="#002882" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8.32812 9.16602H9.99479V13.3327M8.32812 13.3327H11.6615" stroke="black" stroke-opacity="0.2" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_6142_4883">
+                      <rect width="20" height="20" fill="white"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+                You need to save the data in order to create variants!
+              </span>
+              <div class="d-flex gap-2">
+                <button id="discardBtn" type="button">Discard</button>
+                <button id="saveBtn" type="button">Save</button>
+              </div>
+            </div>
+          </div> 
+          <!-- This is where the new rows will be added -->
+
+          <div class="w-100" id="variantTabPar">
+            <div class="d-flex justify-content-between">
+              <h5 class="mb-0">Variants</h5>
+              <div class="form-group">
+                <select class="form-select" id="bulkManagDropDown">
+                        <option value="bulkmanage">Bulk Manage</option>     
+                </select>
+            </div>
+            </div>
+            <div class="form-group w-100 variantTableWrapper">
+  
+              <table class="variantTable">
+                <thead>
+                  <tr>
+                    <th colspan="10" class="variantCeckBox">
+                      <input class="form-check-input" type="checkbox" name="" id="">
+                    </th>
+                    <th colspan="50">Variants</th> 
+                    <th colspan="20">Price</th>
+                    <th colspan="20">Stock</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td colspan="10"><input type="checkbox" name="" id=""></td>
+                    <td colspan="40" class="text-center"></td>
+                    <td colspan="25" class="text-center"></td>
+                    <td colspan="25" class="text-center"></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+            <!-- </select> -->
+                           
+          </div>
+          </div>
+
         </div>
 
       </div>
