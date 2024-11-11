@@ -268,6 +268,7 @@ line-height: 24px; /* 150% */
   }
   .tableimage img{
     height: fit-content !important;
+   
   }
   .checkBox1{
     margin-top: auto;
@@ -357,8 +358,8 @@ line-height: 24px; /* 150% */
     }
     .allbar a .notification-badge {
       display: inline-block;
-      min-width: 20px;           /* Adjust size as needed */
-      height: 20px;
+      min-width: 25px;           /* Adjust size as needed */
+      height: 25px;
       padding: 2px 6px;
       font-size: 12px;           /* Adjust font size */
       font-weight: bold;
@@ -650,4 +651,169 @@ background: var(--Primary-Color-Dark-Blue, linear-gradient(0deg, rgba(0, 0, 0, 0
 color:  #E6EAF3;
 border: none;
 outline: none;
+}
+.startEndDate input{
+  border: none;
+  outline-width: 0px;
+}
+.startEndDate{
+border-radius: 5px;
+border: 1px solid var(--Natural-Color-20, #CCC);
+background: var(--Natural-Color-00, #FCFCFC);
+}
+.gapLine{
+width: 1px;
+height: 23px;
+background: #CCC;
+}
+.uploadImagebtn{
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), #002882 !important;
+color: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
+/* Text md/Medium */
+font-family: Sarabun;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
+
+}
+.selectbtn{
+
+padding: 10px 20px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 8px;
+border: 1px solid var(--Primary-Color-Dark-Blue, #002882);
+color: var(--Primary-Color-Dark-Blue, #002882);
+
+/* Text md/Medium */
+font-family: Sarabun;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
+}
+
+.startEndDate input {
+  border: none;
+  outline: none;
+  box-shadow: none; /* Removes default shadow on focus */
+  background-color: transparent; /* Ensures background stays transparent */
+}
+
+.startEndDate input:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+/* input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+} */
+.searchpictureinput{
+  background-color:  #FCFCFC;
+}
+.mediaCentercontainer{
+  padding: 30px 20px;
+}
+.mediatable thead{
+  background-color: #DBDBDB;
+}
+.mediatable{
+  /* border: 1px solid black; */
+
+}
+.mediacentertable,.brandinfotable .mediatable {
+  border-radius: 8px; /* Apply border-radius to the wrapper */
+  overflow: hidden;   /* Ensure the border-radius is respected */
+  border: 1px solid #CCC; /* Add border to the wrapper */
+}
+
+.mediatable {
+  border-collapse: collapse; /* Collapse borders to remove spacing */
+  width: 100%; /* Ensure the table takes full width */
+}
+.mediarow{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0px;
+}
+.mediatable td{
+  padding: 12px 15px;
+}
+.mediacheckBox{
+  margin: auto 0px;
+}
+tr {
+  border-bottom: 1px solid #ddd;
+}
+.mediatable td{
+  text-align: start;
+}
+.applyforanewbrandbtn{
+padding: 10px 20px;
+gap: 10px;
+border-radius: 5px;
+background: var(--Primary-Color-Dark-Blue, linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), #002882);
+color: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
+font-family: Sarabun;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
+}
+.iconsbackcolor{
+  background-color: #F2F2F2;
+}
+.pending{
+  background-color: #FEF0C7;
+}
+.tableimage{
+  display: inline-block;
+}
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Style the "unchecked" state */
+input[type="radio"]:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: white;
+}
+
+/* Style the "checked" state */
+input[type="radio"]:checked {
+  border-color: #002882;
+  background-color: #002882;
+}
+
+input[type="radio"]:checked:before {
+  background-color: #002882;
+  width: 10px;
+  height: 10px;
+  top: 4px;
+  left: 4px;
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  background-color: white;
 }
