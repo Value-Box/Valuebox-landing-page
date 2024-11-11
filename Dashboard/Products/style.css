@@ -652,3 +652,98 @@ color:  #E6EAF3;
 border: none;
 outline: none;
 }
+.choices__list--multiple .choices__item {
+  display: inline-block;
+  vertical-align: middle;
+  border-radius:3px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-right: 3.75px;
+  margin-bottom: 3.75px;
+  background-color: #002882;
+  
+  color: #fff;
+  word-break: break-all;
+  box-sizing: border-box
+}
+
+/* Limit dropdown to a single line */
+.color-dropdown-choices .choices__inner {
+  max-height: 40px; 
+  overflow: hidden;
+  white-space: nowrap;  /* Prevent text from wrapping */
+  text-overflow: ellipsis;  
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+}
+
+/* Adjust spacing and padding */
+.color-dropdown-choices .choices__list--multiple .choices__item {
+  margin: 0 5px;
+  padding: 2px 8px;
+  font-size: 0.9rem;  /* Adjust font size if needed */
+}
+
+/* Ensure dropdown opens without expanding the height of the container */
+.color-dropdown-choices .choices__list--dropdown {
+  max-height: 200px;  /* Limit height when expanded */
+  overflow-y: auto;   /* Add scroll for dropdown overflow */
+  max-width: 300px; /* Sets a max-width to prevent it from becoming too wide */
+}
+.removeVariantBtn,.drag-btn {
+  flex-shrink: 0; /* Prevents the button from shrinking */
+  display: inline-flex;
+  align-items: center;
+  padding: 8px;
+    height: 44px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+}
+.removeVariantBtn:focus,.drag-btn:focus{
+  outline: none;
+  border: none;
+}
+.choices__item .is-highlighted{
+  background-color: #002882 !important;
+}
+
+
+.variantRow[draggable="true"]:hover {
+  border: 1px dashed #ccc;  /* Add a dashed border when hovered */
+}
+
+.variantRow[style*="opacity: 0.5"] {
+  opacity: 0.5;  /* Optional: Apply opacity change when dragging */
+}
+.variantRow {
+  padding: 6px;
+  border: 1px solid #ddd;
+  margin-bottom: 5px;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+}
+.dragging {
+  opacity: 0.5;
+}
+.drag-btn {
+  cursor: move;
+}
+#colorDropDown,#sizeDropDown{
+  max-width: 300px;
+    width: 100%;
+    /* height: 50px;
+    overflow-x: auto; */
+}
+.choices__inner{
+  height: 47px !important;
+  overflow: auto;
+}
+.variantRow .form-group{
+  width: 100%;
+}
