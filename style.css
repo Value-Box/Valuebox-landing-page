@@ -310,7 +310,7 @@ line-height: normal;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 20px;
+  /* gap: 20px; */
   text-align: left;
   font-size: 48px;
   color: #1a1a1a;
@@ -372,9 +372,17 @@ line-height: normal;
 }
 .card-text {
   height: 85px;
-  font-size: 16.2px;
+  font-size: 20px;
   line-height: 20px;
   color: #999;
+}
+@media(max-width:1105px){
+  .card-text{
+    font-size: 16px;
+  }
+}
+.card-body a{
+ color: #002882;
 }
 .card-title {
   position: relative;
@@ -420,35 +428,6 @@ line-height: normal;
 .cardSmScreen {
   display: none;
 }
-.utubeVideo {
-  position: relative; /* Positioning context for absolute elements */
-  width: 100%;
-  height: 90vh; /* Set to full viewport height */
-  overflow: hidden; /* Hide any overflow */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.utubeVideo img {
-  position: absolute; /* Position the image absolutely */
-  top: 0;
-  left: 0;
-  width: 100%; /* Full width */
-  height: auto; /* Full height */
-  object-fit: cover; /* Cover the entire container while maintaining aspect ratio */
-  z-index: 1; /* Make sure the image is behind the iframe */
-}
-
-.utubeVideo iframe {
-  position: relative;
-  top: 0%;
-  padding: 20px 0px;
-  z-index: 2; /* Above the image */
-  width: 70%; /* Adjust width as needed */
-  height: 77%; /* Adjust height as needed */
-  border: none; /* Remove default border */
-}
 
 .service {
   display: flex;
@@ -471,7 +450,7 @@ line-height: normal;
 }
 
 .text2 {
-  font-size: 16px; /* Slightly adjust the font size */
+  font-size: 24px; /* Slightly adjust the font size */
   line-height: 1.5; /* Add line height for better readability */
   color: #999999;
 }
@@ -488,11 +467,7 @@ line-height: normal;
 }
 
 .promotional-image {
-  max-width: 400px; /* Make the image responsive */
-  height: auto; /* Maintain aspect ratio */
-  position: relative;
-  right: -8%;
-  top: 5%;
+ max-width: 100%;
 }
 .story {
   background-color: #fef6e6;
@@ -501,7 +476,7 @@ line-height: normal;
   background-color: #fef6e6;
 }
 .year span {
-  padding: 10px 0px;
+  padding: 15px 60px;
   border-radius: 10px;
   background: var(
     --Secondary-Color-Mon-Yello-Gradient-Straight,
@@ -524,15 +499,12 @@ line-height: normal;
 }
 
 .year img {
-  width: 12px;
+  width: 16px;
 }
 .info {
   text-align: left;
 }
-.info ul {
-  line-height: 23px; /* 133.333% */
-  color: #999;
-}
+
 .info span {
   padding: 10px;
   border-radius: 5px;
@@ -549,6 +521,28 @@ line-height: normal;
       #0032a3 100%
     )
   );
+}
+@media(max-width:768px){
+  .year span {
+    padding: 10px 40px;
+    font-size: 24px;
+  }
+  .yearlist{
+    font-size: 16px;
+  }
+  .info span {
+   font-size: 16px;
+  }
+}
+@media(max-width:576px)
+{
+  .year span {
+    padding: 15px 30px;
+    font-size: 24px;
+  }
+  .year img {
+    width: 14px;
+  }
 }
 
 .quoteIcon {
@@ -586,8 +580,8 @@ line-height: normal;
 /* Existing styles remain unchanged */
 
 .founderImg img {
-  max-width: 75%;
-  margin-right: -50px;
+  max-width: 70%;
+  /* margin-right: -50px; */
 }
 
 /* Ensure the background image maintains a consistent height */
@@ -1552,6 +1546,7 @@ background: #CCC;
     display: none;
   }
 }
+
 @media (max-width: 1100px) {
   /* .hamburger {
     display: inline;
@@ -1655,15 +1650,7 @@ background: #CCC;
     margin-left: auto;
     text-align: center;
   } */
-  .utubeVideo iframe {
-    position: relative;
-    top: -7%;
-    padding: 20px 0px;
-    z-index: 2; /* Above the image */
-    width: 70%; /* Adjust width as needed */
-    height: 77%; /* Adjust height as needed */
-    border: none; /* Remove default border */
-  }
+  
   .LoginBgPoster img {
     height: 108% !important;
   }
@@ -1744,7 +1731,7 @@ background: #CCC;
     max-width: 26%;
     margin-top: 15px;
   }
-  .successText {
+  .successText{
     width: 100%;
   }
   .editApplicationBtn .editButton {
@@ -1796,8 +1783,23 @@ background: #CCC;
   padding: 0px;
 }
 
-.siteText {
-  color: #002882;
+.siteText h1{
+  color: var(--Primary-Color-Dark-Blue, #002882);
+  font-family: Anton;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.siteText p{
+  color: var(--Primary-Color-Dark-Blue-80, #33539B);
+
+/* Text xl/Regular */
+font-family: Sarabun;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 30px; /* 150% */
 }
 
 .bottomSection {
@@ -2069,9 +2071,7 @@ svg path {
   .serviceImg {
     text-align: center;
   }
-  .promotional-image {
-    max-width: 300px; /* Make the image responsive */
-  }
+  
   .bottomText {
     position: absolute;
     top: 14%;
@@ -2123,16 +2123,8 @@ svg path {
     /* padding: 80px 20px 80px 20px; */
   }
 
-  .utubeVideo iframe {
-    position: absolute;
-    top: 5%;
-    width: 65%;
-    height: 90%;
-  }
-  .utubeVideo {
-    width: 100%;
-    height: 50vh;
-  }
+  
+  
   #carouselExampleCaptions {
     height: 350px;
   }
@@ -2172,6 +2164,7 @@ svg path {
     margin: 18% 50px 30px 50px;
   }
 } */
+
 @media (max-width: 767px) {
   /* When in column layout for smaller screens */
   .stepProgressBar {
@@ -2183,6 +2176,7 @@ svg path {
   }
 }
 @media (max-width: 768px) {
+  
   .row {
     /* padding: 50px 20px 50px 20px; */
   }
@@ -2199,12 +2193,6 @@ svg path {
     width: 100%;
     height: 650px; /* Adjust the height as needed */
     object-fit: cover; /* Make sure it fits the container properly */
-  }
-  .utubeVideo iframe {
-    position: absolute;
-    top: 8%;
-    width: 57%; /* Adjust width as needed */
-    height: 77%; /* Adjust height as needed */
   }
  
   #carouselExampleCaptions {
@@ -2309,7 +2297,12 @@ svg path {
     height: 40px;
     width: 40px;
     object-fit: cover;
+   
   }
+  .service{
+    align-items: start;
+  }
+
   .promotional-image {
     max-width: 300px;
   }
@@ -2351,12 +2344,6 @@ svg path {
   }
   .year {
     margin-top: 5px;
-  }
-  .utubeVideo iframe {
-    position: absolute;
-    top: 3%;
-    width: 57%; /* Adjust width as needed */
-    height: 60%; /* Adjust height as needed */
   }
   /* .header {
     padding: 15px 15px 15px 15px;
@@ -2520,6 +2507,11 @@ line-height: 24px; /* 150% */
 
   max-width: 100% !important;
 }
+.text2 {
+  font-size: 24px; /* Slightly adjust the font size */
+  line-height: 1.5; /* Add line height for better readability */
+  color: #999999;
+}
 }
 @media (max-width: 536px) {
   
@@ -2596,12 +2588,6 @@ line-height: 24px; /* 150% */
   }
 } */
 @media (max-width: 451px) {
-  .utubeVideo iframe {
-    position: absolute;
-    top: 4%;
-    width: 57%;
-    height: 50%;
-  }
   /* .logo {
     display: flex;
     flex-direction: column;
@@ -2680,12 +2666,6 @@ line-height: 24px; /* 150% */
 }
 
 @media (max-width: 400px) {
-  .utubeVideo iframe {
-    position: absolute;
-    top: 4%;
-    width: 57%;
-    height: 43%;
-  }
   .bgSmScreen .imgText {
     left: 0px;
     text-align: center;
@@ -2778,12 +2758,6 @@ line-height: 24px; /* 150% */
     padding: 0px 10px;
     left: 0%;
     gap: 3px;
-  }
-  .utubeVideo iframe {
-    position: absolute;
-    top: 3%;
-    width: 57%;
-    height: 40%;
   }
   .joinButton {
     top: 75%;
@@ -2914,4 +2888,232 @@ align-items: center;
 gap: 10px;
    }  
 }
+.our-sellers-with-container{
+  font-size: 24px;
+}
+
+.joinvalueboxbtn{
+  display: flex;
+  height: 50px;
+  padding: 8px 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: var(--Primary-Color-Dark-Blue, linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), #002882);
+  color: #f2f2f2;
+  border: none;
+  }
+  .ourstory h1{
+    color: var(--Primary-Color-Dark-Blue, #002882);
+    font-family: Anton;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .ourstory p{
+    color: var(--Natural-Color-40, #999);
+text-align: center;
+
+/* Display xs/Regular */
+font-family: Sarabun;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 32px; /* 133.333% */
+  }
+  .yearlist{
+    color: var(--Natural-Color-40, #999);
+
+/* Display xs/Regular */
+font-family: Sarabun;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 32px; /* 133.333% */
+  }
+  .successText p{
+    color: #CCD4E6 !important;
+
+/* Display xs/Regular */
+
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 32px; /* 133.333% */
+  }
+  .successText h2{
+    color: #FCFCFC !important;
+        /* Display lg/Bold */
+    font-family: Sarabun;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px; /* 125% */
+    letter-spacing: -0.96px;
+  }
+  .successText h4{
+    color: var(--Primary-Color-Dark-Blue-20, #CCD4E6);
+text-align: right;
+
+/* Display xs/Bold */
+font-family: Sarabun;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 32px; /* 133.333% */
+  }
+  @media(max-width:1300px){
+    .successText p{
+      
+      font-size: 18px;
+    }
+    .successText h2{
+     
+      font-size: 30px;
+    }
+    .successText h4{
+  font-size: 18px;
+    }
+}
+@media(max-width:600px){
+  .successText p{
+    
+    font-size: 16px;
+  }
+  .successText h2{
+   
+    font-size: 24px;
+  }
+  .successText h4{
+font-size: 16px;
+  }
+  .founderImg img {
+    max-width: 48%;
+  }
+}
+
+  @media(max-width:768px){
+    .ourstory h1{
+      font-size: 40px;
+     }
+     .ourstory p{
+       font-size: 16px;
+     }
+     .yearlist{
+      font-size: 16px;
+     }
+     .our-sellers-with-container{
+      font-size: 20px;
+    }
+  }
+  .utubeVideo {
+    position: relative; /* Positioning context for absolute elements */
+    width: 100%;
+    height: 90vh; /* Set to full viewport height */
+    overflow: hidden; /* Hide any overflow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .utubeVideo img {
+    position: absolute; /* Position the image absolutely */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: auto; /* Full height */
+    object-fit: cover; /* Cover the entire container while maintaining aspect ratio */
+    z-index: 1; /* Make sure the image is behind the iframe */
+  }
+ .youtubevideocontainer{
+  position: absolute;
+  top: 12%;
+ } 
+ .youtubevideo iframe{
+  width: 65%;
+ }
+ .youtubevideo{
+  height: 62vh;
+ }
+ @media(max-width:1600px){
+  .youtubevideo{
+    height: 87vh;
+   }
+ }
+ @media(max-width:1381px){
+  .youtubevideo{
+    height: 75vh;
+   }
+ }
+ @media(max-width:1280px){
+  .youtubevideo{
+    height: 60vh;
+   }
+ }
+ @media(max-width:1169px){
+  .youtubevideo{
+    height: 40vh;
+   }
+ }
+ @media(max-width:1057px){
+  .youtubevideo{
+    height: 30vh;
+   }
+   .youtubevideocontainer{
+    position: absolute;
+    top: 10%;
+   } 
+ }
+ @media(max-width:900px){
+  .youtubevideocontainer{
+    position: absolute;
+    top: 10%;
+   } 
+   .youtubevideo{
+    height: 25vh;
+   }
+ }
+ @media(max-width:845px){
+  .youtubevideo{
+    height: 22vh;
+   }
+ }
+ @media(max-width:768px){
+  .youtubevideo{
+    height: 22vh;
+   }
+   .youtubevideocontainer{
+    position: absolute;
+    top: 25%;
+   } 
+   .youtubevideo iframe{
+    width: 72%;
+   }
+   
+ }
+ @media(max-width:550px){
+  .youtubevideocontainer{
+    position: absolute;
+    top: 20%;
+   }
+   .youtubevideo iframe{
+    width: 65%;
+   }
+  }
+ @media(max-width:400px){
+  .youtubevideocontainer{
+    position: absolute;
+    top: 20%;
+   }
+   .youtubevideo iframe{
+    width: 65%;
+   }
+   .youtubevideo{
+    height: 22vh;
+   }
+ }
+  
+  
 
