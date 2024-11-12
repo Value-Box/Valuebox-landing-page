@@ -143,7 +143,7 @@ function selectedOptionDropdown() {
 
 // Function to add a variant
 
-let draggedRow = null;
+let variantsData = [];
 
 function addVariant() {
   var selectedOption = document.getElementById("selOptType").value;
@@ -162,6 +162,7 @@ function addVariant() {
   // }
   // Get selected values from MultiSelectColor
 
+  
 if (selectedOption === "color") {
   var colorSelect = document.getElementById("MultiSelectColor");
   var options = colorSelect.getElementsByTagName("option");
@@ -317,7 +318,9 @@ if (selectedOption === "custom" && variantList.querySelector(".customRow")) {
     });
 }
 
-saveVariantDiv.style.display='flex';
+if (variantList.childElementCount > 0) {
+  saveVariantDiv.style.display = 'flex';
+}
   // Select the drag button and set up drag events
   const dragButton = newRow.querySelector(".drag-btn");
 
@@ -348,7 +351,16 @@ function updateTopRowClass() {
 
 // Function to remove variant row
 function removeVariant(button) {
-    button.parentElement.remove();
+  let row = button.parentNode;
+  let variantList = document.getElementById("variantList");
+
+  // Remove the selected row
+  variantList.removeChild(row);
+
+  // Hide `saveVariantDiv` if no rows are left
+  if (variantList.childElementCount === 0) {
+    saveVariantDiv.style.display = 'none';
+  }
 }
 
 const sortableList = document.querySelector(".variantList");
@@ -372,6 +384,90 @@ sortableList.addEventListener("dragover", (e) => {
 
     sortableList.insertBefore(draggingItem, nextSibling);
 });
+
+function saveVariant() {
+  console.log("Save button clicked");
+
+  const variantTableBody = document.getElementById('variantTableBody');
+  const colorSelect = document.getElementById('MultiSelectColor');
+  const sizeSelect = document.getElementById('sizesDropDown');
+
+  if (!colorSelect || !sizeSelect) {
+    console.error("One or both dropdowns are missing.");
+    return;
+  }
+
+  const selectedColors = Array.from(colorSelect.selectedOptions).map(option => option.value);
+  const selectedSizes = Array.from(sizeSelect.selectedOptions).map(option => option.value);
+
+  console.log("Selected Colors:", selectedColors);
+  console.log("Selected Sizes:", selectedSizes);
+
+  if (selectedColors.length === 0 || selectedSizes.length === 0) {
+    alert("Please select both color and size before saving.");
+    return;
+  }
+
+  selectedColors.forEach(color => {
+    // Create the parent row for each color
+    let parentRow = document.createElement("tr");
+    parentRow.classList.add("variant-parent");
+
+    const numVariants = selectedSizes.length;
+
+    parentRow.innerHTML = `
+      <td class="d-flex gap-3">
+        <input class="form-check-input variantProductCheck" type="checkbox">
+        <img src="../Images/productImage.png" alt="">
+        <div class="variantParentDet">
+          <p class="m-0 varParTitle">${color}</p>
+          <p class="m-0 varParDescription">Select Size</p>
+          <span class="varParToChild">${numVariants.toString().padStart(2, '0')} Variants <span class="arrow"><img src="../Images/weui_arrow-filled.svg" alt=""></span></span>
+        </div>
+      </td>
+      <td><span class="varParPrice">RS. 7,000</span></td>
+      <td><span class="varParStock">36</span></td>
+    `;
+
+    variantTableBody.appendChild(parentRow);
+
+    // Add event listener to toggle child rows for each color
+    const parentRowElement = parentRow.querySelector('.varParToChild');
+    parentRowElement.addEventListener('click', () => {
+      const childRows = document.querySelectorAll(`.child-of-${color}`);
+      childRows.forEach(row => {
+        row.style.display = row.style.display === "none" ? "table-row" : "none";
+      });
+
+      const arrow = parentRowElement.querySelector('.arrow');
+      arrow.classList.toggle('rotate');
+    });
+
+    // Now create a separate child row for each size under this color
+    selectedSizes.forEach(size => {
+      let childRow = document.createElement("tr");
+      childRow.classList.add("variant-child", `child-of-${color}`);
+      childRow.style.display = "none"; // Initially hide the child rows
+
+      childRow.innerHTML = `
+        <td class="d-flex gap-3">
+          <input class="form-check-input variantProductCheck" type="checkbox">
+          <img src="../Images/productImage.png" alt="">
+          <div class="variantParentDet">
+            <p class="m-0 varParTitle">${color} - ${size}</p>
+            <p class="m-0 varParDescription">Seller SKU. HIFI M-16</p>
+          </div>
+        </td>
+        <td><span class="varParPrice">RS. 7,000</span></td>
+        <td><span class="varParStock">36</span></td>
+      `;
+
+      variantTableBody.appendChild(childRow);
+    });
+  });
+
+  updateTopRowClass();
+}
 
 
 

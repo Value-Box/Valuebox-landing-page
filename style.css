@@ -684,8 +684,9 @@ line-height: normal;
 
 .personalSignup {
   /* background: linear-gradient(90deg, #0032A3 0%, #1A51CB 25%, #3B66C8 50%, #1A51CB 75%, #0032A3 100%); */
-  /* overflow-y: auto; */
-  /* height: 100vh; */
+   overflow-y: auto;
+   height: 100vh;
+   scrollbar-width: none; /* Firefox mein scrollbar ko hide karne ke liye */
 }
 
 .personalSignupText {
@@ -1396,7 +1397,10 @@ select {
   cursor: pointer;
 }
 .parent-section {
-  overflow-y: auto; /* Enable scrolling within the parent container */
+  overflow-y: auto;
+  position: sticky;
+    height: 100%;
+    top: 0px;
 }
 
 .sticky-container {

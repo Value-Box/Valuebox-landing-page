@@ -712,7 +712,7 @@
            
             <div class="form-group w-100" id="sizeDropDown" style="display: none;">
               <select class="choices form-select multiple-remove sizeDropDown"
-                  multiple="multiple">
+                  multiple="multiple" id="sizesDropDown">
                   <optgroup label="Sizes">
                     <option value="Small">Small</option>
                     <option value="Medium">Medium</option>
@@ -747,7 +747,7 @@
               </span>
               <div class="d-flex gap-2">
                 <button id="discardBtn" type="button">Discard</button>
-                <button id="saveBtn" type="button">Save</button>
+                <button id="saveBtn" type="button" onclick="saveVariant()">Save</button>
               </div>
             </div>
           </div> 
@@ -756,34 +756,69 @@
           <div class="w-100" id="variantTabPar">
             <div class="d-flex justify-content-between">
               <h5 class="mb-0">Variants</h5>
-              <div class="form-group">
+              <fieldset class="form-group">
                 <select class="form-select" id="bulkManagDropDown">
                         <option value="bulkmanage">Bulk Manage</option>     
                 </select>
-            </div>
+            </fieldset>
             </div>
             <div class="form-group w-100 variantTableWrapper">
   
-              <table class="variantTable">
+              <table class="table variantTable">
                 <thead>
-                  <tr>
-                    <th colspan="10" class="variantCeckBox">
-                      <input class="form-check-input" type="checkbox" name="" id="">
-                    </th>
-                    <th colspan="50">Variants</th> 
-                    <th colspan="20">Price</th>
-                    <th colspan="20">Stock</th>
-                  </tr>
+                    <tr>
+                        <th class="d-flex align-items-center gap-3">
+                            <input class="form-check-input variantCeckBox" type="checkbox" name="" id=""> Variants
+                        </th>
+                        <th>Price</th>
+                        <th>Stock</th>
+                    </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <td colspan="10"><input type="checkbox" name="" id=""></td>
-                    <td colspan="40" class="text-center"></td>
-                    <td colspan="25" class="text-center"></td>
-                    <td colspan="25" class="text-center"></td>
-                  </tr>
+                <tbody id="variantTableBody">
+                    <tr>
+                        <td class="d-flex gap-3">
+                            <input class="form-check-input variantProductCheck" type="checkbox" name="" id="">
+                            <img src="../Images/productImage.png" alt="">
+                            <div class="variantParentDet">
+                                <p class="m-0 varParTitle">Red</p>
+                                <p class="m-0 varParDescription">Seller SKU. HIFI M-16</p>
+                                <span class=" varParToChild">06 Variants <span class="arrow"><img src="../Images/weui_arrow-filled.svg" alt=""></span></span>
+                            </div>
+                        </td>
+                        <td><span class="varParPrice">RS. 7,000</span></td>
+                        <td><span class="varParStock">36</span></td>
+                    </tr>
+            
+                    <!-- Hidden variant rows initially hidden -->
+                    <tr class="variant-details">
+                      <td class="d-flex gap-3">
+                        <input class="form-check-input variantProductCheck" type="checkbox" name="" id="">
+                        <img src="../Images/productImage.png" alt="">
+                        <div class="variantParentDet">
+                            <p class="m-0 varParTitle">Red</p>
+                            <p class="m-0 varParDescription">Seller SKU. HIFI M-16</p>
+                        </div>
+                    </td>
+                    <td><span class="varParPrice">RS. 7,000</span></td>
+                    <td><span class="varParStock">36</span></td>
+                    </tr>
+                    <tr class="variant-details">
+                      <td class="d-flex gap-3">
+                        <input class="form-check-input variantProductCheck" type="checkbox" name="" id="">
+                        <img src="../Images/productImage.png" alt="">
+                        <div class="variantParentDet">
+                            <p class="m-0 varParTitle">Red</p>
+                            <p class="m-0 varParDescription">Seller SKU. HIFI M-16</p>
+                        </div>
+                    </td>
+                    <td><span class="varParPrice">RS. 7,000</span></td>
+                    <td><span class="varParStock">36</span></td>
+                    </tr>
+                    
                 </tbody>
-              </table>
+            </table>
+            
+            
               
             <!-- </select> -->
                            
@@ -903,6 +938,29 @@
         tags: [],
     });
 })();
+
+
+document.querySelectorAll('.varParToChild').forEach(item => {
+  item.addEventListener('click', () => {
+    let nextRow = item.closest('tr').nextElementSibling;
+
+    // Traverse to find all the variant details after the clicked row
+    while (nextRow && nextRow.classList.contains('variant-details')) {
+      // Toggle the 'expanded' class
+      if (nextRow.classList.contains('expanded')) {
+        nextRow.classList.remove('expanded');
+      } else {
+        nextRow.classList.add('expanded');
+      }
+
+      nextRow = nextRow.nextElementSibling;
+    }
+
+    // Correctly select the arrow element and toggle the rotate class
+    const arrow = item.querySelector('.arrow');
+    arrow.classList.toggle('rotate');
+  });
+});
 
   </script>
 </body>
