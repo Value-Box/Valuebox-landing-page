@@ -304,8 +304,6 @@ line-height: 24px; /* 150% */
   }
   .filterproduct span{
     color: var(--Natural-Color-60, #666);
-  
-  /* Text xl/Medium */
   font-family: Sarabun;
   font-size: 20px;
   font-style: normal;
