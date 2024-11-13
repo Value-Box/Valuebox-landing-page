@@ -1488,18 +1488,18 @@ line-height: 32px; /* 133.333% */
 }
 @media(max-width:402px){
     .zinat span{
-       font-size: 30px;
+       font-size: 40px;
     line-height: 40px; /* 125% */
-    font-weight: 200;
+    font-weight: 400;
     }
     .zinat h1{
-     font-size: 25px;   
+     font-size: 33px;   
     line-height: 40px;
     font-weight: 200;
     }
     .zinat p{
-    font-size: 18px;
-    line-height: 25px; /* 133.333% */
+    font-size: 24px;
+    line-height: 32px; /* 133.333% */
     }
 }
 
