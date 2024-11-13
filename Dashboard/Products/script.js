@@ -143,7 +143,7 @@ function selectedOptionDropdown() {
 
 // Function to add a variant
 
-let variantsData = [];
+const selectedVariants = {}; // Global object for all selected values
 
 function addVariant() {
   var selectedOption = document.getElementById("selOptType").value;
@@ -210,6 +210,8 @@ if (selectedOption === "custom" && variantList.querySelector(".customRow")) {
   let newRow = document.createElement("div");
   newRow.classList.add("variantRow", "d-flex", "gap-2", "w-100");
   newRow.id = "row-" + Date.now(); // Unique ID for each row
+  const uniqueId = Date.now(); // or use a counter like uniqueIdCounter++
+  newRow.id = `row-${uniqueId}`;
   if (variantList.childElementCount > 0) {
     newRow.style.marginTop = "20px";
   }
@@ -408,6 +410,9 @@ function saveVariant() {
     return;
   }
 
+  // Clear the previous rows before appending new rows
+  variantTableBody.innerHTML = "";
+
   selectedColors.forEach(color => {
     // Create the parent row for each color
     let parentRow = document.createElement("tr");
@@ -468,6 +473,7 @@ function saveVariant() {
 
   updateTopRowClass();
 }
+
 
 
 

@@ -133,24 +133,35 @@ function passwordShower() {
   //   window.location.href = "personalInfoSignUp.html";
   // }
   
+//   const circles = document.querySelectorAll(".circle");
+//   const progressBar = document.querySelector(".indicator");
+//   const progressBarInner = progressBar.querySelector(".inner");
 
-  const otpErrorMsg=document.getElementById('otpErrorMsg');
-document.getElementById("verifyBtn").addEventListener("click", function () {
-  // Check if all OTP inputs are filled
-  let allFilled = true;
-  otpInputs.forEach((input) => {
-    if (input.value === '') {
-      allFilled = false; // At least one input is empty
-    }
-  });
+//   const otpErrorMsg=document.getElementById('otpErrorMsg');
+// document.getElementById("verifyBtn").addEventListener("click", function () {
+//   // Check if all OTP inputs are filled
+//   const personalInfoForm = document.querySelector('.personalInfoForm');
+//   const varificationForm = document.querySelector('.varificationForm');
+//   let allFilled = true;
+//   otpInputs.forEach((input) => {
+//     if (input.value === '') {
+//       allFilled = false; // At least one input is empty
+//     }
+//   });
 
-  if (allFilled) {
-    // All inputs are filled, so submit the form and redirect
-    document.getElementById("myForm").submit();
-    window.location.href = "personalInfoSignUp.html";
-  } else {
-    // If not all inputs are filled, display an error or keep the form on the same page
-    otpErrorMsg.innerText='Please fill in all OTP fields before proceeding.'
-    otpErrorMsg.style.color='red'
-  }
-});
+//   if (allFilled) {
+//     varificationForm.style.display = 'none';
+//     personalInfoForm.style.display = 'block';
+//     circles[0].classList.remove("active"); // Complete the second circle
+//     circles[0].classList.add("completed");
+//     circles[1].classList.add("active"); // Complete the second circle
+
+//     const progressPercentage = 33.3333; // Progress bar to 66.67%
+//     progressBar.style.width = `${progressPercentage}%`;
+//     progressBarInner.style.backgroundColor = "#12B76A"; // Set progress bar color
+//   } else {
+//     // If not all inputs are filled, display an error or keep the form on the same page
+//     otpErrorMsg.innerText='Please fill in all OTP fields before proceeding.'
+//     otpErrorMsg.style.color='red'
+//   }
+// });

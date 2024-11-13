@@ -721,6 +721,7 @@ line-height: normal;
 
 .personalSignupForm {
   border-radius: 20px;
+  height: fit-content;
 }
 
 /* example progress bar */
@@ -1927,6 +1928,16 @@ footer .row {
 }
 .loginBtn {
   background-color: #002882;
+  height: 54px;
+}
+#getOTP{
+  display: flex;
+height: 54px;
+padding: 0px 24px;
+justify-content: center;
+align-items: center;
+align-self: stretch;
+gap: 10px;
 }
 .signupBtn {
   border: 1.5px solid #002882;
@@ -1934,6 +1945,8 @@ footer .row {
   color: #002882;
   font-weight: bold; /* Ensure the text is bold */
   transition: 0.5s; /* Apply transition for all changes */
+  height: 54px;
+
 }
 svg path {
   transition: 0.5s;
@@ -2726,7 +2739,7 @@ line-height: 24px; /* 150% */
     padding: 15px 10px 0px 0px;
   }
   #personalForm {
-    padding: 10px !important;
+    padding: 40px 40px 40px 40px !important;
   }
   .signUpFormHead {
     padding: 0px 10px !important;

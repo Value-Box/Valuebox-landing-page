@@ -33,6 +33,38 @@ function dashboard() {
   window.location.href = "Dashboard/Products/addProduct.html";
 }
 
+const otpErrorMsg=document.getElementById('otpErrorMsg');
+document.getElementById("verifyBtn").addEventListener("click", function () {
+  // Check if all OTP inputs are filled
+  const personalInfoForm = document.querySelector('.personalInfoForm');
+  const varificationForm = document.querySelector('.varificationForm');
+  let allFilled = true;
+  otpInputs.forEach((input) => {
+    if (input.value === '') {
+      allFilled = false; // At least one input is empty
+    }
+  });
+
+  if (allFilled) {
+    // All inputs are filled, so submit the form and redirect
+    // document.getElementById("myForm").submit();
+    // window.location.href = "personalInfoSignUp.html";
+
+    varificationForm.style.display = 'none';
+    personalInfoForm.style.display = 'block';
+    circles[0].classList.remove("active"); // Complete the second circle
+    circles[0].classList.add("completed");
+    circles[1].classList.add("active"); // Complete the second circle
+
+    const progressPercentage = 33.3333; // Progress bar to 66.67%
+    progressBar.style.width = `${progressPercentage}%`;
+    progressBarInner.style.backgroundColor = "#12B76A"; // Set progress bar color
+  } else {
+    // If not all inputs are filled, display an error or keep the form on the same page
+    otpErrorMsg.innerText='Please fill in all OTP fields before proceeding.'
+    otpErrorMsg.style.color='red'
+  }
+});
 // sessionStorage.setItem("targetForm", formId);
   // window.location.href = "dashboardLogin.html";
 
@@ -44,10 +76,11 @@ const buttons = document.querySelectorAll("button");
 
 let currentStep = 2;
 
-circles[0].classList.add("completed");
-circles[1].classList.add("active");
+circles[0].classList.add("active");
+// circles[1].classList.add("active");
 
-const initialProgressPercentage = 33.3333;
+// const initialProgressPercentage = 33.3333;
+const initialProgressPercentage = 0;
 progressBar.style.width = `${initialProgressPercentage}%`;
 progressBarInner.style.backgroundColor = "#12B76A";
 
