@@ -2968,6 +2968,22 @@ font-style: normal;
 font-weight: 700;
 line-height: 32px; /* 133.333% */
   }
+  @media(max-width:1418px){
+    .successText p{
+      
+      font-size: 18px;
+    }
+    .successText h2{
+     
+      font-size: 30px;
+    }
+    .successText h4{
+  font-size: 18px;
+    }
+    .founderImg img {
+      max-width: 85%;
+    }
+}
   @media(max-width:1300px){
     .successText p{
       
@@ -2979,6 +2995,9 @@ line-height: 32px; /* 133.333% */
     }
     .successText h4{
   font-size: 18px;
+    }
+    .founderImg img {
+      max-width: 45%;
     }
 }
 @media(max-width:600px){
