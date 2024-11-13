@@ -586,10 +586,13 @@ function bussInfoAccountFields() {
       if (input.files.length === 0) {
         allFieldsFilled = false; // No file selected
       } else {
-        const fileType = input.files[0].type.split("/")[0];
-        if (fileType !== "image") {
+        const file = input.files[0];
+        const fileType = file.type.split("/")[1].toLowerCase(); // Get the file extension (e.g., png, jpg, webp)
+
+        // Check if the file type is one of the allowed types
+        if (!["png", "jpg", "webp"].includes(fileType)) {
           allFieldsFilled = false; // Invalid file type
-          alert("Please upload a valid image file.");
+          // alert("Please upload a valid image file (PNG, JPG, or WebP).");
         }
       }
     } else {
@@ -895,41 +898,34 @@ const errorMsgTag = document.getElementById("bankCheckCopy"); // Error message t
 
 function checkBankFields() {
   let allFieldsFilled = true;
-  // errorMsgTag.innerHTML = "";
 
+  // Loop through all inputs in the bankDetailSection
   bankDetailSection.forEach((input) => {
     if (input.type === "file") {
       if (input.files.length === 0) {
-        allFieldsFilled = false;
-        errorMsgTag.innerHTML = "Please upload a file.";
+        allFieldsFilled = false; // No file selected
       } else {
-        const fileType = input.files[0].type;
-        const fileSize = input.files[0].size;
+        const file = input.files[0];
+        const fileType = file.type.split("/")[1].toLowerCase(); // Get the file extension (e.g., png, jpg, webp)
 
-        // Validate file type and size
-        if (
-          fileType !== "image/jpeg" &&
-          fileType !== "image/png" &&
-          fileType !== "image/jpg"
-        ) {
-          allFieldsFilled = false;
-          errorMsgTag.innerHTML = "You can upload only JPG, JPEG, PNG formats.";
-          errorMsgTag.style.color = 'red';
-        } else if (fileSize > 2097152) {
-          allFieldsFilled = false;
-          errorMsgTag.innerHTML = "File size must be less than 2 MB.";
-          errorMsgTag.style.color = 'red';
+        // Check if the file type is one of the allowed types
+        if (!["png", "jpg", "webp"].includes(fileType)) {
+          allFieldsFilled = false; // Invalid file type
+          // alert("Please upload a valid image file (PNG, JPG, or WebP).");
         }
       }
     } else {
       if (input.value.trim() === "") {
-        allFieldsFilled = false;
+        allFieldsFilled = false; // Empty text input
       }
     }
   });
 
+  // Enable/disable the submit button based on allFieldsFilled
   submitButton.disabled = !allFieldsFilled;
 }
+
+
 
 // Add event listeners to each input field
 bankDetailSection.forEach((input) => {
@@ -940,24 +936,30 @@ bankDetailSection.forEach((input) => {
   }
 });
 
+  const chequeCopy = document.getElementById("chequeCopy");
+  const bankCheckCopyText = document.getElementById("bankCheckCopy");
+  chequeCopy.addEventListener('change', function() {
+  getPhoto('chequeCopy', 'bankCheckCopy');
+});
 
-function bankChequePhoto() {
-  const fileInput = document.getElementById("chequeCopy");
-  const bankCheckCopy = document.getElementById("bankCheckCopy");
+// function bankChequePhoto() {
+//   const fileInput = document.getElementById("chequeCopy");
+//   const bankCheckCopy = document.getElementById("bankCheckCopy");
 
-  if (fileInput.files.length > 0) {
-    const file = fileInput.files[0];
-    const fileName = file.name;
-    const fileNameWithoutExtension = fileName.split(".")[0];
-    const extension = fileName.split(".").pop().toLowerCase();
+//   if (fileInput.files.length > 0) {
+//     const file = fileInput.files[0];
+//     const fileName = file.name;
+//     const fileNameWithoutExtension = fileName.split(".")[0];
+//     const extension = fileName.split(".").pop().toLowerCase();
 
-    // If both checks pass, display the file name and extension
-    bankCheckCopy.innerHTML = `File Name: ${fileNameWithoutExtension}, Extension: ${extension}`;
-    bankCheckCopy.style.color='#002882'
-  } else {
-    bankCheckCopy.innerHTML = "No file chosen";
-  }
-}
+//     // If both checks pass, display the file name and extension
+//     bankCheckCopy.innerHTML = `File Name: ${fileNameWithoutExtension}, Extension: ${extension}`;
+//     bankCheckCopy.style.color='#002882'
+//   } else {
+//     bankCheckCopy.innerHTML = "No file chosen";
+//   }
+// }
+
 
 function clsAlphaNoOnly (e) {  // Accept only alpha numerics, no special characters 
   var regex = new RegExp("^[a-zA-Z0-9]+$");
@@ -1007,33 +1009,33 @@ function accountApprovalPage(event) {
 
 // Get all submit buttons with the class 'nextBtn'
 
-function getFrontSidePhoto() {
-  const fileInput = document.getElementById("cnicFrontSidePhoto");
-  const frontSidePhoto = document.getElementById("frontSidePhoto");
-  // Get the file name without the extension
-  const fileName = fileInput.files[0]
-    ? fileInput.files[0].name
-    : "No file chosen";
-  const fileNameWithoutExtension = fileInput.files[0]
-    ? fileName.split(".")[0]
-    : "";
-  const extension = fileInput.files[0] ? fileName.split(".")[1] : "";
-  frontSidePhoto.textContent = `File Name: ${fileNameWithoutExtension}, Extension: ${extension}`;
-}
+// function getFrontSidePhoto() {
+//   const fileInput = document.getElementById("cnicFrontSidePhoto");
+//   const frontSidePhoto = document.getElementById("frontSidePhoto");
+//   // Get the file name without the extension
+//   const fileName = fileInput.files[0]
+//     ? fileInput.files[0].name
+//     : "No file chosen";
+//   const fileNameWithoutExtension = fileInput.files[0]
+//     ? fileName.split(".")[0]
+//     : "";
+//   const extension = fileInput.files[0] ? fileName.split(".")[1] : "";
+//   frontSidePhoto.textContent = `File Name: ${fileNameWithoutExtension}, Extension: ${extension}`;
+// }
 
-function getBackSidePhoto() {
-  const fileInput = document.getElementById("cnicFrontBackPhoto");
-  const backSidePhoto = document.getElementById("backSidePhoto");
-  // Get the file name without the extension
-  const fileName = fileInput.files[0]
-    ? fileInput.files[0].name
-    : "No file chosen";
-  const fileNameWithoutExtension = fileInput.files[0]
-    ? fileName.split(".")[0]
-    : "";
-  const extension = fileInput.files[0] ? fileName.split(".")[1] : "";
-  backSidePhoto.textContent = `File Name: ${fileNameWithoutExtension}, Extension: ${extension}`;
-}
+// function getBackSidePhoto() {
+//   const fileInput = document.getElementById("cnicFrontBackPhoto");
+//   const backSidePhoto = document.getElementById("backSidePhoto");
+//   // Get the file name without the extension
+//   const fileName = fileInput.files[0]
+//     ? fileInput.files[0].name
+//     : "No file chosen";
+//   const fileNameWithoutExtension = fileInput.files[0]
+//     ? fileName.split(".")[0]
+//     : "";
+//   const extension = fileInput.files[0] ? fileName.split(".")[1] : "";
+//   backSidePhoto.textContent = `File Name: ${fileNameWithoutExtension}, Extension: ${extension}`;
+// }
 const personalNextBtn = document.getElementById("personalNextBtn");
 let inputs = document.querySelectorAll(".personalInfoForm .required");
 
@@ -1045,23 +1047,9 @@ function checkPerInfoFields() {
       if (input.files.length === 0) {
         allFieldsFilled = false; // No file selected
       } else {
-        const fileType = input.files[0].type;
-        const fileSize = input.files[0].size;
-        const errorMsgTag =
-          input.id === "cnicFrontSidePhoto"
-            ? document.getElementById("frontSidePhoto")
-            : document.getElementById("backSidePhoto");
-        // Accept both image and PDF file types
-        if (
-          fileType !== "image/jpeg" &&
-          fileType !== "image/png" &&
-          fileType !== "image/jpg"
-        ) {
+        const fileType = input.files[0].type.split("/")[0];
+        if (fileType !== "image") {
           allFieldsFilled = false; // Invalid file type
-          errorMsgTag.innerHTML = `<span style="color: red;">You can upload only JPG, JPEG, PNG, formats.</span>`;
-        } else if (fileSize > 2097152) {
-          // 2 MB = 2097152 bytes
-          allFieldsFilled = false; // File too large
         }
       }
     } else {
@@ -1079,37 +1067,51 @@ function checkPerInfoFields() {
 function getFrontSidePhoto() {
   const input = document.getElementById("cnicFrontSidePhoto");
   const file = input.files[0]; // Get the first selected file
-  const fileSize = file.size / (1024 * 1024); // Convert size to MB
-  const fileName = file.name;
   const frontSidePhotoMsg = document.getElementById("frontSidePhoto");
 
-  if (fileSize > 2) {
-    // Show red alert if size is more than 2 MB
-    frontSidePhotoMsg.innerHTML = `<span style="color: red;">The selected file is too large. Please upload a file smaller than 2 MB.</span>`;
-    input.value = ""; // Clear the input
+  if (file) {
+    const fileSize = file.size / 1024; // Convert size to KB
+    const fileName = file.name;
+
+    if (fileSize > 500) {
+      // Show red alert if size is more than 500 KB
+      frontSidePhotoMsg.innerHTML = `<span style="color: red;">The selected file is too large. Please upload a file smaller than 500 KB.</span>`;
+      input.value = ""; // Clear the input if file size is too large
+    } else {
+      // Show the current selected file name
+      frontSidePhotoMsg.innerHTML = `Selected: ${fileName}`;
+    }
   } else {
-    // Show file name if valid
-    frontSidePhotoMsg.innerHTML = `Selected: ${fileName}`;
+    // If no file is selected, show the default message
+    frontSidePhotoMsg.innerHTML = "No file selected";
   }
 }
+
 
 // Function to handle CNIC back side image upload
 function getBackSidePhoto() {
   const input = document.getElementById("cnicFrontBackPhoto");
   const file = input.files[0]; // Get the first selected file
-  const fileSize = file.size / (1024 * 1024); // Convert size to MB
-  const fileName = file.name;
   const backSidePhotoMsg = document.getElementById("backSidePhoto");
 
-  if (fileSize > 2) {
-    // Show red alert if size is more than 2 MB
-    backSidePhotoMsg.innerHTML = `<span style="color: red;">The selected file is too large. Please upload a file smaller than 2 MB.</span>`;
-    input.value = ""; // Clear the input
+  if (file) {
+    const fileSize = file.size / 1024; // Convert size to KB
+    const fileName = file.name;
+
+    if (fileSize > 500) {
+      // Show red alert if size is more than 500 KB
+      backSidePhotoMsg.innerHTML = `<span style="color: red;">The selected file is too large. Please upload a file smaller than 500 KB.</span>`;
+      input.value = ""; // Clear the input if file size is too large
+    } else {
+      // Show file name if valid
+      backSidePhotoMsg.innerHTML = `Selected: ${fileName}`;
+    }
   } else {
-    // Show file name if valid
-    backSidePhotoMsg.innerHTML = `Selected: ${fileName}`;
+    // If no file is selected, retain the previous file name or show a message
+    backSidePhotoMsg.innerHTML = `No file selected`;
   }
 }
+
 
 inputs.forEach((input) => {
   if (input.type === "file") {

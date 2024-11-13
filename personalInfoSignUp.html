@@ -254,7 +254,7 @@
                         <p class="description">Lorem ipsum dolor sit amet consectetur. Dui massa lorem nulla tristique accumsan ornare viverra. Elementum nec ac elementum nibh.</p>
                   
                         <div class="mb-3 formFields">
-                            <label class="form-label">Your Name<span class="starik">*</span></label>
+                            <label class="form-label">Full Name<span class="starik">*</span></label>
                             <input type="text" class="form-control required" placeholder="Enter your name" name="personalName" id="personalName" aria-describedby="emailHelp" required>
                         </div>
                         <div class="mb-3 formFields">
@@ -336,10 +336,7 @@
   </div>
   <h1>Verify Identification Card</h1>
   <div class="row p-2 p-sm-3 m-0 rounded-4">
-      <div class="mb-3 formFields">
-          <label class="form-label">Full Name<span class="starik">*</span></label>
-          <input type="text" class="form-control required" placeholder="Enter name" id="cnicFullName" name="cnicFullName" aria-describedby="emailHelp" required>
-      </div>
+      
   
       <div class="mb-3 formFields">
         <label class="form-label">CNIC Number<span class="starik">*</span></label>
@@ -365,9 +362,9 @@
             </svg>
             <span>Upload Image</span>
         </label>
-          <p id='frontSidePhoto' class="m-0">Image format should be JPEG, PNG, JPG, and less then 2MB</p>
+          <p id='frontSidePhoto' class="m-0">Only PNG, JPG and WEBp with File size less then 500kb are accepted.</p>
         </div>
-        <input id="cnicFrontSidePhoto" class="required" type="file" name="cnicFrontSidePhoto" onChange='getFrontSidePhoto()'  accept=".jpg, .jpeg, .png"  required/>
+        <input id="cnicFrontSidePhoto" class="required" type="file" name="cnicFrontSidePhoto" onChange='getFrontSidePhoto()'  accept=".jpg, .WEBp, .png"  required/>
         
     </div>
  <!-- Ensure this is a paragraph for displaying the output -->
@@ -384,9 +381,9 @@
                 </svg>
               <span>Upload Image</span>
           </label>
-            <p id='backSidePhoto' class="m-0">Image format should be JPEG, PNG, JPG, and less then 2MB</p>
+            <p id='backSidePhoto' class="m-0">Only PNG, JPG and WEBp with File size less then 500kb are accepted.</p>
           </div>
-          <input id="cnicFrontBackPhoto" class="required" type="file" onChange='getBackSidePhoto()' name="cnicFrontBackPhoto" accept=".jpg, .jpeg, .png" required/>                            </div>
+          <input id="cnicFrontBackPhoto" class="required" type="file" onChange='getBackSidePhoto()' name="cnicFrontBackPhoto" accept=".jpg, .WEBp, .png" required/>                            </div>
         
         </div>
         
@@ -650,7 +647,7 @@
                               </label>
                                 <p id='upRegProofText' class="m-0">Only PNG, JPG and WEBp with File size less then 500kb are accepted.</p>
                               </div>
-                              <input id="upRegProof" class="upRegProof required" type="file" name="upRegProof" accept=".jpg, .jpeg, .png" required/>                            
+                              <input id="upRegProof" class="upRegProof required" type="file" name="upRegProof" accept=".jpg, .WEBp, .png" required/>                            
                               
                             </div>
 
@@ -674,7 +671,7 @@
                               </label>
                                 <p id='upNtnNumText' class="m-0">Only PNG, JPG and WEBp with File size less then 500kb are accepted.</p>
                               </div>
-                              <input id="upNtnNum" class="upRegProof required" type="file" name="upNtnNum" accept=".jpg, .jpeg, .png" required/>                            
+                              <input id="upNtnNum" class="upRegProof required" type="file" name="upNtnNum" accept=".jpg, .WEBp, .png" required/>                            
                               
                             </div>
 
@@ -698,7 +695,7 @@
                               </label>
                                 <p id='upTradDocText' class="m-0">Only PNG, JPG and WEBp with File size less then 500kb are accepted.</p>
                               </div>
-                              <input id="upTradDoc" class="upRegProof required" type="file" name="upTradDoc" accept=".jpg, .jpeg, .png" required/>                            
+                              <input id="upTradDoc" class="upRegProof required" type="file" name="upTradDoc" accept=".jpg, .WEBp, .png" required/>                            
                               
                             </div>
                         </div>
@@ -914,9 +911,9 @@
                                     </svg>
                                   <span>Upload Image</span>
                               </label>
-                                <p id='bankCheckCopy' class="m-0">Image format should be JPEG, PNG, JPG, and less then 2MB</p>
+                                <p id='bankCheckCopy' class="m-0">Only PNG, JPG and WEBp with File size less then 500kb are accepted.</p>
                               </div>
-                              <input id="chequeCopy" class="bankRequired" type="file" onChange='bankChequePhoto()' name="chequeCopy" accept=".jpg, .jpeg, .png" required/>                            
+                              <input id="chequeCopy" class="bankRequired" type="file" name="chequeCopy" accept=".jpg, .WEBp, .png" required/>                            
                               
                             </div>
                            
