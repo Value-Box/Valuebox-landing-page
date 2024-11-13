@@ -642,6 +642,8 @@ line-height: normal;
   );
   color: white;
   transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: none;
+
 }
 
 .accordion-button:not(.collapsed) i {
@@ -649,7 +651,9 @@ line-height: normal;
   color: #ffc136;
   transform: rotate(180deg);
 }
-
+.accordion-item{
+  border-radius: 12px !important;
+}
 /* Change background color when the accordion body is shown */
 .accordion-collapse.show {
   color: white;
@@ -661,8 +665,22 @@ line-height: normal;
     #1a51cb 75%,
     #0032a3 100%
   );
+  
 }
 
+.accordion-collapse .accordion-body{
+  color: white;
+  background: linear-gradient(
+    90deg,
+    #0032a3 0%,
+    #1a51cb 25%,
+    #3b66c8 50%,
+    #1a51cb 75%,
+    #0032a3 100%
+  ) !important;
+}
+.accordion-button:not(.collapsed){
+}
 /* Hover effects */
 .accordion-button:hover {
   background-color: rgba(0, 50, 163, 0.1);
@@ -2156,8 +2174,9 @@ svg path {
     line-height: 28px;
   }
   .previewSection .previewText {
-    height: 80%;
+    height: 88%;
   }
+
   .LoginBgPoster img {
     height: 104% !important;
   }
@@ -2427,7 +2446,7 @@ svg path {
     color: var(--Natural-Color-00, #FCFCFC);
 
 /* Text md/Regular */
-font-size: 16px;
+font-size: 14px;
 font-style: normal;
 font-weight: 400;
 line-height: 24px; /* 150% */
@@ -2981,6 +3000,22 @@ font-style: normal;
 font-weight: 700;
 line-height: 32px; /* 133.333% */
   }
+  @media(max-width:1418px){
+    .successText p{
+      
+      font-size: 18px;
+    }
+    .successText h2{
+     
+      font-size: 30px;
+    }
+    .successText h4{
+  font-size: 18px;
+    }
+    .founderImg img {
+      max-width: 85%;
+    }
+}
   @media(max-width:1300px){
     .successText p{
       
@@ -2992,6 +3027,9 @@ line-height: 32px; /* 133.333% */
     }
     .successText h4{
   font-size: 18px;
+    }
+    .founderImg img {
+      max-width: 45%;
     }
 }
 @media(max-width:600px){
@@ -3130,6 +3168,43 @@ font-size: 16px;
    .youtubevideo{
     height: 22vh;
    }
+ }
+ .faq{
+  color: var(--Natural-Color-100, #1A1A1A);
+text-align: center;
+font-family: Sarabun;
+font-size: 60px;
+font-style: normal;
+font-weight: 600;
+line-height: 72px; /* 120% */
+letter-spacing: -1.2px;
+ }
+ @media(max-width:824px){
+  .faq{
+    color: var(--Natural-Color-100, #1A1A1A);
+text-align: center;
+
+/* Display xl/Semibold */
+font-family: Sarabun;
+font-size: 50px;
+font-style: normal;
+font-weight: 600;
+line-height: 72px; /* 120% */
+letter-spacing: -1.2px;
+  }
+ }
+ @media(max-width:576px){
+  .faq{
+    color: var(--Natural-Color-100, #1A1A1A);
+    text-align: center;
+    
+    /* Display sm/Bold */
+    font-family: Sarabun;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38px; /* 126.667% */
+  }
  }
   
   
