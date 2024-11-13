@@ -2911,7 +2911,7 @@ gap: 10px;
   .youdelivertopnotchproductsheading h1{
       color: var(--Secondary-Color-Mon-Yellow, #EEA500);
       font-family: Anton;
-      font-size: 24px;
+      font-size: 20px;
       font-style: normal;
       font-weight: 400;
       line-height: normal;
@@ -2920,7 +2920,7 @@ gap: 10px;
       color: var(--Secondary-Color-Mon-Yellow-10, #FEF6E6);
 /* Display xs/Medium */
 font-family: Sarabun;
-font-size: 24px;
+font-size: 20px;
 font-style: normal;
 font-weight: 500;
 line-height: 32px; /* 133.333% */
