@@ -251,6 +251,12 @@ line-height: 32px; /* 133.333% */
 border: 1px solid #FCFCFC;
 background-color: #7a5af8;
 color: #FCFCFC ;
+font-weight: 600;
+}
+.joinbtn:hover{
+border: 1px solid  #7a5af8;
+background-color:#FCFCFC ;
+color: #7a5af8 ;
 }
 .zinatbg{
     background-color: #7a5af8 !important;
@@ -307,6 +313,7 @@ background: var(--Primary-Color-Dark-Blue, linear-gradient(0deg, rgba(0, 0, 0, 0
 color: #f2f2f2;
 border: none;
 }
+
 .zinattable table th{
  background-color: #7a5af8;
 }
@@ -639,6 +646,7 @@ line-height: 24px;
         color: #f2f2f2;
         border: none;
         }
+        
 
 }
 @media(max-width:460px){
