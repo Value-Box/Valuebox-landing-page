@@ -1125,7 +1125,7 @@ line-height: 32px; /* 133.333% */
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 28px; /* 150% */
+    line-height: 18px; /* 150% */
     }
     .business img{
         width: 20%;
@@ -1259,6 +1259,27 @@ line-height: 32px; /* 133.333% */
     font-style: normal;
     font-weight: 400;
     line-height: 30px;
+    }
+}
+@media(max-width:800px){
+    .empoweringyourbusinessheading h1{
+        color: var(--Natural-Color-100, #1A1A1A);
+        font-family: Anton;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .empoweringyourbusinessheading p{
+        color: var(--Natural-Color-40, #999);
+    text-align: center;
+    
+    /* Display xs/Regular */
+    font-family: Sarabun;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; /* 133.333% */
     }
 }
 @media(max-width:576px){
