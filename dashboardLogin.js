@@ -19,14 +19,14 @@ function passwordShower() {
     toggleIcon.classList.add("fa-eye");
   }
 }
-  function toggleSignUpForm() {
-    const loginForm = document.querySelector(".logInForm");
-    const signUpForm = document.querySelector(".signUpForm");
-    loginForm.style.display =
-      loginForm.style.display === "none" ? "block" : "none";
-    signUpForm.style.display =
-      signUpForm.style.display === "none" ? "block" : "none";
-  }
+  // function toggleSignUpForm() {
+  //   const loginForm = document.querySelector(".logInForm");
+  //   const signUpForm = document.querySelector(".signUpForm");
+  //   loginForm.style.display =
+  //     loginForm.style.display === "none" ? "block" : "none";
+  //   signUpForm.style.display =
+  //     signUpForm.style.display === "none" ? "block" : "none";
+  // }
 
 
   const otpInputs = document.querySelectorAll('.otpNum');

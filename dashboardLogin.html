@@ -37,12 +37,12 @@
        <a href="#" class="d-flex align-items-center gap-2" onclick="redirectTajirPage()">ValueBox Tajer Program</a>
         <!-- <span class="verticleLine"></span> -->
         <a href="#" class="d-flex align-items-center gap-2" onclick="redirectZinatPage()">ValueBox Zinat</a>
-        <button class="loginBtn" onclick="loginPage('1')">Login</button>
+        <button class="loginBtn" onclick="loginPage()">Login</button>
       </div>
 
       <div class="ml-1 headerButtons">
-        <button class="loginBtn" onclick="loginPage('1')">Login</button>
-        <button class="joinBtn" onclick="loginPage('2')">Join Marketplace</button>
+        <button class="loginBtn" onclick="loginPage()">Login</button>
+        <button class="joinBtn" onclick="signUpPage()">Join Marketplace</button>
       </div>
 
       <label for="menuToggle" class="hamburger">
@@ -63,7 +63,7 @@
           </div>
 <div class="row bg-transparent m-0 p-0 position-absolute">
   <div class="col-12 col-lg-6 col-xl-7 d-flex flex-column p-0 pb-2 pr-2 ps-3 ps-sm-5 pt-xl-5 pt-4 " id="becomeSellerTxt">
-    <h1 class="text-white mb-sm-4 my-lg-4" >
+    <h1 class="text-white mb-lg-4 my-lg-4" >
       BECOME A VALUEBOX SELLER TODAY
     </h1>
     <h5 class="w-xl-75 text-white mt-2">
@@ -74,14 +74,14 @@
   <div class="col-12 col-lg-6 mt-lg-2 mt-xl-0 loginForm p-0 col-xl-5 pr-3 ps-sm-0 d-flex align-items-center justify-content-center">
     <div class="col-11 col-sm-8 col-md-6 col-lg-10 bg-light p-0 mt-lg-3 mt-xl-5 formParent">
       <form class="form" id="myForm" action="personalInfoSignUp.html" method="GET">
-        <div class="logInForm" style="display: none">
+        <div class="logInForm">
           <h2>Login as ValueBox Seller</h2>
 
           <div class="form-group my-3">
             <label for="exampleInputEmail1">Email</label>
             <input
               type="email"
-              class="form-control"
+              class="form-control form-control-lg"
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
               placeholder="Enter your email"
@@ -95,7 +95,7 @@
               <div class="form-group mt-3 position-relative">
                 <label for="exampleInputPassword1">Password</label>
                 <div class="input-group">
-                  <input type="password" class="form-control required" placeholder="Enter Password" id="loginPassword" name="loginPassword" required>
+                  <input type="password" class="form-control form-control-lg required" placeholder="Enter Password" id="loginPassword" name="loginPassword" required>
                   <span class="input-group-text" onclick="passwordShower()" id="loginPasswordIcon">
                     <i id="toggleIcon" class="fas fa-eye"></i>
                   </span>
@@ -114,7 +114,7 @@
           </button>
           <div class="px-0 my-1">
             <span class="d-block my-2">Haven’t got an account?</span>
-            <button type="button" class="w-100 py-2 rounded fw-bold signupBtn" onclick="toggleSignUpForm()">
+            <button type="button" class="w-100 py-2 rounded fw-bold signupBtn" onclick="signUpPage()">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="25"
@@ -1341,7 +1341,7 @@
         </div>
       </div>
     </footer>
-    <script>
+    <!-- <script>
       document.addEventListener("DOMContentLoaded", function () {
         // Parse the URL query parameters
         const params = new URLSearchParams(window.location.search);
@@ -1361,7 +1361,7 @@
         }
       });
       
-    </script>
+    </script> -->
     <!-- <script src="script.js"></script> -->
     <script src="dashboardLogin.js"></script>
     <script src="script.js"></script>

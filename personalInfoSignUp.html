@@ -43,12 +43,12 @@
      <a href="#" class="d-flex align-items-center gap-2" onclick="redirectTajirPage()">ValueBox Tajer Program</a>
       <!-- <span class="verticleLine"></span> -->
       <a href="#" class="d-flex align-items-center gap-2" onclick="redirectZinatPage()">ValueBox Zinat</a>
-      <button class="loginBtn" onclick="loginPage('1')">Login</button>
+      <button class="loginBtn" onclick="loginPage()">Login</button>
     </div>
 
     <div class="ml-1 headerButtons">
-      <button class="loginBtn" onclick="loginPage('1')">Login</button>
-      <button class="joinBtn" onclick="loginPage('2')">Join Marketplace</button>
+      <button class="loginBtn" onclick="loginPage()">Login</button>
+      <button class="joinBtn" onclick="signUpPage()">Join Marketplace</button>
     </div>
 
     <label for="menuToggle" class="hamburger">
@@ -135,10 +135,10 @@
                           Get OTP via WhatsApp
                         </button>
                         <div class="px-0 w-100">
-                          <a href="#" class="text-decoration-none text-dark">Already have an account?</a>
+                          <span href="#" class="text-decoration-none text-dark">Already have an account?</span>
                         </div>
                         <div class="px-0 my-1 w-100">
-                          <button type="button" class="w-100 py-2 rounded fw-bold signupBtn" onclick="toggleSignUpForm()">
+                          <button type="button" class="w-100 py-2 rounded fw-bold signupBtn" onclick="loginPage()">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="24"

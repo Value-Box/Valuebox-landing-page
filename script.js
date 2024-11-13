@@ -12,9 +12,11 @@ const loginBtn = document.querySelector(".loginBtn");
 //       logInForm.style.display = 'none';
 //     }
 //   }
-function loginPage(formId) {
-  // Redirects to dashboardLogin.html with a query parameter to specify the form
-  window.location.href = `dashboardLogin.html?form=${formId}`;
+function loginPage() {
+  window.location.href = `dashboardLogin.html`;
+}
+function signUpPage() {
+  window.location.href = `personalInfoSignUp.html`;
 }
 function redirectHomePage() {
   window.location.href = "index.html";
@@ -1396,12 +1398,6 @@ bankAccBackBtn.addEventListener("click", () => {
       .scrollIntoView({ behavior: "smooth" });
   }
 });
-  // function signUpPage(event) {
-  //   // Prevent the default form submission
-  //   event.preventDefault();
-  //   console.log('clicked');
-  //   window.location.href = "personalInfoSignUp.html";
-  // }
 
   document.getElementById("verifyBtn").addEventListener("click", function () {
     document.getElementById("myForm").submit();
