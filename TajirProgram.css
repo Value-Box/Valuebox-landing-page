@@ -1356,7 +1356,7 @@ line-height: 32px; /* 133.333% */
   
 }
 .crousalimage{
-    margin: auto !important;
+    margin: auto 0px auto auto !important;
     height: fit-content !important;
 }
 @media(max-width:768px){
