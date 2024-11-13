@@ -740,6 +740,7 @@ line-height: normal;
 .personalSignupForm {
   border-radius: 20px;
   height: fit-content;
+  margin: 0px auto;
 }
 
 /* example progress bar */
@@ -1330,7 +1331,7 @@ input::placeholder {
 #contactMobileErrTxt,
 #personalPhoneErrTxt,
 #bankCheckCopy,
-.ibanText {
+.ibanText,#upRegProofText,#upNtnNumText,#upTradDocText {
   /* max-width: 370px; */
   width: 100%;
   /* margin-left: auto; */
@@ -1412,8 +1413,10 @@ select {
 .parent-section {
   overflow-y: auto;
   position: sticky;
-    height: 100%;
-    top: 0px;
+    /* height: 100%;
+    top: 0px; */
+    height: 100vh;
+    top: 7px;
 }
 
 .sticky-container {
@@ -2158,7 +2161,10 @@ svg path {
     /* padding: 80px 20px 80px 20px; */
   }
 
-  
+  .parent-section {
+    position: relative;
+   height: auto;
+}
   
   #carouselExampleCaptions {
     height: 350px;

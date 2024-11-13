@@ -71,7 +71,7 @@
                     </div>
                    </div>
                 </div>
-                <div class="col-12 col-lg-7 bg-white p-0 personalSignupForm">
+                <div class="col-12 col-md-8 col-lg-7 col-xl-6 col-xxl-5 bg-white p-0 personalSignupForm" id="personalSignupForm">
                   <div class="row m-0 bg-transparent g-5 pb-0 rightIconsParent">
                     <div class="container p-0">
                         <div class="steps">
@@ -103,7 +103,7 @@
                     
                     <!-- Personal Information Form -->
                     <form class="p-3 p-sm-5 pt-0 mt-4 mt-sm-0" id="personalForm" onsubmit="accountApprovalPage(event)" action="" method="POST" novalidate>
-                      <div class="signUpForm" id="signUpForm">
+                      <div class="signUpForm" id="signUpForm" >
                         <h2 class="w-100">Sign Up as ValueBox Seller</h2>
               
                         <div class="form-group my-3 w-100">
@@ -635,6 +635,24 @@
                                 <label class="form-label">Business Registration Number<span class="starik">*</span></label>
                                 <input type="text" class="form-control required" placeholder="Enter Registration Number" id="businessRegistrationNumber" name="businessRegistrationNumber" aria-describedby="emailHelp" required>
                             </div>
+                            <div class="mb-3 formFields">
+                              <label class="form-label">Upload Registration Proof<span class="starik">*</span></label>
+                             
+                              <div class="w-100">
+                                <label for="upRegProof" class="m-0 upload-wrapper">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                      <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="#002882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="#002882" stroke-width="1.5" stroke-linecap="round"/>
+                                      <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
+                                    </svg>
+                                  <span>Upload Image</span>
+                              </label>
+                                <p id='upRegProofText' class="m-0">Only PNG, JPG and WEBp with File size less then 500kb are accepted.</p>
+                              </div>
+                              <input id="upRegProof" class="upRegProof required" type="file" name="upRegProof" accept=".jpg, .jpeg, .png" required/>                            
+                              
+                            </div>
 
                             <div class="mb-3 formFields">
                                 <label class="form-label">Business NTN Number<span class="starik">*</span></label>
@@ -642,8 +660,46 @@
                             </div>
 
                             <div class="mb-3 formFields">
+                              <label class="form-label">Upload NTN Document<span class="starik">*</span></label>
+                             
+                              <div class="w-100">
+                                <label for="upNtnNum" class="m-0 upload-wrapper">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                      <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="#002882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="#002882" stroke-width="1.5" stroke-linecap="round"/>
+                                      <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
+                                    </svg>
+                                  <span>Upload Image</span>
+                              </label>
+                                <p id='upNtnNumText' class="m-0">Only PNG, JPG and WEBp with File size less then 500kb are accepted.</p>
+                              </div>
+                              <input id="upNtnNum" class="upRegProof required" type="file" name="upNtnNum" accept=".jpg, .jpeg, .png" required/>                            
+                              
+                            </div>
+
+                            <div class="mb-3 formFields">
                                 <label class="form-label">Trademark <span class="bussinessInfoText">(optional)</span></label>
                                 <input type="text" class="form-control required" placeholder="Enter Trademark" id="trademark" name="trademark" aria-describedby="emailHelp" required>
+                            </div>
+
+                            <div class="mb-3 formFields">
+                              <label class="form-label">Upload Trademark Document<span class="starik">*</span></label>
+                             
+                              <div class="w-100">
+                                <label for="upTradDoc" class="m-0 upload-wrapper">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                      <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="#002882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="#002882" stroke-width="1.5" stroke-linecap="round"/>
+                                      <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
+                                    </svg>
+                                  <span>Upload Image</span>
+                              </label>
+                                <p id='upTradDocText' class="m-0">Only PNG, JPG and WEBp with File size less then 500kb are accepted.</p>
+                              </div>
+                              <input id="upTradDoc" class="upRegProof required" type="file" name="upTradDoc" accept=".jpg, .jpeg, .png" required/>                            
+                              
                             </div>
                         </div>
                         <h1>Address Book</h1>

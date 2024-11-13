@@ -37,10 +37,12 @@ function dashboard() {
 
 const otpErrorMsg=document.getElementById('otpErrorMsg');
 document.getElementById("verifyBtn").addEventListener("click", function () {
+  const personalSignupForm=document.getElementById('personalSignupForm');
   // Check if all OTP inputs are filled
   const personalInfoForm = document.querySelector('.personalInfoForm');
   const varificationForm = document.querySelector('.varificationForm');
   let allFilled = true;
+
   otpInputs.forEach((input) => {
     if (input.value === '') {
       allFilled = false; // At least one input is empty
@@ -51,7 +53,7 @@ document.getElementById("verifyBtn").addEventListener("click", function () {
     // All inputs are filled, so submit the form and redirect
     // document.getElementById("myForm").submit();
     // window.location.href = "personalInfoSignUp.html";
-
+personalSignupForm.classList.remove('col-md-8', 'col-xl-6', 'col-xxl-5')
     varificationForm.style.display = 'none';
     personalInfoForm.style.display = 'block';
     circles[0].classList.remove("active"); // Complete the second circle
@@ -529,6 +531,52 @@ const BusinessInfoBussAccSection = document.querySelectorAll(
   ".BusinessInfoBussAccForm .required"
 );
 const bussAccNxtBtn = document.getElementById("bussAccNxtBtn");
+
+function getPhoto(inputId, messageId) {
+  const input = document.getElementById(inputId);
+  const file = input.files[0]; // Get the first selected file
+  const fileSize = file.size / 1024; // Convert size to KB
+  const fileName = file.name;
+  const fileType = file.type; // Get the file type
+  const messageElement = document.getElementById(messageId);
+
+  // Check for file type and size constraints
+  if (
+    fileType !== "image/jpeg" &&
+    fileType !== "image/png" &&
+    fileType !== "image/jpg"
+  ) {
+    messageElement.innerHTML = `<span style="color: red;">Invalid file type. Please upload a JPEG, PNG, or JPG image.</span>`;
+    input.value = ""; // Clear the input
+  } else if (fileSize > 500) {
+    messageElement.innerHTML = `<span style="color: red;">The selected file is too large. Please upload a file smaller than 500 KB.</span>`;
+    input.value = ""; // Clear the input
+  } else {
+    // Show file name if valid
+    messageElement.innerHTML = `Selected: ${fileName}`;
+  }
+}
+
+// Get file input elements and message elements
+const upRegProof = document.getElementById('upRegProof');
+const upNtnNum = document.getElementById('upNtnNum');
+const upTradDoc = document.getElementById('upTradDoc');
+
+const upRegProofText = document.getElementById('upRegProofText');
+const upNtnNumText = document.getElementById('upNtnNumText');
+const upTradDocText = document.getElementById('upTradDocText');
+
+// Add event listeners with wrapper functions to pass parameters correctly
+upRegProof.addEventListener('change', function() {
+  getPhoto('upRegProof', 'upRegProofText');
+});
+upNtnNum.addEventListener('change', function() {
+  getPhoto('upNtnNum', 'upNtnNumText');
+});
+upTradDoc.addEventListener('change', function() {
+  getPhoto('upTradDoc', 'upTradDocText');
+});
+
 
 function bussInfoAccountFields() {
   let allFieldsFilled = true;
