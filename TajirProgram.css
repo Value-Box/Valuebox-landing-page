@@ -1640,5 +1640,138 @@ margin-top: 10px;
          margin-left: -22px;
         }
      }
+     .accordion-button::after {
+        display: none;
+      }
+      
+      .accordion-header {
+        background-color: #f2f2f2 !important;
+        border-radius: 12px 12px 0 0;
+      }
+      
+      .accordion-button i {
+        border: 1px solid black;
+        padding: 8px;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+      }
+      
+      .accordion-button {
+        background-color: #f2f2f2 !important;
+        border: none !important;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+      }
+      
+      .accordion-item {
+        margin: 10px 0;
+        border: none !important;
+      }
+      
+      /* Change background color of the accordion item when open */
+      .accordion-item .accordion-button:not(.collapsed) {
+        background: linear-gradient(
+          90deg,
+          #0032a3 0%,
+          #1a51cb 25%,
+          #3b66c8 50%,
+          #1a51cb 75%,
+          #0032a3 100%
+        );
+        color: white;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        box-shadow: none;
+      
+      }
+      
+      .accordion-button:not(.collapsed) i {
+        border: 2px solid #ffc136;
+        color: #ffc136;
+        transform: rotate(180deg);
+      }
+      .accordion-item{
+        border-radius: 12px !important;
+      }
+      /* Change background color when the accordion body is shown */
+      .accordion-collapse.show {
+        color: white;
+        background: linear-gradient(
+          90deg,
+          #0032a3 0%,
+          #1a51cb 25%,
+          #3b66c8 50%,
+          #1a51cb 75%,
+          #0032a3 100%
+        );
+        
+      }
+      
+      .accordion-collapse .accordion-body{
+        color: white;
+        background: linear-gradient(
+          90deg,
+          #0032a3 0%,
+          #1a51cb 25%,
+          #3b66c8 50%,
+          #1a51cb 75%,
+          #0032a3 100%
+        ) !important;
+      }
+      .accordion-button:not(.collapsed){
+      }
+      /* Hover effects */
+      .accordion-button:hover {
+        background-color: rgba(0, 50, 163, 0.1);
+      }
+      
+      /* Accordion body styles */
+      .accordion-body {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin: 0; /* Remove any default margin */
+        padding: 0; /* Remove any default padding */
+      }
+      .faq{
+        color: var(--Natural-Color-100, #1A1A1A);
+      text-align: center;
+      font-family: Sarabun;
+      font-size: 60px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 72px; /* 120% */
+      letter-spacing: -1.2px;
+       }
+       @media(max-width:824px){
+        .faq{
+          color: var(--Natural-Color-100, #1A1A1A);
+      text-align: center;
+      
+      /* Display xl/Semibold */
+      font-family: Sarabun;
+      font-size: 50px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 72px; /* 120% */
+      letter-spacing: -1.2px;
+        }
+       }
+       @media(max-width:576px){
+        .faq{
+          color: var(--Natural-Color-100, #1A1A1A);
+          text-align: center;
+          
+          /* Display sm/Bold */
+          font-family: Sarabun;
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 38px; /* 126.667% */
+        }
+       }
      
      
