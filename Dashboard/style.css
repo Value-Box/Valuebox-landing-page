@@ -1043,17 +1043,19 @@ td {
   font-size: 14px;
 }
 .addVariantBtn {
-  padding: 10px 20px;
   border-radius: 5px;
-  background: var(
-    --Primary-Color-Dark-Blue,
-    linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0.2) 100%),
-    #002882
-  );
-  color: #e6eaf3;
+  color: #002882; 
+  font-weight: 700;
+  background: transparent;
+  display: flex;
+  gap: 5px;
   border: 0;
   outline: 0;
 }
+.addVariantBtn:focus {
+  outline: none; /* Removes outline on focus */
+}
+
 .choices__list--multiple .choices__item {
   display: inline-block;
   vertical-align: middle;
@@ -1118,7 +1120,7 @@ td {
   padding: 6px;
   border: 1px solid #ddd;
   /* margin-top: 20px; */
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
   display: flex;
   align-items: center;
 }
@@ -1129,8 +1131,15 @@ td {
   cursor: move;
 }
 .choices__inner {
-  height: 47px !important;
-  overflow: auto;
+  /* height: 47px !important;
+  overflow: auto; */
+  background: transparent;
+}
+#selOptType{
+  height: fit-content;
+}
+.choices__input{
+  background: transparent;
 }
 .variantRow .form-group {
   width: 100%;
@@ -1309,5 +1318,6 @@ background:  #F2F2F2;
 .variantTable .arrow.rotate {
   transform: rotate(180deg); /* Rotate the arrow when expanded */
 }
+
 
 
