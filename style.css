@@ -19,7 +19,7 @@ main {
   padding-left: 0px !important;
 }
 
-.logo {
+/* .logo {
   display: flex;
   width: 267.473px;
   align-items: flex-start;
@@ -38,7 +38,7 @@ main {
   line-height: 36px;
 }
 .links {
-  /* margin-left: 28px; */
+  
   display: flex;
   align-items: center;
   gap: 40px;
@@ -52,10 +52,10 @@ main {
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 30px; /* 150% */
-}
+  line-height: 30px;
+}  */
 
-.headerButtons button {
+/* .headerButtons button {
   padding: 10px 40px;
   border-radius: 10px;
   cursor: pointer;
@@ -69,8 +69,8 @@ main {
 .headerButtons .loginBtn:hover {
   background-color: #002882;
   color: white;
-}
-.links .loginBtn {
+} */
+/* .links .loginBtn {
   background-color: white;
   border: 1.5px solid #002882;
   color: #33539b;
@@ -81,22 +81,22 @@ main {
   color: white;
 }
 .links button {
-  display: none; /* Button hidden initially */
+  display: none; 
   padding: 10px 40px;
   border-radius: 10px;
   cursor: pointer;
-}
-.headerButtons .joinBtn {
+} */
+/* .headerButtons .joinBtn {
   background-color: #002882;
   color: white;
   border: 1.5px solid #002882;
-}
-.hamburger {
+} */
+/* .hamburger {
   display: none;
 }
 .closeIcon {
   display: none;
-}
+} */
 #carouselExampleCaptions {
   height: 430px;
 }
@@ -499,7 +499,7 @@ line-height: normal;
 }
 
 .year img {
-  width: 16px;
+  width: 17px;
 }
 .info {
   text-align: left;
@@ -1166,10 +1166,10 @@ input::placeholder {
 }
 .queryText h2 {
   color: white;
-  font-size: 36px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 700;
-  line-height: 44px; /* 122.222% */
+  line-height: 36px; /* 122.222% */
   letter-spacing: -0.72px;
 }
 .queryText p,
@@ -1183,7 +1183,7 @@ input::placeholder {
 @media(max-width:418px){
   .queryText p,
 .queryQuestion p {
-  font-size: 15px;
+  font-size: 10px;
   font-style: normal;
   font-weight: 500;
   line-height: 38px;
@@ -1463,35 +1463,35 @@ height: 24px;
 background: #CCC;
 }
 @media (max-width: 1264px) {
-  .links {
+  /* .links {
     gap: 20px;
     margin-left: 0px;
-}
-.header {
+} */
+/* .header {
   padding: 15px 30px;
-}
-.logo {
+} */
+/* .logo {
   gap: 12px;
   width: auto;
 }
 .logo p{
   font-size: 20px;
-}
-.headerButtons button {
+} */
+/* .headerButtons button {
   padding: 10px 20px;
-}
+} */
 }
 @media (max-width: 1070px) {
-  .header {
+  /* .header {
     padding: 15px 20px;
     gap: 12px;
 }
 .links {
   gap: 15px;
-}
+} */
 }
 @media (max-width: 1024px) {
-  .hamburger {
+  /* .hamburger {
     display: inline;
     padding: 10px 20px;
     cursor: pointer;
@@ -1512,17 +1512,15 @@ background: #CCC;
   .closeIcon i {
     font-size: 24px;
   }
-
-  /* Links container */
   .links {
     display: flex;
     flex-direction: column;
-    max-height: 0; /* Initially collapsed */
+    max-height: 0; 
     opacity: 0;
     overflow: hidden;
     transition: 0.3s ease;
     position: absolute;
-    width: 100vw; /* Full width viewport */
+    width: 100vw;
     top: 69px;
     left: 0;
     width: 100%;
@@ -1530,8 +1528,8 @@ background: #CCC;
     background-color: #002882;
     z-index: 1;
     margin-left: 0px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Depth effect */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
   }
   .links a {
     color: white;
@@ -1539,7 +1537,7 @@ background: #CCC;
   .links .loginBtn {
     display: none;
   }
-  /* Animating before and after pseudo-elements for a smooth opening effect */
+ 
   .links::before,
   .links::after {
     content: "";
@@ -1552,55 +1550,55 @@ background: #CCC;
     transition: 0.5s;
   }
 
-  /* Before pseudo-element for top border animation */
+  
   .links::before {
     top: 0;
   }
 
-  /* After pseudo-element for bottom border animation */
+  
   .links::after {
     bottom: 0;
     transition: 0.5s;
-  }
+  } */
 
-  /* Checkbox checked: animate links open */
-  .checkBox:checked ~ .links {
-    max-height: 400px; /* Final expanded height */
-    opacity: 1; /* Fully visible */
-    max-width: 100%; /* Full viewport width when open */
+  
+  /* .checkBox:checked ~ .links {
+    max-height: 400px; 
+    opacity: 1; 
+    max-width: 100%; 
     padding: 50px 0px;
-  }
+  } */
 
-  /* When not checked, still keep width 100vw */
-  .checkBox:not(:checked) ~ .links {
-    max-height: 0; /* Collapsed height */
-    opacity: 0; /* Hidden */
-    width: 94vw; /* Maintain full width */
-  }
+  
+  /* .checkBox:not(:checked) ~ .links {
+    max-height: 0;
+    opacity: 0; 
+    width: 94vw; 
+  } */
 
-  /* Show the pseudo-elements with animation */
+/*  
   .checkBox:checked ~ .links::before,
   .checkBox:checked ~ .links::after {
     opacity: 1;
-    transform: translateY(0); /* Move into view */
+    transform: translateY(0); 
   }
   .checkBox:checked ~ .links button:hover {
     border: 1px solid white;
   }
 
-  /* Show close icon and hide hamburger */
+  
   .checkBox:checked ~ .closeIcon {
-    display: inline; /* Show close icon */
+    display: inline; 
   }
 
   .checkBox:checked ~ .hamburger {
-    display: none; /* Hide hamburger icon */
-  }
+    display: none;
+  } */
 
-  .headerButtons {
+  /* .headerButtons {
     margin-left: auto;
     text-align: center;
-  }
+  } */
   .verticleLine{
     display: none;
   }
@@ -2525,7 +2523,7 @@ line-height: 24px; /* 150% */
   }
   .editApplicationBtn button {
     padding: 8px 7px;
-    font-size: 15px;
+    font-size: 13px;
     border-radius: 5px;
   }
   .stepsCards .stCard span {
@@ -2591,7 +2589,7 @@ line-height: 24px; /* 150% */
 @media (max-width: 536px) {
   
   .stepProgressBar {
-    top: 47%;
+    top: 49%;
     left: -218%;
     max-width: 700px !important;
     width: 540% !important;
@@ -2788,7 +2786,7 @@ line-height: 24px; /* 150% */
     margin: auto 50px 26px 50px;
   } */
   .stepProgressBar {
-    top: 47%;
+    top: 49%;
     left: -268%;
     max-width: 700px !important;
     width: 640% !important;
