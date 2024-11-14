@@ -371,9 +371,9 @@ line-height: normal;
   color: white;
 }
 .card-text {
-  height: 85px;
+  height: 120px;
   font-size: 20px;
-  line-height: 20px;
+  line-height: 30px;
   color: #999;
 }
 @media(max-width:1105px){
@@ -499,7 +499,7 @@ line-height: normal;
 }
 
 .year img {
-  width: 17px;
+  width: 15px;
 }
 .info {
   text-align: left;
@@ -3115,7 +3115,7 @@ font-size: 16px;
   }
  .youtubevideocontainer{
   position: absolute;
-  top: 12%;
+  top: 10%;
  } 
  .youtubevideo iframe{
   width: 65%;
@@ -3125,17 +3125,17 @@ font-size: 16px;
  }
  @media(max-width:1600px){
   .youtubevideo{
-    height: 87vh;
+    height: 90vh;
    }
  }
  @media(max-width:1381px){
   .youtubevideo{
-    height: 75vh;
+    height: 84vh;
    }
  }
  @media(max-width:1280px){
   .youtubevideo{
-    height: 60vh;
+    height: 65vh;
    }
  }
  @media(max-width:1169px){
