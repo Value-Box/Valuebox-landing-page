@@ -115,29 +115,29 @@ function calculatPricing() {
   }
 }
 
-function selectedOptionDropdown() {
-  let selOptType = document.getElementById("selOptType").value;
-  let colorDropDown = document.getElementById("colorDropDown");
-  let sizeDropDown = document.getElementById("sizeDropDown");
-  let customInput1 = document.getElementById("customInput1");
-  let customInput2 = document.getElementById("customInput2");
+// function selectedOptionDropdown() {
+//   let selOptType = document.getElementById("selOptType").value;
+//   let colorDropDown = document.getElementById("colorDropDown");
+//   let sizeDropDown = document.getElementById("sizeDropDown");
+//   let customInput1 = document.getElementById("customInput1");
+//   let customInput2 = document.getElementById("customInput2");
 
-  // Hide color and size dropdowns and inputs by default
-  colorDropDown.style.display = "none";
-  sizeDropDown.style.display = "none";
-  customInput1.style.display = "none";
-  customInput2.style.display = "none";
+//   // Hide color and size dropdowns and inputs by default
+//   colorDropDown.style.display = "none";
+//   sizeDropDown.style.display = "none";
+//   customInput1.style.display = "none";
+//   customInput2.style.display = "none";
 
-  // Show the corresponding dropdown or inputs based on the selection
-  if (selOptType === "color") {
-    colorDropDown.style.display = "block";
-  } else if (selOptType === "size") {
-    sizeDropDown.style.display = "block";
-  } else if (selOptType === "custom") {
-    customInput1.style.display = "block"; // Show first custom input
-    customInput2.style.display = "block"; // Show second custom input
-  }
-}
+//   // Show the corresponding dropdown or inputs based on the selection
+//   if (selOptType === "color") {
+//     colorDropDown.style.display = "block";
+//   } else if (selOptType === "size") {
+//     sizeDropDown.style.display = "block";
+//   } else if (selOptType === "custom") {
+//     customInput1.style.display = "block"; // Show first custom input
+//     customInput2.style.display = "block"; // Show second custom input
+//   }
+// }
 
 
 
@@ -181,11 +181,11 @@ if (selectedOption === "color") {
   }
 }
 
-console.log(selectedValues)
-  if (selectedValues.length === 0 && selectedOption === "color") {
-    alert("Please select a color first.");
-    return;
-}
+// console.log(selectedValues)
+//   if (selectedValues.length === 0 && selectedOption === "color") {
+//     alert("Please select a color first.");
+//     return;
+// }
 
 let variantList = document.getElementById("variantList");
 
