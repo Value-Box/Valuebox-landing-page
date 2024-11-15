@@ -684,7 +684,7 @@
           
           <div class="d-flex gap-3 w-100">
             <fieldset class="form-group  w-100 d-flex gap-2" >
-                <select class="form-select form-select-lg" onchange="selectedOptionDropdown()" id="selOptType">
+                <select class="form-select form-select-lg" id="selOptType">
                     <option value="">Please Select</option>
                     <option value="color">Color</option>
                     <option value="size">Size</option>
@@ -868,8 +868,16 @@
             </div>
             <div class="form-group w-100">
               <label for="tagInput" class="text-dark">Tags</label>
-              <input type="text" class="form-control form-control-lg tagInput" id="tagInput" placeholder="" required>
+                <input type="text" class="form-control form-control-lg tagInput" id="tagInput" placeholder="" required>
             </div>
+
+            
+            <!-- <div class="form-group">
+              <label class="form-label">Tag Input</label>
+              <div id="tagInputContainer1" class="tag-input-container">
+                  <input type="text" id="tagInput1" placeholder="Add tags">
+              </div>
+          </div> -->
             </div>
           </div>
         </div>
@@ -880,6 +888,7 @@
 </main>
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
+     
     <script src="../assets/vendors/ckeditor/ckeditor.js"></script>
     <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
@@ -887,8 +896,7 @@
     <script src="script.js"></script>
     <script src="../assets/js/main.js"></script>
     <script>
-      ClassicEditor
-          .create(document.querySelector('#productDesc'))
+      ClassicEditor.create(document.querySelector('#productDesc'))
           .catch(error => {
               console.error(error);
           });
@@ -897,55 +905,140 @@
           .catch(error => {
               console.error(error);
           });
-          (function() {
-    const tagsInput = {
-        init(opts) {
-            const inputElem = document.getElementById(opts.selector);
-            if (!inputElem) return;
 
-            const wrapper = document.createElement('div');
-            wrapper.className = 'tags-input-wrapper';
-            const input = document.createElement('input');
-            wrapper.append(input);
-            inputElem.setAttribute('hidden', true);
-            inputElem.parentNode.insertBefore(wrapper, inputElem);
+          
+    
 
-            input.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ',') {
-                    e.preventDefault();
-                    const tagText = input.value.trim();
-                    if (tagText && !opts.tags.includes(tagText)) {
-                        opts.tags.push(tagText);
-                        this.addTag(wrapper, tagText, opts.tags, inputElem);
-                        input.value = '';
-                    }
+//           (function () {
+//     const tagsInput = {
+//         init(opts) {
+//             const inputElem = document.getElementById(opts.selector);
+//             if (!inputElem) return;
+
+//             // Wrapper for the tags input
+//             const wrapper = document.createElement('div');
+//             wrapper.className = 'tags-input-wrapper';
+//             const input = document.createElement('input');
+//             wrapper.append(input);
+//             inputElem.setAttribute('hidden', true);
+//             inputElem.parentNode.insertBefore(wrapper, inputElem);
+
+//             // Array to store tags
+//             let tagsArray = [];
+
+//             // Keydown and Keyup for adding tags immediately on Enter or comma
+//             input.addEventListener('keyup', (e) => {
+//                 if (e.key === 'Enter' || e.key === ',') {
+//                     e.preventDefault();
+//                     this.createTag(input, tagsArray, wrapper, inputElem);
+//                 }
+//             });
+//         },
+
+//         createTag(input, tagsArray, wrapper, inputElem) {
+//             const tagText = input.value.trim();
+//             if (tagText && !tagsArray.includes(tagText)) {
+//                 tagsArray.push(tagText);
+//                 this.addTag(wrapper, tagText, tagsArray, inputElem);
+//                 input.value = ''; // Clear input for the next tag
+//             }
+//         },
+
+//         addTag(wrapper, tagText, tagsArray, inputElem) {
+//             const tag = document.createElement('span');
+//             tag.className = 'tag';
+//             tag.innerHTML = `${tagText} <a href="#">&times;</a>`;
+
+//             // Remove tag on click
+//             tag.querySelector('a').onclick = (e) => {
+//                 e.preventDefault();
+//                 tagsArray.splice(tagsArray.indexOf(tagText), 1);
+//                 tag.remove();
+//                 inputElem.value = tagsArray.join(',');
+//             };
+
+//             // Insert the tag before the input field
+//             wrapper.insertBefore(tag, wrapper.querySelector('input'));
+//             inputElem.value = tagsArray.join(',');
+//         }
+//     };
+
+//     tagsInput.init({
+//         selector: 'tagInput',
+//         tags: [],
+//     });
+// })();
+
+
+(function () {
+  const tagsInput = {
+      init(opts) {
+          opts.ids.forEach(id => {
+              const inputElem = document.getElementById(id);
+              if (inputElem) {
+                console.log(`Initializing tags input for ID: ${id}`); 
+                  this.setupInput(inputElem, id);
+              }else {
+                    console.log(`Input element with ID: ${id} not found!`);  // Log if the ID is not found
                 }
-            });
-        },
-        
-        addTag(wrapper, tagText, tagsArray, inputElem) {
-            const tag = document.createElement('span');
-            tag.className = 'tag';
-            tag.innerHTML = `${tagText} <a href="#">&times;</a>`;
-            
-            tag.querySelector('a').onclick = (e) => {
-                e.preventDefault();  // Prevents scrolling to the top of the page
-                tagsArray.splice(tagsArray.indexOf(tagText), 1);
-                tag.remove();
-                inputElem.value = tagsArray.join(',');
-            };
+          });
+      },
 
-            wrapper.insertBefore(tag, wrapper.querySelector('input'));
-            inputElem.value = tagsArray.join(',');
-        }
-    };
+      setupInput(inputElem, id) {
+          // Wrapper for the tags input
+          const wrapper = document.createElement('div');
+          wrapper.className = 'tags-input-wrapper';
+          const input = document.createElement('input');
+          wrapper.append(input);
+          inputElem.setAttribute('hidden', true);
+          inputElem.parentNode.insertBefore(wrapper, inputElem);
 
-    tagsInput.init({
-        selector: 'tagInput',
-        tags: [],
-    });
+          // Array to store tags for each input
+          let tagsArray = [];
+
+          // Keydown and Keyup for adding tags immediately on Enter or comma
+          input.addEventListener('keyup', (e) => {
+            console.log(`Key pressed in input field ${id}: ${e.key}`);
+              if (e.key === 'Enter' || e.key === ',') {
+                  e.preventDefault();
+                  this.createTag(input, tagsArray, wrapper, inputElem, id);
+              }
+          });
+      },
+
+      createTag(input, tagsArray, wrapper, inputElem, id) {
+          const tagText = input.value.trim();
+          if (tagText && !tagsArray.includes(tagText)) {
+              tagsArray.push(tagText);
+              this.addTag(wrapper, tagText, tagsArray, inputElem, id);
+              input.value = ''; // Clear input for the next tag
+          }
+      },
+
+      addTag(wrapper, tagText, tagsArray, inputElem, id) {
+          const tag = document.createElement('span');
+          tag.className = 'tag';
+          tag.innerHTML = `${tagText} <a href="#">&times;</a>`;
+
+          // Remove tag on click
+          tag.querySelector('a').onclick = (e) => {
+              e.preventDefault();
+              tagsArray.splice(tagsArray.indexOf(tagText), 1);
+              tag.remove();
+              inputElem.value = tagsArray.join(',');
+          };
+
+          // Insert the tag before the input field
+          wrapper.insertBefore(tag, wrapper.querySelector('input'));
+          inputElem.value = tagsArray.join(',');
+      }
+  };
+
+  // Initialize the tags input on inputs with specific IDs
+  tagsInput.init({
+      ids: ['tagInput'], // Pass the IDs of the inputs to initialize
+  });
 })();
-
 
 document.querySelectorAll('.varParToChild').forEach(item => {
   item.addEventListener('click', () => {
