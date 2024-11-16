@@ -3237,6 +3237,12 @@ letter-spacing: -1.2px;
     line-height: 38px; /* 126.667% */
   }
  }
-  
+ .rightarrow{
+  position: absolute;
+  right: 0;
+}
+  .sellersupportandsellercenter{
+    z-index: 1;
+  }
   
 

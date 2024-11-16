@@ -751,7 +751,7 @@ td {
   display: inline-block;
   min-width: 25px;
   height: 25px;
-  padding: 2px 6px;
+  padding: 3px 6px;
   font-size: 12px;
   font-weight: bold;
   color: #fff;
@@ -1309,5 +1309,189 @@ background:  #F2F2F2;
 .variantTable .arrow.rotate {
   transform: rotate(180deg); /* Rotate the arrow when expanded */
 }
+.uploadfile{
+  border-radius: 10px;
+background: #FEF6E6;
+}
+.uploadauthentication h6{
+  color: var(--Natural-Color-60, #666);
 
+/* Text md/Semibold */
+font-family: Sarabun;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 150% */
+}
+.uploadauthentication span{
+  border-radius: 5px;
+  background: #E6EAF3;
+  color: var(--Primary-Color-Dark-Blue-80, #33539B);
 
+/* Text md/Semibold */
+font-family: Sarabun;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 150% */
+
+}
+.uploadFileContainer{
+  border-radius: 10px;
+border: 1px dashed  #002882;
+display: flex;
+padding: 40px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 10px;
+}
+.socialMedialinksbtn{
+  border: 1px solid #FFF;
+}
+#linkGroup span{
+  background-color: white;
+  border: none;
+}
+#linkGroup input{
+  border: none;
+}
+#linkGroup input:focus{
+  border: none;
+  box-shadow: none;
+}
+#linkGroup {
+  border: 1px solid #CCC;
+  border-radius: 5px;
+}
+ #linkGroup1 .form-select{
+  /* border: none; */
+}
+ #linkGroup1 .form-group{
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  height: fit-content; 
+}
+ .applyforanewbrandbtn{
+  color: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
+font-family: Sarabun;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; /* 155.556% */
+  display: flex;
+padding: 10px;
+align-items: center;
+gap: 5px;
+  border-radius: 5px;
+background: var(--Primary-Color-Dark-Blue, linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), #002882);
+ }
+ .socialMediaLinks span{
+  color: var(--Natural-Color-40, #999);
+
+/* Display xs/Bold */
+font-family: Sarabun;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 32px;
+ }
+ .socialMedia{
+  display: flex;
+padding: 10px 8px;
+align-items: center;
+gap: 12px;
+flex: 1 0 0;
+border-radius: 5px;
+border: 1px solid var(--Natural-Color-20, #CCC);
+background: var(--Natural-Color-10, #F2F2F2);
+ }
+ .socialMedia a{
+   text-decoration: none;
+   color: var(--Natural-Color-40, #999);
+
+/* Text md/Medium */
+font-family: Sarabun;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
+ }
+#linkGroup{
+
+}
+.basicInformationNote p{
+  color: var(--Natural-Color-60, #666);
+
+/* Text md/Semibold */
+font-family: Sarabun;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 150% */
+}
+.basicInformationNote span{
+  color: var(--Natural-Color-40, #999);
+
+/* Text md/Medium */
+font-family: Sarabun;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px;
+}
+@media(max-width:1450px){
+  .socialMedia a{
+    font-size: 14px;
+  }
+}
+.uploadImagebtn{
+  color: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
+
+/* Text md/Medium */
+font-family: Sarabun;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
+display: flex;
+padding: 10px 20px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 5px;
+background: var(--Primary-Color-Dark-Blue, linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), #002882);
+}
+.selectbtn{
+  display: flex;
+padding: 10px 20px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 5px;
+border: 1px solid var(--Primary-Color-Dark-Blue, #002882);
+}
+.mediatable thead{
+  border-bottom: 1px solid #DBDBDB;
+background: #F0F0F0;
+}
+.mediatable th, td{
+  padding: 16px;
+}
+.iconsbackcolor{
+  border-radius: 5px;
+background:  #F2F2F2;
+}
+.pending{
+  border-radius: 5px;
+background: var(--Warning-100, #FEF0C7);
+display: flex;
+width: 100px;
+padding: 5px 20px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+}
+.mediatable tr {
+  border-bottom: 1px solid #ddd;
+}
