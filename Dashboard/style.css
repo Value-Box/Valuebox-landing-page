@@ -751,7 +751,7 @@ td {
   display: inline-block;
   min-width: 25px;
   height: 25px;
-  padding: 2px 6px;
+  padding: 3px 6px;
   font-size: 12px;
   font-weight: bold;
   color: #fff;
@@ -1342,6 +1342,5 @@ background:  #F2F2F2;
 .variantTable .arrow.rotate {
   transform: rotate(180deg); /* Rotate the arrow when expanded */
 }
-
 
 

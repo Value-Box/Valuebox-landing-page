@@ -88,10 +88,20 @@ body{
 .sellerbenifitprogram{
 color: #F4F3FF !important;
 font-family: Anton;
-font-size: 70px;
+font-size: 72px;
 font-style: normal;
 font-weight: 500;
 line-height: 90px; /* 125% */
+}
+.sellerbenifitprogram p{
+    color: var(--Purple-50, #F4F3FF);
+
+/* Display xs/Medium */
+font-family: Sarabun;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 32px; /* 133.333% */
 }
 .womansImages{
     margin-left: auto;
@@ -214,10 +224,11 @@ font-style: normal;
 font-weight: 400;
 line-height: 30px;
 }
+
 .zinat span{
 color: #F1B733;
 font-family: Anton;
-font-size: 60px;
+font-size: 72px;
 font-style: normal;
 font-weight: 400;
 line-height: 90px;
@@ -225,7 +236,7 @@ line-height: 90px;
 .zinat h1{
     color: #F4F3FF;
 font-family: Anton;
-font-size: 50px;
+font-size: 60px;
 font-style: normal;
 font-weight: 400;
 line-height: 90px;
@@ -235,7 +246,7 @@ line-height: 90px;
 
 /* Display xs/Medium */
 font-family: Sarabun;
-font-size: 20px;
+font-size: 24px;
 font-style: normal;
 font-weight: 500;
 line-height: 32px; /* 133.333% */
@@ -243,7 +254,7 @@ line-height: 32px; /* 133.333% */
 .joinbtn{
     display: flex;
     width: 150px;
-    height: 40px;
+    height: 50px;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -291,7 +302,7 @@ line-height: 90px;
 }
 .joinvalueboxgroup{
     position: absolute;
-    top: 5%;
+    top: 1%;
 }
 .joinvaluebox span{
     color: var(--Secondary-Color-Mon-Yellow-80, #F1B733);
@@ -1803,4 +1814,16 @@ margin-top: 10px;
         }
        }
      
-     
+       @media (min-width: 1200px) and (max-width: 1728px) {
+        .video {
+            width: 100%;
+            height: 75%;
+        }
+    }
+        @media (min-width: 800px) and (max-width: 1280px) {
+            .video {
+                width: 100%;
+                height: 69%;
+            }
+    }
+    
