@@ -12,8 +12,13 @@ const loginBtn = document.querySelector(".loginBtn");
 //       logInForm.style.display = 'none';
 //     }
 //   }
+<<<<<<< HEAD
+  const phoneInput = document.getElementById("phoneNumVerify");
+  if (phoneInput) {
+    phoneInput.focus(); // Set focus to the phone number input field
+  }
 
-let mybutton = document.getElementById("topBtn");
+  let mybutton = document.getElementById("topBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
@@ -31,11 +36,17 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+
+=======
+
+>>>>>>> origin/Sajeela-Waseem
 function loginPage() {
   window.location.href = `dashboardLogin.html`;
 }
 function signUpPage() {
   window.location.href = `personalInfoSignUp.html`;
+  
 }
 function redirectHomePage() {
   window.location.href = "index.html";
@@ -88,6 +99,11 @@ personalSignupForm.classList.remove('col-md-8', 'col-xl-6', 'col-xxl-5')
     otpErrorMsg.style.color='red'
   }
 });
+
+document.getElementById('editBtn').addEventListener('click',()=>{
+  document.getElementById('signUpForm').style.display='block'
+  document.getElementById('varificationForm').style.display='none'
+})
 // sessionStorage.setItem("targetForm", formId);
   // window.location.href = "dashboardLogin.html";
 
@@ -1468,6 +1484,7 @@ bankAccBackBtn.addEventListener("click", () => {
   }
 });
 
-  document.getElementById("verifyBtn").addEventListener("click", function () {
-    document.getElementById("myForm").submit();
-});
+//   document.getElementById("verifyBtn").addEventListener("click", function () {
+//     document.getElementById("myForm").submit();
+// });
+

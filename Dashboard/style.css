@@ -916,7 +916,7 @@ td {
 }
 .tags-input-wrapper {
   background: transparent;
-  padding: 10px;
+  padding: 7px;
   border-radius: 4px;
   max-width: 400px;
   border: 1px solid #ccc;
@@ -925,26 +925,47 @@ td {
   border: 0;
   background: transparent;
   outline: 0;
-  width: 140px;
+  width: 100%;
   margin-left: 8px;
 }
 .tags-input-wrapper .tag {
   display: inline-block;
+  vertical-align: middle;
+  border-radius: 3px;
+  padding: 4px 10px;
+  
+  font-size: 12px;
+  font-weight: 500;
+  margin-right: 3.75px;
+  margin-bottom: 3.75px;
   background-color: #002882;
   color: #fff;
-  border-radius: 4px;
-  padding: 0 6px 0 7px;
-  margin-right: 5px;
-  font-size: 16px;
-  margin-bottom: 5px;
+  word-break: break-all;
+  box-sizing: border-box;
 }
-.tags-input-wrapper .tag a {
-  margin: 0 7px 3px;
-  display: inline-block;
-  cursor: pointer;
-  color: #fff;
-  text-decoration: none;
+
+.crossBtn {
+  border: none;
+  cursor: pointer; /* Make it clickable */
+  margin-left: 5px;
+  background-color: transparent; /* No background color */
+  padding: 0; /* Remove padding */
+  outline: none;
+  border-left: 1px solid white;
+  height: 18px;
 }
+.crossBtn:focus{
+border: none;
+outline: none;
+}
+.crossBtn svg {
+  margin-left: 10px; /* Add space between the tag text and the button */
+  height: 12px;
+  width: 10px; /* Adjust width of the SVG */
+  height: 10px; /* Adjust height of the SVG */
+  stroke: white; /* Make the stroke white */
+}
+
 .uploadImgSec,
 .uploadVidSec {
   display: flex;
@@ -1043,17 +1064,19 @@ td {
   font-size: 14px;
 }
 .addVariantBtn {
-  padding: 10px 20px;
   border-radius: 5px;
-  background: var(
-    --Primary-Color-Dark-Blue,
-    linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0.2) 100%),
-    #002882
-  );
-  color: #e6eaf3;
+  color: #002882; 
+  font-weight: 700;
+  background: transparent;
+  display: flex;
+  gap: 5px;
   border: 0;
   outline: 0;
 }
+.addVariantBtn:focus {
+  outline: none; /* Removes outline on focus */
+}
+
 .choices__list--multiple .choices__item {
   display: inline-block;
   vertical-align: middle;
@@ -1118,9 +1141,9 @@ td {
   padding: 6px;
   border: 1px solid #ddd;
   /* margin-top: 20px; */
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
   display: flex;
-  align-items: center;
+  align-items: start;
 }
 .dragging {
   opacity: 0.5;
@@ -1129,8 +1152,15 @@ td {
   cursor: move;
 }
 .choices__inner {
-  height: 47px !important;
-  overflow: auto;
+  /* height: 47px !important;
+  overflow: auto; */
+  background: transparent;
+}
+#selOptType{
+  height: fit-content;
+}
+.choices__input{
+  background: transparent;
 }
 .variantRow .form-group {
   width: 100%;
@@ -1183,6 +1213,7 @@ td {
   align-items: center;
   align-self: stretch;
   margin-top: 20px;
+  gap: 8px;
 }
 .saveVariantDiv span {
   border-radius: 5px;
@@ -1294,7 +1325,9 @@ background:  #F2F2F2;
 .variant-details td:first-child {
   padding: 10px 20px 10px 80px;
 }
-
+.variant-child td:first-child {
+  padding: 10px 20px 10px 80px;
+}
 /* Arrow styles for rotation */
 .variantTable .arrow {
   display: flex;
@@ -1309,189 +1342,5 @@ background:  #F2F2F2;
 .variantTable .arrow.rotate {
   transform: rotate(180deg); /* Rotate the arrow when expanded */
 }
-.uploadfile{
-  border-radius: 10px;
-background: #FEF6E6;
-}
-.uploadauthentication h6{
-  color: var(--Natural-Color-60, #666);
 
-/* Text md/Semibold */
-font-family: Sarabun;
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: 24px; /* 150% */
-}
-.uploadauthentication span{
-  border-radius: 5px;
-  background: #E6EAF3;
-  color: var(--Primary-Color-Dark-Blue-80, #33539B);
 
-/* Text md/Semibold */
-font-family: Sarabun;
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: 24px; /* 150% */
-
-}
-.uploadFileContainer{
-  border-radius: 10px;
-border: 1px dashed  #002882;
-display: flex;
-padding: 40px;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 10px;
-}
-.socialMedialinksbtn{
-  border: 1px solid #FFF;
-}
-#linkGroup span{
-  background-color: white;
-  border: none;
-}
-#linkGroup input{
-  border: none;
-}
-#linkGroup input:focus{
-  border: none;
-  box-shadow: none;
-}
-#linkGroup {
-  border: 1px solid #CCC;
-  border-radius: 5px;
-}
- #linkGroup1 .form-select{
-  /* border: none; */
-}
- #linkGroup1 .form-group{
-  border: 1px solid #CCC;
-  border-radius: 5px;
-  height: fit-content; 
-}
- .applyforanewbrandbtn{
-  color: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
-font-family: Sarabun;
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: 28px; /* 155.556% */
-  display: flex;
-padding: 10px;
-align-items: center;
-gap: 5px;
-  border-radius: 5px;
-background: var(--Primary-Color-Dark-Blue, linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), #002882);
- }
- .socialMediaLinks span{
-  color: var(--Natural-Color-40, #999);
-
-/* Display xs/Bold */
-font-family: Sarabun;
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
-line-height: 32px;
- }
- .socialMedia{
-  display: flex;
-padding: 10px 8px;
-align-items: center;
-gap: 12px;
-flex: 1 0 0;
-border-radius: 5px;
-border: 1px solid var(--Natural-Color-20, #CCC);
-background: var(--Natural-Color-10, #F2F2F2);
- }
- .socialMedia a{
-   text-decoration: none;
-   color: var(--Natural-Color-40, #999);
-
-/* Text md/Medium */
-font-family: Sarabun;
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: 24px; /* 150% */
- }
-#linkGroup{
-
-}
-.basicInformationNote p{
-  color: var(--Natural-Color-60, #666);
-
-/* Text md/Semibold */
-font-family: Sarabun;
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: 24px; /* 150% */
-}
-.basicInformationNote span{
-  color: var(--Natural-Color-40, #999);
-
-/* Text md/Medium */
-font-family: Sarabun;
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: 24px;
-}
-@media(max-width:1450px){
-  .socialMedia a{
-    font-size: 14px;
-  }
-}
-.uploadImagebtn{
-  color: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
-
-/* Text md/Medium */
-font-family: Sarabun;
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: 24px; /* 150% */
-display: flex;
-padding: 10px 20px;
-justify-content: center;
-align-items: center;
-gap: 10px;
-border-radius: 5px;
-background: var(--Primary-Color-Dark-Blue, linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), #002882);
-}
-.selectbtn{
-  display: flex;
-padding: 10px 20px;
-justify-content: center;
-align-items: center;
-gap: 10px;
-border-radius: 5px;
-border: 1px solid var(--Primary-Color-Dark-Blue, #002882);
-}
-.mediatable thead{
-  border-bottom: 1px solid #DBDBDB;
-background: #F0F0F0;
-}
-.mediatable th, td{
-  padding: 16px;
-}
-.iconsbackcolor{
-  border-radius: 5px;
-background:  #F2F2F2;
-}
-.pending{
-  border-radius: 5px;
-background: var(--Warning-100, #FEF0C7);
-display: flex;
-width: 100px;
-padding: 5px 20px;
-justify-content: center;
-align-items: center;
-gap: 10px;
-}
-.mediatable tr {
-  border-bottom: 1px solid #ddd;
-}

@@ -1,9 +1,7 @@
-// const verifyBtn=document.getElementById('verifyBtn')
-// verifyBtn.addEventListener('click',signUpPage)
-// function signUpPage() {
-//   window.location.href = "personalInfoSignUp.html";
-// }
-
+const loginInputEmail = document.getElementById("loginInputEmail");
+if (loginInputEmail) {
+  loginInputEmail.focus(); // Set focus to the phone number input field
+}
 
 function passwordShower() {
   var loginPassword = document.getElementById("loginPassword");
@@ -19,15 +17,6 @@ function passwordShower() {
     toggleIcon.classList.add("fa-eye");
   }
 }
-  // function toggleSignUpForm() {
-  //   const loginForm = document.querySelector(".logInForm");
-  //   const signUpForm = document.querySelector(".signUpForm");
-  //   loginForm.style.display =
-  //     loginForm.style.display === "none" ? "block" : "none";
-  //   signUpForm.style.display =
-  //     signUpForm.style.display === "none" ? "block" : "none";
-  // }
-
 
   const otpInputs = document.querySelectorAll('.otpNum');
 
@@ -106,6 +95,7 @@ function passwordShower() {
     // Hide the sign-up form and show the verification form
     signUpForm.style.display = 'none';
     varificationForm.style.display = 'block';
+    otpInputs[0].focus();
   
     // Reset the timer and start the countdown
     sec = 180; // Reset to 3 minutes
@@ -122,46 +112,3 @@ function passwordShower() {
     updateTimerDisplay(); // Update the timer display
     startCountdown(); // Start the countdown again
   });
-  
-  console.log('hello')
-
-
-  // function signUpPage(event) {
-  //   // Prevent the default form submission
-  //   event.preventDefault();
-  //   console.log('clicked');
-  //   window.location.href = "personalInfoSignUp.html";
-  // }
-  
-//   const circles = document.querySelectorAll(".circle");
-//   const progressBar = document.querySelector(".indicator");
-//   const progressBarInner = progressBar.querySelector(".inner");
-
-//   const otpErrorMsg=document.getElementById('otpErrorMsg');
-// document.getElementById("verifyBtn").addEventListener("click", function () {
-//   // Check if all OTP inputs are filled
-//   const personalInfoForm = document.querySelector('.personalInfoForm');
-//   const varificationForm = document.querySelector('.varificationForm');
-//   let allFilled = true;
-//   otpInputs.forEach((input) => {
-//     if (input.value === '') {
-//       allFilled = false; // At least one input is empty
-//     }
-//   });
-
-//   if (allFilled) {
-//     varificationForm.style.display = 'none';
-//     personalInfoForm.style.display = 'block';
-//     circles[0].classList.remove("active"); // Complete the second circle
-//     circles[0].classList.add("completed");
-//     circles[1].classList.add("active"); // Complete the second circle
-
-//     const progressPercentage = 33.3333; // Progress bar to 66.67%
-//     progressBar.style.width = `${progressPercentage}%`;
-//     progressBarInner.style.backgroundColor = "#12B76A"; // Set progress bar color
-//   } else {
-//     // If not all inputs are filled, display an error or keep the form on the same page
-//     otpErrorMsg.innerText='Please fill in all OTP fields before proceeding.'
-//     otpErrorMsg.style.color='red'
-//   }
-// });
