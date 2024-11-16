@@ -12,7 +12,7 @@ const loginBtn = document.querySelector(".loginBtn");
 //       logInForm.style.display = 'none';
 //     }
 //   }
-<<<<<<< HEAD
+
   const phoneInput = document.getElementById("phoneNumVerify");
   if (phoneInput) {
     phoneInput.focus(); // Set focus to the phone number input field
@@ -38,9 +38,7 @@ function topFunction() {
 }
 
 
-=======
 
->>>>>>> origin/Sajeela-Waseem
 function loginPage() {
   window.location.href = `dashboardLogin.html`;
 }
