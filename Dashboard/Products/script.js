@@ -728,3 +728,51 @@ function saveVariant() {
     // Log the selected values to the console
     console.log(selectedValues);
 }
+
+
+function toggleDivsAndTables(checkboxIds, divIds, tableIds) {
+  const checkboxes = checkboxIds.map(id => document.getElementById(id));
+  const divs = divIds.map(id => document.getElementById(id));
+  const tables = tableIds.map(id => document.getElementById(id));
+
+  // Always show 'merchant' on page load
+  const merchantCheckbox = document.getElementById('merchant');
+  const merchantDiv = document.getElementById('fullByMerchant');
+  const merchantTable = document.getElementById('fbmTable');
+
+  merchantCheckbox.checked = true;
+  merchantDiv.classList.add('show');
+  merchantTable.classList.add('table-visible');
+
+  checkboxes.forEach((checkbox, index) => {
+    checkbox.addEventListener('change', () => {
+      // Hide all divs and tables and uncheck all checkboxes except the current one
+      checkboxes.forEach((cb, i) => {
+        if (i !== index) {
+          cb.checked = false;
+          divs[i].classList.remove('show');
+          tables[i].classList.remove('table-visible');
+          tables[i].classList.add('table-hidden');
+        }
+      });
+
+      // Show or hide the current div and table
+      if (checkbox.checked) {
+        divs[index].classList.add('show');
+        tables[index].classList.add('table-visible');
+        tables[index].classList.remove('table-hidden');
+      } else {
+        divs[index].classList.remove('show');
+        tables[index].classList.remove('table-visible');
+        tables[index].classList.add('table-hidden');
+      }
+    });
+  });
+}
+
+// Initialize the toggle functionality
+toggleDivsAndTables(
+  ['merchant', 'VB'],
+  ['fullByMerchant', 'fullByVB'],
+  ['fbmTable', 'fbvTable']
+);
