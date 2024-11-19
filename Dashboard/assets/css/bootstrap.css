@@ -9380,6 +9380,12 @@ button:focus{
   font-weight: 500;
   color: var(--Gray-Color);
 }
+.paragraph-blue{
+  font-size: clamp(16px, 4vw, 18px);
+  line-height: clamp(20px, 5vw, 28px);
+  font-weight: 500;
+  color: #33539B;
+}
 .paragraph-2{
   font-size: clamp(14px, 4vw, 16px);
   line-height: clamp(20px, 5vw, 24px);
@@ -9558,6 +9564,10 @@ height: 20px;
 .TableWrapper table tbody tr{
   border-bottom: 1px solid #DBDBDB;  
   background-color: white;
+}
+.line{
+  background-color: var(--Light-Gray-Color);
+  height: 1px;
 }
 
 .input{
