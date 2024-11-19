@@ -9639,3 +9639,9 @@ text-align: center;
   background-color: var(--Light-Gray-Color);
   height: 1px;
 }
+.paragraph-blue{
+  font-size: clamp(16px, 4vw, 18px);
+  line-height: clamp(20px, 5vw, 28px);
+  font-weight: 500;
+  color: #33539B;
+}
