@@ -9565,11 +9565,7 @@ height: 20px;
 }
 .TableWrapper table thead tr th {
   background:  #f2f2f2;
-<<<<<<< HEAD
-  padding: 10px 18px;
-=======
   padding: 10px 20px;
->>>>>>> origin/Sajeela-Waseem
 }
 .TableWrapper table tbody tr td {
   padding: 10px 20px;
@@ -9578,12 +9574,11 @@ height: 20px;
   border-bottom: 1px solid #DBDBDB;  
   background-color: white;
 }
-<<<<<<< HEAD
 
 .input{
 display: flex;
 font-size: 18px;
-=======
+
 .line{
   background-color: var(--Light-Gray-Color);
   height: 1px;
@@ -9591,7 +9586,6 @@ font-size: 18px;
 
 .input{
 display: flex;
->>>>>>> origin/Sajeela-Waseem
 height: 56px;
 padding: 12px 20px;
 align-items: center;
@@ -9602,13 +9596,11 @@ border: 1px solid var(--Natural-Color-20, #CCC);
 background: var(--00, #FFF);
 width: 100%;
 outline: none;
-<<<<<<< HEAD
 }
 
-=======
+
 
 }
->>>>>>> origin/Sajeela-Waseem
 .table-input{
 display: flex;
 height: 40px;
@@ -9644,11 +9636,7 @@ text-align: center;
 
 .form-select-input{
   padding: 10px 20px;
-<<<<<<< HEAD
-  font-size: 16px;
-=======
   font-size: 18px;
->>>>>>> origin/Sajeela-Waseem
 }
 .fs-20{
   font-size: 20px;
@@ -9664,7 +9652,6 @@ text-align: center;
   line-height: clamp(20px, 5vw, 28px);
   font-weight: 500;
 }
-<<<<<<< HEAD
 .line{
   background-color: var(--Light-Gray-Color);
   height: 1px;
@@ -9675,10 +9662,8 @@ text-align: center;
   font-weight: 500;
   color: #33539B;
 }
-=======
 
   @media(max-width:1400px){
 
   }
   
->>>>>>> origin/Sajeela-Waseem
