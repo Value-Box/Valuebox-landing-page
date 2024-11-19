@@ -9389,12 +9389,6 @@ button:focus{
   font-weight: 500;
   color: var(--Gray-Color);
 }
-.paragraph-blue{
-  font-size: clamp(16px, 4vw, 18px);
-  line-height: clamp(20px, 5vw, 28px);
-  font-weight: 500;
-  color: #33539B;
-}
 .paragraph-2{
   font-size: clamp(14px, 4vw, 16px);
   line-height: clamp(20px, 5vw, 24px);
@@ -9557,7 +9551,7 @@ height: 20px;
 .TableWrapper {
   border-radius: 8px;
   overflow: hidden;
- 
+  border: 1px solid #ccc;
 }
 .TableWrapper table {
   border-collapse: collapse;
@@ -9578,14 +9572,6 @@ height: 20px;
 .input{
 display: flex;
 font-size: 18px;
-
-.line{
-  background-color: var(--Light-Gray-Color);
-  height: 1px;
-}
-
-.input{
-display: flex;
 height: 56px;
 padding: 12px 20px;
 align-items: center;
@@ -9598,9 +9584,6 @@ width: 100%;
 outline: none;
 }
 
-
-
-}
 .table-input{
 display: flex;
 height: 40px;
@@ -9636,7 +9619,7 @@ text-align: center;
 
 .form-select-input{
   padding: 10px 20px;
-  font-size: 18px;
+  font-size: 16px;
 }
 .fs-20{
   font-size: 20px;
@@ -9662,4 +9645,8 @@ text-align: center;
   font-weight: 500;
   color: #33539B;
 }
-  
+.fs-16{
+  font-size: 16px;
+  line-height: clamp(20px, 5vw, 24px);
+  font-weight: 400;
+}

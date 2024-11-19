@@ -260,10 +260,10 @@ if (selectedOption === "size" && variantList.querySelector(".sizeDropDown")) {
   alert("A size variant has already been added.");
   return;
 }
-if (selectedOption === "custom" && variantList.querySelector(".customRow")) {
-  alert("A custom variant has already been added.");
-  return;
-}
+// if (selectedOption === "custom" && variantList.querySelector(".customRow")) {
+//   alert("A custom variant has already been added.");
+//   return;
+// }
 if (selectedOption === "") {
  
   return;
@@ -419,6 +419,8 @@ document.querySelectorAll(".variantRow input[type='hidden']").forEach(input => {
 let selectedVariants = {
   parentValues: "",
   childValues: "",
+  color:"",
+  size:"",
   customValues: "", // New property for custom input values
   tags: '' // New property to store tags
 };
@@ -455,9 +457,8 @@ function updateSelectedVariants() {
         .join(","); // Convert tags to a comma-separated string
 
       tagInputValues = Array.from(tagWrapper.querySelectorAll(".tag-input"))
-        .map(tagInput => tagInput.value.trim())
-        .filter(value => value !== "")
-        .join(","); // Convert tag input values to a comma-separated string
+        .map(tagInput => tagInput.value.trim()).filter(value => value !== "").join(","); // Convert tag input values to a comma-separated string
+        
     }
 
     // For parent and child rows
@@ -608,6 +609,13 @@ function removeVariant(button) {
 
 
 function saveVariant() {
+  // const customInput1 = document.getElementById('customInput1');
+  // if (customInput1) {
+  //   console.log(customInput1.value);
+  // } else {
+  //   console.log("Element with ID 'customInput1' not found");
+  // }
+  const rows = Array.from(document.querySelectorAll(".variantRow"));
   const variantTableBody = document.getElementById("variantTableBody");
   const parentValues = selectedVariants.parentValues.split(",").filter(value => value !== "");
   const childValues = selectedVariants.childValues ? selectedVariants.childValues.split(",").filter(value => value !== "") : [];
@@ -623,6 +631,9 @@ function saveVariant() {
     return;
   }
 
+  var isCustomRow = document.getElementsByClassName('customRow');
+
+
   console.log("Selected Parent Values:", parentValues);
   console.log("Selected Child Values:", childValues);
   console.log("Selected Tags:", tags);
@@ -630,14 +641,19 @@ function saveVariant() {
   variantTableBody.innerHTML = ""; // Clear any previously generated variants
 
   // Iterate through each parent value to create parent rows
-  parentValues.forEach((color, parentIndex) => {
+  parentValues.forEach((color) => {
     let parentRow = document.createElement("tr");
     parentRow.classList.add("variant-parent");
 
-    // Calculate the number of variants based on childValues and tags
-    const numVariants = childValues.length > 0 
-      ? childValues.filter(value => isNaN(value.trim())).length * (tags.length > 0 ? tags.length : 1)
-      : 0;
+    // Filter out any empty values from tags and child values
+    const filteredTags = tags.filter(tag => tag.trim() !== "");
+    const filteredChildValues = childValues.filter(value => isNaN(value.trim()) && value.trim() !== "");
+
+    // Check if it's a "custom" row based on the parent value
+    
+
+    // Determine number of variants based on if it's a custom row or not
+    const numVariants = isCustomRow ? filteredChildValues.length : filteredChildValues.length * (filteredTags.length > 0 ? filteredTags.length : 1);
 
     parentRow.innerHTML = `
       <td class="d-flex gap-3">
@@ -672,23 +688,28 @@ function saveVariant() {
       });
     }
 
-    // Create combinations of child values and tags
+    // Generate combinations of child values and tags based on if it's a custom row or not
     const combinations = [];
-    if (childValues.length > 0 && tags.length > 0) {
-      childValues.forEach(size => {
-        if (isNaN(size.trim())) { // Only process sizes (non-numeric values)
-          tags.forEach(tag => {
-            combinations.push(`${size.trim()} / ${tag}`);
+    if (isCustomRow) {
+      // Custom row: only use filtered child values, ignore tags
+      filteredChildValues.forEach(size => {
+        combinations.push(size.trim());
+      });
+    } else {
+      // Regular row: use both filtered child values and tags
+      if (filteredChildValues.length > 0 && filteredTags.length > 0) {
+        filteredChildValues.forEach(size => {
+          filteredTags.forEach(tag => {
+            combinations.push(`${size.trim()} / ${tag.trim()}`);
           });
-        }
-      });
-    } else if (childValues.length > 0) {
-      childValues.forEach(size => {
-        if (isNaN(size.trim())) { // Only process sizes
-          combinations.push(`${size.trim()}`);
-        }
-      });
+        });
+      } else if (filteredChildValues.length > 0) {
+        filteredChildValues.forEach(size => {
+          combinations.push(size.trim());
+        });
+      }
     }
+    
 
     console.log("Generated Combinations for", color, ":", combinations);
 
@@ -728,6 +749,9 @@ function saveVariant() {
   updateTopRowClass(); // Ensure correct row classes are applied if needed
   updateSelectedVariants();
 }
+
+
+
 
 
 
