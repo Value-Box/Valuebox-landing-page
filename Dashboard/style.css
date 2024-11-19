@@ -1367,8 +1367,4 @@ background:  #F2F2F2;
   position: absolute;
   z-index: -1;
   pointer-events: none; /* Prevent interaction when hidden */
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> e1a57cc36d174fc72a1572d29b513baeac01fc4c
