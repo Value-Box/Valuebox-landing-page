@@ -9635,8 +9635,3 @@ text-align: center;
   line-height: clamp(20px, 5vw, 28px);
   font-weight: 500;
 }
-
-  @media(max-width:1400px){
-
-  }
-  
