@@ -458,7 +458,8 @@ line-height: normal;
   color: #002882;
 }
 #carouselExampleIndicators2 {
-  margin: 0px 10px;
+  margin: 0px -3px;
+  padding: 0px;
 }
 .row {
   /* padding: 100px 80px 100px 80px; */
@@ -3112,9 +3113,9 @@ font-size: 16px;
   }
   .utubeVideo {
     position: relative; /* Positioning context for absolute elements */
-    width: 100%;
-    height: 90vh; /* Set to full viewport height */
-    overflow: hidden; /* Hide any overflow */
+      width: 75vw !important;
+    margin: auto 0px !important;
+    height: 100% !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -3131,15 +3132,19 @@ font-size: 16px;
   }
  .youtubevideocontainer{
   position: absolute;
-  top: 10%;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
  } 
- .youtubevideo iframe{
+ /* .youtubevideo iframe{
   width: 65%;
  }
  .youtubevideo{
   height: 62vh;
- }
- @media(max-width:1600px){
+ } */
+ /* @media(max-width:1600px){
   .youtubevideo{
     height: 90vh;
    }
@@ -3158,8 +3163,8 @@ font-size: 16px;
   .youtubevideo{
     height: 40vh;
    }
- }
- @media(max-width:1057px){
+ } */
+ /* @media(max-width:1057px){
   .youtubevideo{
     height: 30vh;
    }
@@ -3167,22 +3172,18 @@ font-size: 16px;
     position: absolute;
     top: 10%;
    } 
- }
- @media(max-width:900px){
+ } */
+ @media(max-width:768px){
   .youtubevideocontainer{
-    position: absolute;
-    top: 10%;
+   height: 95%;
    } 
-   .youtubevideo{
-    height: 25vh;
-   }
  }
  @media(max-width:845px){
-  .youtubevideo{
+  /* .youtubevideo{
     height: 22vh;
-   }
+   } */
  }
- @media(max-width:768px){
+ /* @media(max-width:768px){
   .youtubevideo{
     height: 22vh;
    }
@@ -3194,8 +3195,8 @@ font-size: 16px;
     width: 72%;
    }
    
- }
- @media(max-width:550px){
+ } */
+ /* @media(max-width:550px){
   .youtubevideocontainer{
     position: absolute;
     top: 20%;
@@ -3203,8 +3204,8 @@ font-size: 16px;
    .youtubevideo iframe{
     width: 65%;
    }
-  }
- @media(max-width:400px){
+  } */
+ /* @media(max-width:400px){
   .youtubevideocontainer{
     position: absolute;
     top: 25%;
@@ -3215,7 +3216,7 @@ font-size: 16px;
    .youtubevideo{
     height: 22vh;
    }
- }
+ } */
  .faq{
   color: var(--Natural-Color-100, #1A1A1A);
 text-align: center;

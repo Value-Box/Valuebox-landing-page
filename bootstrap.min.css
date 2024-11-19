@@ -7661,6 +7661,9 @@ fieldset:disabled .btn {
 .vw-100 {
   width: 100vw !important;
 }
+.w-md-75{
+  width: 75vw;
+}
 .min-vw-100 {
   min-width: 100vw !important;
 }

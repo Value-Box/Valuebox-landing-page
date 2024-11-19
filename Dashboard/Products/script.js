@@ -178,7 +178,7 @@ function createTagInput(inputId) {
     });
     console.log(tagsArray);
   } else {
-    console.log(`Input element with ID: ${inputId} not found!`);
+    // console.log(`Input element with ID: ${inputId} not found!`);
   }
 }
 
@@ -199,7 +199,7 @@ function addTag(wrapper, tagText, tagsArray, inputElem) {
     tag.remove();
     // Update the hidden input value to reflect the updated tags
     inputElem.value = tagsArray.join(',');
-    console.log("Updated hidden input value (after remove):", inputElem.value);
+    // console.log("Updated hidden input value (after remove):", inputElem.value);
     updateSelectedVariants(); // Update after removing a tag (this function is not defined here)
   };
 
@@ -208,7 +208,7 @@ function addTag(wrapper, tagText, tagsArray, inputElem) {
   
   // Update the hidden input field with the current tags array
   inputElem.value = tagsArray.join(',');
-  console.log("Updated hidden input value (after add):", inputElem.value);
+  // console.log("Updated hidden input value (after add):", inputElem.value);
   updateSelectedVariants(); // Update after adding a tag
 }
 
@@ -420,67 +420,77 @@ let selectedVariants = {
   parentValues: "",
   childValues: "",
   customValues: "", // New property for custom input values
-  tags: [] // New property to store tags
+  tags: '' // New property to store tags
 };
 
 function updateSelectedVariants() {
   selectedVariants.parentValues = "";
   selectedVariants.childValues = "";
   selectedVariants.customValues = "";
-  selectedVariants.tags = [];  // Ensure you have a place to store tags
+  selectedVariants.tags = ""; // Store tags as a comma-separated string
+  selectedVariants.tagInputValues = ""; // Store tag input values as a comma-separated string
 
   const rows = Array.from(document.querySelectorAll(".variantRow"));
   let parentAssigned = false;
 
   rows.forEach((row, index) => {
-    console.log(`Processing Row ${index + 1}`);
-    
     const dropdowns = row.querySelectorAll("select.choices");
     const selectedOptions = Array.from(dropdowns)
       .flatMap(dropdown => Array.from(dropdown.selectedOptions).map(option => option.value))
+      .filter(option => option.trim() !== "") // Remove empty values
       .join(",");
 
     const customInputElem = row.querySelector("input[type='hidden']");
-    const customInputValues = customInputElem ? customInputElem.value : "";
+    const customInputValues = customInputElem ? customInputElem.value.trim() : "";
 
-    // Handle tag extraction from the parent row (if it has a .tags-input-wrapper)
     const tagWrapper = row.querySelector(".tags-input-wrapper");
-    let tagValues = [];
+    let tagValues = "";
+    let tagInputValues = "";
+
     if (tagWrapper) {
-      // Extract the tag text content (without the '×' character)
       const tags = tagWrapper.querySelectorAll(".tag");
-      tagValues = Array.from(tags).map(tag => tag.textContent.replace('×', '').trim());
+      tagValues = Array.from(tags)
+        .map(tag => tag.textContent.replace('×', '').trim())
+        .filter(tag => tag !== "")
+        .join(","); // Convert tags to a comma-separated string
+
+      tagInputValues = Array.from(tagWrapper.querySelectorAll(".tag-input"))
+        .map(tagInput => tagInput.value.trim())
+        .filter(value => value !== "")
+        .join(","); // Convert tag input values to a comma-separated string
     }
 
-    console.log(`Row ${index + 1} - Dropdown Values: ${selectedOptions}`);
-    console.log(`Row ${index + 1} - Custom Input Element:`, customInputElem);
-    console.log(`Row ${index + 1} - Custom Input Values:`, customInputValues);
-    console.log(`Row ${index + 1} - Tag Values:`, tagValues);
+    // For parent and child rows
+    if (selectedOptions || customInputValues || tagValues) {
+      const combinedValues = [
+        selectedOptions,
+        customInputValues,
+        tagValues
+      ].filter(value => value !== "").join(",");
 
-    if (selectedOptions || customInputValues || tagValues.length > 0) {
       if (!parentAssigned) {
-        // If this is the first row (parent), assign the values
-        selectedVariants.parentValues = selectedOptions + (tagValues.length > 0 ? `,${tagValues.join(",")}` : "");
+        selectedVariants.parentValues = combinedValues;
         selectedVariants.customValues = customInputValues;
-        selectedVariants.tags = tagValues;  // Store tags separately
+        selectedVariants.tags = tagValues;
+        selectedVariants.tagInputValues = tagInputValues;
         parentAssigned = true;
       } else {
-        // For subsequent rows, treat as child rows
-        selectedVariants.childValues += selectedOptions + "," + customInputValues + ",";
-        selectedVariants.customValues += customInputValues + ",";
-        selectedVariants.tags = selectedVariants.tags.concat(tagValues);  // Add tags for this row to the global tags list
+        selectedVariants.childValues += combinedValues + (combinedValues ? "," : "");
+        selectedVariants.tags += (tagValues ? "," + tagValues : "");
+        selectedVariants.tagInputValues += (tagInputValues ? "," + tagInputValues : "");
       }
     }
   });
 
-  // Clean up trailing commas and empty spaces
+  // Clean up values
   selectedVariants.childValues = selectedVariants.childValues.replace(/,$/, "");
   selectedVariants.customValues = selectedVariants.customValues.replace(/,$/, "");
-  selectedVariants.tags = [...new Set(selectedVariants.tags)];  // Optional: Remove duplicates from tags array
-
+  selectedVariants.tags = selectedVariants.tags.replace(/,$/, ""); // Remove trailing comma
+  selectedVariants.tagInputValues = selectedVariants.tagInputValues.replace(/,$/, ""); // Remove trailing comma
+  
   console.log("Final Selected Variants:", selectedVariants);
+  console.log(selectedVariants.tags)
 }
-
 
 
 
@@ -522,7 +532,7 @@ function handleDragEvents() {
       updateTopRowClass(); // This will help update the 'top-row' class based on the new parent
     });
   } else {
-    console.error("Sortable list not found!");
+    // console.error("Sortable list not found!");
   }
 }
 
@@ -567,7 +577,7 @@ function updateTopRowClass() {
     }
 
     // Log top row details for debugging
-    console.log("Top Row:", parentRow || "No parent row selected");
+    // console.log("Top Row:", parentRow || "No parent row selected");
   }
 }
 
@@ -589,6 +599,8 @@ function removeVariant(button) {
   variantList.removeChild(row);
 
   // Hide `saveVariantDiv` if no rows are left
+  const saveVariantDiv = document.getElementById('saveVariantDiv');
+
   if (variantList.childElementCount === 0) {
     saveVariantDiv.style.display = 'none';
   }
@@ -596,15 +608,16 @@ function removeVariant(button) {
 
 
 function saveVariant() {
-  console.log("Save button clicked");
+  const variantTableBody = document.getElementById("variantTableBody");
+  const parentValues = selectedVariants.parentValues.split(",").filter(value => value !== "");
+  const childValues = selectedVariants.childValues ? selectedVariants.childValues.split(",").filter(value => value !== "") : [];
+  
+  // Ensure tags is an array
+  const tags = selectedVariants.tags && typeof selectedVariants.tags === "string" && selectedVariants.tags.trim() !== ""
+    ? selectedVariants.tags.split(",").map(tag => tag.trim())
+    : [];
 
-  const variantTableBody = document.getElementById('variantTableBody');
-
-  const parentValues = selectedVariants.parentValues.split(",");
-  const childValues = selectedVariants.childValues ? selectedVariants.childValues.split(",") : [];
-  const customValues = selectedVariants.customValues.split(",");
-  const tags = selectedVariants.tags || [];
-
+  // Validation: Ensure parent variants are selected
   if (parentValues.length === 0) {
     alert("Please select parent variants before saving.");
     return;
@@ -612,30 +625,29 @@ function saveVariant() {
 
   console.log("Selected Parent Values:", parentValues);
   console.log("Selected Child Values:", childValues);
-  console.log("Selected Custom Values:", customValues);
   console.log("Selected Tags:", tags);
 
-  variantTableBody.innerHTML = "";  // Clear the previous variants
+  variantTableBody.innerHTML = ""; // Clear any previously generated variants
 
-  // Iterate through each parent value
-  parentValues.forEach((color, index) => {
+  // Iterate through each parent value to create parent rows
+  parentValues.forEach((color, parentIndex) => {
     let parentRow = document.createElement("tr");
     parentRow.classList.add("variant-parent");
 
-    const numVariants = childValues.length > 0 ? childValues.length : 0;
-
-    // Add tag for parent row
-    const parentTag = tags[index] || ""; // Get corresponding tag for this parent (if any)
+    // Calculate the number of variants based on childValues and tags
+    const numVariants = childValues.length > 0 
+      ? childValues.filter(value => isNaN(value.trim())).length * (tags.length > 0 ? tags.length : 1)
+      : 0;
 
     parentRow.innerHTML = `
       <td class="d-flex gap-3">
         <input class="form-check-input variantProductCheck parent-checkbox" type="checkbox">
         <img src="../Images/productImage.png" alt="">
         <div class="variantParentDet">
-          <p class="m-0 varParTitle">${color} - ${customValues[index]} ${parentTag ? `- <span class="variantTag">${parentTag}</span>` : ''}</p>
-          <p class="m-0 varParDescription">${numVariants > 0 ? 'Select Size' : 'No Sizes Available'}</p>
-          ${numVariants > 0 ? 
-            `<span class="varParToChild">${numVariants.toString().padStart(2, '0')} Variants <span class="arrow"><img src="../Images/weui_arrow-filled.svg" alt=""></span></span>` 
+          <p class="m-0 varParTitle">${color}</p>
+          <p class="m-0 varParDescription">${numVariants > 0 ? 'Select Variants' : 'No Variants Available'}</p>
+          ${numVariants > 0 ?
+            `<span class="varParToChild">${numVariants.toString().padStart(2, '0')} Variants <span class="arrow"><img src="../Images/weui_arrow-filled.svg" alt=""></span></span>`
             : ''
           }
         </div>
@@ -646,62 +658,79 @@ function saveVariant() {
 
     variantTableBody.appendChild(parentRow);
 
-    const parentCheckbox = parentRow.querySelector('.parent-checkbox');
-
+    // Add click event to toggle child visibility
+    const parentRowElement = parentRow.querySelector(".varParToChild");
     if (numVariants > 0) {
-      const parentRowElement = parentRow.querySelector('.varParToChild');
-      parentRowElement.addEventListener('click', () => {
+      parentRowElement.addEventListener("click", () => {
         const childRows = document.querySelectorAll(`.child-of-${color}`);
         childRows.forEach(row => {
           row.style.display = row.style.display === "none" ? "table-row" : "none";
         });
 
-        const arrow = parentRowElement.querySelector('.arrow');
-        arrow.classList.toggle('rotate');
+        const arrow = parentRowElement.querySelector(".arrow");
+        arrow.classList.toggle("rotate");
       });
+    }
 
-      // Create combinations: parent value with each child value
-      const combinations = [];
+    // Create combinations of child values and tags
+    const combinations = [];
+    if (childValues.length > 0 && tags.length > 0) {
       childValues.forEach(size => {
-        parentValues.forEach(parent => {
-          combinations.push(`${parent}/${size}`);
-        });
-      });
-
-      combinations.forEach(combination => {
-        let childRow = document.createElement("tr");
-        childRow.classList.add("variant-child", `child-of-${color}`);
-        childRow.style.display = "none";
-
-        childRow.innerHTML = `
-          <td class="d-flex gap-3">
-            <input class="form-check-input variantProductCheck child-checkbox" type="checkbox">
-            <img src="../Images/productImage.png" alt="">
-            <div class="variantParentDet">
-              <p class="m-0 varParTitle">${combination}</p>
-              <p class="m-0 varParDescription">Seller SKU. HIFI M-16</p>
-            </div>
-          </td>
-          <td><span class="varParPrice">RS. 7,000</span></td>
-          <td><span class="varParStock">36</span></td>
-        `;
-
-        variantTableBody.appendChild(childRow);
-      });
-
-      parentCheckbox.addEventListener('change', (event) => {
-        const childCheckboxes = parentRow.querySelectorAll('.child-checkbox');
-        if (childCheckboxes.length > 0) {
-          childCheckboxes.forEach(childCheckbox => {
-            childCheckbox.checked = event.target.checked;
+        if (isNaN(size.trim())) { // Only process sizes (non-numeric values)
+          tags.forEach(tag => {
+            combinations.push(`${size.trim()} / ${tag}`);
           });
         }
       });
+    } else if (childValues.length > 0) {
+      childValues.forEach(size => {
+        if (isNaN(size.trim())) { // Only process sizes
+          combinations.push(`${size.trim()}`);
+        }
+      });
     }
+
+    console.log("Generated Combinations for", color, ":", combinations);
+
+    // Add child rows to the table
+    combinations.forEach(combination => {
+      let childRow = document.createElement("tr");
+      childRow.classList.add("variant-child", `child-of-${color}`);
+      childRow.style.display = "none"; // Hide child rows initially
+
+      childRow.innerHTML = `
+        <td class="d-flex gap-3">
+          <input class="form-check-input variantProductCheck child-checkbox" type="checkbox">
+          <img src="../Images/productImage.png" alt="">
+          <div class="variantParentDet">
+            <p class="m-0 varParTitle">${combination}</p>
+            <p class="m-0 varParDescription">Seller SKU. HIFI M-16</p>
+          </div>
+        </td>
+        <td><span class="varParPrice">RS. 7,000</span></td>
+        <td><span class="varParStock">36</span></td>
+      `;
+
+      variantTableBody.appendChild(childRow);
+    });
+
+    // Sync parent checkbox state with child checkboxes
+    const parentCheckbox = parentRow.querySelector(".parent-checkbox");
+    parentCheckbox.addEventListener("change", (event) => {
+      const childCheckboxes = document.querySelectorAll(`.child-of-${color} .child-checkbox`);
+      childCheckboxes.forEach(childCheckbox => {
+        childCheckbox.checked = event.target.checked;
+      });
+    });
   });
 
-  updateTopRowClass();
+  console.log("Variants successfully created.");
+  updateTopRowClass(); // Ensure correct row classes are applied if needed
+  updateSelectedVariants();
 }
+
+
+
 
 
 
@@ -728,3 +757,51 @@ function saveVariant() {
     // Log the selected values to the console
     console.log(selectedValues);
 }
+
+
+function toggleDivsAndTables(checkboxIds, divIds, tableIds) {
+  const checkboxes = checkboxIds.map(id => document.getElementById(id));
+  const divs = divIds.map(id => document.getElementById(id));
+  const tables = tableIds.map(id => document.getElementById(id));
+
+  // Always show 'merchant' on page load
+  const merchantCheckbox = document.getElementById('merchant');
+  const merchantDiv = document.getElementById('fullByMerchant');
+  const merchantTable = document.getElementById('fbmTable');
+
+  merchantCheckbox.checked = true;
+  merchantDiv.classList.add('show');
+  merchantTable.classList.add('table-visible');
+
+  checkboxes.forEach((checkbox, index) => {
+    checkbox.addEventListener('change', () => {
+      // Hide all divs and tables and uncheck all checkboxes except the current one
+      checkboxes.forEach((cb, i) => {
+        if (i !== index) {
+          cb.checked = false;
+          divs[i].classList.remove('show');
+          tables[i].classList.remove('table-visible');
+          tables[i].classList.add('table-hidden');
+        }
+      });
+
+      // Show or hide the current div and table
+      if (checkbox.checked) {
+        divs[index].classList.add('show');
+        tables[index].classList.add('table-visible');
+        tables[index].classList.remove('table-hidden');
+      } else {
+        divs[index].classList.remove('show');
+        tables[index].classList.remove('table-visible');
+        tables[index].classList.add('table-hidden');
+      }
+    });
+  });
+}
+
+// Initialize the toggle functionality
+toggleDivsAndTables(
+  ['merchant', 'VB'],
+  ['fullByMerchant', 'fullByVB'],
+  ['fbmTable', 'fbvTable']
+);
