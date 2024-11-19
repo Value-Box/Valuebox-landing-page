@@ -148,10 +148,10 @@
                           </a>
                           <ul class="submenu ">
                               <li class="submenu-item ">
-                                  <a href="component-badge.html">Orders</a>
+                                  <a href="../OrdersReviews/orders.html">Orders</a>
                               </li>
                               <li class="submenu-item ">
-                                  <a href="component-breadcrumb.html">Return Orders</a>
+                                  <a href="../OrdersReviews/returnOrder.html">Return Orders</a>
                               </li>
                               <li class="submenu-item ">
                                   <a href="component-button.html">Reviews</a>
@@ -411,7 +411,7 @@
             </div>
         </div>
    <main class="backcolor" id="main">
-    <div class="container py-3 ">
+    <div class="container py-3 m-0">
         <a class="text-secondary" href="">Home</a>
         <a class="text-secondary" href="">>Settings</a>
         <a class="text-dark fw-bold" href="">>Brand</a>
@@ -423,24 +423,25 @@
                  <p>See the performance of the Brand Registered here</p>
                </div>
                <div class="col-3 manageproductsbuttons gap-2 m-0 d-flex py-3 justify-content-end">
-                <button class=" btn-large-blue">Apply for new Brand</button>
+               <a href="../Products/BasicInformation.html"> <button class=" btn-blue">Apply for new Brand</button></a>
               </div>
             </div>
             </div>
         </div>
-        <div class="container bg-white py-1 shadow-sm p-3 mb-5 bg-body rounded-2">
-            <div class="row mt-4 inputtitle m-0">
-                <div class="col-3 p-0 mt-2">
+        <form action="">
+          <div class="container m-0 bg-white py-1 shadow-sm p-3 mb-5 bg-body rounded-2 py-4">
+            <div class="row inputtitle m-0 mb-4">
+                <div class="col-3 p-0">
                     <div class="input-group">
                         <button class="btn titlebtn" type="button" id="button-addon2">Name</button>
-                        <input type="text" class="form-control" placeholder="Enter Brand Name" aria-label="input" aria-describedby="button-addon2">
+                        <input type="text" class="form-control form-select-input" placeholder="Enter Brand Name" aria-label="input" aria-describedby="button-addon2">
                        <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
                     </div>
                 </div>
                 <div class="col-3 ">
-                    <div class="input-group mt-2">
-                        <label class="input-group-text title" for="inputGroupSelect01">Select Category</label>
-                        <select class="form-select" id="inputGroupSelect01">
+                    <div class="input-group">
+                        <label class="input-group-text title" for="inputGroupSelect01">Brand Relation</label>
+                        <select class="form-select form-select-input" id="inputGroupSelect01">
                             <option selected="">Select</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
@@ -448,11 +449,11 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-3 ps-0">
-                    <div class="input-group mt-2">
-                        <label class="input-group-text title" for="inputGroupSelect01">Tags</label>
-                        <select class="form-select" id="inputGroupSelect01">
-                            <option selected="">Enter Tags</option>
+                <div class="col-3 ps-0 ">
+                    <div class="input-group">
+                        <label class="input-group-text " for="inputGroupSelect01">Status</label>
+                        <select class="form-select form-select-input" id="inputGroupSelect01">
+                            <option selected="">Select Status</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
                             <option value="3">Three</option>
@@ -460,12 +461,12 @@
                     </div>
                 </div>
                 <div class="col-3 d-flex justify-content-end gap-2 p-0">
-                    <button class="btn uploadImagebtn">Search</button>
-                    <button class="btn selectbtn">Reset</button>
+                    <button class="btn-blue">Search</button>
+                    <button class="btn-outline-blue">Reset</button>
                 </div>
                </div>
-               <div class="brandinfotable">
-                <table class="mediatable w-100 my-4" style="border: 1px solid lightgray;">
+               <div class="TableWrapper">
+                <table>
                     <thead>
                         <tr class="text-dark">
                                 
@@ -482,7 +483,7 @@
                                 <td>Nestle Pakistan</td>
                                 <td>Brand Owner</td>
                                 <td>Men’s Fashion</td>
-                                <td><div class="pending text-warning rounded-2 text-center w-75">Pending</div></td>
+                                <td><div class="bg-warning-light text-warning rounded-2 text-center w-75">Pending</div></td>
                                 <td>03-Aug-2024</td>
                                 <td class="gap-2 d-flex">
                                      <div class="rounded-2 p-2 iconsbackcolor">
@@ -509,6 +510,8 @@
               
                   </div>
                 
+        </form>
+     
     
     </main>
 
