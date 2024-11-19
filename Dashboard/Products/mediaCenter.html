@@ -147,10 +147,10 @@
                       </a>
                       <ul class="submenu ">
                           <li class="submenu-item ">
-                              <a href="component-badge.html">Orders</a>
+                              <a href="../OrdersReviews/orders.html">Orders</a>
                           </li>
                           <li class="submenu-item ">
-                              <a href="component-breadcrumb.html">Return Orders</a>
+                              <a href="../OrdersReviews/returnOrder.html">Return Orders</a>
                           </li>
                           <li class="submenu-item ">
                               <a href="component-button.html">Reviews</a>
@@ -411,97 +411,103 @@
     </div>
     
  <main class="backcolor" id="main">
+ 
     <div class="container py-3">
-       <a class="text-secondary" href="">Home</a>
-       <a class="text-dark fw-bold" href="">>Media Center</a>
-       </div>    
-    <div class="container d-flex gap-5 mb-2 p-0">
-       <div class="row w-100 m-0">
-         <div class="col-12 manageproductsbuttons d-flex justify-content-center gap-2 m-0">
-            <h3 class="text-dark me-auto">Media Center</h3>
-          </div>
-       </div>
-       </div>
-       <div class="container bg-white mediaCentercontainer">
-        <div class="row m-0">
-            <div class="col-4 p-0">
-                <button class="btn-large-blue">Upload Image</button>
-                <button class="btn selectbtn">Select All</button>
-            </div>
-            <div class="col-8 d-flex gap-2 p-0">
-                <div class="form-group position-relative d-flex bg-light gap-1 align-items-center startEndDate m-0">
-                    <input type="date" class="form-control bg-transparent"
-                        placeholder="Start Date">
-                        <span class="gapLine"></span>
-                        <input type="date" class="form-control "
-                        placeholder="End Date">
-                    <!-- <div class="form-control-icon ">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path opacity="0.5" d="M22 10H2V19C2 19.7956 2.31607 20.5587 2.87868 21.1213C3.44129 21.6839 4.20435 22 5 22H19C19.7956 22 20.5587 21.6839 21.1213 21.1213C21.6839 20.5587 22 19.7956 22 19V10ZM7 8C6.73478 8 6.48043 7.89464 6.29289 7.70711C6.10536 7.51957 6 7.26522 6 7V3C6 2.73478 6.10536 2.48043 6.29289 2.29289C6.48043 2.10536 6.73478 2 7 2C7.26522 2 7.51957 2.10536 7.70711 2.29289C7.89464 2.48043 8 2.73478 8 3V7C8 7.26522 7.89464 7.51957 7.70711 7.70711C7.51957 7.89464 7.26522 8 7 8ZM17 8C16.7348 8 16.4804 7.89464 16.2929 7.70711C16.1054 7.51957 16 7.26522 16 7V3C16 2.73478 16.1054 2.48043 16.2929 2.29289C16.4804 2.10536 16.7348 2 17 2C17.2652 2 17.5196 2.10536 17.7071 2.29289C17.8946 2.48043 18 2.73478 18 3V7C18 7.26522 17.8946 7.51957 17.7071 7.70711C17.5196 7.89464 17.2652 8 17 8Z" fill="#CCCCCC"/>
-                            <path d="M19 4H18V7C18 7.26522 17.8946 7.51957 17.7071 7.70711C17.5196 7.89464 17.2652 8 17 8C16.7348 8 16.4804 7.89464 16.2929 7.70711C16.1054 7.51957 16 7.26522 16 7V4H8V7C8 7.26522 7.89464 7.51957 7.70711 7.70711C7.51957 7.89464 7.26522 8 7 8C6.73478 8 6.48043 7.89464 6.29289 7.70711C6.10536 7.51957 6 7.26522 6 7V4H5C4.20435 4 3.44129 4.31607 2.87868 4.87868C2.31607 5.44129 2 6.20435 2 7V10H22V7C22 6.20435 21.6839 5.44129 21.1213 4.87868C20.5587 4.31607 19.7956 4 19 4Z" fill="#CCCCCC"/>
-                          </svg>
-                    </div> -->
-                </div>
-                <div class="d-flex gap-2">
-                    <input type="text" class="form-control searchpictureinput"
-                    placeholder="Search Picture">
-                    <button class="btn selectbtn">Clear</button>
-                    <button class="btn uploadImagebtn">Search</button>
-                </div>
+      <a class="text-secondary" href="">Home</a>
+      <a class="text-dark fw-bold" href="">>Media Center</a>
+      </div>    
+   <div class="container d-flex gap-5 mb-2 p-0">
+      <div class="row w-100 m-0">
+        <div class="col-12 manageproductsbuttons d-flex justify-content-center gap-2 m-0">
+           <h3 class="text-dark me-auto heading-one">Media Center</h3>
+         </div>
+      </div>
+      </div>
+      <form action="">
+      <div class="container bg-white mediaCentercontainer shadow-sm p-3 mb-5 bg-body rounded py-4">
+       <div class="row m-0">
+           <div class="col-4 d-flex gap-2 p-0">
+            <input class="d-none" type="file" id="img">
+               <label class="btn-blue cursor-pointer"  for="img">Upload Image</label>
+               <button class="btn-outline-blue">Select All</button>
+           </div>
+           <div class="col-8 d-flex gap-2 p-0">
+               <div class="form-group position-relative d-flex gap-1 align-items-center startEndDate m-0">
+                      <input type="date" class="form-control form-select-input"
+                       placeholder="Start Date Date">
+                       <span class="gapLine"></span>
+                       <input type="date" class="form-control form-select-input"
+                       placeholder="End Date">
+                   <!-- <div class="form-control-icon ">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                           <path opacity="0.5" d="M22 10H2V19C2 19.7956 2.31607 20.5587 2.87868 21.1213C3.44129 21.6839 4.20435 22 5 22H19C19.7956 22 20.5587 21.6839 21.1213 21.1213C21.6839 20.5587 22 19.7956 22 19V10ZM7 8C6.73478 8 6.48043 7.89464 6.29289 7.70711C6.10536 7.51957 6 7.26522 6 7V3C6 2.73478 6.10536 2.48043 6.29289 2.29289C6.48043 2.10536 6.73478 2 7 2C7.26522 2 7.51957 2.10536 7.70711 2.29289C7.89464 2.48043 8 2.73478 8 3V7C8 7.26522 7.89464 7.51957 7.70711 7.70711C7.51957 7.89464 7.26522 8 7 8ZM17 8C16.7348 8 16.4804 7.89464 16.2929 7.70711C16.1054 7.51957 16 7.26522 16 7V3C16 2.73478 16.1054 2.48043 16.2929 2.29289C16.4804 2.10536 16.7348 2 17 2C17.2652 2 17.5196 2.10536 17.7071 2.29289C17.8946 2.48043 18 2.73478 18 3V7C18 7.26522 17.8946 7.51957 17.7071 7.70711C17.5196 7.89464 17.2652 8 17 8Z" fill="#CCCCCC"/>
+                           <path d="M19 4H18V7C18 7.26522 17.8946 7.51957 17.7071 7.70711C17.5196 7.89464 17.2652 8 17 8C16.7348 8 16.4804 7.89464 16.2929 7.70711C16.1054 7.51957 16 7.26522 16 7V4H8V7C8 7.26522 7.89464 7.51957 7.70711 7.70711C7.51957 7.89464 7.26522 8 7 8C6.73478 8 6.48043 7.89464 6.29289 7.70711C6.10536 7.51957 6 7.26522 6 7V4H5C4.20435 4 3.44129 4.31607 2.87868 4.87868C2.31607 5.44129 2 6.20435 2 7V10H22V7C22 6.20435 21.6839 5.44129 21.1213 4.87868C20.5587 4.31607 19.7956 4 19 4Z" fill="#CCCCCC"/>
+                         </svg>
+                   </div> -->
                </div>
-            
-        </div>
-        <div class="container my-5">
-            <div class="row">
-           <div class="col allbar d-flex gap-5">
-            <a class="active" href="">
-                Images 
-                <span class="notification-badge">12</span>
-              </a>
-              <a class="" href="">
-                Videos 
-                <span class="notification-badge">27</span>
-              </a>
-             </div>
+               <div class="d-flex gap-2">
+                   <input type="text" class="form-control form-select-input"
+                   placeholder="Search Picture">
+                   <button class="btn-outline-blue">Clear</button>
+                   <button class="btn-blue">Search</button>
+               </div>
+              </div>
+           
+       </div>
+       <div class="container my-5">
+           <div class="row m-0">
+          <div class="col allbar d-flex gap-5 p-0">
+           <a class="active" href="">
+               Images 
+               <span class="notification-badge">12</span>
+             </a>
+             <a class="" href="">
+               Videos 
+               <span class="notification-badge">27</span>
+             </a>
             </div>
            </div>
-        <div class="mediacentertable">
-            <table class="mediatable w-100">
-                <thead>
-                    <tr class="text-dark">
-                            
-                        <th style="width: 50%; text-align: start;">
-                            <input type="checkbox" id="select-all" onclick="toggleCheckboxes(this)">
-                            <label for="select-all">File Name</label>
-                          </th>
-                        <th class="mediatableheading" style="width: 20%">Date Added</th>
-                        <th class="mediatableheading" style="width: 15%">Size</th>
-                        <th class="mediatableheading" style="width: 15%">Refrences</th>
-                        </tr>
-                    </thead>
-                    <tbody class="py-5">
-                        <tr>
-                            <td>
-                                <div class="d-flex gap-3 ">
-                                 <input class="mediacheckBox" type="checkbox" id="product1" onclick="toggleCheckboxes(this)">  
-                                 <img  src="../Images/manage product image1.svg" alt="">
-                                 <div class="mediarow">
-                                     <span class="text-dark fw-bold">166545323dasds2df3sd5f3sd2f3sd.jpg</span>
-                                     <p class="p-0">JPG</p>
-                                 </div>
+          </div>
+       <div class="TableWrapper">
+           <table class="mediatable w-100">
+               <thead>
+                   <tr class="text-dark">
+                           
+                       <th style="width: 50%; text-align: start;">
+                           <input class="form-check-input" type="checkbox" id="select-all" onclick="toggleCheckboxes(this)">
+                           <label for="select-all">File Name</label>
+                         </th>
+                       <th class="mediatableheading" style="width: 20%">Date Added</th>
+                       <th class="mediatableheading" style="width: 15%">Size</th>
+                       <th class="mediatableheading" style="width: 15%">Refrences</th>
+                       </tr>
+                   </thead>
+                   <tbody class="py-5">
+                       <tr>
+                           <td>
+                               <div class="d-flex gap-3 align-items-center ">
+                                <input class="mediacheckBox form-check-input" type="checkbox" id="product1" onclick="toggleCheckboxes(this)">  
+                                <img  src="../Images/manage product image1.svg" alt="">
+                                <div class="mediarow">
+                                    <span class="text-dark fw-bold">166545323dasds2df3sd5f3sd2f3sd.jpg</span>
+                                    <p class="p-0">JPG</p>
                                 </div>
-                                </div>
-                       </td>
-                            <td>Today at 1:06 am</td>
-                            <td>354.32 KB</td>
-                            <td>1 Product</td>
-                        </tr>
-                    </tbody>
+                               </div>
+                              </td>
+                              <td>Today at 1:06 am</td>
+                              <td>354.32 KB</td>
+                              <td>1 Product</td>
+                          </tr>
+                      </tbody>
+                    </table>
+                               </div>
+                     
                     
-              </table>
-        </div>
-     
        </div>
+    
+      </div>
+  </form>
+ 
    
  </main>
   
