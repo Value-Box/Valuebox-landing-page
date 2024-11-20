@@ -724,6 +724,14 @@ td {
   top: -5px;
   left: 5px;
 }
+#searchVariant{
+  outline: none;
+}
+.variant .varImage{
+  background-color: white;
+  border-radius: 5px;
+border: 1px solid #F2F2F2;
+}
 @media (max-width: 1274px) {
   .bulkmanagebtn {
     padding: 10px 20px;
@@ -741,7 +749,7 @@ td {
     width: 100%;
   }
   .viewcollectionbtn {
-    padding: 6px 12px;
+    padding: 10px 20px;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -752,7 +760,7 @@ td {
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 24px;
+    line-height: 30px;
   }
   .newproduct {
     padding: 6px 12px;
@@ -1530,9 +1538,13 @@ gap: 10px;
 .table-hidden {
   opacity: 0;
   position: absolute;
+  visibility: hidden;
   z-index: -1;
   pointer-events: none; /* Prevent interaction when hidden */
+  transition: opacity 0.5s ease;
+
 }
+
 .orderReturnDetails{
   border-bottom-style: dashed;
   border-color: #CCC;
