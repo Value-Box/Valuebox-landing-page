@@ -725,23 +725,9 @@ td {
   left: 5px;
 }
 @media (max-width: 1274px) {
-  .bulkmanagebtn {
-    padding: 10px 20px;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    border-radius: 5px;
-    border: 1px solid #002882;
-    color: #002882;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-    max-width: 150px !important;
-    width: 100%;
-  }
+  
   .viewcollectionbtn {
-    padding: 6px 12px;
+    padding: 10px 20px;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -752,26 +738,9 @@ td {
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 24px;
+    line-height: 30px;
   }
-  .newproduct {
-    padding: 6px 12px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 5px;
-    background: var(
-      --Primary-Color-Dark-Blue,
-      linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0.2) 100%),
-      #002882
-    );
-    color: #e6eaf3;
-    font-family: Sarabun;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-  }
+ 
 }
 @media (max-width: 1231px) {
   .manageproductsbuttons h3 {
@@ -1539,4 +1508,38 @@ gap: 10px;
 }
 .orderReturncol{
   background-color: #FAFAFA;
+}
+.orderdetail-input-text{
+  display: flex;
+width: 150px;
+padding: 10px 20px;
+justify-content: center;
+align-items: center;
+gap: 17px;
+align-self: stretch;
+background: #F0F0F0;
+color: black;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px;
+}
+.payment-total{
+  border-bottom: 1px solid #DBDBDB;
+}
+.orderdetailpayment{
+  border: 1px solid #DBDBDB;
+  border-radius: 8px;
+}
+.commentinput input{
+  border: none;
+  border: none; /* Removes the border */
+  outline: none; /* Removes the outline on focus */
+}
+.post{
+  padding: 10px 20px;
+align-items: center;
+gap: 20px;
+align-self: stretch;
+background: #F2F2F2;
 }
