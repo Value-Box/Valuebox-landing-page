@@ -9650,3 +9650,19 @@ text-align: center;
   line-height: clamp(20px, 5vw, 24px);
   font-weight: 400;
 }
+.l-h-30{
+  line-height: 30px;
+}
+.bulkManagDropDown {
+  border-radius: 5px;
+  border: 1px solid #002882;
+  background-color: #e6eaf3;
+  color: #002882;
+  background-image: url(../images/weui_arrow-filled.svg);
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
