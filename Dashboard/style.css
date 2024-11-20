@@ -487,28 +487,7 @@ body {
 .important {
   color: #eea500;
 }
-.importexportbtn {
-  padding: 8px 16px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border-radius: 5px;
-  background: #f2f2f2;
-}
-.bulkmanagebtn {
-  padding: 10px 20px;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  border-radius: 5px;
-  border: 1px solid #002882;
-  color: #002882;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-  width: 130px;
-}
+
 .viewcollectionbtn {
   padding: 10px 20px;
   justify-content: center;
@@ -521,25 +500,7 @@ body {
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px;
-}
-.newproduct {
-  padding: 10px 20px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border-radius: 5px;
-  background: var(
-    --Primary-Color-Dark-Blue,
-    linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0.2) 100%),
-    #002882
-  );
-  color: #e6eaf3;
-  font-family: Sarabun;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
+  line-height: 30px;
 }
 .productsselectedbtn {
   color: var(--Natural-Color-60, #666);
@@ -1571,4 +1532,11 @@ gap: 10px;
   position: absolute;
   z-index: -1;
   pointer-events: none; /* Prevent interaction when hidden */
+}
+.orderReturnDetails{
+  border-bottom-style: dashed;
+  border-color: #CCC;
+}
+.orderReturncol{
+  background-color: #FAFAFA;
 }

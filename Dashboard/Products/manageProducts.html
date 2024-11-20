@@ -422,24 +422,23 @@
        <div class="row w-100 m-0">
            <div class="col-12 manageproductsbuttons d-flex justify-content-center gap-2 m-0 p-0">
             <h3 class="text-dark me-auto heading-one p-0">Manage Products</h3>
-            <button class="btn importexportbtn">Import <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M12 4V14M12 14L15 11M12 14L9 11" stroke="#666666" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M12 20C9.87827 20 7.84344 19.1571 6.34315 17.6569C4.84285 16.1566 4 14.1217 4 12M20 12C20.0007 13.1994 19.7314 14.3835 19.2121 15.4646C18.6928 16.5457 17.9367 17.496 17 18.245" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
-              </svg></button>
-            <button class="btn importexportbtn">Export <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <button class="btn-gray">Import<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M12 4V14M12 14L15 11M12 14L9 11" stroke="#666666" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 20C9.87827 20 7.84344 19.1571 6.34315 17.6569C4.84285 16.1566 4 14.1217 4 12M20 12C20.0007 13.1994 19.7314 14.3835 19.2121 15.4646C18.6928 16.5457 17.9367 17.496 17 18.245" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
+            </svg></button>
+              <button class="btn-gray">Export <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path d="M12 20V10M12 10L15 13M12 10L9 13" stroke="#666666" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12M20 12C20.0007 10.8006 19.7314 9.61651 19.2121 8.53542C18.6928 7.45434 17.9367 6.50403 17 5.755" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
               </svg></button>
-              
-              <fieldset class="form-group mb-0">
-                <select class="form-select bulkmanagebtn" id="basicSelect">
-                    <option value="bulkManage"><i class="your-icon-class"></i>Bulk Manage</option>
+              <fieldset class="form-group">
+                <select class="form-select" id="bulkManagDropDown">
+                        <option value="bulkmanage">Bulk Manage</option>     
                 </select>
-            </fieldset>
-            <button class="btn viewcollectionbtn">View Collection</button>
-            <button class="btn newproduct"><svg class="m" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M12 6V18M18 12H6" stroke="#E6EAF3" stroke-width="2" stroke-linecap="round"/>
-              </svg>New Product</button>
+            </fieldset>
+           <a href="collection.html"><button class="viewcollectionbtn">View Collection</button></a> 
+           <a href="addProduct.html"> <button class="btn btn-blue"><svg class="m" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 6V18M18 12H6" stroke="#E6EAF3" stroke-width="2" stroke-linecap="round"/>
+          </svg>New Product</button></a>
            </div>
        </div>
        </div>
@@ -455,8 +454,8 @@
             Inactive 
             <span class="notification-badge">27</span>
           </a>
-        <a >Draft</a>
-        <a >Pending QC</a>
+        <a>Draft</a>
+        <a>Pending QC</a>
         <a class="" href="">
             Violation 
             <span class="notification-badge">1</span>
@@ -467,21 +466,21 @@
        </div>
        <form action="">
         <div class="container shadow-sm p-3 mb-5 bg-body rounded bg-white m-0">
-          <div class=" col d-flex gap-3 filterproduct">
+          <div class=" col d-flex gap-3 filterproduct py-2">
               <span class="mt-2">Filter Product:</span>
-              <button class="outofstockbtn">Out of stock</button>
-              <button class="outofstockbtn">Soon Out of stock</button>
+              <button class="btn-gray">Out of stock</button>
+              <button class="btn-gray">Soon Out of stock</button>
              </div>
-          <div class="row py-4 inputtitle">
-           <div class="col-3 p-0">
-               <div class="input-group">
-                   <button class="btn titlebtn" type="button" id="button-addon2">Product Name</button>
-                   <input type="text" class="form-control" placeholder="Please Input" aria-label="input" aria-describedby="button-addon2">
-                  <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
-               </div>
+          <div class="row py-4 d-flex inputtitle ">
+           <div class="col-3 ">
+            <div class="input-group">
+              <button class="btn titlebtn" type="button" id="button-addon2">Product Name</button>
+              <input type="text" class="form-control form-select-input" placeholder="Please Input" aria-label="input" aria-describedby="button-addon2">
+             <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
+          </div>
            </div>
            <div class="col-3">
-               <div class="input-group mb-3 ">
+               <div class="input-group">
                    <label class="input-group-text" for="inputGroupSelect01">Select Category</label>
                    <select class="form-select" id="inputGroupSelect01">
                        <option selected="">Select</option>
@@ -491,8 +490,8 @@
                    </select>
                </div>
            </div>
-           <div class="col-3">
-               <div class="input-group mb-3">
+           <div class="col-3 ">
+               <div class="input-group">
                    <label class="input-group-text title" for="inputGroupSelect01">Tags</label>
                    <select class="form-select" id="inputGroupSelect01">
                        <option selected="">Enter Tags</option>
@@ -503,7 +502,7 @@
                </div>
            </div>
            <div class="col-3">
-               <div class="input-group mb-3">
+               <div class="input-group">
                    <label class="input-group-text title" for="inputGroupSelect01">Sort By</label>
                    <select class="form-select" id="inputGroupSelect01">
                        <option selected="">Please Input</option>
@@ -518,9 +517,9 @@
          <div class="container bg-white p-4 rounded-2 shadow-sm p-3 mb-5 m-0 rounded">
           <div class="py-3 d-flex gap-2">
            <button class="btn productsselectedbtn">32 Products Selected</button>
-           <button class="outofstockbtn">Deactivate</button>
-           <button class="outofstockbtn">Delete</button>
-           <button class="outofstockbtn">Export Selected Products</button>
+           <button class="btn-gray">Deactivate</button>
+           <button class="btn-gray">Delete</button>
+           <button class="btn-gray">Export Selected Products</button>
           </div>
           <div class="TableWrapper">
               <table class=" w-100 ">

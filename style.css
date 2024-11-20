@@ -458,7 +458,8 @@ line-height: normal;
   color: #002882;
 }
 #carouselExampleIndicators2 {
-  margin: 0px 10px;
+  margin: 0px -3px;
+  padding: 0px;
 }
 .row {
   /* padding: 100px 80px 100px 80px; */
