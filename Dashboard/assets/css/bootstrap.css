@@ -41,7 +41,7 @@
   --Brand-white-Color: #E6EAF3;
   --Natural-Gray-Color: #999;
   --Gray-Color: #666;
-  --Light-Gray-Color: #ccc;
+  --Light-Gray-Color: #F2F2F2;
   --Darg-Color: #1A1A1A;
   --Danger-Color: #F04438;
   --Primary-Color-Dark-Blue-80: #33539B;
@@ -9336,7 +9336,7 @@ fieldset:disabled .btn {
   color: var(--Natural-Color-10);
 }
 .bg-NColor{
-  background-color: var(--Natural-Color-10);
+  background-color: var(--Natural-Color-10) !important;
 }
 button{
   border: none;
@@ -9390,7 +9390,7 @@ button:focus{
   color: var(--Gray-Color);
 }
 .paragraph-blue{
-  font-size: clamp(16px, 4vw, 18px);
+  font-size: clamp(14px, 4vw, 16px);
   line-height: clamp(20px, 5vw, 28px);
   font-weight: 500;
   color: #33539B;
@@ -9557,8 +9557,8 @@ height: 20px;
 .TableWrapper {
   border-radius: 8px;
   overflow: hidden;
- 
-}
+  border: 1px solid #ccc;
+ }
 .TableWrapper table {
   border-collapse: collapse;
   width: 100%;
@@ -9651,4 +9651,25 @@ text-align: center;
   font-size: clamp(16px, 4vw, 18px);
   line-height: clamp(20px, 5vw, 28px);
   font-weight: 500;
+}
+.fs-16{
+  font-size: 16px;
+  line-height: clamp(20px, 5vw, 24px);
+  font-weight: 400;
+}
+.l-h-30{
+  line-height: 30px;
+}
+.bulkManagDropDown {
+  border-radius: 5px;
+  border: 1px solid #002882;
+  background-color: #e6eaf3;
+  color: #002882;
+  background-image: url(../Images/weui_arrow-filled.svg);
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
