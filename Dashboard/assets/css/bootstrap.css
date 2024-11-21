@@ -9446,8 +9446,6 @@ button:focus{
   border: 1px solid var(--Light-Gray-Color);
 
 }
-
-
 .btn-danger{
   color: var(--Brand-white-Color);
   background-color: var(--Danger-Color);
@@ -9463,8 +9461,18 @@ button:focus{
   height: fit-content;
   border: 1px solid var(--Danger-Color);
 }
-
-.btn-outline-blue:hover,.btn-outline-blue:hover{
+.btn-green{
+  display: flex;
+width: 100px;
+padding: 5px 20px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 5px;
+color: var(--Natural-Color-00, #FCFCFC);
+background: var(--Success-500, #12B76A);
+}
+.btn-outline-blue:hover{
   color: var(--Brand-white-Color);
   background-color: var(--Brand-Color);
   border: 1px solid var(--Brand-Color);
@@ -9518,13 +9526,11 @@ button:focus{
   transition: 3s ease;
   height: fit-content;
 }
-.btn-outline-gray:hover,.btn-outline-gray:hover{
+.btn-outline-gray:hover{
   color: var(--Gray-Color);
   background-color: var(--Natural-Gray-Color);
   border: 1px solid var(--Natural-Gray-Color);
 }
-
-
 .form1{
   padding: 20px;
   border-radius: 12px;
@@ -9575,7 +9581,21 @@ height: 20px;
 .mt-30{
   margin-top: 30px;
 }
-
+.mt-20{
+  margin-top: 20px;
+}
+.py-20{
+  padding: 20px 0px;
+}
+.px-20{
+  padding: 0px 20px;
+}
+.pt-10{
+  padding-top: 10px;
+}
+.pb-10{
+  padding-bottom: 10px;
+}
 .TableWrapper {
   border-radius: 8px;
   overflow: hidden;
@@ -9706,6 +9726,14 @@ font-size: 16px;
 font-style: normal;
 font-weight: 500;
 line-height: 24px
+}
+.bg-light-purple{
+  background-color: var(--bs-purple-100);
+}
+
+.variant.active{
+  color: var(--Brand-Color);
+  background-color: var(--bs-purple-100);
 }
 
   
