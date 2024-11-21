@@ -9471,10 +9471,26 @@ color: var(--Natural-Color-00, #FCFCFC);
 background: var(--Success-500, #12B76A);
 }
 
-.btn-outline-blue:hover,.btn-outline-blue:hover{
+.btn-outline-blue:hover{
   color: var(--Brand-white-Color);
   background-color: var(--Brand-Color);
   border: 1px solid var(--Brand-Color);
+}
+.btn-outline-Yellow{
+  color: #EEA500;
+  background: transparent;
+  padding: 10px 20px;
+  line-height: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 5px;
+  border: 1px solid #EEA500;
+  transition: 1s ease;
+  height: fit-content;
 }
 .btn-outline-blue{
   color: var(--Brand-Color);
@@ -9509,7 +9525,7 @@ background: var(--Success-500, #12B76A);
   transition: 3s ease;
   height: fit-content;
 }
-.btn-outline-gray:hover,.btn-outline-gray:hover{
+.btn-outline-gray:hover{
   color: var(--Gray-Color);
   background-color: var(--Natural-Gray-Color);
   border: 1px solid var(--Natural-Gray-Color);
@@ -9585,6 +9601,7 @@ height: 20px;
   border-radius: 8px;
   overflow: hidden;
  border: 1px solid #ccc;
+ overflow-x: scroll;
 }
 .TableWrapper table {
   border-collapse: collapse;
@@ -9673,8 +9690,16 @@ text-align: center;
   line-height: clamp(20px, 5vw, 24px);
   font-weight: 400;
 }
+.fs-12{
+  font-size: 12px;
+  line-height: clamp(20px, 5vw, 24px);
+  font-weight: 400;
+}
 .l-h-30{
   line-height: 30px;
+}
+.bg-light-gray{
+  background-color: var(--Gray-Dark);
 }
 .bulkManagDropDown {
   border-radius: 5px;
@@ -9689,10 +9714,18 @@ text-align: center;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
-  
-.bg-light-gray{
-  background-color: var(--Gray-Dark);
+.w-max-content{
+  width: max-content;
 }
+.navigation .active1{
+  color: #1A1A1A;
+/* Text md/Medium */
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px
+}
+
 .bg-light-purple{
   background-color: var(--bs-purple-100);
 }
