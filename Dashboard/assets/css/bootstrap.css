@@ -9601,14 +9601,11 @@ height: 20px;
   overflow: hidden;
   border: 1px solid #ccc;
   overflow-x: scroll;
-  
 }
 .TableWrapper table {
   border-collapse: collapse;
   width: 100%;
- 
- 
-}
+ }
 .TableWrapper table thead tr th {
   background:  #f2f2f2;
   padding: 10px 20px;
@@ -9620,7 +9617,6 @@ height: 20px;
   border-bottom: 1px solid #DBDBDB;  
   background-color: white;
 }
-
 .input{
 display: flex;
 font-size: 18px;

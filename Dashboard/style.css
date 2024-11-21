@@ -1474,9 +1474,6 @@ gap: 10px;
   border: 1px solid var(--Light-Gray-Color);
 
 }
-
-
-
 /* Hidden div styling with smooth transition */
 .hidden {
   overflow: hidden;
@@ -1537,7 +1534,7 @@ line-height: 24px;
   outline: none; /* Removes the outline on focus */
 }
 .post{
-  padding: 10px 20px;
+padding: 10px 20px;
 align-items: center;
 gap: 20px;
 align-self: stretch;
