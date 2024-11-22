@@ -760,17 +760,17 @@
           </div> 
           <!-- This is where the new rows will be added -->
 
-          <div class="w-100" id="variantTabPar">
-            <div class="d-flex justify-content-between">
+          <div class="w-100 " id="variantTabPar">
+            <div class="d-flex justify-content-between mb-3">
               <h5 class="mb-0">Variants</h5>
-              <fieldset class="form-group">
-                <select class="form-select" id="bulkManagDropDown">
-                        <option value="bulkmanage">Bulk Manage</option>     
-                </select>
-            </fieldset>
+              <div class="d-flex gap-3">
+                <button  id="editVarBtn">Edit</button>
+              <button class="bulk-btn">Bulk Manage</button>
+              </div>
+              
             </div>
-            <div class="form-group w-100 variantTableWrapper">
-  
+            <!-- <div class="form-group w-100 variantTableWrapper">
+
               <table class="table variantTable">
                 <thead>
                     <tr>
@@ -796,7 +796,6 @@
                         <td><span class="varParStock">36</span></td>
                     </tr>
             
-                    <!-- Hidden variant rows initially hidden -->
                     <tr class="variant-details">
                       <td class="d-flex gap-3">
                         <input class="form-check-input variantProductCheck" type="checkbox" name="" id="">
@@ -823,12 +822,14 @@
                     </tr>
                     
                 </tbody>
-            </table>
-            
-            
-              
-            <!-- </select> -->
-                           
+              </table>       
+            </div> -->
+          
+            <div id="VariantTypeRowTable" class="mt-3">
+              <table class="table">
+                  <thead></thead>
+                  <tbody></tbody>
+              </table>
           </div>
           </div>
 
@@ -1121,70 +1122,6 @@
               console.error(error);
           });
 
-          
-    
-
-//           (function () {
-//     const tagsInput = {
-//         init(opts) {
-//             const inputElem = document.getElementById(opts.selector);
-//             if (!inputElem) return;
-
-//             // Wrapper for the tags input
-//             const wrapper = document.createElement('div');
-//             wrapper.className = 'tags-input-wrapper';
-//             const input = document.createElement('input');
-//             wrapper.append(input);
-//             inputElem.setAttribute('hidden', true);
-//             inputElem.parentNode.insertBefore(wrapper, inputElem);
-
-//             // Array to store tags
-//             let tagsArray = [];
-
-//             // Keydown and Keyup for adding tags immediately on Enter or comma
-//             input.addEventListener('keyup', (e) => {
-//                 if (e.key === 'Enter' || e.key === ',') {
-//                     e.preventDefault();
-//                     this.createTag(input, tagsArray, wrapper, inputElem);
-//                 }
-//             });
-//         },
-
-//         createTag(input, tagsArray, wrapper, inputElem) {
-//             const tagText = input.value.trim();
-//             if (tagText && !tagsArray.includes(tagText)) {
-//                 tagsArray.push(tagText);
-//                 this.addTag(wrapper, tagText, tagsArray, inputElem);
-//                 input.value = ''; // Clear input for the next tag
-//             }
-//         },
-
-//         addTag(wrapper, tagText, tagsArray, inputElem) {
-//             const tag = document.createElement('span');
-//             tag.className = 'tag';
-//             tag.innerHTML = `${tagText} <a href="#">&times;</a>`;
-
-//             // Remove tag on click
-//             tag.querySelector('a').onclick = (e) => {
-//                 e.preventDefault();
-//                 tagsArray.splice(tagsArray.indexOf(tagText), 1);
-//                 tag.remove();
-//                 inputElem.value = tagsArray.join(',');
-//             };
-
-//             // Insert the tag before the input field
-//             wrapper.insertBefore(tag, wrapper.querySelector('input'));
-//             inputElem.value = tagsArray.join(',');
-//         }
-//     };
-
-//     tagsInput.init({
-//         selector: 'tagInput',
-//         tags: [],
-//     });
-// })();
-
-
 (function () {
   const tagsInput = {
       init(opts) {
@@ -1275,6 +1212,10 @@ document.querySelectorAll('.varParToChild').forEach(item => {
     const arrow = item.querySelector('.arrow');
     arrow.classList.toggle('rotate');
   });
+});
+
+$("#editVarBtn").click(function(){
+  document.location.href='VariantPage.html'
 });
 
   </script>
