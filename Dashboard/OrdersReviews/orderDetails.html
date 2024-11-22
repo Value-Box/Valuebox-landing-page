@@ -509,7 +509,7 @@
                                          <div class="d-flex gap-1 py-2 p-0">
                                  <span class="paragraph-2 text-dark fw-bold">Delivery Time:</span>
                                  <div>
-                                    <span class="rounded-3 border-radius bg-secondary text-white fs-12 p-1">No Data</span>
+                                    <span class="rounded-3 border-radius bg-secondary rs-badge text-white fs-12 p-1">No Data</span>
                                      </div>
                                       </div>
                                    </div>
@@ -554,7 +554,7 @@
                                          <div class="d-flex gap-1 py-2 p-0">
                                  <span class="paragraph-2 text-dark fw-bold">Refund:</span>
                                  <div>
-                                    <span class="rounded-3 border-radius bg-secondary text-white fs-12 p-1">No Data</span>
+                                    <span class="rounded-3 border-radius bg-secondary rs-badge text-white fs-12 p-1">No Data</span>
                                      </div>
                                       </div>
                                    </div>
@@ -571,8 +571,8 @@
                                      </div>
                                    <div class="p-2 w-max-content">
                                          <div class="d-flex gap-1 py-2 p-0">
-                                          <button class="btn-outline-Yellow">Logistics Status</button>
-                                      </div>
+                                          <button class="btn-outline-Yellow" data-bs-toggle="modal" data-bs-target="#exampleModalToggle2">Logistic Status</button>
+                                        </div>
                                    </div>
                                  </div>
                                  </td>
@@ -634,12 +634,12 @@
           <div class="d-flex justify-content-between">
            <span class="subHeading">Payment</span>
            <div>
-             <button class="bg-orange-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+             <button class="payment-pending-orange d-flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                <path d="M13.1263 12.0837C12.9605 12.0837 12.8016 12.1495 12.6844 12.2667C12.5672 12.3839 12.5013 12.5429 12.5013 12.7087C12.5013 12.8744 12.5672 13.0334 12.6844 13.1506C12.8016 13.2678 12.9605 13.3337 13.1263 13.3337H15.2096C15.3754 13.3337 15.5344 13.2678 15.6516 13.1506C15.7688 13.0334 15.8346 12.8744 15.8346 12.7087C15.8346 12.5429 15.7688 12.3839 15.6516 12.2667C15.5344 12.1495 15.3754 12.0837 15.2096 12.0837H13.1263ZM1.66797 6.87533C1.66797 6.15703 1.95331 5.46816 2.46122 4.96024C2.96913 4.45233 3.65801 4.16699 4.3763 4.16699H15.6263C15.982 4.16699 16.3341 4.23705 16.6627 4.37315C16.9913 4.50926 17.2899 4.70875 17.5414 4.96024C17.7929 5.21174 17.9924 5.5103 18.1285 5.83889C18.2646 6.16748 18.3346 6.51966 18.3346 6.87533V13.1253C18.3346 13.481 18.2646 13.8332 18.1285 14.1618C17.9924 14.4904 17.7929 14.7889 17.5414 15.0404C17.2899 15.2919 16.9913 15.4914 16.6627 15.6275C16.3341 15.7636 15.982 15.8337 15.6263 15.8337H4.3763C3.65801 15.8337 2.96913 15.5483 2.46122 15.0404C1.95331 14.5325 1.66797 13.8436 1.66797 13.1253V6.87533ZM17.0846 7.91699V6.87533C17.0846 6.48855 16.931 6.11762 16.6575 5.84413C16.384 5.57064 16.0131 5.41699 15.6263 5.41699H4.3763C3.98953 5.41699 3.6186 5.57064 3.3451 5.84413C3.07161 6.11762 2.91797 6.48855 2.91797 6.87533V7.91699H17.0846ZM2.91797 9.16699V13.1253C2.91797 13.9303 3.5713 14.5837 4.3763 14.5837H15.6263C16.0131 14.5837 16.384 14.43 16.6575 14.1565C16.931 13.883 17.0846 13.5121 17.0846 13.1253V9.16699H2.91797Z" fill="#F79009"/>
              </svg> Payment Pending</button>
            </div>
           </div>
-          <div class="orderdetailpayment mt-4">
+          <div class="orderdetailpayment mt-4 position-relative">
             <div class="d-flex justify-content-between py-2">
              <span>Subtotal</span>
              <span>2 Items</span>
@@ -705,7 +705,10 @@
              </div>
             </div>
             <div>
-            <img src="../Images/Line 31.svg" alt="">
+              <div class="Order-detail-line">
+                <span class="orderdetaile-Line2"> <img src="../Images/Line 31.svg" alt=""></span>
+             
+              </div>
              <div class="d-flex gap-4">
               <div class="d-flex flex-column text-center">
               <span class="subHeading-4">Feb 07</span>
@@ -713,13 +716,16 @@
               </div>
               <div class="d-flex flex-column align-items-center ">
                 <input class="form-radio-input" type="radio" name="relationship" value="brandowner">
-                <span><img src="../Images/Line 31.svg" alt=""></span>
+                <span class="orderdetaile-Line2"></span>
               </div>
               <div class="d-flex flex-column ">
                 <span class="subHeading-3">Order Confirmation</span>
                 <span>Order Confirmation Email was sent to Danish Sami (danishsami17@gmail.com).</span>
               </div>
-             </div> 
+               </div>
+               <div class="d-flex justify-content-end send-invoice-btn">
+                <button class="btn-gray">Send Invoice</button>
+              </div> 
              <div class="d-flex gap-4">
               <div class="d-flex flex-column text-center">
               <span class="subHeading-4">Feb 07</span>
@@ -727,7 +733,7 @@
               </div>
               <div class="d-flex flex-column align-items-center text-center">
                 <input class="form-radio-input" type="radio" name="relationship" value="brandowner">
-                <span><img src="../Images/Line 31.svg" alt=""></span>
+                <span class="orderdetaile-Line2"></span>
               </div>
               <div class="d-flex flex-column">
                 <span class="subHeading-3">Payment</span>
@@ -741,7 +747,7 @@
               </div>
               <div class="d-flex flex-column align-items-center">
                 <input class="form-radio-input" type="radio" name="relationship" value="brandowner">
-                <span><img src="../Images/Line 31.svg" alt=""></span>
+                <span class="orderdetaile-Line2"></span>
               </div>
               <div class="d-flex flex-column">
                 <span class="subHeading-3">Confirmation ID</span>
@@ -766,7 +772,11 @@
     </div>
     <div class="col-4 mt-40">
       <div class="mb-4">
-          <button class="btn-danger w-100">Cancel Order </button>
+          <!-- <button class="btn-danger w-100" >Cancel Order </button> -->
+          <button class="btn-danger w-100" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Cancel Order</button>
+
+         
+          <!-- <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a> -->
       </div>
    
    <div class="d-flex flex-column shadow-sm p-3 mb-4 bg-white rounded p-0">
@@ -774,7 +784,7 @@
        <label for="">No notes from customer</label>
    </div>
    <div class="shadow-sm p-3 mb-4 bg-white rounded p-0">
-       <div class="d-flex flex-column">
+       <div class="d-flex flex-column mb-4">
            <span class="subHeading-3">Customer</span>
            <span class="subHeading-3 text-primary">Danish Sami</span>
            <span>01 Order</span>
@@ -789,10 +799,237 @@
      </div>
      
     </main>
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered position-relative">
+        <div class="modal-content">
+         <div class=" p-4">
+          <div class="modal-header mb-3 p-0 ">
+            <h5 class="text-dark p-0">Reason for Cancellation<span class="text-warning">*</span></h5>
+            <button id="closeModalBtn" type="button" class="btn-blue closeModalBtn rounded-circle" data-bs-dismiss="modal" aria-label="Close">
+              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+                <g clip-path="url(#clip0_6932_11513)">
+                  <rect width="60" height="60" fill="url(#paint0_radial_6932_11513)"/>
+                  <path d="M30 0C13.2857 0 0 13.2857 0 30C0 46.7143 13.2857 60 30 60C46.7143 60 60 46.7143 60 30C60 13.2857 46.7143 0 30 0ZM41.5714 45L30 33.4286L18.4286 45L15 41.5714L26.5714 30L15 18.4286L18.4286 15L30 26.5714L41.5714 15L45 18.4286L33.4286 30L45 41.5714L41.5714 45Z" fill="#002882"/>
+                </g>
+                <defs>
+                  <radialGradient id="paint0_radial_6932_11513" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(30 30) rotate(90) scale(30)">
+                    <stop offset="0.80208" stop-color="white"/>
+                    <stop offset="1" stop-color="white" stop-opacity="0"/>
+                  </radialGradient>
+                  <clipPath id="clip0_6932_11513">
+                    <rect width="60" height="60" fill="white"/>
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+          </div>
+          <div class="modal-body d-flex flex-column gap-3 p-0">
+            <label class="d-flex gap-1">
+              <input class="form-radio-input" type="radio" name="relationship" value="brandowner"> Product out of Stock
+            </label>
+            <label class="d-flex gap-1">
+              <input class="form-radio-input" type="radio" name="relationship" value="blue"> Pricing Error
+              </label>
+            <label class="d-flex gap-1">
+              <input class="form-radio-input" type="radio" name="relationship" value="green"> Suspected Fraud
+            </label>
+            <label class="d-flex gap-1">
+              <input class="form-radio-input" type="radio" name="relationship" value="green"> Payment Problems
+            </label>
+            <label class="d-flex gap-1">
+              <input class="form-radio-input" type="radio" name="relationship" value="green"> Other
+            </label>
+          </div>
+          <div class="d-flex flex-column mt-4 mb-4 p-0 ">
+            <h5 class="text-dark p-0 mb-3">Explain Reason<span class="text-warning">*</span></h5>
+            <textarea id="w3review" name="w3review" placeholder="Please input" rows="4" cols="50"></textarea>
 
-
-
-
+          </div>
+          <div class="d-flex gap-2 ">
+            <button class="btn-blue">Submitt</button>
+            <button class="btn-gray" data-bs-dismiss="modal">Cancel</button>
+          </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+      <!-- Second Modal -->
+      <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered position-relative custom-modal-width">
+          <div class="modal-content p-4">
+            <div class="row">
+              <div class="col-6">
+                <span class="subHeading-blue">Logistics Status </span>
+                <button id="closeModalBtn" type="button" class="btn-blue closeModalBtn rounded-circle" data-bs-dismiss="modal" aria-label="Close">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+                    <g clip-path="url(#clip0_4287_15184)">
+                      <rect width="60" height="60" fill="url(#paint0_radial_4287_15184)"/>
+                      <path d="M30 0C13.2857 0 0 13.2857 0 30C0 46.7143 13.2857 60 30 60C46.7143 60 60 46.7143 60 30C60 13.2857 46.7143 0 30 0ZM41.5714 45L30 33.4286L18.4286 45L15 41.5714L26.5714 30L15 18.4286L18.4286 15L30 26.5714L41.5714 15L45 18.4286L33.4286 30L45 41.5714L41.5714 45Z" fill="#002882"/>
+                    </g>
+                    <defs>
+                      <radialGradient id="paint0_radial_4287_15184" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(30 30) rotate(90) scale(30)">
+                        <stop offset="0.80208" stop-color="white"/>
+                        <stop offset="1" stop-color="white" stop-opacity="0"/>
+                      </radialGradient>
+                      <clipPath id="clip0_4287_15184">
+                        <rect width="60" height="60" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </button>
+                <div class="d-flex gap-2 mt-40 mb-2">
+                  <span class="text-dark message-text">Order ID:</span>
+                  <span class="orderidColor">456897432131685123</span>
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M19 2C19.5304 2 20.0391 2.21071 20.4142 2.58579C20.7893 2.96086 21 3.46957 21 4V16C21 16.5304 20.7893 17.0391 20.4142 17.4142C20.0391 17.7893 19.5304 18 19 18H17V20C17 20.5304 16.7893 21.0391 16.4142 21.4142C16.0391 21.7893 15.5304 22 15 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H7V4C7 3.46957 7.21071 2.96086 7.58579 2.58579C7.96086 2.21071 8.46957 2 9 2H19ZM10 15H8C7.74512 15.0003 7.49997 15.0979 7.31463 15.2728C7.1293 15.4478 7.01777 15.687 7.00283 15.9414C6.98789 16.1958 7.07067 16.4464 7.23426 16.6418C7.39786 16.8373 7.6299 16.9629 7.883 16.993L8 17H10C10.2549 16.9997 10.5 16.9021 10.6854 16.7272C10.8707 16.5522 10.9822 16.313 10.9972 16.0586C11.0121 15.8042 10.9293 15.5536 10.7657 15.3582C10.6021 15.1627 10.3701 15.0371 10.117 15.007L10 15ZM19 4H9V6H15C15.5304 6 16.0391 6.21071 16.4142 6.58579C16.7893 6.96086 17 7.46957 17 8V16H19V4ZM12 11H8C7.73478 11 7.48043 11.1054 7.29289 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.29289 12.7071C7.48043 12.8946 7.73478 13 8 13H12C12.2652 13 12.5196 12.8946 12.7071 12.7071C12.8946 12.5196 13 12.2652 13 12C13 11.7348 12.8946 11.4804 12.7071 11.2929C12.5196 11.1054 12.2652 11 12 11Z" fill="#33539B"/>
+                  </svg></span>
+                </div>
+                <div class="d-flex gap-4 align-items-center p-4 rounded orderReturncol ">
+                  <div class="d-flex justify-content-center">
+                    <img src="../Images/orderReturnimg.png" alt="">
+                  </div>
+                  <div class="d-flex flex-column gap-2">
+                    <span class="subHeading-4 text-dark">HIFI M16 MINI Wireless Bluetooth Headset</span>
+                    <div class="d-flex gap-2">
+                      <span class="">Seller SKU ID</span>
+                      <span class="text-dark message-text">HIFI M-16</span>
+                      <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="..." fill="#33539B"/>
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <span class="">Item ID</span>
+                      <span class="text-dark">HIFI M-16</span>
+                      <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="..." fill="#33539B"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="rounded d-flex">
+                    <span class="subHeading-5 rs-badge">1 X<span class="fs-14 text-secondary">Rs.</span> 280</span>
+                  </div>
+                </div>
+                <div class="d-flex gap-2 mt-40 mb-2">
+                  <span class="text-dark message-text">Tracking Number:</span>
+                  <span class="orderidColor">PK-DEX0261156</span>
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M19 2C19.5304 2 20.0391 2.21071 20.4142 2.58579C20.7893 2.96086 21 3.46957 21 4V16C21 16.5304 20.7893 17.0391 20.4142 17.4142C20.0391 17.7893 19.5304 18 19 18H17V20C17 20.5304 16.7893 21.0391 16.4142 21.4142C16.0391 21.7893 15.5304 22 15 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H7V4C7 3.46957 7.21071 2.96086 7.58579 2.58579C7.96086 2.21071 8.46957 2 9 2H19ZM10 15H8C7.74512 15.0003 7.49997 15.0979 7.31463 15.2728C7.1293 15.4478 7.01777 15.687 7.00283 15.9414C6.98789 16.1958 7.07067 16.4464 7.23426 16.6418C7.39786 16.8373 7.6299 16.9629 7.883 16.993L8 17H10C10.2549 16.9997 10.5 16.9021 10.6854 16.7272C10.8707 16.5522 10.9822 16.313 10.9972 16.0586C11.0121 15.8042 10.9293 15.5536 10.7657 15.3582C10.6021 15.1627 10.3701 15.0371 10.117 15.007L10 15ZM19 4H9V6H15C15.5304 6 16.0391 6.21071 16.4142 6.58579C16.7893 6.96086 17 7.46957 17 8V16H19V4ZM12 11H8C7.73478 11 7.48043 11.1054 7.29289 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.29289 12.7071C7.48043 12.8946 7.73478 13 8 13H12C12.2652 13 12.5196 12.8946 12.7071 12.7071C12.8946 12.5196 13 12.2652 13 12C13 11.7348 12.8946 11.4804 12.7071 11.2929C12.5196 11.1054 12.2652 11 12 11Z" fill="#33539B"/>
+                  </svg></span>
+                </div>
+                <div class=" row d-flex orderReturncol justify-content-between p-3">
+                <div class="col-5 d-flex flex-column gap-1 justify-content-center align-items-center text-center">
+                  <span class="subHeading-5">First Mile 3PL</span>
+                  <span class="paragraph-2">PK-DEX</span>
+                </div>
+                <div class="col-2 justify-content-center align-items-center text-center">
+                  <img src="../Images/Line 28.svg" alt="">
+                </div>
+                <div class=" col-5 d-flex flex-column gap-1 justify-content-center align-items-center text-center">
+                  <span class="subHeading-5">First Mile 3PL</span>
+                  <span class="paragraph-2">PK-DEX</span>
+                </div>
+                </div>
+                <div class="d-flex gap-2 mt-40 mb-2">
+                  <span class="text-dark message-text">Customer Info</span>
+                </div>
+                <div class="d-flex gap-4 align-items-center p-4 rounded orderReturncol ">
+                  <div class="d-flex gap-2">
+                    <span class="">Customer Name:</span>
+                    <span class="text-dark message-text">Muhammad Arshad</span>
+                  </div>
+              </div>
+              
+            </div>
+            <div class="col-6 mb-2">
+              <span class="subHeading-blue">Shipping Status </span>
+              <div class="d-flex gap-4 justify-content-center align-items-center p-4 my-4 rounded orderReturncol ">
+                <div class="d-flex flex-column gap-2">
+                  <label class="d-flex flex-column align-items-center text-center gap-1">
+                    <input class="form-radio-input" type="radio" name="relationship" value="brandowner"> Pickup
+                  </label>
+                </div>
+                <span class="orderdetaile-Line"></span>
+                <div class="d-flex flex-column gap-2">
+                  <label class="d-flex flex-column align-items-center text-center gap-1">
+                    <input class="form-radio-input" type="radio" name="relationship" value="brandowner"> Shipping
+                  </label>
+                </div>
+                <span class="orderdetaile-Line"></span>
+                <div class="d-flex flex-column gap-2">
+                  <label class="d-flex flex-column align-items-center text-center gap-1">
+                    <input class="form-radio-input" type="radio" name="relationship" value="brandowner"> Delivery
+                  </label>
+                </div>
+                
+            </div>
+            <div class="justify-content-center align-items-center p-4 my-4 rounded orderReturncol">
+             <div class="row d-flex gap-4 m-0">
+              <div class="col-2 d-flex flex-column gap-4 p-0">
+                <div class="d-flex flex-column text-center">
+                  <span class="subHeading-4">Feb 07</span>
+                  <span>14:00</span>
+                  </div>
+                  <div class="d-flex flex-column text-center">
+                    <span class="subHeading-4">Feb 07</span>
+                    <span>14:00</span>
+                    </div>
+                    <div class="d-flex flex-column text-center">
+                      <span class="subHeading-4">Feb 07</span>
+                      <span>14:00</span>
+                      </div>
+                      <div class="d-flex flex-column text-center">
+                        <span class="subHeading-4">Feb 07</span>
+                        <span>14:00</span>
+                        </div>
+              </div>
+             <div class="col-1 p-0">
+              <div class="d-flex flex-column align-items-center ">
+                <input class="form-radio-input" type="radio" name="relationship" value="brandowner">
+                <span class="orderdetaile-Line2"></span>
+              </div>
+              <div class="d-flex flex-column align-items-center text-center">
+                <input class="form-radio-input" type="radio" name="relationship" value="brandowner">
+                <span class="orderdetaile-Line2"></span>
+              </div>
+              <div class="d-flex flex-column align-items-center">
+                <input class="form-radio-input" type="radio" name="relationship" value="brandowner">
+                <span class="orderdetaile-Line2"></span>
+              </div>
+              <div class="d-flex flex-column align-items-center">
+                <input class="form-radio-input" type="radio" name="relationship" value="brandowner">
+              </div>
+             </div>
+             <div class="col-7 p-0">
+              <div class="d-flex flex-column ">
+                <span class="subHeading-3">Delivered</span>
+                <span>Your parcel has been delivered delivery with PK-DEX [Multan - Gulgasht]</span>
+              </div>
+              <div class="d-flex flex-column">
+                <span class="subHeading-3">Out of Delivery</span>
+                <span>Your parcel is currently out for delivery with PK-DEX [Multan - Gulgasht]</span>
+              </div>
+              <div class="d-flex flex-column">
+                <span class="subHeading-3">Arrived at Main Logistics Facility</span>
+                <span>Your parcel has arrived to the main logistics facility [Multan - Gulgasht]</span>
+              </div>
+              <div class="d-flex flex-column">
+                <span class="subHeading-3">Packed by Seller / warehous</span>
+                <span>Your parcel has been packed and ready to be handed over to our shipping provider.</span>
+              </div>
+             </div>
+             
+               </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
 
 
 
@@ -804,7 +1041,6 @@
         </script>
         <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
         <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    
         <script src="../assets/js/main.js"></script>
 </body>
 </html>

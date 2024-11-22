@@ -1506,7 +1506,7 @@ gap: 10px;
   transition:  0.5s ease, opacity 0.5s ease;
 }
 
-.show {
+.Show {
   max-height: 200px; /* Adjust max-height to fit the content */
   opacity: 1;
 }
@@ -1533,6 +1533,7 @@ gap: 10px;
 }
 .orderReturncol{
   background-color: #FAFAFA;
+  border: 1px solid #F2F2F2;
 }
 .orderdetail-input-text{
   display: flex;
@@ -1567,4 +1568,124 @@ align-items: center;
 gap: 20px;
 align-self: stretch;
 background: #F2F2F2;
+}
+
+  /* Remove the border-bottom from the modal header */
+  .modal-header {
+    border-bottom: none;
+  }
+
+  /* Remove the border-bottom from the modal footer */
+  .modal-footer {
+    border-top: none; /* Typically, modal footers have top borders; adjust as needed */
+  }
+
+  /* Optional: Ensure no borders exist in other areas */
+  .modal-content {
+    border: none; /* Removes borders around the entire modal content */
+  }
+  textarea {
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Optional: Adds rounded corners */
+    padding: 8px; /* Optional: Adds padding inside the textarea */
+    font-size: 14px; /* Optional: Adjust font size */
+  }
+
+  /* Focus styling to maintain the gray border */
+  textarea:focus {
+    border: 1px solid #ccc; /* Keep border gray on focus */
+    outline: none; /* Removes default outline */
+  }
+  .modal-dialog {
+    max-width: 900px;
+}
+.custom-modal-width{
+  max-width: 1350px;
+}
+.closeModalBtn{
+  height: 60px;
+  width: 60px;
+}
+.closeModalBtn{
+  position: absolute;
+  right:-3%;
+  top: -3%;
+}
+.payment-pending-orange{
+  background-color: var(--Orange-100, #FFEAD5); /* Fallback color */
+  color: #FB6514;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: block;
+  font-size: 16px;
+  width: 180px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.payment-approved-green {
+  background-color: var(--bs-success-100, #FEF0C7); /* Fallback color */
+  color: var(--bs-success); /* Text color from Bootstrap */
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: block;
+  font-size: 16px;
+  width: 180px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Order-detail-line{
+  position: relative;
+  left: 87px;
+}
+.send-invoice-btn{
+  position: absolute;
+  right: 27%;
+}
+.orderidColor{
+  color: #002882;
+}
+.rs-badge{
+  background-color: #F2F2F2;
+  border-radius: 5px;
+padding: 5px 10px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+}
+.orderdetaile-Line{
+  content: "";
+  width: 100px;
+  height: 1px;
+  background: #999;
+}
+.orderdetaile-Line2{
+  content: "";
+  width: 2px;
+  height: 68px;
+  background: #999;
+}
+.modal-heading{
+  color: var(--Natural-Color-00, #FCFCFC);
+  font-family: Anton;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.modal-paragraph{
+  color: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
+
+/* Text xl/Regular */
+font-family: Sarabun;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 30px; /* 150% */
+}
+@media(max-width:1400px){
+  .custom-modal-width{
+    max-width: 1250px;
+  }
 }
