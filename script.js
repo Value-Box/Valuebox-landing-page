@@ -655,13 +655,13 @@ upTradDoc.addEventListener("change", function () {
 // });
 
 function disablePastDates() {
-  var today = new Date();
-  var dd = String(today.getDate()).padStart(2, "0");
-  var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
-  var yyyy = today.getFullYear();
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, "0");
+    var mm = String(today.getMonth() + 1).padStart(2, "0"); // January is 0!
+    var yyyy = today.getFullYear();
 
-  today = yyyy + "-" + mm + "-" + dd;
-  document.getElementById("cnicExpiryDate").setAttribute("min", today);
+    today = yyyy + "-" + mm + "-" + dd;
+    document.getElementById("cnicExpiryDate").setAttribute("min", today);
 }
 
 document
@@ -1395,12 +1395,9 @@ document
           "block";
         personIncharge.style.display = "none";
         bussInfoFields.style.display = "none";
-        cNameLabel.innerHTML =
-          'Store Display Name <span class="starik">*</span>';
-        cContactNum.innerHTML =
-          'Contact Mobile Number <span class="starik">*</span>';
-        chargeEmail.innerHTML =
-          'Contact Email Address <span class="starik">*</span>';
+        // cNameLabel.innerHTML ='Store Display Name <span class="starik">*</span>';
+        // cContactNum.innerHTML ='Contact Mobile Number <span class="starik">*</span>';
+        // chargeEmail.innerHTML ='Contact Email Address <span class="starik">*</span>';
         cFormNames.innerText = "(Individual Account)";
         console.log("none");
         personInchargeInput.classList.remove("required");
@@ -1427,12 +1424,9 @@ document
           "block";
         personIncharge.style.display = "flex";
         bussInfoFields.style.display = "block";
-        cNameLabel.innerHTML =
-          'Legal Business Name <span class="starik">*</span>';
-        cContactNum.innerHTML =
-          'Person in Contact Phone Number <span class="starik">*</span>';
-        chargeEmail.innerHTML =
-          'Person in Charge Email <span class="starik">*</span>';
+        // cNameLabel.innerHTML ='Legal Business Name <span class="starik">*</span>';
+        // cContactNum.innerHTML ='Person in Contact Phone Number <span class="starik">*</span>';
+        // chargeEmail.innerHTML ='Person in Charge Email <span class="starik">*</span>';
         cFormNames.innerText = "(Business Account)";
         console.log("block");
         personInchargeInput.classList.add("required");
