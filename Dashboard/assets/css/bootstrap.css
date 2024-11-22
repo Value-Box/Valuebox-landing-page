@@ -9367,6 +9367,12 @@ button:focus{
   font-weight: 600;
   color: var(--Darg-Color);
 }
+.subHeading-blue{
+  font-size: clamp(20px, 4vw, 24px);
+  line-height: clamp(24px, 5vw, 32px);
+  font-weight: 600;
+  color: var(--Brand-Color);
+}
 .subHeading-3{
   font-size: clamp(18px, 4vw, 20px);
   line-height: clamp(20px, 5vw, 30px);
@@ -9428,7 +9434,7 @@ button:focus{
   gap: 10px;
   border-radius: 5px;
   height: fit-content;
-  border: 1px solid var(--Brand-Color)
+  border: 1px solid var(--Brand-Color);
 }
 
 
@@ -9466,6 +9472,14 @@ button:focus{
   border: 1px solid var(--Danger-Color);
 }
 
+.bulk-btn{
+  border-radius: 5px;
+  border: 1px solid #002882;
+  background-color: #e6eaf3;
+  color: #002882;
+  padding: 10px 20px;
+  height: max-content;
+}
 .btn-outline-blue:hover,.btn-outline-blue:hover{
   color: var(--Brand-white-Color);
   background-color: var(--Brand-Color);
@@ -9579,7 +9593,8 @@ height: 20px;
 .TableWrapper {
   border-radius: 8px;
   overflow: hidden;
- 
+ overflow-x: scroll;
+ border: 1px solid #ccc;
 }
 .TableWrapper table {
   border-collapse: collapse;
@@ -9692,3 +9707,14 @@ text-align: center;
   -moz-appearance: none;
 }
   
+.w-max-content{
+  width: max-content;
+}
+.navigation .active1{
+  color: #1A1A1A;
+/* Text md/Medium */
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px
+}

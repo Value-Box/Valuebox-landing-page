@@ -401,16 +401,20 @@
                       </section>
                       
                       <!-- Business Information (Individual Account) Form -->
-                      <section class="BusinessInInfoIndForm p-sm-4 pt-0"  style="display: none;">
-                        <h1>Business Information <span class="bussinessInfoText">(Individual Account)</span></h1>
+                      <section class="BusinessInInfoIndForm p-sm-4 pt-0"style="display: none" >
+                        <h1>Business Information <span class="bussinessInfoText" id="cFormNames">(Individual Account)</span></h1>
                         <div class="row formRow p-2 p-sm-3 m-0 rounded-4">
 
                             <div class="mb-3 formFields">
-                                <label class="form-label">Store Display Name<span class="starik">*</span></label>
+                                <label class="form-label" id="cNameLabel">Store Display Name<span class="starik">*</span></label>
                                 <input type="text" class="form-control required" placeholder="Enter your name" id="storeDisplayName" name="storeDisplayName" aria-describedby="emailHelp" required>
                             </div>
+                            <div class="mb-3 formFields " style="display: none;" id="personIncharge">
+                              <label  class="form-label" >Person in Charge<span class="starik">*</span></label>
+                              <input type="text" class="form-control required" placeholder="Enter Name" id="personCharge" name="personCharge" aria-describedby="emailHelp" required>
+                            </div>
                             <div class="mb-3 formFields">
-                              <label class="form-label">Contact Mobile Number <span class="starik">*</span></label>
+                              <label class="form-label" id="cContactNum">Contact Mobile Number <span class="starik">*</span></label>
                               
                                      <div class="w-100">
                                       <input type="tel" id="contactMobileNumber" name="contactMobileNumber" class="form-control required" 
@@ -420,12 +424,85 @@
                           </div>
                           
                               <div class="mb-3 formFields">
-                                <label class="form-label">Contact Email Address<span class="starik">*</span></label>
+                                <label class="form-label" id="chargeEmail">Contact Email Address<span class="starik">*</span></label>
                                 <div class="w-100">
                                   <input type="email" class="form-control required" placeholder="e.g. Example@compony.com" id="contactEmailAddress" name="contactEmailAddress" required>
 
                                   <p id='indEmailErrTxt' class="m-0"></p>
                                 </div>
+                              </div>
+
+                              <div id="bussInfoFields" style="display: none;">
+                                <div class="mb-3 formFields">
+                                  <label class="form-label">Business Registration Number<span class="starik">*</span></label>
+                                  <input type="text" class="form-control required" placeholder="Enter Registration Number" id="businessRegistrationNumber" name="businessRegistrationNumber" aria-describedby="emailHelp" required>
+                               </div>
+                               <div class="mb-3 formFields">
+                                <label class="form-label">Upload Registration Proof<span class="starik">*</span></label>
+                               
+                                <div class="w-100">
+                                  <label for="upRegProof" class="m-0 upload-wrapper">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                        <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="#002882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="#002882" stroke-width="1.5" stroke-linecap="round"/>
+                                        <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
+                                      </svg>
+                                    <span>Upload Image</span>
+                                </label>
+                                  <p id='upRegProofText' class="m-0">Only PNG, JPG and WEBp with File size less then 500kb are accepted.</p>
+                                </div>
+                                <input id="upRegProof" class="upRegProof required" type="file" name="upRegProof" accept=".jpg, .WEBp, .png" required/>                            
+                                
+                              </div>
+  
+                              <div class="mb-3 formFields">
+                                  <label class="form-label">Business NTN Number<span class="starik">*</span></label>
+                                  <input type="text" class="form-control required" placeholder="Enter NTN Number" id="businessNtnNumber" name="businessNtnNumber" aria-describedby="emailHelp" required>
+                              </div>
+  
+                              <div class="mb-3 formFields">
+                                <label class="form-label">Upload NTN Document<span class="starik">*</span></label>
+                               
+                                <div class="w-100">
+                                  <label for="upNtnNum" class="m-0 upload-wrapper">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                        <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="#002882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="#002882" stroke-width="1.5" stroke-linecap="round"/>
+                                        <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
+                                      </svg>
+                                    <span>Upload Image</span>
+                                </label>
+                                  <p id='upNtnNumText' class="m-0">Only PNG, JPG and WEBp with File size less then 500kb are accepted.</p>
+                                </div>
+                                <input id="upNtnNum" class="upRegProof required" type="file" name="upNtnNum" accept=".jpg, .WEBp, .png" required/>                            
+                                
+                              </div>
+  
+                              <div class="mb-3 formFields">
+                                  <label class="form-label">Trademark <span class="bussinessInfoText">(optional)</span></label>
+                                  <input type="text" class="form-control required" placeholder="Enter Trademark" id="trademark" name="trademark" aria-describedby="emailHelp" required>
+                              </div>
+  
+                              <div class="mb-3 formFields">
+                                <label class="form-label">Upload Trademark Document<span class="starik">*</span></label>
+                               
+                                <div class="w-100">
+                                  <label for="upTradDoc" class="m-0 upload-wrapper">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                        <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="#002882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="#002882" stroke-width="1.5" stroke-linecap="round"/>
+                                        <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
+                                      </svg>
+                                    <span>Upload Image</span>
+                                </label>
+                                  <p id='upTradDocText' class="m-0">Only PNG, JPG and WEBp with File size less then 500kb are accepted.</p>
+                                </div>
+                                <input id="upTradDoc" class="upRegProof required" type="file" name="upTradDoc" accept=".jpg, .WEBp, .png" required/>                            
+                                
+                              </div>
                               </div>
                              
                         </div>
@@ -598,7 +675,7 @@
                           </button>
                     </section>
                       <!-- Business Information (Business Account) Form -->
-                      <section class="BusinessInfoBussAccForm p-sm-4 pt-0" style="display: none;" >
+                      <section class="BusinessInfoBussAccForm p-sm-4 pt-0"  style="display: none;">
                         <h1>Business Information <span class="bussinessInfoText">(Business Account)</span></h1>
                         <div class="row formRow p-2 p-sm-3 m-0 rounded-4">
 
@@ -607,10 +684,10 @@
                                 <input type="text" class="form-control required" placeholder="Enter Business Name" id="legalBusinessName" name="legalBusinessName" aria-describedby="emailHelp" required>
                             </div>
 
-                            <div class="mb-3 formFields">
+                            <!-- <div class="mb-3 formFields">
                                 <label  class="form-label">Person in Charge<span class="starik">*</span></label>
                                 <input type="text" class="form-control required" placeholder="Enter Name" id="personCharge" name="personCharge" aria-describedby="emailHelp" required>
-                            </div>
+                            </div> -->
 
                             <div class="mb-3 formFields">
                               <label class="form-label">Person in Contact Phone Number <span class="starik">*</span></label>
@@ -633,7 +710,7 @@
                                 </div>
                               </div>
                              
-                              <div class="mb-3 formFields">
+                            <div class="mb-3 formFields">
                                 <label class="form-label">Business Registration Number<span class="starik">*</span></label>
                                 <input type="text" class="form-control required" placeholder="Enter Registration Number" id="businessRegistrationNumber" name="businessRegistrationNumber" aria-describedby="emailHelp" required>
                             </div>
@@ -737,13 +814,9 @@
                                   <option value="Lahore">Lahore</option>
                                 </select>
                               </div>
-                            <!-- <div class="mb-3 formFields">
-                                <label class="form-label">Area<span class="starik">*</span></label>
-                                <input type="text" placeholder="Enter Area" class="form-control required" id="bussinessArea" name="bussinessArea" aria-describedby="emailHelp" required>
-                            </div> -->
+                            
                           <div class="mb-3 formFields">
                               <label class="form-label">Area<span class="starik">*</span></label>
-                              <!-- <input type="text" class="form-control required" id="shopCity" name="shopCity" placeholder="Enter City"> -->
                             <select class="form-select required" id="bussinessArea" name="bussinessArea">
                               <option value="">Select Area</option>
                               <option value="Cant">Cant</option>
@@ -778,20 +851,15 @@
                             </div>
                             <div class="mb-3 formFields">
                                 <label class="form-label">City<span class="starik">*</span></label>
-                                <!-- <input type="text" placeholder="Enter City" class="form-control required" id="warehouseCity" name="warehouseCity" aria-describedby="emailHelp" required> -->
                                 <select class="form-select required" id="warehouseCity" name="warehouseCity">
                                   <option value="">Select City</option>
                                   <option value="Multan">Multan</option>
                                   <option value="Lahore">Lahore</option>
                                 </select>
                               </div>
-                            <!-- <div class="mb-3 formFields">
-                                <label class="form-label">Area<span class="starik">*</span></label>
-                                <input type="text" placeholder="Enter Area" class="form-control required" id="warehouseArea" name="warehouseArea" aria-describedby="emailHelp" required>
-                            </div> -->
+                            
                           <div class="mb-3 formFields">
                               <label class="form-label">Area<span class="starik">*</span></label>
-                              <!-- <input type="text" class="form-control required" id="shopCity" name="shopCity" placeholder="Enter City"> -->
                             <select class="form-select required" id="warehouseArea" name="warehouseArea">
                               <option value="">Select Area</option>
                               <option value="Cant">Cant</option>
@@ -828,20 +896,15 @@
                               </div>
                               <div class="mb-3 formFields">
                                 <label  class="form-label">City<span class="starik">*</span></label>
-                                <!-- <input type="text" placeholder="Enter City" class="form-control required" id="returnCity" name="returnCity" aria-describedby="emailHelp" required> -->
                                 <select class="form-select required" id="returnCity" name="returnCity">
                                   <option value="">Select City</option>
                                   <option value="Multan">Multan</option>
                                   <option value="Lahore">Lahore</option>
                                 </select>
                               </div>
-                              <!-- <div class="mb-3 formFields">
-                                <label  class="form-label">Area<span class="starik">*</span></label>
-                                <input type="text" placeholder="Enter Area" class="form-control required" id="returnArea" name="returnArea" aria-describedby="emailHelp" required>
-                              </div> -->
+                             
                             <div class="mb-3 formFields">
                                 <label class="form-label">Area<span class="starik">*</span></label>
-                                <!-- <input type="text" class="form-control required" id="shopCity" name="shopCity" placeholder="Enter City"> -->
                               <select class="form-select required" id="returnArea" name="returnArea">
                                 <option value="">Select Area</option>
                                 <option value="Cant">Cant</option>
@@ -858,10 +921,7 @@
                               </div>
                             </div>
                         </div>
-                            <!-- <a href="#" class="bankDetailLink" id="busbankDetailLink">Enter Bank Details <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="#002882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg></a>  -->
+                           
                         <button type="button" disabled id="bussAccNxtBtn" class="bankDetailLink">Next <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                             <path d="M4.5 12H20.5M20.5 12L14.5 6M20.5 12L14.5 18" stroke="#E6EAF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                           </svg></button>
