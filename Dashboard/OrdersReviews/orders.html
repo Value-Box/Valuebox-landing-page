@@ -416,7 +416,7 @@
       <a href="../orders.html">>Orders & Reviews</a>
       <a  class="active1" href="orders.html">>Orders</a>
     </div>    
-   <div class="container-fluid p-0 ">
+   <div class="container-fluid p-0">
     <div>
         <h3 class="heading-one pt-2">Order Management</h3>
     </div>
@@ -435,15 +435,21 @@
         <table>
             <thead>
                 <tr class="text-dark">
-                        <th class="d-flex gap-3">
-                        <input class="form-check-input" type="checkbox" id="product" onclick="toggleCheckboxes(this)">
-                        <label for="select-all">Orders</label>
+                        <th >
+                          <div class="d-flex gap-3">
+                            <input class="form-check-input" type="checkbox" id="product" onclick="toggleCheckboxes(this)">
+                            <label for="select-all">Orders</label>
+                          </div>
+                      
                       </th>
                     <th>Date</th>
                     <th>Customer</th>
                     <th>Items</th>
                     <th>Total</th>
                     <th>Delivery Status</th>
+                    <th>Payment Status</th>
+                    <th>Delivery Method</th>
+                    <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -451,23 +457,40 @@
                         <td>
                             <div class="d-flex gap-3 ">
                              <input class="form-check-input" type="checkbox" id="product1" >  
-                             <span class="">#568956</span>
+                           <a class="paragraph-2" href="orderDetails.html"><span class="">#568956</span></a>  
                             </div>
                            </td>
                            <td>Today at 1:06 am</td>
                            <td>Nighza Younas</td>
                            <td>1 Item</td>
                            <td>RS 1,299.00</td>
-                           <td > 
+                           <td>                           
                            <div class="bg-success-light">Delivered
                            </div>    
-                          </td>
+                           </td>
+                           <td>                           
+                            <div>
+                              <button class="payment-pending-orange d-flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M13.1263 12.0837C12.9605 12.0837 12.8016 12.1495 12.6844 12.2667C12.5672 12.3839 12.5013 12.5429 12.5013 12.7087C12.5013 12.8744 12.5672 13.0334 12.6844 13.1506C12.8016 13.2678 12.9605 13.3337 13.1263 13.3337H15.2096C15.3754 13.3337 15.5344 13.2678 15.6516 13.1506C15.7688 13.0334 15.8346 12.8744 15.8346 12.7087C15.8346 12.5429 15.7688 12.3839 15.6516 12.2667C15.5344 12.1495 15.3754 12.0837 15.2096 12.0837H13.1263ZM1.66797 6.87533C1.66797 6.15703 1.95331 5.46816 2.46122 4.96024C2.96913 4.45233 3.65801 4.16699 4.3763 4.16699H15.6263C15.982 4.16699 16.3341 4.23705 16.6627 4.37315C16.9913 4.50926 17.2899 4.70875 17.5414 4.96024C17.7929 5.21174 17.9924 5.5103 18.1285 5.83889C18.2646 6.16748 18.3346 6.51966 18.3346 6.87533V13.1253C18.3346 13.481 18.2646 13.8332 18.1285 14.1618C17.9924 14.4904 17.7929 14.7889 17.5414 15.0404C17.2899 15.2919 16.9913 15.4914 16.6627 15.6275C16.3341 15.7636 15.982 15.8337 15.6263 15.8337H4.3763C3.65801 15.8337 2.96913 15.5483 2.46122 15.0404C1.95331 14.5325 1.66797 13.8436 1.66797 13.1253V6.87533ZM17.0846 7.91699V6.87533C17.0846 6.48855 16.931 6.11762 16.6575 5.84413C16.384 5.57064 16.0131 5.41699 15.6263 5.41699H4.3763C3.98953 5.41699 3.6186 5.57064 3.3451 5.84413C3.07161 6.11762 2.91797 6.48855 2.91797 6.87533V7.91699H17.0846ZM2.91797 9.16699V13.1253C2.91797 13.9303 3.5713 14.5837 4.3763 14.5837H15.6263C16.0131 14.5837 16.384 14.43 16.6575 14.1565C16.931 13.883 17.0846 13.5121 17.0846 13.1253V9.16699H2.91797Z" fill="#F79009"/>
+                              </svg> Payment Pending</button>
+                            </div>
+                            </td>
+                           <td>Standard</td>
+                           <td>
+                            <div class="p-2 w-max-content">
+                            <div class="d-flex gap-1 py-2 p-0">
+                              <div class="d-flex gap-1 py-2 p-0">
+                                <button class="btn-outline-Yellow" data-bs-toggle="modal" data-bs-target="#exampleModalToggle2">Logistic Status</button>
+                              </div>
+                         </div>
+                      </div> </td>
+                            
                        </tr>
                        <tr class="paragraph-2 p-0">
                         <td>
                             <div class="d-flex gap-3">
                              <input class=" form-check-input" type="checkbox" id="product2">  
-                             <span class="">#568956</span>
+                             <a class="paragraph-2" href="orderDetails.html"><span class="">#568956</span></a> 
                             </div>
                            </td>
                            <td>Today at 1:06 am</td>
@@ -478,12 +501,28 @@
                            <div class="bg-warning-light">Pending
                            </div>    
                           </td>
+                          <td>                           
+                            <div>
+                              <button class="payment-approved-green d-flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" viewBox="0 0 18 12" fill="none">
+                                <path d="M12.1302 8.08366C11.9644 8.08366 11.8055 8.14951 11.6883 8.26672C11.5711 8.38393 11.5052 8.5429 11.5052 8.70866C11.5052 8.87442 11.5711 9.03339 11.6883 9.1506C11.8055 9.26781 11.9644 9.33366 12.1302 9.33366H14.2135C14.3793 9.33366 14.5383 9.26781 14.6555 9.1506C14.7727 9.03339 14.8385 8.87442 14.8385 8.70866C14.8385 8.5429 14.7727 8.38393 14.6555 8.26672C14.5383 8.14951 14.3793 8.08366 14.2135 8.08366H12.1302ZM0.671875 2.87533C0.671875 2.15703 0.957216 1.46816 1.46513 0.960245C1.97304 0.452334 2.66191 0.166992 3.38021 0.166992H14.6302C14.9859 0.166992 15.3381 0.237045 15.6666 0.373152C15.9952 0.509258 16.2938 0.708753 16.5453 0.960245C16.7968 1.21174 16.9963 1.5103 17.1324 1.83889C17.2685 2.16748 17.3385 2.51966 17.3385 2.87533V9.12533C17.3385 9.48099 17.2685 9.83317 17.1324 10.1618C16.9963 10.4904 16.7968 10.7889 16.5453 11.0404C16.2938 11.2919 15.9952 11.4914 15.6666 11.6275C15.3381 11.7636 14.9859 11.8337 14.6302 11.8337H3.38021C2.66191 11.8337 1.97304 11.5483 1.46513 11.0404C0.957216 10.5325 0.671875 9.84362 0.671875 9.12533V2.87533ZM16.0885 3.91699V2.87533C16.0885 2.48855 15.9349 2.11762 15.6614 1.84413C15.3879 1.57064 15.017 1.41699 14.6302 1.41699H3.38021C2.99343 1.41699 2.6225 1.57064 2.34901 1.84413C2.07552 2.11762 1.92188 2.48855 1.92188 2.87533V3.91699H16.0885ZM1.92188 5.16699V9.12533C1.92188 9.93033 2.57521 10.5837 3.38021 10.5837H14.6302C15.017 10.5837 15.3879 10.43 15.6614 10.1565C15.9349 9.88303 16.0885 9.5121 16.0885 9.12533V5.16699H1.92188Z" fill="#12B76A"/>
+                              </svg> Payment Approved</button>
+                            </div>
+                            </td>
+                           <td>Express</td>
+                           <td>
+                            <div class="p-2 w-max-content">
+                            <div class="d-flex gap-1 py-2 p-0">
+                              <div class="d-flex gap-1 py-2 p-0">
+                                <button class="btn-outline-Yellow" data-bs-toggle="modal" data-bs-target="#exampleModalToggle2">Logistic Status</button>
+                              </div>
+                         </div>
+                      </div>
                        </tr>
                        <tr class="paragraph-2 p-0">
                         <td>
                             <div class="d-flex gap-3 ">
                              <input class="form-check-input" type="checkbox" id="product3" >  
-                             <span class="">#568956</span>
+                             <a class="paragraph-2" href="orderDetails.html"><span class="">#568956</span></a> 
                             </div>
                            </td>
                            <td>Today at 1:06 am</td>
@@ -494,12 +533,26 @@
                            <div class="bg-purple-light">Failed
                            </div>    
                           </td>
+                          <td>                           
+                            <div>
+                              <button class="payment-pending-orange d-flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M13.1263 12.0837C12.9605 12.0837 12.8016 12.1495 12.6844 12.2667C12.5672 12.3839 12.5013 12.5429 12.5013 12.7087C12.5013 12.8744 12.5672 13.0334 12.6844 13.1506C12.8016 13.2678 12.9605 13.3337 13.1263 13.3337H15.2096C15.3754 13.3337 15.5344 13.2678 15.6516 13.1506C15.7688 13.0334 15.8346 12.8744 15.8346 12.7087C15.8346 12.5429 15.7688 12.3839 15.6516 12.2667C15.5344 12.1495 15.3754 12.0837 15.2096 12.0837H13.1263ZM1.66797 6.87533C1.66797 6.15703 1.95331 5.46816 2.46122 4.96024C2.96913 4.45233 3.65801 4.16699 4.3763 4.16699H15.6263C15.982 4.16699 16.3341 4.23705 16.6627 4.37315C16.9913 4.50926 17.2899 4.70875 17.5414 4.96024C17.7929 5.21174 17.9924 5.5103 18.1285 5.83889C18.2646 6.16748 18.3346 6.51966 18.3346 6.87533V13.1253C18.3346 13.481 18.2646 13.8332 18.1285 14.1618C17.9924 14.4904 17.7929 14.7889 17.5414 15.0404C17.2899 15.2919 16.9913 15.4914 16.6627 15.6275C16.3341 15.7636 15.982 15.8337 15.6263 15.8337H4.3763C3.65801 15.8337 2.96913 15.5483 2.46122 15.0404C1.95331 14.5325 1.66797 13.8436 1.66797 13.1253V6.87533ZM17.0846 7.91699V6.87533C17.0846 6.48855 16.931 6.11762 16.6575 5.84413C16.384 5.57064 16.0131 5.41699 15.6263 5.41699H4.3763C3.98953 5.41699 3.6186 5.57064 3.3451 5.84413C3.07161 6.11762 2.91797 6.48855 2.91797 6.87533V7.91699H17.0846ZM2.91797 9.16699V13.1253C2.91797 13.9303 3.5713 14.5837 4.3763 14.5837H15.6263C16.0131 14.5837 16.384 14.43 16.6575 14.1565C16.931 13.883 17.0846 13.5121 17.0846 13.1253V9.16699H2.91797Z" fill="#F79009"/>
+                              </svg> Payment Pending</button>
+                            </div>
+                            </td>
+                           <td>Standard</td>
+                           <td>
+                            <div class="p-2 w-max-content">
+                            <div class="d-flex gap-1 py-2 p-0">
+                              <button class="btn-outline-Yellow" data-bs-toggle="modal" data-bs-target="#exampleModalToggle2">Logistic Status</button>
+                         </div>
+                      </div>
                        </tr>
                        <tr class="paragraph-2 p-0">
                         <td>
                             <div class="d-flex gap-3 ">
                              <input class="form-check-input" type="checkbox" id="product4" >  
-                             <span class="">#568956</span>
+                             <a class="paragraph-2" href="orderDetails.html"><span class="">#568956</span></a> 
                             </div>
                            </td>
                            <td>Today at 1:06 am</td>
@@ -510,12 +563,26 @@
                            <div class="bg-danger-light">Canceled
                            </div>    
                           </td>
+                          <td>                           
+                            <div>
+                              <button class="payment-approved-green d-flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" viewBox="0 0 18 12" fill="none">
+                                <path d="M12.1302 8.08366C11.9644 8.08366 11.8055 8.14951 11.6883 8.26672C11.5711 8.38393 11.5052 8.5429 11.5052 8.70866C11.5052 8.87442 11.5711 9.03339 11.6883 9.1506C11.8055 9.26781 11.9644 9.33366 12.1302 9.33366H14.2135C14.3793 9.33366 14.5383 9.26781 14.6555 9.1506C14.7727 9.03339 14.8385 8.87442 14.8385 8.70866C14.8385 8.5429 14.7727 8.38393 14.6555 8.26672C14.5383 8.14951 14.3793 8.08366 14.2135 8.08366H12.1302ZM0.671875 2.87533C0.671875 2.15703 0.957216 1.46816 1.46513 0.960245C1.97304 0.452334 2.66191 0.166992 3.38021 0.166992H14.6302C14.9859 0.166992 15.3381 0.237045 15.6666 0.373152C15.9952 0.509258 16.2938 0.708753 16.5453 0.960245C16.7968 1.21174 16.9963 1.5103 17.1324 1.83889C17.2685 2.16748 17.3385 2.51966 17.3385 2.87533V9.12533C17.3385 9.48099 17.2685 9.83317 17.1324 10.1618C16.9963 10.4904 16.7968 10.7889 16.5453 11.0404C16.2938 11.2919 15.9952 11.4914 15.6666 11.6275C15.3381 11.7636 14.9859 11.8337 14.6302 11.8337H3.38021C2.66191 11.8337 1.97304 11.5483 1.46513 11.0404C0.957216 10.5325 0.671875 9.84362 0.671875 9.12533V2.87533ZM16.0885 3.91699V2.87533C16.0885 2.48855 15.9349 2.11762 15.6614 1.84413C15.3879 1.57064 15.017 1.41699 14.6302 1.41699H3.38021C2.99343 1.41699 2.6225 1.57064 2.34901 1.84413C2.07552 2.11762 1.92188 2.48855 1.92188 2.87533V3.91699H16.0885ZM1.92188 5.16699V9.12533C1.92188 9.93033 2.57521 10.5837 3.38021 10.5837H14.6302C15.017 10.5837 15.3879 10.43 15.6614 10.1565C15.9349 9.88303 16.0885 9.5121 16.0885 9.12533V5.16699H1.92188Z" fill="#12B76A"/>
+                              </svg> Payment Approved</button>
+                            </div>
+                            </td>
+                           <td>Standard</td>
+                           <td>
+                            <div class="p-2 w-max-content">
+                            <div class="d-flex gap-1 py-2 p-0">
+                              <button class="btn-outline-Yellow" data-bs-toggle="modal" data-bs-target="#exampleModalToggle2">Logistic Status</button>
+                         </div>
+                      </div>
                        </tr>
                        <tr class="paragraph-2 p-0">
                         <td>
                             <div class="d-flex gap-3 ">
                              <input class="form-check-input" type="checkbox" id="product5" >  
-                             <span class="">#568956</span>
+                             <a class="paragraph-2" href="orderDetails.html"><span class="">#568956</span></a> 
                             </div>
                            </td>
                            <td>Today at 1:06 am</td>
@@ -526,12 +593,26 @@
                            <div class="bg-orange-light">Packed
                            </div>    
                           </td>
+                          <td>                           
+                            <div>
+                              <button class="payment-pending-orange d-flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M13.1263 12.0837C12.9605 12.0837 12.8016 12.1495 12.6844 12.2667C12.5672 12.3839 12.5013 12.5429 12.5013 12.7087C12.5013 12.8744 12.5672 13.0334 12.6844 13.1506C12.8016 13.2678 12.9605 13.3337 13.1263 13.3337H15.2096C15.3754 13.3337 15.5344 13.2678 15.6516 13.1506C15.7688 13.0334 15.8346 12.8744 15.8346 12.7087C15.8346 12.5429 15.7688 12.3839 15.6516 12.2667C15.5344 12.1495 15.3754 12.0837 15.2096 12.0837H13.1263ZM1.66797 6.87533C1.66797 6.15703 1.95331 5.46816 2.46122 4.96024C2.96913 4.45233 3.65801 4.16699 4.3763 4.16699H15.6263C15.982 4.16699 16.3341 4.23705 16.6627 4.37315C16.9913 4.50926 17.2899 4.70875 17.5414 4.96024C17.7929 5.21174 17.9924 5.5103 18.1285 5.83889C18.2646 6.16748 18.3346 6.51966 18.3346 6.87533V13.1253C18.3346 13.481 18.2646 13.8332 18.1285 14.1618C17.9924 14.4904 17.7929 14.7889 17.5414 15.0404C17.2899 15.2919 16.9913 15.4914 16.6627 15.6275C16.3341 15.7636 15.982 15.8337 15.6263 15.8337H4.3763C3.65801 15.8337 2.96913 15.5483 2.46122 15.0404C1.95331 14.5325 1.66797 13.8436 1.66797 13.1253V6.87533ZM17.0846 7.91699V6.87533C17.0846 6.48855 16.931 6.11762 16.6575 5.84413C16.384 5.57064 16.0131 5.41699 15.6263 5.41699H4.3763C3.98953 5.41699 3.6186 5.57064 3.3451 5.84413C3.07161 6.11762 2.91797 6.48855 2.91797 6.87533V7.91699H17.0846ZM2.91797 9.16699V13.1253C2.91797 13.9303 3.5713 14.5837 4.3763 14.5837H15.6263C16.0131 14.5837 16.384 14.43 16.6575 14.1565C16.931 13.883 17.0846 13.5121 17.0846 13.1253V9.16699H2.91797Z" fill="#F79009"/>
+                              </svg> Payment Pending</button>
+                            </div>
+                            </td>
+                           <td>Standard</td>
+                           <td>
+                            <div class="p-2 w-max-content">
+                            <div class="d-flex gap-1 py-2 p-0">
+                              <button class="btn-outline-Yellow" data-bs-toggle="modal" data-bs-target="#exampleModalToggle2">Logistic Status</button>
+                         </div>
+                      </div>
                        </tr>
                        <tr class="paragraph-2 p-0">
                         <td>
                             <div class="d-flex gap-3 ">
                              <input class="form-check-input" type="checkbox" id="product6">  
-                             <span class="">#568956</span>
+                             <a class="paragraph-2" href="orderDetails.html"><span class="paragraph-2">#568956</span></a> 
                             </div>
                            </td>
                            <td>Today at 1:06 am</td>
@@ -542,12 +623,25 @@
                            <div class="bg-blue-light">Shipped
                            </div>    
                           </td>
+                          <td>                           
+                            <div>
+                              <button class="payment-approved-green d-flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" viewBox="0 0 18 12" fill="none">
+                                <path d="M12.1302 8.08366C11.9644 8.08366 11.8055 8.14951 11.6883 8.26672C11.5711 8.38393 11.5052 8.5429 11.5052 8.70866C11.5052 8.87442 11.5711 9.03339 11.6883 9.1506C11.8055 9.26781 11.9644 9.33366 12.1302 9.33366H14.2135C14.3793 9.33366 14.5383 9.26781 14.6555 9.1506C14.7727 9.03339 14.8385 8.87442 14.8385 8.70866C14.8385 8.5429 14.7727 8.38393 14.6555 8.26672C14.5383 8.14951 14.3793 8.08366 14.2135 8.08366H12.1302ZM0.671875 2.87533C0.671875 2.15703 0.957216 1.46816 1.46513 0.960245C1.97304 0.452334 2.66191 0.166992 3.38021 0.166992H14.6302C14.9859 0.166992 15.3381 0.237045 15.6666 0.373152C15.9952 0.509258 16.2938 0.708753 16.5453 0.960245C16.7968 1.21174 16.9963 1.5103 17.1324 1.83889C17.2685 2.16748 17.3385 2.51966 17.3385 2.87533V9.12533C17.3385 9.48099 17.2685 9.83317 17.1324 10.1618C16.9963 10.4904 16.7968 10.7889 16.5453 11.0404C16.2938 11.2919 15.9952 11.4914 15.6666 11.6275C15.3381 11.7636 14.9859 11.8337 14.6302 11.8337H3.38021C2.66191 11.8337 1.97304 11.5483 1.46513 11.0404C0.957216 10.5325 0.671875 9.84362 0.671875 9.12533V2.87533ZM16.0885 3.91699V2.87533C16.0885 2.48855 15.9349 2.11762 15.6614 1.84413C15.3879 1.57064 15.017 1.41699 14.6302 1.41699H3.38021C2.99343 1.41699 2.6225 1.57064 2.34901 1.84413C2.07552 2.11762 1.92188 2.48855 1.92188 2.87533V3.91699H16.0885ZM1.92188 5.16699V9.12533C1.92188 9.93033 2.57521 10.5837 3.38021 10.5837H14.6302C15.017 10.5837 15.3879 10.43 15.6614 10.1565C15.9349 9.88303 16.0885 9.5121 16.0885 9.12533V5.16699H1.92188Z" fill="#12B76A"/>
+                              </svg> Payment Approved</button>
+                            </div>
+                            </td>
+                           <td>Express</td>
+                           <td>
+                            <div class="p-2 w-max-content">
+                            <div class="d-flex gap-1 py-2 p-0">
+                              <button class="btn-outline-Yellow" data-bs-toggle="modal" data-bs-target="#exampleModalToggle2">Logistic Status</button>
+                      </div>
                        </tr>
                        <tr class="paragraph-2 p-0">
                         <td>
                             <div class="d-flex gap-3 ">
                              <input class="form-check-input" type="checkbox" id="product7">  
-                             <span class="">#568956</span>
+                             <a class="paragraph-2" href="orderDetails.html"><span class="">#568956</span></a> 
                             </div>
                            </td>
                            <td>Today at 1:06 am</td>
@@ -558,6 +652,20 @@
                            <div class="bg-pink-light">Picked
                            </div>    
                           </td>
+                          <td>                           
+                            <div>
+                              <button class="payment-pending-orange d-flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M13.1263 12.0837C12.9605 12.0837 12.8016 12.1495 12.6844 12.2667C12.5672 12.3839 12.5013 12.5429 12.5013 12.7087C12.5013 12.8744 12.5672 13.0334 12.6844 13.1506C12.8016 13.2678 12.9605 13.3337 13.1263 13.3337H15.2096C15.3754 13.3337 15.5344 13.2678 15.6516 13.1506C15.7688 13.0334 15.8346 12.8744 15.8346 12.7087C15.8346 12.5429 15.7688 12.3839 15.6516 12.2667C15.5344 12.1495 15.3754 12.0837 15.2096 12.0837H13.1263ZM1.66797 6.87533C1.66797 6.15703 1.95331 5.46816 2.46122 4.96024C2.96913 4.45233 3.65801 4.16699 4.3763 4.16699H15.6263C15.982 4.16699 16.3341 4.23705 16.6627 4.37315C16.9913 4.50926 17.2899 4.70875 17.5414 4.96024C17.7929 5.21174 17.9924 5.5103 18.1285 5.83889C18.2646 6.16748 18.3346 6.51966 18.3346 6.87533V13.1253C18.3346 13.481 18.2646 13.8332 18.1285 14.1618C17.9924 14.4904 17.7929 14.7889 17.5414 15.0404C17.2899 15.2919 16.9913 15.4914 16.6627 15.6275C16.3341 15.7636 15.982 15.8337 15.6263 15.8337H4.3763C3.65801 15.8337 2.96913 15.5483 2.46122 15.0404C1.95331 14.5325 1.66797 13.8436 1.66797 13.1253V6.87533ZM17.0846 7.91699V6.87533C17.0846 6.48855 16.931 6.11762 16.6575 5.84413C16.384 5.57064 16.0131 5.41699 15.6263 5.41699H4.3763C3.98953 5.41699 3.6186 5.57064 3.3451 5.84413C3.07161 6.11762 2.91797 6.48855 2.91797 6.87533V7.91699H17.0846ZM2.91797 9.16699V13.1253C2.91797 13.9303 3.5713 14.5837 4.3763 14.5837H15.6263C16.0131 14.5837 16.384 14.43 16.6575 14.1565C16.931 13.883 17.0846 13.5121 17.0846 13.1253V9.16699H2.91797Z" fill="#F79009"/>
+                              </svg> Payment Pending</button>
+                            </div>
+                            </td>
+                           <td>Standard</td>
+                           <td>
+                            <div class="p-2 w-max-content">
+                            <div class="d-flex gap-1 py-2 p-0">
+                              <button class="btn-outline-Yellow" data-bs-toggle="modal" data-bs-target="#exampleModalToggle2">Logistic Status</button>
+                         </div>
+                      </div>
                        </tr>
                    </tbody>
                  </table>
@@ -567,7 +675,181 @@
     </main>
 
 
-
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered position-relative custom-modal-width">
+        <div class="modal-content p-4">
+          <div class="row">
+            <div class="col-6">
+              <span class="subHeading-blue">Logistics Status </span>
+              <button id="closeModalBtn" type="button" class="btn-blue closeModalBtn rounded-circle" data-bs-dismiss="modal" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+                  <g clip-path="url(#clip0_4287_15184)">
+                    <rect width="60" height="60" fill="url(#paint0_radial_4287_15184)"/>
+                    <path d="M30 0C13.2857 0 0 13.2857 0 30C0 46.7143 13.2857 60 30 60C46.7143 60 60 46.7143 60 30C60 13.2857 46.7143 0 30 0ZM41.5714 45L30 33.4286L18.4286 45L15 41.5714L26.5714 30L15 18.4286L18.4286 15L30 26.5714L41.5714 15L45 18.4286L33.4286 30L45 41.5714L41.5714 45Z" fill="#002882"/>
+                  </g>
+                  <defs>
+                    <radialGradient id="paint0_radial_4287_15184" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(30 30) rotate(90) scale(30)">
+                      <stop offset="0.80208" stop-color="white"/>
+                      <stop offset="1" stop-color="white" stop-opacity="0"/>
+                    </radialGradient>
+                    <clipPath id="clip0_4287_15184">
+                      <rect width="60" height="60" fill="white"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+              <div class="d-flex gap-2 mt-40 mb-2">
+                <span class="text-dark message-text">Order ID:</span>
+                <span class="orderidColor">456897432131685123</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M19 2C19.5304 2 20.0391 2.21071 20.4142 2.58579C20.7893 2.96086 21 3.46957 21 4V16C21 16.5304 20.7893 17.0391 20.4142 17.4142C20.0391 17.7893 19.5304 18 19 18H17V20C17 20.5304 16.7893 21.0391 16.4142 21.4142C16.0391 21.7893 15.5304 22 15 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H7V4C7 3.46957 7.21071 2.96086 7.58579 2.58579C7.96086 2.21071 8.46957 2 9 2H19ZM10 15H8C7.74512 15.0003 7.49997 15.0979 7.31463 15.2728C7.1293 15.4478 7.01777 15.687 7.00283 15.9414C6.98789 16.1958 7.07067 16.4464 7.23426 16.6418C7.39786 16.8373 7.6299 16.9629 7.883 16.993L8 17H10C10.2549 16.9997 10.5 16.9021 10.6854 16.7272C10.8707 16.5522 10.9822 16.313 10.9972 16.0586C11.0121 15.8042 10.9293 15.5536 10.7657 15.3582C10.6021 15.1627 10.3701 15.0371 10.117 15.007L10 15ZM19 4H9V6H15C15.5304 6 16.0391 6.21071 16.4142 6.58579C16.7893 6.96086 17 7.46957 17 8V16H19V4ZM12 11H8C7.73478 11 7.48043 11.1054 7.29289 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.29289 12.7071C7.48043 12.8946 7.73478 13 8 13H12C12.2652 13 12.5196 12.8946 12.7071 12.7071C12.8946 12.5196 13 12.2652 13 12C13 11.7348 12.8946 11.4804 12.7071 11.2929C12.5196 11.1054 12.2652 11 12 11Z" fill="#33539B"/>
+                </svg></span>
+              </div>
+              <div class="d-flex gap-4 align-items-center p-4 rounded orderReturncol ">
+                <div class="d-flex justify-content-center">
+                  <img src="../Images/orderReturnimg.png" alt="">
+                </div>
+                <div class="d-flex flex-column gap-2">
+                  <span class="subHeading-4 text-dark">HIFI M16 MINI Wireless Bluetooth Headset</span>
+                  <div class="d-flex gap-2">
+                    <span class="">Seller SKU ID</span>
+                    <span class="text-dark message-text">HIFI M-16</span>
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="..." fill="#33539B"/>
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <span class="">Item ID</span>
+                    <span class="text-dark">HIFI M-16</span>
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="..." fill="#33539B"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="rounded d-flex">
+                  <span class="subHeading-5 rs-badge">1 X<span class="fs-14 text-secondary">Rs.</span> 280</span>
+                </div>
+              </div>
+              <div class="d-flex gap-2 mt-40 mb-2">
+                <span class="text-dark message-text">Tracking Number:</span>
+                <span class="orderidColor">PK-DEX0261156</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M19 2C19.5304 2 20.0391 2.21071 20.4142 2.58579C20.7893 2.96086 21 3.46957 21 4V16C21 16.5304 20.7893 17.0391 20.4142 17.4142C20.0391 17.7893 19.5304 18 19 18H17V20C17 20.5304 16.7893 21.0391 16.4142 21.4142C16.0391 21.7893 15.5304 22 15 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H7V4C7 3.46957 7.21071 2.96086 7.58579 2.58579C7.96086 2.21071 8.46957 2 9 2H19ZM10 15H8C7.74512 15.0003 7.49997 15.0979 7.31463 15.2728C7.1293 15.4478 7.01777 15.687 7.00283 15.9414C6.98789 16.1958 7.07067 16.4464 7.23426 16.6418C7.39786 16.8373 7.6299 16.9629 7.883 16.993L8 17H10C10.2549 16.9997 10.5 16.9021 10.6854 16.7272C10.8707 16.5522 10.9822 16.313 10.9972 16.0586C11.0121 15.8042 10.9293 15.5536 10.7657 15.3582C10.6021 15.1627 10.3701 15.0371 10.117 15.007L10 15ZM19 4H9V6H15C15.5304 6 16.0391 6.21071 16.4142 6.58579C16.7893 6.96086 17 7.46957 17 8V16H19V4ZM12 11H8C7.73478 11 7.48043 11.1054 7.29289 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.29289 12.7071C7.48043 12.8946 7.73478 13 8 13H12C12.2652 13 12.5196 12.8946 12.7071 12.7071C12.8946 12.5196 13 12.2652 13 12C13 11.7348 12.8946 11.4804 12.7071 11.2929C12.5196 11.1054 12.2652 11 12 11Z" fill="#33539B"/>
+                </svg></span>
+              </div>
+              <div class=" row d-flex orderReturncol justify-content-between p-3">
+              <div class="col-5 d-flex flex-column gap-1 justify-content-center align-items-center text-center">
+                <span class="subHeading-5">First Mile 3PL</span>
+                <span class="paragraph-2">PK-DEX</span>
+              </div>
+              <div class="col-2 justify-content-center align-items-center text-center">
+                <img src="../Images/Line 28.svg" alt="">
+              </div>
+              <div class=" col-5 d-flex flex-column gap-1 justify-content-center align-items-center text-center">
+                <span class="subHeading-5">First Mile 3PL</span>
+                <span class="paragraph-2">PK-DEX</span>
+              </div>
+              </div>
+              <div class="d-flex gap-2 mt-40 mb-2">
+                <span class="text-dark message-text">Customer Info</span>
+              </div>
+              <div class="d-flex gap-4 align-items-center p-4 rounded orderReturncol ">
+                <div class="d-flex gap-2">
+                  <span class="">Customer Name:</span>
+                  <span class="text-dark message-text">Muhammad Arshad</span>
+                </div>
+            </div>
+            
+          </div>
+          <div class="col-6 mb-2">
+            <span class="subHeading-blue">Shipping Status </span>
+            <div class="d-flex gap-4 justify-content-center align-items-center p-4 my-4 rounded orderReturncol ">
+              <div class="d-flex flex-column gap-2">
+                <label class="d-flex flex-column align-items-center text-center gap-1">
+                  <input class="form-radio-input" type="radio" name="relationship" value="brandowner"> Pickup
+                </label>
+              </div>
+              <span class="orderdetaile-Line"></span>
+              <div class="d-flex flex-column gap-2">
+                <label class="d-flex flex-column align-items-center text-center gap-1">
+                  <input class="form-radio-input" type="radio" name="relationship" value="brandowner"> Shipping
+                </label>
+              </div>
+              <span class="orderdetaile-Line"></span>
+              <div class="d-flex flex-column gap-2">
+                <label class="d-flex flex-column align-items-center text-center gap-1">
+                  <input class="form-radio-input" type="radio" name="relationship" value="brandowner"> Delivery
+                </label>
+              </div>
+              
+          </div>
+          <div class="justify-content-center align-items-center p-4 my-4 rounded orderReturncol">
+           <div class="row d-flex gap-4 m-0">
+            <div class="col-2 d-flex flex-column gap-4 p-0">
+              <div class="d-flex flex-column text-center">
+                <span class="subHeading-4">Feb 07</span>
+                <span>14:00</span>
+                </div>
+                <div class="d-flex flex-column text-center">
+                  <span class="subHeading-4">Feb 07</span>
+                  <span>14:00</span>
+                  </div>
+                  <div class="d-flex flex-column text-center">
+                    <span class="subHeading-4">Feb 07</span>
+                    <span>14:00</span>
+                    </div>
+                    <div class="d-flex flex-column text-center">
+                      <span class="subHeading-4">Feb 07</span>
+                      <span>14:00</span>
+                      </div>
+            </div>
+           <div class="col-1 p-0">
+            <div class="d-flex flex-column align-items-center ">
+              <input class="form-radio-input" type="radio" name="relationship" value="brandowner">
+              <span class="orderdetaile-Line2"></span>
+            </div>
+            <div class="d-flex flex-column align-items-center text-center">
+              <input class="form-radio-input" type="radio" name="relationship" value="brandowner">
+              <span class="orderdetaile-Line2"></span>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+              <input class="form-radio-input" type="radio" name="relationship" value="brandowner">
+              <span class="orderdetaile-Line2"></span>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+              <input class="form-radio-input" type="radio" name="relationship" value="brandowner">
+            </div>
+           </div>
+           <div class="col-7 p-0">
+            <div class="d-flex flex-column ">
+              <span class="subHeading-3">Delivered</span>
+              <span>Your parcel has been delivered delivery with PK-DEX [Multan - Gulgasht]</span>
+            </div>
+            <div class="d-flex flex-column">
+              <span class="subHeading-3">Out of Delivery</span>
+              <span>Your parcel is currently out for delivery with PK-DEX [Multan - Gulgasht]</span>
+            </div>
+            <div class="d-flex flex-column">
+              <span class="subHeading-3">Arrived at Main Logistics Facility</span>
+              <span>Your parcel has arrived to the main logistics facility [Multan - Gulgasht]</span>
+            </div>
+            <div class="d-flex flex-column">
+              <span class="subHeading-3">Packed by Seller / warehous</span>
+              <span>Your parcel has been packed and ready to be handed over to our shipping provider.</span>
+            </div>
+           </div>
+           
+             </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
 
 
 

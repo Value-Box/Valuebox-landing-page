@@ -9454,8 +9454,6 @@ button:focus{
   border: 1px solid var(--Light-Gray-Color);
 
 }
-
-
 .btn-danger{
   color: var(--Brand-white-Color);
   background-color: var(--Danger-Color);
@@ -9470,15 +9468,6 @@ button:focus{
   border-radius: 5px;
   height: fit-content;
   border: 1px solid var(--Danger-Color);
-}
-
-.bulk-btn{
-  border-radius: 5px;
-  border: 1px solid #002882;
-  background-color: #e6eaf3;
-  color: #002882;
-  padding: 10px 20px;
-  height: max-content;
 }
 .btn-outline-blue:hover,.btn-outline-blue:hover{
   color: var(--Brand-white-Color);
@@ -9500,6 +9489,10 @@ button:focus{
   border: 1px solid #EEA500;
   transition: 1s ease;
   height: fit-content;
+}
+.btn-outline-Yellow:focus{
+  border: 1px solid #EEA500;
+
 }
 .btn-outline-blue{
   color: var(--Brand-Color);
@@ -9548,6 +9541,9 @@ button:focus{
 .mt-40{
 margin-top: 40px;
 }
+.mt-20{
+  margin-top: 20px;
+  }
 .form-check-input{
   width: 20px;
 height: 20px;
@@ -9585,17 +9581,15 @@ height: 20px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 .mt-30{
   margin-top: 30px;
 }
-
 .TableWrapper {
   border-radius: 8px;
   overflow: hidden;
- overflow-x: scroll;
- border: 1px solid #ccc;
-}
+  border: 1px solid #ccc;
+  overflow-x: scroll;
+ }
 .TableWrapper table {
   border-collapse: collapse;
   width: 100%;
@@ -9690,6 +9684,9 @@ text-align: center;
 .l-h-30{
   line-height: 30px;
 }
+.l-h-40{
+  line-height: 40px;
+}
 .bg-light-gray{
   background-color: var(--Gray-Dark);
 }
@@ -9706,7 +9703,14 @@ text-align: center;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
-  
+.py-40{
+padding-top: 40px;
+padding-bottom: 40px;
+}
+.px-60{
+  padding-right: 60px ; 
+  padding-left: 60px;
+}
 .w-max-content{
   width: max-content;
 }
@@ -9718,3 +9722,4 @@ font-style: normal;
 font-weight: 500;
 line-height: 24px
 }
+  
