@@ -12,7 +12,7 @@
 
 main {
   overflow: hidden;
-  max-width: 1728px;
+  /* max-width: 1728px; */
   margin: 0px auto;
 }
 .row > * {
@@ -99,6 +99,7 @@ main {
 } */
 #carouselExampleCaptions {
   height: 430px;
+  background: linear-gradient(45deg, #002068 0%, #33539B 100%);
 }
 
 .lessThan {
@@ -1463,6 +1464,11 @@ select {
 height: 24px;
 background: #CCC;
 }
+.loginPageBgPoster {
+  background: linear-gradient(45deg, #002068 0%, #33539B 100%);
+  height: clamp(600px, 50vh, 1000px); /* Minimum height 300px, preferred height 50% of viewport height, max height 1000px */
+}
+
 @media (max-width: 1264px) {
   /* .links {
     gap: 20px;
@@ -3263,3 +3269,13 @@ letter-spacing: -1.2px;
   }
   
 
+  .youtubebgimage {
+    height: 600px; /* Set your desired height */
+    overflow: hidden; /* This hides any part of the image that goes beyond the set height */
+}
+
+.youtubebgimage img {
+    height: 100%; /* Ensures the image fills the container’s height */
+    width: auto; /* Maintains the aspect ratio */
+    object-fit: cover; /* Ensures the image covers the area */
+}

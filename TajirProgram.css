@@ -9,7 +9,7 @@
 }
 main {
     overflow: hidden;
-    max-width: 1728px;
+    /* max-width: 1728px; */
     margin: 0px auto;
   }
 body{
@@ -359,7 +359,10 @@ text-align: center;
     position: absolute;
     right: 0;
 }
-.LoginBgPoster{}
+.LoginBgPoster{
+    z-index: -1;
+    margin-top: -2px !important;
+}
 @media(max-width:605px){
     .zinattable table{
     display: block;
@@ -550,6 +553,69 @@ line-height: 24px;
 .leftArrow{
     background-color: #7a5af8 !important;
 }
+.tajirPoster{
+    background-color:#002882;
+}
+/* Styles applied when the screen width is above 1728px */
+.premiumWorldSection {
+    max-height: 500px;
+}
+.premiumWorldSection .col-md-6 {
+    display: flex;
+    max-height: inherit;
+}
+.premiumWorldSection .col-md-6 img{
+    max-height: 100%;
+   width: 100%;
+   object-fit: cover;
+}
+@media (max-width: 1213px) {
+/* Set up the main container as a flex container */
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure all rows take equal height */
+.premiumWorldSection {
+    flex: 1; /* Each row will take equal height in the container */
+    display: flex;
+}
+
+.premiumWorldSection .col-md-6 {
+    display: flex;
+    flex-direction: column;
+}
+
+.premiumWorldSection .col-md-6 img {
+    width: 100%;
+    height: 100%; /* Fill the height of the column */
+    object-fit: cover;
+}
+
+}
+
+/* Styles applied when the screen width is 1728px or below */
+@media (max-width: 1728px) {
+    .premiumWorldSection {
+        max-height: 100%;
+    }
+    .premiumWorldSection .col-md-6 {
+        display: flex;
+        max-height: inherit;
+    }
+}
+@media (max-width: 1199px) {
+    .tajirPoster {
+        height: clamp(300px, 70vh, 100vh);
+      }      
+  }
+@media (max-width: 768px) {
+    .tajirPoster {
+        height: clamp(300px, 50vh, 100vh);
+      }      
+  }
+
 @media(max-width:1259px){
     .joinvalueboxgroup h1{
         color: #F4F3FF;
@@ -1242,7 +1308,7 @@ line-height: 32px; /* 133.333% */
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
-    line-height: 38px; /* 126.667% */
+    line-height: 25px; /* 126.667% */
     }
     .premiumproduct span{
         color: #E6EAF3;
