@@ -1569,6 +1569,21 @@ gap: 20px;
 align-self: stretch;
 background: #F2F2F2;
 }
+#editVarBtn{
+  color: var(--Brand-white-Color);
+  background-color: var(--Brand-Color);
+  padding: 7px 20px;
+  line-height: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  height: fit-content;
+  border: 1px solid var(--Brand-Color);
+  }
 
   /* Remove the border-bottom from the modal header */
   .modal-header {

@@ -809,7 +809,7 @@
 }
 .sidebar-wrapper .menu .sidebar-link {
   display: block;
-  padding: 20px 0px;
+  padding: 20px 15px;
   font-size: 1rem;
   display: flex;
   align-items: center;
@@ -920,6 +920,7 @@
   display: none;
   transition: max-height 2s cubic-bezier(0, 0.55, 0.45, 1);
   overflow: hidden;
+  padding: 0px;
 }
 .sidebar-wrapper .menu .submenu.active {
   max-height: 999px;
@@ -940,7 +941,7 @@ line-height: 24px;
   padding: 0.7rem 2rem;
   display: block;
   color: #333;
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.5px;
   transition: all 0.3s;
@@ -948,7 +949,7 @@ line-height: 24px;
 /* .sidebar-wrapper .menu .submenu .submenu-item a:hover {
   margin-left: 0.3rem;
 } */
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1280px) {
   .sidebar-wrapper {
     position: absolute;
     left: -300px;
@@ -1244,10 +1245,16 @@ line-height: 24px;
   padding: 2rem;
   
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1280px) {
   #main {
     margin-left: 0;
   }
+  .burger-btn {
+    display: block;
+  }
+  #sidebar:not(.active) .sidebar-wrapper {
+    left: -300px;
+}
 }
 #main.layout-navbar {
   padding: 0;

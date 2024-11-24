@@ -39,7 +39,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 window.addEventListener('resize', (event) => {
     var w = window.innerWidth;
-    if(w < 1200) {
+    console.log(w)
+    if(w < 1280) {
         document.getElementById('sidebar').classList.remove('active');
     }else{
         document.getElementById('sidebar').classList.add('active');

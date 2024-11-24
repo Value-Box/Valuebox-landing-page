@@ -11767,3 +11767,6 @@ fieldset:disabled .btn {
  overflow-x: scroll;
  border: 1px solid #ccc;
 }
+.overflow-hidden {
+  overflow: hidden;
+}
