@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../assets/css/bootstrap.css">
     <link rel="stylesheet" href="../assets/vendors/choices.js/choices.min.css" />
   
+    <link rel="stylesheet" href="../assets/vendors/simple-datatables/style.css">
+
     <link rel="stylesheet" href="../assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="../assets/css/app.css">
@@ -411,14 +413,12 @@
     <main class="backcolor" id="main">
         <div class="navigation anchortags">
             <a href="../index.html">Home</a>
-            <a href="manageProducts.html">> Marketing Center</a>
             <a href="Promos.html">> Promo’s</a>
-            <a class="active1" href="manageProducts.html">> Details</a>
+            <a class="" href="promosDetail.html">> Details</a>
+            <a class="active1" href="manageProducts.html">> Express Delivery</a>
           </div>
-          <h1 class="heading-one my-4">Express Delivery</h1>
-
          
-            <div class="container-fluid p-0 cursor-pointer">
+            <div class="container-fluid p-0 cursor-pointer mt-40">
                 <div class="row bg-orange-500 overflow-hidden form1">
                     <div class="col-8">
                         <div>
@@ -441,31 +441,422 @@
                     </div>
                 </div>
 
-                <div class="row mt-30">
-                    <h1 class="heading-one p-0">How To Register?</h1>
-                </div>
+                <div class="row form1 mt-40">
+                    <div class="d-flex gap-10 align-items-center">
+                        <span class="subHeading">Product Submission</span>
+                        <button class="btn-blue">Mandatory</button>
+                    </div>
+                    <div class="d-flex gap-40 mt-40">
+                        <button class="col-6 top-rouned-btn active" id="register_Product_btn">Registered Products</button>
+                        <button class="col-6 top-rouned-btn" id="pending_sub_btn">Pending Submissions</button>
+                    </div>
 
-                <div class="mt-20">
-                    <p class="text-natural-gray m-0">Lorem ipsum dolor sit amet consectetur. Cursus porttitor pellentesque bibendum in fringilla eu duis aliquet. Enim congue integer bibendum sed. Tristique cursus justo massa dolor ut venenatis. Auctor tellus porta sed sed sagittis ac. Ultrices ornare malesuada tristique duis vehicula ac cursus in. Ac gravida vulputate ultrices quis amet platea mi bibendum. Pharetra condimentum in a magna. Eget nascetur et urna fermentum facilisis lectus euismod vel tincidunt.</p>
-                </div>
-              </div>
-              <a href="RegisterPromo.html" class="btn-blue mt-30 d-inline-block">Register Promo</a>
-         
-              <div class="row mt-30">
-                <h1 class="heading-one p-0">Watch Promo’s Video</h1>
 
-                <div class="promoVideo">
-                  <iframe src="https://www.youtube.com/embed/6hksegA_x94?si=MnVgjx5p26REHDdS" frameborder="0" allowfullscreen></iframe>
+
+
+                    <div id="reg_Pro_Content" class="collapse show mt-2">
+                        <div class="col allbar d-flex gap-3 p-0">
+                            <a class="active" href="">All SKUs <span class="notification-badge">12</span></a>
+                            <a class="" href="">Pending Review SKs <span class="notification-badge">0</span></a>
+                            <a class="" href="">Approved SKUs <span class="notification-badge">0</span></a>
+                            <a class="" href="">Rejected SKUs <span class="notification-badge">0</span></a>
+                            <a class="" href="">Withdrawn SKUs <span class="notification-badge">0</span></a>
+                        </div>
+
+                        <div class="d-flex gap-40 mt-40">
+                            <fieldset class="form-group mb-0 w-100">
+                                <select class="form-select" id="basicSelect">
+                                    <option value="">Please Select the category or enter the keyword</option>
+                                    <option value="tshirt">T-Shirt</option>
+                                    <option value="pants">Pants</option>
+                                </select>
+                            </fieldset>
+
+                            <div class="input-group p-0 w-100 h-max-content">
+        
+                                <fieldset class="form-group mb-0">
+                                    <select class="form-select form-select-input sllerSku" id="basicSelect">
+                                        <option value="bulkManage">Seller SKU</option>
+                                        <option value="bulkManage">PRoduct Name</option>
+                                        <option value="bulkManage">SKU ID</option>                                    </select>
+                                </fieldset>
+                                <input type="text" class="form-control form-select-input" placeholder="Please Input" aria-label="input" aria-describedby="button-addon2">
+                                <span class="input-group-text bg-transparent border-start-0" id="basic-addon1"><i class="bi bi-search"></i></span>
+                           </div>
+                           
+                           <div class="w-100 d-flex align-items-center gap-2">
+                            <input class="form-check-input" type="checkbox" name="" id="pend_Adj_Sku">
+                            <label class="paragraph-1" for="pend_Adj_Sku">Pending Adjusted SKUs</label>
+                          </div>
+                        </div>
+
+                        <div class="form-group w-100 TableWrapper mt-40 pb-0 ">
+                            <table class="reg_Prod_Table" id="reg_Prod_Table">
+                              <thead>
+                                <tr>
+                                  <th><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Basic info</th>
+                                  <th>Category Name</th> 
+                                  <th>Status</th>
+                                  <th>Current Price</th>
+                                  <th>Current Stock</th>
+                                  <th>Promo Price</th>
+                                  <th>Action</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                
+                                <tr>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                 
+                              </tr>
+                             
+                                
+                              </tbody>
+                              
+                              
+                            </table>
+                          <!-- </select> -->
+                                         
+                        </div>
+                      </div>
+                      
+                      <div id="pending_Sub_Content" class="collapse mt-2">
+                    
+                        <div class="d-flex gap-40 mt-40">
+                            <fieldset class="form-group mb-0 w-100">
+                                <select class="form-select" id="basicSelect">
+                                    <option value="">Please Select the category or enter the keyword</option>
+                                    <option value="tshirt">T-Shirt</option>
+                                    <option value="pants">Pants</option>
+                                </select>
+                            </fieldset>
+
+                            <div class="input-group p-0 w-100 h-max-content">
+        
+                                <fieldset class="form-group mb-0">
+                                    <select class="form-select form-select-input sllerSku" id="basicSelect">
+                                        <option value="bulkManage">Seller SKU</option>
+                                        <option value="bulkManage">PRoduct Name</option>
+                                        <option value="bulkManage">SKU ID</option>
+                                    </select>
+                                </fieldset>
+                                <input type="text" class="form-control form-select-input" placeholder="Please Input" aria-label="input" aria-describedby="button-addon2">
+                                <span class="input-group-text bg-transparent border-start-0" id="basic-addon1"><i class="bi bi-search"></i></span>
+                           </div>
+                           
+                           <div class="w-100 d-flex align-items-center justify-content-end gap-2">
+                            <button class="btn-blue" data-bs-toggle="modal" data-bs-target="#newProdModal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 6V18M18 12H6" stroke="#E6EAF3" stroke-width="2" stroke-linecap="round"/>
+                                  </svg> Add New Product</button>
+                          </div>
+                        </div>
+
+                        <div class="form-group w-100 TableWrapper mt-40 pb-0 ">
+                            <table class="pend_Pro_Table" id="pend_Pro_Table">
+                              <thead>
+                                <tr>
+                                  <th><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Basic info</th>
+                                  <th>Category Name</th> 
+                                  <th>Current Price</th>
+                                  <th>Current Stock</th>
+                                  <th>Promo Price</th>
+                                  <th>Action</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+
+                                <tr>
+                                  <td>
+                                    <div class="d-flex align-items-end gap-3 py-2 ">
+                                        <img class="" src="../Images/manage product image1.svg" alt="">
+                                        <div class="tablecell1 text-start mt-2">
+                                            <h6 class="mb-0 justify-content-center">HIFI M16 MINI Wireless<br>Bluetooth Headset</h6>
+                                            <p class="mb-0">Item ID: HIFI M-16</p>
+                                        </div>
+                                       </div>
+                                  </td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td><input class="table-input" type="text" placeholder="00" oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td>
+                                  <td><svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                                    <path d="M17.4831 5H3.31641M8.31641 9.16667L8.73307 13.3333M12.4831 9.16667L12.0664 13.3333" stroke="#999999" stroke-width="1.25" stroke-linecap="round"/>
+                                    <path d="M5.81641 5H5.90807C6.24344 4.99143 6.56842 4.88185 6.84051 4.68559C7.11259 4.48934 7.31912 4.21553 7.43307 3.9L7.46141 3.81417L7.54224 3.57167C7.61141 3.36417 7.64641 3.26083 7.69224 3.1725C7.78241 2.99949 7.91183 2.84999 8.07014 2.73597C8.22844 2.62194 8.41124 2.54655 8.60391 2.51583C8.70141 2.5 8.81057 2.5 9.02891 2.5H11.7706C11.9889 2.5 12.0981 2.5 12.1956 2.51583C12.3882 2.54655 12.571 2.62194 12.7293 2.73597C12.8876 2.84999 13.0171 2.99949 13.1072 3.1725C13.1531 3.26083 13.1881 3.36417 13.2572 3.57167L13.3381 3.81417C13.4437 4.16523 13.6621 4.47167 13.9595 4.68605C14.2569 4.90043 14.6166 5.01077 14.9831 5" stroke="#999999" stroke-width="1.25"/>
+                                    <path d="M15.7129 12.833C15.5654 15.0447 15.4912 16.1505 14.7704 16.8247C14.0495 17.4988 12.9412 17.4997 10.7237 17.4997H10.0787C7.86203 17.4997 6.7537 17.4997 6.03203 16.8247C5.3112 16.1505 5.23786 15.0447 5.09036 12.833L4.70703 7.08301M16.0954 7.08301L15.9287 9.58301" stroke="#999999" stroke-width="1.25" stroke-linecap="round"/>
+                                  </svg></td>
+                                 
+                              </tr>
+                              
+                               <tr>
+                                  <td>
+                                    <div class="d-flex align-items-end gap-3 py-2 ">
+                                        <img class="" src="../Images/manage product image1.svg" alt="">
+                                        <div class="tablecell1 text-start mt-2">
+                                            <h6 class="mb-0 justify-content-center">HIFI M16 MINI Wireless<br>Bluetooth Headset</h6>
+                                            <p class="mb-0">Item ID: HIFI M-16</p>
+                                        </div>
+                                       </div>
+                                  </td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td><input class="table-input" type="text" placeholder="00" oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td>
+                                  <td><svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                                    <path d="M17.4831 5H3.31641M8.31641 9.16667L8.73307 13.3333M12.4831 9.16667L12.0664 13.3333" stroke="#999999" stroke-width="1.25" stroke-linecap="round"/>
+                                    <path d="M5.81641 5H5.90807C6.24344 4.99143 6.56842 4.88185 6.84051 4.68559C7.11259 4.48934 7.31912 4.21553 7.43307 3.9L7.46141 3.81417L7.54224 3.57167C7.61141 3.36417 7.64641 3.26083 7.69224 3.1725C7.78241 2.99949 7.91183 2.84999 8.07014 2.73597C8.22844 2.62194 8.41124 2.54655 8.60391 2.51583C8.70141 2.5 8.81057 2.5 9.02891 2.5H11.7706C11.9889 2.5 12.0981 2.5 12.1956 2.51583C12.3882 2.54655 12.571 2.62194 12.7293 2.73597C12.8876 2.84999 13.0171 2.99949 13.1072 3.1725C13.1531 3.26083 13.1881 3.36417 13.2572 3.57167L13.3381 3.81417C13.4437 4.16523 13.6621 4.47167 13.9595 4.68605C14.2569 4.90043 14.6166 5.01077 14.9831 5" stroke="#999999" stroke-width="1.25"/>
+                                    <path d="M15.7129 12.833C15.5654 15.0447 15.4912 16.1505 14.7704 16.8247C14.0495 17.4988 12.9412 17.4997 10.7237 17.4997H10.0787C7.86203 17.4997 6.7537 17.4997 6.03203 16.8247C5.3112 16.1505 5.23786 15.0447 5.09036 12.833L4.70703 7.08301M16.0954 7.08301L15.9287 9.58301" stroke="#999999" stroke-width="1.25" stroke-linecap="round"/>
+                                  </svg></td>
+                                 
+                              </tr>                  
+
+                              </tbody>
+                              
+                              
+                            </table>        
+                        </div>
+
+                      </div>
+                      <div class="modal fade" id="newProdModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Eligible Products</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group w-100 TableWrapper mt-40 pb-0 ">
+                                    <table class="add_Pro_Table" id="add_Pro_Table">
+                                      <thead>
+                                        <tr>
+                                          <th><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Fulfillment SKU</th>
+                                          <th>Fulfillment SKU Name</th> 
+                                          <th>Seller SKU</th>
+                                          <th>Sellable Inventory in warehouse</th>
+                                          <th>Barcode</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td class="d-flex gap-1">
+                                            <input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> 2245646_PK_14454120
+                                          </td>
+                                          <td>Pack of 6 - Pull B ack Mini Car Set For kids & boys toys</td>
+                                          <td>MINI-CARS-6</td>
+                                          <td>50</td>
+                                          <td>VBPK-78946</td>
+                                         
+                                      </tr>
+                                        <tr>
+                                          <td class="d-flex gap-1">
+                                            <input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> 2245646_PK_14454120
+                                          </td>
+                                          <td>Pack of 6 - Pull B ack Mini Car Set For kids & boys toys</td>
+                                          <td>MINI-CARS-6</td>
+                                          <td>50</td>
+                                          <td>VBPK-78946</td>
+                                         
+                                      </tr>
+                                        <tr>
+                                          <td class="d-flex gap-1">
+                                            <input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> 2245646_PK_14454120
+                                          </td>
+                                          <td>Pack of 6 - Pull B ack Mini Car Set For kids & boys toys</td>
+                                          <td>MINI-CARS-6</td>
+                                          <td>50</td>
+                                          <td>VBPK-78946</td>
+                                         
+                                      </tr>
+                                        <tr>
+                                          <td class="d-flex gap-1">
+                                            <input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> 2245646_PK_14454120
+                                          </td>
+                                          <td>Pack of 6 - Pull B ack Mini Car Set For kids & boys toys</td>
+                                          <td>MINI-CARS-6</td>
+                                          <td>50</td>
+                                          <td>VBPK-78946</td>
+                                         
+                                      </tr>
+                                        <tr>
+                                          <td class="d-flex gap-1">
+                                            <input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> 2245646_PK_14454120
+                                          </td>
+                                          <td>Pack of 6 - Pull B ack Mini Car Set For kids & boys toys</td>
+                                          <td>MINI-CARS-6</td>
+                                          <td>50</td>
+                                          <td>VBPK-78946</td>
+                                         
+                                      </tr>
+                                        <tr>
+                                          <td class="d-flex gap-1">
+                                            <input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> 2245646_PK_14454120
+                                          </td>
+                                          <td>Pack of 6 - Pull B ack Mini Car Set For kids & boys toys</td>
+                                          <td>MINI-CARS-6</td>
+                                          <td>50</td>
+                                          <td>VBPK-78946</td>
+                                         
+                                      </tr>
+                                        <tr>
+                                          <td class="d-flex gap-1">
+                                            <input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> 2245646_PK_14454120
+                                          </td>
+                                          <td>Pack of 6 - Pull B ack Mini Car Set For kids & boys toys</td>
+                                          <td>MINI-CARS-6</td>
+                                          <td>50</td>
+                                          <td>VBPK-78946</td>
+                                         
+                                      </tr>
+                                        <tr>
+                                          <td class="d-flex gap-1">
+                                            <input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> 2245646_PK_14454120
+                                          </td>
+                                          <td>Pack of 6 - Pull B ack Mini Car Set For kids & boys toys</td>
+                                          <td>MINI-CARS-6</td>
+                                          <td>50</td>
+                                          <td>VBPK-78946</td>
+                                         
+                                      </tr>
+                                        <tr>
+                                          <td class="d-flex gap-1">
+                                            <input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> 2245646_PK_14454120
+                                          </td>
+                                          <td>Pack of 6 - Pull B ack Mini Car Set For kids & boys toys</td>
+                                          <td>MINI-CARS-6</td>
+                                          <td>50</td>
+                                          <td>VBPK-78946</td>
+                                         
+                                      </tr>
+                                        <tr>
+                                          <td class="d-flex gap-1">
+                                            <input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> 2245646_PK_14454120
+                                          </td>
+                                          <td>Pack of 6 - Pull B ack Mini Car Set For kids & boys toys</td>
+                                          <td>MINI-CARS-6</td>
+                                          <td>50</td>
+                                          <td>VBPK-78946</td>
+                                         
+                                      </tr>
+                                        <tr>
+                                          <td class="d-flex gap-1">
+                                            <input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> 2245646_PK_14454120
+                                          </td>
+                                          <td>Pack of 6 - Pull B ack Mini Car Set For kids & boys toys</td>
+                                          <td>MINI-CARS-6</td>
+                                          <td>50</td>
+                                          <td>VBPK-78946</td>
+                                         
+                                      </tr>
+                                      
+                                     
+        
+                                      </tbody>
+                                      
+                                      
+                                    </table>        
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn-outline-gray" data-bs-dismiss="modal">Cancel</button>
+                              <button type="button" class="btn-blue">Confirm</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                 </div>
-                
             </div>
+               
+         
+              
     </main>
 
 
+    <script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
     <script src="../assets/vendors/ckeditor/ckeditor.js"></script>
     <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/vendors/choices.js/choices.min.js"></script>
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Reference to both content divs
+        const content1 = document.getElementById("reg_Pro_Content");
+        const content2 = document.getElementById("pending_Sub_Content");
+      
+        // Reference to buttons
+        const regProdbtn = document.getElementById("register_Product_btn");
+        const pendProBtn = document.getElementById("pending_sub_btn");
+      
+        // Button click handlers
+        regProdbtn.addEventListener("click", function () {
+          // Show content1 and hide content2
+          if (!content1.classList.contains("show")) {
+            content1.classList.add("show");
+          }
+          content2.classList.remove("show");
+          // Add active class to button1 and remove from button2
+          regProdbtn.classList.add("active");
+          pendProBtn.classList.remove("active");
+        });
+      
+        pendProBtn.addEventListener("click", function () {
+          // Show content2 and hide content1
+          if (!content2.classList.contains("show")) {
+            content2.classList.add("show");
+          }
+          content1.classList.remove("show");
+      
+          // Add active class to button2 and remove from button1
+          pendProBtn.classList.add("active");
+          regProdbtn.classList.remove("active");
+        });
+
+        let registerProTable = document.querySelector('#reg_Prod_Table');
+    let pendingProTable = document.querySelector('#pend_Pro_Table');
+    let addProTable = document.querySelector('#add_Pro_Table');
+    new simpleDatatables.DataTable(registerProTable);
+    new simpleDatatables.DataTable(pendingProTable);
+    new simpleDatatables.DataTable(addProTable);
+    console.log(registerProTable);
+console.log(pendingProTable);
+
+
+    // if (registerProTable) {
+    //   new simpleDatatables.DataTable(registerProTable);
+    // }
+    // if (pendingProTable) {
+    //   new simpleDatatables.DataTable(pendingProTable);
+    // }
+
+  // Function to replace arrows with "Previous" and "Next" after the pagination is created
+  function replaceArrows() {
+    // Select all elements with the page-link class
+    document.querySelectorAll(".page-link").forEach(function (link) {
+      if (link.innerHTML === "‹") {
+        link.innerHTML = "Previous"; // Replace left arrow with "Previous"
+      } else if (link.innerHTML === "›") {
+        link.innerHTML = "Next"; // Replace right arrow with "Next"
+      }
+    });
+  }
+
+  // Call this function once on page load
+  replaceArrows();
+
+  // Observe for changes in pagination to handle dynamic updates
+  const paginationObserver = new MutationObserver(replaceArrows);
+  document.querySelectorAll(".pagination").forEach(function (pagination) {
+    paginationObserver.observe(pagination, { childList: true, subtree: true });
+  });
+
+
+      </script>
+    
 </body>
 </html>
