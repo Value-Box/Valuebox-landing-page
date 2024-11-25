@@ -1689,3 +1689,25 @@ line-height: 30px; /* 150% */
     max-width: 1250px;
   }
 }
+.reviewsPerfomanceOverview{
+  display: flex;
+padding: 20px;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+flex: 1 0 0;
+align-self: stretch;
+border-radius: 12px;
+background: var(--Secondary-Color-Mon-Yellow-10, #FEF6E6);
+}
+.PerfomanceOverviewPercentage{
+  color: var(--Primary-Color-Dark-Blue-80, #33539B);
+
+/* Display lg/Bold */
+font-family: Sarabun;
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+line-height: 60px; /* 125% */
+letter-spacing: -0.96px;
+}
