@@ -9465,8 +9465,6 @@ button:focus{
   height: fit-content;
   border: 1px solid var(--Brand-Color);
 }
-
-
 .btn-gray{
   color: var(--Gray-Color);
   background-color: var(--Light-Gray-Color);
@@ -9631,7 +9629,7 @@ height: 20px;
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid #ccc;
-  overflow-x: scroll;
+  overflow-x: auto;
  }
 .TableWrapper table {
   border-collapse: collapse;
@@ -9682,6 +9680,10 @@ text-align: center;
 .gap-10{
   gap: 10px;
 }
+.gap-40{
+  gap: 40px;
+}
+
 .text-Blue-80{
   color: var(Primary-Color-Dark-Blue-80);
 }
@@ -9723,6 +9725,11 @@ text-align: center;
 }
 .fs-12{
   font-size: 12px;
+  line-height: clamp(20px, 5vw, 24px);
+  font-weight: 400;
+}
+.fs-14{
+  font-size: 14px;
   line-height: clamp(20px, 5vw, 24px);
   font-weight: 400;
 }
@@ -9855,4 +9862,7 @@ line-height: 24px
     border-radius: 50%;
     position: absolute;
     top: 25px;
+  }
+  .h-inherit{
+    height: inherit;
   }

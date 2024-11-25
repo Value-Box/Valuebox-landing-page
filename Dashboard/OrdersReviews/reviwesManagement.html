@@ -447,7 +447,7 @@
          <span class="paragraph-3 fw-bold">75</span>
       </div>
       </div>
-      <div class="col-3  reviewsPerfomanceOverview">
+      <div class="col-3 reviewsPerfomanceOverview">
        <div class="d-flex">
         <span class="subHeading">Average Product Rating</span>
         <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -466,16 +466,18 @@
       <div class="d-flex ">
          <span class="PerfomanceOverviewPercentage">4.0%</span>
       </div>
-      <div class="mt-1">
+      <div class="d-flex flex-column gap-2 mt-1 ">
          <span class="paragraph-3">Target Rate:</span>
          <span class="paragraph-3 fw-bold">92.0%</span>
 
-         <div class="mt-2">
-            <input type="range" name="" id="">
-         </div>
+         <div class="progress">
+            <div class="progress-bar progress-bar-success " role="progressbar" aria-valuenow="40"
+            aria-valuemin="0" aria-valuemax="100" style="width:100%">
+            </div>
+          </div>
       </div>
       </div>
-      <div class="col-3  reviewsPerfomanceOverview">
+      <div class="col-3 reviewsPerfomanceOverview">
         <div class="d-flex">
          <span class="subHeading">Average Product Rating</span>
          <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -494,18 +496,19 @@
        <div class="d-flex ">
           <span class="PerfomanceOverviewPercentage">91.0%</span>
        </div>
-       <div class="mt-1">
+       <div class="d-flex flex-column gap-2 mt-1">
           <span class="paragraph-3">Target Rate:</span>
           <span class="paragraph-3 fw-bold">92.0%</span>
- 
-          <div class="mt-2">
-             <input type="range" name="" id="">
+          <div class="progress">
+            <div class="progress-bar progress-bar-success " role="progressbar" aria-valuenow="40"
+            aria-valuemin="0" aria-valuemax="100" style="width:100%">
+            </div>
           </div>
        </div>
-       </div>
      </div>
-  <div class="row form1">
-    <div class="d-flex gap-2">
+  </div>
+  <div class="row form1 d-flex flex-column gap-2 mt-40 ">
+    <div class="d-flex gap-2 p-0">
         <div class="input-group">
             <label class="input-group-text " for="inputGroupSelect01">Status</label>
             <select class="form-select form-select-input" id="inputGroupSelect01">
@@ -535,10 +538,441 @@
                 </div>
                 <button class="btn-gray">Reset</button>
     </div>
+    <div class="d-flex gap-2 p-0 mt-2">
+        <fieldset class="form-group w-100 " id="linkGroup1">
+            <select class="form-select form-select-lg" id="basicSelect">
+              <option value="">Please Select</option>
+              <option>Instagram</option>
+              <option>TikTok</option>
+              <option>Instagram</option>
+              <option>YouTube</option>
+              <option>SnapChat</option>
+              <option>Facebook</option>
+              <option>Custom</option>
+            </select>
+            </fieldset>
+            <fieldset class="form-group w-100 " id="linkGroup1">
+                <select class="form-select form-select-lg" id="basicSelect">
+                  <option value="">Please Select</option>
+                  <option>Instagram</option>
+                  <option>TikTok</option>
+                  <option>Instagram</option>
+                  <option>YouTube</option>
+                  <option>SnapChat</option>
+                  <option>Facebook</option>
+                  <option>Custom</option>
+                </select>
+                </fieldset>
+                <fieldset class="form-group w-100" id="linkGroup1">
+                    <select class="form-select form-select-lg" id="basicSelect">
+                      <option value="">Please Select</option>
+                      <option>Instagram</option>
+                      <option>TikTok</option>
+                      <option>Instagram</option>
+                      <option>YouTube</option>
+                      <option>SnapChat</option>
+                      <option>Facebook</option>
+                      <option>Custom</option>
+                    </select>
+                    </fieldset>
+                    <div class="form-group input gap-0 p-0 w-100 d-flex ">
+                        <input type="text" class="form-control border-0 form-control-lg" placeholder="Product ID" aria-label="input" aria-describedby="button-addon2">
+                       <span class="input-group-text h-inherit rounded-right" id="basic-addon1"><i class="bi bi-search"></i></span>
+                    </div>
+                    <div class="form-group input gap-0 p-0 w-100 d-flex ">
+                        <input type="text" class="form-control border-0 form-control-lg" placeholder="Order ID" aria-label="input" aria-describedby="button-addon2">
+                       <span class="input-group-text h-inherit rounded-right" id="basic-addon1"><i class="bi bi-search"></i></span>
+                    </div>
+    </div>
+                    <div class="d-flex gap-2 m-0 p-0">
+                        <div class="form-group input gap-0 p-0 d-flex m-0">
+                            <input type="text" class="form-control border-0 form-control-lg" placeholder="Buyer Name" aria-label="input" aria-describedby="button-addon2">
+                           <span class="input-group-text h-inherit rounded-right" id="basic-addon1"><i class="bi bi-search"></i></span>
+                        </div>
+                   <div class="form-group position-relative d-flex gap-1 align-items-center startEndDate m-0">
+                   <input type="date" class="form-control form-select-input"
+                     placeholder="Start Date Date">
+                     <span class="gapLine"></span>
+                     <input type="date" class="form-control form-select-input"
+                     placeholder="End Date">
+                
+             </div>
+                 </div>
+                
+   
+  </div>
+  <div class="row form1 mt-40 ">
+    <div class="d-flex align-items-center gap-3">
+        <div class="d-flex gap-1">
+            <input class="form-check-input" type="checkbox" id="product" onclick="toggleCheckboxes(this)">
+            <label for="select-all">Select All</label>
+            </div>
+            <button class="btn-gray">Bulk Reply <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17" fill="none">
+                <path d="M7.52934 2.03015C7.60303 1.96149 7.66213 1.87869 7.70312 1.78669C7.74411 1.69469 7.76616 1.59538 7.76793 1.49468C7.76971 1.39397 7.75118 1.29394 7.71346 1.20056C7.67574 1.10717 7.6196 1.02233 7.54838 0.951115C7.47716 0.879897 7.39233 0.823752 7.29894 0.786031C7.20555 0.74831 7.10552 0.729785 7.00482 0.731562C6.90412 0.733339 6.8048 0.755381 6.7128 0.796373C6.6208 0.837365 6.538 0.896467 6.46934 0.970154L0.21934 7.22015C0.0788896 7.36078 0 7.5514 0 7.75015C0 7.9489 0.0788896 8.13953 0.21934 8.28015L6.46934 14.5302C6.538 14.6038 6.6208 14.6629 6.7128 14.7039C6.8048 14.7449 6.90412 14.767 7.00482 14.7687C7.10552 14.7705 7.20555 14.752 7.29894 14.7143C7.39233 14.6766 7.47716 14.6204 7.54838 14.5492C7.6196 14.478 7.67574 14.3931 7.71346 14.2998C7.75118 14.2064 7.76971 14.1063 7.76793 14.0056C7.76616 13.9049 7.74411 13.8056 7.70312 13.7136C7.66213 13.6216 7.60303 13.5388 7.52934 13.4702L2.55934 8.50015H13.9993C14.8609 8.50015 15.6873 8.84229 16.2967 9.45135C16.9062 10.0604 17.2488 10.8865 17.2493 11.7482V16.2502C17.2493 16.4491 17.3284 16.6398 17.469 16.7805C17.6097 16.9211 17.8004 17.0002 17.9993 17.0002C18.1983 17.0002 18.389 16.9211 18.5297 16.7805C18.6703 16.6398 18.7493 16.4491 18.7493 16.2502V11.7482C18.7488 10.4887 18.2481 9.28105 17.3574 8.39069C16.4667 7.50032 15.2588 7.00015 13.9993 7.00015H2.55934L7.52934 2.03015Z" fill="#666666"/>
+              </svg></button>  
+</div>
+    <div class="TableWrapper mt-20 p-0 pb-0 border-0 rounded-4 ">
+        <table class="">
+            <thead>
+                <tr class="text-dark">
+                    <th style="width: 30%;">Content</th>
+                    <th style="width: 30%;">Rating</th>
+                    <th style="width: 30%">Product</th>
+                    <th style="width: 10%">Total</th>
+                    </tr>
+                </thead>
+                 </table>
+                            </div>
+                            <div class="mt-20 p-0">
+                                <table class="w-100 TableWrapper1 rounded-4">
+                                  <thead>
+                                    <tr class="text-dark">
+                                      <!-- First Header: Order ID aligned to start -->
+                                      <th class="text-start" style="width: 30%;">
+                                        <div class="d-flex gap-2">
+                                          <span class="text-dark message-text">Order ID:</span>
+                                          <span class="orderidColor">456897432131685123</span>
+                                          <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                              <path d="M19 2C19.5304 2 20.0391 2.21071 20.4142 2.58579C20.7893 2.96086 21 3.46957 21 4V16C21 16.5304 20.7893 17.0391 20.4142 17.4142C20.0391 17.7893 19.5304 18 19 18H17V20C17 20.5304 16.7893 21.0391 16.4142 21.4142C16.0391 21.7893 15.5304 22 15 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H7V4C7 3.46957 7.21071 2.96086 7.58579 2.58579C7.96086 2.21071 8.46957 2 9 2H19ZM10 15H8C7.74512 15.0003 7.49997 15.0979 7.31463 15.2728C7.1293 15.4478 7.01777 15.687 7.00283 15.9414C6.98789 16.1958 7.07067 16.4464 7.23426 16.6418C7.39786 16.8373 7.6299 16.9629 7.883 16.993L8 17H10C10.2549 16.9997 10.5 16.9021 10.6854 16.7272C10.8707 16.5522 10.9822 16.313 10.9972 16.0586C11.0121 15.8042 10.9293 15.5536 10.7657 15.3582C10.6021 15.1627 10.3701 15.0371 10.117 15.007L10 15ZM19 4H9V6H15C15.5304 6 16.0391 6.21071 16.4142 6.58579C16.7893 6.96086 17 7.46957 17 8V16H19V4ZM12 11H8C7.73478 11 7.48043 11.1054 7.29289 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.29289 12.7071C7.48043 12.8946 7.73478 13 8 13H12C12.2652 13 12.5196 12.8946 12.7071 12.7071C12.8946 12.5196 13 12.2652 13 12C13 11.7348 12.8946 11.4804 12.7071 11.2929C12.5196 11.1054 12.2652 11 12 11Z" fill="#33539B" />
+                                            </svg>
+                                          </span>
+                                        </div>
+                                      </th>
+                                      <!-- Empty Headers for spacing -->
+                                      <th  style="width: 30%;"></th>
+                                      <th  style="width: 30%;"></th>
+                                      <!-- Second Header: Aligned to the end -->
+                                      <th class="text-end"  style="width: 10%;">
+                                        <div class="d-flex gap-2 justify-content-end">
+                                          <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                              <path d="M4 18C4 16.9391 4.42143 15.9217 5.17157 15.1716C5.92172 14.4214 6.93913 14 8 14H16C17.0609 14 18.0783 14.4214 18.8284 15.1716C19.5786 15.9217 20 16.9391 20 18C20 18.5304 19.7893 19.0391 19.4142 19.4142C19.0391 19.7893 18.5304 20 18 20H6C5.46957 20 4.96086 19.7893 4.58579 19.4142C4.21071 19.0391 4 18.5304 4 18Z" stroke="#666666" stroke-width="2" stroke-linejoin="round" />
+                                              <path d="M12 10C13.6569 10 15 8.65685 15 7C15 5.34315 13.6569 4 12 4C10.3431 4 9 5.34315 9 7C9 8.65685 10.3431 10 12 10Z" stroke="#666666" stroke-width="2" />
+                                            </svg>
+                                          </span>
+                                          <span class="orderidColor">4651321321</span>
+                                          <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                              <path d="M8 9H16M8 13H14M18 4C18.7956 4 19.5587 4.31607 20.1213 4.87868C20.6839 5.44129 21 6.20435 21 7V15C21 15.7956 20.6839 16.5587 20.1213 17.1213C19.5587 17.6839 18.7956 18 18 18H13L8 21V18H6C5.20435 18 4.44129 17.6839 3.87868 17.1213C3.31607 16.5587 3 15.7956 3 15V7C3 6.20435 3.31607 5.44129 3.87868 4.87868C4.44129 4.31607 5.20435 4 6 4H18Z" stroke="#EEA500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                          </span>
+                                        </div>
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                        <td> 
+                                            <div class="">
+                                            <span class="text-dark message-text">Main Review:</span>
+                                            <span class="paragraph-2 text-dark">Good</span>
+                                           </div>
+                                           <div class="mt-2">
+                                            <span class="">Created:</span>
+                                            <span class="paragraph-2">01 Apr 2024</span>
+                                           </div>
+                                           <div class="mt-2">
+                                            <span class="">Modified:</span>
+                                            <span class="paragraph-2">01 Apr 2024</span>
+                                           </div>
+                                           <div class="replyBox mt-2">
+                                            <span class="text-dark fs-12">Reply</span>
+                                            <span class="fs-12">Thank you for choosing ValueBox! We truly appreciate your purchase and are excited for you to enjoy [Product Name]. Our team is committed to delivering quality, and we hope this product brings you joy and satisfaction.</span>
+                                           </div>
+                                          </td>
+                                           <td>
+                                            <div class="d-flex gap-2">
+                                            <span class="text-dark message-text">Overall Rating:</span>
+                                            <span class="d-flex">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M9.15714 5.408C10.4241 3.136 11.0571 2 12.0041 2C12.9511 2 13.5841 3.136 14.8511 5.408L15.1791 5.996C15.5391 6.642 15.7191 6.965 15.9991 7.178C16.2791 7.391 16.6291 7.47 17.3291 7.628L17.9651 7.772C20.4251 8.329 21.6541 8.607 21.9471 9.548C22.2391 10.488 21.4011 11.469 19.7241 13.43L19.2901 13.937C18.8141 14.494 18.5751 14.773 18.4681 15.117C18.3611 15.462 18.3971 15.834 18.4691 16.577L18.5351 17.254C18.7881 19.871 18.9151 21.179 18.1491 21.76C17.3831 22.341 16.2311 21.811 13.9291 20.751L13.3321 20.477C12.6781 20.175 12.3511 20.025 12.0041 20.025C11.6571 20.025 11.3301 20.175 10.6761 20.477L10.0801 20.751C7.77714 21.811 6.62514 22.341 5.86014 21.761C5.09314 21.179 5.22014 19.871 5.47314 17.254L5.53914 16.578C5.61114 15.834 5.64714 15.462 5.53914 15.118C5.43314 14.773 5.19414 14.494 4.71814 13.938L4.28414 13.43C2.60714 11.47 1.76914 10.489 2.06114 9.548C2.35314 8.607 3.58414 8.328 6.04414 7.772L6.68014 7.628C7.37914 7.47 7.72814 7.391 8.00914 7.178C8.29014 6.965 8.46914 6.642 8.82914 5.996L9.15714 5.408Z" fill="url(#paint0_linear_4287_6905)"/>
+                                            <defs>
+                                            <linearGradient id="paint0_linear_4287_6905" x1="2.00391" y1="11.9999" x2="22.0044" y2="11.9999" gradientUnits="userSpaceOnUse">
+                                                            <stop stop-color="#FFC136"/>
+                                                            <stop offset="0.197568" stop-color="#FAC142"/>
+                                                            <stop offset="0.525" stop-color="#FFD168"/>
+                                                            <stop offset="0.771328" stop-color="#F5BC3A"/>
+                                                            <stop offset="1" stop-color="#E09B00"/>
+                                                          </linearGradient>
+                                                        </defs>
+                                                      </svg>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M9.15714 5.408C10.4241 3.136 11.0571 2 12.0041 2C12.9511 2 13.5841 3.136 14.8511 5.408L15.1791 5.996C15.5391 6.642 15.7191 6.965 15.9991 7.178C16.2791 7.391 16.6291 7.47 17.3291 7.628L17.9651 7.772C20.4251 8.329 21.6541 8.607 21.9471 9.548C22.2391 10.488 21.4011 11.469 19.7241 13.43L19.2901 13.937C18.8141 14.494 18.5751 14.773 18.4681 15.117C18.3611 15.462 18.3971 15.834 18.4691 16.577L18.5351 17.254C18.7881 19.871 18.9151 21.179 18.1491 21.76C17.3831 22.341 16.2311 21.811 13.9291 20.751L13.3321 20.477C12.6781 20.175 12.3511 20.025 12.0041 20.025C11.6571 20.025 11.3301 20.175 10.6761 20.477L10.0801 20.751C7.77714 21.811 6.62514 22.341 5.86014 21.761C5.09314 21.179 5.22014 19.871 5.47314 17.254L5.53914 16.578C5.61114 15.834 5.64714 15.462 5.53914 15.118C5.43314 14.773 5.19414 14.494 4.71814 13.938L4.28414 13.43C2.60714 11.47 1.76914 10.489 2.06114 9.548C2.35314 8.607 3.58414 8.328 6.04414 7.772L6.68014 7.628C7.37914 7.47 7.72814 7.391 8.00914 7.178C8.29014 6.965 8.46914 6.642 8.82914 5.996L9.15714 5.408Z" fill="url(#paint0_linear_4287_6905)"/>
+                                                        <defs>
+                                                          <linearGradient id="paint0_linear_4287_6905" x1="2.00391" y1="11.9999" x2="22.0044" y2="11.9999" gradientUnits="userSpaceOnUse">
+                                                            <stop stop-color="#FFC136"/>
+                                                            <stop offset="0.197568" stop-color="#FAC142"/>
+                                                            <stop offset="0.525" stop-color="#FFD168"/>
+                                                            <stop offset="0.771328" stop-color="#F5BC3A"/>
+                                                            <stop offset="1" stop-color="#E09B00"/>
+                                                          </linearGradient>
+                                                        </defs>
+                                                      </svg>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M9.15714 5.408C10.4241 3.136 11.0571 2 12.0041 2C12.9511 2 13.5841 3.136 14.8511 5.408L15.1791 5.996C15.5391 6.642 15.7191 6.965 15.9991 7.178C16.2791 7.391 16.6291 7.47 17.3291 7.628L17.9651 7.772C20.4251 8.329 21.6541 8.607 21.9471 9.548C22.2391 10.488 21.4011 11.469 19.7241 13.43L19.2901 13.937C18.8141 14.494 18.5751 14.773 18.4681 15.117C18.3611 15.462 18.3971 15.834 18.4691 16.577L18.5351 17.254C18.7881 19.871 18.9151 21.179 18.1491 21.76C17.3831 22.341 16.2311 21.811 13.9291 20.751L13.3321 20.477C12.6781 20.175 12.3511 20.025 12.0041 20.025C11.6571 20.025 11.3301 20.175 10.6761 20.477L10.0801 20.751C7.77714 21.811 6.62514 22.341 5.86014 21.761C5.09314 21.179 5.22014 19.871 5.47314 17.254L5.53914 16.578C5.61114 15.834 5.64714 15.462 5.53914 15.118C5.43314 14.773 5.19414 14.494 4.71814 13.938L4.28414 13.43C2.60714 11.47 1.76914 10.489 2.06114 9.548C2.35314 8.607 3.58414 8.328 6.04414 7.772L6.68014 7.628C7.37914 7.47 7.72814 7.391 8.00914 7.178C8.29014 6.965 8.46914 6.642 8.82914 5.996L9.15714 5.408Z" fill="url(#paint0_linear_4287_6905)"/>
+                                                        <defs>
+                                                          <linearGradient id="paint0_linear_4287_6905" x1="2.00391" y1="11.9999" x2="22.0044" y2="11.9999" gradientUnits="userSpaceOnUse">
+                                                            <stop stop-color="#FFC136"/>
+                                                            <stop offset="0.197568" stop-color="#FAC142"/>
+                                                            <stop offset="0.525" stop-color="#FFD168"/>
+                                                            <stop offset="0.771328" stop-color="#F5BC3A"/>
+                                                            <stop offset="1" stop-color="#E09B00"/>
+                                                          </linearGradient>
+                                                        </defs>
+                                                      </svg>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M9.15714 5.408C10.4241 3.136 11.0571 2 12.0041 2C12.9511 2 13.5841 3.136 14.8511 5.408L15.1791 5.996C15.5391 6.642 15.7191 6.965 15.9991 7.178C16.2791 7.391 16.6291 7.47 17.3291 7.628L17.9651 7.772C20.4251 8.329 21.6541 8.607 21.9471 9.548C22.2391 10.488 21.4011 11.469 19.7241 13.43L19.2901 13.937C18.8141 14.494 18.5751 14.773 18.4681 15.117C18.3611 15.462 18.3971 15.834 18.4691 16.577L18.5351 17.254C18.7881 19.871 18.9151 21.179 18.1491 21.76C17.3831 22.341 16.2311 21.811 13.9291 20.751L13.3321 20.477C12.6781 20.175 12.3511 20.025 12.0041 20.025C11.6571 20.025 11.3301 20.175 10.6761 20.477L10.0801 20.751C7.77714 21.811 6.62514 22.341 5.86014 21.761C5.09314 21.179 5.22014 19.871 5.47314 17.254L5.53914 16.578C5.61114 15.834 5.64714 15.462 5.53914 15.118C5.43314 14.773 5.19414 14.494 4.71814 13.938L4.28414 13.43C2.60714 11.47 1.76914 10.489 2.06114 9.548C2.35314 8.607 3.58414 8.328 6.04414 7.772L6.68014 7.628C7.37914 7.47 7.72814 7.391 8.00914 7.178C8.29014 6.965 8.46914 6.642 8.82914 5.996L9.15714 5.408Z" fill="url(#paint0_linear_4287_6905)"/>
+                                                        <defs>
+                                                          <linearGradient id="paint0_linear_4287_6905" x1="2.00391" y1="11.9999" x2="22.0044" y2="11.9999" gradientUnits="userSpaceOnUse">
+                                                            <stop stop-color="#FFC136"/>
+                                                            <stop offset="0.197568" stop-color="#FAC142"/>
+                                                            <stop offset="0.525" stop-color="#FFD168"/>
+                                                            <stop offset="0.771328" stop-color="#F5BC3A"/>
+                                                            <stop offset="1" stop-color="#E09B00"/>
+                                                          </linearGradient>
+                                                        </defs>
+                                                      </svg>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M9.15714 5.408C10.4241 3.136 11.0571 2 12.0041 2C12.9511 2 13.5841 3.136 14.8511 5.408L15.1791 5.996C15.5391 6.642 15.7191 6.965 15.9991 7.178C16.2791 7.391 16.6291 7.47 17.3291 7.628L17.9651 7.772C20.4251 8.329 21.6541 8.607 21.9471 9.548C22.2391 10.488 21.4011 11.469 19.7241 13.43L19.2901 13.937C18.8141 14.494 18.5751 14.773 18.4681 15.117C18.3611 15.462 18.3971 15.834 18.4691 16.577L18.5351 17.254C18.7881 19.871 18.9151 21.179 18.1491 21.76C17.3831 22.341 16.2311 21.811 13.9291 20.751L13.3321 20.477C12.6781 20.175 12.3511 20.025 12.0041 20.025C11.6571 20.025 11.3301 20.175 10.6761 20.477L10.0801 20.751C7.77714 21.811 6.62514 22.341 5.86014 21.761C5.09314 21.179 5.22014 19.871 5.47314 17.254L5.53914 16.578C5.61114 15.834 5.64714 15.462 5.53914 15.118C5.43314 14.773 5.19414 14.494 4.71814 13.938L4.28414 13.43C2.60714 11.47 1.76914 10.489 2.06114 9.548C2.35314 8.607 3.58414 8.328 6.04414 7.772L6.68014 7.628C7.37914 7.47 7.72814 7.391 8.00914 7.178C8.29014 6.965 8.46914 6.642 8.82914 5.996L9.15714 5.408Z" fill="url(#paint0_linear_4287_6905)"/>
+                                                        <defs>
+                                                          <linearGradient id="paint0_linear_4287_6905" x1="2.00391" y1="11.9999" x2="22.0044" y2="11.9999" gradientUnits="userSpaceOnUse">
+                                                            <stop stop-color="#FFC136"/>
+                                                            <stop offset="0.197568" stop-color="#FAC142"/>
+                                                            <stop offset="0.525" stop-color="#FFD168"/>
+                                                            <stop offset="0.771328" stop-color="#F5BC3A"/>
+                                                            <stop offset="1" stop-color="#E09B00"/>
+                                                          </linearGradient>
+                                                        </defs>
+                                                      </svg>
+                                                </span>
+                                              </div>
+                                              <div class="d-flex gap-2">
+                                                <div>
+                                                    <span class="text-dark message-text fs-14">Product Quality:</span>
+                                                </div>
+                                                <span class="d-flex">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M9.15714 5.408C10.4241 3.136 11.0571 2 12.0041 2C12.9511 2 13.5841 3.136 14.8511 5.408L15.1791 5.996C15.5391 6.642 15.7191 6.965 15.9991 7.178C16.2791 7.391 16.6291 7.47 17.3291 7.628L17.9651 7.772C20.4251 8.329 21.6541 8.607 21.9471 9.548C22.2391 10.488 21.4011 11.469 19.7241 13.43L19.2901 13.937C18.8141 14.494 18.5751 14.773 18.4681 15.117C18.3611 15.462 18.3971 15.834 18.4691 16.577L18.5351 17.254C18.7881 19.871 18.9151 21.179 18.1491 21.76C17.3831 22.341 16.2311 21.811 13.9291 20.751L13.3321 20.477C12.6781 20.175 12.3511 20.025 12.0041 20.025C11.6571 20.025 11.3301 20.175 10.6761 20.477L10.0801 20.751C7.77714 21.811 6.62514 22.341 5.86014 21.761C5.09314 21.179 5.22014 19.871 5.47314 17.254L5.53914 16.578C5.61114 15.834 5.64714 15.462 5.53914 15.118C5.43314 14.773 5.19414 14.494 4.71814 13.938L4.28414 13.43C2.60714 11.47 1.76914 10.489 2.06114 9.548C2.35314 8.607 3.58414 8.328 6.04414 7.772L6.68014 7.628C7.37914 7.47 7.72814 7.391 8.00914 7.178C8.29014 6.965 8.46914 6.642 8.82914 5.996L9.15714 5.408Z" fill="url(#paint0_linear_4287_6905)"/>
+                                                        <defs>
+                                                          <linearGradient id="paint0_linear_4287_6905" x1="2.00391" y1="11.9999" x2="22.0044" y2="11.9999" gradientUnits="userSpaceOnUse">
+                                                            <stop stop-color="#FFC136"/>
+                                                            <stop offset="0.197568" stop-color="#FAC142"/>
+                                                            <stop offset="0.525" stop-color="#FFD168"/>
+                                                            <stop offset="0.771328" stop-color="#F5BC3A"/>
+                                                            <stop offset="1" stop-color="#E09B00"/>
+                                                          </linearGradient>
+                                                        </defs>
+                                                      </svg>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M9.15714 5.408C10.4241 3.136 11.0571 2 12.0041 2C12.9511 2 13.5841 3.136 14.8511 5.408L15.1791 5.996C15.5391 6.642 15.7191 6.965 15.9991 7.178C16.2791 7.391 16.6291 7.47 17.3291 7.628L17.9651 7.772C20.4251 8.329 21.6541 8.607 21.9471 9.548C22.2391 10.488 21.4011 11.469 19.7241 13.43L19.2901 13.937C18.8141 14.494 18.5751 14.773 18.4681 15.117C18.3611 15.462 18.3971 15.834 18.4691 16.577L18.5351 17.254C18.7881 19.871 18.9151 21.179 18.1491 21.76C17.3831 22.341 16.2311 21.811 13.9291 20.751L13.3321 20.477C12.6781 20.175 12.3511 20.025 12.0041 20.025C11.6571 20.025 11.3301 20.175 10.6761 20.477L10.0801 20.751C7.77714 21.811 6.62514 22.341 5.86014 21.761C5.09314 21.179 5.22014 19.871 5.47314 17.254L5.53914 16.578C5.61114 15.834 5.64714 15.462 5.53914 15.118C5.43314 14.773 5.19414 14.494 4.71814 13.938L4.28414 13.43C2.60714 11.47 1.76914 10.489 2.06114 9.548C2.35314 8.607 3.58414 8.328 6.04414 7.772L6.68014 7.628C7.37914 7.47 7.72814 7.391 8.00914 7.178C8.29014 6.965 8.46914 6.642 8.82914 5.996L9.15714 5.408Z" fill="url(#paint0_linear_4287_6905)"/>
+                                                        <defs>
+                                                          <linearGradient id="paint0_linear_4287_6905" x1="2.00391" y1="11.9999" x2="22.0044" y2="11.9999" gradientUnits="userSpaceOnUse">
+                                                            <stop stop-color="#FFC136"/>
+                                                            <stop offset="0.197568" stop-color="#FAC142"/>
+                                                            <stop offset="0.525" stop-color="#FFD168"/>
+                                                            <stop offset="0.771328" stop-color="#F5BC3A"/>
+                                                            <stop offset="1" stop-color="#E09B00"/>
+                                                          </linearGradient>
+                                                        </defs>
+                                                      </svg>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M9.15714 5.408C10.4241 3.136 11.0571 2 12.0041 2C12.9511 2 13.5841 3.136 14.8511 5.408L15.1791 5.996C15.5391 6.642 15.7191 6.965 15.9991 7.178C16.2791 7.391 16.6291 7.47 17.3291 7.628L17.9651 7.772C20.4251 8.329 21.6541 8.607 21.9471 9.548C22.2391 10.488 21.4011 11.469 19.7241 13.43L19.2901 13.937C18.8141 14.494 18.5751 14.773 18.4681 15.117C18.3611 15.462 18.3971 15.834 18.4691 16.577L18.5351 17.254C18.7881 19.871 18.9151 21.179 18.1491 21.76C17.3831 22.341 16.2311 21.811 13.9291 20.751L13.3321 20.477C12.6781 20.175 12.3511 20.025 12.0041 20.025C11.6571 20.025 11.3301 20.175 10.6761 20.477L10.0801 20.751C7.77714 21.811 6.62514 22.341 5.86014 21.761C5.09314 21.179 5.22014 19.871 5.47314 17.254L5.53914 16.578C5.61114 15.834 5.64714 15.462 5.53914 15.118C5.43314 14.773 5.19414 14.494 4.71814 13.938L4.28414 13.43C2.60714 11.47 1.76914 10.489 2.06114 9.548C2.35314 8.607 3.58414 8.328 6.04414 7.772L6.68014 7.628C7.37914 7.47 7.72814 7.391 8.00914 7.178C8.29014 6.965 8.46914 6.642 8.82914 5.996L9.15714 5.408Z" fill="url(#paint0_linear_4287_6905)"/>
+                                                        <defs>
+                                                          <linearGradient id="paint0_linear_4287_6905" x1="2.00391" y1="11.9999" x2="22.0044" y2="11.9999" gradientUnits="userSpaceOnUse">
+                                                            <stop stop-color="#FFC136"/>
+                                                            <stop offset="0.197568" stop-color="#FAC142"/>
+                                                            <stop offset="0.525" stop-color="#FFD168"/>
+                                                            <stop offset="0.771328" stop-color="#F5BC3A"/>
+                                                            <stop offset="1" stop-color="#E09B00"/>
+                                                          </linearGradient>
+                                                        </defs>
+                                                      </svg>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M9.15714 5.408C10.4241 3.136 11.0571 2 12.0041 2C12.9511 2 13.5841 3.136 14.8511 5.408L15.1791 5.996C15.5391 6.642 15.7191 6.965 15.9991 7.178C16.2791 7.391 16.6291 7.47 17.3291 7.628L17.9651 7.772C20.4251 8.329 21.6541 8.607 21.9471 9.548C22.2391 10.488 21.4011 11.469 19.7241 13.43L19.2901 13.937C18.8141 14.494 18.5751 14.773 18.4681 15.117C18.3611 15.462 18.3971 15.834 18.4691 16.577L18.5351 17.254C18.7881 19.871 18.9151 21.179 18.1491 21.76C17.3831 22.341 16.2311 21.811 13.9291 20.751L13.3321 20.477C12.6781 20.175 12.3511 20.025 12.0041 20.025C11.6571 20.025 11.3301 20.175 10.6761 20.477L10.0801 20.751C7.77714 21.811 6.62514 22.341 5.86014 21.761C5.09314 21.179 5.22014 19.871 5.47314 17.254L5.53914 16.578C5.61114 15.834 5.64714 15.462 5.53914 15.118C5.43314 14.773 5.19414 14.494 4.71814 13.938L4.28414 13.43C2.60714 11.47 1.76914 10.489 2.06114 9.548C2.35314 8.607 3.58414 8.328 6.04414 7.772L6.68014 7.628C7.37914 7.47 7.72814 7.391 8.00914 7.178C8.29014 6.965 8.46914 6.642 8.82914 5.996L9.15714 5.408Z" fill="url(#paint0_linear_4287_6905)"/>
+                                                        <defs>
+                                                          <linearGradient id="paint0_linear_4287_6905" x1="2.00391" y1="11.9999" x2="22.0044" y2="11.9999" gradientUnits="userSpaceOnUse">
+                                                            <stop stop-color="#FFC136"/>
+                                                            <stop offset="0.197568" stop-color="#FAC142"/>
+                                                            <stop offset="0.525" stop-color="#FFD168"/>
+                                                            <stop offset="0.771328" stop-color="#F5BC3A"/>
+                                                            <stop offset="1" stop-color="#E09B00"/>
+                                                          </linearGradient>
+                                                        </defs>
+                                                      </svg>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M9.15714 5.408C10.4241 3.136 11.0571 2 12.0041 2C12.9511 2 13.5841 3.136 14.8511 5.408L15.1791 5.996C15.5391 6.642 15.7191 6.965 15.9991 7.178C16.2791 7.391 16.6291 7.47 17.3291 7.628L17.9651 7.772C20.4251 8.329 21.6541 8.607 21.9471 9.548C22.2391 10.488 21.4011 11.469 19.7241 13.43L19.2901 13.937C18.8141 14.494 18.5751 14.773 18.4681 15.117C18.3611 15.462 18.3971 15.834 18.4691 16.577L18.5351 17.254C18.7881 19.871 18.9151 21.179 18.1491 21.76C17.3831 22.341 16.2311 21.811 13.9291 20.751L13.3321 20.477C12.6781 20.175 12.3511 20.025 12.0041 20.025C11.6571 20.025 11.3301 20.175 10.6761 20.477L10.0801 20.751C7.77714 21.811 6.62514 22.341 5.86014 21.761C5.09314 21.179 5.22014 19.871 5.47314 17.254L5.53914 16.578C5.61114 15.834 5.64714 15.462 5.53914 15.118C5.43314 14.773 5.19414 14.494 4.71814 13.938L4.28414 13.43C2.60714 11.47 1.76914 10.489 2.06114 9.548C2.35314 8.607 3.58414 8.328 6.04414 7.772L6.68014 7.628C7.37914 7.47 7.72814 7.391 8.00914 7.178C8.29014 6.965 8.46914 6.642 8.82914 5.996L9.15714 5.408Z" fill="url(#paint0_linear_4287_6905)"/>
+                                                        <defs>
+                                                          <linearGradient id="paint0_linear_4287_6905" x1="2.00391" y1="11.9999" x2="22.0044" y2="11.9999" gradientUnits="userSpaceOnUse">
+                                                            <stop stop-color="#FFC136"/>
+                                                            <stop offset="0.197568" stop-color="#FAC142"/>
+                                                            <stop offset="0.525" stop-color="#FFD168"/>
+                                                            <stop offset="0.771328" stop-color="#F5BC3A"/>
+                                                            <stop offset="1" stop-color="#E09B00"/>
+                                                          </linearGradient>
+                                                        </defs>
+                                                      </svg>
+                                                </span>
+                                              </div>
+                                              <div class="d-flex gap-2">
+                                                <div>
+                                                <span class="text-dark message-text fs-14">Shipping Service:</span>
+                                                </div>
+                                               <span class="d-flex">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M9.15714 5.408C10.4241 3.136 11.0571 2 12.0041 2C12.9511 2 13.5841 3.136 14.8511 5.408L15.1791 5.996C15.5391 6.642 15.7191 6.965 15.9991 7.178C16.2791 7.391 16.6291 7.47 17.3291 7.628L17.9651 7.772C20.4251 8.329 21.6541 8.607 21.9471 9.548C22.2391 10.488 21.4011 11.469 19.7241 13.43L19.2901 13.937C18.8141 14.494 18.5751 14.773 18.4681 15.117C18.3611 15.462 18.3971 15.834 18.4691 16.577L18.5351 17.254C18.7881 19.871 18.9151 21.179 18.1491 21.76C17.3831 22.341 16.2311 21.811 13.9291 20.751L13.3321 20.477C12.6781 20.175 12.3511 20.025 12.0041 20.025C11.6571 20.025 11.3301 20.175 10.6761 20.477L10.0801 20.751C7.77714 21.811 6.62514 22.341 5.86014 21.761C5.09314 21.179 5.22014 19.871 5.47314 17.254L5.53914 16.578C5.61114 15.834 5.64714 15.462 5.53914 15.118C5.43314 14.773 5.19414 14.494 4.71814 13.938L4.28414 13.43C2.60714 11.47 1.76914 10.489 2.06114 9.548C2.35314 8.607 3.58414 8.328 6.04414 7.772L6.68014 7.628C7.37914 7.47 7.72814 7.391 8.00914 7.178C8.29014 6.965 8.46914 6.642 8.82914 5.996L9.15714 5.408Z" fill="url(#paint0_linear_4287_6905)"/>
+                                                        <defs>
+                                                          <linearGradient id="paint0_linear_4287_6905" x1="2.00391" y1="11.9999" x2="22.0044" y2="11.9999" gradientUnits="userSpaceOnUse">
+                                                            <stop stop-color="#FFC136"/>
+                                                            <stop offset="0.197568" stop-color="#FAC142"/>
+                                                            <stop offset="0.525" stop-color="#FFD168"/>
+                                                            <stop offset="0.771328" stop-color="#F5BC3A"/>
+                                                            <stop offset="1" stop-color="#E09B00"/>
+                                                          </linearGradient>
+                                                        </defs>
+                                                      </svg>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M9.15714 5.408C10.4241 3.136 11.0571 2 12.0041 2C12.9511 2 13.5841 3.136 14.8511 5.408L15.1791 5.996C15.5391 6.642 15.7191 6.965 15.9991 7.178C16.2791 7.391 16.6291 7.47 17.3291 7.628L17.9651 7.772C20.4251 8.329 21.6541 8.607 21.9471 9.548C22.2391 10.488 21.4011 11.469 19.7241 13.43L19.2901 13.937C18.8141 14.494 18.5751 14.773 18.4681 15.117C18.3611 15.462 18.3971 15.834 18.4691 16.577L18.5351 17.254C18.7881 19.871 18.9151 21.179 18.1491 21.76C17.3831 22.341 16.2311 21.811 13.9291 20.751L13.3321 20.477C12.6781 20.175 12.3511 20.025 12.0041 20.025C11.6571 20.025 11.3301 20.175 10.6761 20.477L10.0801 20.751C7.77714 21.811 6.62514 22.341 5.86014 21.761C5.09314 21.179 5.22014 19.871 5.47314 17.254L5.53914 16.578C5.61114 15.834 5.64714 15.462 5.53914 15.118C5.43314 14.773 5.19414 14.494 4.71814 13.938L4.28414 13.43C2.60714 11.47 1.76914 10.489 2.06114 9.548C2.35314 8.607 3.58414 8.328 6.04414 7.772L6.68014 7.628C7.37914 7.47 7.72814 7.391 8.00914 7.178C8.29014 6.965 8.46914 6.642 8.82914 5.996L9.15714 5.408Z" fill="url(#paint0_linear_4287_6905)"/>
+                                                        <defs>
+                                                          <linearGradient id="paint0_linear_4287_6905" x1="2.00391" y1="11.9999" x2="22.0044" y2="11.9999" gradientUnits="userSpaceOnUse">
+                                                            <stop stop-color="#FFC136"/>
+                                                            <stop offset="0.197568" stop-color="#FAC142"/>
+                                                            <stop offset="0.525" stop-color="#FFD168"/>
+                                                            <stop offset="0.771328" stop-color="#F5BC3A"/>
+                                                            <stop offset="1" stop-color="#E09B00"/>
+                                                          </linearGradient>
+                                                        </defs>
+                                                      </svg>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M9.15714 5.408C10.4241 3.136 11.0571 2 12.0041 2C12.9511 2 13.5841 3.136 14.8511 5.408L15.1791 5.996C15.5391 6.642 15.7191 6.965 15.9991 7.178C16.2791 7.391 16.6291 7.47 17.3291 7.628L17.9651 7.772C20.4251 8.329 21.6541 8.607 21.9471 9.548C22.2391 10.488 21.4011 11.469 19.7241 13.43L19.2901 13.937C18.8141 14.494 18.5751 14.773 18.4681 15.117C18.3611 15.462 18.3971 15.834 18.4691 16.577L18.5351 17.254C18.7881 19.871 18.9151 21.179 18.1491 21.76C17.3831 22.341 16.2311 21.811 13.9291 20.751L13.3321 20.477C12.6781 20.175 12.3511 20.025 12.0041 20.025C11.6571 20.025 11.3301 20.175 10.6761 20.477L10.0801 20.751C7.77714 21.811 6.62514 22.341 5.86014 21.761C5.09314 21.179 5.22014 19.871 5.47314 17.254L5.53914 16.578C5.61114 15.834 5.64714 15.462 5.53914 15.118C5.43314 14.773 5.19414 14.494 4.71814 13.938L4.28414 13.43C2.60714 11.47 1.76914 10.489 2.06114 9.548C2.35314 8.607 3.58414 8.328 6.04414 7.772L6.68014 7.628C7.37914 7.47 7.72814 7.391 8.00914 7.178C8.29014 6.965 8.46914 6.642 8.82914 5.996L9.15714 5.408Z" fill="url(#paint0_linear_4287_6905)"/>
+                                                        <defs>
+                                                          <linearGradient id="paint0_linear_4287_6905" x1="2.00391" y1="11.9999" x2="22.0044" y2="11.9999" gradientUnits="userSpaceOnUse">
+                                                            <stop stop-color="#FFC136"/>
+                                                            <stop offset="0.197568" stop-color="#FAC142"/>
+                                                            <stop offset="0.525" stop-color="#FFD168"/>
+                                                            <stop offset="0.771328" stop-color="#F5BC3A"/>
+                                                            <stop offset="1" stop-color="#E09B00"/>
+                                                          </linearGradient>
+                                                        </defs>
+                                                      </svg>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M9.15714 5.408C10.4241 3.136 11.0571 2 12.0041 2C12.9511 2 13.5841 3.136 14.8511 5.408L15.1791 5.996C15.5391 6.642 15.7191 6.965 15.9991 7.178C16.2791 7.391 16.6291 7.47 17.3291 7.628L17.9651 7.772C20.4251 8.329 21.6541 8.607 21.9471 9.548C22.2391 10.488 21.4011 11.469 19.7241 13.43L19.2901 13.937C18.8141 14.494 18.5751 14.773 18.4681 15.117C18.3611 15.462 18.3971 15.834 18.4691 16.577L18.5351 17.254C18.7881 19.871 18.9151 21.179 18.1491 21.76C17.3831 22.341 16.2311 21.811 13.9291 20.751L13.3321 20.477C12.6781 20.175 12.3511 20.025 12.0041 20.025C11.6571 20.025 11.3301 20.175 10.6761 20.477L10.0801 20.751C7.77714 21.811 6.62514 22.341 5.86014 21.761C5.09314 21.179 5.22014 19.871 5.47314 17.254L5.53914 16.578C5.61114 15.834 5.64714 15.462 5.53914 15.118C5.43314 14.773 5.19414 14.494 4.71814 13.938L4.28414 13.43C2.60714 11.47 1.76914 10.489 2.06114 9.548C2.35314 8.607 3.58414 8.328 6.04414 7.772L6.68014 7.628C7.37914 7.47 7.72814 7.391 8.00914 7.178C8.29014 6.965 8.46914 6.642 8.82914 5.996L9.15714 5.408Z" fill="url(#paint0_linear_4287_6905)"/>
+                                                        <defs>
+                                                          <linearGradient id="paint0_linear_4287_6905" x1="2.00391" y1="11.9999" x2="22.0044" y2="11.9999" gradientUnits="userSpaceOnUse">
+                                                            <stop stop-color="#FFC136"/>
+                                                            <stop offset="0.197568" stop-color="#FAC142"/>
+                                                            <stop offset="0.525" stop-color="#FFD168"/>
+                                                            <stop offset="0.771328" stop-color="#F5BC3A"/>
+                                                            <stop offset="1" stop-color="#E09B00"/>
+                                                          </linearGradient>
+                                                        </defs>
+                                                      </svg>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M9.15714 5.408C10.4241 3.136 11.0571 2 12.0041 2C12.9511 2 13.5841 3.136 14.8511 5.408L15.1791 5.996C15.5391 6.642 15.7191 6.965 15.9991 7.178C16.2791 7.391 16.6291 7.47 17.3291 7.628L17.9651 7.772C20.4251 8.329 21.6541 8.607 21.9471 9.548C22.2391 10.488 21.4011 11.469 19.7241 13.43L19.2901 13.937C18.8141 14.494 18.5751 14.773 18.4681 15.117C18.3611 15.462 18.3971 15.834 18.4691 16.577L18.5351 17.254C18.7881 19.871 18.9151 21.179 18.1491 21.76C17.3831 22.341 16.2311 21.811 13.9291 20.751L13.3321 20.477C12.6781 20.175 12.3511 20.025 12.0041 20.025C11.6571 20.025 11.3301 20.175 10.6761 20.477L10.0801 20.751C7.77714 21.811 6.62514 22.341 5.86014 21.761C5.09314 21.179 5.22014 19.871 5.47314 17.254L5.53914 16.578C5.61114 15.834 5.64714 15.462 5.53914 15.118C5.43314 14.773 5.19414 14.494 4.71814 13.938L4.28414 13.43C2.60714 11.47 1.76914 10.489 2.06114 9.548C2.35314 8.607 3.58414 8.328 6.04414 7.772L6.68014 7.628C7.37914 7.47 7.72814 7.391 8.00914 7.178C8.29014 6.965 8.46914 6.642 8.82914 5.996L9.15714 5.408Z" fill="url(#paint0_linear_4287_6905)"/>
+                                                        <defs>
+                                                          <linearGradient id="paint0_linear_4287_6905" x1="2.00391" y1="11.9999" x2="22.0044" y2="11.9999" gradientUnits="userSpaceOnUse">
+                                                            <stop stop-color="#FFC136"/>
+                                                            <stop offset="0.197568" stop-color="#FAC142"/>
+                                                            <stop offset="0.525" stop-color="#FFD168"/>
+                                                            <stop offset="0.771328" stop-color="#F5BC3A"/>
+                                                            <stop offset="1" stop-color="#E09B00"/>
+                                                          </linearGradient>
+                                                        </defs>
+                                                      </svg>
+                                                </span>
+                                              </div>
+                                              <div class="d-flex gap-2 ">
+                                                <div>
+                                                    <span class="text-dark message-text fs-14">Seller Service:</span>
+                                                </div>
+                                                 <span class="d-flex">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M9.15714 5.408C10.4241 3.136 11.0571 2 12.0041 2C12.9511 2 13.5841 3.136 14.8511 5.408L15.1791 5.996C15.5391 6.642 15.7191 6.965 15.9991 7.178C16.2791 7.391 16.6291 7.47 17.3291 7.628L17.9651 7.772C20.4251 8.329 21.6541 8.607 21.9471 9.548C22.2391 10.488 21.4011 11.469 19.7241 13.43L19.2901 13.937C18.8141 14.494 18.5751 14.773 18.4681 15.117C18.3611 15.462 18.3971 15.834 18.4691 16.577L18.5351 17.254C18.7881 19.871 18.9151 21.179 18.1491 21.76C17.3831 22.341 16.2311 21.811 13.9291 20.751L13.3321 20.477C12.6781 20.175 12.3511 20.025 12.0041 20.025C11.6571 20.025 11.3301 20.175 10.6761 20.477L10.0801 20.751C7.77714 21.811 6.62514 22.341 5.86014 21.761C5.09314 21.179 5.22014 19.871 5.47314 17.254L5.53914 16.578C5.61114 15.834 5.64714 15.462 5.53914 15.118C5.43314 14.773 5.19414 14.494 4.71814 13.938L4.28414 13.43C2.60714 11.47 1.76914 10.489 2.06114 9.548C2.35314 8.607 3.58414 8.328 6.04414 7.772L6.68014 7.628C7.37914 7.47 7.72814 7.391 8.00914 7.178C8.29014 6.965 8.46914 6.642 8.82914 5.996L9.15714 5.408Z" fill="url(#paint0_linear_4287_6905)"/>
+                                                        <defs>
+                                                          <linearGradient id="paint0_linear_4287_6905" x1="2.00391" y1="11.9999" x2="22.0044" y2="11.9999" gradientUnits="userSpaceOnUse">
+                                                            <stop stop-color="#FFC136"/>
+                                                            <stop offset="0.197568" stop-color="#FAC142"/>
+                                                            <stop offset="0.525" stop-color="#FFD168"/>
+                                                            <stop offset="0.771328" stop-color="#F5BC3A"/>
+                                                            <stop offset="1" stop-color="#E09B00"/>
+                                                          </linearGradient>
+                                                        </defs>
+                                                      </svg>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M9.15714 5.408C10.4241 3.136 11.0571 2 12.0041 2C12.9511 2 13.5841 3.136 14.8511 5.408L15.1791 5.996C15.5391 6.642 15.7191 6.965 15.9991 7.178C16.2791 7.391 16.6291 7.47 17.3291 7.628L17.9651 7.772C20.4251 8.329 21.6541 8.607 21.9471 9.548C22.2391 10.488 21.4011 11.469 19.7241 13.43L19.2901 13.937C18.8141 14.494 18.5751 14.773 18.4681 15.117C18.3611 15.462 18.3971 15.834 18.4691 16.577L18.5351 17.254C18.7881 19.871 18.9151 21.179 18.1491 21.76C17.3831 22.341 16.2311 21.811 13.9291 20.751L13.3321 20.477C12.6781 20.175 12.3511 20.025 12.0041 20.025C11.6571 20.025 11.3301 20.175 10.6761 20.477L10.0801 20.751C7.77714 21.811 6.62514 22.341 5.86014 21.761C5.09314 21.179 5.22014 19.871 5.47314 17.254L5.53914 16.578C5.61114 15.834 5.64714 15.462 5.53914 15.118C5.43314 14.773 5.19414 14.494 4.71814 13.938L4.28414 13.43C2.60714 11.47 1.76914 10.489 2.06114 9.548C2.35314 8.607 3.58414 8.328 6.04414 7.772L6.68014 7.628C7.37914 7.47 7.72814 7.391 8.00914 7.178C8.29014 6.965 8.46914 6.642 8.82914 5.996L9.15714 5.408Z" fill="url(#paint0_linear_4287_6905)"/>
+                                                        <defs>
+                                                          <linearGradient id="paint0_linear_4287_6905" x1="2.00391" y1="11.9999" x2="22.0044" y2="11.9999" gradientUnits="userSpaceOnUse">
+                                                            <stop stop-color="#FFC136"/>
+                                                            <stop offset="0.197568" stop-color="#FAC142"/>
+                                                            <stop offset="0.525" stop-color="#FFD168"/>
+                                                            <stop offset="0.771328" stop-color="#F5BC3A"/>
+                                                            <stop offset="1" stop-color="#E09B00"/>
+                                                          </linearGradient>
+                                                        </defs>
+                                                      </svg>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M9.15714 5.408C10.4241 3.136 11.0571 2 12.0041 2C12.9511 2 13.5841 3.136 14.8511 5.408L15.1791 5.996C15.5391 6.642 15.7191 6.965 15.9991 7.178C16.2791 7.391 16.6291 7.47 17.3291 7.628L17.9651 7.772C20.4251 8.329 21.6541 8.607 21.9471 9.548C22.2391 10.488 21.4011 11.469 19.7241 13.43L19.2901 13.937C18.8141 14.494 18.5751 14.773 18.4681 15.117C18.3611 15.462 18.3971 15.834 18.4691 16.577L18.5351 17.254C18.7881 19.871 18.9151 21.179 18.1491 21.76C17.3831 22.341 16.2311 21.811 13.9291 20.751L13.3321 20.477C12.6781 20.175 12.3511 20.025 12.0041 20.025C11.6571 20.025 11.3301 20.175 10.6761 20.477L10.0801 20.751C7.77714 21.811 6.62514 22.341 5.86014 21.761C5.09314 21.179 5.22014 19.871 5.47314 17.254L5.53914 16.578C5.61114 15.834 5.64714 15.462 5.53914 15.118C5.43314 14.773 5.19414 14.494 4.71814 13.938L4.28414 13.43C2.60714 11.47 1.76914 10.489 2.06114 9.548C2.35314 8.607 3.58414 8.328 6.04414 7.772L6.68014 7.628C7.37914 7.47 7.72814 7.391 8.00914 7.178C8.29014 6.965 8.46914 6.642 8.82914 5.996L9.15714 5.408Z" fill="url(#paint0_linear_4287_6905)"/>
+                                                        <defs>
+                                                          <linearGradient id="paint0_linear_4287_6905" x1="2.00391" y1="11.9999" x2="22.0044" y2="11.9999" gradientUnits="userSpaceOnUse">
+                                                            <stop stop-color="#FFC136"/>
+                                                            <stop offset="0.197568" stop-color="#FAC142"/>
+                                                            <stop offset="0.525" stop-color="#FFD168"/>
+                                                            <stop offset="0.771328" stop-color="#F5BC3A"/>
+                                                            <stop offset="1" stop-color="#E09B00"/>
+                                                          </linearGradient>
+                                                        </defs>
+                                                      </svg>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M9.15714 5.408C10.4241 3.136 11.0571 2 12.0041 2C12.9511 2 13.5841 3.136 14.8511 5.408L15.1791 5.996C15.5391 6.642 15.7191 6.965 15.9991 7.178C16.2791 7.391 16.6291 7.47 17.3291 7.628L17.9651 7.772C20.4251 8.329 21.6541 8.607 21.9471 9.548C22.2391 10.488 21.4011 11.469 19.7241 13.43L19.2901 13.937C18.8141 14.494 18.5751 14.773 18.4681 15.117C18.3611 15.462 18.3971 15.834 18.4691 16.577L18.5351 17.254C18.7881 19.871 18.9151 21.179 18.1491 21.76C17.3831 22.341 16.2311 21.811 13.9291 20.751L13.3321 20.477C12.6781 20.175 12.3511 20.025 12.0041 20.025C11.6571 20.025 11.3301 20.175 10.6761 20.477L10.0801 20.751C7.77714 21.811 6.62514 22.341 5.86014 21.761C5.09314 21.179 5.22014 19.871 5.47314 17.254L5.53914 16.578C5.61114 15.834 5.64714 15.462 5.53914 15.118C5.43314 14.773 5.19414 14.494 4.71814 13.938L4.28414 13.43C2.60714 11.47 1.76914 10.489 2.06114 9.548C2.35314 8.607 3.58414 8.328 6.04414 7.772L6.68014 7.628C7.37914 7.47 7.72814 7.391 8.00914 7.178C8.29014 6.965 8.46914 6.642 8.82914 5.996L9.15714 5.408Z" fill="url(#paint0_linear_4287_6905)"/>
+                                                        <defs>
+                                                          <linearGradient id="paint0_linear_4287_6905" x1="2.00391" y1="11.9999" x2="22.0044" y2="11.9999" gradientUnits="userSpaceOnUse">
+                                                            <stop stop-color="#FFC136"/>
+                                                            <stop offset="0.197568" stop-color="#FAC142"/>
+                                                            <stop offset="0.525" stop-color="#FFD168"/>
+                                                            <stop offset="0.771328" stop-color="#F5BC3A"/>
+                                                            <stop offset="1" stop-color="#E09B00"/>
+                                                          </linearGradient>
+                                                        </defs>
+                                                      </svg>
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M9.15714 5.408C10.4241 3.136 11.0571 2 12.0041 2C12.9511 2 13.5841 3.136 14.8511 5.408L15.1791 5.996C15.5391 6.642 15.7191 6.965 15.9991 7.178C16.2791 7.391 16.6291 7.47 17.3291 7.628L17.9651 7.772C20.4251 8.329 21.6541 8.607 21.9471 9.548C22.2391 10.488 21.4011 11.469 19.7241 13.43L19.2901 13.937C18.8141 14.494 18.5751 14.773 18.4681 15.117C18.3611 15.462 18.3971 15.834 18.4691 16.577L18.5351 17.254C18.7881 19.871 18.9151 21.179 18.1491 21.76C17.3831 22.341 16.2311 21.811 13.9291 20.751L13.3321 20.477C12.6781 20.175 12.3511 20.025 12.0041 20.025C11.6571 20.025 11.3301 20.175 10.6761 20.477L10.0801 20.751C7.77714 21.811 6.62514 22.341 5.86014 21.761C5.09314 21.179 5.22014 19.871 5.47314 17.254L5.53914 16.578C5.61114 15.834 5.64714 15.462 5.53914 15.118C5.43314 14.773 5.19414 14.494 4.71814 13.938L4.28414 13.43C2.60714 11.47 1.76914 10.489 2.06114 9.548C2.35314 8.607 3.58414 8.328 6.04414 7.772L6.68014 7.628C7.37914 7.47 7.72814 7.391 8.00914 7.178C8.29014 6.965 8.46914 6.642 8.82914 5.996L9.15714 5.408Z" fill="url(#paint0_linear_4287_6905)"/>
+                                                        <defs>
+                                                          <linearGradient id="paint0_linear_4287_6905" x1="2.00391" y1="11.9999" x2="22.0044" y2="11.9999" gradientUnits="userSpaceOnUse">
+                                                            <stop stop-color="#FFC136"/>
+                                                            <stop offset="0.197568" stop-color="#FAC142"/>
+                                                            <stop offset="0.525" stop-color="#FFD168"/>
+                                                            <stop offset="0.771328" stop-color="#F5BC3A"/>
+                                                            <stop offset="1" stop-color="#E09B00"/>
+                                                          </linearGradient>
+                                                        </defs>
+                                                      </svg>
+                                                </span>
+                                              </div>
+                                           </td>
+                                           <td>
+                                            <div class="d-flex align-items-end gap-3 py-2 "> 
+                                                <img class="" src="../Images/manage product image1.svg" alt="">
+                                                <div class="tablecell1 text-start mt-2">
+                                                <h6 class="mb-0 justify-content-center">HIFI M16 MINI Wireless<br>Bluetooth Headset</h6>
+                                                <p class="mb-0">Item ID: HIFI M-16</p>
+                                                </div>
+                                               </div>
+                                           </td>
+                                          <td>
+                                            <div class="d-flex flex-column gap-2">
+                                                <button class="btn-gray">Reply</button>
+                                                <button class="btn-outline-blue">Report Reviews</button>
+                                                <button class="btn-blue">Hide Reply</button>
+                                            </div>
+                                           </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              
    
   </div>
   </div>
-   </div>
     </main>
 
 
