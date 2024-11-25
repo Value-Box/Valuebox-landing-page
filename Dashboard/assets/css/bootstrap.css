@@ -2815,6 +2815,17 @@ fieldset:disabled .btn {
   background-color: #dc3545;
   border-color: #dc3545;
 }
+.bulk-btn{
+  border-radius: 5px;
+border: 1px solid var(--Primary-Color-Dark-Blue, #002882);
+background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
+padding: 10px 20px;
+color: var(--Primary-Color-Dark-Blue, #002882);
+font-size: 16px;
+}
+.bulk-btn:focus{
+  border: 1px solid var(--Primary-Color-Dark-Blue, #002882);
+}
 .btn-check:focus + .btn-danger,
 .btn-danger:focus,
 .btn-danger:hover {
@@ -9573,6 +9584,9 @@ margin-top: 40px;
 .mt-20{
   margin-top: 20px;
   }
+  .mt-10{
+    margin-top: 10px;
+  }
 .form-check-input{
   width: 20px;
 height: 20px;
@@ -9665,7 +9679,9 @@ text-align: center;
 .gap-20{
   gap: 20px;
 }
-
+.gap-10{
+  gap: 10px;
+}
 .text-Blue-80{
   color: var(Primary-Color-Dark-Blue-80);
 }
@@ -9710,16 +9726,6 @@ text-align: center;
   line-height: clamp(20px, 5vw, 24px);
   font-weight: 400;
 }
-.fs-60{
-  font-size: 60px;
-  font-style: normal;
-font-weight: 700;
-line-height: normal;
-letter-spacing: -0.8px;
-}
-.l-h-24{
-  line-height: 24px;
-}
 .l-h-30{
   line-height: 30px;
 }
@@ -9752,10 +9758,6 @@ letter-spacing: -0.8px;
 padding-top: 40px;
 padding-bottom: 40px;
 }
-.py-10{
-padding-top: 10px;
-padding-bottom: 10px;
-}
 .px-60{
   padding-right: 60px ; 
   padding-left: 60px;
@@ -9774,6 +9776,45 @@ font-size: 16px;
 font-style: normal;
 font-weight: 500;
 line-height: 24px
+}
+.bg-orange-500{
+  background-color: var(--bs-orange-500);
+}
+.bg-orange-200{
+  background-color: var(--bs-orange-200);
+}
+.bg-natural{
+  background: #FCFCFC;
+}
+.text-orange-500{
+  color: var(--bs-orange-500);
+}
+.text-orange-25{
+  color: var(--bs-orange-25);
+}
+.text-orange-100{
+  color: var(--bs-orange-100);
+}
+.text-natural-gray{
+  color: var(--Natural-Gray-Color);
+}
+.overflow-hidden{
+  overflow: hidden;
+}
+.circle{
+  background-color: var(--bs-orange-40);
+  width: 315px;
+  height: 315px;
+  border-radius: 50%;
+  position: absolute;
+  top: 12px;
+}
+.circle-2{
+  background-color: var(--bs-orange-40);
+  width: 225px;
+  height: 225px;
+  border-radius: 50%;
+  position: absolute;
 }
   .bg-orange-500{
     background-color: var(--bs-orange-500);
