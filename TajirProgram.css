@@ -272,6 +272,12 @@ color: #7a5af8 ;
 .zinatbg{
     background-color: #7a5af8 !important;
 }
+.empowringBussinessSection{
+    background-color: #E0F2FE;
+}
+.empowringBussinessSvg{
+    margin-top: -2px;
+}
 .ourvisionimages span{
     color: var(--Primary-Color-Dark-Blue, #002882);
     display: block;
@@ -300,10 +306,13 @@ font-style: normal;
 font-weight: 400;
 line-height: 90px;
 }
-.joinvalueboxgroup{
+/* .joinvalueboxgroup{
     position: absolute;
     top: 1%;
-}
+} */
+ .joinValuBox{
+    background-color: #7A5AF8;
+ }
 .joinvaluebox span{
     color: var(--Secondary-Color-Mon-Yellow-80, #F1B733);
     font-family: Anton;
@@ -560,14 +569,17 @@ line-height: 24px;
 .premiumWorldSection {
     max-height: 500px;
 }
-.premiumWorldSection .col-md-6 {
+.premiumWorldSection .col-lg-6 {
     display: flex;
     max-height: inherit;
 }
-.premiumWorldSection .col-md-6 img{
+.premiumWorldSection .col-lg-6 img{
     max-height: 100%;
-   width: 100%;
-   object-fit: cover;
+   /* width: 100%;
+   object-fit: cover; */
+}
+.premiumProductImg{
+    width: -webkit-fill-available;
 }
 @media (max-width: 1213px) {
 /* Set up the main container as a flex container */
@@ -575,7 +587,16 @@ line-height: 24px;
     display: flex;
     flex-direction: column;
 }
-
+@media (max-width:1071px) {
+    .premiumProductImg{
+        width: max-content;
+    }
+}
+@media (max-width:992px) {
+    .premiumProductImg{
+        width: inherit;
+    }
+}
 /* Ensure all rows take equal height */
 .premiumWorldSection {
     flex: 1; /* Each row will take equal height in the container */
@@ -654,10 +675,10 @@ line-height: 24px;
 }
 
 @media(max-width:650px){
-    .joinvalueboxgroup{
+    /* .joinvalueboxgroup{
         position: absolute;
         top: 8%;
-    }
+    } */
 }
 @media(max-width:613px){
     .video{
@@ -672,8 +693,8 @@ line-height: 24px;
         line-height: 40px;
     }
     .joinvalueboxgroup{
-        position: absolute;
-        top: 8%;
+        /* position: absolute;
+        top: 8%; */
         justify-content: center !important;
     }
     .joinvaluebox span{
@@ -699,8 +720,8 @@ line-height: 24px;
         line-height: 40px;
     }
     .joinvalueboxgroup{
-        position: absolute;
-        top: 5%;
+        /* position: absolute;
+        top: 5%; */
         justify-content: center !important;
     }
     .joinvaluebox span{
@@ -740,8 +761,8 @@ line-height: 24px;
         line-height: 30px;
     }
     .joinvalueboxgroup{
-        position: absolute;
-        top: 2%;
+        /* position: absolute;
+        top: 2%; */
         justify-content: center !important;
     }
     .joinvaluebox span{
@@ -793,8 +814,8 @@ line-height: 24px;
     line-height: 70px; /* 125% */
     }
     .joinvalueboxgroup{
-        position: absolute;
-        top: 2%;
+        /* position: absolute;
+        top: 2%; */
     }
     .joinvaluebox span{
         color: var(--Secondary-Color-Mon-Yellow-80, #F1B733);
@@ -829,8 +850,8 @@ line-height: 24px;
      text-align: center;
     }
     .joinvalueboxgroup{
-        position: absolute;
-        top: 0%;
+        /* position: absolute;
+        top: 0%; */
     }
     .joinvaluebox span{
         color: var(--Secondary-Color-Mon-Yellow-80, #F1B733);
@@ -1455,8 +1476,8 @@ line-height: 32px; /* 133.333% */
     line-height: 40px;
     }
     .joinvalueboxgroup{
-        position: absolute;
-        top: 2%;
+        /* position: absolute;
+        top: 2%; */
     }
     .joinvaluebox span{
         color: var(--Secondary-Color-Mon-Yellow-80, #F1B733);
@@ -1477,8 +1498,8 @@ line-height: 32px; /* 133.333% */
     line-height: 50px;
     }
     .joinvalueboxgroup{
-        position: absolute;
-        top: 12%;
+        /* position: absolute;
+        top: 12%; */
     }
     .joinvaluebox span{
         color: var(--Secondary-Color-Mon-Yellow-80, #F1B733);
@@ -1551,8 +1572,8 @@ line-height: 32px; /* 133.333% */
         line-height: 40px;
     }
     .joinvalueboxgroup{
-        position: absolute;
-        top: 5%;
+        /* position: absolute;
+        top: 5%; */
     }
     .joinvaluebox span{
         color: var(--Secondary-Color-Mon-Yellow-80, #F1B733);
