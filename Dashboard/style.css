@@ -1818,4 +1818,17 @@ background: #12B76A;
     height: fit-content;
     border: 1px solid var(--Light-Gray-Color);
   }
+  .dataInsightBoxShadow {
+    padding: 20px;
+    border-radius: 12px;
+    background: #FCFCFC;
+    box-shadow: 0px 1px 3px 0px rgba(16, 24, 40, 0.10), 0px 1px 2px 0px rgba(16, 24, 40, 0.06);
+width: 300px;
+padding: 20px;
+ }
+ .DatainsightCards{
+  overflow-x: scroll;
+  max-width: 100%;
+    white-space: nowrap;
+ }
  
