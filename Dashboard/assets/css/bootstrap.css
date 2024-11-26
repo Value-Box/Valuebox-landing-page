@@ -9859,3 +9859,27 @@ button:focus {
 .h-inherit {
   height: inherit;
 }
+.top-rouned-btn{
+  display: flex;
+height: 60px;
+padding: 10px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex: 1 0 0;
+border-radius: 8px;
+border-top: 5px solid var(--Natural-Color-20, #CCC);
+background: var(--White, #FFF);
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 32px; 
+color: var(--Natural-Color-40, #999);
+}
+.top-rouned-btn:focus{
+border-top: 5px solid var(--Natural-Color-20, #CCC);
+}
+.top-rouned-btn.active{
+  border-top: 5px solid var(--Primary-Color-Dark-Blue-80, #33539B);
+  background: var(--White, #FFF);
+}
