@@ -9704,20 +9704,31 @@ button:focus {
 }
 .gray-color {
   color: var(--Gray-Color);
+  font-weight: 500;
 }
 .secondary-yellow {
   color: var(--Secondary-Yellow);
 }
+.dark-color {
+  color: var(--Darg-Color) !important;
+}
+
 .fs-18 {
   font-size: clamp(16px, 4vw, 18px);
   line-height: clamp(20px, 5vw, 28px);
   font-weight: 500;
+}
+.fs-40 {
+  font-size: clamp(35px, 8vw, 40px);
+  line-height: clamp(20px, 5vw, 28px);
+  font-weight: 600;
 }
 .fs-16 {
   font-size: 16px;
   line-height: clamp(20px, 5vw, 24px);
   font-weight: 400;
 }
+
 .fs-12 {
   font-size: 12px;
   line-height: clamp(20px, 5vw, 24px);
@@ -9760,8 +9771,12 @@ button:focus {
   padding-left: 60px;
 }
 .px-20 {
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 20px !important;
+  padding-left: 20px !important;
+}
+.py-10{
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .w-max-content {
   width: max-content;
@@ -9794,6 +9809,7 @@ button:focus {
 }
 .text-natural-gray {
   color: var(--Natural-Gray-Color);
+  font-weight: 500;
 }
 .overflow-hidden {
   overflow: hidden;
@@ -9843,7 +9859,12 @@ button:focus {
   height: 315px;
   border-radius: 50%;
   position: absolute;
-  top: 12px;
+  top: 0px;
+}
+.circle img{
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 .circle-2 {
   background-color: var(--bs-orange-40);
@@ -9851,7 +9872,7 @@ button:focus {
   height: 225px;
   border-radius: 50%;
   position: absolute;
-  top: 25px;
+  top: 0px;
 }
 .h-max-content {
   height: max-content;

@@ -7,14 +7,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/bootstrap.css">
-    <link rel="stylesheet" href="../assets/vendors/choices.js/choices.min.css" />
+    <!-- <link rel="stylesheet" href="../assets/vendors/choices.js/choices.min.css" /> -->
   
+    <link rel="stylesheet" href="../assets/vendors/simple-datatables/style.css">
+
     <link rel="stylesheet" href="../assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="../assets/css/app.css">
     <link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/x-icon">
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    
 </head>
 <body>
     <nav class="navbar navbar-expand-sm navbar-light bg-white sticky-top" id="navbar">
@@ -180,7 +184,7 @@
                         </svg>
                     </a>
                     <ul class="submenu ">
-                        <li class="submenu-item active">
+                        <li class="submenu-item ">
                             <a href="component-button.html">Promo’s</a>
                         </li>
                         
@@ -242,8 +246,11 @@
                     <li class="submenu-item ">
                         <a href="component-breadcrumb.html">Inventory Overview</a>
                     </li>
-                    <li class="submenu-item ">
+                    <li class="submenu-item active">
                         <a href="component-button.html">Inventory Control</a>
+                    </li>
+                    <li class="submenu-item ">
+                        <a href="component-button.html">Inventory Report</a>
                     </li>
                     
                 </ul>
@@ -406,69 +413,342 @@
             <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
         </div>
     </div>
-    
-    
+
     <main class="backcolor" id="main">
         <div class="navigation anchortags">
             <a href="../index.html">Home</a>
-            <a href="manageProducts.html">> Marketing Center</a>
-            <a class="active1" href="manageProducts.html">> Promo’s</a>
-          </div>
-          <h1 class="heading-one my-4">Promo’s</h1>
+            <a href="Promos.html">> Warehouse </a>
+            <a class="active1" href="manageProducts.html">> Inventory Control</a>
+        </div>
+        <div class="d-flex justify-content-between align-items-center">
+            <span class="heading-one mt-20 d-inline-block">Inventory Control</span>
 
-          <a href="promosDetail.html">
-            <div class="container-fluid p-0 cursor-pointer">
-                <div class="row bg-orange-500 overflow-hidden form1">
-                    <div class="col-8">
-                        <div>
-                            <span class="fs-40 text-orange-25">Express Delivery</span>
-    
-                            <div class="Promotags d-flex gap-2 mt-20">
-                                <p class="px-3 py-1 rounded-5 text-orange-500 bg-orange-200 subHeading-5 m-0">Platform Focused</p>
-                                <p class="px-3 py-1 rounded-5 text-orange-500 bg-orange-200 subHeading-5 m-0">Seller Benefit</p>
-                            </div>
-                            <div class="mt-20">
-                                <p class="subHeading-3 text-orange-100">Categories Include: Digital Goods, EL, FMCG, Fashion, GM</p>
-                            </div>
-                            <div class="mt-20 px-20 py-10 rounded-12 bg-natural d-flex gap-2">
-                                <div class="d-flex gap-2 ">
-                                  <span class="d-flex align-items-center subHeading-4">Mandatory Agreements</span>
-                                <span class="bg-green-light">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 21C13.1819 21 14.3522 20.7672 15.4442 20.3149C16.5361 19.8626 17.5282 19.1997 18.364 18.364C19.1997 17.5282 19.8626 16.5361 20.3149 15.4442C20.7672 14.3522 21 13.1819 21 12C21 10.8181 20.7672 9.64778 20.3149 8.55585C19.8626 7.46392 19.1997 6.47177 18.364 5.63604C17.5282 4.80031 16.5361 4.13738 15.4442 3.68508C14.3522 3.23279 13.1819 3 12 3C9.61305 3 7.32387 3.94821 5.63604 5.63604C3.94821 7.32387 3 9.61305 3 12C3 14.3869 3.94821 16.6761 5.63604 18.364C7.32387 20.0518 9.61305 21 12 21ZM11.768 15.64L16.768 9.64L15.232 8.36L10.932 13.519L8.707 11.293L7.293 12.707L10.293 15.707L11.067 16.481L11.768 15.64Z" fill="#12B76A"/>
-                                      </svg> FREE SHIPPING
-                                </span>
-                                <span class="bg-green-light">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 21C13.1819 21 14.3522 20.7672 15.4442 20.3149C16.5361 19.8626 17.5282 19.1997 18.364 18.364C19.1997 17.5282 19.8626 16.5361 20.3149 15.4442C20.7672 14.3522 21 13.1819 21 12C21 10.8181 20.7672 9.64778 20.3149 8.55585C19.8626 7.46392 19.1997 6.47177 18.364 5.63604C17.5282 4.80031 16.5361 4.13738 15.4442 3.68508C14.3522 3.23279 13.1819 3 12 3C9.61305 3 7.32387 3.94821 5.63604 5.63604C3.94821 7.32387 3 9.61305 3 12C3 14.3869 3.94821 16.6761 5.63604 18.364C7.32387 20.0518 9.61305 21 12 21ZM11.768 15.64L16.768 9.64L15.232 8.36L10.932 13.519L8.707 11.293L7.293 12.707L10.293 15.707L11.067 16.481L11.768 15.64Z" fill="#12B76A"/>
-                                      </svg> Seller Agreement
-                                </span>
-    
-                                </div>
-                                <a href="#" class="paragraph-blue ms-auto fs-20">
-                                    Promo’s Agreements 
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                        <path d="M7.00156 1L5.60156 2.5L13.0016 10L5.60156 17.5L7.00156 19L16.0016 10L7.00156 1Z" fill="#33539B"/>
-                                      </svg>
-                                    </a>
-                            </div>
-                        </div>
+            <div>
+                <input type="date" class="form-control mt-2" id="customDateInput">
+            </div>
+        </div>
+
+        
+        <div class="card-body p-0 mt-40">
+         
+          <div class="list-group list-group-horizontal-sm mb-1 text-center gap-20" role="tablist">
+              <a class="top-rouned-btn active" id="list-sunday-list" data-bs-toggle="list" href="#send_warehouse" role="tab">Send to Warehouse</a>
+              <a class="top-rouned-btn" id="list-monday-list" data-bs-toggle="list" href="#return_warehouse" role="tab">Return From Warehouse</a>
+          </div>
+          <div class="tab-content text-justify mt-40">
+              <div class="tab-pane fade show active " id="send_warehouse" role="tabpanel" aria-labelledby="list-sunday-list">
+                <div class="form1">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="subHeading">Filters</span>
+                    <div>
+                      <button class="btn-outline-gray">Reset</button>
                     </div>
-                    <div class="col-4 d-flex align-items-end justify-content-end position-relative">
-                        <div class="circle d-flex align-items-start">
-                            <img src="../Images/deliveryVan.svg" alt="" srcset="">
-                        </div>
+                  </div>
+                  <div class="row mt-40 gap-20">
+                    <div class="col p-0">
+                      <span class="message-text">Inbound Order No.</span>
+                      <input class="form-control form-control-lg" type="text" placeholder="Please Input">
                     </div>
+  
+                    <div class="col p-0">
+                      <span class="message-text">Created Time</span>
+                      <input class="form-control form-control-lg" name="daterange" type="text" id="date" placeholder="Start Date  |  End Date">
+                    </div>
+  
+                    <div class="col p-0">
+                      <span class="message-text">Inbound Warehouse</span>
+                      <fieldset class="form-group">
+                        <select class="form-select" id="basicSelect">
+                            <option value="">Please Select</option>
+                            <option value="kachehri">Kachehri Warehouse</option>
+                            <option value="mda">MDA Warehouse</option>
+                        </select>
+                    </fieldset>  
+                  </div>
+  
+                    <div class="col p-0">
+                      <span class="message-text">Delivery Type</span>
+                      <fieldset class="form-group">
+                        <select class="form-select" id="basicSelect">
+                            <option value="">Please Select</option>
+                            <option value="Standard">Standard</option>
+                            
+                        </select>
+                     </fieldset>  
+                   </div>
+  
+                   
+                    
+                  </div>
+  
+                  <div class="row mt-20 gap-20">
+                    <div class="col p-0">
+                      <span class="message-text">Fulfilment SKU</span>
+                      <input class="form-control form-control-lg" type="text" placeholder="Large Input">
+                    </div>
+                    <div class="col p-0">
+                      <span class="message-text">Seller SKU</span>
+                      <input class="form-control form-control-lg" type="text" placeholder="Please Input">
+                    </div>
+   
+                    <div class="col p-0">
+                      <span class="message-text">On Time</span>
+                      <div>
+                        <input type="datetime-local" name="onTime" id="onTime" class="form-control form-control-lg">
+                      </div>
+                   </div>    
+                  </div>
                 </div>
+                <div class="form1 mt-40">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="subHeading">Send To Warehouse</span>
+                    <div class="d-flex gap-3">
+                      <button class="btn-outline-gray">Import 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M12 4V14M12 14L15 11M12 14L9 11" stroke="#999999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M12 20C9.87827 20 7.84344 19.1571 6.34315 17.6569C4.84285 16.1566 4 14.1217 4 12M20 12C20.0007 13.1994 19.7314 14.3835 19.2121 15.4646C18.6928 16.5457 17.9367 17.496 17 18.245" stroke="#999999" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                      </button>
+                      <button class="btn-outline-gray">Export 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M12 20V10M12 10L15 13M12 10L9 13" stroke="#999999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12M20 12C20.0007 10.8006 19.7314 9.61651 19.2121 8.53542C18.6928 7.45434 17.9367 6.50403 17 5.755" stroke="#999999" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                      </button>
+                      <button class="btn-blue">Create New IO</button>
+                    </div>
+                  </div>
+  
+                  <div class="col allbar d-flex gap-3 p-0 mt-40">
+                    <a class="active" href="">All</a>
+                    <a class="" href="">All Pending <span class="notification-badge">12</span></a>
+                    <a class="" href="">All Approved <span class="notification-badge">27</span></a>
+                    <a class="" href="">All Completed <span class="notification-badge">1</span></a>
+                </div>
+  
+                <div class="form-group w-100 TableWrapper mt-40 pb-0 ">
+                  <table class="send_wareh_Table" id="send_wareh_Table">
+                    <thead>
+                      <tr>
+                        <th><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Inbound Order No.</th>
+                        <th>IO Status</th> 
+                        <th>Created Time</th>
+                        <th>Estimated Time</th>
+                        <th>Inbound Time</th>
+                        <th>SKU Requested</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="d-flex gap-1">
+                          <input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku">
+                           <a href="#">IO7845123895623</a>
+                        </td>
+                        <td>Cancelled by VakueBox</td>
+                        <td>2024-06-11 23:28:26</td>
+                        <td>2024-06-11 23:28:26</td>
+                        <td>RS 1,299.00</td>
+                        <td></td>
+                    </tr>
+  
+                    </tbody>
+                  </table>        
               </div>
-          </a>
+                 </div>
+              </div>
+               <div class="tab-pane fade" id="return_warehouse" role="tabpanel" aria-labelledby="list-monday-list">
+                <div class="form1">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="subHeading">Filters</span>
+                    <div>
+                      <button class="btn-outline-gray">Reset</button>
+                    </div>
+                  </div>
+                  <div class="row mt-40 gap-20">
+                    <div class="col p-0">
+                      <span class="message-text">Outbound Order No.</span>
+                      <input class="form-control form-control-lg" type="text" placeholder="Please Input">
+                    </div>
+  
+                    <div class="col p-0">
+                      <span class="message-text">Created Time</span>
+                      <input class="form-control form-control-lg" name="daterange" type="text" id="date" placeholder="Start Date  |  End Date">
+                    </div>
+  
+                    <div class="col p-0">
+                      <span class="message-text">Outbound Time</span>
+                      <fieldset class="form-group">
+                        <select class="form-select" id="basicSelect">
+                            <option value="">Please Select</option>
+                            <option value="kachehri">Kachehri Warehouse</option>
+                            <option value="mda">MDA Warehouse</option>
+                        </select>
+                    </fieldset>  
+                  </div>
+  
+                    <div class="col p-0">
+                      <span class="message-text">Outbound Warehouse</span>
+                      <fieldset class="form-group">
+                        <select class="form-select" id="basicSelect">
+                            <option value="">Please Select</option>
+                            <option value="Standard">Standard</option>
+                            
+                        </select>
+                     </fieldset>  
+                   </div>
+  
+                   
+                    
+                  </div>
+  
+                  <div class="row mt-20 gap-20">
+                    <div class="col p-0">
+                      <span class="message-text">Fulfilment SKU</span>
+                      <input class="form-control form-control-lg" type="text" placeholder="Large Input">
+                    </div>
+                    <div class="col p-0">
+                      <span class="message-text">Fulfilment SKU Name</span>
+                      <input class="form-control form-control-lg" type="text" placeholder="Large Input">
+                    </div>
+                    <div class="col p-0">
+                      <span class="message-text">Delivery Type</span>
+                      <fieldset class="form-group">
+                        <select class="form-select" id="basicSelect">
+                            <option value="">Please Select</option>
+                            <option value="kachehri">Kachehri Warehouse</option>
+                            <option value="mda">MDA Warehouse</option>
+                        </select>
+                    </fieldset>  
+                  </div>
+                    <div class="col p-0">
+                      <span class="message-text">Seller SKU</span>
+                      <input class="form-control form-control-lg" type="text" placeholder="Please Input">
+                    </div>
+   
+                    
+                   <div class="col p-0">
+                    <span class="message-text">Outbound Reason</span>
+                    <fieldset class="form-group">
+                      <select class="form-select" id="basicSelect">
+                          <option value="">Please Select</option>
+                          <option value="kachehri">Kachehri Warehouse</option>
+                          <option value="mda">MDA Warehouse</option>
+                      </select>
+                  </fieldset>  
+                </div>
+  
+                  </div>
+                </div>
+                <div class="form1 mt-40">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="subHeading">Return from warehouse</span>
+                    <div class="d-flex gap-3">
+                     
+                      <button class="btn-outline-gray">Export 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M12 20V10M12 10L15 13M12 10L9 13" stroke="#999999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12M20 12C20.0007 10.8006 19.7314 9.61651 19.2121 8.53542C18.6928 7.45434 17.9367 6.50403 17 5.755" stroke="#999999" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                      </button>
+                      <button class="btn-blue">Create New IO</button>
+                    </div>
+                  </div>
+  
+                  <div class="col allbar d-flex gap-3 p-0 mt-40">
+                    <a class="active" href="">All</a>
+                    <a class="" href="">All Pending <span class="notification-badge">12</span></a>
+                    <a class="" href="">All Approved <span class="notification-badge">27</span></a>
+                    <a class="" href="">All Completed <span class="notification-badge">1</span></a>
+                </div>
+  
+                <div class="form-group w-100 TableWrapper mt-40 pb-0 ">
+                  <table class="send_wareh_Table" id="send_wareh_Table">
+                    <thead>
+                      <tr>
+                        <th><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Inbound Order No.</th>
+                        <th>IO Status</th> 
+                        <th>Created Time</th>
+                        <th>Estimated Time</th>
+                        <th>Inbound Time</th>
+                        <th>SKU Requested</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="d-flex gap-1">
+                          <input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku">
+                           <a href="#">IO7845123895623</a>
+                        </td>
+                        <td>Cancelled by VakueBox</td>
+                        <td>2024-06-11 23:28:26</td>
+                        <td>2024-06-11 23:28:26</td>
+                        <td>RS 1,299.00</td>
+                        <td></td>
+                    </tr>
+  
+                    </tbody>
+                  </table>        
+              </div>
+                 </div>
+               </div>
+              
+              
+          </div>
+      </div>
+
     </main>
 
-
-    <script src="../assets/vendors/ckeditor/ckeditor.js"></script>
+    <script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
+    <!-- <script src="../assets/vendors/ckeditor/ckeditor.js"></script> -->
     <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/vendors/choices.js/choices.min.js"></script>
+    <!-- <script src="../assets/vendors/choices.js/choices.min.js"></script> -->
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+ <!-- jQuery -->
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+ <!-- Moment.js -->
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+ <!-- Daterangepicker CSS and JS -->
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+ <script>
+  $(function() {
+    $('input[name="daterange"]').daterangepicker({
+      opens: 'center',
+      locale: {
+        format: 'DD MMM YYYY' // Example: 01 Jan 2022
+      },
+      autoUpdateInput: false  // This stops the input from updating automatically before selection
+    }, function(start, end, label) {
+      // When a user selects a range, update the input field with the selected dates
+      $('input[name="daterange"]').val(start.format('DD MMM YYYY') + ' | ' + end.format('DD MMM YYYY'));
+    });
+  });
+
+  let sendwarehouseTable = document.querySelector('#send_wareh_Table');
+  new simpleDatatables.DataTable(sendwarehouseTable);
+
+
+  function replaceArrows() {
+    // Select all elements with the page-link class
+    document.querySelectorAll(".page-link").forEach(function (link) {
+      if (link.innerHTML === "‹") {
+        link.innerHTML = "Previous"; // Replace left arrow with "Previous"
+      } else if (link.innerHTML === "›") {
+        link.innerHTML = "Next"; // Replace right arrow with "Next"
+      }
+    });
+  }
+
+  // Call this function once on page load
+  replaceArrows();
+
+  // Observe for changes in pagination to handle dynamic updates
+  const paginationObserver = new MutationObserver(replaceArrows);
+  document.querySelectorAll(".pagination").forEach(function (pagination) {
+    paginationObserver.observe(pagination, { childList: true, subtree: true });
+  });
+
+  </script>
 </body>
 </html>

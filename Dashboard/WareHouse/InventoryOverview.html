@@ -7,8 +7,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/bootstrap.css">
-    <link rel="stylesheet" href="../assets/vendors/choices.js/choices.min.css" />
+    <!-- <link rel="stylesheet" href="../assets/vendors/choices.js/choices.min.css" /> -->
   
+    <!-- <link rel="stylesheet" href="../assets/vendors/simple-datatables/style.css"> -->
+
     <link rel="stylesheet" href="../assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="../assets/css/app.css">
@@ -180,7 +182,7 @@
                         </svg>
                     </a>
                     <ul class="submenu ">
-                        <li class="submenu-item active">
+                        <li class="submenu-item ">
                             <a href="component-button.html">Promo’s</a>
                         </li>
                         
@@ -239,11 +241,14 @@
                     </svg>
                 </a>
                 <ul class="submenu ">
-                    <li class="submenu-item ">
-                        <a href="component-breadcrumb.html">Inventory Overview</a>
+                    <li class="submenu-item active">
+                        <a href="InventoryOverview.html">Inventory Overview</a>
                     </li>
                     <li class="submenu-item ">
-                        <a href="component-button.html">Inventory Control</a>
+                        <a href="InventoryControl.html">Inventory Control</a>
+                    </li>
+                    <li class="submenu-item ">
+                        <a href="component-button.html">Inventory Report</a>
                     </li>
                     
                 </ul>
@@ -406,69 +411,163 @@
             <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
         </div>
     </div>
-    
-    
+
     <main class="backcolor" id="main">
         <div class="navigation anchortags">
             <a href="../index.html">Home</a>
-            <a href="manageProducts.html">> Marketing Center</a>
-            <a class="active1" href="manageProducts.html">> Promo’s</a>
-          </div>
-          <h1 class="heading-one my-4">Promo’s</h1>
+            <a href="Promos.html">> Warehouse </a>
+            <a class="active1" href="manageProducts.html">> Inventory Overview</a>
+        </div>
+        <div class="d-flex justify-content-between align-items-center">
+            <span class="heading-one mt-20 d-inline-block">Inventory Overview</span>
 
-          <a href="promosDetail.html">
-            <div class="container-fluid p-0 cursor-pointer">
-                <div class="row bg-orange-500 overflow-hidden form1">
-                    <div class="col-8">
-                        <div>
-                            <span class="fs-40 text-orange-25">Express Delivery</span>
-    
-                            <div class="Promotags d-flex gap-2 mt-20">
-                                <p class="px-3 py-1 rounded-5 text-orange-500 bg-orange-200 subHeading-5 m-0">Platform Focused</p>
-                                <p class="px-3 py-1 rounded-5 text-orange-500 bg-orange-200 subHeading-5 m-0">Seller Benefit</p>
-                            </div>
-                            <div class="mt-20">
-                                <p class="subHeading-3 text-orange-100">Categories Include: Digital Goods, EL, FMCG, Fashion, GM</p>
-                            </div>
-                            <div class="mt-20 px-20 py-10 rounded-12 bg-natural d-flex gap-2">
-                                <div class="d-flex gap-2 ">
-                                  <span class="d-flex align-items-center subHeading-4">Mandatory Agreements</span>
-                                <span class="bg-green-light">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 21C13.1819 21 14.3522 20.7672 15.4442 20.3149C16.5361 19.8626 17.5282 19.1997 18.364 18.364C19.1997 17.5282 19.8626 16.5361 20.3149 15.4442C20.7672 14.3522 21 13.1819 21 12C21 10.8181 20.7672 9.64778 20.3149 8.55585C19.8626 7.46392 19.1997 6.47177 18.364 5.63604C17.5282 4.80031 16.5361 4.13738 15.4442 3.68508C14.3522 3.23279 13.1819 3 12 3C9.61305 3 7.32387 3.94821 5.63604 5.63604C3.94821 7.32387 3 9.61305 3 12C3 14.3869 3.94821 16.6761 5.63604 18.364C7.32387 20.0518 9.61305 21 12 21ZM11.768 15.64L16.768 9.64L15.232 8.36L10.932 13.519L8.707 11.293L7.293 12.707L10.293 15.707L11.067 16.481L11.768 15.64Z" fill="#12B76A"/>
-                                      </svg> FREE SHIPPING
-                                </span>
-                                <span class="bg-green-light">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 21C13.1819 21 14.3522 20.7672 15.4442 20.3149C16.5361 19.8626 17.5282 19.1997 18.364 18.364C19.1997 17.5282 19.8626 16.5361 20.3149 15.4442C20.7672 14.3522 21 13.1819 21 12C21 10.8181 20.7672 9.64778 20.3149 8.55585C19.8626 7.46392 19.1997 6.47177 18.364 5.63604C17.5282 4.80031 16.5361 4.13738 15.4442 3.68508C14.3522 3.23279 13.1819 3 12 3C9.61305 3 7.32387 3.94821 5.63604 5.63604C3.94821 7.32387 3 9.61305 3 12C3 14.3869 3.94821 16.6761 5.63604 18.364C7.32387 20.0518 9.61305 21 12 21ZM11.768 15.64L16.768 9.64L15.232 8.36L10.932 13.519L8.707 11.293L7.293 12.707L10.293 15.707L11.067 16.481L11.768 15.64Z" fill="#12B76A"/>
-                                      </svg> Seller Agreement
-                                </span>
-    
-                                </div>
-                                <a href="#" class="paragraph-blue ms-auto fs-20">
-                                    Promo’s Agreements 
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                        <path d="M7.00156 1L5.60156 2.5L13.0016 10L5.60156 17.5L7.00156 19L16.0016 10L7.00156 1Z" fill="#33539B"/>
-                                      </svg>
-                                    </a>
-                            </div>
-                        </div>
+            <div>
+                <input type="date" class="form-control mt-2" id="customDateInput">
+            </div>
+        </div>
+        <div class="container-fluid mt-40 p-0">
+            <div class="row gap-5">
+                <div class="col form1">
+                    <div class="d-flex justify-content-between">
+                      <span class="subHeading-3">Send to warehouse 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#999999" stroke-width="2"/>
+                            <path d="M12 7H12.01" stroke="#999999" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M10 11H12V16M10 16H14" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                      </span>
+                     
+                    <div class="dropdown">
+                      <button class="bg-white dropdown-toggle me-1" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M19 13C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11C18.4477 11 18 11.4477 18 12C18 12.5523 18.4477 13 19 13Z" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M5 13C5.55228 13 6 12.5523 6 12C6 11.4477 5.55228 11 5 11C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13Z" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item dark-color" href="#">Export as PDF</a>
+                          <a class="dropdown-item dark-color" href="#">Export ac CSV</a>
+                      </div>
                     </div>
-                    <div class="col-4 d-flex align-items-end justify-content-end position-relative">
-                        <div class="circle d-flex align-items-start">
-                            <img src="../Images/deliveryVan.svg" alt="" srcset="">
-                        </div>
+                    </div>
+                    <p class="text-natural-gray fs-12">Today</p>
+                    <div class="TableWrapper mt-20">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#SKU</th>
+                                    <th>#Items</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="gray-color">Gaming_MouseVB45</td>
+                                    <td class="text-natural-gray">100</td>
+                                    <td class="text-natural-gray">Pending Seller Accept</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-              </div>
-          </a>
+                <div class="col form1">
+                    <div class="d-flex justify-content-between">
+                      <span class="subHeading-3">Return From Warehouse 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#999999" stroke-width="2"/>
+                            <path d="M12 7H12.01" stroke="#999999" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M10 11H12V16M10 16H14" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                    </span>
+                    <div class="dropdown">
+                      <button class="bg-white dropdown-toggle me-1" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M19 13C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11C18.4477 11 18 11.4477 18 12C18 12.5523 18.4477 13 19 13Z" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M5 13C5.55228 13 6 12.5523 6 12C6 11.4477 5.55228 11 5 11C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13Z" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item dark-color" href="#">Export as PDF</a>
+                          <a class="dropdown-item dark-color" href="#">Export ac CSV</a>
+                      </div>
+                    </div>
+                    </div>
+                    <p class="text-natural-gray fs-12">Today</p>
+                    <div class="TableWrapper mt-20">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#SKU</th>
+                                    <th>#Items</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="gray-color">Gaming_MouseVB45</td>
+                                    <td class="text-natural-gray">452</td>
+                                    <td class="text-natural-gray">Approved</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-40">
+                <div class="col-12 form1">
+                    <div class="d-flex justify-content-between">
+                      <span class="subHeading-3">SKUs Below Min. alert threshold 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#999999" stroke-width="2"/>
+                            <path d="M12 7H12.01" stroke="#999999" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M10 11H12V16M10 16H14" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                    </span>
+                    <div class="dropdown">
+                      <button class="bg-white dropdown-toggle me-1" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M19 13C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11C18.4477 11 18 11.4477 18 12C18 12.5523 18.4477 13 19 13Z" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M5 13C5.55228 13 6 12.5523 6 12C6 11.4477 5.55228 11 5 11C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13Z" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item dark-color" href="#">Export as PDF</a>
+                          <a class="dropdown-item dark-color" href="#">Export ac CSV</a>
+                      </div>
+                    </div>
+                    </div>
+                    <p class="text-natural-gray fs-12">Live Data, no history available</p>
+                    <div class="TableWrapper mt-20">
+                        <table>
+                            <thead class="text-center">
+                                <tr>
+                                    <th>#SKU</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <tr>
+                                    <td class="gray-color">Gaming_MouseVB45</td>
+                                    <td class="text-natural-gray"><a href="#">Check live Inventory</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
-
-    <script src="../assets/vendors/ckeditor/ckeditor.js"></script>
+    <!-- <script src="../assets/vendors/simple-datatables/simple-datatables.js"></script> -->
+    <!-- <script src="../assets/vendors/ckeditor/ckeditor.js"></script> -->
     <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/vendors/choices.js/choices.min.js"></script>
+    <!-- <script src="../assets/vendors/choices.js/choices.min.js"></script> -->
     <script src="../assets/js/main.js"></script>
+    <!-- <script src="../assets/js/bootstrap.bundle.min.js"></script> -->
 </body>
 </html>
