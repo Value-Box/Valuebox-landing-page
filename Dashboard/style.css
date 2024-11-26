@@ -1831,4 +1831,17 @@ padding: 20px;
   max-width: 100%;
     white-space: nowrap;
  }
+ .bulkManagDropDown1 {
+  border-radius: 5px;
+  
+  background-color: #F2F2F2;
+  color: #002882;
+  background-image: url(../Images/Frame1000004423.svg);
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
  
