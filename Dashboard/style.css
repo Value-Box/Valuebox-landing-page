@@ -1726,60 +1726,43 @@ font-weight: 700;
 line-height: 60px; /* 125% */
 letter-spacing: -0.96px;
 }
-.promoVideo {
-  border-radius: 12px;
-  max-width: 100%;
-  max-height: 535px;
-  aspect-ratio: 16 / 9; /* This maintains a responsive 16:9 aspect ratio */
-  overflow: hidden;
-  padding: 0px;
-}
-
-.promoVideo iframe {
-  width: 100%;
-  height: 100%;
-}
-.top-rouned-btn{
-  display: flex;
-height: 60px;
+.replyBox{
 padding: 10px;
-justify-content: center;
+align-items: flex-start;
+gap: 10px;
+align-self: stretch;
+background: var(--Natural-Color-10, #F2F2F2);
+border-radius: 8px;
+}
+.TableWrapper1{
+ padding: 10px 15px;
+flex-direction: column;
+align-items: flex-start;
+gap: 17px;
+align-self: stretch;
+border: 1px solid #DBDBDB;
+background: #FFF;
+border-radius: 8px;
+overflow: hidden;
+overflow-x: auto;
+}
+.TableWrapper1 table {
+  border-collapse: collapse;
+  width: 100%;
+ }
+ .TableWrapper1 th{
+  border-bottom: 1px solid #DBDBDB;
+  background: #FCFCFC;
+  }
+  .progress-bar1{
 align-items: center;
 gap: 10px;
-flex: 1 0 0;
-border-radius: 8px;
-border-top: 5px solid var(--Natural-Color-20, #CCC);
-background: var(--White, #FFF);
-font-size: 24px;
-font-style: normal;
-font-weight: 600;
-line-height: 32px; 
-color: var(--Natural-Color-40, #999);
-
-}
-.top-rouned-btn:focus{
-border-top: 5px solid var(--Natural-Color-20, #CCC);
-
-
-}
-
-.top-rouned-btn.active{
-  border-top: 5px solid var(--Primary-Color-Dark-Blue-80, #33539B);
-  background: var(--White, #FFF);
-}
-
-.sllerSku{
-  padding: 10px 40px 10px 15px;
-  color: var(--Gray-Color);
-  background-color: #F2F2F2;
-  line-height: 30px;
-  font-size: 16px;
-  font-weight: 500;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border-radius: 5px 0px 0px 5px; /* top-left 5px, top-right 10px, bottom-right 15px, bottom-left 20px */
-  height: fit-content;
-  border: 1px solid var(--Light-Gray-Color);
-}
+align-self: stretch;
+display: flex;
+align-items: center;
+gap: 10px;
+align-self: stretch;
+border-radius: 1000000px;
+background: #12B76A;
+  }
+ 
