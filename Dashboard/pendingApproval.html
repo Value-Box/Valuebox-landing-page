@@ -6,11 +6,20 @@
     <title>Document</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-11 my-2 mw-1728 mx-auto">
+    <div class="container-fluid p-0">
+        <div class="row m-0">
+    <div class="container-fluid p-80 d-flex justify-content-end ">
+      <div class="col-11 m-0 bg-white p-5 rounded-4">
+              <p class="text-yellow">Pending Approval</p>
                 <div class="row m-0 align-items-center applicationStatus border border-secondary mb-5 mb-sm-0">
                     <div class="col-md-5 col-xl-7 p-0 applicationStatusText">
                       <h3>Application Status</h3>
@@ -33,41 +42,37 @@
             </div>
         </div>
 
-        <div class="row m-0 bg-whitw w-100 g-5 rounded-4 p-3 p-sm-4 pt-md-5 rightIconsParent">
+        </div>
+    </div>
+    </div>
+    <div class="container-fluid d-flex">
+      <div class="row w-25 mt-200 bg-transparent rotate-90 ">
+        <div class="col-12">
             <div class="container p-0">
               <div class="steps accountApprovalPage">
                 <div class="circleParent">
                   <span class="circle completed" data-step="1">
-                    <span class="inner">
+                    <span class="inner rotate-neg-90">
                       <i class="fa-solid fa-check"></i>
                     </span>
                   </span>
-                  <p class="text-center">Verify Phone Number</p>
+                  
                 </div>
                 <div class="circleParent">
-                  <span class="circle completed" data-step="2">
-                    <span class="inner">
+                  <span class="circle" data-step="2">
+                    <span class="inner rotate-neg-90">
                       <i class="fa-solid fa-check"></i>
                     </span>
                   </span>
-                  <p class="text-center">Enter Personal Info</p>
                 </div>
                 <div class="circleParent">
-                  <span class="circle completed" data-step="3">
-                    <span class="inner">
+                  <span class="circle" data-step="3">
+                    <span class="inner rotate-neg-90">
                       <i class="fa-solid fa-check"></i>
                     </span>
                   </span>
-                  <p class="text-center">Enter Business Info</p>
                 </div>
-                <div class="circleParent">
-                  <span class="circle active" data-step="4">
-                    <span class="inner">
-                      <i class="fa-solid fa-check"></i>
-                    </span>
-                  </span>
-                  <p class="text-center">Account Status</p>
-                </div>
+                
                 <div class="progress-bar">
                   <span class="indicator">
                     <span class="inner"></span>
@@ -76,7 +81,24 @@
               </div>
               
             </div>
+        </div> 
+      </div>
+      <div class="col-10">
+        <div class="row">
+          <div class="col-12 ">
+            <p class="heading m-0">Document Verification</p>   
+            <span class="small-text">Your documents will be verified to ensure everything is set up for success.</span>
           </div>
-    </div>
+          <div class="col-12 ">
+            <p class="heading m-0">Call with ValueBox</p>   
+            <span class="small-text">A quick video call with one of our representatives will be scheduled to verify your details.</span>
+          </div>
+          <div class="col-12 ">
+            <p class="heading m-0">Get Approved</p>   
+            <span class="small-text">Once everything is verified, your account will be activated, and you’re ready to sell on ValueBox!</span>
+          </div>
+        </div>
+        </div>
+      </div>
 </body>
 </html>
