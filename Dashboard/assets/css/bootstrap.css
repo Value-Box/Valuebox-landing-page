@@ -9726,6 +9726,9 @@ button:focus {
   line-height: clamp(20px, 5vw, 24px);
   font-weight: 400;
 }
+.l-h-24 {
+  line-height: 24px;
+}
 .l-h-30 {
   line-height: 30px;
 }
@@ -9885,4 +9888,9 @@ border-top: 5px solid var(--Natural-Color-20, #CCC);
 .top-rouned-btn.active{
   border-top: 5px solid var(--Primary-Color-Dark-Blue-80, #33539B);
   background: var(--White, #FFF);
+}
+.list-group-item-action.active{
+  background-color: #002882;
+  color: var(--Primary-Color-Dark-Blue-10, #E6EAF3)  !important;
+
 }

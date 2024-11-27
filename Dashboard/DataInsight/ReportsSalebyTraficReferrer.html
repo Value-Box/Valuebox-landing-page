@@ -411,286 +411,64 @@
             </div>
         </div>
    <main class="backcolor" id="main">
-    <div class="navigation anchortags py-4">
-        <a href="../index.html">Home</a>
-        <a href="dataInsightdashboard.html">>Business Advisor</a>
-        <a class="active1" href="Product.html">>Product</a>
-      </div>   
-  <div class="container-fluid">
+    <div class="container-fluid">
     <div class="d-flex justify-content-between">
-        <span class="heading-one">Business Advisor</span>
-        <div>
-            <input type="date" class="form-control mt-2" id="customDateInput">
+        <span class="heading-one">Sales by Traffic referrer</span>
+    </div>
+   <div class="form1 mt-40">
+    <div class="form-group input gap-0 p-0 w-100 d-flex ">
+        <input type="text" class="form-control border-0 form-control-lg" placeholder="Search Reports" aria-label="input" aria-describedby="button-addon2">
+       <span class="input-group-text h-inherit rounded-right" id="basic-addon1"><i class="bi bi-search"></i></span>
+    </div>
+        <div class="TableWrapper">
+            <table class="report_Table" id="report_Table">
+                <thead class="text-dark">
+                  <tr>
+                    <th>Traffic referrer source</th>
+                    <th class="text-end">Traffic referrer Name</th> 
+                    <th class="text-end">Orders</th>
+                    <th class="text-end">Total Sales</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr> 
+                        <td class="fs-20 text-dark fw-bold">Summery</td>
+                        <td class="fs-20 text-dark fw-bold text-end"></td>
+                        <td class="fs-20 text-dark fw-bold text-end">1,162</td>
+                        <td class="fs-20 text-dark fw-bold text-end">Rs 452,987.88</td>
+                    </tr>
+                    
+                  <tr>
+        
+                    <td>Direct</td>
+                    <td class="text-end">Facebook</td>
+                    <td class="text-end">86</td>
+                    <td class="text-end">Rs 132,656.89</td>
+               </tr>
+                  
+               <tr>
+        
+                <td>Direct</td>
+                <td class="text-end">Facebook</td>
+                <td class="text-end">86</td>
+                <td class="text-end">Rs 132,656.89</td>
+           </tr>
+              
+           <tr>
+        
+            <td>Direct</td>
+            <td class="text-end">Facebook</td>
+            <td class="text-end">86</td>
+            <td class="text-end">Rs 132,656.89</td>
+       </tr>
+               
+              </tbody>
+             </table>     
         </div>
     </div>
-    <div class=" d-flex gap-40 gap-5 mt-40">
-       <a class="w-100" href="dataInsightdashboard.html"><button class="col-4 top-rouned-btn w-100" id="register_Product_btn">Dashboard</button></a>
-        <a class="w-100" href="Product.html"><button class="col-4 top-rouned-btn active w-100" id="pending_sub_btn">Product</button></a>
-        <a class="w-100" href="Reports.html"><button class="col-4 top-rouned-btn w-100" id="pending_sub_btn">Reports</button></a>
-    </div>
-    <div class="row d-flex mt-40">
-        <div class="col-3  vh-100 form1 d-flex flex-column gap-2 text-start">
-              <div class="card">
-                  <div class="card-content">
-                      <div class="card-body p-0">
-                          <div class="d-flex flex-column gap-3 list-group list-group-horizontal-sm mb-1 text-center"
-                              role="tablist">
-                              <a class="list-group-item1 list-group-item-action active"
-                                  id="list-sunday-list" data-bs-toggle="list" href="#list-sunday"
-                                  role="tab">Product Performance</a>
-                              <a class="list-group-item1 list-group-item-action" id="list-monday-list"
-                                  data-bs-toggle="list" href="#list-monday" role="tab">Diagnosis</a>
-                              <a class="list-group-item1 list-group-item-action" id="list-tuesday-list"
-                                  data-bs-toggle="list" href="#list-tuesday" role="tab">Product Detail</a>
-                          </div>
-                         
-                      </div>
-                  </div>
-              </div>
-         
-          </div>
-           <div class="col-9">
-            <div class="tab-content text-justify">
-                <div class="tab-pane fade show active" id="list-sunday" role="tabpanel"
-                    aria-labelledby="list-sunday-list">
-                    <div class=" form1 ">
-                        <div class="d-flex justify-content-between">
-                            <div class="">
-                                <span class="subHeading">Product Performance</span>
-                               </div>
-                               <div class="d-flex gap-2">
-                                <fieldset class="form-group w-100 p-0" id="linkGroup1">
-                                    <select class="form-select form-select-lg" id="basicSelect">
-                                      <option value="">All Category</option>
-                                      <option>Instagram</option>
-                                      <option>TikTok</option>
-                                      <option>Instagram</option>
-                                      <option>YouTube</option>
-                                      <option>SnapChat</option>
-                                      <option>Facebook</option>
-                                      <option>Custom</option>
-                                    </select>
-                                    </fieldset>
-                                    <fieldset class="form-group w-100 p-0" id="linkGroup1">
-                                        <select class="form-select form-select-lg" id="basicSelect">
-                                          <option value="">All Brands</option>
-                                          <option>Instagram</option>
-                                          <option>TikTok</option>
-                                          <option>Instagram</option>
-                                          <option>YouTube</option>
-                                          <option>SnapChat</option>
-                                          <option>Facebook</option>
-                                          <option>Custom</option>
-                                        </select>
-                                        </fieldset>
-                                <div class="form-group input gap-0 p-0 w-100 d-flex ">
-                                    <input type="text" class="form-control border-0 form-control-lg" placeholder="Seller SKU" aria-label="input" aria-describedby="button-addon2">
-                                   <span class="input-group-text h-inherit rounded-right" id="basic-addon1">Search</span>
-                                </div>
-                               <button class="btn-outline-blue border-0">Download <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                            <path d="M12 16L7 11L8.4 9.55L11 12.15V4H13V12.15L15.6 9.55L17 11L12 16ZM6 20C5.45 20 4.97933 19.8043 4.588 19.413C4.19667 19.0217 4.00067 18.5507 4 18V15H6V18H18V15H20V18C20 18.55 19.8043 19.021 19.413 19.413C19.0217 19.805 18.5507 20.0007 18 20H6Z" fill="#002882"/>
-                                          </svg></button>
-                               </div>
-                           </div>
-                           <div class="d-flex gap-40 mt-40">
-                            <span class="subHeading-3 ">Traffic:</span>
-                            <div class="d-flex gap-40 align-items-center">
-                                <div class="d-flex gap-1">
-                                    <input class="form-check-input" type="checkbox" id="product" onclick="toggleCheckboxes(this)">
-                                    <label for="select-all">Product Visitors</label>
-                                    </div>
-                                    <div class="d-flex gap-1">
-                                        <input class="form-check-input" type="checkbox" id="product" onclick="toggleCheckboxes(this)">
-                                        <label for="select-all">Product Pageviews</label>
-                                        </div>
-                                        <div class="d-flex gap-1">
-                                            <input class="form-check-input" type="checkbox" id="product" onclick="toggleCheckboxes(this)">
-                                            <label for="select-all">Visitor Value</label>
-                                            </div>
-                            </div>
-                           
-                         </div>
-                         <div class="d-flex gap-40 mt-40 flex-wrap">
-                            <span class="subHeading-3">Add to Cart:</span>
-                            <div class="d-flex gap-40 align-items-center">
-                              <!-- First row -->
-                              <div class="d-flex gap-1">
-                                <input class="form-check-input" type="checkbox" id="product1" onclick="toggleCheckboxes(this)">
-                                <label for="product1">Add to Cart Users</label>
-                              </div>
-                              <div class="d-flex gap-1">
-                                <input class="form-check-input" type="checkbox" id="product2" onclick="toggleCheckboxes(this)">
-                                <label for="product2">Add to Cart Units</label>
-                              </div>
-                              <div class="d-flex gap-1">
-                                <input class="form-check-input" type="checkbox" id="product3" onclick="toggleCheckboxes(this)">
-                                <label for="product3">Add to Cart Conversion Rate</label>
-                              </div>
-                            </div>
-                            <div class="d-flex gap-1">
-                                <input class="form-check-input" type="checkbox" id="product4" onclick="toggleCheckboxes(this)">
-                                <label for="product4">Wishlist Users</label>
-                              </div>
-                            <!-- Second row -->
-                            <div class="d-flex align-items-center">
-                              <div class="d-flex gap-1">
-                                <input class="form-check-input" type="checkbox" id="product5" onclick="toggleCheckboxes(this)">
-                                <label for="product5">Wishlists</label>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="d-flex gap-40 mt-40 flex-wrap">
-                            <span class="subHeading-3">Conversion:</span>
-                            <div class="d-flex gap-40 align-items-center">
-                              <!-- First row -->
-                              <div class="d-flex gap-1">
-                                <input class="form-check-input" type="checkbox" id="product1" onclick="toggleCheckboxes(this)">
-                                <label for="product1">Buyers</label>
-                              </div>
-                              <div class="d-flex gap-1">
-                                <input class="form-check-input" type="checkbox" id="product2" onclick="toggleCheckboxes(this)">
-                                <label for="product2">Orders</label>
-                              </div>
-                              <div class="d-flex gap-1">
-                                <input class="form-check-input" type="checkbox" id="product3" onclick="toggleCheckboxes(this)">
-                                <label for="product3">Units Sold</label>
-                              </div>
-                            </div>
-                            <div class="d-flex gap-1">
-                                <input class="form-check-input" type="checkbox" id="product4" onclick="toggleCheckboxes(this)">
-                                <label for="product4">Revenue</label>
-                              </div>
-                              <div class="d-flex gap-1">
-                                <input class="form-check-input" type="checkbox" id="product4" onclick="toggleCheckboxes(this)">
-                                <label for="product4">Conversion Rate</label>
-                              </div>
-                            <!-- Second row -->
-                            <div class="d-flex gap-40 align-items-center">
-                              <div class="d-flex gap-1">
-                                <input class="form-check-input" type="checkbox" id="product5" onclick="toggleCheckboxes(this)">
-                                <label for="product5">Revenue per Buyer</label>
-                              </div>
-                              <div class="d-flex gap-1">
-                                <input class="form-check-input" type="checkbox" id="product5" onclick="toggleCheckboxes(this)">
-                                <label for="product5">Revenue Share</label>
-                              </div>
-                            </div>
-                          </div>
-                          
-                          
-                      
-                    </div>
-                    <div class="form1 mt-20">
-                    <div class="TableWrapper">
-                        <table class="buss_advis_Table" id="buss_advis_Table">
-                            <thead>
-                              <tr>
-                                <th>Product Details</th>
-                                <th>Product Visitors</th> 
-                                <th>Visitors Value</th>
-                                <th>Add to cart Users</th>
-                                <th>Buyers</th>
-                                <th>Unit Sold</th>
-                                <th>Conversion Rate</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>
-                                    <div class="d-flex align-items-center gap-3 py-2 ">
-                                     <img class="" src="../Images/manage product image1.svg" alt="">
-                                     <div class="tablecell1 text-start mt-2">
-                                         <h6 class="mb-0 justify-content-center">HIFI M16 MINI Wireless<br>Bluetooth Headset</h6>
-                                         <p class="mb-0">Seller SKu: HIFI M-16</p>
-                                     </div>
-                                    </div>
-                                    </td>
-                                <td>894562</td>
-                                <td>894562</td>
-                                <td>894562</td>
-                                <td>894562</td>
-                                <td>894562</td>
-                                <td>9.8%</td>
-                               
-                               
-                            </tr>
-                          </tbody>
-                         </table>     
-                    </div>
-                  
-                       
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="list-monday" role="tabpanel"
-                    aria-labelledby="list-monday-list">
-                   <div class="row d-flex m-0">
-                    <div class="col-4 p-0">
-                    <span class="diagnosisBackColor text-warning subHeading-3">Out/Short of Stock (0)</span>
-                    </div>
-                    <div class="col-4 ">
-                        <span class="diagnosisBackColor bg-white text-natural-gray subHeading-3">Low Conversion Rate (0)</span>
-                        </div>
-                        <div class="col-4 p-0">
-                            <span class="diagnosisBackColor bg-white text-natural-gray subHeading-3">Poor Reviews (0)</span>
-                            </div>
-                   </div>
-                   <div class="d-flex align-items-center gap-3 mt-20 DiagnosisOutofStock ">
-                    <div>
-                        <span><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                            <path d="M18 33C26.2843 33 33 26.2843 33 18C33 9.71573 26.2843 3 18 3C9.71573 3 3 9.71573 3 18C3 26.2843 9.71573 33 18 33Z" stroke="#002882" stroke-width="3"/>
-                            <path d="M18 10.5H18.015" stroke="#002882" stroke-width="3" stroke-linecap="round"/>
-                            <path d="M15 16.5H18V24M15 24H21" stroke="#002882" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg></span>
-                    </div>
-                      <div class="d-flex flex-column gap-2 w-50">
-                        <span class="subHeading-5">Out/Short of Stock (0)</span>
-                        <span class="l-h-24">Definition: These are products whose stock is about to finish within 7 days.
-                            Tips: Increase stock prevent revenue loss.</span>
-                      </div>
-                       </div>
-                       <div class="TableWrapper mt-20">
-                        <table>
-                            <thead>
-                                <tr class="text-dark">
-                                        
-                                    <th># SKU</th> 
-                                    <th>Days of Out Of Stock</th>
-                                    <th>Stock Yesterday</th>
-                                    <th>Daily avg Units Sold</th>
-                                    <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="py-5">
-                                    <tr>
-                                        <td class="text-dark"></td>
-                                        <td></td>
-                                        <td>No Data</td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                </tbody>
-                                
-                          </table> 
-                       </div>
-                </div>
-                <div class="tab-pane fade" id="list-tuesday" role="tabpanel"
-                    aria-labelledby="list-tuesday-list">
-                    <div class="form1 vh-100 ">
-                        <span class="subHeading">Search For Product</span>
-                        <div class="form-group input gap-0 p-0 w-100 d-flex mt-20">
-                         <input type="text" class="form-control border-0 form-control-lg" placeholder="Search Reports" aria-label="input" aria-describedby="button-addon2">
-                        <span class="input-group-text h-inherit rounded-right" id="basic-addon1"><i class="bi bi-search"></i></span>
-                     </div>
-                     <span class="paragraph-2 fs-14">Search input should matc the name stricktly. E.g: For “iPhone Pro Max”, you can find it by “iPhone” or “max” or “Pro”, but not by “iPhoneMax” or “iPhone Max”</span>
-                        </div>
-                </div>
-            </div>
-          
-            
-           </div>
-         
-          
-    </div>
+   
+        
+   </div>
   
    
 
@@ -720,7 +498,7 @@
         <script src="../assets/js/pages/ui-apexchart.js"></script>
         <script src="../assets/js/main.js"></script>
         <script>
-        let registerProTable = document.querySelector('#buss_advis_Table');
+        let registerProTable = document.querySelector('#report_Table');
         new simpleDatatables.DataTable(registerProTable);
 
         function replaceArrows() {

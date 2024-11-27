@@ -705,7 +705,7 @@ td {
     #e09b00 100%
   );
 }
-.active {
+.allbar a.active {
   color: #002882 !important;
 }
 .allbar a .notification-badge {
@@ -1833,7 +1833,6 @@ padding: 20px;
  }
  .bulkManagDropDown1 {
   border-radius: 5px;
-  
   background-color: #F2F2F2;
   color: #002882;
   background-image: url(../Images/Frame1000004423.svg);
@@ -1844,4 +1843,53 @@ padding: 20px;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
+.list-group-item1{
+  color: var(--Gray-Color);
+  background-color: var(--Light-Gray-Color);
+  padding: 10px 20px;
+  line-height: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  height: fit-content;
+  border: 1px solid var(--Light-Gray-Color);
+}
+.list-group-item1.active {
+  color: var(--Brand-white-Color);
+  background-color: #33539B;
+  padding: 10px 20px;
+  line-height: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  height: fit-content;
+ }
+ .diagnosisBackColor{
+  display: flex;
+height: 60px;
+padding: 10px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex: 1 0 0;
+border-radius: 8px;
+background: var(--Secondary-Color-Mon-Yellow-10, #FEF6E6);
+ }
+ .DiagnosisOutofStock{
+  display: flex;
+padding: 20px;
+align-items: center;
+gap: 20px;
+align-self: stretch;
+border-radius: 8px;
+background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
+ }
  
