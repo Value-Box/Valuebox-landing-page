@@ -9931,3 +9931,236 @@ border-top: 5px solid var(--Natural-Color-20, #CCC);
   border-top: 5px solid var(--Primary-Color-Dark-Blue-80, #33539B);
   background: var(--White, #FFF);
 }
+.text-underline{
+  color: var(--Primary-Color-Dark-Blue-80, #33539B);
+
+  text-decoration-line: underline;
+text-decoration-style: solid;
+text-decoration-skip-ink: none;
+text-decoration-thickness: auto;
+text-underline-offset: auto;
+text-underline-position: from-font;
+}
+.list-group-item-action.active{
+  background-color: #002882;
+  color: var(--Primary-Color-Dark-Blue-10, #E6EAF3)  !important;
+
+}
+@media(max-width:1400px){
+  .heading-one {
+    font-size: clamp(20px, 4vw, 24px);
+    line-height: clamp(24px, 5vw, 32px);
+    font-weight: 600;
+  }
+  .subHeading {
+    font-size: clamp(18px, 4vw, 20px);
+    line-height: clamp(20px, 5vw, 30px);
+    font-weight: 600;
+  }
+  .subHeading-blue {
+    font-size: clamp(18px, 4vw, 20px);
+    line-height: clamp(20px, 5vw, 30px);
+    font-weight: 600;
+  }
+  .subHeading-3 {
+    font-size: clamp(16px, 4vw, 18px);
+    line-height: clamp(20px, 5vw, 28px);
+    font-weight: 600;
+  }
+  .subHeading-4 {
+    font-size: clamp(14px, 4vw, 16px);
+    line-height: clamp(20px, 5vw, 24px);
+    font-weight: 600;
+  }
+  .subHeading-5 {
+    font-size: clamp(14px, 4vw, 16px);
+    line-height: clamp(20px, 5vw, 24px);
+    font-weight: 600;
+  }
+  .message-text {
+    font-size: clamp(12px, 4vw, 14px);
+    line-height: clamp(20px, 5vw, 24px);
+    font-weight: 600;
+  }
+  .paragraph-1 {
+    font-size: clamp(14px, 4vw, 16px);
+    line-height: clamp(18px, 5vw, 24px);
+    font-weight: 500;
+  }
+  .paragraph-blue {
+    font-size: clamp(14px, 4vw, 16px);
+    line-height: clamp(18px, 5vw, 24px);
+    font-weight: 500;
+  }
+  .paragraph-2 {
+    font-size: clamp(12px, 4vw, 14px);
+    line-height: clamp(16px, 5vw, 20px);
+    font-weight: 400;
+  }
+  .paragraph-3 {
+    font-size: clamp(12px, 4vw, 14px);
+    line-height: clamp(16px, 5vw, 20px);
+    font-weight: 600;
+  }
+  .btn-blue {
+    padding: 5px 10px;
+    line-height: 25px;
+  }
+  .btn-gray {
+    padding: 5px 10px;
+    line-height: 25px;
+  }
+  .btn-danger {
+    padding: 5px 10px;
+    line-height: 25px;
+  }
+  .bulk-btn {
+        padding: 5px 10px;
+    line-height: 25px;
+  }
+  .btn-outline-Yellow {
+    padding: 5px 10px;
+    line-height: 25px;
+  }
+  .btn-outline-Yellow:focus {
+    border: 1px solid #eea500;
+  }
+  .btn-outline-blue {
+    padding: 5px 10px;
+    line-height: 25px;
+  }
+  
+  .btn-outline-gray {
+    padding: 5px 10px;
+    line-height: 25px;
+  }
+  .btn-outline-gray:hover {
+    color: var(--Gray-Color);
+    background-color: var(--Natural-Gray-Color);
+    border: 1px solid var(--Natural-Gray-Color);
+  }
+  .form1 {
+    padding: 20px;
+    border-radius: 12px;
+    background: var(--bs-white);
+    box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.1),
+      0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+  }
+  .mt-40 {
+    margin-top: 20px;
+  }
+  .mt-20 {
+    margin-top: 10px;
+  }
+  .mt-10 {
+    margin-top: 5px;
+  }
+  
+  .mt-30 {
+    margin-top: 20px;
+  }
+ .TableWrapper table thead tr th {
+    padding: 10px 10px;
+  }
+  .TableWrapper table tbody tr td {
+    padding: 10px 10px;
+  }
+
+  .input {
+    font-size: 16px;
+    height: 56px;
+    padding: 10px 15px;
+  }
+  
+  .table-input {
+    display: flex;
+    height: 35px;
+    padding: 5px;
+  }
+  .gap-40 {
+    gap: 20px;
+  }
+  .gap-20 {
+    gap: 15px;
+  }
+  
+  .form-switch .toggleCheck {
+    width: 48px;
+    height: 22px;
+  }
+  
+  .form-select-input {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  .fs-20 {
+    font-size: 18px;
+  }
+
+  .fs-18 {
+    font-size: clamp(14px, 4vw, 16px);
+    line-height: clamp(20px, 5vw, 28px);
+  }
+  .fs-16 {
+    font-size: 14px;
+    line-height: clamp(18px, 5vw, 20px);
+  }
+  .fs-12 {
+    font-size: 12px;
+    line-height: clamp(18px, 5vw, 20px);
+  }
+  .l-h-24 {
+    line-height: 20px;
+  }
+  .l-h-30 {
+    line-height: 24px;
+  }
+  .l-h-40 {
+    line-height: 20px;
+  }
+  .rounded-12 {
+    border-radius: 10px;
+  }
+
+  .bulkManagDropDown {
+    padding-right: 20px;
+  }
+  .py-40 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .px-60 {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+  .px-20 {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .navigation .active1 {
+    color: #1a1a1a;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .circle {
+    background-color: var(--bs-orange-40);
+    width: 315px;
+    height: 315px;
+    border-radius: 50%;
+    position: absolute;
+    top: 12px;
+  }
+  .circle-2 {
+    background-color: var(--bs-orange-40);
+    width: 225px;
+    height: 225px;
+    border-radius: 50%;
+    position: absolute;
+  }
+  .top-rouned-btn{
+  padding: 8px;
+  font-size: 18px;
+  line-height: 25px; 
+  }
+}
