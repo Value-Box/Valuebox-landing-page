@@ -583,7 +583,7 @@
  
          </div>
          <div class="py-2 p-0">
-          <div class="TableWrapper table-responsive  p-0">
+          <div class="TableWrapper table-responsive overflow-auto p-0">
               <table class=" w-100 ">
                <thead>
                    <tr class="text-dark">
@@ -772,7 +772,7 @@
     </div>
     <div class="col-4 mt-40">
       <div class="mb-4">
-          <!-- <button class="btn-danger w-100" >Cancel Order </button> -->
+        
           <button class="btn-danger w-100" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Cancel Order</button>
 
          
@@ -858,7 +858,7 @@
       <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered position-relative custom-modal-width">
           <div class="modal-content p-4">
-            <div class="row">
+            <div class="row logisticModal">
               <div class="col-6">
                 <span class="subHeading-blue">Logistics Status </span>
                 <button id="closeModalBtn" type="button" class="btn-blue closeModalBtn rounded-circle" data-bs-dismiss="modal" aria-label="Close">
@@ -911,7 +911,7 @@
                     </div>
                   </div>
                   <div class="rounded d-flex">
-                    <span class="subHeading-5 rs-badge">1 X<span class="fs-14 text-secondary">Rs.</span> 280</span>
+                    <span class="subHeading-5 rs-badge">1 X<span class="fs-14 text-secondary"> Rs.</span> 280</span>
                   </div>
                 </div>
                 <div class="d-flex gap-2 mt-40 mb-2">
@@ -969,59 +969,63 @@
             </div>
             <div class="justify-content-center align-items-center p-4 my-4 rounded orderReturncol">
              <div class="row d-flex gap-4 m-0">
-              <div class="col-2 d-flex flex-column gap-4 p-0">
+              <div>
+               <div class="d-flex gap-4">
                 <div class="d-flex flex-column text-center">
-                  <span class="subHeading-4">Feb 07</span>
-                  <span>14:00</span>
-                  </div>
-                  <div class="d-flex flex-column text-center">
-                    <span class="subHeading-4">Feb 07</span>
-                    <span>14:00</span>
-                    </div>
-                    <div class="d-flex flex-column text-center">
-                      <span class="subHeading-4">Feb 07</span>
-                      <span>14:00</span>
-                      </div>
-                      <div class="d-flex flex-column text-center">
-                        <span class="subHeading-4">Feb 07</span>
-                        <span>14:00</span>
-                        </div>
+                <span class="subHeading-4">Feb 07</span>
+                <span>14:00</span>
+                </div>
+                <div class="d-flex flex-column align-items-center ">
+                  <input class="form-radio-input" type="radio" name="relationship" value="brandowner">
+                  <span class="orderdetaile-Line2"></span>
+                </div>
+                <div class="d-flex flex-column ">
+                  <span class="subHeading-3">Delivered</span>
+                  <span>Order Confirmation Email was sent to Danish Sami (danishsami17@gmail.com).</span>
+                </div>
+                 </div>
+               <div class="d-flex gap-4">
+                <div class="d-flex flex-column text-center">
+                <span class="subHeading-4">Feb 07</span>
+                <span>14:00</span>
+                </div>
+                <div class="d-flex flex-column align-items-center text-center">
+                  <input class="form-radio-input" type="radio" name="relationship" value="brandowner">
+                  <span class="orderdetaile-Line2"></span>
+                </div>
+                <div class="d-flex flex-column">
+                  <span class="subHeading-3">Out For Delivery</span>
+                  <span>Order Confirmation Email was sent to Danish Sami (danishsami17@gmail.com).</span>
+                </div>
+               </div> 
+               <div class="d-flex gap-4">
+                <div class="d-flex flex-column text-center">
+                <span class="subHeading-4">Feb 07</span>
+                <span>14:00</span>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                  <input class="form-radio-input" type="radio" name="relationship" value="brandowner">
+                  <span class="orderdetaile-Line2"></span>
+                </div>
+                <div class="d-flex flex-column">
+                  <span class="subHeading-3">Arrived at Main Logistics Facility</span>
+                  <span>Order Confirmation Email was sent to Danish Sami (danishsami17@gmail.com).</span>
+                </div>
+               </div> 
+               <div class="d-flex gap-4">
+                <div class="d-flex flex-column text-center">
+                <span class="subHeading-4">Feb 07</span>
+                <span>14:00</span>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                  <input class="form-radio-input" type="radio" name="relationship" value="brandowner">
+                </div>
+                <div class="d-flex flex-column">
+                  <span class="subHeading-3">Packed by Seller / warehouse</span>
+                  <span>Order Confirmation Email was sent to Danish Sami (danishsami17@gmail.com).</span>
+                </div>
+               </div> 
               </div>
-             <div class="col-1 p-0">
-              <div class="d-flex flex-column align-items-center ">
-                <input class="form-radio-input" type="radio" name="relationship" value="brandowner">
-                <span class="orderdetaile-Line2"></span>
-              </div>
-              <div class="d-flex flex-column align-items-center text-center">
-                <input class="form-radio-input" type="radio" name="relationship" value="brandowner">
-                <span class="orderdetaile-Line2"></span>
-              </div>
-              <div class="d-flex flex-column align-items-center">
-                <input class="form-radio-input" type="radio" name="relationship" value="brandowner">
-                <span class="orderdetaile-Line2"></span>
-              </div>
-              <div class="d-flex flex-column align-items-center">
-                <input class="form-radio-input" type="radio" name="relationship" value="brandowner">
-              </div>
-             </div>
-             <div class="col-7 p-0">
-              <div class="d-flex flex-column ">
-                <span class="subHeading-3">Delivered</span>
-                <span>Your parcel has been delivered delivery with PK-DEX [Multan - Gulgasht]</span>
-              </div>
-              <div class="d-flex flex-column">
-                <span class="subHeading-3">Out of Delivery</span>
-                <span>Your parcel is currently out for delivery with PK-DEX [Multan - Gulgasht]</span>
-              </div>
-              <div class="d-flex flex-column">
-                <span class="subHeading-3">Arrived at Main Logistics Facility</span>
-                <span>Your parcel has arrived to the main logistics facility [Multan - Gulgasht]</span>
-              </div>
-              <div class="d-flex flex-column">
-                <span class="subHeading-3">Packed by Seller / warehous</span>
-                <span>Your parcel has been packed and ready to be handed over to our shipping provider.</span>
-              </div>
-             </div>
              
                </div>
             </div>

@@ -1892,4 +1892,17 @@ align-self: stretch;
 border-radius: 8px;
 background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
  }
+ .logisticModal{
+  height: 500px;
+  overflow-y: auto;
+ }
+ @media(max-width:1400px){
+  .Order-detail-line{
+    position: relative;
+    left: 81px;
+  }
+  .custom-modal-width{
+    max-width: 1200px;
+  }
+ }
  

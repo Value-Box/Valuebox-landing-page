@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../bootstrap.min.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-11 my-2 mw-1728 mx-auto">
+                <div class="row m-0 align-items-center applicationStatus border border-secondary mb-5 mb-sm-0">
+                    <div class="col-md-5 col-xl-7 p-0 applicationStatusText">
+                      <h3>Application Status</h3>
+                      <p class="mx-1 col-md-12 col-lg-12 col-xl-12">NOTE: You can edit your profile until the status becomes “In Processing”</p>
+                    </div>
+                    <div class="col-md-7 col-xl-5 p-0 d-flex gap-3 text-center text-md-end editApplicationBtn">
+                        <button class="editButton">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                                <path d="M19.089 14.941V19.381C19.0888 20.0092 18.8391 20.6116 18.3949 21.0558C17.9507 21.5 17.3483 21.7497 16.72 21.75H5.11904C4.8068 21.7499 4.49765 21.688 4.20938 21.568C3.9211 21.4481 3.65937 21.2723 3.43923 21.0509C3.21909 20.8294 3.04488 20.5667 2.92661 20.2777C2.80833 19.9887 2.74833 19.6792 2.75004 19.367V7.77898C2.74818 7.46723 2.80822 7.1582 2.92666 6.86982C3.04511 6.58144 3.21961 6.31944 3.44006 6.09899C3.6605 5.87855 3.92251 5.70404 4.21089 5.5856C4.49927 5.46715 4.80829 5.40712 5.12004 5.40898H9.55904" stroke="#002882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M19.089 14.941V19.381C19.0888 20.0092 18.8391 20.6116 18.3949 21.0558C17.9507 21.5 17.3483 21.7497 16.72 21.75H5.11904C4.8068 21.7499 4.49765 21.688 4.20938 21.568C3.9211 21.4481 3.65937 21.2723 3.43923 21.0509C3.21909 20.8294 3.04488 20.5667 2.92661 20.2777C2.80833 19.9887 2.74833 19.6792 2.75004 19.367V7.77898C2.74818 7.46723 2.80822 7.1582 2.92666 6.86982C3.04511 6.58144 3.21961 6.31944 3.44006 6.09899C3.6605 5.87855 3.92251 5.70404 4.21089 5.5856C4.49927 5.46715 4.80829 5.40712 5.12004 5.40898H9.55904" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M19.089 9.49497L15.004 5.40897M6.83399 16.303V14.138C6.83599 13.781 6.97799 13.438 7.22899 13.185L16.761 3.65297C16.8875 3.52507 17.0381 3.42354 17.204 3.35424C17.37 3.28495 17.5481 3.24927 17.728 3.24927C17.9079 3.24927 18.0859 3.28495 18.2519 3.35424C18.4179 3.42354 18.5685 3.52507 18.695 3.65297L20.846 5.80397C20.9739 5.93045 21.0754 6.08104 21.1447 6.24702C21.214 6.41301 21.2497 6.5911 21.2497 6.77097C21.2497 6.95084 21.214 7.12892 21.1447 7.29491C21.0754 7.4609 20.9739 7.61149 20.846 7.73797L11.314 17.27C11.0605 17.5217 10.7182 17.6636 10.361 17.665H8.19599C8.01705 17.6652 7.83982 17.6302 7.67446 17.5618C7.5091 17.4935 7.35884 17.3932 7.23232 17.2666C7.10579 17.1401 7.00548 16.9899 6.93713 16.8245C6.86877 16.6591 6.83372 16.4819 6.83399 16.303Z" stroke="#002882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Edit Application
+                        </button>
+                        <button class="pendingApproval" onclick="dashboard()">Pending Approval</button>
+                    </div>
+                    
+                  </div>
+                  <p class="processedText text-md-left mb-5 d-none d-md-block">Your Application will be processed within next 3 working days</p>
+            </div>
+        </div>
+
+        <div class="row m-0 bg-whitw w-100 g-5 rounded-4 p-3 p-sm-4 pt-md-5 rightIconsParent">
+            <div class="container p-0">
+              <div class="steps accountApprovalPage">
+                <div class="circleParent">
+                  <span class="circle completed" data-step="1">
+                    <span class="inner">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                  </span>
+                  <p class="text-center">Verify Phone Number</p>
+                </div>
+                <div class="circleParent">
+                  <span class="circle completed" data-step="2">
+                    <span class="inner">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                  </span>
+                  <p class="text-center">Enter Personal Info</p>
+                </div>
+                <div class="circleParent">
+                  <span class="circle completed" data-step="3">
+                    <span class="inner">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                  </span>
+                  <p class="text-center">Enter Business Info</p>
+                </div>
+                <div class="circleParent">
+                  <span class="circle active" data-step="4">
+                    <span class="inner">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                  </span>
+                  <p class="text-center">Account Status</p>
+                </div>
+                <div class="progress-bar">
+                  <span class="indicator">
+                    <span class="inner"></span>
+                  </span>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+    </div>
+</body>
+</html>
