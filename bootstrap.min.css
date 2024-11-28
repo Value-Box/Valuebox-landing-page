@@ -11943,7 +11943,15 @@ bg-gray{
   padding: 7px;
   position: relative; /* Add this for consistency */
 }
-
+.heading-one {
+  font-size: clamp(24px, 4vw, 30px);
+  line-height: clamp(30px, 5vw, 38px);
+  font-weight: 600;
+  color: var(--Darg-Color);
+}
+.text-brand-color{
+  color: #002882;
+}
 @media(max-width:776px){
   .heading{
    

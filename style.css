@@ -1500,6 +1500,19 @@ background: #CCC;
   height: clamp(600px, 50vh, 1000px); /* Minimum height 300px, preferred height 50% of viewport height, max height 1000px */
 }
 
+.blueBtn{
+  border-radius: 8px;
+background: var(--Primary-Color-Dark-Blue, #002882);
+color: var(--Natural-Color-00, #FCFCFC);
+height: 54px;
+padding: 0px 24px;
+border: none;
+}
+#forgotNextBtn:disabled {
+  background-color: gray;
+  color: #ccc; /* Light gray text */
+  cursor: not-allowed; /* Show not-allowed cursor */
+}
 @media (max-width: 1264px) {
   /* .links {
     gap: 20px;

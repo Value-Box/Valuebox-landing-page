@@ -1902,7 +1902,9 @@ background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
   height: 500px;
   overflow-y: auto;
  }
-
+.editSignup{
+  background-color: #F2F2F2;
+}
  @media(max-width:1400px){
   .Order-detail-line{
     position: relative;
