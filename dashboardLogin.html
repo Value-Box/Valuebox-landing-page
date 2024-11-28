@@ -185,7 +185,7 @@
           </div>
           <div>
             <a class="forgotPassword" id="showPhoneDiv">Enter your Phone number</a>
-            <a class="forgotPassword" id="showEmailDiv" style="display: none;">Enter your Email Address</a>
+            <a class="forgotPassword" id="showEmailDiv">Enter your Email Address</a>
           </div>
           <!-- <div class="form-group mt-3">
                   <label for="exampleInputPassword1">Password</label>
@@ -1519,19 +1519,61 @@
   const forgotPassword =document.getElementById('forgotPassword')
 const logInForm =document.getElementById('logInForm')
 const forgotForm =document.getElementById('forgotForm')
-
+// const forgotNextBtn =document.getElementById('forgotNextBtn')
+// const varificationform =document.getElementById('varificationForm')
 
 forgotPassword.addEventListener('click',()=>{
   logInForm.style.display='none'
   forgotForm.style.display='block'
 })
+// Selecting elements
+const forgotNextBtn = document.getElementById('forgotNextBtn');
+const varificationForm = document.getElementById('varificationForm');
+const showPhoneDiv = document.getElementById('showPhoneDiv');
+const showEmailDiv = document.getElementById('showEmailDiv');
+const emailDiv = document.getElementById('emailDiv');
+const phoneDiv = document.getElementById('phoneDiv');
+const loginInputEmail = document.getElementById('loginInputEmail');
+const loginInputPhone = document.getElementById('loginInputPhone');
 
-const forgotNextBtn =document.getElementById('forgotNextBtn')
-const varificationform =document.getElementById('varificationForm')
-forgotNextBtn.addEventListener('click',()=>{
-  forgotForm.style.display='none'
-  varificationform.style.display='block'
-})
+// Show phone input on click
+showPhoneDiv.addEventListener('click', () => {
+  emailDiv.style.display = 'none';
+  phoneDiv.style.display = 'block';
+  showPhoneDiv.style.display = 'none';
+  showEmailDiv.style.display = 'inline';
+  validateInput();  // Check if the input is filled
+});
+
+// Show email input on click
+showEmailDiv.addEventListener('click', () => {
+  phoneDiv.style.display = 'none';
+  emailDiv.style.display = 'block';
+  showEmailDiv.style.display = 'none';
+  showPhoneDiv.style.display = 'inline';
+  validateInput();  // Check if the input is filled
+});
+
+// Enable "Next" button when the input is valid
+function validateInput() {
+  if ((emailDiv.style.display === 'block' && loginInputEmail.value) ||
+      (phoneDiv.style.display === 'block' && loginInputPhone.value)) {
+    forgotNextBtn.disabled = false;
+  } else {
+    forgotNextBtn.disabled = true;
+  }
+}
+
+// Add event listeners to the inputs to enable/disable "Next" button
+loginInputEmail.addEventListener('input', validateInput);
+loginInputPhone.addEventListener('input', validateInput);
+
+// Proceed to verification form after clicking "Next"
+forgotNextBtn.addEventListener('click', () => {
+  forgotForm.style.display = 'none';
+  varificationForm.style.display = 'block';
+});
+
 
 
 // Validate password and confirmation
