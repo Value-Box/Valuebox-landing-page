@@ -11805,11 +11805,3 @@ font-style: normal;
 font-weight: 400;
 line-height: 30px; /* 150% */
 }
-.btn-blue{
-  height: 54px;
-padding: 0px 24px;
-border-radius: 8px;
-background: var(--Primary-Color-Dark-Blue, #002882);
-color: var(--Natural-Color-00, #FCFCFC);
-border: none;
-}

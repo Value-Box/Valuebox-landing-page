@@ -9946,6 +9946,7 @@ text-underline-position: from-font;
   color: var(--Primary-Color-Dark-Blue-10, #E6EAF3)  !important;
 
 }
+
 @media(max-width:1400px){
   .heading-one {
     font-size: clamp(20px, 4vw, 24px);
