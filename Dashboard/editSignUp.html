@@ -72,7 +72,7 @@
                     <form class="p-3 p-sm-5 pt-0 mt-4 mt-sm-0" id="personalForm" onsubmit="accountApprovalPage(event)" action="" method="POST" novalidate>
                      
 
-                      <section class="personalInfoForm" >
+                      <section class="personalInfoForm" style="display: none">
                          <h1 class="mt-0">Personal Information</h1>
                          <div class="row formRow p-2 p-sm-3 m-0 rounded-4">
                            <div class="col-sm-10 d-flex">
@@ -83,21 +83,21 @@
   
                         <p class="description">Selecting Individual means you’re a local business owner managing your own store or services, while choosing Business means you’re representing a registered business entity.</p>
                   
-                        <div class="row gap-4 bg-transparent p-2">
+                        <div class="row gap-4 bg-transparent p-2 p-sm-4 m-0">
                             <div class="col-12 col-md d-flex gap-1 flex-column align-items-start mb-3 formFields">
-                                <label class="form-label mb-0">Full Name<span class="starik">*</span></label>
+                                <label class="form-label mb-2">Full Name<span class="starik">*</span></label>
                                 <input type="text" class="form-control required" placeholder="Enter your name" name="personalName" id="personalName" aria-describedby="emailHelp" required>
                             </div>
                             <div class="col-12 col-md d-flex gap-1 flex-column align-items-start mb-3 formFields">
-                              <label class="form-label mb-0">Select Country<span class="starik">*</span></label>
-                              <select class="form-select required" id="shopreturnState" name="shopreturnState">
+                              <label class="form-label mb-2">Select Country<span class="starik">*</span></label>
+                              <select class="form-select h-50p required" id="shopreturnState" name="shopreturnState">
                                   <option>
                                       <img src="images/pakistanFlag.svg" alt="Pakistan Flag" class="flag-icon" />
                                        Pakistan</option>
                                 </select>
                           </div>
                             <div class="col-12 col-md d-flex gap-1 flex-column align-items-start mb-3 formFields">
-                              <label class="form-label mb-0">Phone Number <span class="starik">*</span></label>
+                              <label class="form-label mb-2">Phone Number <span class="starik">*</span></label>
                               
                                   <div class="w-100">
                                     <input type="text" class="form-control col-12 required" id="personalPhoneNumber" name="personalPhoneNumber"  
@@ -110,8 +110,8 @@
       
       
                         <div class="col-12 col-md d-flex gap-1 flex-column align-items-start mb-3 formFields">
-                          <label  class="form-label mb-0">Select Gender<span class="starik">*</span></label>
-                          <select class="form-select required" id="gender" name="gender">
+                          <label  class="form-label mb-2">Select Gender<span class="starik">*</span></label>
+                          <select class="form-select h-50p required" id="gender" name="gender">
                             <option value="">Select</option>
                               <option value="1">Male</option>
                               <option value="2">Female</option>
@@ -121,7 +121,7 @@
                         </div>
 
                     <div class="col-12 col-md d-flex gap-1 flex-column align-items-start mb-3 formFields">
-                      <label class="form-label mb-0">Password<span class="starik">*</span></label>
+                      <label class="form-label mb-2">Password<span class="starik">*</span></label>
                      
                       <div class="w-100">
                         <div class="input-group">
@@ -130,13 +130,13 @@
                             <i class="fas fa-eye"></i>
                           </span>
                         </div>
-                        <p id="password" class="m-0"> your password must consist of 8 characters which includes lowercase letters, capital letters, digits, and special characters </p>
+                        <p id="password" class="m-0 mt-2"> your password must consist of 8 characters which includes lowercase letters, capital letters, digits, and special characters </p>
                       </div>
                     </div>
                     
                 
                     <div class="col-12 col-md d-flex gap-1 flex-column align-items-start mb-3 formFields">
-                      <label class="form-label mb-0">Confirm Password<span class="starik">*</span></label>
+                      <label class="form-label mb-2">Confirm Password<span class="starik">*</span></label>
                       
                       <div class="w-100">
                         <div class="input-group">
@@ -145,15 +145,15 @@
                             <i class="fas fa-eye"></i>
                           </span>
                         </div>
-                        <p id="confirmPassword" class="m-0"> your password must consist of 8 characters which includes lowercase letters, capital letters, digits, and special characters </p>
+                        <p id="confirmPassword" class="m-0 mt-2"> your password must consist of 8 characters which includes lowercase letters, capital letters, digits, and special characters </p>
                       </div>
                     </div>
                     
                     <div class="col-12 col-md d-flex gap-1 flex-column align-items-start mb-3 formFields">
-          <label class="form-label mb-0">Email<span class="starik">*</span></label>
+          <label class="form-label mb-2">Email<span class="starik">*</span></label>
           <div class="w-100">
             <input type="email" class="form-control required"  pattern="[a-zA-Z0-9._%+-]+@example\.com" placeholder="Enter Email" id="personalEmail" name="personalEmail" required>
-            <p id='personalEmailErrTxt' class="m-0">Example@company.com</p>
+            <p id='personalEmailErrTxt' class="m-0 mt-2">Example@company.com</p>
           </div>
                     </div>
     </div>
@@ -162,7 +162,7 @@
   <div class="row p-2 p-sm-3 m-0 rounded-4">
       
   
-     <div class="row gap-4 bg-transparent  px-4">
+     <div class="row gap-4 bg-transparent px-2 px-sm-4 m-0">
         <div class="col-12 col-md d-flex gap-1 flex-column align-items-start mb-3 formFields">
             <label class="form-label mb-0">CNIC Number<span class="starik">*</span></label>
             <div class="w-100">
@@ -175,7 +175,7 @@
               <input type="date" class="form-control required" onfocus="disablePastDates()" placeholder="Enter date" id="cnicExpiryDate" name="cnicExpiryDate" aria-describedby="emailHelp" required>
           </div>
      </div>
-     <div class="row gap-4 bg-transparent  px-4">
+     <div class="row gap-4 bg-transparent px-2 px-sm-4 m-0">
         <div class="col-12 col-md d-flex gap-1 flex-column align-items-start mb-3 formFields">
             <label class="form-label ">Upload ID Front Side<span class="starik">*</span></label>
            
@@ -192,8 +192,8 @@
               <p id='frontSidePhoto' class="m-0">Only PNG, JPG and WEBp with File size less then 500kb are accepted.</p>
             </div>
             <input id="cnicFrontSidePhoto" class="required" type="file" name="cnicFrontSidePhoto" onChange='getFrontSidePhoto()'  accept=".jpg, .WEBp, .png"  required/>
-            <div class="FrontSideimgPrev">
-                <img class="w-50 rounded-2" src="Images/previewImage.jpg" alt="" srcset="">
+            <div>
+                <img class="w-50 rounded-2" src="Images/previewImage.jpg" alt="" srcset="" id="FrontSideimgPrev">
             </div>
         </div>
           <div class="col-12 col-md d-flex gap-1 flex-column align-items-start mb-3 formFields">
@@ -212,8 +212,8 @@
                 <p id='backSidePhoto' class="m-0">Only PNG, JPG and WEBp with File size less then 500kb are accepted.</p>
               
             </div>
-            <div class="FrontSideimgPrev">
-                <img class="w-50 rounded-2" src="Images/previewImage.jpg" alt="" srcset="">
+            <div >
+                <img class="w-50 rounded-2" src="Images/previewImage.jpg" alt="" id="backSideimgPrev" srcset="">
             </div>
               <input id="cnicFrontBackPhoto" class="required" type="file" onChange='getBackSidePhoto()' name="cnicFrontBackPhoto" accept=".jpg, .WEBp, .png" required/>                            </div>
               
@@ -230,7 +230,7 @@
                       </section>
                       
                       <!-- Business Information (Individual Account) Form -->
-                      <section class="BusinessInInfoIndForm p-sm-4 pt-0"style="display: none" >
+                      <section class="BusinessInInfoIndForm p-sm-4 pt-0"  >
                         <h1>Business Information <span class="bussinessInfoText" id="cFormNames">(Individual Account)</span></h1>
                         <div class="row formRow p-2 p-sm-3 m-0 rounded-4">
 
@@ -503,264 +503,8 @@
                             </svg> Back
                           </button>
                     </section>
-                      <!-- Business Information (Business Account) Form -->
-                      <section class="BusinessInfoBussAccForm p-sm-4 pt-0"  style="display: none;">
-                        <h1>Business Information <span class="bussinessInfoText">(Business Account)</span></h1>
-                        <div class="row formRow p-2 p-sm-3 m-0 rounded-4">
 
-                            <div class="mb-3 formFields">
-                                <label  class="form-label">Legal Business Name<span class="starik">*</span></label>
-                                <input type="text" class="form-control required" placeholder="Enter Business Name" id="legalBusinessName" name="legalBusinessName" aria-describedby="emailHelp" required>
-                            </div>
-
-                            <!-- <div class="mb-3 formFields">
-                                <label  class="form-label">Person in Charge<span class="starik">*</span></label>
-                                <input type="text" class="form-control required" placeholder="Enter Name" id="personCharge" name="personCharge" aria-describedby="emailHelp" required>
-                            </div> -->
-
-                            <div class="mb-3 formFields">
-                              <label class="form-label">Person in Contact Phone Number <span class="starik">*</span></label>
-                              
-                                     <div class="w-100">
-                                      <input type="tel" id="personContactNumber" name="personContactNumber" class="form-control required"
-                                     placeholder="e.g. 3XX-XXXXXXX" required
-                                     pattern="[0-9]{3}-[0-9]{7}" title="Phone number must be in the format 3XX-XXXXXXX"
-                                     maxlength="11" minlength="11">
-                                      <p id='bussNumberErrTxt' class="m-0">Contact Number should contain exactly 10 digits.</p>
-                                  </div>
-                          </div>
-                          
-                              <div class="mb-3 formFields">
-                                <label class="form-label">Person in Charge Email<span class="starik">*</span></label>
-                                <div class="w-100">
-                                  <input type="email" class="form-control required" placeholder="e.g. Example@compony.com" id="personChargeEmail" name="personChargeEmail" required>
-
-                                  <p id='bussEmailErrTxt' class="m-0"></p>
-                                </div>
-                              </div>
-                             
-                            <div class="mb-3 formFields">
-                                <label class="form-label">Business Registration Number<span class="starik">*</span></label>
-                                <input type="text" class="form-control required" placeholder="Enter Registration Number" id="businessRegistrationNumber" name="businessRegistrationNumber" aria-describedby="emailHelp" required>
-                            </div>
-                            <div class="mb-3 formFields">
-                              <label class="form-label">Upload Registration Proof<span class="starik">*</span></label>
-                             
-                              <div class="w-100">
-                                <label for="upRegProof" class="m-0 upload-wrapper">
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                                      <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="#002882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                      <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                      <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="#002882" stroke-width="1.5" stroke-linecap="round"/>
-                                      <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
-                                    </svg>
-                                  <span>Upload Image</span>
-                              </label>
-                                <p id='upRegProofText' class="m-0">Only PNG, JPG and WEBp with File size less then 500kb are accepted.</p>
-                              </div>
-                              <input id="upRegProof" class="upRegProof required" type="file" name="upRegProof" accept=".jpg, .WEBp, .png" required/>                            
-                              
-                            </div>
-
-                            <div class="mb-3 formFields">
-                                <label class="form-label">Business NTN Number<span class="starik">*</span></label>
-                                <input type="text" class="form-control required" placeholder="Enter NTN Number" id="businessNtnNumber" name="businessNtnNumber" aria-describedby="emailHelp" required>
-                            </div>
-
-                            <div class="mb-3 formFields">
-                              <label class="form-label">Upload NTN Document<span class="starik">*</span></label>
-                             
-                              <div class="w-100">
-                                <label for="upNtnNum" class="m-0 upload-wrapper">
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                                      <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="#002882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                      <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                      <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="#002882" stroke-width="1.5" stroke-linecap="round"/>
-                                      <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
-                                    </svg>
-                                  <span>Upload Image</span>
-                              </label>
-                                <p id='upNtnNumText' class="m-0">Only PNG, JPG and WEBp with File size less then 500kb are accepted.</p>
-                              </div>
-                              <input id="upNtnNum" class="upRegProof required" type="file" name="upNtnNum" accept=".jpg, .WEBp, .png" required/>                            
-                              
-                            </div>
-
-                            <div class="mb-3 formFields">
-                                <label class="form-label">Trademark <span class="bussinessInfoText">(optional)</span></label>
-                                <input type="text" class="form-control required" placeholder="Enter Trademark" id="trademark" name="trademark" aria-describedby="emailHelp" required>
-                            </div>
-
-                            <div class="mb-3 formFields">
-                              <label class="form-label">Upload Trademark Document<span class="starik">*</span></label>
-                             
-                              <div class="w-100">
-                                <label for="upTradDoc" class="m-0 upload-wrapper">
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                                      <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="#002882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                      <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                      <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="#002882" stroke-width="1.5" stroke-linecap="round"/>
-                                      <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
-                                    </svg>
-                                  <span>Upload Image</span>
-                              </label>
-                                <p id='upTradDocText' class="m-0">Only PNG, JPG and WEBp with File size less then 500kb are accepted.</p>
-                              </div>
-                              <input id="upTradDoc" class="upRegProof required" type="file" name="upTradDoc" accept=".jpg, .WEBp, .png" required/>                            
-                              
-                            </div>
-                        </div>
-                        <h1>Address Book</h1>
-                        <div class="row p-2 p-sm-3 m-0 rounded-4">
-                            <h3 class="bussAddText">Business Address</h3>
-                            <div class="mb-3 formFields">
-                                <label class="form-label">Business Based in<span class="starik">*</span></label>
-                                <select class="form-select required" id="businessBasedin" name="businessBasedin">
-                                    <option>
-                                        <img src="https://flagcdn.com/w20/pk.png" alt="Pakistan Flag" class="flag-icon" />
-                                         Pakistan</option>
-                                         
-                                   
-                                  </select>
-                            </div>
-                        
-                            <div class="mb-3 formFields">
-                                <label class="form-label">State<span class="starik">*</span></label>
-                                <select class="form-select required" id="bussinessState" name="bussinessState">
-                                  <option value="">Select State</option>
-                                  <option value="Punjab">Punjab</option>
-                                  <option value="Sindh">Sindh</option>
-                                  <option value="KPK">Khyber Pakhtunkhwa</option>
-                                  <option value="Balochistan">Balochistan</option>
-                                  </select>
-                            </div>
-                            <div class="mb-3 formFields">
-                                <label class="form-label">City<span class="starik">*</span></label>
-                                <!-- <input type="text" placeholder="Enter City" class="form-control required" id="bussinessCity" name="bussinessCity" aria-describedby="emailHelp" required> -->
-                                <select class="form-select required" id="bussinessCity" name="bussinessCity">
-                                  <option value="">Select City</option>
-                                  <option value="Multan">Multan</option>
-                                  <option value="Lahore">Lahore</option>
-                                </select>
-                              </div>
-                            
-                          <div class="mb-3 formFields">
-                              <label class="form-label">Area<span class="starik">*</span></label>
-                            <select class="form-select required" id="bussinessArea" name="bussinessArea">
-                              <option value="">Select Area</option>
-                              <option value="Cant">Cant</option>
-                              <option value="Gulgasht">Gulgasht</option>
-                            </select>
-                          </div>
-                            <div class="mb-3 formFields">
-                                <label class="form-label">Address<span class="starik">*</span></label>
-                                <input type="text" placeholder="Enter Address" class="form-control required" id="bussinessAddress" name="bussinessAddress" aria-describedby="emailHelp" required>
-                            </div>
-                            <div class="mb-3 formFields">
-                                <label class="form-label">Post Code<span class="starik">*</span></label>
-                                <input type="text" placeholder="Enter Post Code" class="form-control required" oninput="this.value = this.value.replace(/[^0-9]/g, '')" id="businessPostCode" minlength="5" maxlength="5" name="businessPostCode" aria-describedby="emailHelp" required>
-                            </div>
-                            <div class="mb-3 businessFormFields">
-                                <label class="form-label">Warehouse Address<span class="starik">*</span></label>
-                               <div class="businessInputFields">
-                                <input type="checkbox" id="bussinessWarehouseAddress" name="bussinessWarehouseAddress" value="warehouseAddressCheck">
-                                <label class="user-select-none" for="bussinessWarehouseAddress"> Same as Business Address</label>
-                               </div>
-                            </div>
-                            <div class="p-0 bussWarehouseAddress">
-                              <div class="mb-3 formFields">
-                                <label class="form-label">State<span class="starik">*</span></label>
-                                <select class="form-select required" id="warehouseState" name="warehouseState">
-                                  <option value="">Select State</option>
-                                  <option value="Punjab">Punjab</option>
-                                  <option value="Sindh">Sindh</option>
-                                  <option value="KPK">Khyber Pakhtunkhwa</option>
-                                  <option value="Balochistan">Balochistan</option>
-                                  </select>
-                            </div>
-                            <div class="mb-3 formFields">
-                                <label class="form-label">City<span class="starik">*</span></label>
-                                <select class="form-select required" id="warehouseCity" name="warehouseCity">
-                                  <option value="">Select City</option>
-                                  <option value="Multan">Multan</option>
-                                  <option value="Lahore">Lahore</option>
-                                </select>
-                              </div>
-                            
-                          <div class="mb-3 formFields">
-                              <label class="form-label">Area<span class="starik">*</span></label>
-                            <select class="form-select required" id="warehouseArea" name="warehouseArea">
-                              <option value="">Select Area</option>
-                              <option value="Cant">Cant</option>
-                              <option value="Gulgasht">Gulgasht</option>
-                            </select>
-                          </div>
-                            <div class="mb-3 formFields">
-                                <label class="form-label">Address<span class="starik">*</span></label>
-                                <input type="text" placeholder="Enter Address" class="form-control required" id="warehouseAddress" name="warehouseAddress" aria-describedby="emailHelp" required>
-                            </div>
-                            <div class="mb-3 formFields">
-                                <label class="form-label">Post Code<span class="starik">*</span></label>
-                                <input type="text" placeholder="Enter Post Code" class="form-control required" oninput="this.value = this.value.replace(/[^0-9]/g, '')" id="warehousePostCode" minlength="5" maxlength="5" name="warehousePostCode" aria-describedby="emailHelp" required>
-                            </div>
-                            </div>
-
-                            <div class="mb-3 businessFormFields">
-                                <label class="form-label">Return Address<span class="starik">*</span></label>
-                                <div class="businessInputFields">
-                                <input type="checkbox"  id="bussReturnAddressCheck" name="returnAddressCheck" value="Bike">
-                                <label class="user-select-none" for="bussReturnAddressCheck"> Same as Business Address</label>
-                                </div>
-                            </div>
-                            <div class="p-0 bussReturnAddress">
-                              <div class="mb-3 formFields">
-                                <label  class="form-label">State<span class="starik">*</span></label>
-                                <select class="form-select required" id="returnState" name="returnState">
-                                  <option value="">Select State</option>
-                                  <option value="Punjab">Punjab</option>
-                                  <option value="Sindh">Sindh</option>
-                                  <option value="KPK">Khyber Pakhtunkhwa</option>
-                                  <option value="Balochistan">Balochistan</option>
-                                  </select>
-                              </div>
-                              <div class="mb-3 formFields">
-                                <label  class="form-label">City<span class="starik">*</span></label>
-                                <select class="form-select required" id="returnCity" name="returnCity">
-                                  <option value="">Select City</option>
-                                  <option value="Multan">Multan</option>
-                                  <option value="Lahore">Lahore</option>
-                                </select>
-                              </div>
-                             
-                            <div class="mb-3 formFields">
-                                <label class="form-label">Area<span class="starik">*</span></label>
-                              <select class="form-select required" id="returnArea" name="returnArea">
-                                <option value="">Select Area</option>
-                                <option value="Cant">Cant</option>
-                                <option value="Gulgasht">Gulgasht</option>
-                              </select>
-                            </div>
-                              <div class="mb-3 formFields">
-                                <label  class="form-label">Address<span class="starik">*</span></label>
-                                <input type="text" placeholder="Enter Address" class="form-control required" id="returnAddress" name="returnAddress" aria-describedby="emailHelp" required>
-                              </div>
-                              <div class="mb-3 formFields">
-                                <label  class="form-label">Post Code<span class="starik">*</span></label>
-                                <input type="text" placeholder="Enter Post Code" class="form-control required" oninput="this.value = this.value.replace(/[^0-9]/g, '')" id="returnPostCode" name="returnPostCode" minlength="5" maxlength="5" aria-describedby="emailHelp" required>
-                              </div>
-                            </div>
-                        </div>
-                           
-                        <button type="button" disabled id="bussAccNxtBtn" class="bankDetailLink">Next <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                            <path d="M4.5 12H20.5M20.5 12L14.5 6M20.5 12L14.5 18" stroke="#E6EAF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg></button>
-                          <button type="button" id="bussAccBackBtn" class="backBtn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                              <path d="M20.5 12H4.5M4.5 12L10.5 6M4.5 12L10.5 18" stroke="#002882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                              <path d="M20.5 12H4.5M4.5 12L10.5 6M4.5 12L10.5 18" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg> Back
-                          </button>
-                    </section>
+                      
                     <!-- Bank Account Detail Form -->
                     <section class="bankDetail" style="display: none;" >
                       <h1>Bank Account</h1>
@@ -851,5 +595,29 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/@form-validation/umd/bundle/popular.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/@form-validation/umd/plugin-international-telephone-input/index.min.js"></script>
+      <script>
+        function previewImage(inputId, imgId) {
+  const inputElement = document.getElementById(inputId);
+  const imgElement = document.getElementById(imgId);
+
+  // Add default classes to the img element
+  imgElement.classList.add('w-50', 'rounded-2');
+
+  inputElement.addEventListener('change', (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      imgElement.src = URL.createObjectURL(file);
+      imgElement.onload = () => {
+        URL.revokeObjectURL(imgElement.src); // Free memory
+      };
+    }
+  });
+}
+
+
+    // Initialize the preview function
+    previewImage('cnicFrontSidePhoto', 'FrontSideimgPrev');
+    previewImage('cnicFrontBackPhoto', 'backSideimgPrev');
+      </script>
 </body>
 </html>
