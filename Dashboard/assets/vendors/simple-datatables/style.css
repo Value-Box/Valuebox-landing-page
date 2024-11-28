@@ -104,7 +104,7 @@
 	height: 0;
 	width: 0;
 	position: absolute;
-	right: 4px;
+	right: -10px;
 	border-left: 4px solid transparent;
 	border-right: 4px solid transparent;
 	opacity: 0.2;

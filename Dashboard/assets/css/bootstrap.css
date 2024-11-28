@@ -9944,7 +9944,6 @@ text-underline-position: from-font;
 .list-group-item-action.active{
   background-color: #002882;
   color: var(--Primary-Color-Dark-Blue-10, #E6EAF3)  !important;
-
 }
 
 @media(max-width:1400px){
@@ -10166,5 +10165,18 @@ text-underline-position: from-font;
   padding: 8px;
   font-size: 18px;
   line-height: 25px; 
+  }
+  .bulk-btn {
+    border-radius: 5px;
+    border: 1px solid var(--Primary-Color-Dark-Blue, #002882);
+    background: var(--Primary-Color-Dark-Blue-10, #e6eaf3);
+    padding: 5px 10px;
+    color: var(--Primary-Color-Dark-Blue, #002882);
+    font-size: 16px;
+  }
+  .form-select {
+    
+    padding: 5px 10px;
+   
   }
 }

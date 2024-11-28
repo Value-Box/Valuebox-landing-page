@@ -501,6 +501,7 @@ body {
   font-style: normal;
   font-weight: 500;
   line-height: 30px;
+  border: 1px solid #33539b;
 }
 .productsselectedbtn {
   color: var(--Natural-Color-60, #666);
@@ -1902,7 +1903,42 @@ background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
   height: 500px;
   overflow-y: auto;
  }
+ #cancel-order-modal{
+ width: 1030px;
+ }
+ .scrollable-table {
+  overflow-x: auto; /* Enables horizontal scrolling */
+  white-space: nowrap; /* Prevents wrapping of columns */
+}
+.table-container {
+  overflow-x: auto; /* Enables horizontal scrolling */
+  white-space: nowrap; /* Prevents table contents from wrapping */
+  width: 100%; /* Ensure container adjusts to the available width */
+}
 
+.table {
+  width: 100%; /* Ensure table takes full width of the container */
+  border-collapse: collapse; /* Ensure no gaps between table cells */
+}
+
+.table th,
+.table td {
+  padding: 10px; /* Adds spacing */
+  text-align: left; /* Aligns text */
+}
+
+.table-container::-webkit-scrollbar {
+  height: 8px; /* Custom scrollbar height */
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar */
+  border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color on hover */
+}
  @media(max-width:1400px){
   .Order-detail-line{
     position: relative;
@@ -1910,5 +1946,9 @@ background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
   }
   .custom-modal-width{
     max-width: 1200px;
+  }
+  .viewcollectionbtn {
+    padding: 5px 10px;
+    line-height: 25px;
   }
  }
