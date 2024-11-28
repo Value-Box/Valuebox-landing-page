@@ -112,3 +112,6 @@ function passwordShower() {
     updateTimerDisplay(); // Update the timer display
     startCountdown(); // Start the countdown again
   });
+
+
+  

@@ -1182,6 +1182,36 @@ input::placeholder {
   line-height: 38px;
   color: #e09b00;
 }
+.line{
+  background: #CCC;
+  height: 1px;
+  width: 100%;
+}
+.orText{
+  color: var(--Primary-Color-Dark-Blue, #002882);
+font-family: Sarabun;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px; 
+}
+.blueTextLAble{
+  color: var(--Primary-Color-Dark-Blue, #002882);
+  font-family: Sarabun;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; 
+}
+.newTextErr, .confTextErr {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  display: block;
+}
+.password-toggle{
+  cursor: pointer;
+}
 @media(max-width:418px){
   .queryText p,
 .queryQuestion p {
@@ -1379,6 +1409,7 @@ display: block;
   font-weight: 500;
   line-height: 24px;
   color: #002882;
+  cursor: pointer;
 }
 .eyeIconBtn {
   border: none;

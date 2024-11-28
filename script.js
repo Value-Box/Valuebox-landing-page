@@ -1537,3 +1537,6 @@ bankAccBackBtn.addEventListener("click", () => {
 //   document.getElementById("verifyBtn").addEventListener("click", function () {
 //     document.getElementById("myForm").submit();
 // });
+
+
+
