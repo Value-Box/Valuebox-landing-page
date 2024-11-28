@@ -106,7 +106,7 @@ body {
 .dropdown-item {
   display: flex;
   color: #333;
-  padding: 10px 20px 10px 50px !important;
+  /* padding: 10px 20px 10px 50px !important; */
   align-items: center;
   gap: 10px;
   align-self: stretch;
@@ -1818,6 +1818,12 @@ background: #12B76A;
     height: fit-content;
     border: 1px solid var(--Light-Gray-Color);
   }
+  .daterangepicker .drp-calendar{
+    max-width: 100% !important;
+  }
+  .dropdown-toggle:after{
+    display: none;
+  }
   .dataInsightBoxShadow {
     padding: 20px;
     border-radius: 12px;
@@ -1906,4 +1912,3 @@ background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
     max-width: 1200px;
   }
  }
- 
