@@ -7,10 +7,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/bootstrap.css">
-  
+    <link rel="stylesheet" href="../assets/vendors/apexcharts/apexcharts.css">
     <link rel="stylesheet" href="../assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="../assets/css/app.css">
+    <link rel="stylesheet" href="../assets/vendors/simple-datatables/style.css">
     <link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/x-icon">
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="stylesheet" href="../style.css" />
@@ -150,14 +151,13 @@
                               <li class="submenu-item ">
                                   <a href="../OrdersReviews/orders.html">Orders</a>
                               </li>
-                              <li class="submenu-item active">
+                              <li class="submenu-item ">
                                   <a href="../OrdersReviews/returnOrder.html">Return Orders</a>
                               </li>
                               <li class="submenu-item ">
                                   <a href="../OrdersReviews/reviwesManagement.html">Reviews</a>
                               </li>
-                              
-                          </ul>
+                               </ul>
                       </li>
         
                       <li class="sidebar-item  has-sub">
@@ -181,7 +181,7 @@
                         </a>
                         <ul class="submenu ">
                             <li class="submenu-item ">
-                                <a href="../marketingCenter/Promos.html">Promo’s</a>
+                                <a href="component-button.html">Promo’s</a>
                             </li>
                             
                         </ul>
@@ -269,8 +269,8 @@
                       </svg>
                   </a>
                   <ul class="submenu ">
-                      <li class="submenu-item ">
-                        <a href="../Achivements/Levels.html">Current Level</a>
+                      <li class="submenu-item active">
+                          <a href="Levels.html">Current Level</a>
                       </li>
                       
                   </ul>
@@ -354,7 +354,7 @@
                 </svg>
             </a>
             <ul class="submenu ">
-                <li class="submenu-item ">
+                <li class="submenu-item">
                   <a href="../MyAccount/Settings.html">Settings</a>
                 </li>
                 <li class="submenu-item ">
@@ -411,175 +411,182 @@
             </div>
         </div>
    <main class="backcolor" id="main">
-   <div class="container-fluid p-0 p-4">
-   
-    <div class="d-flex align-items-center gap-3">
-        <h3 class="heading-one pt-2">Return Orders</h3>
-        <a class="text-warning fw-bold mt-2" style="font-size: clamp(16px, 4vw, 18px);" href="">Return to ValueBox Warehouse</a>
-        <a class="paragraph-1 mt-2" href="">Refunds Only</a>
-    </div>
-    <div class="col allbar d-flex gap-4 py-4">
-        <a class="active" href="">All</a>       
-        <a href="">Return Initiated</a>
-        <a href="">Return in Progress </a>
-        <a href="">QC in Progress</a>
-        <a href="">Returned</a>
-        <a href="">Scrapped</a>
-        <a href="">Canceled</a>
+    <div class="navigation anchortags py-4">
+        <a href="../index.html">Home</a>
+     
+        <a href="">>Seller Benifits</a>
+        <a class="active1" href="Levels.html">>Levels</a>
+      </div>   
+  <div class="container-fluid"> 
+    <div class="d-flex justify-content-between">
+    <span class="heading-one">Your Level</span>
+         </div>
+         <div class="form1 mt-40">
+       <div class="d-flex gap-2 align-items-center">
+        <div class="d-flex flex-column align-items-center">
+            <div class="LevelBadge1">
+             <svg xmlns="http://www.w3.org/2000/svg" width="54" height="75" viewBox="0 0 54 75" fill="none">
+                    <g filter="url(#filter0_d_5430_14195)">
+                      <path d="M25 42.2324L14 42.2324L14 69.2324L25 63.6859L25 42.2324Z" fill="#73488D"/>
+                      <path d="M25 42.2324L36 42.2324L36 69.2324L25 63.6859L25 42.2324Z" fill="#AA75CB"/>
+                      <circle cx="24.9993" cy="24.2161" r="23.6551" fill="#DC9E42" stroke="#774700" stroke-width="0.413162"/>
+                      <circle cx="24.999" cy="24.2158" r="18.3037" fill="#734C12"/>
+                      <mask id="mask0_5430_14195" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="7" y="7" width="38" height="38">
+                        <circle cx="25.9752" cy="26.1705" r="18.3463" fill="#C28B37"/>
+                      </mask>
+                      <g mask="url(#mask0_5430_14195)">
+                        <circle cx="24.9987" cy="24.2174" r="18.3463" fill="#002882"/>
+                      </g>
+                      <path d="M25.0992 11.4531L29.0568 19.3682L36.9719 20.3576L31.5369 26.4523L33.0144 35.1985L25.0992 31.2409L17.1841 35.1985L18.6748 26.4523L13.2266 20.3576L21.1417 19.3682L25.0992 11.4531Z" fill="url(#paint0_linear_5430_14195)"/>
+                    </g>
+                    <defs>
+                      <filter id="filter0_d_5430_14195" x="0.813008" y="0.0298045" width="52.902" height="74.0583" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dx="2.26598" dy="2.26598"/>
+                        <feGaussianBlur stdDeviation="1.29485"/>
+                        <feComposite in2="hardAlpha" operator="out"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0"/>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_5430_14195"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_5430_14195" result="shape"/>
+                      </filter>
+                      <linearGradient id="paint0_linear_5430_14195" x1="25.0992" y1="11.4531" x2="25.0992" y2="35.1985" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FCFF80"/>
+                        <stop offset="0.401042" stop-color="#FDE870"/>
+                        <stop offset="1" stop-color="#FFC759"/>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+             </div>
+             <span class="mt-20 text-dark subHeading-5">Rising Seller</span>
+        </div>    
+        <div class="levels-progress1">
+                <div class="levels-progress-bar1" role="progressbar" aria-valuenow="70"
+                aria-valuemin="0" aria-valuemax="100" style="width:100%">
+                </div>
+              </div>
+              <div class="d-flex flex-column align-items-center">
+                <div class="LevelBadge2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="55" height="77" viewBox="0 0 55 77" fill="none">
+                        <g filter="url(#filter0_d_5276_14048)">
+                          <path d="M9.52734 37.168H40.841V71.9999L25.1842 61.7775L9.52734 71.9999V37.168Z" fill="#CE4444"/>
+                          <path d="M9.52734 33.7754H40.841V68.6073L25.1842 58.3849L9.52734 68.6073V33.7754Z" fill="#983535"/>
+                          <path d="M40.8418 71.9999V37.168H38.3789V70.3919L40.8418 71.9999Z" fill="#CE4444"/>
+                          <path d="M9.52541 71.9999V37.168H11.9883V70.3919L9.52541 71.9999Z" fill="#CE4444"/>
+                          <path d="M49.4318 27.9703C49.4318 41.3623 38.5754 52.2187 25.1833 52.2187C11.7912 52.2187 0.934737 41.3623 0.934737 27.9703C0.934737 14.5782 11.7912 3.72185 25.1833 3.72185C38.5754 3.72185 49.4318 14.5782 49.4318 27.9703Z" fill="#FFDE69" stroke="#33539B" stroke-width="0.408536"/>
+                          <ellipse cx="25.3169" cy="28.1325" rx="18.2779" ry="18.1677" fill="#9C7A01"/>
+                          <mask id="mask0_5276_14048" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="7" y="11" width="38" height="38">
+                            <ellipse cx="26.2031" cy="30.0351" rx="18.2461" ry="18.246" fill="#C28B37"/>
+                          </mask>
+                          <g mask="url(#mask0_5276_14048)">
+                            <ellipse cx="25.2305" cy="28.0917" rx="18.2461" ry="18.246" fill="#C09525"/>
+                          </g>
+                          <path d="M25.3581 47.486C36.2075 47.486 45.0492 38.853 45.0492 28.1468C45.0492 17.4407 36.2075 8.80766 25.3581 8.80766C14.5087 8.80766 5.66703 17.4407 5.66703 28.1468C5.66703 38.853 14.5087 47.486 25.3581 47.486Z" fill="#6F5600" stroke="#D1A635" stroke-width="2.79093"/>
+                          <mask id="mask1_5276_14048" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="8" y="11" width="37" height="38">
+                            <ellipse cx="26.1915" cy="30.0176" rx="18.1837" ry="18.1836" fill="#C28B37"/>
+                          </mask>
+                          <g mask="url(#mask1_5276_14048)">
+                            <ellipse cx="25.2227" cy="28.0801" rx="18.1837" ry="18.1836" fill="#002882"/>
+                          </g>
+                          <path d="M25.3593 14.125L29.8389 22.9775L29.9592 23.2153L30.2237 23.248L39.1214 24.3469L33.0006 31.1288L32.8381 31.3089L32.8789 31.5481L34.5525 41.3372L25.5807 36.9047L25.3593 36.7953L25.1378 36.9047L16.1676 41.3364L17.8559 31.5488L17.8972 31.3089L17.7339 31.1284L11.5985 24.3468L20.4948 23.248L20.7593 23.2153L20.8796 22.9775L25.3593 14.125Z" fill="url(#paint0_linear_5276_14048)" stroke="#EEA500"/>
+                          <path d="M39.4125 13.8561L41.5112 9.23738L39.4125 4.61869L44.0312 6.71731L48.65 4.61869L46.5513 9.23738L48.65 13.8561L44.0312 11.7574L39.4125 13.8561Z" fill="#F04438"/>
+                        </g>
+                        <defs>
+                          <filter id="filter0_d_5276_14048" x="0.410382" y="3.19749" width="54.0276" height="73.6038" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset dx="2.24061" dy="2.24061"/>
+                            <feGaussianBlur stdDeviation="1.28035"/>
+                            <feComposite in2="hardAlpha" operator="out"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_5276_14048"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_5276_14048" result="shape"/>
+                          </filter>
+                          <linearGradient id="paint0_linear_5276_14048" x1="25.3593" y1="13.0176" x2="25.3593" y2="42.2201" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FFF5D3"/>
+                            <stop offset="1" stop-color="#FFE178"/>
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                 </div>
+                 <span class="mt-20 text-dark subHeading-5">Advance Seller</span>
+              </div>
+             
+             <div class="levels-progress2">
+                <div class="levels-progress-bar2" role="progressbar" aria-valuenow="70"
+                aria-valuemin="0" aria-valuemax="100" style="width:100%">
+                </div>
+              </div>
+              <div class="d-flex flex-column align-items-center">
+                <div class="LevelBadge2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="57" height="77" viewBox="0 0 57 77" fill="none">
+                        <g filter="url(#filter0_d_5276_14025)">
+                          <path d="M22.832 45.4531L29.3157 49.1965L16.1495 72.001L12.3705 63.573L22.832 45.4531Z" fill="url(#paint0_linear_5276_14025)"/>
+                          <path d="M22.832 45.4531L16.3484 41.7098L3.1822 64.5143L12.3705 63.573L22.832 45.4531Z" fill="#002882"/>
+                          <path d="M32.082 45.4531L25.5984 49.1965L38.7646 72.001L42.5436 63.573L32.082 45.4531Z" fill="#002882"/>
+                          <path d="M32.082 45.4531L38.5657 41.7098L51.7319 64.5143L42.5436 63.573L32.082 45.4531Z" fill="url(#paint1_linear_5276_14025)"/>
+                          <circle cx="27.2594" cy="29.7496" r="22.5185" fill="url(#paint2_linear_5276_14025)" stroke="#765C00" stroke-width="0.39331"/>
+                          <circle cx="27.2602" cy="29.7504" r="17.4243" fill="#A88300"/>
+                          <mask id="mask0_5276_14025" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="10" y="14" width="36" height="36">
+                            <circle cx="28.1875" cy="31.6093" r="17.4648" fill="#C28B37"/>
+                          </mask>
+                          <g mask="url(#mask0_5276_14025)">
+                            <circle cx="27.2578" cy="29.75" r="17.4648" fill="#002882"/>
+                          </g>
+                          <path d="M27.353 17.5996L31.1204 25.1344L38.6552 26.0763L33.4813 31.8781L34.8878 40.2041L27.353 36.4366L19.8182 40.2041L21.2372 31.8781L16.0508 26.0763L23.5856 25.1344L27.353 17.5996Z" fill="url(#paint3_linear_5276_14025)"/>
+                          <path d="M5.67584 16.2186L8.13228 10.8124L5.67584 5.40619L11.082 7.86263L16.4882 5.40619L14.0318 10.8124L16.4882 16.2186L11.082 13.7621L5.67584 16.2186Z" fill="#002882"/>
+                        </g>
+                        <defs>
+                          <filter id="filter0_d_5276_14025" x="2.87544" y="5.09809" width="53.4774" height="71.5243" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset dx="2.1571" dy="2.1571"/>
+                            <feGaussianBlur stdDeviation="1.23263"/>
+                            <feComposite in2="hardAlpha" operator="out"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_5276_14025"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_5276_14025" result="shape"/>
+                          </filter>
+                          <linearGradient id="paint0_linear_5276_14025" x1="16.2489" y1="56.8554" x2="22.7326" y2="60.5987" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#0032A3"/>
+                            <stop offset="0.25" stop-color="#1A51CB"/>
+                            <stop offset="0.5" stop-color="#3B66C8"/>
+                            <stop offset="0.75" stop-color="#1A51CB"/>
+                            <stop offset="1" stop-color="#0032A3"/>
+                          </linearGradient>
+                          <linearGradient id="paint1_linear_5276_14025" x1="38.6651" y1="56.8554" x2="45.1488" y2="53.1121" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#0032A3"/>
+                            <stop offset="0.25" stop-color="#1A51CB"/>
+                            <stop offset="0.5" stop-color="#3B66C8"/>
+                            <stop offset="0.75" stop-color="#1A51CB"/>
+                            <stop offset="1" stop-color="#0032A3"/>
+                          </linearGradient>
+                          <linearGradient id="paint2_linear_5276_14025" x1="27.2594" y1="7.42773" x2="27.2594" y2="52.0715" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FFC600"/>
+                            <stop offset="1" stop-color="#FFDE69"/>
+                          </linearGradient>
+                          <linearGradient id="paint3_linear_5276_14025" x1="27.353" y1="17.5996" x2="27.353" y2="40.2041" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FFFCDD"/>
+                            <stop offset="1" stop-color="#FFE896"/>
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                 </div>
+                 <span class="mt-20 text-dark subHeading-5">Pro Seller</span>
+              </div>
        </div>
-      <div class="row bg-white d-flex gap-4 m-0 p-4 shadow-sm p-3 mb-5 bg-body rounded">
-      <div class="d-flex gap-2 p-0">
-      <button class=" btn-gray bg-NColor border-0">Today</button>
-      <button class="btn-gray bg-NColor border-0">Yesterday</button>
-      <button class="btn-gray bg-NColor border-0">Last 07 Days</button>
-      <button class="btn-gray bg-NColor border-0">Last 30 days</button>
-      <button class="btn-gray bg-NColor border-0">Custom</button>
-    </div>
-        <div class="col-5 p-0">
-            <div class="input-group p-0">
-        
-                <fieldset class="form-group mb-0">
-                    <select class="form-select form-select-input returnorderbtn" id="basicSelect">
-                        <option value="bulkManage"><i class="your-icon-class"></i>Order ID</option>
-                    </select>
-                </fieldset>
-                <input type="text" class="form-control form-select-input" placeholder="Please Input" aria-label="input" aria-describedby="button-addon2">
-                <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
-           </div>
-        </div> 
-        <div class="col-6 p-0">
-            <div class="input-group p-0">
-             <fieldset class="form-group mb-0">
-                    <select class="form-select form-select-input returnorderbtn" id="basicSelect">
-                        <option value="bulkManage"><i class="your-icon-class"></i>Customer Phone</option>
-                    </select>
-                </fieldset>
-                <input type="text" class="form-control form-select-input" placeholder="Please Input" aria-label="input" aria-describedby="button-addon2">
-                <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
-           </div>
-        </div> 
+         </div>
   
-    </div>
-    <div class="row d-flex justify-content-between bg-white shadow-sm p-3 mb-5 bg-body rounded p-0">
-        <div class="col-6 d-flex align-items-center">
-        <label class="paragraph-1" for="">Page 1,1-0 of items</label>
-        </div>
-        <div class="col-6 d-flex gap-2 justify-content-end">
-        <a href="damageProductClaim.html"><button class="btn-blue"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M22 18H6C5.46957 18 4.96086 17.7893 4.58579 17.4142C4.21071 17.0391 4 16.5304 4 16V7C4 6.46957 3.78929 5.96086 3.41421 5.58579C3.03914 5.21071 2.53043 5 2 5" stroke="#FCFCFC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M17 14V4C17 3.46957 16.7893 2.96086 16.4142 2.58579C16.0391 2.21071 15.5304 2 15 2H14C13.4696 2 12.9609 2.21071 12.5858 2.58579C12.2107 2.96086 12 3.46957 12 4V14" stroke="#FCFCFC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M20 6H9C8.44772 6 8 6.44772 8 7V13C8 13.5523 8.44772 14 9 14H20C20.5523 14 21 13.5523 21 13V7C21 6.44772 20.5523 6 20 6Z" stroke="#FCFCFC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M18 22C19.1046 22 20 21.1046 20 20C20 18.8954 19.1046 18 18 18C16.8954 18 16 18.8954 16 20C16 21.1046 16.8954 22 18 22Z" stroke="#FCFCFC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M9 22C10.1046 22 11 21.1046 11 20C11 18.8954 10.1046 18 9 18C7.89543 18 7 18.8954 7 20C7 21.1046 7.89543 22 9 22Z" stroke="#FCFCFC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg> Claim Damage</button></a>
-        <button class="btn-gray">Export <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M12 20V10M12 10L15 13M12 10L9 13" stroke="#666666" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12M20 12C20.0007 10.8006 19.7314 9.61651 19.2121 8.53542C18.6928 7.45434 17.9367 6.50403 17 5.755" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
-          </svg></button>
-        </div>
-    </div>
-    <div class="row d-flex justify-content-between bg-white shadow-sm p-3 mb-5 bg-body rounded gap-20 p-0">
-        <div class="row d-flex gap-3 gap-xl-4 p-0 justify-content-between orderReturnDetails">
-            <div class="col-5 d-flex flex-column gap-2 p-0">
-                <div class="d-flex gap-2">
-                    <span class="text-dark message-text">Order ID:</span>
-                    <span class="orderidColor"> 456897432131685123</span>
-                    <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M19 2C19.5304 2 20.0391 2.21071 20.4142 2.58579C20.7893 2.96086 21 3.46957 21 4V16C21 16.5304 20.7893 17.0391 20.4142 17.4142C20.0391 17.7893 19.5304 18 19 18H17V20C17 20.5304 16.7893 21.0391 16.4142 21.4142C16.0391 21.7893 15.5304 22 15 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H7V4C7 3.46957 7.21071 2.96086 7.58579 2.58579C7.96086 2.21071 8.46957 2 9 2H19ZM10 15H8C7.74512 15.0003 7.49997 15.0979 7.31463 15.2728C7.1293 15.4478 7.01777 15.687 7.00283 15.9414C6.98789 16.1958 7.07067 16.4464 7.23426 16.6418C7.39786 16.8373 7.6299 16.9629 7.883 16.993L8 17H10C10.2549 16.9997 10.5 16.9021 10.6854 16.7272C10.8707 16.5522 10.9822 16.313 10.9972 16.0586C11.0121 15.8042 10.9293 15.5536 10.7657 15.3582C10.6021 15.1627 10.3701 15.0371 10.117 15.007L10 15ZM19 4H9V6H15C15.5304 6 16.0391 6.21071 16.4142 6.58579C16.7893 6.96086 17 7.46957 17 8V16H19V4ZM12 11H8C7.73478 11 7.48043 11.1054 7.29289 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.29289 12.7071C7.48043 12.8946 7.73478 13 8 13H12C12.2652 13 12.5196 12.8946 12.7071 12.7071C12.8946 12.5196 13 12.2652 13 12C13 11.7348 12.8946 11.4804 12.7071 11.2929C12.5196 11.1054 12.2652 11 12 11Z" fill="#33539B"/>
-                      </svg></span>
-                   </div>
-                <div class="d-flex gap-2">
-                    <span class="text-dark message-text">Return Order ID:</span>
-                    <span class="orderidColor">456897432131685123</span>
-                    <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M19 2C19.5304 2 20.0391 2.21071 20.4142 2.58579C20.7893 2.96086 21 3.46957 21 4V16C21 16.5304 20.7893 17.0391 20.4142 17.4142C20.0391 17.7893 19.5304 18 19 18H17V20C17 20.5304 16.7893 21.0391 16.4142 21.4142C16.0391 21.7893 15.5304 22 15 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H7V4C7 3.46957 7.21071 2.96086 7.58579 2.58579C7.96086 2.21071 8.46957 2 9 2H19ZM10 15H8C7.74512 15.0003 7.49997 15.0979 7.31463 15.2728C7.1293 15.4478 7.01777 15.687 7.00283 15.9414C6.98789 16.1958 7.07067 16.4464 7.23426 16.6418C7.39786 16.8373 7.6299 16.9629 7.883 16.993L8 17H10C10.2549 16.9997 10.5 16.9021 10.6854 16.7272C10.8707 16.5522 10.9822 16.313 10.9972 16.0586C11.0121 15.8042 10.9293 15.5536 10.7657 15.3582C10.6021 15.1627 10.3701 15.0371 10.117 15.007L10 15ZM19 4H9V6H15C15.5304 6 16.0391 6.21071 16.4142 6.58579C16.7893 6.96086 17 7.46957 17 8V16H19V4ZM12 11H8C7.73478 11 7.48043 11.1054 7.29289 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.29289 12.7071C7.48043 12.8946 7.73478 13 8 13H12C12.2652 13 12.5196 12.8946 12.7071 12.7071C12.8946 12.5196 13 12.2652 13 12C13 11.7348 12.8946 11.4804 12.7071 11.2929C12.5196 11.1054 12.2652 11 12 11Z" fill="#33539B"/>
-                      </svg></span>
-                   </div>
-                   <div class="d-flex gap-2 mb-4">
-                    <span class="">Tracking Number:</span>
-                    <span class="text-dark message-text">PKc4654654841321</span>
-                    <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M19 2C19.5304 2 20.0391 2.21071 20.4142 2.58579C20.7893 2.96086 21 3.46957 21 4V16C21 16.5304 20.7893 17.0391 20.4142 17.4142C20.0391 17.7893 19.5304 18 19 18H17V20C17 20.5304 16.7893 21.0391 16.4142 21.4142C16.0391 21.7893 15.5304 22 15 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H7V4C7 3.46957 7.21071 2.96086 7.58579 2.58579C7.96086 2.21071 8.46957 2 9 2H19ZM10 15H8C7.74512 15.0003 7.49997 15.0979 7.31463 15.2728C7.1293 15.4478 7.01777 15.687 7.00283 15.9414C6.98789 16.1958 7.07067 16.4464 7.23426 16.6418C7.39786 16.8373 7.6299 16.9629 7.883 16.993L8 17H10C10.2549 16.9997 10.5 16.9021 10.6854 16.7272C10.8707 16.5522 10.9822 16.313 10.9972 16.0586C11.0121 15.8042 10.9293 15.5536 10.7657 15.3582C10.6021 15.1627 10.3701 15.0371 10.117 15.007L10 15ZM19 4H9V6H15C15.5304 6 16.0391 6.21071 16.4142 6.58579C16.7893 6.96086 17 7.46957 17 8V16H19V4ZM12 11H8C7.73478 11 7.48043 11.1054 7.29289 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.29289 12.7071C7.48043 12.8946 7.73478 13 8 13H12C12.2652 13 12.5196 12.8946 12.7071 12.7071C12.8946 12.5196 13 12.2652 13 12C13 11.7348 12.8946 11.4804 12.7071 11.2929C12.5196 11.1054 12.2652 11 12 11Z" fill="#33539B"/>
-                      </svg></span>
-                   </div>
-            </div>
-           <div class="col-3 d-flex flex-column gap-2 p-0">
-            <div class="d-flex gap-3">
-                <span class="text-dark message-text">Order Date:</span>
-                <span class="paragraph-2"> 24 AUG 2024</span>
-               </div>
-               <div class="d-flex gap-2">
-                <span class="text-dark message-text">Order Date:</span>
-                <span class="paragraph-2"> 24 AUG 2024</span>
-               </div>
-        </div>
-      
-       <div class="col-3 d-flex gap-2 justify-content-center p-0">
-       <span><img src="../Images/orderReturn.png" alt=""></span>
-       <span class="paragraph-blue">Muhammad Arshad</span>
-       <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <path d="M8 9H16M8 13H14M18 4C18.7956 4 19.5587 4.31607 20.1213 4.87868C20.6839 5.44129 21 6.20435 21 7V15C21 15.7956 20.6839 16.5587 20.1213 17.1213C19.5587 17.6839 18.7956 18 18 18H13L8 21V18H6C5.20435 18 4.44129 17.6839 3.87868 17.1213C3.31607 16.5587 3 15.7956 3 15V7C3 6.20435 3.31607 5.44129 3.87868 4.87868C4.44129 4.31607 5.20435 4 6 4H18Z" stroke="#EEA500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg></span>
-       </div>
-     </div>
-     <div class="row p-0 d-flex justify-content-between gap-4">
-        <div class="col d-flex gap-4 align-items-center p-4 rounded orderReturncol">
-                <div class="d-flex justify-content-center">
-                <img src="../Images/orderReturnimg.png" alt="">
-            </div>
-           
-            <div class="d-flex flex-column gap-2">
-                <span class="message-text text-dark">Pack of 12 - Temporary Tatto Book for Kids - Random Design</span>
-                <div class="d-flex gap-2">
-                    <span class="">Seller SKu ID</span>
-                    <span class="text-dark message-text">HIFI M-16</span>
-                    <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M19 2C19.5304 2 20.0391 2.21071 20.4142 2.58579C20.7893 2.96086 21 3.46957 21 4V16C21 16.5304 20.7893 17.0391 20.4142 17.4142C20.0391 17.7893 19.5304 18 19 18H17V20C17 20.5304 16.7893 21.0391 16.4142 21.4142C16.0391 21.7893 15.5304 22 15 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H7V4C7 3.46957 7.21071 2.96086 7.58579 2.58579C7.96086 2.21071 8.46957 2 9 2H19ZM10 15H8C7.74512 15.0003 7.49997 15.0979 7.31463 15.2728C7.1293 15.4478 7.01777 15.687 7.00283 15.9414C6.98789 16.1958 7.07067 16.4464 7.23426 16.6418C7.39786 16.8373 7.6299 16.9629 7.883 16.993L8 17H10C10.2549 16.9997 10.5 16.9021 10.6854 16.7272C10.8707 16.5522 10.9822 16.313 10.9972 16.0586C11.0121 15.8042 10.9293 15.5536 10.7657 15.3582C10.6021 15.1627 10.3701 15.0371 10.117 15.007L10 15ZM19 4H9V6H15C15.5304 6 16.0391 6.21071 16.4142 6.58579C16.7893 6.96086 17 7.46957 17 8V16H19V4ZM12 11H8C7.73478 11 7.48043 11.1054 7.29289 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.29289 12.7071C7.48043 12.8946 7.73478 13 8 13H12C12.2652 13 12.5196 12.8946 12.7071 12.7071C12.8946 12.5196 13 12.2652 13 12C13 11.7348 12.8946 11.4804 12.7071 11.2929C12.5196 11.1054 12.2652 11 12 11Z" fill="#33539B"/>
-                      </svg></span>
-                   </div>
-                   <div class="d-flex gap-2">
-                    <span class="">Seller SKu ID</span>
-                    <span class="text-dark message-text">HIFI M-16</span>
-                    <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M19 2C19.5304 2 20.0391 2.21071 20.4142 2.58579C20.7893 2.96086 21 3.46957 21 4V16C21 16.5304 20.7893 17.0391 20.4142 17.4142C20.0391 17.7893 19.5304 18 19 18H17V20C17 20.5304 16.7893 21.0391 16.4142 21.4142C16.0391 21.7893 15.5304 22 15 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H7V4C7 3.46957 7.21071 2.96086 7.58579 2.58579C7.96086 2.21071 8.46957 2 9 2H19ZM10 15H8C7.74512 15.0003 7.49997 15.0979 7.31463 15.2728C7.1293 15.4478 7.01777 15.687 7.00283 15.9414C6.98789 16.1958 7.07067 16.4464 7.23426 16.6418C7.39786 16.8373 7.6299 16.9629 7.883 16.993L8 17H10C10.2549 16.9997 10.5 16.9021 10.6854 16.7272C10.8707 16.5522 10.9822 16.313 10.9972 16.0586C11.0121 15.8042 10.9293 15.5536 10.7657 15.3582C10.6021 15.1627 10.3701 15.0371 10.117 15.007L10 15ZM19 4H9V6H15C15.5304 6 16.0391 6.21071 16.4142 6.58579C16.7893 6.96086 17 7.46957 17 8V16H19V4ZM12 11H8C7.73478 11 7.48043 11.1054 7.29289 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.29289 12.7071C7.48043 12.8946 7.73478 13 8 13H12C12.2652 13 12.5196 12.8946 12.7071 12.7071C12.8946 12.5196 13 12.2652 13 12C13 11.7348 12.8946 11.4804 12.7071 11.2929C12.5196 11.1054 12.2652 11 12 11Z" fill="#33539B"/>
-                      </svg></span>
-                   </div>
-                   <div class="d-flex gap-2">
-                    <span class="">Seller SKu ID</span>
-                    <span class="text-dark message-text">HIFI M-16</span>
-                    <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M19 2C19.5304 2 20.0391 2.21071 20.4142 2.58579C20.7893 2.96086 21 3.46957 21 4V16C21 16.5304 20.7893 17.0391 20.4142 17.4142C20.0391 17.7893 19.5304 18 19 18H17V20C17 20.5304 16.7893 21.0391 16.4142 21.4142C16.0391 21.7893 15.5304 22 15 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H7V4C7 3.46957 7.21071 2.96086 7.58579 2.58579C7.96086 2.21071 8.46957 2 9 2H19ZM10 15H8C7.74512 15.0003 7.49997 15.0979 7.31463 15.2728C7.1293 15.4478 7.01777 15.687 7.00283 15.9414C6.98789 16.1958 7.07067 16.4464 7.23426 16.6418C7.39786 16.8373 7.6299 16.9629 7.883 16.993L8 17H10C10.2549 16.9997 10.5 16.9021 10.6854 16.7272C10.8707 16.5522 10.9822 16.313 10.9972 16.0586C11.0121 15.8042 10.9293 15.5536 10.7657 15.3582C10.6021 15.1627 10.3701 15.0371 10.117 15.007L10 15ZM19 4H9V6H15C15.5304 6 16.0391 6.21071 16.4142 6.58579C16.7893 6.96086 17 7.46957 17 8V16H19V4ZM12 11H8C7.73478 11 7.48043 11.1054 7.29289 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.29289 12.7071C7.48043 12.8946 7.73478 13 8 13H12C12.2652 13 12.5196 12.8946 12.7071 12.7071C12.8946 12.5196 13 12.2652 13 12C13 11.7348 12.8946 11.4804 12.7071 11.2929C12.5196 11.1054 12.2652 11 12 11Z" fill="#33539B"/>
-                      </svg></span>
-                   </div>
-                   <div class="d-flex gap-2">
-                    <span class="">Order Item ID:</span>
-                    <span class="paragraph-blue">Return Closed</span>
-                   </div>
-            </div>
-        </div>
-        <div class="col d-flex gap-4 p-4 rounded orderReturncol">
-           
-            <div class="d-flex flex-column gap-2">
-                <div class="d-flex gap-2">
-                    <span class="">Paid Price + Shipping Fee: </span>
-                    <span class="text-dark message-text">RS 391</span>
-                   </div>
-                   <div class="d-flex gap-2">
-                    <span class="">Refund Amount:</span>
-                    <span class="text-dark message-text">RS 391</span>
-                   </div>
-                   <div class="d-flex gap-2">
-                    <span class="">Return Reason:</span>
-                    <span class="text-dark message-text">Item does not match description or picture</span>
-                   </div>
-                   <span class="paragraph-blue">Communication History</span>
-            </div>
-        </div>
         
-       </div>
-    </div>
-      </div>
    </div>
+  
+   
+
+  
+  
+ 
+  
+  </div>
     </main>
 
 
@@ -587,16 +594,43 @@
 
 
 
-
+  
     <script>
         function toggleCheckboxes(source) {
           const checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
           checkboxes.forEach(checkbox => checkbox.checked = source.checked);
         }
         </script>
+        <script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
         <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
         <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    
+        <script src="../assets/vendors/apexcharts/apexcharts.js"></script>
+        <script src="../assets/js/pages/ui-apexchart.js"></script>
         <script src="../assets/js/main.js"></script>
+        <script>
+        let registerProTable = document.querySelector('#report_Table');
+        new simpleDatatables.DataTable(registerProTable);
+
+        function replaceArrows() {
+    // Select all elements with the page-link class
+    document.querySelectorAll(".page-link").forEach(function (link) {
+      if (link.innerHTML === "‹") {
+        link.innerHTML = "Previous"; // Replace left arrow with "Previous"
+      } else if (link.innerHTML === "›") {
+        link.innerHTML = "Next"; // Replace right arrow with "Next"
+      }
+    });
+  }
+
+  // Call this function once on page load
+  replaceArrows();
+
+  // Observe for changes in pagination to handle dynamic updates
+  const paginationObserver = new MutationObserver(replaceArrows);
+  document.querySelectorAll(".pagination").forEach(function (pagination) {
+    paginationObserver.observe(pagination, { childList: true, subtree: true });
+  });
+
+        </script> 
 </body>
 </html>

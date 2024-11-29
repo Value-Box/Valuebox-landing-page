@@ -1939,6 +1939,145 @@ background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
 .table-container::-webkit-scrollbar-thumb:hover {
   background: #555; /* Color on hover */
 }
+.LevelBadge1{
+  display: flex;
+width: 120px;
+height: 120px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border-radius: 600px;
+border: 1.2px solid rgba(0, 0, 0, 0.05);
+background: var(--Secondary-Color-Mon-Yello-Gradient-Straight, linear-gradient(90deg, #FFC136 0%, #FAC142 19.76%, #FFD168 52.5%, #F5BC3A 77.13%, #E09B00 100%));
+box-shadow: -1.2px -1.2px 2.4px 0px rgba(167, 167, 167, 0.10) inset, 1.2px 1.2px 2.4px 0px #FFF inset, -3px -3px 3px 0px rgba(255, 255, 255, 0.40), 3px 3px 6px 0px rgba(225, 225, 235, 0.20);
+}
+.levels-progress1{
+  height: 20px;
+  flex: 1 0 0;
+  border-radius: 10000px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: var(--Secondary-Color-Mon-Yello-Gradient-Straight, linear-gradient(90deg, #FFC136 0%, #FAC142 19.76%, #FFD168 52.5%, #F5BC3A 77.13%, #E09B00 100%));
+  box-shadow: 5px 5px 4px 0px rgba(174, 174, 192, 0.20) inset, -5px -5px 4px 0px rgba(255, 255, 255, 0.30) inset;
+}
+.LevelBadge2{
+  display: flex;
+width: 120px;
+height: 120px;
+padding: 12px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 12px;
+border-radius: 60px;
+border: 1.2px solid rgba(255, 255, 255, 0.05);
+background: #F7F7FA;
+box-shadow: 6px 6px 4.8px 0px rgba(174, 174, 192, 0.20) inset, -6px -6px 4.8px 0px rgba(255, 255, 255, 0.30) inset;
+}
+.levels-progress2{
+  height: 20px;
+flex: 1 0 0;
+border-radius: 10000px;
+border: 1px solid rgba(255, 255, 255, 0.05);
+background: #F7F7FA;
+box-shadow: 5px 5px 4px 0px rgba(174, 174, 192, 0.20) inset, -5px -5px 4px 0px rgba(255, 255, 255, 0.30) inset;
+}
+.settingsBusinessInformation{
+  display: flex;
+width: 80px;
+height: 80px;
+padding: 10px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+border-radius: 8px;
+background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
+}
+.settingsBusinessInformationCol{
+  display: flex;
+width: 422px;
+padding: 20px;
+align-items: center;
+gap: 10px;
+border-radius: 8px;
+border: 1px solid var(--Natural-Color-10, #F2F2F2);
+background: var(--Natural-Color-00, #FCFCFC);
+}
+.settingsFinance{
+display: flex;
+width: 80px;
+height: 80px;
+padding: 10px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+border-radius: 8px;
+background: var(--Secondary-Color-Mon-Yellow-10, #FEF6E6);
+}
+.settingsLogistic{
+  display: flex;
+width: 80px;
+height: 80px;
+padding: 10px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+border-radius: 8px;
+background: var(--Orange-100, #FFEAD5);
+}
+.settingsUserManagemnt{
+  display: flex;
+width: 80px;
+height: 80px;
+padding: 10px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+border-radius: 8px;
+background: var(--Success-100, #D1FADF);
+}
+.settingsSystem{
+  display: flex;
+width: 80px;
+height: 80px;
+padding: 10px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+border-radius: 8px;
+background: var(--Error-100, #FEE4E2);
+}
+.sellerProfileBG{
+  display: flex;
+width: 500px;
+height: 56px;
+padding: 10px 20px;
+align-items: center;
+gap: 12px;
+border-radius: 5px;
+border: 1px solid var(--Natural-Color-20, #CCC);
+background: var(--Natural-Color-00, #FCFCFC);
+color: black;
+}
+.BankAccountBG{
+padding: 20px;
+flex-direction: column;
+align-items: flex-start;
+gap: 40px;
+border-radius: 12px;
+background: var(--Natural-Color-00, #FCFCFC);
+box-shadow: 0px 1px 3px 0px rgba(16, 24, 40, 0.10), 0px 1px 2px 0px rgba(16, 24, 40, 0.06);
+}
+
  @media(max-width:1400px){
   .Order-detail-line{
     position: relative;
@@ -1951,4 +2090,16 @@ background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
     padding: 5px 10px;
     line-height: 25px;
   }
- }
+  .sellerProfileBG{
+    display: flex;
+  width: 500px;
+  height: 40px;
+  padding: 5px 10px;
+  align-items: center;
+  gap: 12px;
+  border-radius: 5px;
+  border: 1px solid var(--Natural-Color-20, #CCC);
+  background: var(--Natural-Color-00, #FCFCFC);
+  color: black;
+  }
+  }
