@@ -3310,7 +3310,7 @@ fieldset:disabled .btn {
 .dropdown-toggle {
   white-space: nowrap;
 }
-.dropdown-toggle::after {
+/* .dropdown-toggle::after {
   display: inline-block;
   margin-left: 0.255em;
   vertical-align: 0.255em;
@@ -3319,7 +3319,7 @@ fieldset:disabled .btn {
   border-right: 0.3em solid transparent;
   border-bottom: 0;
   border-left: 0.3em solid transparent;
-}
+} */
 .dropdown-toggle:empty::after {
   margin-left: 0;
 }
@@ -3369,7 +3369,7 @@ fieldset:disabled .btn {
 }
 .dropdown-menu[data-bs-popper] {
   top: 100%;
-  left: 0;
+  /* left: 0; */
   margin-top: var(--bs-dropdown-spacer);
 }
 .dropdown-menu-start {
@@ -11944,10 +11944,13 @@ bg-gray{
   position: relative; /* Add this for consistency */
 }
 .heading-one {
-  font-size: clamp(21px, 4vw, 30px);
+  font-size: clamp(18px, 4vw, 24px);
   line-height: clamp(30px, 5vw, 38px);
   font-weight: 600;
   color: var(--Darg-Color);
+}
+.p-20{
+  padding: 20px;
 }
 .text-brand-color{
   color: #002882;
@@ -11955,6 +11958,83 @@ bg-gray{
 .h-50p{
   height: 50px;
 }
+.z-index-999{
+  z-index: 999;
+}
+.dropdown-menu[data-bs-popper]{
+  /* left: 0; */
+  right: 0px !important;
+}
+.d-contents {
+  display: contents;
+}
+.min-w-150{
+  min-width: 150px;
+}
+.max-w-400{
+  max-width: 400px;
+}
+
+/* Notification badge styles */
+
+
+/* Notification item styles */
+/* Make sure the dropdown doesn't overflow the screen */
+.dropdown-menu {
+  min-width: 150px;
+  max-width: 400px;
+  width: auto; /* Let it adjust based on content */
+  max-height: 300px; /* Limit height to ensure it doesn't overflow */
+  overflow-y: auto; /* Scroll vertically if content exceeds max height */
+  position: absolute; /* Position it correctly relative to the button */
+  right: 0; /* Align to the right */
+  top: 50px; /* Position below the button */
+}
+
+/* Ensure dropdown is properly aligned for small screens */
+@media (max-width: 576px) {
+  .dropdown-menu {
+    min-width: 100px; /* Make dropdown narrower on small screens */
+    max-width: 300px; /* Limit max width for small screens */
+  }
+}
+
+/* Optional: If you want to make the dropdown button itself more responsive */
+.dropdown-toggle {
+  font-size: 14px; /* Make button text smaller on small screens */
+}
+
+.notification-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #f1f1f1;
+  word-wrap: break-word; /* Wrap long text to avoid overflow */
+}
+
+.notification-item img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.notification-text h6 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.notification-text p {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px; /* Limit max width of text for responsiveness */
+}
+
+
 @media(max-width:776px){
   .heading{
    
@@ -11972,5 +12052,8 @@ line-height: 24px;
   }
   .text-yellow{
     font-size: 36px;
+  }
+  .p-20{
+    padding: 16px;
   }
 }

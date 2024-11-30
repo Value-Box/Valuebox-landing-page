@@ -38,11 +38,9 @@
           <path fill-rule="evenodd" clip-rule="evenodd" d="M124.277 32.3746L124.277 32.3748C123.412 33.1506 122.07 33.0779 121.295 32.2135L117.274 27.7328L113.335 32.1157C112.559 32.9797 111.217 33.0513 110.353 32.275L110.353 32.2748C109.489 31.4985 109.417 30.1568 110.194 29.2926L114.436 24.571L109.936 19.556C109.16 18.6914 109.232 17.3498 110.097 16.574L110.097 16.5738C110.962 15.7981 112.303 15.8705 113.079 16.735L117.276 21.4111L121.561 16.6425C122.337 15.7787 123.679 15.7069 124.543 16.4833C125.407 17.2596 125.479 18.6018 124.702 19.4656L120.113 24.5729L124.438 29.3926C125.214 30.257 125.141 31.5989 124.277 32.3746ZM67.8867 8.75567V33.2219L79.1931 33.1355C80.0496 33.1291 80.9122 33.1729 81.7588 33.0203C86.7866 32.1121 93.2292 25.8353 86.9847 20.1099C89.2014 17.9213 89.7397 11.9666 84.2398 9.48055C82.4043 8.651 81.5532 8.70916 79.6331 8.71564L67.8867 8.75567ZM100.487 15.2885C102.816 15.2885 104.86 16.1093 106.618 17.7506C108.376 19.392 109.255 21.4835 109.255 24.025C109.255 25.7829 108.799 27.3448 107.889 28.7108C106.978 30.0769 105.871 31.0829 104.569 31.7289C103.266 32.375 101.927 32.6978 100.55 32.6978C99.1311 32.6978 97.765 32.3538 96.4518 31.6654C95.1387 30.9771 94.0321 29.9605 93.132 28.6157C92.2319 27.2706 91.7818 25.7511 91.7818 24.0568C91.7818 21.5152 92.6713 19.4184 94.4505 17.7666C96.2295 16.1145 98.2416 15.2885 100.487 15.2885ZM98.4215 26.3282C99.0993 26.8471 99.7875 27.1065 100.487 27.1065C101.185 27.1065 101.884 26.8419 102.583 26.3123C103.282 25.7829 103.632 24.9993 103.632 23.9615C103.632 22.9237 103.303 22.1507 102.647 21.6424C101.99 21.134 101.259 20.8798 100.455 20.8798C99.7347 20.8798 99.0463 21.1446 98.3897 21.6741C97.7332 22.2037 97.4048 22.9766 97.4048 23.9933C97.4048 25.0311 97.7438 25.8092 98.4215 26.3282Z" fill="#EEA500"/>
           <path fill-rule="evenodd" clip-rule="evenodd" d="M75.0056 9.1261C72.3989 8.25041 70.9558 7.76328 69.0947 4.49059C68.5836 3.59191 68.4573 2.58374 69.0911 1.54987C69.6409 0.653009 70.9662 0.585123 72.178 1.10259C74.3244 2.01904 74.8914 4.24817 75.803 6.24446C77.0344 4.08694 78.3602 2.98197 80.5062 3.51291C82.4292 4.3421 82.3597 5.82719 81.0287 7.02838C79.7894 8.1434 78.234 8.92463 76.4315 9.19647L76.4846 15.3243L88.5487 15.3236C88.5999 15.8514 88.5531 16.2728 88.5071 16.7495H76.497L76.6395 33.1552L75.2146 33.1694L75.0719 16.7495H67.8867V15.3244H75.0595L75.0056 9.1261ZM74.8408 7.9908C74.6251 6.19598 73.1819 2.3803 71.088 2.08511C70.6586 2.02461 70.2381 2.12568 70.0711 2.44618C69.2781 3.96755 73.1431 7.46146 74.8408 7.9908ZM76.3611 8.15706C76.8087 6.59315 77.6991 5.32226 78.9384 4.67714C79.9439 4.12878 81.4094 4.95561 80.2566 6.20925C79.2079 7.18262 77.9172 8.00712 76.3611 8.15706Z" fill="#002882"/>
         </svg></a>
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
+        
+        <div class="collapse ms-auto d-flex d-contents" id="navbarNav">
+          <!-- <ul class="navbar-nav ms-auto w-25">
             <li class="nav-item active ">
               <a class="nav-link p-0 position-relative" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="29" height="30" viewBox="0 0 29 30" fill="none">
@@ -55,9 +53,86 @@
                 </div>
               </a>
             </li>
-          </ul>
-      
+          </ul> -->
+          <div class="dropdown ms-auto">
+            <button class="border-0 bg-transparent dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <ul class="navbar-nav ms-3 w-25">
+                <li class="nav-item active ">
+                  <a class="nav-link p-0 position-relative" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="29" height="30" viewBox="0 0 29 30" fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3157 0.857178C9.69515 0.857178 7.49368 2.82759 7.20429 5.4321L5.99833 16.2857H2.56975C1.62298 16.2857 0.855469 17.0533 0.855469 18V19.7143C0.855469 20.6611 1.62298 21.4286 2.56975 21.4286H26.5698C27.5165 21.4286 28.284 20.6611 28.284 19.7143V18C28.284 17.0533 27.5165 16.2857 26.5698 16.2857H23.1412L21.9352 5.4321C21.6458 2.82759 19.4444 0.857178 16.8238 0.857178H12.3157Z" fill="#002882"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3157 0.857178C9.69515 0.857178 7.49368 2.82759 7.20429 5.4321L5.99833 16.2857H2.56975C1.62298 16.2857 0.855469 17.0533 0.855469 18V19.7143C0.855469 20.6611 1.62298 21.4286 2.56975 21.4286H26.5698C27.5165 21.4286 28.284 20.6611 28.284 19.7143V18C28.284 17.0533 27.5165 16.2857 26.5698 16.2857H23.1412L21.9352 5.4321C21.6458 2.82759 19.4444 0.857178 16.8238 0.857178H12.3157Z" fill="black" fill-opacity="0.2"/>
+                      <rect opacity="0.3" x="11.1406" y="23.1431" width="6.85714" height="6.85714" rx="2.57143" fill="#F1B733"/>
+                    </svg>
+                    <div class="notification">
+                      <span>6</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </button>
+          
+            <!-- Dropdown menu with notifications -->
+            <ul class="dropdown-menu min-w-150 max-w-400">
+              <li><a class="dropdown-item text-truncate" href="notifications.html">Notification</a></li>
+              <li>
+                <a class="dropdown-item notification-item" href="notifications.html">
+                  <img src="https://img.icons8.com/flat_round/64/000000/bell.png" alt="Notification Icon">
+                  <div class="notification-text">
+                    <h6>System Alert</h6>
+                    <p>The system will undergo maintenance tomorrow. Please be prepared for potential downtime...</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item notification-item" href="notifications.html">
+                  <img src="https://img.icons8.com/flat_round/64/000000/bell.png" alt="Notification Icon">
+                  <div class="notification-text">
+                    <h6>New Message</h6>
+                    <p>You have a new message in your inbox from John.</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item notification-item" href="notifications.html">
+                  <img src="https://img.icons8.com/flat_round/64/000000/bell.png" alt="Notification Icon">
+                  <div class="notification-text">
+                    <h6>Meeting Reminder</h6>
+                    <p>Your meeting with the team is scheduled for 3:00 PM tomorrow.</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item text-truncate" href="notifications.html">See More...</a>
+              </li>
+            </ul>
+          </div>
+          
+        
+          <!-- <div class="navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown me-1">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-envelope bi-sub fs-4 text-gray-600"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                        <li>
+                            <a class="dropdown-item notification-item" href="#">
+                                <img src="https://img.icons8.com/flat_round/64/000000/bell.png" alt="Notification Icon">
+                                <div class="notification-text">
+                                    <h6>System Alert</h6>
+                                    <p>The system will undergo maintenance tomorrow. Please be prepared for potential downtime...</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div> -->
+        
         </div>
+
+        
       </nav>
 
 
@@ -66,29 +141,183 @@
             <div class="row bg-transparent mx-0 px-3 py-5 px-sm-4 px-md-5 signUpFormHead mw-1728 mx-auto">
                 <div class="col-12 bg-white p-0 personalSignupForm" id="personalSignupForm">
                  
-                
+                  <div class="row m-0 bg-transparent g-5 pb-0 rightIconsParent" style="display: none">
+                    <div class="container p-0">
+                        <div class="steps">
+                            <div class="circleParent">
+                                <span class="circle active" data-step="1"><span class="inner"><i class="fa-solid fa-check"></i></span></span>
+                                <p class="text-center">Verify Phone Number</p>
+                            </div>
+                            <div class="circleParent">
+                                <span class="circle" data-step="2"><span class="inner"><i class="fa-solid fa-check"></i></span></span>
+                                <p class="text-center">Enter Personal Info</p>
+                            </div>
+                            <div class="circleParent">
+                                <span class="circle" data-step="3"><span class="inner"><i class="fa-solid fa-check"></i></span></span>
+                                <p class="text-center">Enter Business Info</p>
+                            </div>
+                            <div class="circleParent">
+                                <span class="circle" data-step="4"><span class="inner"><i class="fa-solid fa-check"></i></span></span>
+                                <p class="text-center">Account Status</p>
+                            </div>
+                            <div class="progress-bar">
+                                <span class="indicator">
+                                    <span class="inner"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                     
                     <!-- Personal Information Form -->
-                    <form class="p-3 p-sm-5 pt-0 mt-4 mt-sm-0" id="personalForm" onsubmit="accountApprovalPage(event)" action="" method="POST" novalidate>
-                     
+                    <form class="p-3 p-lg-5 pt-0 mt-4 mt-sm-0" id="personalForm" onsubmit="accountApprovalPage(event)" action="" method="POST" novalidate>
+                      <div class="signUpForm" id="signUpForm" style="display: none">
+                        <h2 class="w-100">Sign Up as ValueBox Seller</h2>
+              
+                        <div class="form-group my-3 w-100">
+                          <label class="phVerifyLabel">Phone number Verification</label>
+                          <input
+                            type="text" 
+                            class="form-control form-control-lg" 
+                            id="phoneNumVerify" 
+                            maxlength="11" 
+                            placeholder="Enter your phone Number"
+                            oninput="validatePhoneNumber(this)"
+                          />
+                          <small id="phoneNumError" class="text-danger"></small>
+                        </div>
+              
+                        <button type="button" class="btn-lg w-100 py-2 border-0 my-3 rounded text-white fw-bold loginBtn" id="getOTP">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="21"
+                            viewBox="0 0 20 21"
+                            fill="none"
+                          >
+                            <path
+                              d="M17.05 3.41005C16.1331 2.48416 15.041 1.75002 13.8375 1.25042C12.634 0.750812 11.3431 0.495737 10.04 0.500054C4.57999 0.500054 0.129988 4.95005 0.129988 10.4101C0.129988 12.1601 0.589988 13.8601 1.44999 15.3601L0.0499878 20.5001L5.29999 19.1201C6.74999 19.9101 8.37999 20.3301 10.04 20.3301C15.5 20.3301 19.95 15.8801 19.95 10.4201C19.95 7.77005 18.92 5.28005 17.05 3.41005ZM10.04 18.6501C8.55999 18.6501 7.10999 18.2501 5.83999 17.5001L5.53999 17.3201L2.41999 18.1401L3.24999 15.1001L3.04999 14.7901C2.22754 13.4771 1.79091 11.9593 1.78999 10.4101C1.78999 5.87005 5.48999 2.17005 10.03 2.17005C12.23 2.17005 14.3 3.03005 15.85 4.59005C16.6176 5.35392 17.2259 6.2626 17.6396 7.26338C18.0533 8.26417 18.2642 9.33714 18.26 10.4201C18.28 14.9601 14.58 18.6501 10.04 18.6501ZM14.56 12.4901C14.31 12.3701 13.09 11.7701 12.87 11.6801C12.64 11.6001 12.48 11.5601 12.31 11.8001C12.14 12.0501 11.67 12.6101 11.53 12.7701C11.39 12.9401 11.24 12.9601 10.99 12.8301C10.74 12.7101 9.93999 12.4401 8.99999 11.6001C8.25999 10.9401 7.76999 10.1301 7.61999 9.88005C7.47999 9.63005 7.59999 9.50005 7.72999 9.37005C7.83999 9.26005 7.97999 9.08005 8.09999 8.94005C8.21999 8.80005 8.26999 8.69005 8.34999 8.53005C8.42999 8.36005 8.38999 8.22005 8.32999 8.10005C8.26999 7.98005 7.76999 6.76005 7.56999 6.26005C7.36999 5.78005 7.15999 5.84005 7.00999 5.83005H6.52999C6.35999 5.83005 6.09999 5.89005 5.86999 6.14005C5.64999 6.39005 5.00999 6.99005 5.00999 8.21005C5.00999 9.43005 5.89999 10.6101 6.01999 10.7701C6.13999 10.9401 7.76999 13.4401 10.25 14.5101C10.84 14.7701 11.3 14.9201 11.66 15.0301C12.25 15.2201 12.79 15.1901 13.22 15.1301C13.7 15.0601 14.69 14.5301 14.89 13.9501C15.1 13.3701 15.1 12.8801 15.03 12.7701C14.96 12.6601 14.81 12.6101 14.56 12.4901Z"
+                              fill="#FCFCFC"
+                            />
+                          </svg>
+                          Get OTP via WhatsApp
+                        </button>
+                        <div class="px-0 w-100">
+                          <span href="#" class="text-decoration-none text-dark">Already have an account?</span>
+                        </div>
+                        <div class="px-0 my-1 w-100">
+                          <button type="button" class="w-100 py-2 rounded fw-bold signupBtn" onclick="loginPage()">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="25"
+                              viewBox="0 0 24 25"
+                              fill="none"
+                            >
+                              <path d="M12 15.5L15 12.5L12 15.5Z" fill="#002882" />
+                              <path
+                                d="M12 15.5L15 12.5L12 15.5Z"
+                                fill="black"
+                                fill-opacity="0.2"
+                              />
+                              <path d="M15 12.5L12 9.5L15 12.5Z" fill="#002882" />
+                              <path
+                                d="M15 12.5L12 9.5L15 12.5Z"
+                                fill="black"
+                                fill-opacity="0.2"
+                              />
+                              <path d="M15 12.5L4 12.5L15 12.5Z" fill="#002882" />
+                              <path
+                                d="M15 12.5L4 12.5L15 12.5Z"
+                                fill="black"
+                                fill-opacity="0.2"
+                              />
+                              <path
+                                d="M12 15.5L15 12.5M15 12.5L12 9.5M15 12.5L4 12.5M9 17.5C9 18.4319 9 18.8978 9.15224 19.2654C9.35523 19.7554 9.74432 20.1448 10.2344 20.3478C10.6019 20.5 11.0681 20.5 12 20.5H16.8C17.9201 20.5 18.48 20.5 18.9078 20.282C19.2841 20.0902 19.5905 19.7844 19.7822 19.408C20.0002 18.9802 20 18.4201 20 17.3V7.69995C20 6.57985 20.0002 6.01986 19.7822 5.59204C19.5905 5.21572 19.2841 4.90973 18.9078 4.71799C18.48 4.5 17.9201 4.5 16.8 4.5H12C11.0681 4.5 10.6019 4.5 10.2344 4.65224C9.74432 4.85523 9.35523 5.24456 9.15224 5.73462C9 6.10216 9 6.5681 9 7.49999"
+                                stroke="#002882"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                d="M12 15.5L15 12.5M15 12.5L12 9.5M15 12.5L4 12.5M9 17.5C9 18.4319 9 18.8978 9.15224 19.2654C9.35523 19.7554 9.74432 20.1448 10.2344 20.3478C10.6019 20.5 11.0681 20.5 12 20.5H16.8C17.9201 20.5 18.48 20.5 18.9078 20.282C19.2841 20.0902 19.5905 19.7844 19.7822 19.408C20.0002 18.9802 20 18.4201 20 17.3V7.69995C20 6.57985 20.0002 6.01986 19.7822 5.59204C19.5905 5.21572 19.2841 4.90973 18.9078 4.71799C18.48 4.5 17.9201 4.5 16.8 4.5H12C11.0681 4.5 10.6019 4.5 10.2344 4.65224C9.74432 4.85523 9.35523 5.24456 9.15224 5.73462C9 6.10216 9 6.5681 9 7.49999"
+                                stroke="black"
+                                stroke-opacity="0.2"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                            Log in
+                          </button>
+                        </div>
+                      </div>
+              
+                      <div class="varificationForm" id="varificationForm" style="display: none">
+                        <h2>Verification</h2>
+              
+                        <p class="fourDigitText">
+                          Enter the <span>4-digit verification code</span> we sent you
+                          at your WhatsApp.
+                        </p>
+              
+                        <div id="otpContainer" class="row m-0 p-0 bg-transparent">
+                          <div class="form-group col my-3 mx-auto">
+                            <input type="number" maxlength="1" class="form-control text-center otpNum" placeholder="0"/>
+                          </div>
+                          <div class="form-group col my-3">
+                            <input type="number" maxlength="1" class="form-control text-center otpNum" placeholder="0"/>
+                          </div>
+                          <div class="form-group col my-3">
+                            <input type="number" maxlength="1" class="form-control text-center otpNum" placeholder="0"/>
+                          </div>
+                          <div class="form-group col my-3">
+                            <input type="number" maxlength="1" class="form-control text-center otpNum" placeholder="0"/>
+                          </div>
+                          <p id="otpErrorMsg"></p>
+                        </div>
+                        <button type="button" class="w-100 py-2 border-0 my-3 rounded text-white fw-bold loginBtn" id="verifyBtn">
+                          Verify
+                        </button>
+                        <div class="text-center spanTimer">
+                          <span class="timer">03:00</span>
+                        </div>
+                        <div class="px-0 mt-3">
+                          <a href="#" class="text-decoration-none text-dark"
+                            >Didn’t get the code?</a
+                          >
+                        </div>
+                        <div class="px-0 my-1 disabledButton">
+                          <button
+                            type="button"
+                            class="w-100 py-2 rounded fw-bold signupBtn"
+                            id="resendOTP"
+                            disabled
+                          >
+                            Resend Code
+                          </button>
+                        </div>
+                        <div class="text-center">
+                          <span id="editBtn">Edit Number</span>
+                        </div>
+                      </div>
 
-                      <section class="personalInfoForm" style="display: none">
-                         <h1 class="mt-0">Personal Information</h1>
-                         <div class="row formRow p-2 p-sm-3 m-0 rounded-4">
-                           <div class="col-sm-10 d-flex">
-                             <p  class="heading-one">Account Type:&nbsp;</p>
-                             <span class="heading-one text-brand-color"> Individual</span>
-                           
-                         </div>
+                      <section class="position-relative personalInfoForm" >
+                         <h1 class="mt-0 py-2 z-index-999 position-sticky top-0 bg-white">Personal Information</h1>
+                         <div class="row formRow  p-20 m-0 rounded-4">
+                           <div class="col-sm-10 d-flex px-md-3">
+                              <p  class="heading-one">Account Type:&nbsp;</p>
+                              <span class="heading-one text-brand-color"> Individual</span>
+                           </div>
   
-                        <p class="description">Selecting Individual means you’re a local business owner managing your own store or services, while choosing Business means you’re representing a registered business entity.</p>
+                        <p class="description px-md-3">Selecting Individual means you’re a local business owner managing your own store or services, while choosing Business means you’re representing a registered business entity.</p>
                   
-                        <div class="row gap-4 bg-transparent p-2 p-sm-4 m-0">
-                            <div class="col-12 col-md d-flex gap-1 flex-column align-items-start mb-3 formFields">
+                        <div class="row bg-transparent m-0 p-0">
+                            <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
                                 <label class="form-label mb-2">Full Name<span class="starik">*</span></label>
                                 <input type="text" class="form-control required" placeholder="Enter your name" name="personalName" id="personalName" aria-describedby="emailHelp" required>
                             </div>
-                            <div class="col-12 col-md d-flex gap-1 flex-column align-items-start mb-3 formFields">
+                            <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
                               <label class="form-label mb-2">Select Country<span class="starik">*</span></label>
                               <select class="form-select h-50p required" id="shopreturnState" name="shopreturnState">
                                   <option>
@@ -96,7 +325,7 @@
                                        Pakistan</option>
                                 </select>
                           </div>
-                            <div class="col-12 col-md d-flex gap-1 flex-column align-items-start mb-3 formFields">
+                            <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
                               <label class="form-label mb-2">Phone Number <span class="starik">*</span></label>
                               
                                   <div class="w-100">
@@ -109,7 +338,7 @@
                         
       
       
-                        <div class="col-12 col-md d-flex gap-1 flex-column align-items-start mb-3 formFields">
+                        <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
                           <label  class="form-label mb-2">Select Gender<span class="starik">*</span></label>
                           <select class="form-select h-50p required" id="gender" name="gender">
                             <option value="">Select</option>
@@ -120,7 +349,7 @@
                             </select>
                         </div>
 
-                    <div class="col-12 col-md d-flex gap-1 flex-column align-items-start mb-3 formFields">
+                    <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
                       <label class="form-label mb-2">Password<span class="starik">*</span></label>
                      
                       <div class="w-100">
@@ -135,7 +364,7 @@
                     </div>
                     
                 
-                    <div class="col-12 col-md d-flex gap-1 flex-column align-items-start mb-3 formFields">
+                    <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
                       <label class="form-label mb-2">Confirm Password<span class="starik">*</span></label>
                       
                       <div class="w-100">
@@ -149,7 +378,7 @@
                       </div>
                     </div>
                     
-                    <div class="col-12 col-md d-flex gap-1 flex-column align-items-start mb-3 formFields">
+                    <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
           <label class="form-label mb-2">Email<span class="starik">*</span></label>
           <div class="w-100">
             <input type="email" class="form-control required"  pattern="[a-zA-Z0-9._%+-]+@example\.com" placeholder="Enter Email" id="personalEmail" name="personalEmail" required>
@@ -158,25 +387,25 @@
                     </div>
     </div>
   </div>
-  <h1>Verify Identification Card</h1>
-  <div class="row p-2 p-sm-3 m-0 rounded-4">
+  <h4 class="py-3">Verify Identification Card</h4>
+  <div class="row p-20 m-0 rounded-4">
       
   
-     <div class="row gap-4 bg-transparent px-2 px-sm-4 m-0">
-        <div class="col-12 col-md d-flex gap-1 flex-column align-items-start mb-3 formFields">
+     <div class="row bg-transparent p-0 m-0">
+        <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
             <label class="form-label mb-0">CNIC Number<span class="starik">*</span></label>
             <div class="w-100">
               <input type="text" class="form-control required" id="cnicNumber" name="cnicNumber" placeholder="Enter CNIC number" maxlength="15" required>
               <p class="cnicText m-0" id="cnicText">CNIC Number should contain 13 digits</p>
             </div>
           </div>
-          <div class="col-12 col-md d-flex gap-1 flex-column align-items-start mb-3 formFields">
+          <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
               <label class="form-label mb-0">CNIC Expiry Date<span class="starik">*</span></label>
               <input type="date" class="form-control required" onfocus="disablePastDates()" placeholder="Enter date" id="cnicExpiryDate" name="cnicExpiryDate" aria-describedby="emailHelp" required>
           </div>
      </div>
-     <div class="row gap-4 bg-transparent px-2 px-sm-4 m-0">
-        <div class="col-12 col-md d-flex gap-1 flex-column align-items-start mb-3 formFields">
+     <div class="row bg-transparent p-0 m-0">
+        <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
             <label class="form-label ">Upload ID Front Side<span class="starik">*</span></label>
            
             <div class="w-100 mb-2">
@@ -196,7 +425,7 @@
                 <img class="w-50 rounded-2" src="Images/previewImage.jpg" alt="" srcset="" id="FrontSideimgPrev">
             </div>
         </div>
-          <div class="col-12 col-md d-flex gap-1 flex-column align-items-start mb-3 formFields">
+          <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
               <label for="exampleInputEmail1 " class="form-label">Upload ID Back Side<span class="starik">*</span></label>
     
               <div class="w-100 mb-2">
@@ -221,7 +450,7 @@
      </div>
         
 
-  <button type="button" class="nextBtn" id="personalNextBtn" disabled>Next 
+  <button type="button" class="d-none nextBtn" id="personalNextBtn" disabled>Next 
     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
       <path d="M4.5 12H20.5M20.5 12L14.5 6M20.5 12L14.5 18" stroke="#E6EAF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
@@ -230,19 +459,19 @@
                       </section>
                       
                       <!-- Business Information (Individual Account) Form -->
-                      <section class="BusinessInInfoIndForm p-sm-4 pt-0"  >
-                        <h1>Business Information <span class="bussinessInfoText" id="cFormNames">(Individual Account)</span></h1>
-                        <div class="row formRow p-2 p-sm-3 m-0 rounded-4">
+                      <section class="BusinessInInfoIndForm position-relative py-sm-4 pt-0"  >
+                        <h1 class="z-index-999 py-2 position-sticky top-0 bg-white">Business Information <span class="bussinessInfoText" id="cFormNames">(Individual Account)</span></h1>
+                        <div class="row formRow p-20 m-0 rounded-4">
 
-                            <div class="mb-3 formFields">
+                            <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
                                 <label class="form-label" id="cNameLabel">Store Display Name<span class="starik">*</span></label>
                                 <input type="text" class="form-control required" placeholder="Enter your name" id="storeDisplayName" name="storeDisplayName" aria-describedby="emailHelp" required>
                             </div>
-                            <div class="mb-3 formFields " style="display: none;" id="personIncharge">
+                            <div class="col-12 col-md-6 px-md-3 gap-1 flex-column align-items-start mb-3 formFields " style="display: none;" id="personIncharge">
                               <label  class="form-label" >Person in Charge<span class="starik">*</span></label>
                               <input type="text" class="form-control required" placeholder="Enter Name" id="personCharge" name="personCharge" aria-describedby="emailHelp" required>
                             </div>
-                            <div class="mb-3 formFields">
+                            <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
                               <label class="form-label" id="cContactNum">Store Contact Person No <span class="starik">*</span></label>
                               
                                      <div class="w-100">
@@ -252,7 +481,7 @@
                                   </div>
                           </div>
                           
-                              <div class="mb-3 formFields">
+                              <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
                                 <label class="form-label" id="chargeEmail">Store Email Address<span class="starik">*</span></label>
                                 <div class="w-100">
                                   <input type="email" class="form-control required" placeholder="e.g. Example@compony.com" id="contactEmailAddress" name="contactEmailAddress" required>
@@ -261,15 +490,15 @@
                                 </div>
                               </div>
 
-                              <div id="bussInfoFields" style="display: none;">
-                                <div class="mb-3 formFields">
+                              <div class="row bg-transparent m-0" id="bussInfoFields" style="display: none;">
+                                <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
                                   <label class="form-label">Business Registration Number<span class="starik">*</span></label>
                                   <input type="text" class="form-control required" placeholder="Enter Registration Number" id="businessRegistrationNumber" name="businessRegistrationNumber" aria-describedby="emailHelp" required>
                                </div>
-                               <div class="mb-3 formFields">
+                               <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start  mb-3 formFields">
                                 <label class="form-label">Upload Registration Proof<span class="starik">*</span></label>
                                
-                                <div class="w-100">
+                                <div class="col-12 col-md d-flex gap-1 flex-column align-items-start w-100">
                                   <label for="upRegProof" class="m-0 upload-wrapper">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                                         <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="#002882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -281,16 +510,19 @@
                                 </label>
                                   <p id='upRegProofText' class="m-0">Only PNG, JPG and WEBp with File size less then 500kb are accepted.</p>
                                 </div>
+                                <div >
+                                  <img class="w-50 rounded-2" src="Images/previewImage.jpg" alt="" id="busRegProofImgPrev" srcset="">
+                              </div>
                                 <input id="upRegProof" class="upRegProof required" type="file" name="upRegProof" accept=".jpg, .WEBp, .png" required/>                            
                                 
                               </div>
   
-                              <div class="mb-3 formFields">
+                              <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
                                   <label class="form-label">Business NTN Number<span class="starik">*</span></label>
                                   <input type="text" class="form-control required" placeholder="Enter NTN Number" id="businessNtnNumber" name="businessNtnNumber" aria-describedby="emailHelp" required>
                               </div>
   
-                              <div class="mb-3 formFields">
+                              <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
                                 <label class="form-label">Upload NTN Document<span class="starik">*</span></label>
                                
                                 <div class="w-100">
@@ -305,16 +537,19 @@
                                 </label>
                                   <p id='upNtnNumText' class="m-0">Only PNG, JPG and WEBp with File size less then 500kb are accepted.</p>
                                 </div>
+                                <div >
+                                  <img class="w-50 rounded-2" src="Images/previewImage.jpg" alt="" id="busNtnDocImgPrev" srcset="">
+                              </div>
                                 <input id="upNtnNum" class="upRegProof required" type="file" name="upNtnNum" accept=".jpg, .WEBp, .png" required/>                            
                                 
                               </div>
   
-                              <div class="mb-3 formFields">
+                              <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
                                   <label class="form-label">Trademark <span class="bussinessInfoText">(optional)</span></label>
                                   <input type="text" class="form-control required" placeholder="Enter Trademark" id="trademark" name="trademark" aria-describedby="emailHelp" required>
                               </div>
   
-                              <div class="mb-3 formFields">
+                              <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
                                 <label class="form-label">Upload Trademark Document<span class="starik">*</span></label>
                                
                                 <div class="w-100">
@@ -329,15 +564,18 @@
                                 </label>
                                   <p id='upTradDocText' class="m-0">Only PNG, JPG and WEBp with File size less then 500kb are accepted.</p>
                                 </div>
+                                <div >
+                                  <img class="w-50 rounded-2" src="Images/previewImage.jpg" alt="" id="busTradDocImgPrev" srcset="">
+                              </div>
                                 <input id="upTradDoc" class="upRegProof required" type="file" name="upTradDoc" accept=".jpg, .WEBp, .png" required/>                            
                                 
                               </div>
                               </div>
                              
                         </div>
-                        <h1>Address Book</h1>
-                        <div class="row p-2 p-sm-3 m-0 rounded-4">
-                            <div class="mb-3 formFields">
+                        <h4 class="py-3">Address Book</h4>
+                        <div class="row p-20 m-0 rounded-4">
+                            <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
                                 <label class="form-label">Shop Based in<span class="starik">*</span></label>
                                 <select class="form-select required" id="shopreturnState" name="shopreturnState">
                                     <option>
@@ -348,7 +586,7 @@
                                   </select>
                             </div>
                         
-                            <div class="mb-3 formFields">
+                            <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
                                 <label class="form-label">State<span class="starik">*</span></label>
                                 <select class="form-select required" id="shopBasedState" name="shopBasedState">
                                   <option value="">Select State</option>
@@ -358,7 +596,7 @@
                                   <option value="Balochistan">Balochistan</option>
                               </select>
                             </div>
-                            <div class="mb-3 formFields">
+                            <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
                                 <label class="form-label">City<span class="starik">*</span></label>
                                 <!-- <input type="text" class="form-control required" id="shopCity" name="shopCity" placeholder="Enter City"> -->
                               <select class="form-select required" id="shopCity" name="shopCity">
@@ -371,7 +609,7 @@
                                 <label class="form-label">Area<span class="starik">*</span></label>
                                 <input type="text" placeholder="Enter Area" class="form-control required" id="shopArea" name="shopArea" aria-describedby="emailHelp" required>
                             </div> -->
-                          <div class="mb-3 formFields">
+                          <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
                               <label class="form-label">Area<span class="starik">*</span></label>
                               <!-- <input type="text" class="form-control required" id="shopCity" name="shopCity" placeholder="Enter City"> -->
                             <select class="form-select required" id="shopArea" name="shopArea">
@@ -380,25 +618,25 @@
                               <option value="Gulgasht">Gulgasht</option>
                             </select>
                           </div>
-                            <div class="mb-3 formFields">
+                            <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
                                 <label class="form-label">Address<span class="starik">*</span></label>
                                 <input type="text" placeholder="Enter Address" class="form-control required" id="shopAddress" aria-describedby="emailHelp" required>
                             </div>
-                            <div class="mb-3 formFields">
+                            <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
                               <label class="form-label">Post Code<span class="starik">*</span></label>
                               <input type="text" placeholder="Enter Post Code" class="form-control required" id="shopPostCode" maxlength="5" minlength="5" aria-describedby="emailHelp" required oninput="this.value = this.value.replace(/[^0-9]/g, '')"
                               >
                             </div>
                             
-                            <div class="mb-3 businessFormFields d-flex flex-column flex-sm-row">
-                                <label class="form-label">Warehouse Address<span class="starik">*</span></label>
-                               <div class="businessInputFields p-0 mb-2">
+                            <div class="col-12 px-md-3 d-flex gap-3 align-items-center mb-3 businessFormFields">
+                                <label class="form-label w-auto">Warehouse Address<span class="starik">*</span></label>
+                               <div class="businessInputFields w-auto d-flex align-items-center p-0 mb-2">
                                 <input type="checkbox" id="indwarehouseAddCheck" name="warehouseAddressCheck" value="warehouseAddressCheck">
                                 <label class="user-select-none" for="indwarehouseAddCheck"> Same as Business Address</label>
                                </div>
                             </div>
-                            <div class="p-0 indWarehouseAddress">
-                                <div class="mb-3 formFields">
+                            <div class="row m-0 p-0 indWarehouseAddress">
+                                <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
                                     <label class="form-label">State<span class="starik">*</span></label>
                                     <select class="form-select required" id="warehouseState" name="warehouseState">
                                       <option value="">Select State</option>
@@ -408,7 +646,7 @@
                                       <option value="Balochistan">Balochistan</option>
                                       </select>
                                 </div>
-                                <div class="mb-3 formFields">
+                                <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
                                     <label class="form-label">City<span class="starik">*</span></label>
                                     <!-- <input type="text" placeholder="Enter City" class="form-control required" id="warehouseCity" name="warehouseCity" aria-describedby="emailHelp" required> -->
                                     <select class="form-select required" id="warehouseCity" name="warehouseCity">
@@ -421,7 +659,7 @@
                                     <label class="form-label">Area<span class="starik">*</span></label>
                                     <input type="text" placeholder="Enter Area" class="form-control required" id="warehouseArea" name="warehouseArea" aria-describedby="emailHelp" required>
                                 </div> -->
-                              <div class="mb-3 formFields">
+                              <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
                                   <label class="form-label">Area<span class="starik">*</span></label>
                                   <!-- <input type="text" class="form-control required" id="shopCity" name="shopCity" placeholder="Enter City"> -->
                                 <select class="form-select required" id="warehouseArea" name="warehouseArea">
@@ -430,24 +668,24 @@
                                   <option value="Gulgasht">Gulgasht</option>
                                 </select>
                               </div>
-                                <div class="mb-3 formFields">
+                                <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
                                     <label class="form-label">Address<span class="starik">*</span></label>
                                     <input type="text" placeholder="Enter Address" class="form-control required" id="warehouseAddress" name="warehouseAddress" aria-describedby="emailHelp" required>
                                 </div>
-                                <div class="mb-3 formFields">
+                                <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
                                     <label class="form-label">Post Code<span class="starik">*</span></label>
                                     <input type="text" placeholder="Enter Post Code" class="form-control required" id="warehousePostCode" oninput="this.value = this.value.replace(/[^0-9]/g, '')" minlength="5" maxlength="5" name="warehousePostCode" aria-describedby="emailHelp" required>
                                 </div>
                             </div>
-                            <div class="mb-3 d-flex flex-column flex-sm-row businessFormFields">
-                                <label class="form-label">Return Address<span class="starik">*</span></label>
-                                <div class="businessInputFields p-0 mb-2">
+                            <div class="col-12 px-md-3 d-flex gap-3 align-items-center mb-3 businessFormFields">
+                                <label class="form-label w-auto">Return Address<span class="starik">*</span></label>
+                                <div class="businessInputFields d-flex align-items-center w-auto p-0 mb-2">
                                 <input type="checkbox"  id="indReturnAddCheck" name="returnAddressCheck" value="Bike">
                                 <label class="user-select-none" for="indReturnAddCheck"> Same as Business Address</label>
                                 </div>
                             </div>
-                            <div class="p-0 indReturnAdd">
-                                <div class="mb-3 formFields">
+                            <div class="row m-0 p-0 indReturnAdd">
+                                <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
                                     <label  class="form-label">State<span class="starik">*</span></label>
                                     <select class="form-select required" id="returnState" name="returnState">
                                       <option value="">Select State</option>
@@ -457,7 +695,7 @@
                                       <option value="Balochistan">Balochistan</option>
                                       </select>
                                 </div>
-                                <div class="mb-3 formFields">
+                                <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
                                     <label  class="form-label">City<span class="starik">*</span></label>
                                     <!-- <input type="text" placeholder="Enter City" class="form-control required" id="returnCity" name="returnCity" aria-describedby="emailHelp" required> -->
                                     <select class="form-select required" id="returnCity" name="returnCity">
@@ -470,7 +708,7 @@
                                     <label  class="form-label">Area<span class="starik">*</span></label>
                                     <input type="text" placeholder="Enter Area" class="form-control required" id="returnArea" name="returnArea" aria-describedby="emailHelp" required>
                                 </div> -->
-                              <div class="mb-3 formFields">
+                              <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
                                   <label class="form-label">Area<span class="starik">*</span></label>
                                   <!-- <input type="text" class="form-control required" id="shopCity" name="shopCity" placeholder="Enter City"> -->
                                 <select class="form-select required" id="returnArea" name="returnArea">
@@ -479,11 +717,11 @@
                                   <option value="Gulgasht">Gulgasht</option>
                                 </select>
                               </div>
-                                <div class="mb-3 formFields">
+                                <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
                                     <label  class="form-label">Address<span class="starik">*</span></label>
                                     <input type="text" placeholder="Enter Address" class="form-control required" id="returnAddress" name="returnAddress" aria-describedby="emailHelp" required>
                                 </div>
-                                <div class="mb-3 formFields">
+                                <div class="col-12 col-md-6 px-md-3 d-flex gap-1 flex-column align-items-start mb-3 formFields">
                                     <label  class="form-label">Post Code<span class="starik">*</span></label>
                                     <input type="text" placeholder="Enter Post Code" class="form-control required" oninput="this.value = this.value.replace(/[^0-9]/g, '')" id="returnPostCode" name="returnPostCode" minlength="5" maxlength="5" aria-describedby="emailHelp" required>
                                 </div>
@@ -493,24 +731,286 @@
                                 <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="#002882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                               </svg></a> -->
-                        <button  type="button" disabled class="bankDetailLink" id="bussindIndAccNxtBtn">Enter Bank Details <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                            <path d="M4.5 12H20.5M20.5 12L14.5 6M20.5 12L14.5 18" stroke="#E6EAF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg></button>
-                          <button type="button" class="backBtn">
+                        <div class="row m-0 p-2 p-sm-3 bg-transparent">
+                          <div class="col-6 px-3">
+                            <button  type="button" disabled class="d-none mt-0 bankDetailLink" id="bussindIndAccNxtBtn">Enter Bank Details <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                              <path d="M4.5 12H20.5M20.5 12L14.5 6M20.5 12L14.5 18" stroke="#E6EAF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg></button>
+                          </div>
+                         <div class="col-6 px-3">
+                          <button type="button" class="d-none mt-0 backBtn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                               <path d="M20.5 12H4.5M4.5 12L10.5 6M4.5 12L10.5 18" stroke="#002882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                               <path d="M20.5 12H4.5M4.5 12L10.5 6M4.5 12L10.5 18" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg> Back
                           </button>
+                         </div>
+                        </div>
                     </section>
 
-                      
-                    <!-- Bank Account Detail Form -->
-                    <section class="bankDetail" style="display: none;" >
-                      <h1>Bank Account</h1>
+                    <section class="BusinessInfoBussAccForm p-sm-4 pt-0"  style="display: none;">
+                      <h1>Business Information <span class="bussinessInfoText">(Business Account)</span></h1>
+                      <div class="row formRow p-2 p-sm-3 m-0 rounded-4">
 
-                      <div class="row bankDetailRow p-2 p-sm-3 rounded-4">
                           <div class="mb-3 formFields">
+                              <label  class="form-label">Legal Business Name<span class="starik">*</span></label>
+                              <input type="text" class="form-control required" placeholder="Enter Business Name" id="legalBusinessName" name="legalBusinessName" aria-describedby="emailHelp" required>
+                          </div>
+
+                          <!-- <div class="mb-3 formFields">
+                              <label  class="form-label">Person in Charge<span class="starik">*</span></label>
+                              <input type="text" class="form-control required" placeholder="Enter Name" id="personCharge" name="personCharge" aria-describedby="emailHelp" required>
+                          </div> -->
+
+                          <div class="mb-3 formFields">
+                            <label class="form-label">Person in Contact Phone Number <span class="starik">*</span></label>
+                            
+                                   <div class="w-100">
+                                    <input type="tel" id="personContactNumber" name="personContactNumber" class="form-control required"
+                                   placeholder="e.g. 3XX-XXXXXXX" required
+                                   pattern="[0-9]{3}-[0-9]{7}" title="Phone number must be in the format 3XX-XXXXXXX"
+                                   maxlength="11" minlength="11">
+                                    <p id='bussNumberErrTxt' class="m-0">Contact Number should contain exactly 10 digits.</p>
+                                </div>
+                        </div>
+                        
+                            <div class="mb-3 formFields">
+                              <label class="form-label">Person in Charge Email<span class="starik">*</span></label>
+                              <div class="w-100">
+                                <input type="email" class="form-control required" placeholder="e.g. Example@compony.com" id="personChargeEmail" name="personChargeEmail" required>
+
+                                <p id='bussEmailErrTxt' class="m-0"></p>
+                              </div>
+                            </div>
+                           
+                          <div class="mb-3 formFields">
+                              <label class="form-label">Business Registration Number<span class="starik">*</span></label>
+                              <input type="text" class="form-control required" placeholder="Enter Registration Number" id="businessRegistrationNumber" name="businessRegistrationNumber" aria-describedby="emailHelp" required>
+                          </div>
+                          <div class="mb-3 formFields">
+                            <label class="form-label">Upload Registration Proof<span class="starik">*</span></label>
+                           
+                            <div class="w-100">
+                              <label for="upRegProof" class="m-0 upload-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                    <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="#002882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="#002882" stroke-width="1.5" stroke-linecap="round"/>
+                                    <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
+                                  </svg>
+                                <span>Upload Image</span>
+                            </label>
+                              <p id='upRegProofText' class="m-0">Only PNG, JPG and WEBp with File size less then 500kb are accepted.</p>
+                            </div>
+                            <input id="upRegProof" class="upRegProof required" type="file" name="upRegProof" accept=".jpg, .WEBp, .png" required/>                            
+                            
+                          </div>
+
+                          <div class="mb-3 formFields">
+                              <label class="form-label">Business NTN Number<span class="starik">*</span></label>
+                              <input type="text" class="form-control required" placeholder="Enter NTN Number" id="businessNtnNumber" name="businessNtnNumber" aria-describedby="emailHelp" required>
+                          </div>
+
+                          <div class="mb-3 formFields">
+                            <label class="form-label">Upload NTN Document<span class="starik">*</span></label>
+                           
+                            <div class="w-100">
+                              <label for="upNtnNum" class="m-0 upload-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                    <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="#002882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="#002882" stroke-width="1.5" stroke-linecap="round"/>
+                                    <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
+                                  </svg>
+                                <span>Upload Image</span>
+                            </label>
+                              <p id='upNtnNumText' class="m-0">Only PNG, JPG and WEBp with File size less then 500kb are accepted.</p>
+                            </div>
+                            <input id="upNtnNum" class="upRegProof required" type="file" name="upNtnNum" accept=".jpg, .WEBp, .png" required/>                            
+                            
+                          </div>
+
+                          <div class="mb-3 formFields">
+                              <label class="form-label">Trademark <span class="bussinessInfoText">(optional)</span></label>
+                              <input type="text" class="form-control required" placeholder="Enter Trademark" id="trademark" name="trademark" aria-describedby="emailHelp" required>
+                          </div>
+
+                          <div class="mb-3 formFields">
+                            <label class="form-label">Upload Trademark Document<span class="starik">*</span></label>
+                           
+                            <div class="w-100">
+                              <label for="upTradDoc" class="m-0 upload-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                    <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="#002882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="#002882" stroke-width="1.5" stroke-linecap="round"/>
+                                    <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
+                                  </svg>
+                                <span>Upload Image</span>
+                            </label>
+                              <p id='upTradDocText' class="m-0">Only PNG, JPG and WEBp with File size less then 500kb are accepted.</p>
+                            </div>
+                            <input id="upTradDoc" class="upRegProof required" type="file" name="upTradDoc" accept=".jpg, .WEBp, .png" required/>                            
+                            
+                          </div>
+                      </div>
+                      <h1>Address Book</h1>
+                      <div class="row p-2 p-sm-3 m-0 rounded-4">
+                          <h3 class="bussAddText">Business Address</h3>
+                          <div class="mb-3 formFields">
+                              <label class="form-label">Business Based in<span class="starik">*</span></label>
+                              <select class="form-select required" id="businessBasedin" name="businessBasedin">
+                                  <option>
+                                      <img src="https://flagcdn.com/w20/pk.png" alt="Pakistan Flag" class="flag-icon" />
+                                       Pakistan</option>
+                                       
+                                 
+                                </select>
+                          </div>
+                      
+                          <div class="mb-3 formFields">
+                              <label class="form-label">State<span class="starik">*</span></label>
+                              <select class="form-select required" id="bussinessState" name="bussinessState">
+                                <option value="">Select State</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Sindh">Sindh</option>
+                                <option value="KPK">Khyber Pakhtunkhwa</option>
+                                <option value="Balochistan">Balochistan</option>
+                                </select>
+                          </div>
+                          <div class="mb-3 formFields">
+                              <label class="form-label">City<span class="starik">*</span></label>
+                              <!-- <input type="text" placeholder="Enter City" class="form-control required" id="bussinessCity" name="bussinessCity" aria-describedby="emailHelp" required> -->
+                              <select class="form-select required" id="bussinessCity" name="bussinessCity">
+                                <option value="">Select City</option>
+                                <option value="Multan">Multan</option>
+                                <option value="Lahore">Lahore</option>
+                              </select>
+                            </div>
+                          
+                        <div class="mb-3 formFields">
+                            <label class="form-label">Area<span class="starik">*</span></label>
+                          <select class="form-select required" id="bussinessArea" name="bussinessArea">
+                            <option value="">Select Area</option>
+                            <option value="Cant">Cant</option>
+                            <option value="Gulgasht">Gulgasht</option>
+                          </select>
+                        </div>
+                          <div class="mb-3 formFields">
+                              <label class="form-label">Address<span class="starik">*</span></label>
+                              <input type="text" placeholder="Enter Address" class="form-control required" id="bussinessAddress" name="bussinessAddress" aria-describedby="emailHelp" required>
+                          </div>
+                          <div class="mb-3 formFields">
+                              <label class="form-label">Post Code<span class="starik">*</span></label>
+                              <input type="text" placeholder="Enter Post Code" class="form-control required" oninput="this.value = this.value.replace(/[^0-9]/g, '')" id="businessPostCode" minlength="5" maxlength="5" name="businessPostCode" aria-describedby="emailHelp" required>
+                          </div>
+                          <div class="mb-3 businessFormFields">
+                              <label class="form-label">Warehouse Address<span class="starik">*</span></label>
+                             <div class="businessInputFields">
+                              <input type="checkbox" id="bussinessWarehouseAddress" name="bussinessWarehouseAddress" value="warehouseAddressCheck">
+                              <label class="user-select-none" for="bussinessWarehouseAddress"> Same as Business Address</label>
+                             </div>
+                          </div>
+                          <div class="p-0 bussWarehouseAddress">
+                            <div class="mb-3 formFields">
+                              <label class="form-label">State<span class="starik">*</span></label>
+                              <select class="form-select required" id="warehouseState" name="warehouseState">
+                                <option value="">Select State</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Sindh">Sindh</option>
+                                <option value="KPK">Khyber Pakhtunkhwa</option>
+                                <option value="Balochistan">Balochistan</option>
+                                </select>
+                          </div>
+                          <div class="mb-3 formFields">
+                              <label class="form-label">City<span class="starik">*</span></label>
+                              <select class="form-select required" id="warehouseCity" name="warehouseCity">
+                                <option value="">Select City</option>
+                                <option value="Multan">Multan</option>
+                                <option value="Lahore">Lahore</option>
+                              </select>
+                            </div>
+                          
+                        <div class="mb-3 formFields">
+                            <label class="form-label">Area<span class="starik">*</span></label>
+                          <select class="form-select required" id="warehouseArea" name="warehouseArea">
+                            <option value="">Select Area</option>
+                            <option value="Cant">Cant</option>
+                            <option value="Gulgasht">Gulgasht</option>
+                          </select>
+                        </div>
+                          <div class="mb-3 formFields">
+                              <label class="form-label">Address<span class="starik">*</span></label>
+                              <input type="text" placeholder="Enter Address" class="form-control required" id="warehouseAddress" name="warehouseAddress" aria-describedby="emailHelp" required>
+                          </div>
+                          <div class="mb-3 formFields">
+                              <label class="form-label">Post Code<span class="starik">*</span></label>
+                              <input type="text" placeholder="Enter Post Code" class="form-control required" oninput="this.value = this.value.replace(/[^0-9]/g, '')" id="warehousePostCode" minlength="5" maxlength="5" name="warehousePostCode" aria-describedby="emailHelp" required>
+                          </div>
+                          </div>
+
+                          <div class="mb-3 businessFormFields">
+                              <label class="form-label">Return Address<span class="starik">*</span></label>
+                              <div class="businessInputFields">
+                              <input type="checkbox"  id="bussReturnAddressCheck" name="returnAddressCheck" value="Bike">
+                              <label class="user-select-none" for="bussReturnAddressCheck"> Same as Business Address</label>
+                              </div>
+                          </div>
+                          <div class="p-0 bussReturnAddress">
+                            <div class="mb-3 formFields">
+                              <label  class="form-label">State<span class="starik">*</span></label>
+                              <select class="form-select required" id="returnState" name="returnState">
+                                <option value="">Select State</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Sindh">Sindh</option>
+                                <option value="KPK">Khyber Pakhtunkhwa</option>
+                                <option value="Balochistan">Balochistan</option>
+                                </select>
+                            </div>
+                            <div class="mb-3 formFields">
+                              <label  class="form-label">City<span class="starik">*</span></label>
+                              <select class="form-select required" id="returnCity" name="returnCity">
+                                <option value="">Select City</option>
+                                <option value="Multan">Multan</option>
+                                <option value="Lahore">Lahore</option>
+                              </select>
+                            </div>
+                           
+                          <div class="mb-3 formFields">
+                              <label class="form-label">Area<span class="starik">*</span></label>
+                            <select class="form-select required" id="returnArea" name="returnArea">
+                              <option value="">Select Area</option>
+                              <option value="Cant">Cant</option>
+                              <option value="Gulgasht">Gulgasht</option>
+                            </select>
+                          </div>
+                            <div class="mb-3 formFields">
+                              <label  class="form-label">Address<span class="starik">*</span></label>
+                              <input type="text" placeholder="Enter Address" class="form-control required" id="returnAddress" name="returnAddress" aria-describedby="emailHelp" required>
+                            </div>
+                            <div class="mb-3 formFields">
+                              <label  class="form-label">Post Code<span class="starik">*</span></label>
+                              <input type="text" placeholder="Enter Post Code" class="form-control required" oninput="this.value = this.value.replace(/[^0-9]/g, '')" id="returnPostCode" name="returnPostCode" minlength="5" maxlength="5" aria-describedby="emailHelp" required>
+                            </div>
+                          </div>
+                      </div>
+                         
+                      <button type="button" disabled id="bussAccNxtBtn" class="bankDetailLink">Next <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                          <path d="M4.5 12H20.5M20.5 12L14.5 6M20.5 12L14.5 18" stroke="#E6EAF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg></button>
+                        <button type="button" id="bussAccBackBtn" class="backBtn">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                            <path d="M20.5 12H4.5M4.5 12L10.5 6M4.5 12L10.5 18" stroke="#002882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20.5 12H4.5M4.5 12L10.5 6M4.5 12L10.5 18" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg> Back
+                        </button>
+                  </section>
+                    <!-- Bank Account Detail Form -->
+                    <section class="position-relative bankDetail" >
+                      <h1 class="z-index-999 py-2 position-sticky top-0 bg-white">Bank Account</h1>
+
+                      <div class="row bankDetailRow p-20 rounded-4">
+                          <div class="col-12 col-md-6 d-flex flex-column align-items-start px-md-3 formFields">
                             <label class="form-label">Bank Name<span class="starik">*</span></label>
                             <select class="form-select bankRequired" id="bankName" name="bankName">
                               <option value="">Select Bank</option>
@@ -519,16 +1019,16 @@
                               <option value="Mezan">Mezan</option>
                               
                               </select>
-                        </div>
+                         </div>
                           
-                            <div class="mb-3 formFields">
+                            <div class="col-12 col-md-6 d-flex flex-column align-items-start px-md-3 mb-3 formFields">
                               <label class="form-label">Account Title<span class="starik">*</span></label>
                               <input type="text" class="form-control bankRequired" placeholder="Enter your name" id="bankTitle" name="bankTitle" required>
                             </div>
                             
                             
                           
-                            <div class="mb-3 formFields">
+                            <div class="col-12 col-md-6 d-flex flex-column align-items-start px-md-3 mb-3 formFields">
                               <label class="form-label">IBAN <span class="starik">*</span></label>
                               <div class="w-100">
                                 <input type="text" class="form-control bankRequired" id="bankIBAN" onkeypress="clsAlphaNoOnly(event)" placeholder="Enter your name" minlength="24" maxlength="24" name="bankIBAN" required>
@@ -536,7 +1036,7 @@
                             </div>
                             </div>
                           
-                            <div class="mb-3 formFields">
+                            <div class="col-12 col-md-6 d-flex flex-column align-items-start px-md-3 mb-3 formFields">
                               <label class="form-label">Upload Cheque Copy<span class="starik">*</span></label>
                              
                               <div class="w-100">
@@ -551,23 +1051,22 @@
                               </label>
                                 <p id='bankCheckCopy' class="m-0">Only PNG, JPG and WEBp with File size less then 500kb are accepted.</p>
                               </div>
+                              <div >
+                                <img class="w-50 rounded-2" src="Images/previewImage.jpg" alt="" id="bankCheqImgPrev" srcset="">
+                            </div>
                               <input id="chequeCopy" class="bankRequired" type="file" name="chequeCopy" accept=".jpg, .WEBp, .png" required/>                            
                               
                             </div>
                            
                         </div>
-                        <button type="submit" id="bussAccNxtBtnSubmit" class="d-flex justify-content-center align-items-center gap-1 nextBtn" disabled>
-                          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                          <path d="M16.5 2.75H8.5C6.567 2.75 5 4.317 5 6.25V17.75C5 19.683 6.567 21.25 8.5 21.25H16.5C18.433 21.25 20 19.683 20 17.75V6.25C20 4.317 18.433 2.75 16.5 2.75Z" stroke="#E6EAF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M9 6.75488H16M9 10.7549H16M9 14.7549H12.5" stroke="#E6EAF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg> <span>Submit Details</span>
-                        </button>
-                        <button type="button" id="bankAccBackBtn" class="backBtn" class="bankDetBackBtn">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                            <path d="M20.5 12H4.5M4.5 12L10.5 6M4.5 12L10.5 18" stroke="#002882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M20.5 12H4.5M4.5 12L10.5 6M4.5 12L10.5 18" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg> Back
-                        </button>
+                        <div class="d-flex justify-content-end gap-3 mt-3">
+                          <button type="submit" id="bussAccNxtBtnSubmit" class="h4 m-0 w-auto text-white nextBtn" >
+                            Update
+                          </button>
+                          <button type="button" id="bankAccBackBtn" class="m-0 w-auto backBtn bankDetBackBtn">
+                             Discard
+                          </button>
+                        </div>
                       
                     </section>
                   </form>
@@ -618,6 +1117,10 @@
     // Initialize the preview function
     previewImage('cnicFrontSidePhoto', 'FrontSideimgPrev');
     previewImage('cnicFrontBackPhoto', 'backSideimgPrev');
+    previewImage('upRegProof', 'busRegProofImgPrev');
+    previewImage('upNtnNum', 'busNtnDocImgPrev');
+    previewImage('upTradDoc', 'busTradDocImgPrev');
+    previewImage('chequeCopy', 'bankCheqImgPrev');
       </script>
 </body>
 </html>

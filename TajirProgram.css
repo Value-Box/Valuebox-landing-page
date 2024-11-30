@@ -365,8 +365,10 @@ line-height: 90px; /* 150% */
 text-align: center;
 }
 .rightarrow{
-    position: absolute;
-    right: 0;
+    position: relative;
+}
+.rightArrow svg{
+    margin-left: auto !important;
 }
 .LoginBgPoster{
     z-index: -1;

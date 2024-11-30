@@ -1904,6 +1904,7 @@ background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
  }
 .editSignup{
   background-color: #F2F2F2;
+  font-family: Sarabun;
 }
  @media(max-width:1400px){
   .Order-detail-line{
