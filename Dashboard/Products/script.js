@@ -57,19 +57,7 @@ document
     }
   });
 
-// Initialize Choices.js
-const dropdownElement = document.getElementById("categoryDropDown");
-const choicesInstance = new Choices(dropdownElement);
 
-// Add event listener for radio buttons
-document.querySelectorAll('input[name="flexRadioDefault"]').forEach((radio) => {
-  radio.addEventListener("change", function () {
-    const selectedValue = this.value; // Get the value of the selected radio button
-
-    // Set the dropdown value using Choices.js API
-    choicesInstance.setChoiceByValue(selectedValue);
-  });
-});
 
 document.getElementById("utubeUrl").addEventListener("input", function () {
   const youtubeUrl = document.getElementById("utubeUrl").value;
@@ -724,49 +712,98 @@ function addTag(wrapper, tagText, tagsArray, inputElem) {
 // }
 
 
-function toggleDivsAndTables(checkboxIds, divIds, tableIds) {
-  const checkboxes = checkboxIds.map(id => document.getElementById(id));
-  const divs = divIds.map(id => document.getElementById(id));
-  const tables = tableIds.map(id => document.getElementById(id));
+// function toggleDivsAndTables(checkboxIds, divIds, tableIds) {
+//   const checkboxes = checkboxIds.map(id => document.getElementById(id));
+//   const divs = divIds.map(id => document.getElementById(id));
+//   const tables = tableIds.map(id => document.getElementById(id));
 
-  // Always show 'merchant' on page load
-  const merchantCheckbox = document.getElementById('merchant');
-  const merchantDiv = document.getElementById('fullByMerchant');
-  const merchantTable = document.getElementById('fbmTable');
+//   // Always show 'merchant' on page load
+//   const merchantCheckbox = document.getElementById('merchant');
+//   const merchantDiv = document.getElementById('fullByMerchant');
+//   const merchantTable = document.getElementById('fbmTable');
 
-  merchantCheckbox.checked = true;
-  merchantDiv.classList.add('show');
-  merchantTable.classList.add('table-visible');
+//   merchantCheckbox.checked = true;
+//   merchantDiv.classList.add('show');
+//   merchantTable.classList.add('table-visible');
 
-  checkboxes.forEach((checkbox, index) => {
-    checkbox.addEventListener('change', () => {
-      // Hide all divs and tables and uncheck all checkboxes except the current one
-      checkboxes.forEach((cb, i) => {
-        if (i !== index) {
-          cb.checked = false;
-          divs[i].classList.remove('show');
-          tables[i].classList.remove('table-visible');
-          tables[i].classList.add('table-hidden');
-        }
-      });
+//   checkboxes.forEach((checkbox, index) => {
+//     checkbox.addEventListener('change', () => {
+//       // Hide all divs and tables and uncheck all checkboxes except the current one
+//       checkboxes.forEach((cb, i) => {
+//         if (i !== index) {
+//           cb.checked = false;
+//           divs[i].classList.remove('show');
+//           tables[i].classList.remove('table-visible');
+//           tables[i].classList.add('table-hidden');
+//         }
+//       });
 
-      // Show or hide the current div and table
-      if (checkbox.checked) {
-        divs[index].classList.add('show');
-        tables[index].classList.add('table-visible');
-        tables[index].classList.remove('table-hidden');
-      } else {
-        divs[index].classList.remove('show');
-        tables[index].classList.remove('table-visible');
-        tables[index].classList.add('table-hidden');
-      }
-    });
+//       // Show or hide the current div and table
+//       if (checkbox.checked) {
+//         divs[index].classList.add('show');
+//         tables[index].classList.add('table-visible');
+//         tables[index].classList.remove('table-hidden');
+//       } else {
+//         divs[index].classList.remove('show');
+//         tables[index].classList.remove('table-visible');
+//         tables[index].classList.add('table-hidden');
+//       }
+//     });
+//   });
+// }
+
+// // Initialize the toggle functionality
+// toggleDivsAndTables(
+//   ['merchant', 'VB'],
+//   ['fullByMerchant', 'fullByVB'],
+//   ['fbmTable', 'fbvTable']
+// );
+
+$(document).ready(function () {
+  // Initial setup: show FBM table and section, hide FBV table
+  $('#merchant').prop('checked', true);
+  $('#fullByMerchant').slideDown(0); // Show instantly on page load
+  $('#fbmTable').slideDown(0); // Show instantly on page load
+  $('#fbvTable').slideUp(0); // Hide instantly on page load
+
+  // Animation speed (in milliseconds)
+  const animationSpeed = 200;
+
+  // Handle FBM checkbox click
+  $('#merchant').change(function () {
+    if ($(this).is(':checked')) {
+      // Ensure FBV is unchecked
+      $('#VB').prop('checked', false);
+
+      // Animate FBM table and section
+      $('#fullByMerchant').slideDown(animationSpeed);
+      $('#fbmTable').slideDown(animationSpeed);
+
+      // Hide FBV table
+      $('#fbvTable').slideUp(animationSpeed);
+    } else {
+      // Ensure at least one checkbox remains checked
+      $(this).prop('checked', true);
+    }
   });
-}
 
-// Initialize the toggle functionality
-toggleDivsAndTables(
-  ['merchant', 'VB'],
-  ['fullByMerchant', 'fullByVB'],
-  ['fbmTable', 'fbvTable']
-);
+  // Handle FBV checkbox click
+  $('#VB').change(function () {
+    if ($(this).is(':checked')) {
+      // Ensure FBM is unchecked
+      $('#merchant').prop('checked', false);
+
+      // Animate FBV table
+      $('#fbvTable').slideDown(animationSpeed);
+
+      // Hide FBM table and section
+      $('#fullByMerchant').slideUp(animationSpeed);
+      $('#fbmTable').slideUp(animationSpeed);
+    } else {
+      // Ensure at least one checkbox remains checked
+      $(this).prop('checked', true);
+    }
+  });
+});
+
+

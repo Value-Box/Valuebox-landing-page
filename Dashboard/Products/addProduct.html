@@ -423,80 +423,69 @@
 
 
 <main class="backcolor" id="main">
-  <div class="container-xl px-0 addproduct">
+  <div class="container-fluid px-0 addproduct">
     <div class="navigation anchortags">
       <a href="../index.html">Home</a>
       <a href="manageProducts.html">>Manage Product</a>
       <a class="active1" href="manageProducts.html">>Add Product</a>
     </div>
-      <h1 class="addProHeading my-4">Add Product</h1>
-      <form>
-      <div class="container-xl p-0" id="basicInformationForm" style="display: none;">
+      <h1 class="addProHeading mt-20 mb-0">Add Product</h1>
+      <form class="mt-40">
+      <div class="container-fluid p-0" id="basicInformationForm" >
           <div class="basicinformation">
             <h2 class="text-dark">Basic Information</h2>
       
             <!-- Product Name Field -->
-            <div class="form-group mt-4">
-                <label for="productName" class="text-dark"><span class="important">*</span> Product Name</label>
+            <div class="form-group mt-20 mb-0">
+                <label for="productName" class="subHeading-4 gray-color"><span class="important">*</span> Product Name</label>
                 <input type="text" class="form-control form-control-lg required" id="productName" placeholder="Enter Product name" required>
             </div>
         
             <!-- Category Field -->
-            <div class="form-group my-4">
-                <label for="categoryDropDown" class="text-dark"><span class="important">*</span> Category</label>
-                <select class="choices form-select required" id="categoryDropDown" required>
-                  <option value="">-- Select --</option>
-                  <optgroup label="Figures">
-                      <option value="Cloths">Cloths</option>
-                      <option value="Cloth>Mens">Cloth > Mens</option>
-                      <option value="Cloth>Womens">Cloth > Womens</option>
-                      <option value="Cloth>Mens>Jeans">Cloth > Mens > Jeans</option>
-                      <option value="Cloth>Womens>Jeans">Cloth > Womens > Jeans</option>
-                  </optgroup>
-                  <optgroup label="Colors">
-                      <option value="red">Red</option>
-                      <option value="green">Green</option>
-                      <option value="blue">Blue</option>
-                      <option value="purple">Purple</option>
-                  </optgroup>
+            <div class="form-group mt-20 mb-0">
+                <label for="categoryDropDown" class="subHeading-4 gray-color"><span class="important">*</span> Category</label>
+                <select class="form-select form-select-lg required" id="basicSelect">
+                  <option>IT</option>
+                  <option>Blade Runner</option>
+                  <option>Thor Ragnarok</option>
               </select>
                              
             </div>
         
             <!-- Recently Used Section -->
-            <div class="recentlyFeatures">
+            <div class="recentlyFeatures mt-2">
                 <span class="recentlyused">Recently used:</span>
                 <button class="btn featurebtn" type="button">Features Phones</button>
             </div>
         
             <!-- Category Suggestion Section -->
             <div class="row categorySuggestion mx-0">
-              <h2 class="text-dark">Category Suggestion</h2>
+              <h2 class=" p-0 subHeading">Category Suggestion</h2>
           
-              <div class="form-check d-flex gap-3">
+              <div class="form-check d-flex gap-10 align-items-center">
                   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="Cloths" aria-label="Cloth > Mens">
-                  <label class="form-check-label" for="flexRadioDefault1">
+                  <label class="form-check-label gray-color" for="flexRadioDefault1">
                       Cloth > Mens
                   </label>
               </div>
           
-              <div class="form-check d-flex gap-3">
+              <div class="form-check d-flex gap-3 align-items-center">
                   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="Cloth>Mens" aria-label="Cloth > Womens">
-                  <label class="form-check-label" for="flexRadioDefault2">
+                  <label class="form-check-label gray-color" for="flexRadioDefault2">
                       Cloth > Womens
                   </label>
               </div>
           
-              <div class="form-check d-flex gap-3">
+              <div class="form-check d-flex gap-3 align-items-center">
                   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" value="Cloth>Womens" aria-label="Cloth > Mens > Jeans">
-                  <label class="form-check-label" for="flexRadioDefault3">
+                  <label class="form-check-label gray-color" for="flexRadioDefault3">
                       Cloth > Mens > Jeans
                   </label>
               </div>
           
-              <div class="form-check d-flex gap-3">
+              <div class="form-check d-flex gap-3 align-items-center">
                   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" value="Cloth>Mens>Jeans" aria-label="Cloth > Womens > Jeans">
-                  <label class="form-check-label" for="flexRadioDefault4">
+                  <label class="form-check-label gray-color" for="flexRadioDefault4">
                       Cloth > Womens > Jeans
                   </label>
               </div>
@@ -504,8 +493,8 @@
           
             
           </div>
-          <div class="container-xl mt-5 text-end">
-            <button class="btn px-4 py-2 addProNextBtn" id="addProNextBtn">Next</button>
+          <div class="container-fluid mt-40 text-end p-0">
+            <button class=" ms-auto btn-blue" id="addProNextBtn">Next</button>
         </div>
       </div>
 
@@ -513,34 +502,22 @@
         <div class="row">
           <div class="col-8 ps-0">
                <div class="bg-white" id="basicInfo">
-                 <h5>Basic Information</h5>
-                 <div class="form-group mt-4 w-100">
-                   <label for="productName" class="text-dark mb-2"><span class="important">*</span> Product Name</label>
+                 <h5 class="subHeading mb-0">Basic Information</h5>
+                 <div class="form-group mt-20 mb-0 w-100">
+                   <label for="productName" class=".gray-color mb-2"><span class="important">*</span> Product Name</label>
                    <input type="text" class="form-control form-control-lg required" id="productName" placeholder="Enter Product name" required>
                  </div>
                
                <div class="form-group w-100 mt-4">
-    <label for="categoryDropDown" class="text-dark mb-2"><span class="important">*</span> Category</label>
-    <select class="choices form-select required" id="categoryDropDown" required>
-      <option value="">-- Select --</option>
-      <optgroup label="Figures">
-          <option value="Cloths">Cloths</option>
-          <option value="Cloth>Mens">Cloth > Mens</option>
-          <option value="Cloth>Womens">Cloth > Womens</option>
-          <option value="Cloth>Mens>Jeans">Cloth > Mens > Jeans</option>
-          <option value="Cloth>Womens>Jeans">Cloth > Womens > Jeans</option>
-      </optgroup>
-      <optgroup label="Colors">
-          <option value="red">Red</option>
-          <option value="green">Green</option>
-          <option value="blue">Blue</option>
-          <option value="purple">Purple</option>
-      </optgroup>
-  </select>
-                 
+                   <label for="categoryDropDown" class=".gray-color mb-2"><span class="important">*</span> Category</label>
+                   <select class="form-select form-select-lg" id="basicSelect">
+                     <option>IT</option>
+                     <option>Blade Runner</option>
+                     <option>Thor Ragnarok</option>
+                   </select>
                </div>
                <div class="recentlyFeatures mt-4">
-  <span class="recentlyused">Recently used:</span>
+  <span class="recentlyused text-natural-gray">Recently used:</span>
   <button class="btn featurebtn" type="button">Features Phones</button>
                </div>
                <div class="d-flex gap-2 align-items-center customerInputTxt mt-4">
@@ -563,7 +540,46 @@
     </div>
 </div>
                </div>
-               
+               <div class="w-100 mt-4">
+                <p class="heading"><span>*</span> Upload Video</p>
+                <div class="uploadVidSec">
+                  <div class="d-flex gap-3 uploadVidSecBtns">
+                    <label class="newVidFileBTn" for="newVidFileBTn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                        <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="#E6EAF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="#E6EAF3" stroke-width="1.5" stroke-linecap="round"/>
+                      </svg>
+                      Upload New Files
+                      <!-- <button type="button" >
+                
+                      </button> -->
+                    </label>
+                    <input type="file" class="d-none" id="newVidFileBTn" accept="video/mp4">
+                
+                    <label class="mediaVidCenterBtn bg-transparent" for="mediaVidCenterBtn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                        <path d="M16.5 10C17.6046 10 18.5 9.10457 18.5 8C18.5 6.89543 17.6046 6 16.5 6C15.3954 6 14.5 6.89543 14.5 8C14.5 9.10457 15.3954 10 16.5 10Z" stroke="#002882" stroke-width="1.5"/>
+                        <path d="M16.5 10C17.6046 10 18.5 9.10457 18.5 8C18.5 6.89543 17.6046 6 16.5 6C15.3954 6 14.5 6.89543 14.5 8C14.5 9.10457 15.3954 10 16.5 10Z" stroke="black" stroke-opacity="0.2" stroke-width="1.5"/>
+                        <path d="M2.5 12.4999L4.252 10.9669C4.69114 10.583 5.25974 10.3802 5.84272 10.3997C6.4257 10.4192 6.97949 10.6595 7.392 11.0719L11.682 15.3619C12.0149 15.6947 12.4546 15.8995 12.9235 15.9401C13.3925 15.9807 13.8608 15.8546 14.246 15.5839L14.545 15.3739C15.1006 14.9837 15.7721 14.7935 16.4498 14.8343C17.1275 14.8752 17.7713 15.1447 18.276 15.5989L21.5 18.4999" stroke="#002882" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M2.5 12.4999L4.252 10.9669C4.69114 10.583 5.25974 10.3802 5.84272 10.3997C6.4257 10.4192 6.97949 10.6595 7.392 11.0719L11.682 15.3619C12.0149 15.6947 12.4546 15.8995 12.9235 15.9401C13.3925 15.9807 13.8608 15.8546 14.246 15.5839L14.545 15.3739C15.1006 14.9837 15.7721 14.7935 16.4498 14.8343C17.1275 14.8752 17.7713 15.1447 18.276 15.5989L21.5 18.4999" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M22.5 12C22.5 16.714 22.5 19.071 21.035 20.535C19.572 22 17.214 22 12.5 22C7.786 22 5.429 22 3.964 20.535C2.5 19.072 2.5 16.714 2.5 12C2.5 7.286 2.5 4.929 3.964 3.464C5.43 2 7.786 2 12.5 2C17.214 2 19.571 2 21.035 3.464C22.009 4.438 22.335 5.807 22.445 8" stroke="#002882" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M22.5 12C22.5 16.714 22.5 19.071 21.035 20.535C19.572 22 17.214 22 12.5 22C7.786 22 5.429 22 3.964 20.535C2.5 19.072 2.5 16.714 2.5 12C2.5 7.286 2.5 4.929 3.964 3.464C5.43 2 7.786 2 12.5 2C17.214 2 19.571 2 21.035 3.464C22.009 4.438 22.335 5.807 22.445 8" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
+                      </svg>
+                      Select from Media Center
+                      <input type="file" class="d-none" id="mediaVidCenterBtn" accept="video/mp4">
+                
+                    </label>
+                  </div>
+                  <span>Mp4 format for videos with file size less then 5MB</span>
+                  <p class="m-0">OR</p>
+                  <div class="form-group m-0 w-100">
+                    <input type="url" class="form-control form-control-lg required" id="utubeUrl" placeholder="Enter YouTube Link" required>
+                    <p id="errorMessage" style="color: red; display: none;">Please enter a valid YouTube video link.</p>
+                  </div>
+                  
+                </div>
+                               </div>
+
                <div class="w-100 mt-4">
 <p class="heading"><span>*</span> Upload Product Image</p>
 <div class="uploadImgSec">
@@ -589,56 +605,35 @@
         <path d="M22.5 12C22.5 16.714 22.5 19.071 21.035 20.535C19.572 22 17.214 22 12.5 22C7.786 22 5.429 22 3.964 20.535C2.5 19.072 2.5 16.714 2.5 12C2.5 7.286 2.5 4.929 3.964 3.464C5.43 2 7.786 2 12.5 2C17.214 2 19.571 2 21.035 3.464C22.009 4.438 22.335 5.807 22.445 8" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
       </svg>
       Select from Media Center
-      <input type="file" class="d-none" id="mediaCenterinput" accept=".jpg, .jpeg, .png">
+      <input type="file" class="d-none" id="mediaCenterinput" accept=".jpg, .webp, .png">
 
     </label>
   </div>
   <span>Only PNG, JPG and WEBp files are Accepted less then 500kb</span>
+  <div class="w-100 d-flex flex-wrap gap-3">
+    <img class="w-100px" src="../Images/orderReturnimg.png" alt="">
+    <img class="w-100px" src="../Images/orderReturnimg.png" alt="">
+    <img class="w-100px" src="../Images/orderReturnimg.png" alt="">
+
+    <img class="w-100px" src="../Images/orderReturnimg.png" alt="">
+    <img class="w-100px" src="../Images/orderReturnimg.png" alt="">
+    <img class="w-100px" src="../Images/orderReturnimg.png" alt="">
+
+    <img class="w-100px" src="../Images/orderReturnimg.png" alt="">
+    <img class="w-100px" src="../Images/orderReturnimg.png" alt="">
+    <img class="w-100px" src="../Images/orderReturnimg.png" alt="">
+
+    <img class="w-100px" src="../Images/orderReturnimg.png" alt="">
+    <img class="w-100px" src="../Images/orderReturnimg.png" alt="">
+    <img class="w-100px" src="../Images/orderReturnimg.png" alt="">
+  </div>
 </div>
                </div>
                
-               <div class="w-100 mt-4">
-<p class="heading"><span>*</span> Upload Video</p>
-<div class="uploadVidSec">
-  <div class="d-flex gap-3 uploadVidSecBtns">
-    <label class="newVidFileBTn" for="newVidFileBTn">
-      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-        <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="#E6EAF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="#E6EAF3" stroke-width="1.5" stroke-linecap="round"/>
-      </svg>
-      Upload New Files
-      <!-- <button type="button" >
+               
+            </div>
 
-      </button> -->
-    </label>
-    <input type="file" class="d-none" id="newVidFileBTn" accept=".jpg, .jpeg, .png">
-
-    <label class="mediaVidCenterBtn bg-transparent" for="mediaVidCenterBtn">
-      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-        <path d="M16.5 10C17.6046 10 18.5 9.10457 18.5 8C18.5 6.89543 17.6046 6 16.5 6C15.3954 6 14.5 6.89543 14.5 8C14.5 9.10457 15.3954 10 16.5 10Z" stroke="#002882" stroke-width="1.5"/>
-        <path d="M16.5 10C17.6046 10 18.5 9.10457 18.5 8C18.5 6.89543 17.6046 6 16.5 6C15.3954 6 14.5 6.89543 14.5 8C14.5 9.10457 15.3954 10 16.5 10Z" stroke="black" stroke-opacity="0.2" stroke-width="1.5"/>
-        <path d="M2.5 12.4999L4.252 10.9669C4.69114 10.583 5.25974 10.3802 5.84272 10.3997C6.4257 10.4192 6.97949 10.6595 7.392 11.0719L11.682 15.3619C12.0149 15.6947 12.4546 15.8995 12.9235 15.9401C13.3925 15.9807 13.8608 15.8546 14.246 15.5839L14.545 15.3739C15.1006 14.9837 15.7721 14.7935 16.4498 14.8343C17.1275 14.8752 17.7713 15.1447 18.276 15.5989L21.5 18.4999" stroke="#002882" stroke-width="1.5" stroke-linecap="round"/>
-        <path d="M2.5 12.4999L4.252 10.9669C4.69114 10.583 5.25974 10.3802 5.84272 10.3997C6.4257 10.4192 6.97949 10.6595 7.392 11.0719L11.682 15.3619C12.0149 15.6947 12.4546 15.8995 12.9235 15.9401C13.3925 15.9807 13.8608 15.8546 14.246 15.5839L14.545 15.3739C15.1006 14.9837 15.7721 14.7935 16.4498 14.8343C17.1275 14.8752 17.7713 15.1447 18.276 15.5989L21.5 18.4999" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
-        <path d="M22.5 12C22.5 16.714 22.5 19.071 21.035 20.535C19.572 22 17.214 22 12.5 22C7.786 22 5.429 22 3.964 20.535C2.5 19.072 2.5 16.714 2.5 12C2.5 7.286 2.5 4.929 3.964 3.464C5.43 2 7.786 2 12.5 2C17.214 2 19.571 2 21.035 3.464C22.009 4.438 22.335 5.807 22.445 8" stroke="#002882" stroke-width="1.5" stroke-linecap="round"/>
-        <path d="M22.5 12C22.5 16.714 22.5 19.071 21.035 20.535C19.572 22 17.214 22 12.5 22C7.786 22 5.429 22 3.964 20.535C2.5 19.072 2.5 16.714 2.5 12C2.5 7.286 2.5 4.929 3.964 3.464C5.43 2 7.786 2 12.5 2C17.214 2 19.571 2 21.035 3.464C22.009 4.438 22.335 5.807 22.445 8" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
-      </svg>
-      Select from Media Center
-      <input type="file" class="d-none" id="mediaVidCenterBtn" accept=".jpg, .jpeg, .png">
-
-    </label>
-  </div>
-  <span>Mp4 format for videos with file size less then 5MB</span>
-  <p class="m-0">OR</p>
-  <div class="form-group m-0 w-100">
-    <input type="url" class="form-control form-control-lg required" id="utubeUrl" placeholder="Enter YouTube Link" required>
-    <p id="errorMessage" style="color: red; display: none;">Please enter a valid YouTube video link.</p>
-  </div>
-  
-</div>
-               </div>
-               </div>
-
-        <div class="pricingSec bg-white mt-4">
+        <div class="pricingSec bg-white mt-40">
           <h5 class="mb-0">Pricing</h5>
           <span class="priceTableHead">Price Table</span>
           
@@ -678,9 +673,9 @@
         </div>
         </div>
 
-        <div class="createVariantSec bg-white mt-4">
+        <div class="createVariantSec bg-white mt-40">
           <h5 class="mb-0">Create Variants</h5>
-          <span class="priceTableHead">Select Option Type</span>
+          <span class="paragraph-1">Select Option Type</span>
           
           <div class="d-flex gap-3 w-100">
             <fieldset class="form-group  w-100 d-flex gap-2" >
@@ -692,34 +687,6 @@
                 </select>
                 <!-- <input class="form-control form-control-lg" id="customInput1" style="display: none;" type="text"> -->
             </fieldset>
-            <!-- <fieldset class="form-group w-100 " id="customInput2" style="display: none;">
-              <input class="form-control form-control-lg" id="custInput2" type="text" >
-            </fieldset>
-            <div class="form-group w-100" id="colorDropDown" style="display: none;">
-              <select class="choices form-select multiple-remove colorDropDown" id="MultiSelectColor"
-                  multiple="multiple" oninput="selectedColor()">
-                  <optgroup label="colors">
-                      <option value="red">Red</option>
-                      <option value="green">Green</option>
-                      <option value="blue">Blue</option>
-                      <option value="purple">Purple</option>
-                      <option value="black">Black</option>
-                      
-                  </optgroup>
-                  
-              </select>
-          </div>
-           
-            <div class="form-group w-100" id="sizeDropDown" style="display: none;">
-              <select class="choices form-select multiple-remove sizeDropDown"
-                  multiple="multiple" id="sizesDropDown">
-                  <optgroup label="Sizes">
-                    <option value="Small">Small</option>
-                    <option value="Medium">Medium</option>
-                    <option value="Large">Large</option>
-                  </optgroup>
-              </select>
-          </div> -->
             
          </div>
           <button class="addVariantBtn" id="addVariantBtn" onclick="addVariant()" type="button">
@@ -831,34 +798,34 @@
         </div>
         <div class="form1 mt-40">
           <p class="subHeading">Inventory & Stock</p>
-          <div class="mt-40">
-            <input class="form-check-input" type="checkbox" name="" id="">
-            <span class="paragraph-1">Track Quantity</span>
+          <div class="mt-40 d-flex gap-10">
+            <input class="form-check-input" type="checkbox" name="" id="track_quantity">
+            <label class="paragraph-1" for="track_quantity">Track Quantity</label>
           </div>
-          <div class="mt-40">
-            <input class="form-check-input" type="checkbox" name="" id="">
-            <span class="paragraph-1">Continue Selling when out of Stock</span>
+          <div class="mt-40 d-flex gap-10">
+            <input class="form-check-input" type="checkbox" name="" id="out_of_stock">
+            <label class="paragraph-1" for="out_of_stock">Continue Selling when out of Stock</label>
           </div>
           
           <div class="mt-40 d-flex gap-20">
             <div class="w-100">
               <span class="paragraph-1">Seller SKU</span>
-              <input class="input" type="text" placeholder="Enter SKU" name="" id="">
+              <input class="mt-2 form-control form-control-lg" type="text" placeholder="Enter SKU" name="" id="">
             </div>
             <div class="w-100">
               <span class="paragraph-1">Barcode</span>
-              <input class="input" type="text" placeholder="Enter Barcode" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="" id="">
+              <input class="mt-2 form-control form-control-lg" type="text" placeholder="Enter Barcode" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="" id="">
             </div>
           </div>
 
           <div class="mt-40">
             <span class="paragraph-1">Warehouse Type</span>
-            <div class="mt-2" >
+            <div class="mt-2 d-flex gap-10" >
               <input class="form-check-input" type="checkbox" name="" id="merchant" checked>
               <label class="paragraph-1 cursor-pointer" for="merchant">FBM (Fulfillment by Merchant)</label>
             </div>
             
-            <div class="px-4 hidden" id="fullByMerchant">
+            <div class="px-4 " id="fullByMerchant">
               <div class="mt-3 d-flex align-items-center gap-2">
                 <input class="form-radio-input" type="radio" checked>
                 <span class="paragraph-1">Drop Off</span>
@@ -870,15 +837,9 @@
             </div>
 
            <div class="mt-30" >
-            <div>
+            <div class="d-flex gap-10">
               <input class="form-check-input" type="checkbox" name="" id="VB">
               <label class="paragraph-1 cursor-pointer" for="VB">FBV (Fulfillment by ValueBox)</label>
-            </div>
-            <div class="px-4 hidden" id="fullByVB">
-              <div class="mt-3 d-flex align-items-center gap-2">
-                <input class="form-radio-input" type="radio" checked>
-                <span class="paragraph-1">Drop Off</span>
-              </div>
             </div>
            </div>
 
@@ -895,7 +856,7 @@
               </a>
             </div>
             <div class="TableWrapper mt-2">
-              <table id="fbmTable" class="table-visible">
+              <table id="fbmTable" class="">
                 <thead>
                   <tr>
                       <th class="paragraph-3">Location</th>
@@ -909,7 +870,7 @@
                   </tr>
               </tbody>
               </table>
-              <table id="fbvTable" class="table-hidden">
+              <table id="fbvTable" class="" style="display: none;">
                 <thead>
                   <tr>
                       <th class="paragraph-3">Location</th>
@@ -939,15 +900,15 @@
             </div>
           </div>
 
-          <div class="mt-40">
-            <input class="form-check-input" type="checkbox" name="" id="">
-            <span class="paragraph-1">Digital Product</span>
+          <div class="mt-40 d-flex gap-10">
+            <input class="form-check-input" type="checkbox" name="" id="digital_product">
+            <label class="paragraph-1" for="digital_product">Digital Product</label>
           </div>
 
           <div class="mt-40 d-flex gap-20">
             <div class="w-75">
               <span class="paragraph-1"><span class="secondary-yellow">*</span> Package Weight</span>
-              <input class="input" type="text" placeholder="e.g.0.0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" name="" id="">
+              <input class="form-control form-control-lg required" type="text" placeholder="e.g.0.0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" name="" id="">
             </div>
               <fieldset class="form-group mb-0 w-25 d-flex align-items-end">
                   <select class="form-select form-select-lg ">
@@ -972,7 +933,7 @@
           <div class="mt-40">
             <p class="paragraph-1"><span class="secondary-yellow">*</span> Dangerous Goods</p>
             <div class="d-flex gap-5">
-              <div class="d-flex align-items-center gap-2">
+              <div class="d-flex align-items-center gap-10">
                 <input class="form-radio-input" type="radio" name="option" id="none" checked>
                 <label class="paragraph-1" for="none">None</label>
               </div>
@@ -1049,33 +1010,35 @@
               <h5 class="mb-0">Status</h5>
               
               <div class="form-group w-100">
-                <select class="form-select form-select-lg " id="categoryDropDown" required>
-                  <option value="active">Active</option>
-                <option value="InActive">InActive</option>
+                <select class="form-select form-select-lg" id="basicSelect">
+                  <option>IT</option>
+                  <option>Blade Runner</option>
+                  <option>Thor Ragnarok</option>
               </select>
                              
             </div>
             </div>
 
-            <div class="productOrganiz mt-3 bg-white">
+            <div class="productOrganiz mt-20 bg-white">
               <h5 class="mb-0">Product Organization</h5>
               <div class="form-group w-100">
-                <label for="productName" class="text-dark">Product type</label>
+                <label for="productName">Product type</label>
                 <input type="text" class="form-control form-control-lg" id="productOrganization" placeholder="" required>
               </div>
               <div class="form-group w-100">
-                <label for="productName" class="text-dark">Collection</label>
+                <label for="productName">Collection</label>
                 <input type="text" class="form-control form-control-lg" id="productOrganization" placeholder="" required>
               </div>
               <div class="form-group w-100">
-                <label for="productName" class="text-dark">Select Brand</label>
-                <select class="form-select form-select-lg " id="categoryDropDown" required>
-                  <option value="active">Please Select</option>
-                <option value="InActive">InActive</option>
-              </select>      
+                <label for="productName">Select Brand</label>
+                <select class="form-select form-select-lg" id="basicSelect">
+                  <option>IT</option>
+                  <option>Blade Runner</option>
+                  <option>Thor Ragnarok</option>
+              </select>     
             </div>
             <div class="form-group w-100">
-              <label for="tagInput" class="text-dark">Tags</label>
+              <label for="tagInput" >Tags</label>
                 <input type="text" class="form-control form-control-lg tagInput" id="tagInput" placeholder="" required>
             </div>
 
@@ -1100,7 +1063,7 @@
     <script src="../assets/vendors/ckeditor/ckeditor.js"></script>
     <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/vendors/choices.js/choices.min.js"></script>
+    <!-- <script src="../assets/vendors/choices.js/choices.min.js"></script> -->
     <script src="../assets/js/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="script.js"></script>

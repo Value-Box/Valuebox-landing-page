@@ -1254,7 +1254,7 @@ padding: 15px 20px;
   color: #EEA500;
 }
 #main {
-  max-width: 1920px;
+  /* max-width: 1920px; */
   margin-left: 300px;
   /* margin-left: 0px; */
   padding: 2rem;

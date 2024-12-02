@@ -468,6 +468,7 @@ body {
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
+  padding: 5px 10px;
 }
 .categorySuggestion {
   display: flex;
@@ -872,8 +873,9 @@ border: 1px solid #F2F2F2;
   background: transparent;
   padding: 7px;
   border-radius: 4px;
-  max-width: 400px;
+  /* max-width: 400px; */
   border: 1px solid #ccc;
+  min-height: 56px;
 }
 .tags-input-wrapper input {
   border: 0;
@@ -1511,22 +1513,6 @@ gap: 10px;
   opacity: 1;
 }
 
-.table-visible {
-  opacity: 1;
-  position: relative;
-  z-index: 1;
-}
-
-.table-hidden {
-  opacity: 0;
-  position: absolute;
-  visibility: hidden;
-  z-index: -1;
-  pointer-events: none; /* Prevent interaction when hidden */
-  transition: opacity 0.5s ease;
-
-}
-
 .orderReturnDetails{
   border-bottom-style: dashed;
   border-color: #CCC;
@@ -1905,6 +1891,18 @@ background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
 .editSignup{
   background-color: #F2F2F2;
   font-family: Sarabun;
+}
+.ck.ck-editor__editable_inline{
+  border-bottom-left-radius: 12px !important;
+  border-bottom-right-radius: 12px !important;
+  min-height: 200px ;
+  background: var(--Natural-Color-00, #FCFCFC) !important;
+}
+.ck.ck-editor__top .ck-sticky-panel .ck-toolbar{
+  border-top-left-radius: 12px !important;
+  border-top-right-radius: 12px !important;
+  padding: 15px;
+  background: var(--Natural-Color-10, #F2F2F2);
 }
  @media(max-width:1400px){
   .Order-detail-line{
