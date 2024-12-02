@@ -1690,6 +1690,9 @@ line-height: 30px; /* 150% */
   .custom-modal-width{
     max-width: 1250px;
   }
+  .tags-input-wrapper {
+    min-height: 48px;
+  }
 }
 .reviewsPerfomanceOverview{
   display: flex;
