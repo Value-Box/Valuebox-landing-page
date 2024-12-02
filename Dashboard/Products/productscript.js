@@ -29,32 +29,13 @@ document.querySelectorAll(".required").forEach(function (input) {
 });
 
 // Validate on form submission or button click
-document
-  .getElementById("addProNextBtn")
-  .addEventListener("click", function (event) {
-    event.preventDefault(); // Prevent form submission
-
-    let isValid = true;
-
-    // Get all required fields (both input and select with the 'required' class)
-    const inputs = document.querySelectorAll(".required");
-
-    // Check if any required input is empty
-    inputs.forEach(function (input) {
-      // For select elements, check if the value is empty
-      if (input.tagName === "SELECT" && input.value === "") {
-        input.classList.add("is-invalid"); // Add red border for empty select
-        isValid = false;
-      } else if (input.value.trim() === "") {
-        input.classList.add("is-invalid"); // Add red border for empty input field
-        isValid = false;
-      }
-    });
+document.getElementById("addProNextBtn").addEventListener("click", function () {
 
     // If valid, you can proceed further
-    if (isValid) {
+   
       document.querySelector("#basicInformationForm").style.display = "none";
-    }
+      document.querySelector("#addProductSection").style.display = "block";
+    
   });
 
 

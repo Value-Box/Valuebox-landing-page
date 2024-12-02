@@ -2055,6 +2055,9 @@ textarea.form-control-lg {
   color: #6c757d;
   background-color: #e9ecef;
 }
+.form-select:focus option:hover{
+  background-color: red !important;
+}
 .form-select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #607080;
@@ -9584,6 +9587,15 @@ line-height: 28px; /* 155.556% */
   background-color: var(--Natural-Gray-Color);
   border: 1px solid var(--Natural-Gray-Color);
 }
+.btn-green{
+  padding: 5px 20px;
+  border-radius: 5px;
+background: var(--Success-500, #12B76A);
+color: var(--Natural-Color-00, #FCFCFC);
+font-size: 12px;
+font-weight: 600;
+line-height: 18px;
+}
 .form1 {
   padding: 20px;
   border-radius: 12px;
@@ -9701,7 +9713,7 @@ line-height: 28px; /* 155.556% */
   gap: 80px;
 }
 .text-Blue-80 {
-  color: var(Primary-Color-Dark-Blue-80);
+  color: var(--Primary-Color-Dark-Blue-80);
 }
 .text-brand-color {
   color: var(--Brand-Color);
@@ -10091,7 +10103,7 @@ line-height: 28px
       0px 2px 4px -2px rgba(16, 24, 40, 0.06);
   }
   .mt-40 {
-    margin-top: 20px;
+    margin-top: 30px;
   }
   .mt-20 {
     margin-top: 10px;

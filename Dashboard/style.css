@@ -1109,8 +1109,8 @@ td {
   cursor: move;
 }
 .choices__inner {
-  /* height: 47px !important;
-  overflow: auto; */
+  height: 56px !important;
+  /* overflow: auto; */
   background: transparent;
 }
 #selOptType{
@@ -1892,6 +1892,19 @@ background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
   height: 500px;
   overflow-y: auto;
  }
+.variant{
+  display: flex;
+padding: 10px 20px;
+align-items: center;
+gap: 10px;
+align-self: stretch;
+}
+ .variant.active label {
+  color: #002882;
+}
+.variant.active{
+  background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
+}
 
  @media(max-width:1400px){
   .Order-detail-line{
@@ -1916,5 +1929,9 @@ background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
   border: 1px solid var(--Natural-Color-20, #CCC);
   background: var(--Natural-Color-00, #FCFCFC);
   color: black;
+  }
+
+  .choices__inner {
+    height: 48px !important;
   }
   }
