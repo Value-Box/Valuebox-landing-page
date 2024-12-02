@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/bootstrap.css">
-  
+    <link rel="stylesheet" href="../assets/vendors/simple-datatables/style.css">
     <link rel="stylesheet" href="../assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="../assets/css/app.css">
@@ -213,9 +213,9 @@
                           <li class="submenu-item ">
                               <a href="../DataInsight/dataInsightdashboard.html">Business Advisor</a>
                           </li>
-                          <li class="submenu-item ">
+                          <!-- <li class="submenu-item ">
                               <a href="component-breadcrumb.html">Account Health</a>
-                          </li>  
+                          </li>   -->
                       </ul>
                   </li>
         
@@ -270,7 +270,7 @@
                   </a>
                   <ul class="submenu ">
                       <li class="submenu-item ">
-                          <a href="component-button.html">Current Level</a>
+                        <a href="../Achivements/Levels.html">Current Level</a>
                       </li>
                       
                   </ul>
@@ -355,13 +355,13 @@
             </a>
             <ul class="submenu ">
                 <li class="submenu-item ">
-                    <a href="component-badge.html">Settings</a>
+                  <a href="../MyAccount/Settings.html">Settings</a>
                 </li>
                 <li class="submenu-item ">
-                    <a href="component-breadcrumb.html">User Management</a>
+                  <a href="../MyAccount/ManageSubAccount.html">User Management</a>
                 </li>
                 <li class="submenu-item ">
-                    <a href="component-button.html">Account Settings</a>
+                  <a href="../MyAccount/AccountSetting.html">Account Settings</a>
                 </li>
                 <li class="submenu-item ">
                     <a href="component-button.html">Chat Settings</a>
@@ -420,35 +420,51 @@
     <div>
         <h3 class="heading-one pt-2">Order Management</h3>
     </div>
-    <div class="col allbar d-flex gap-4 py-4">
-        <a class="active" href="">All</a>       
-        <a href="">Unpaid</a>
-        <a href="">Pending Orders </a>
-        <a href="">To Ship</a>
-        <a href="">Shipping</a>
-        <a href="">Delivered</a>
-        <a href="">Failed Delivery</a>
-        <a href="">Cancellation</a>
-        <a href="">Return or Refund</a>
-       </div>
-       <div class="TableWrapper">
-        <table>
-            <thead>
-                <tr class="text-dark">
-                  <th>
-                    <input class="form-check-input" type="checkbox" id="product1" >  
-                    Order</th>
-                    <th>Date</th>
-                    <th>Customer</th>
-                    <th>Items</th>
-                    <th>Total</th>
-                    <th>Delivery Status</th>
-                    <th>Payment Status</th>
-                    <th>Delivery Method</th>
-                    <th>Action</th>
+    <div class="card bg-transparent">
+      <div class="card-content">
+        <div class="card-body p-0">
+          <div class="list-group list-group-horizontal-sm mb-1 text-center allbar" role="tablist">
+            <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto active"
+              id="list-all-list" data-bs-toggle="list" href="#list-all" role="tab">All</a>
+            <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto" id="list-unpaid-list"
+              data-bs-toggle="list" href="#list-unpaid" role="tab">Unpaid</a>
+              <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto" id="list-pendingOrders-list"
+              data-bs-toggle="list" href="#list-pendingOrders" role="tab">Pending Orders</a>
+              <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto" id="list-toShip-list"
+              data-bs-toggle="list" href="#list-toShip" role="tab">To Ship</a>
+              <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto" id="list-shipping-list"
+              data-bs-toggle="list" href="#list-shipping" role="tab">Shipping</a>
+              <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto" id="list-delivered-list"
+              data-bs-toggle="list" href="#list-delivered" role="tab">Delivered</a>
+              <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto" id="list-failedDelivery-list"
+              data-bs-toggle="list" href="#list-failedDelivery" role="tab">Failed Delivery</a>
+              <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto" id="list-cancellation-list"
+              data-bs-toggle="list" href="#list-cancellation" role="tab">Cancellation</a>
+              <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto" id="list-returnorRefund-list"
+              data-bs-toggle="list" href="#list-returnOrRefund" role="tab">Return Or Refund</a>
+             </div>
+          <div class="tab-content text-justify ">
+            <div class="tab-pane fade show active" id="list-all" role="tabpanel"
+              aria-labelledby="list-all-list">
+              <div class="table-container TableWrapper mt-40">
+                <table class="table " id="order_manage_Table">
+                  <thead>
+                    <tr class="text-dark">
+                      <th>
+                        <input class="form-check-input" type="checkbox" id="product1">
+                        Order
+                      </th>
+                      <th>Date</th>
+                      <th>Customer</th>
+                      <th>Items</th>
+                      <th>Total</th>
+                      <th>Delivery Status</th>
+                      <th>Payment Status</th>
+                      <th>Delivery Method</th>
+                      <th>Action</th>
                     </tr>
-                </thead>
-                <tbody>
+                  </thead>
+                  <tbody>
                     <tr class="paragraph-2 p-0">
                         <td>
                             <div class="d-flex gap-3 ">
@@ -664,9 +680,51 @@
                       </div>
                        </tr>
                    </tbody>
-                 </table>
-                            </div>
-                  
+                </table>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="list-unpaid" role="tabpanel"
+              aria-labelledby="list-unpaid-list">
+              <div class="row form1 mt-40 ">
+             <span>Unpaid</span>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="list-pendingOrders" role="tabpanel"
+            aria-labelledby="list-pendingOrders-list">
+            <div class="row form1 mt-40 ">
+           <span>Pending Orders</span>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="list-toShip" role="tabpanel"
+          aria-labelledby="list-toShip-list">
+          <div class="row form1 mt-40 ">
+         <span>To Ship</span>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="list-shipping" role="tabpanel"
+        aria-labelledby="list-shipping-list">
+        <div class="row form1 mt-40 ">
+       <span>Shipping</span>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="list-delivered" role="tabpanel"
+      aria-labelledby="list-delivered-list">
+      <div class="row form1 mt-40 ">
+     <span>Delivered</span>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="list-failedDelivery" role="tabpanel"
+    aria-labelledby="list-failedDelivery-list">
+    <div class="row form1 mt-40 ">
+   <span>Failed Delivery</span>
+    </div>
+  </div>
+          </div>
+        </div>
+        
+        
+      </div>
+  </div>    
    </div>
     </main>
 
@@ -858,7 +916,32 @@
         </script>
         <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
         <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    
+        <script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
         <script src="../assets/js/main.js"></script>
+        <script>
+          let registerProTable = document.querySelector('#order_manage_Table');
+          new simpleDatatables.DataTable(registerProTable);
+    
+          function replaceArrows() {
+      // Select all elements with the page-link class
+      document.querySelectorAll(".page-link").forEach(function (link) {
+        if (link.innerHTML === "‹") {
+          link.innerHTML = "Previous"; // Replace left arrow with "Previous"
+        } else if (link.innerHTML === "›") {
+          link.innerHTML = "Next"; // Replace right arrow with "Next"
+        }
+      });
+    }
+    
+    // Call this function once on page load
+    replaceArrows();
+    
+    // Observe for changes in pagination to handle dynamic updates
+    const paginationObserver = new MutationObserver(replaceArrows);
+    document.querySelectorAll(".pagination").forEach(function (pagination) {
+      paginationObserver.observe(pagination, { childList: true, subtree: true });
+    });
+    
+          </script> 
 </body>
 </html>

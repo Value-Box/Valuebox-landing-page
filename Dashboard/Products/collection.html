@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/bootstrap.css">
-  
+    <link rel="stylesheet" href="../assets/vendors/simple-datatables/style.css">
     <link rel="stylesheet" href="../assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="../assets/css/app.css">
@@ -212,10 +212,10 @@
                       <li class="submenu-item ">
                           <a href="../DataInsight/dataInsightdashboard.html">Business Advisor</a>
                       </li>
-                      <li class="submenu-item ">
+                      <!-- <li class="submenu-item ">
                           <a href="component-breadcrumb.html">Account Health</a>
                       </li>  
-                  </ul>
+                  </ul> -->
               </li>
     
               <li class="sidebar-item  has-sub">
@@ -269,7 +269,7 @@
               </a>
               <ul class="submenu ">
                   <li class="submenu-item ">
-                      <a href="component-button.html">Current Level</a>
+                    <a href="../Achivements/Levels.html">Current Level</a>
                   </li>
                   
               </ul>
@@ -354,13 +354,13 @@
         </a>
         <ul class="submenu ">
             <li class="submenu-item ">
-                <a href="component-badge.html">Settings</a>
+              <a href="../MyAccount/Settings.html">Settings</a>
             </li>
             <li class="submenu-item ">
-                <a href="component-breadcrumb.html">User Management</a>
+              <a href="../MyAccount/ManageSubAccount.html">User Management</a>
             </li>
             <li class="submenu-item ">
-                <a href="component-button.html">Account Settings</a>
+              <a href="../MyAccount/AccountSetting.html">Account Settings</a>
             </li>
             <li class="submenu-item ">
                 <a href="component-button.html">Chat Settings</a>
@@ -439,8 +439,8 @@
                 <button class="btn-outline-blue">Clear</button>
                 <button class="btn-blue">Search</button>
             </div>
-            <div class="TableWrapper p-0 my-4">
-                <table class="mediatable w-100">
+            <div class="table-container TableWrapper p-0 my-4">
+                <table class="mediatable w-100" id="Collection_Table">
                     <thead>
                         <tr class="text-dark">
                                 
@@ -501,7 +501,33 @@
     </script>
     <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
-
+    <script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
+    <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="../assets/js/main.js"></script>
+    <script>
+      let registerProTable = document.querySelector('#Collection_Table');
+      new simpleDatatables.DataTable(registerProTable);
+
+      function replaceArrows() {
+  // Select all elements with the page-link class
+  document.querySelectorAll(".page-link").forEach(function (link) {
+    if (link.innerHTML === "‹") {
+      link.innerHTML = "Previous"; // Replace left arrow with "Previous"
+    } else if (link.innerHTML === "›") {
+      link.innerHTML = "Next"; // Replace right arrow with "Next"
+    }
+  });
+}
+
+// Call this function once on page load
+replaceArrows();
+
+// Observe for changes in pagination to handle dynamic updates
+const paginationObserver = new MutationObserver(replaceArrows);
+document.querySelectorAll(".pagination").forEach(function (pagination) {
+  paginationObserver.observe(pagination, { childList: true, subtree: true });
+});
+
+      </script> 
 </body>
 </html>

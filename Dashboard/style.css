@@ -502,6 +502,7 @@ body {
   font-style: normal;
   font-weight: 500;
   line-height: 30px;
+  border: 1px solid #33539b;
 }
 .productsselectedbtn {
   color: var(--Natural-Color-60, #666);
@@ -686,13 +687,13 @@ td {
   gap: 100px;
   color: #666;
 }
-.allbar a.active {
+.allbar a.active1 {
   position: relative;
 }
-.allbar a.active::after {
+.allbar a.active1::after {
   content: "";
   position: absolute;
-  bottom: -10px;
+  bottom: 0px;
   left: -1px;
   width: 100%;
   height: 4px;
@@ -706,7 +707,7 @@ td {
     #e09b00 100%
   );
 }
-.allbar a.active {
+.allbar a.active1 {
   color: #002882 !important;
 }
 .allbar a .notification-badge {
@@ -1888,22 +1889,7 @@ background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
   height: 500px;
   overflow-y: auto;
  }
-.editSignup{
-  background-color: #F2F2F2;
-  font-family: Sarabun;
-}
-.ck.ck-editor__editable_inline{
-  border-bottom-left-radius: 12px !important;
-  border-bottom-right-radius: 12px !important;
-  min-height: 200px ;
-  background: var(--Natural-Color-00, #FCFCFC) !important;
-}
-.ck.ck-editor__top .ck-sticky-panel .ck-toolbar{
-  border-top-left-radius: 12px !important;
-  border-top-right-radius: 12px !important;
-  padding: 15px;
-  background: var(--Natural-Color-10, #F2F2F2);
-}
+
  @media(max-width:1400px){
   .Order-detail-line{
     position: relative;
@@ -1912,4 +1898,20 @@ background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
   .custom-modal-width{
     max-width: 1200px;
   }
- }
+  .viewcollectionbtn {
+    padding: 5px 10px;
+    line-height: 25px;
+  }
+  .sellerProfileBG{
+    display: flex;
+  width: 500px;
+  height: 40px;
+  padding: 5px 10px;
+  align-items: center;
+  gap: 12px;
+  border-radius: 5px;
+  border: 1px solid var(--Natural-Color-20, #CCC);
+  background: var(--Natural-Color-00, #FCFCFC);
+  color: black;
+  }
+  }

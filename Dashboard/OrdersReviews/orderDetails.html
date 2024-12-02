@@ -213,9 +213,9 @@
                           <li class="submenu-item ">
                               <a href="../DataInsight/dataInsightdashboard.html">Business Advisor</a>
                           </li>
-                          <li class="submenu-item ">
+                          <!-- <li class="submenu-item ">
                               <a href="component-breadcrumb.html">Account Health</a>
-                          </li>  
+                          </li>   -->
                       </ul>
                   </li>
         
@@ -270,7 +270,7 @@
                   </a>
                   <ul class="submenu ">
                       <li class="submenu-item ">
-                          <a href="component-button.html">Current Level</a>
+                        <a href="../Achivements/Levels.html">Current Level</a>
                       </li>
                       
                   </ul>
@@ -355,13 +355,13 @@
             </a>
             <ul class="submenu ">
                 <li class="submenu-item ">
-                    <a href="component-badge.html">Settings</a>
+                  <a href="../MyAccount/Settings.html">Settings</a>
                 </li>
                 <li class="submenu-item ">
-                    <a href="component-breadcrumb.html">User Management</a>
+                  <a href="../MyAccount/ManageSubAccount.html">User Management</a>
                 </li>
                 <li class="submenu-item ">
-                    <a href="component-button.html">Account Settings</a>
+                  <a href="../MyAccount/AccountSetting.html">Account Settings</a>
                 </li>
                 <li class="submenu-item ">
                     <a href="component-button.html">Chat Settings</a>
@@ -442,7 +442,7 @@
          </div>
          <div class="py-2 p-0">
              <div class="TableWrapper table-responsive  p-0">
-                 <table class=" w-100 ">
+                 <table class="scrollable-table" style="overflow-x: auto; white-space: nowrap;">
                   <thead>
                       <tr class="text-dark">
                               <th style="width: 40%; text-align: start;">
@@ -453,7 +453,6 @@
                           <th class="manageproducttableheading" style="width: 15%">Paid Price</th>
                           <th class="manageproducttableheading" style="width: 15%">Delivery Type</th>
                           <th class="manageproducttableheading" style="width: 15%">Status</th>
-                          <th class="manageproducttableheading" style="width: 15%">Delivery Status</th>
                           </tr>
                   </thead>
                 <tbody>
@@ -586,47 +585,47 @@
          </div>
          <div class="py-2 p-0">
           <div class="TableWrapper table-responsive p-0">
-              <table class=" w-100 ">
-               <thead>
-                   <tr class="text-dark">
-                           
-                       <th style="width: 40%; text-align: start;">
-                           <input class="form-check-input" type="checkbox" id="select-all" onclick="toggleCheckboxes(this)">
-                           <label for="select-all">Product</label>
-                         </th>
-                       <th class="manageproducttableheading" style="width: 15%">Retail Price</th>
-                       <th class="manageproducttableheading" style="width: 15%">Paid Price</th>
-                       <th class="manageproducttableheading" style="width: 15%">Delivery Type</th>
-                       <th class="manageproducttableheading" style="width: 15%">Status</th>
-                       </tr>
-               </thead>
-             <tbody>
-                   <tr>
-                       <td>
-                          <div class="d-flex align-items-center gap-3 py-2 ">
-                           <input class="form-check-input" type="checkbox" id="product1">  
-                           <img class="" src="../Images/manage product image1.svg" alt="">
-                           <div class="tablecell1 text-start mt-2">
-                               <h6 class="mb-0 justify-content-center">HIFI M16 MINI Wireless<br>Bluetooth Headset</h6>
-                               <p class="mb-0">Seller SKu: HIFI M-16</p>
-                               <p class="mb-0">Order ID: HIFI M-16</p>
-                               <p class="mb-0">Item ID: HIFI M-16</p>
-                           </div>
-                          </div>
-                          </td>
-                       <td class="RS">RS<span> 4953</span></td>
-                       <td class="RS">RS<span> 4953</span></td> 
-                       <td><Span>Express</Span></td>
-                      
-                       <td> 
-                      <div class="bg-success-light">Delivered
-
+            <div class="scrollable-table" style="overflow-x: auto; white-space: nowrap;">
+              <table class="w-100">
+                <thead>
+                  <tr class="text-dark">
+                    <th style="width: 40%; text-align: start;">
+                      <input class="form-check-input" type="checkbox" id="select-all" onclick="toggleCheckboxes(this)">
+                      <label for="select-all">Product</label>
+                    </th>
+                    <th class="manageproducttableheading" style="width: 15%">Retail Price</th>
+                    <th class="manageproducttableheading" style="width: 15%">Paid Price</th>
+                    <th class="manageproducttableheading" style="width: 15%">Delivery Type</th>
+                    <th class="manageproducttableheading" style="width: 15%">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center gap-3 py-2">
+                        <input class="form-check-input" type="checkbox" id="product1">
+                        <img class="" src="../Images/manage product image1.svg" alt="">
+                        <div class="tablecell1 text-start mt-2">
+                          <h6 class="mb-0 justify-content-center">HIFI M16 MINI Wireless<br>Bluetooth Headset</h6>
+                          <p class="mb-0">Seller SKu: HIFI M-16</p>
+                          <p class="mb-0">Order ID: HIFI M-16</p>
+                          <p class="mb-0">Item ID: HIFI M-16</p>
+                        </div>
                       </div>
-                  </td>
-                      </tr>
-                      </tbody>
+                    </td>
+                    <td class="RS">RS<span> 4953</span></td>
+                    <td class="RS">RS<span> 4953</span></td>
+                    <td><span>Express</span></td>
+                    <td>
+                      <div class="bg-success-light">Delivered</div>
+                    </td>
+                  </tr>
+                  <!-- Add more rows here -->
+                </tbody>
               </table>
+            </div>
           </div>
+          
 
       </div>
 
@@ -802,28 +801,15 @@
      
     </main>
     <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-      <div class="modal-dialog modal-dialog-centered position-relative">
-        <div class="modal-content">
+      <div class="modal-dialog modal-dialog-centered d-flex justify-content-center position-relative">
+        <div class="modal-content" id="cancel-order-modal">
          <div class=" p-4">
           <div class="modal-header mb-3 p-0 ">
             <h5 class="text-dark p-0">Reason for Cancellation<span class="text-warning">*</span></h5>
-            <button id="closeModalBtn" type="button" class="btn-blue closeModalBtn rounded-circle" data-bs-dismiss="modal" aria-label="Close">
-              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
-                <g clip-path="url(#clip0_6932_11513)">
-                  <rect width="60" height="60" fill="url(#paint0_radial_6932_11513)"/>
-                  <path d="M30 0C13.2857 0 0 13.2857 0 30C0 46.7143 13.2857 60 30 60C46.7143 60 60 46.7143 60 30C60 13.2857 46.7143 0 30 0ZM41.5714 45L30 33.4286L18.4286 45L15 41.5714L26.5714 30L15 18.4286L18.4286 15L30 26.5714L41.5714 15L45 18.4286L33.4286 30L45 41.5714L41.5714 45Z" fill="#002882"/>
-                </g>
-                <defs>
-                  <radialGradient id="paint0_radial_6932_11513" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(30 30) rotate(90) scale(30)">
-                    <stop offset="0.80208" stop-color="white"/>
-                    <stop offset="1" stop-color="white" stop-opacity="0"/>
-                  </radialGradient>
-                  <clipPath id="clip0_6932_11513">
-                    <rect width="60" height="60" fill="white"/>
-                  </clipPath>
-                </defs>
-              </svg>
-            </button>
+           
+              <div id="closeModalBtn" class="btn-blue closeModalBtn rounded-circle" data-bs-dismiss="modal" aria-label="Close">
+              <img src="../Images/carbon_close-filled.svg" alt="">
+            </div>
           </div>
           <div class="modal-body d-flex flex-column gap-3 p-0">
             <label class="d-flex gap-1">
@@ -863,23 +849,9 @@
             <div class="row logisticModal">
               <div class="col-6">
                 <span class="subHeading-blue">Logistics Status </span>
-                <button id="closeModalBtn" type="button" class="btn-blue closeModalBtn rounded-circle" data-bs-dismiss="modal" aria-label="Close">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
-                    <g clip-path="url(#clip0_4287_15184)">
-                      <rect width="60" height="60" fill="url(#paint0_radial_4287_15184)"/>
-                      <path d="M30 0C13.2857 0 0 13.2857 0 30C0 46.7143 13.2857 60 30 60C46.7143 60 60 46.7143 60 30C60 13.2857 46.7143 0 30 0ZM41.5714 45L30 33.4286L18.4286 45L15 41.5714L26.5714 30L15 18.4286L18.4286 15L30 26.5714L41.5714 15L45 18.4286L33.4286 30L45 41.5714L41.5714 45Z" fill="#002882"/>
-                    </g>
-                    <defs>
-                      <radialGradient id="paint0_radial_4287_15184" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(30 30) rotate(90) scale(30)">
-                        <stop offset="0.80208" stop-color="white"/>
-                        <stop offset="1" stop-color="white" stop-opacity="0"/>
-                      </radialGradient>
-                      <clipPath id="clip0_4287_15184">
-                        <rect width="60" height="60" fill="white"/>
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </button>
+                <div id="closeModalBtn" class="btn-blue closeModalBtn rounded-circle" data-bs-dismiss="modal" aria-label="Close">
+                  <img src="../Images/carbon_close-filled.svg" alt="">
+                </div>
                 <div class="d-flex gap-2 mt-40 mb-2">
                   <span class="text-dark message-text">Order ID:</span>
                   <span class="orderidColor">456897432131685123</span>

@@ -9746,6 +9746,11 @@ line-height: 28px; /* 155.556% */
 }
 .fs-16 {
   font-size: 16px;
+  line-height: clamp(18px, 5vw, 20px);
+  font-weight: 400;
+}
+.fs-14 {
+  font-size: 14px;
   line-height: clamp(20px, 5vw, 24px);
   font-weight: 400;
 }
@@ -9947,9 +9952,6 @@ text-underline-position: from-font;
 
 }
 
-.w-100px{
-  width: 100px;
-}
 @media(max-width:1400px){
   .heading-one {
     font-size: clamp(20px, 4vw, 24px);
@@ -10169,9 +10171,5 @@ text-underline-position: from-font;
   padding: 8px;
   font-size: 18px;
   line-height: 25px; 
-  }
-
-  .form-control-lg {
-    padding: 8px 20px;
   }
 }
