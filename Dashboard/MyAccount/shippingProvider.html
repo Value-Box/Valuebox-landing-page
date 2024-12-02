@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="../assets/css/app.css">
     <link rel="stylesheet" href="../assets/vendors/simple-datatables/style.css">
     <link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="stylesheet" href="../style.css" />
 </head>
@@ -354,13 +356,13 @@
                 </svg>
             </a>
             <ul class="submenu">
-                <li class="submenu-item active">
+                <li class="submenu-item ">
                     <a href="../MyAccount/Settings.html">Settings</a>
                 </li>
                 <li class="submenu-item ">
-                  <a href="../MyAccount/ManageSubAccount.html">User Management</a>
+                    <a href="../MyAccount/ManageSubAccount.html">User Management</a>
                 </li>
-                <li class="submenu-item ">
+                <li class="submenu-item active">
                     <a href="../MyAccount/AccountSetting.html">Account Settings</a>
                 </li>
                 <li class="submenu-item ">
@@ -414,60 +416,57 @@
     <div class="navigation anchortags py-4">
         <a href="../index.html">Home</a>
         <a href="Settings.html">>Setting</a>
-        <a class="active1" href="bussinessInformation.html">>Business Information</a>
+        <a class="active1" href="shippingProvider.html">>Shipping Provider</a>
       </div>   
   <div class="container-fluid p-0"> 
     <div class="d-flex justify-content-between">
-    <span class="heading-one">Business Information</span>
+    <span class="heading-one">Warehouse</span>
+    <div>
+      <input type="date" class="form-control mt-2" id="customDateInput">
+  </div>
          </div>
-         <div class="row form1 mt-40">
-          <div class="d-flex flex-column gap-1">
-            <span class="message-text gray-color fw-bold">Seller Type</span>
-            <span class="paragraph-1 fs-20 text-natural-gray">Business</span>
+      <div class="row form1 d-flex mt-40 gap-2">
+        <span class="heading-one">Warehouse Address</span>
+        <div class="d-flex justify-content-end">
+            <button class="btn-blue mt-20" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal" data-bs-dismiss="modal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 8V12L14.5 14.5" stroke="#E6EAF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4.33858 6.87113L3.58858 6.87413C3.58937 7.07183 3.66819 7.26123 3.80789 7.40112C3.94759 7.54101 4.13688 7.62008 4.33458 7.62113L4.33858 6.87113ZM6.88058 7.63313C6.97907 7.63359 7.07669 7.61465 7.16786 7.57738C7.25903 7.54012 7.34197 7.48526 7.41193 7.41594C7.4819 7.34662 7.53753 7.2642 7.57565 7.17338C7.61377 7.08256 7.63362 6.98512 7.63408 6.88663C7.63454 6.78814 7.6156 6.69052 7.57833 6.59935C7.54106 6.50818 7.4862 6.42525 7.41688 6.35528C7.34757 6.28531 7.26514 6.22968 7.17433 6.19156C7.08351 6.15345 6.98607 6.13359 6.88758 6.13313L6.88058 7.63313ZM5.07558 4.32113C5.07505 4.22264 5.05514 4.12522 5.01696 4.03442C4.97878 3.94363 4.9231 3.86125 4.85308 3.79197C4.78307 3.7227 4.70009 3.6679 4.6089 3.63069C4.5177 3.59349 4.42007 3.57461 4.32158 3.57513C4.22309 3.57566 4.12566 3.59558 4.03487 3.63375C3.94408 3.67193 3.86169 3.72762 3.79242 3.79763C3.72315 3.86765 3.66835 3.95062 3.63114 4.04182C3.59393 4.13301 3.57505 4.23064 3.57558 4.32913L5.07558 4.32113ZM3.82758 10.7851C3.84195 10.6871 3.83676 10.5872 3.8123 10.4912C3.78785 10.3952 3.74462 10.305 3.68511 10.2258C3.6256 10.1466 3.55098 10.08 3.46558 10.0298C3.38017 9.97957 3.28566 9.94678 3.18752 9.93331C3.08937 9.91984 2.98952 9.92594 2.89375 9.95127C2.79797 9.9766 2.70817 10.0207 2.62951 10.0809C2.55086 10.1411 2.48492 10.2163 2.4355 10.3022C2.38608 10.3881 2.35416 10.4829 2.34158 10.5811L3.82758 10.7851ZM18.8626 5.13813C15.0426 1.31813 8.86958 1.27813 5.07458 5.07413L6.13458 6.13413C9.33458 2.93513 14.5576 2.95413 17.8026 6.19813L18.8626 5.13813ZM5.13858 18.8621C8.95858 22.6821 15.1316 22.7221 18.9266 18.9261L17.8666 17.8661C14.6666 21.0651 9.44358 21.0461 6.19858 17.8021L5.13858 18.8621ZM18.9266 18.9261C22.7216 15.1311 22.6826 8.95813 18.8626 5.13813L17.8026 6.19813C21.0466 9.44313 21.0656 14.6661 17.8666 17.8661L18.9266 18.9261ZM5.07458 5.07413L3.80758 6.34013L4.86858 7.40013L6.13458 6.13413L5.07458 5.07413ZM4.33458 7.62113L6.88058 7.63313L6.88758 6.13313L4.34258 6.12113L4.33458 7.62113ZM5.08858 6.86713L5.07558 4.32113L3.57558 4.32913L3.58858 6.87413L5.08858 6.86713ZM2.34058 10.5801C2.13496 12.0827 2.28053 13.6125 2.76584 15.0494C3.25115 16.4862 4.06298 17.791 5.13758 18.8611L6.19758 17.8011C5.28668 16.8945 4.59847 15.789 4.18707 14.5714C3.77566 13.3538 3.65226 12.0574 3.82658 10.7841L2.34058 10.5801Z" fill="#E6EAF3"/>
+              </svg> View History</button>
+        </div>
+        <div class="table-container TableWrapper p-0 mt-20">
+            <table class="w-100">
+              <thead>
+                <tr class="text-dark">
+                  <th>Warehouse ID</th>
+                  <th>Warehouse Name</th>
+                  <th>Logistics & Service</th>
+                  <th>Package Profile</th>
+                  <th>First Mile Type</th>
+                  <th>Shipping Provider</th>
+                  <th>List of Additional 3PL Providers</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody class="py-5">
+                <tr>
+                 <td>8921dghs</td>
+                 <td>OnDemand Store</td>
+                 <td>ValueBox Standard</td>
+                 <td>First Freight</td>
+                 <td class="d-flex gap-1">Pick-up  <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12.5598 20.82C12.3966 20.9372 12.2007 21.0003 11.9998 21.0003C11.7988 21.0003 11.603 20.9372 11.4398 20.82C6.61078 17.378 1.48578 10.298 6.66678 5.182C8.08912 3.78285 10.0046 2.99912 11.9998 3C13.9998 3 15.9188 3.785 17.3328 5.181C22.5138 10.297 17.3888 17.376 12.5598 20.82Z" stroke="#33539B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 12C12.5304 12 13.0391 11.7893 13.4142 11.4142C13.7893 11.0391 14 10.5304 14 10C14 9.46957 13.7893 8.96086 13.4142 8.58579C13.0391 8.21071 12.5304 8 12 8C11.4696 8 10.9609 8.21071 10.5858 8.58579C10.2107 8.96086 10 9.46957 10 10C10 10.5304 10.2107 11.0391 10.5858 11.4142C10.9609 11.7893 11.4696 12 12 12Z" stroke="#33539B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg></td>
+                 <td>PK-DEX</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <div class="d-flex flex-column gap-1 mt-30">
-            <span class="message-text gray-color fw-bold">Legal Name/Business owner Name</span>
-            <span class="paragraph-1 fs-20 text-natural-gray">OnDemand Store (Multan)</span>
-          </div>
-          <div class="d-flex flex-column gap-1 mt-30">
-            <span class="message-text gray-color fw-bold">Detailed Address</span>
-            <span class="paragraph-1 fs-20 text-natural-gray">OnDemand Store, Street 03, Joiya Town, Nawabpur Road</span>
-          </div>
-          <div class="d-flex flex-column gap-1 mt-30">
-            <span class="message-text gray-color fw-bold">Address</span>
-            <input type="text" id="roundText" class="form-control form-control-lg round w-50" placeholder="" value="R80234645123" disabled >
-          </div>
-          <div class="d-flex flex-column gap-1 mt-30">
-            <span class="message-text gray-color fw-bold">Country Region</span>
-            <span class="paragraph-1 fs-20 text-natural-gray">Pakistan</span>
-          </div>
-          <div class="d-flex flex-column gap-1 mt-30">
-            <span class="message-text gray-color fw-bold">Person In Charge</span>
-            <span class="paragraph-1 fs-20 text-natural-gray">Muhammad Arshad</span>
-          </div>
-          <div class="d-flex flex-column gap-1 mt-30">
-            <span class="message-text gray-color fw-bold">Business Registration Number</span>
-            <span class="paragraph-1 fs-20 text-natural-gray">7894653134186746513354</span>
-          </div>
-          <div class="d-flex flex-column gap-1 mt-30">
-            <span class="message-text gray-color fw-bold">Person In Charge Mobile Number</span>
-            <span class="paragraph-1 fs-20 text-natural-gray">9245678923</span>
-          </div>
-          <div class="d-flex flex-column gap-1 mt-30">
-            <span class="message-text gray-color fw-bold">Person In Charge Email</span>
-            <span class="paragraph-1 fs-20 text-natural-gray">9245678923</span>
-          </div>
-                
          </div>
-         <div class="row form1 mt-40">
-          <div class="d-flex justify-content-end">
-              <button class="btn-blue">Modify</button>
-          </div>
     
-       </div>
       
-         </div>
-       
+   
+    
   
         
    </div>
@@ -480,13 +479,123 @@
   
   </div>
     </main>
+    <div class="modal fade p-4" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class=" modal-dialog modal-dialog-centered d-flex justify-content-center position-relative">
+          <div class="modal-content" id="cancel-order-modal">
+           <div class="p-4">
+            <span class="heading-one">Request History</span>
+            <div id="closeModalBtn" class="btn-blue closeModalBtn rounded-circle" data-bs-dismiss="modal" aria-label="Close">
+                <img src="../Images/carbon_close-filled.svg" alt="">
+              </div>
+            <div class="d-flex gap-4 mt-30">
+                <div class="input-group">
+                    <label class="input-group-text title" for="inputGroupSelect01">Brand Relation</label>
+                    <select class="form-select form-select-input" id="inputGroupSelect01">
+                        <option selected="">Select</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div> 
+                <div class="input-group">
+                    <label class="input-group-text title" for="inputGroupSelect01">Brand Relation</label>
+                    <select class="form-select form-select-input" id="inputGroupSelect01">
+                        <option selected="">Select</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div> 
+            </div>
+            <div class="table-container TableWrapper p-0 mt-20">
+                <table class="w-100">
+                  <thead>
+                    <tr class="text-dark">
+                      <th>Warehouse ID</th>
+                      <th>Warehouse Name</th>
+                      <th>Logistics & Service</th>
+                      <th>Original Shipping Provider</th>
+                      <th>Original First Mile Type</th>
+                      <th>Shipping Provider</th>
+                      <th>First Mile Type</th>
+                      <th>Reason</th>
+                    </tr>
+                  </thead>
+                  <tbody class="py-5">
+                    <tr>
+                     <td>8921dghs</td>
+                     <td>OnDemand Store</td>
+                     <td>ValueBox Standard</td>
+                     <td>First Freight</td>
+                     <td class="d-flex gap-1">Pick-up  <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12.5598 20.82C12.3966 20.9372 12.2007 21.0003 11.9998 21.0003C11.7988 21.0003 11.603 20.9372 11.4398 20.82C6.61078 17.378 1.48578 10.298 6.66678 5.182C8.08912 3.78285 10.0046 2.99912 11.9998 3C13.9998 3 15.9188 3.785 17.3328 5.181C22.5138 10.297 17.3888 17.376 12.5598 20.82Z" stroke="#33539B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 12C12.5304 12 13.0391 11.7893 13.4142 11.4142C13.7893 11.0391 14 10.5304 14 10C14 9.46957 13.7893 8.96086 13.4142 8.58579C13.0391 8.21071 12.5304 8 12 8C11.4696 8 10.9609 8.21071 10.5858 8.58579C10.2107 8.96086 10 9.46957 10 10C10 10.5304 10.2107 11.0391 10.5858 11.4142C10.9609 11.7893 11.4696 12 12 12Z" stroke="#33539B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg></td>
+                     <td>Pickup</td>
+                     <td>Pickup</td>
+                     <td>Business Change</td>
+                    </tr>
+                    <tr>
+                        <td>8921dghs</td>
+                        <td>OnDemand Store</td>
+                        <td>ValueBox Standard</td>
+                        <td>First Freight</td>
+                        <td class="d-flex gap-1">Pick-up  <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                           <path d="M12.5598 20.82C12.3966 20.9372 12.2007 21.0003 11.9998 21.0003C11.7988 21.0003 11.603 20.9372 11.4398 20.82C6.61078 17.378 1.48578 10.298 6.66678 5.182C8.08912 3.78285 10.0046 2.99912 11.9998 3C13.9998 3 15.9188 3.785 17.3328 5.181C22.5138 10.297 17.3888 17.376 12.5598 20.82Z" stroke="#33539B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                           <path d="M12 12C12.5304 12 13.0391 11.7893 13.4142 11.4142C13.7893 11.0391 14 10.5304 14 10C14 9.46957 13.7893 8.96086 13.4142 8.58579C13.0391 8.21071 12.5304 8 12 8C11.4696 8 10.9609 8.21071 10.5858 8.58579C10.2107 8.96086 10 9.46957 10 10C10 10.5304 10.2107 11.0391 10.5858 11.4142C10.9609 11.7893 11.4696 12 12 12Z" stroke="#33539B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                         </svg></td>
+                        <td>Pickup</td>
+                        <td>Pickup</td>
+                        <td>Business Change</td>
+                       </tr>
+                       <tr>
+                        <td>8921dghs</td>
+                        <td>OnDemand Store</td>
+                        <td>ValueBox Standard</td>
+                        <td>First Freight</td>
+                        <td class="d-flex gap-1">Pick-up  <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                           <path d="M12.5598 20.82C12.3966 20.9372 12.2007 21.0003 11.9998 21.0003C11.7988 21.0003 11.603 20.9372 11.4398 20.82C6.61078 17.378 1.48578 10.298 6.66678 5.182C8.08912 3.78285 10.0046 2.99912 11.9998 3C13.9998 3 15.9188 3.785 17.3328 5.181C22.5138 10.297 17.3888 17.376 12.5598 20.82Z" stroke="#33539B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                           <path d="M12 12C12.5304 12 13.0391 11.7893 13.4142 11.4142C13.7893 11.0391 14 10.5304 14 10C14 9.46957 13.7893 8.96086 13.4142 8.58579C13.0391 8.21071 12.5304 8 12 8C11.4696 8 10.9609 8.21071 10.5858 8.58579C10.2107 8.96086 10 9.46957 10 10C10 10.5304 10.2107 11.0391 10.5858 11.4142C10.9609 11.7893 11.4696 12 12 12Z" stroke="#33539B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                         </svg></td>
+                        <td>Pickup</td>
+                        <td>Pickup</td>
+                        <td>Business Change</td>
+                       </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="d-flex gap-2 justify-content-end mt-30">
+                <button class="btn-gray" data-bs-dismiss="modal">Cancel</button>
+                <button class="btn-blue">OK</button>
+
+              </div>
+           </div>
+            
+          </div>
+        </div>
+      </div>
 
 
 
 
 
 
+  <script>
+  function togglePassword() {
+    const passwordInput = document.getElementById("password");
+    const toggleIcon = document.getElementById("togglePasswordIcon");
   
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      toggleIcon.classList.remove("bi-eye-slash");
+      toggleIcon.classList.add("bi-eye");
+    } else {
+      passwordInput.type = "password";
+      toggleIcon.classList.remove("bi-eye");
+      toggleIcon.classList.add("bi-eye-slash");
+    }
+  }
+  </script>
     <script>
         function toggleCheckboxes(source) {
           const checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');

@@ -686,13 +686,13 @@ td {
   gap: 100px;
   color: #666;
 }
-.allbar a.active {
+.allbar a.active1 {
   position: relative;
 }
-.allbar a.active::after {
+.allbar a.active1::after {
   content: "";
   position: absolute;
-  bottom: -10px;
+  bottom: 0px;
   left: -1px;
   width: 100%;
   height: 4px;
@@ -706,7 +706,7 @@ td {
     #e09b00 100%
   );
 }
-.allbar a.active {
+.allbar a.active1 {
   color: #002882 !important;
 }
 .allbar a .notification-badge {

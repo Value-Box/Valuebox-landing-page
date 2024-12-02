@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/bootstrap.css">
-  
+    <link rel="stylesheet" href="../assets/vendors/simple-datatables/style.css">
     <link rel="stylesheet" href="../assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="../assets/css/app.css">
@@ -357,7 +357,7 @@
                   <a href="../MyAccount/Settings.html">Settings</a>
                 </li>
                 <li class="submenu-item ">
-                    <a href="component-breadcrumb.html">User Management</a>
+                  <a href="../MyAccount/ManageSubAccount.html">User Management</a>
                 </li>
                 <li class="submenu-item ">
                   <a href="../MyAccount/AccountSetting.html">Account Settings</a>
@@ -419,7 +419,7 @@
   <span class="heading-one">Reviews Management</span>
    <div class="row form1 mt-40 gap-2">
      <span class="heading-one">Performance Overview</span>
-     <div class="col-3 reviewsPerfomanceOverview">
+     <div class="col reviewsPerfomanceOverview">
        <span class="subHeading">To be Reviewed</span>
      <div class="d-flex ">
         <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -433,7 +433,7 @@
         <span class="paragraph-3 fw-bold">75</span>
      </div>
      </div>
-     <div class="col-3 reviewsPerfomanceOverview">
+     <div class="col reviewsPerfomanceOverview">
         <span class="subHeading">Pending Reply to Reviews</span>
       <div class="d-flex ">
          <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -447,7 +447,7 @@
          <span class="paragraph-3 fw-bold">75</span>
       </div>
       </div>
-      <div class="col-3 reviewsPerfomanceOverview">
+      <div class="col reviewsPerfomanceOverview">
        <div class="d-flex gap-1">
         <span class="subHeading">Average Product Rating</span>
         <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -477,7 +477,7 @@
           </div>
       </div>
       </div>
-      <div class="col-3 reviewsPerfomanceOverview">
+      <div class="col reviewsPerfomanceOverview">
         <div class="d-flex gap-1">
          <span class="subHeading">Average Product Rating</span>
          <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -623,12 +623,12 @@
                 </thead>
                  </table>
                             </div>
-                            <div class="  TableWrapper1 rounded-4 mt-20 p-0 w-100">
-                                <table>
+                            <div class=" TableWrapper1 rounded-4 mt-20 p-0 w-100">
+                                <table  id="review_management_Table">
                                   <thead>
                                     <tr class="text-dark">
                                       <!-- First Header: Order ID aligned to start -->
-                                      <th class="text-start" style="width: 30%;">
+                                      <th colspan="3" class="text-start" style="width: 90%;">
                                         <div class="d-flex gap-2">
                                           <span class="text-dark message-text">Order ID:</span>
                                           <span class="orderidColor">456897432131685123</span>
@@ -639,10 +639,6 @@
                                           </span>
                                         </div>
                                       </th>
-                                      <!-- Empty Headers for spacing -->
-                                      <th  style="width: 30%;"></th>
-                                      <th  style="width: 30%;"></th>
-                                      <!-- Second Header: Aligned to the end -->
                                       <th class="text-end"  style="width: 10%;">
                                         <div class="d-flex gap-2 justify-content-end">
                                           <span>
@@ -987,9 +983,33 @@
           checkboxes.forEach(checkbox => checkbox.checked = source.checked);
         }
         </script>
+        <script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
         <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
         <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    
         <script src="../assets/js/main.js"></script>
+        <script>
+          let registerProTable = document.querySelector('#review_management_Table');
+          new simpleDatatables.DataTable(registerProTable);
+    
+          function replaceArrows() {
+      // Select all elements with the page-link class
+      document.querySelectorAll(".page-link").forEach(function (link) {
+        if (link.innerHTML === "‹") {
+          link.innerHTML = "Previous"; // Replace left arrow with "Previous"
+        } else if (link.innerHTML === "›") {
+          link.innerHTML = "Next"; // Replace right arrow with "Next"
+        }
+      });
+    }
+    
+    // Call this function once on page load
+    replaceArrows();
+    // Observe for changes in pagination to handle dynamic updates
+    const paginationObserver = new MutationObserver(replaceArrows);
+    document.querySelectorAll(".pagination").forEach(function (pagination) {
+      paginationObserver.observe(pagination, { childList: true, subtree: true });
+    });
+    
+          </script> 
 </body>
 </html>
