@@ -1610,8 +1610,8 @@ background: #F2F2F2;
 }
 .closeModalBtn{
   position: absolute;
-  right:-3%;
-  top: -3%;
+  right: -30px;
+  top: -30px;
 }
 .payment-pending-orange{
   background-color: var(--Orange-100, #FFEAD5); /* Fallback color */
