@@ -9479,7 +9479,7 @@ line-height: 28px; /* 155.556% */
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
   border-radius: 5px;
   height: fit-content;
   border: 1px solid var(--Brand-Color);
@@ -9803,6 +9803,7 @@ line-height: 18px;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  height: 52px;
 }
 .py-40 {
   padding-top: 40px;
@@ -9961,6 +9962,9 @@ text-decoration-skip-ink: none;
 text-decoration-thickness: auto;
 text-underline-offset: auto;
 text-underline-position: from-font;
+}
+.bg-dark-blue{
+  background-color: var(--Primary-Color-Dark-Blue-80) ;
 }
 .list-group-item-action.active{
   background-color: #002882;

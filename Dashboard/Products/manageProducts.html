@@ -423,7 +423,7 @@
     <a class="active1" href="manageProducts.html">>Manage Product</a>
   </div>
  
-    <div class="container-fluid d-flex gap-5 mt-40">
+    <div class="container-fluid d-flex gap-5 mt-40 p-0">
        <div class="row w-100 p-0">
            <div class="col-12 manageproductsbuttons d-flex justify-content-center  align-items-center gap-2 m-0 p-0">
             <h3 class="text-dark me-auto heading-one mb-0 p-0">Manage Products</h3>
@@ -435,39 +435,40 @@
                 <path d="M12 20V10M12 10L15 13M12 10L9 13" stroke="#666666" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12M20 12C20.0007 10.8006 19.7314 9.61651 19.2121 8.53542C18.6928 7.45434 17.9367 6.50403 17 5.755" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
               </svg></button>
-              <fieldset class="form-group mb-0">
-                <select class="form-select bulkManagDropDown h-100" >
+              <!-- <fieldset class="form-group mb-0">
+                <select class="form-select bulkManagDropDown" >
                         <option value="bulkmanage">Bulk Manage</option>     
                 </select>
-       </fieldset>
-           <a href="collection.html"><button class="viewcollectionbtn">View Collection</button></a> 
-           <a href="addProduct.html"> <button class="btn btn-blue"><svg class="m" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              </fieldset> -->
+              <button type="button" class="bulk-btn">Bulk Manage</button>
+           <a href="collection.html"><button class="btn-blue bg-dark-blue">View Collection</button></a> 
+           <a href="addProduct.html"> <button class=" btn-blue"><svg class="m" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M12 6V18M18 12H6" stroke="#E6EAF3" stroke-width="2" stroke-linecap="round"/>
           </svg>New Product</button></a>
            </div>
        </div>
        </div>
-       <div class="container-fluid mt-40">
+       <div class="container-fluid mt-40 p-0">
         <div class="card bg-transparent">
           <div class="card-content">
             <div class="card-body p-0">
               <div class="list-group d-flex gap-4 list-group-horizontal-sm mb-1 text-center allbar" role="tablist">
-                <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto active p-0"
+                <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto active p-0"
                   id="list-all-list" data-bs-toggle="list" href="#list-all" role="tab">All</a>
-                <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto p-0" id="list-active-list"
+                <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto p-0" id="list-active-list"
                   data-bs-toggle="list" href="#list-active" role="tab"> Active 
                   <span class="notification-badge">12</span></a>
-                  <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto p-0" id="list-inactive-list"
+                  <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto p-0" id="list-inactive-list"
                   data-bs-toggle="list" href="#list-inactive" role="tab">Inactive 
                   <span class="notification-badge">27</span></a>
-                  <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto p-0" id="list-draft-list"
+                  <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto p-0" id="list-draft-list"
                   data-bs-toggle="list" href="#list-draft" role="tab">Draft</a>
-                  <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto p-0" id="list-pendingqc-list"
+                  <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto p-0" id="list-pendingqc-list"
                   data-bs-toggle="list" href="#list-pendingqc" role="tab">Pending QC</a>
-                  <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto p-0" id="list-violation-list"
+                  <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto p-0" id="list-violation-list"
                   data-bs-toggle="list" href="#list-violation" role="tab">  Violation 
                   <span class="notification-badge">1</span></a>
-                  <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto p-0" id="list-deleted-list"
+                  <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto p-0" id="list-deleted-list"
                   data-bs-toggle="list" href="#list-deleted" role="tab"> Deleted</a>
                  </div>
               <div class="tab-content text-justify ">
@@ -480,17 +481,18 @@
                           <span class="mt-2">Filter Product:</span>
                           <button class="btn-gray">Out of stock</button>
                           <button class="btn-gray">Soon Out of stock</button>
-                         </div>
-                      <div class="row py-4 d-flex inputtitle ">
-                       <div class="col-xxl-3 col-6">
-                        <div class="input-group">
+                      </div>
+
+                      <div class="row mt-20 d-flex gap-20 inputtitle ">
+                       <div class="col  p-0">
+                        <div class="input-group input-group-lg">
                           <button class="btn titlebtn" type="button" id="button-addon2">Product Name</button>
                           <input type="text" class="form-control " placeholder="Please Input" aria-label="input" aria-describedby="button-addon2">
                          <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
                       </div>
                        </div>
-                       <div class="col-xxl-3 col-6">
-                           <div class="input-group">
+                       <div class="col  p-0">
+                           <div class="input-group input-group-lg">
                                <label class="input-group-text" for="inputGroupSelect01">Select Category</label>
                                <select class="form-select" id="inputGroupSelect01">
                                    <option selected="">Select</option>
@@ -500,28 +502,32 @@
                                </select>
                            </div>
                        </div>
-                       <div class="col-xxl-3 col-6">
-                           <div class="input-group">
-                               <label class="input-group-text title" for="inputGroupSelect01">Tags</label>
-                               <select class="form-select" id="inputGroupSelect01">
-                                   <option selected="">Enter Tags</option>
-                                   <option value="1">One</option>
-                                   <option value="2">Two</option>
-                                   <option value="3">Three</option>
-                               </select>
-                           </div>
-                       </div>
-                       <div class="col-xxl-3 col-6">
-                           <div class="input-group">
-                               <label class="input-group-text title" for="inputGroupSelect01">Sort By</label>
-                               <select class="form-select" id="inputGroupSelect01">
-                                   <option selected="">Please Input</option>
-                                   <option value="1">One</option>
-                                   <option value="2">Two</option>
-                                   <option value="3">Three</option>
-                               </select>
-                           </div>
-                       </div>
+                       
+                      </div>
+
+                      <div class="row mt-20 d-flex gap-20">
+                        <div class="col  p-0">
+                          <div class="input-group input-group-lg">
+                              <label class="input-group-text title" for="inputGroupSelect01">Tags</label>
+                              <select class="form-select" id="inputGroupSelect01">
+                                  <option selected="">Enter Tags</option>
+                                  <option value="1">One</option>
+                                  <option value="2">Two</option>
+                                  <option value="3">Three</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="col p-0">
+                          <div class="input-group input-group-lg">
+                              <label class="input-group-text title" for="inputGroupSelect01">Sort By</label>
+                              <select class="form-select" id="inputGroupSelect01">
+                                  <option selected="">Please Input</option>
+                                  <option value="1">One</option>
+                                  <option value="2">Two</option>
+                                  <option value="3">Three</option>
+                              </select>
+                          </div>
+                      </div>
                       </div>
                       
                      </div>
@@ -532,7 +538,7 @@
                        <button class="btn-gray">Delete</button>
                        <button class="btn-gray">Export Selected Products</button>
                       </div>
-                      <div class="TableWrapper">
+                      <div class="TableWrapper dataTable-container">
                           <table class=" w-100" id="manage_product_Table">
                            <thead>
                                <tr class="text-dark">
@@ -593,19 +599,34 @@
                                         </div>
                                      </td>
                                      <td class="tableactive"><span>Active</span></td>
-                                     <td>
+                                     <td class="d-flex gap-2">
+                                      <span class="bg-NColor d-flex p-2 rounded-1 align-items-center justify-content-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M2.54688 6.21449C2.54688 5.14103 2.97331 4.11153 3.73236 3.35248C4.49141 2.59342 5.52091 2.16699 6.59437 2.16699H10.8802C11.1012 2.16699 11.3132 2.25479 11.4695 2.41107C11.6257 2.56735 11.7135 2.77931 11.7135 3.00033C11.7135 3.22134 11.6257 3.4333 11.4695 3.58958C11.3132 3.74586 11.1012 3.83366 10.8802 3.83366H6.59437C5.96294 3.83366 5.35736 4.0845 4.91087 4.53099C4.46438 4.97748 4.21354 5.58306 4.21354 6.21449V14.7862C4.21354 15.4176 4.46438 16.0232 4.91087 16.4697C5.35736 16.9162 5.96294 17.167 6.59437 17.167H15.166C15.7975 17.167 16.4031 16.9162 16.8495 16.4697C17.296 16.0232 17.5469 15.4176 17.5469 14.7862V10.5003C17.5469 10.2793 17.6347 10.0674 17.791 9.91107C17.9472 9.75479 18.1592 9.66699 18.3802 9.66699C18.6012 9.66699 18.8132 9.75479 18.9695 9.91107C19.1257 10.0674 19.2135 10.2793 19.2135 10.5003V14.7862C19.2135 15.8596 18.7871 16.8891 18.0281 17.6482C17.269 18.4072 16.2395 18.8337 15.166 18.8337H6.59437C5.52091 18.8337 4.49141 18.4072 3.73236 17.6482C2.97331 16.8891 2.54688 15.8596 2.54688 14.7862V6.21449Z" fill="#999999"/>
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M13.4915 11.5164L11.654 12.6247L10.7932 11.1972L12.6307 10.0889L12.6332 10.0872C12.7036 10.0448 12.7685 9.99384 12.8265 9.93553L17.0015 5.73887C17.0433 5.6967 17.0836 5.65307 17.1223 5.60803C17.3982 5.28637 17.8065 4.6497 17.3123 4.15303C16.8948 3.73303 16.2965 4.1297 15.909 4.47053C15.8051 4.56217 15.705 4.65808 15.609 4.75803L15.5807 4.78637L11.464 8.92387C11.3663 9.02103 11.2897 9.13735 11.239 9.26553L10.5523 10.993C10.5393 11.0255 10.5369 11.0613 10.5453 11.0953C10.5538 11.1293 10.5728 11.1597 10.5995 11.1823C10.6263 11.2049 10.6594 11.2185 10.6944 11.2212C10.7293 11.2239 10.7633 11.2155 10.7932 11.1972L11.654 12.6247C10.1498 13.5314 8.35401 12.008 9.00401 10.3764L9.69151 8.6497C9.82537 8.31228 10.0267 8.00574 10.2832 7.74887L14.399 3.61053L14.4232 3.58637C14.5457 3.46137 14.9573 3.0397 15.4565 2.73637C15.729 2.5722 16.164 2.3547 16.7015 2.31303C17.3182 2.26387 17.9765 2.45803 18.4932 2.9772C18.8886 3.36786 19.1373 3.8829 19.1973 4.43553C19.2386 4.86628 19.1728 5.30055 19.0057 5.6997C18.764 6.2972 18.3607 6.73637 18.1832 6.91387L14.0082 11.1105C13.8526 11.2666 13.6804 11.4019 13.4915 11.5164ZM17.2023 5.57803C17.2023 5.57803 17.199 5.58053 17.1915 5.58303L17.2023 5.57803Z" fill="#999999"/>
+                                        </svg>
+                                      </span> 
+                                     
+                                      <span class="bg-NColor d-flex p-2 rounded-1 align-items-center justify-content-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                                          <path d="M14 14.875V17.6875C14 18.205 13.58 18.625 13.0625 18.625H4.9375C4.68886 18.625 4.4504 18.5262 4.27459 18.3504C4.09877 18.1746 4 17.9361 4 17.6875V7.06251C4 6.54501 4.42 6.12501 4.9375 6.12501H6.5C6.91882 6.12449 7.33695 6.15905 7.75 6.22834M14 14.875H16.8125C17.33 14.875 17.75 14.455 17.75 13.9375V9.87501C17.75 6.15834 15.0475 3.07417 11.5 2.47834C11.0869 2.40905 10.6688 2.37449 10.25 2.37501H8.6875C8.17 2.37501 7.75 2.79501 7.75 3.31251V6.22834M14 14.875H8.6875C8.43886 14.875 8.2004 14.7762 8.02459 14.6004C7.84877 14.4246 7.75 14.1861 7.75 13.9375V6.22834M17.75 11.75V10.1875C17.75 9.44158 17.4537 8.72621 16.9262 8.19877C16.3988 7.67132 15.6834 7.37501 14.9375 7.37501H13.6875C13.4389 7.37501 13.2004 7.27623 13.0246 7.10042C12.8488 6.9246 12.75 6.68615 12.75 6.43751V5.18751C12.75 4.81816 12.6773 4.45244 12.5359 4.11121C12.3946 3.76998 12.1874 3.45993 11.9262 3.19877C11.6651 2.9376 11.355 2.73044 11.0138 2.58909C10.6726 2.44775 10.3068 2.37501 9.9375 2.37501H9" stroke="#999999" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                      </span>
+
+                                      <span class="bg-NColor d-flex p-2 rounded-1 align-items-center justify-content-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                                        <path d="M17.9635 5.5H3.79688M8.79688 9.66667L9.21354 13.8333M12.9635 9.66667L12.5469 13.8333" stroke="#999999" stroke-width="1.25" stroke-linecap="round"/>
+                                        <path d="M6.29688 5.5H6.38854C6.72391 5.49143 7.04889 5.38185 7.32098 5.18559C7.59306 4.98934 7.79959 4.71553 7.91354 4.4L7.94188 4.31417L8.02271 4.07167C8.09188 3.86417 8.12688 3.76083 8.17271 3.6725C8.26288 3.49949 8.3923 3.34999 8.55061 3.23597C8.70891 3.12194 8.89171 3.04655 9.08438 3.01583C9.18188 3 9.29104 3 9.50937 3H12.251C12.4694 3 12.5785 3 12.676 3.01583C12.8687 3.04655 13.0515 3.12194 13.2098 3.23597C13.3681 3.34999 13.4975 3.49949 13.5877 3.6725C13.6335 3.76083 13.6685 3.86417 13.7377 4.07167L13.8185 4.31417C13.9241 4.66523 14.1426 4.97167 14.4399 5.18605C14.7373 5.40043 15.0971 5.51077 15.4635 5.5" stroke="#999999" stroke-width="1.25"/>
+                                        <path d="M16.1933 13.333C16.0458 15.5447 15.9717 16.6505 15.2508 17.3247C14.53 17.9988 13.4217 17.9997 11.2042 17.9997H10.5592C8.3425 17.9997 7.23417 17.9997 6.5125 17.3247C5.79167 16.6505 5.71833 15.5447 5.57083 13.333L5.1875 7.58301M16.5758 7.58301L16.4092 10.083" stroke="#999999" stroke-width="1.25" stroke-linecap="round"/>
+                                      </svg>
+                                     </span>
+
+                                     <span class="bg-NColor d-flex p-2 rounded-1 align-items-center justify-content-center">
                                       <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
-                                       <path fill-rule="evenodd" clip-rule="evenodd" d="M2.54688 6.21449C2.54688 5.14103 2.97331 4.11153 3.73236 3.35248C4.49141 2.59342 5.52091 2.16699 6.59437 2.16699H10.8802C11.1012 2.16699 11.3132 2.25479 11.4695 2.41107C11.6257 2.56735 11.7135 2.77931 11.7135 3.00033C11.7135 3.22134 11.6257 3.4333 11.4695 3.58958C11.3132 3.74586 11.1012 3.83366 10.8802 3.83366H6.59437C5.96294 3.83366 5.35736 4.0845 4.91087 4.53099C4.46438 4.97748 4.21354 5.58306 4.21354 6.21449V14.7862C4.21354 15.4176 4.46438 16.0232 4.91087 16.4697C5.35736 16.9162 5.96294 17.167 6.59437 17.167H15.166C15.7975 17.167 16.4031 16.9162 16.8495 16.4697C17.296 16.0232 17.5469 15.4176 17.5469 14.7862V10.5003C17.5469 10.2793 17.6347 10.0674 17.791 9.91107C17.9472 9.75479 18.1592 9.66699 18.3802 9.66699C18.6012 9.66699 18.8132 9.75479 18.9695 9.91107C19.1257 10.0674 19.2135 10.2793 19.2135 10.5003V14.7862C19.2135 15.8596 18.7871 16.8891 18.0281 17.6482C17.269 18.4072 16.2395 18.8337 15.166 18.8337H6.59437C5.52091 18.8337 4.49141 18.4072 3.73236 17.6482C2.97331 16.8891 2.54688 15.8596 2.54688 14.7862V6.21449Z" fill="#999999"/>
-                                       <path fill-rule="evenodd" clip-rule="evenodd" d="M13.4915 11.5164L11.654 12.6247L10.7932 11.1972L12.6307 10.0889L12.6332 10.0872C12.7036 10.0448 12.7685 9.99384 12.8265 9.93553L17.0015 5.73887C17.0433 5.6967 17.0836 5.65307 17.1223 5.60803C17.3982 5.28637 17.8065 4.6497 17.3123 4.15303C16.8948 3.73303 16.2965 4.1297 15.909 4.47053C15.8051 4.56217 15.705 4.65808 15.609 4.75803L15.5807 4.78637L11.464 8.92387C11.3663 9.02103 11.2897 9.13735 11.239 9.26553L10.5523 10.993C10.5393 11.0255 10.5369 11.0613 10.5453 11.0953C10.5538 11.1293 10.5728 11.1597 10.5995 11.1823C10.6263 11.2049 10.6594 11.2185 10.6944 11.2212C10.7293 11.2239 10.7633 11.2155 10.7932 11.1972L11.654 12.6247C10.1498 13.5314 8.35401 12.008 9.00401 10.3764L9.69151 8.6497C9.82537 8.31228 10.0267 8.00574 10.2832 7.74887L14.399 3.61053L14.4232 3.58637C14.5457 3.46137 14.9573 3.0397 15.4565 2.73637C15.729 2.5722 16.164 2.3547 16.7015 2.31303C17.3182 2.26387 17.9765 2.45803 18.4932 2.9772C18.8886 3.36786 19.1373 3.8829 19.1973 4.43553C19.2386 4.86628 19.1728 5.30055 19.0057 5.6997C18.764 6.2972 18.3607 6.73637 18.1832 6.91387L14.0082 11.1105C13.8526 11.2666 13.6804 11.4019 13.4915 11.5164ZM17.2023 5.57803C17.2023 5.57803 17.199 5.58053 17.1915 5.58303L17.2023 5.57803Z" fill="#999999"/>
-                                     </svg> <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
-                                      <path d="M14 14.875V17.6875C14 18.205 13.58 18.625 13.0625 18.625H4.9375C4.68886 18.625 4.4504 18.5262 4.27459 18.3504C4.09877 18.1746 4 17.9361 4 17.6875V7.06251C4 6.54501 4.42 6.12501 4.9375 6.12501H6.5C6.91882 6.12449 7.33695 6.15905 7.75 6.22834M14 14.875H16.8125C17.33 14.875 17.75 14.455 17.75 13.9375V9.87501C17.75 6.15834 15.0475 3.07417 11.5 2.47834C11.0869 2.40905 10.6688 2.37449 10.25 2.37501H8.6875C8.17 2.37501 7.75 2.79501 7.75 3.31251V6.22834M14 14.875H8.6875C8.43886 14.875 8.2004 14.7762 8.02459 14.6004C7.84877 14.4246 7.75 14.1861 7.75 13.9375V6.22834M17.75 11.75V10.1875C17.75 9.44158 17.4537 8.72621 16.9262 8.19877C16.3988 7.67132 15.6834 7.37501 14.9375 7.37501H13.6875C13.4389 7.37501 13.2004 7.27623 13.0246 7.10042C12.8488 6.9246 12.75 6.68615 12.75 6.43751V5.18751C12.75 4.81816 12.6773 4.45244 12.5359 4.11121C12.3946 3.76998 12.1874 3.45993 11.9262 3.19877C11.6651 2.9376 11.355 2.73044 11.0138 2.58909C10.6726 2.44775 10.3068 2.37501 9.9375 2.37501H9" stroke="#999999" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg> <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
-                                       <path d="M17.9635 5.5H3.79688M8.79688 9.66667L9.21354 13.8333M12.9635 9.66667L12.5469 13.8333" stroke="#999999" stroke-width="1.25" stroke-linecap="round"/>
-                                       <path d="M6.29688 5.5H6.38854C6.72391 5.49143 7.04889 5.38185 7.32098 5.18559C7.59306 4.98934 7.79959 4.71553 7.91354 4.4L7.94188 4.31417L8.02271 4.07167C8.09188 3.86417 8.12688 3.76083 8.17271 3.6725C8.26288 3.49949 8.3923 3.34999 8.55061 3.23597C8.70891 3.12194 8.89171 3.04655 9.08438 3.01583C9.18188 3 9.29104 3 9.50937 3H12.251C12.4694 3 12.5785 3 12.676 3.01583C12.8687 3.04655 13.0515 3.12194 13.2098 3.23597C13.3681 3.34999 13.4975 3.49949 13.5877 3.6725C13.6335 3.76083 13.6685 3.86417 13.7377 4.07167L13.8185 4.31417C13.9241 4.66523 14.1426 4.97167 14.4399 5.18605C14.7373 5.40043 15.0971 5.51077 15.4635 5.5" stroke="#999999" stroke-width="1.25"/>
-                                       <path d="M16.1933 13.333C16.0458 15.5447 15.9717 16.6505 15.2508 17.3247C14.53 17.9988 13.4217 17.9997 11.2042 17.9997H10.5592C8.3425 17.9997 7.23417 17.9997 6.5125 17.3247C5.79167 16.6505 5.71833 15.5447 5.57083 13.333L5.1875 7.58301M16.5758 7.58301L16.4092 10.083" stroke="#999999" stroke-width="1.25" stroke-linecap="round"/>
-                                     </svg> <br> <svg class="mx-4" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
-                                       <path d="M4.64109 16.0469C4.64109 16.3926 4.92039 16.6719 5.26609 16.6719H16.477C16.8227 16.6719 17.102 16.3926 17.102 16.0469V11.4961C17.102 8.05469 14.313 5.26562 10.8716 5.26562C7.43016 5.26562 4.64109 8.05469 4.64109 11.4961V16.0469ZM6.04734 11.4961C6.04734 8.83203 8.2075 6.67188 10.8716 6.67188C13.5356 6.67188 15.6958 8.83203 15.6958 11.4961V15.2656H8.76219V11.9258C8.76219 11.8184 8.6743 11.7305 8.56688 11.7305H7.7075C7.60008 11.7305 7.51219 11.8184 7.51219 11.9258V15.2656H6.04734V11.4961ZM5.10789 6.56445L5.88133 5.79102C5.94188 5.73047 5.94188 5.63086 5.88133 5.57031L4.55516 4.24414C4.52579 4.21506 4.48613 4.19875 4.4448 4.19875C4.40348 4.19875 4.36382 4.21506 4.33445 4.24414L3.56102 5.01758C3.53194 5.04694 3.51562 5.0866 3.51562 5.12793C3.51562 5.16926 3.53194 5.20891 3.56102 5.23828L4.88719 6.56445C4.94773 6.625 5.04539 6.625 5.10789 6.56445ZM18.186 5.01758L17.4126 4.24414C17.3832 4.21506 17.3436 4.19875 17.3022 4.19875C17.2609 4.19875 17.2212 4.21506 17.1919 4.24414L15.8657 5.57031C15.8366 5.59968 15.8203 5.63934 15.8203 5.68066C15.8203 5.72199 15.8366 5.76165 15.8657 5.79102L16.6391 6.56445C16.6997 6.625 16.7993 6.625 16.8598 6.56445L18.186 5.23828C18.2466 5.17578 18.2466 5.07812 18.186 5.01758ZM17.1216 17.9219H4.62156C4.27586 17.9219 3.99656 18.2012 3.99656 18.5469V19.0156C3.99656 19.1016 4.06688 19.1719 4.15281 19.1719H17.5903C17.6763 19.1719 17.7466 19.1016 17.7466 19.0156V18.5469C17.7466 18.2012 17.4673 17.9219 17.1216 17.9219ZM10.3247 4.01562H11.4184C11.5044 4.01562 11.5747 3.94531 11.5747 3.85938V1.98438C11.5747 1.89844 11.5044 1.82812 11.4184 1.82812H10.3247C10.2388 1.82812 10.1684 1.89844 10.1684 1.98438V3.85938C10.1684 3.94531 10.2388 4.01562 10.3247 4.01562Z" fill="#999999"/>
-                                     </svg></td>
+                                          <path d="M4.64109 16.0469C4.64109 16.3926 4.92039 16.6719 5.26609 16.6719H16.477C16.8227 16.6719 17.102 16.3926 17.102 16.0469V11.4961C17.102 8.05469 14.313 5.26562 10.8716 5.26562C7.43016 5.26562 4.64109 8.05469 4.64109 11.4961V16.0469ZM6.04734 11.4961C6.04734 8.83203 8.2075 6.67188 10.8716 6.67188C13.5356 6.67188 15.6958 8.83203 15.6958 11.4961V15.2656H8.76219V11.9258C8.76219 11.8184 8.6743 11.7305 8.56688 11.7305H7.7075C7.60008 11.7305 7.51219 11.8184 7.51219 11.9258V15.2656H6.04734V11.4961ZM5.10789 6.56445L5.88133 5.79102C5.94188 5.73047 5.94188 5.63086 5.88133 5.57031L4.55516 4.24414C4.52579 4.21506 4.48613 4.19875 4.4448 4.19875C4.40348 4.19875 4.36382 4.21506 4.33445 4.24414L3.56102 5.01758C3.53194 5.04694 3.51562 5.0866 3.51562 5.12793C3.51562 5.16926 3.53194 5.20891 3.56102 5.23828L4.88719 6.56445C4.94773 6.625 5.04539 6.625 5.10789 6.56445ZM18.186 5.01758L17.4126 4.24414C17.3832 4.21506 17.3436 4.19875 17.3022 4.19875C17.2609 4.19875 17.2212 4.21506 17.1919 4.24414L15.8657 5.57031C15.8366 5.59968 15.8203 5.63934 15.8203 5.68066C15.8203 5.72199 15.8366 5.76165 15.8657 5.79102L16.6391 6.56445C16.6997 6.625 16.7993 6.625 16.8598 6.56445L18.186 5.23828C18.2466 5.17578 18.2466 5.07812 18.186 5.01758ZM17.1216 17.9219H4.62156C4.27586 17.9219 3.99656 18.2012 3.99656 18.5469V19.0156C3.99656 19.1016 4.06688 19.1719 4.15281 19.1719H17.5903C17.6763 19.1719 17.7466 19.1016 17.7466 19.0156V18.5469C17.7466 18.2012 17.4673 17.9219 17.1216 17.9219ZM10.3247 4.01562H11.4184C11.5044 4.01562 11.5747 3.94531 11.5747 3.85938V1.98438C11.5747 1.89844 11.5044 1.82812 11.4184 1.82812H10.3247C10.2388 1.82812 10.1684 1.89844 10.1684 1.98438V3.85938C10.1684 3.94531 10.2388 4.01562 10.3247 4.01562Z" fill="#999999"/>
+                                        </svg>
+                                      </span>
+                                    </td>
                                      
                                </tr>
                                
