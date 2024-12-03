@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+   
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/bootstrap.css">
     <link rel="stylesheet" href="../assets/vendors/apexcharts/apexcharts.css">
@@ -359,10 +359,10 @@
                 <li class="submenu-item ">
                     <a href="../MyAccount/Settings.html">Settings</a>
                 </li>
-                <li class="submenu-item ">
+                <li class="submenu-item active">
                   <a href="../MyAccount/ManageSubAccount.html">User Management</a>
                 </li>
-                <li class="submenu-item active">
+                <li class="submenu-item ">
                     <a href="../MyAccount/AccountSetting.html">Account Settings</a>
                 </li>
                 <li class="submenu-item ">
@@ -476,15 +476,39 @@
                            </div>
                           </div>
                             </div>
-                          </div>
                           <div class="tab-pane fade" id="list-SellerAppPermission" role="tabpanel"
                             aria-labelledby="list-SellerAppPermission-list">
-                               <div> 
-                                <span>Seller App permission management</span>
+                            <div class="pcSellerCenterPermision mt-40">
+                              <div class="d-flex gap-1 p-0">
+                              <input class="form-check-input" type="checkbox" id="product" onclick="toggleCheckboxes(this)">
+                             <label for="select-all">Login</label>
+                             </div>
+                                <div class="d-flex gap-1 p-0">
+                                 <input class="form-check-input" type="checkbox" id="product" onclick="toggleCheckboxes(this)">
+                                <label for="select-all">Notification write</label>
+                                </div>
+                                <div class="d-flex gap-1 p-0">
+                                 <input class="form-check-input" type="checkbox" id="product" onclick="toggleCheckboxes(this)">
+                                <label for="select-all">registration read</label>
+                                </div>
+                                <div class="d-flex gap-1 p-0">
+                                 <input class="form-check-input" type="checkbox" id="product" onclick="toggleCheckboxes(this)">
+                                <label for="select-all">Products read</label>
+                                </div>
+                                <div class="d-flex gap-1 p-0">
+                                 <input class="form-check-input" type="checkbox" id="product" onclick="toggleCheckboxes(this)">
+                                <label for="select-all">Products write</label>
+                                </div>
+                                <div class="d-flex gap-1 p-0">
+                                 <input class="form-check-input" type="checkbox" id="product" onclick="toggleCheckboxes(this)">
+                                <label for="select-all">Orders read</label>
+                                </div>
+                                <div class="d-flex gap-1 p-0">
+                                 <input class="form-check-input" type="checkbox" id="product" onclick="toggleCheckboxes(this)">
+                                <label for="select-all">Orders write</label>
+                                </div>
                                </div>
-
-            
-                          </div>
+                            </div>
                         </div>
                       </div>
                       

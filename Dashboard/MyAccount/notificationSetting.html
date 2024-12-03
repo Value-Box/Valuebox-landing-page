@@ -354,14 +354,14 @@
                 </svg>
             </a>
             <ul class="submenu">
-                <li class="submenu-item active">
+                <li class="submenu-item ">
                     <a href="../MyAccount/Settings.html">Settings</a>
                 </li>
-                <li class="submenu-item ">
-                  <a href="../MyAccount/ManageSubAccount.html">User Management</a>
+                <li class="submenu-item">
+                    <a href="../MyAccount/ManageSubAccount.html">User Management</a>
                 </li>
-                <li class="submenu-item ">
-                  <a href="../MyAccount/AccountSetting.html">Account Settings</a>
+                <li class="submenu-item active">
+                    <a href="../MyAccount/AccountSetting.html">Account Settings</a>
                 </li>
                 <li class="submenu-item ">
                     <a href="component-button.html">Chat Settings</a>
@@ -413,354 +413,166 @@
    <main class="backcolor" id="main">
     <div class="navigation anchortags py-4">
         <a href="../index.html">Home</a>
-        <a class="active1" href="Settings.html">>Setting</a>
+        <a href="Settings.html">>Setting</a>
+        <a class="active1" href="notificationSetting.html">>Notification Setting</a>
       </div>   
-  <div class="container-fluid"> 
+  <div class="container-fluid p-0"> 
     <div class="d-flex justify-content-between">
-    <span class="heading-one">Settings</span>
-         </div>
-         <div class="row form1 mt-40 ">
-         <div class="d-flex gap-20">
-            <img src="../Images/ValueBOXSettings.png" alt="">
-            <div class="subHeading">
-                <span>ValueBox Grocery (Multan)</span>
-                <div class="d-flex align-items-center gap-2">
-                    <span class="text-dark message-text">Seller ID:</span>
-                    <span class="orderidColor fs-16">PK10DP1</span>
-                    <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M19 2C19.5304 2 20.0391 2.21071 20.4142 2.58579C20.7893 2.96086 21 3.46957 21 4V16C21 16.5304 20.7893 17.0391 20.4142 17.4142C20.0391 17.7893 19.5304 18 19 18H17V20C17 20.5304 16.7893 21.0391 16.4142 21.4142C16.0391 21.7893 15.5304 22 15 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H7V4C7 3.46957 7.21071 2.96086 7.58579 2.58579C7.96086 2.21071 8.46957 2 9 2H19ZM10 15H8C7.74512 15.0003 7.49997 15.0979 7.31463 15.2728C7.1293 15.4478 7.01777 15.687 7.00283 15.9414C6.98789 16.1958 7.07067 16.4464 7.23426 16.6418C7.39786 16.8373 7.6299 16.9629 7.883 16.993L8 17H10C10.2549 16.9997 10.5 16.9021 10.6854 16.7272C10.8707 16.5522 10.9822 16.313 10.9972 16.0586C11.0121 15.8042 10.9293 15.5536 10.7657 15.3582C10.6021 15.1627 10.3701 15.0371 10.117 15.007L10 15ZM19 4H9V6H15C15.5304 6 16.0391 6.21071 16.4142 6.58579C16.7893 6.96086 17 7.46957 17 8V16H19V4ZM12 11H8C7.73478 11 7.48043 11.1054 7.29289 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.29289 12.7071C7.48043 12.8946 7.73478 13 8 13H12C12.2652 13 12.5196 12.8946 12.7071 12.7071C12.8946 12.5196 13 12.2652 13 12C13 11.7348 12.8946 11.4804 12.7071 11.2929C12.5196 11.1054 12.2652 11 12 11Z" fill="#33539B"/>
-                      </svg></span>
+    <span class="heading-one">Notification Setting</span>
+     </div>
+        <div class="card bg-transparent">
+            <div class="card-content">
+              <div class="card-body p-0">
+                <div class="list-group d-flex gap-4 mt-40 list-group-horizontal-sm mb-1 text-center allbar" role="tablist">
+                  <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto p-0 active"
+                    id="list-channelSetting-list" data-bs-toggle="list" href="#list-channelSetting" role="tab">Channel Settings</a>
+                  <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto p-0" id="list-ImportantNotificationSetting-list"
+                    data-bs-toggle="list" href="#list-ImportantNotificationSetting" role="tab">Important Notification Setting</a>
+                </div>
+                <div class="tab-content text-justify ">
+                  <div class="tab-pane fade show active" id="list-channelSetting" role="tabpanel"
+                    aria-labelledby="list-channelSetting-list">
+                    <div class="row form1 mt-40 ">
+                        <span class="p-0">Check if you wish to receive notification through these channels.</span>
+                        <div class="TableWrapper p-0 mt-20">
+                          <table class="w-100" style="table-layout: fixed; border-collapse: collapse;">
+                            <thead>
+                              <tr class="text-dark">
+                                <th>Notification Category</th>
+                                <th>SMS</th>
+                                <th>EMAIL</th>
+                                <th>Notification Center</th>
+                                <th>ValueBox Chat</th>
+                              </tr>
+                            </thead>
+                            <tbody class="py-5">
+                              <tr class="">
+                                  <td class="">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                      <path d="M21 7.5L17 9.5M17 9.5V13M17 9.5L7.5 4.5M17 9.5L12 12M12 12L3 7.5M12 12V21.5M15.578 3.382L17.578 4.432C19.729 5.561 20.805 6.125 21.403 7.14C22 8.154 22 9.417 22 11.942V12.059C22 14.583 22 15.846 21.403 16.86C20.805 17.875 19.729 18.44 17.578 19.569L15.578 20.618C13.822 21.539 12.944 22 12 22C11.056 22 10.178 21.54 8.422 20.618L6.422 19.568C4.271 18.439 3.195 17.875 2.597 16.86C2 15.846 2 14.583 2 12.06V11.943C2 9.418 2 8.155 2.597 7.141C3.195 6.126 4.271 5.561 6.422 4.433L8.422 3.383C10.178 2.461 11.056 2 12 2C12.944 2 13.822 2.46 15.578 3.382Z" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
+                                    </svg> Order</td>
+                                  <td><input class="form-check-input" type="checkbox" id="sms"></td>
+                                  <td><input class="form-check-input" type="checkbox" id="email"></td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                              <tr class="Table-row-bg">
+                                  <td> Exchange Order</td>
+                                  <td><input class="form-check-input" type="checkbox" id="sms"></td>
+                                  <td><input class="form-check-input" type="checkbox" id="email"></td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                              <tr class="Table-row-bg">
+                                <td> New Order</td>
+                                <td><input class="form-check-input" type="checkbox" id="sms"></td>
+                                <td><input class="form-check-input" type="checkbox" id="email"></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="Table-row-bg">
+                                <td> Return Order</td>
+                                <td><input class="form-check-input" type="checkbox" id="sms"></td>
+                                <td><input class="form-check-input" type="checkbox" id="email"></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="">
+                                <td class="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M2 3V1.75C1.31 1.75 0.75 2.31 0.75 3H2ZM13 3H14.25C14.25 2.31 13.69 1.75 13 1.75V3ZM13 9V7.75C12.6685 7.75 12.3505 7.8817 12.1161 8.11612C11.8817 8.35054 11.75 8.66848 11.75 9H13ZM2 4.25H13V1.75H2V4.25ZM11.75 3V19H14.25V3H11.75ZM3.25 17V3H0.75V17H3.25ZM13 10.25H18V7.75H13V10.25ZM20.75 13V17H23.25V13H20.75ZM14.25 19V9H11.75V19H14.25ZM18.53 19.53C18.3894 19.6705 18.1988 19.7493 18 19.7493C17.8012 19.7493 17.6106 19.6705 17.47 19.53L15.702 21.298C16.3115 21.9074 17.1381 22.2498 18 22.2498C18.8619 22.2498 19.6885 21.9074 20.298 21.298L18.53 19.53ZM17.47 18.47C17.6106 18.3295 17.8012 18.2507 18 18.2507C18.1988 18.2507 18.3894 18.3295 18.53 18.47L20.298 16.702C19.6885 16.0926 18.8619 15.7502 18 15.7502C17.1381 15.7502 16.3115 16.0926 15.702 16.702L17.47 18.47ZM6.53 19.53C6.38937 19.6705 6.19875 19.7493 6 19.7493C5.80125 19.7493 5.61063 19.6705 5.47 19.53L3.702 21.298C4.31149 21.9074 5.13809 22.2498 6 22.2498C6.86191 22.2498 7.68852 21.9074 8.298 21.298L6.53 19.53ZM5.47 18.47C5.61063 18.3295 5.80125 18.2507 6 18.2507C6.19875 18.2507 6.38937 18.3295 6.53 18.47L8.298 16.702C7.68852 16.0926 6.86191 15.7502 6 15.7502C5.13809 15.7502 4.31149 16.0926 3.702 16.702L5.47 18.47ZM18.53 18.47C18.6001 18.5392 18.6557 18.6218 18.6935 18.7128C18.7312 18.8038 18.7505 18.9015 18.75 19H21.25C21.2505 18.5731 21.1667 18.1504 21.0033 17.756C20.8399 17.3616 20.6002 17.0034 20.298 16.702L18.53 18.47ZM18.75 19C18.7505 19.0985 18.7312 19.1962 18.6935 19.2872C18.6557 19.3782 18.6001 19.4608 18.53 19.53L20.298 21.298C20.6002 20.9966 20.8399 20.6384 21.0033 20.244C21.1667 19.8496 21.2505 19.4269 21.25 19H18.75ZM16 17.75H13V20.25H16V17.75ZM17.47 19.53C17.3999 19.4608 17.3443 19.3782 17.3065 19.2872C17.2688 19.1962 17.2495 19.0985 17.25 19H14.75C14.75 19.83 15.068 20.664 15.702 21.298L17.47 19.53ZM17.25 19C17.2495 18.9015 17.2688 18.8038 17.3065 18.7128C17.3443 18.6218 17.3999 18.5392 17.47 18.47L15.702 16.702C15.3998 17.0034 15.1601 17.3616 14.9967 17.756C14.8333 18.1504 14.7495 18.5731 14.75 19H17.25ZM5.47 19.53C5.39989 19.4608 5.34431 19.3782 5.30653 19.2872C5.26875 19.1962 5.24953 19.0985 5.25 19H2.75C2.75 19.83 3.068 20.664 3.702 21.298L5.47 19.53ZM5.25 19C5.24953 18.9015 5.26875 18.8038 5.30653 18.7128C5.34431 18.6218 5.39989 18.5392 5.47 18.47L3.702 16.702C3.39976 17.0034 3.16007 17.3616 2.99669 17.756C2.83332 18.1504 2.74948 18.5731 2.75 19H5.25ZM13 17.75H8V20.25H13V17.75ZM6.53 18.47C6.60011 18.5392 6.65569 18.6218 6.69347 18.7128C6.73125 18.8038 6.75047 18.9015 6.75 19H9.25C9.25 18.17 8.932 17.336 8.298 16.702L6.53 18.47ZM6.75 19C6.75047 19.0985 6.73125 19.1962 6.69347 19.2872C6.65569 19.3782 6.60011 19.4608 6.53 19.53L8.298 21.298C8.60024 20.9966 8.83993 20.6384 9.00331 20.244C9.16668 19.8496 9.25052 19.4269 9.25 19H6.75ZM20.75 17C20.75 17.1989 20.671 17.3897 20.5303 17.5303C20.3897 17.671 20.1989 17.75 20 17.75V20.25C20.862 20.25 21.6886 19.9076 22.2981 19.2981C22.9076 18.6886 23.25 17.862 23.25 17H20.75ZM18 10.25C18.7293 10.25 19.4288 10.5397 19.9445 11.0555C20.4603 11.5712 20.75 12.2707 20.75 13H23.25C23.25 10.1 20.9 7.75 18 7.75V10.25ZM0.75 17C0.75 17.862 1.09241 18.6886 1.7019 19.2981C2.3114 19.9076 3.13805 20.25 4 20.25V17.75C3.80109 17.75 3.61032 17.671 3.46967 17.5303C3.32902 17.3897 3.25 17.1989 3.25 17H0.75Z" fill="#666666"/>
+                                        <path d="M2 8H5M2 12H7" stroke="#666666" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                      </svg> Logistics</td>
+                                <td><input class="form-check-input" type="checkbox" id="sms"></td>
+                                <td><input class="form-check-input" type="checkbox" id="email"></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="Table-row-bg">
+                                <td> Logistics</td>
+                                <td><input class="form-check-input" type="checkbox" id="sms"></td>
+                                <td><input class="form-check-input" type="checkbox" id="email"></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div>
+                       </div>
+                      </div>
+             
+                </div>
+                <div class="tab-pane fade show" id="list-ImportantNotificationSetting" role="tabpanel"
+                aria-labelledby="list-ImportantNotificationSetting-list">
+                <div class="row form1 mt-40 ">
+                    <span class="p-0">Check if you wish to receive notification through these channels.</span>
+                    <div class="TableWrapper p-0 mt-20">
+                      <table class="w-100" style="table-layout: fixed; border-collapse: collapse;">
+                        <thead>
+                          <tr class="text-dark">
+                            <th>Notification Category</th>
+                            <th>SMS</th>
+                            <th>EMAIL</th>
+                            <th>Notification Center</th>
+                            <th>ValueBox Chat</th>
+                          </tr>
+                        </thead>
+                        <tbody class="py-5">
+                          <tr class="">
+                              <td class="">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                  <path d="M21 7.5L17 9.5M17 9.5V13M17 9.5L7.5 4.5M17 9.5L12 12M12 12L3 7.5M12 12V21.5M15.578 3.382L17.578 4.432C19.729 5.561 20.805 6.125 21.403 7.14C22 8.154 22 9.417 22 11.942V12.059C22 14.583 22 15.846 21.403 16.86C20.805 17.875 19.729 18.44 17.578 19.569L15.578 20.618C13.822 21.539 12.944 22 12 22C11.056 22 10.178 21.54 8.422 20.618L6.422 19.568C4.271 18.439 3.195 17.875 2.597 16.86C2 15.846 2 14.583 2 12.06V11.943C2 9.418 2 8.155 2.597 7.141C3.195 6.126 4.271 5.561 6.422 4.433L8.422 3.383C10.178 2.461 11.056 2 12 2C12.944 2 13.822 2.46 15.578 3.382Z" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg> Order</td>
+                              <td><input class="form-check-input" type="checkbox" id="sms"></td>
+                              <td><input class="form-check-input" type="checkbox" id="email"></td>
+                              <td></td>
+                              <td></td>
+                          </tr>
+                          <tr class="Table-row-bg">
+                              <td> Exchange Order</td>
+                              <td><input class="form-check-input" type="checkbox" id="sms"></td>
+                              <td><input class="form-check-input" type="checkbox" id="email"></td>
+                              <td></td>
+                              <td></td>
+                          </tr>
+                          <tr class="Table-row-bg">
+                            <td> New Order</td>
+                            <td><input class="form-check-input" type="checkbox" id="sms"></td>
+                            <td><input class="form-check-input" type="checkbox" id="email"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="Table-row-bg">
+                            <td> Return Order</td>
+                            <td><input class="form-check-input" type="checkbox" id="sms"></td>
+                            <td><input class="form-check-input" type="checkbox" id="email"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div>
                    </div>
-                   <div class="d-flex align-items-center gap-2">
-                    <span class="text-dark message-text">Store URL:</span>
-                    <a class="orderidColor fs-16" href=" https://www.valuebox.com/shop/ondeman-store-multan">https://www.valuebox.com/shop/ondeman-store-multan</a>
-                    <!-- <span class="orderidColor fs-16"> https://www.valuebox.com/shop/ondeman-store-multan</span> -->
-                    <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M19 2C19.5304 2 20.0391 2.21071 20.4142 2.58579C20.7893 2.96086 21 3.46957 21 4V16C21 16.5304 20.7893 17.0391 20.4142 17.4142C20.0391 17.7893 19.5304 18 19 18H17V20C17 20.5304 16.7893 21.0391 16.4142 21.4142C16.0391 21.7893 15.5304 22 15 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H7V4C7 3.46957 7.21071 2.96086 7.58579 2.58579C7.96086 2.21071 8.46957 2 9 2H19ZM10 15H8C7.74512 15.0003 7.49997 15.0979 7.31463 15.2728C7.1293 15.4478 7.01777 15.687 7.00283 15.9414C6.98789 16.1958 7.07067 16.4464 7.23426 16.6418C7.39786 16.8373 7.6299 16.9629 7.883 16.993L8 17H10C10.2549 16.9997 10.5 16.9021 10.6854 16.7272C10.8707 16.5522 10.9822 16.313 10.9972 16.0586C11.0121 15.8042 10.9293 15.5536 10.7657 15.3582C10.6021 15.1627 10.3701 15.0371 10.117 15.007L10 15ZM19 4H9V6H15C15.5304 6 16.0391 6.21071 16.4142 6.58579C16.7893 6.96086 17 7.46957 17 8V16H19V4ZM12 11H8C7.73478 11 7.48043 11.1054 7.29289 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.29289 12.7071C7.48043 12.8946 7.73478 13 8 13H12C12.2652 13 12.5196 12.8946 12.7071 12.7071C12.8946 12.5196 13 12.2652 13 12C13 11.7348 12.8946 11.4804 12.7071 11.2929C12.5196 11.1054 12.2652 11 12 11Z" fill="#33539B"/>
-                      </svg></span>
-                   </div>
+                  </div>
+         
             </div>
+              </div>
+              
+              
+            </div>
+        </div>
+        <div class="row form1 mt-40">
+            <div class="d-flex gap-2 justify-content-end">
+            <button class="btn-blue">Save Settings</button>
+            </div>
+      
          </div>
-         <hr class="mt-40">
-         <div class="d-flex justify-content-between mt-40">
-            <span class="heading-one">Business Information</span>
-                 </div>
-                 <div class="row d-flex gap-2 mt-20 ">
-                  <a href="SellerProfile.html">
-                    <div class="col-4 d-flex gap-3 settingsBusinessInformationCol ">
-                    <div class="settingsBusinessInformation">
-                     <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
-                         <g clip-path="url(#clip0_4647_99311)">
-                           <path d="M48.6412 40.3547C46.2892 37.2164 42.9549 34.9251 39.1002 33.9287L38.9812 33.9031L36.2302 38.5464C36.2255 39.8344 35.1849 40.8751 33.8969 40.8797C32.6135 40.8797 31.5635 39.8297 30.3385 36.7404C30.3385 36.7194 30.3385 36.6914 30.3385 36.6657C30.3385 35.0534 29.0319 33.7491 27.4219 33.7491C25.8119 33.7491 24.5052 35.0557 24.5052 36.6657V36.7427V36.7381C23.1985 39.8297 22.1392 40.8774 20.8582 40.8774C19.5702 40.8727 18.5295 39.8321 18.5249 38.5441L15.8602 33.8914C11.8889 34.9181 8.55687 37.2071 6.23287 40.2987L6.20021 40.3431C5.29488 41.8107 4.73488 43.5771 4.67188 45.4694V45.4857C4.68354 45.8357 4.67188 46.2441 4.67188 46.6524V51.3191C4.67188 53.8974 6.76021 55.9857 9.33854 55.9857H45.5052C48.0835 55.9857 50.1719 53.8974 50.1719 51.3191V46.6524C50.1719 46.2464 50.1602 45.8357 50.1719 45.4857C50.1065 43.5794 49.5465 41.8154 48.6179 40.3034L48.6435 40.3501L48.6412 40.3547ZM15.1695 12.3431C15.1695 19.1564 19.4162 29.1664 27.4195 29.1664C35.2829 29.1664 39.6695 19.1564 39.6695 12.3431C39.6695 12.2987 39.6695 12.2451 39.6695 12.1914C39.6695 5.42474 34.1839 -0.0585938 27.4195 -0.0585938C20.6552 -0.0585938 15.1695 5.42707 15.1695 12.1914V12.3501V12.3431Z" fill="url(#paint0_linear_4647_99311)"/>
-                         </g>
-                         <defs>
-                           <linearGradient id="paint0_linear_4647_99311" x1="4.67188" y1="27.9636" x2="50.1719" y2="27.9636" gradientUnits="userSpaceOnUse">
-                             <stop stop-color="#0032A3"/>
-                             <stop offset="0.25" stop-color="#1A51CB"/>
-                             <stop offset="0.5" stop-color="#3B66C8"/>
-                             <stop offset="0.75" stop-color="#1A51CB"/>
-                             <stop offset="1" stop-color="#0032A3"/>
-                           </linearGradient>
-                           <clipPath id="clip0_4647_99311">
-                             <rect width="56" height="56" fill="white"/>
-                           </clipPath>
-                         </defs>
-                       </svg>
-                    </div>
-                    <div class="d-flex flex-column gap-1">
-                     <a href="SellerProfile.html"><Span class="subHeading-3">Seller Profile</Span></a>
-                     <span class="fs-14">Manage Seller Profile</span>
-                    </div>
-                   
-                     </div>
-                    </a>
-                    <div class="col-4 d-flex gap-3 settingsBusinessInformationCol">
-                      <div class="settingsBusinessInformation">
-                        <a href="bussinessInformation.html">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
-                            <path d="M51.3307 18.666C51.3309 18.2426 51.2156 17.8271 50.9971 17.4643L44.6761 6.92935C44.2596 6.24064 43.673 5.67069 42.9726 5.2743C42.2722 4.87791 41.4815 4.66843 40.6767 4.66602H15.3181C13.6894 4.66602 12.1564 5.53402 11.3187 6.93168L4.99773 17.4643C4.77921 17.8271 4.66384 18.2426 4.66406 18.666C4.66406 21.011 5.56473 23.132 6.9974 24.7747V46.666C6.9974 47.2849 7.24323 47.8783 7.68081 48.3159C8.1184 48.7535 8.71189 48.9993 9.33073 48.9993H27.9974C28.6162 48.9993 29.2097 48.7535 29.6473 48.3159C30.0849 47.8783 30.3307 47.2849 30.3307 46.666V34.9993H39.6641V46.666C39.6641 47.2849 39.9099 47.8783 40.3475 48.3159C40.7851 48.7535 41.3786 48.9993 41.9974 48.9993H46.6641C47.2829 48.9993 47.8764 48.7535 48.314 48.3159C48.7516 47.8783 48.9974 47.2849 48.9974 46.666V24.7747C50.4301 23.132 51.3307 21.011 51.3307 18.666ZM46.6267 19.2517C46.4832 20.3785 45.934 21.4143 45.0819 22.1655C44.2298 22.9166 43.1333 23.3316 41.9974 23.3327C39.4237 23.3327 37.3307 21.2397 37.3307 18.666C37.3307 18.5073 37.2724 18.3673 37.2397 18.218L37.2864 18.2087L35.5107 9.33268H40.6767L46.6267 19.2517ZM23.3471 18.8177L25.2417 9.33268H30.7507L32.6477 18.8177C32.5661 21.3213 30.5174 23.3327 27.9974 23.3327C25.4774 23.3327 23.4287 21.3213 23.3471 18.8177ZM15.3181 9.33268H20.4841L18.7107 18.2087L18.7574 18.218C18.7224 18.3673 18.6641 18.5073 18.6641 18.666C18.6641 21.2397 16.5711 23.3327 13.9974 23.3327C12.8615 23.3316 11.7649 22.9166 10.9129 22.1655C10.0608 21.4143 9.51161 20.3785 9.36806 19.2517L15.3181 9.33268ZM23.3307 37.3327H13.9974V30.3327H23.3307V37.3327Z" fill="url(#paint0_linear_4647_99313)"/>
-                            <defs>
-                              <linearGradient id="paint0_linear_4647_99313" x1="4.66406" y1="26.8327" x2="51.3307" y2="26.8327" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#0032A3"/>
-                                <stop offset="0.25" stop-color="#1A51CB"/>
-                                <stop offset="0.5" stop-color="#3B66C8"/>
-                                <stop offset="0.75" stop-color="#1A51CB"/>
-                                <stop offset="1" stop-color="#0032A3"/>
-                              </linearGradient>
-                            </defs>
-                          </svg>
-                      </a>
-                           
-                        </div>
-                        <div class="d-flex flex-column gap-1">
-                        <a href="bussinessInformation.html"><Span class="subHeading-3">Business Information</Span></a> 
-                         <span class="fs-14">Manage Brand</span>
-                        </div>
-                       
-                         </div>
-                
-                     <div class="col-4 d-flex gap-3 settingsBusinessInformationCol">
-                      <div class="settingsBusinessInformation">
-                        <a href="../Products/brandInformation.html"> <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M22.3797 7.46665C21.8115 7.95089 21.5273 8.19304 21.2239 8.39642C20.5283 8.86262 19.7471 9.18618 18.9256 9.34837C18.5673 9.41914 18.1951 9.44882 17.4509 9.5082C15.581 9.65744 14.6461 9.73204 13.8661 10.0076C12.0619 10.6448 10.6428 12.0639 10.0056 13.868C9.73008 14.648 9.65549 15.583 9.50625 17.4529C9.44687 18.1971 9.41719 18.5692 9.34642 18.9276C9.18423 19.7491 8.86066 20.5303 8.39446 21.2258C8.19109 21.5293 7.94896 21.8134 7.4647 22.3816C6.24801 23.8094 5.63963 24.5232 5.28291 25.2696C4.45778 26.996 4.45778 29.0027 5.28291 30.7291C5.63966 31.4756 6.24801 32.1893 7.4647 33.6171C7.94889 34.1853 8.19109 34.4695 8.39446 34.7728C8.86066 35.4684 9.18423 36.2496 9.34642 37.0711C9.41719 37.4295 9.44687 37.8017 9.50625 38.5458C9.65549 40.4157 9.73008 41.3507 10.0056 42.1307C10.6428 43.9348 12.0619 45.354 13.8661 45.9912C14.6461 46.2666 15.581 46.3412 17.4509 46.4906C18.1951 46.5498 18.5673 46.5797 18.9256 46.6504C19.7471 46.8125 20.5283 47.1362 21.2239 47.6024C21.5273 47.8056 21.8114 48.0478 22.3797 48.532C23.8074 49.7488 24.5212 50.3571 25.2676 50.7139C26.9941 51.539 29.0007 51.539 30.7272 50.7139C31.4736 50.3571 32.1874 49.7488 33.6151 48.532C34.1833 48.0478 34.4675 47.8056 34.7708 47.6024C35.4664 47.1362 36.2476 46.8125 37.0692 46.6504C37.4276 46.5797 37.7997 46.5498 38.5438 46.4906C40.4138 46.3412 41.3487 46.2666 42.1288 45.9912C43.9329 45.354 45.352 43.9348 45.9893 42.1307C46.2646 41.3507 46.3393 40.4157 46.4886 38.5458C46.5479 37.8017 46.5777 37.4295 46.6484 37.0711C46.8106 36.2496 47.1342 35.4684 47.6004 34.7728C47.8037 34.4695 48.0459 34.1853 48.53 33.6171C49.7469 32.1893 50.3552 31.4756 50.7119 30.7291C51.537 29.0027 51.537 26.996 50.7119 25.2696C50.3552 24.5232 49.7469 23.8094 48.53 22.3816C48.0459 21.8134 47.8037 21.5293 47.6004 21.2258C47.1342 20.5303 46.8106 19.7491 46.6484 18.9276C46.5777 18.5692 46.5479 18.1971 46.4886 17.4529C46.3393 15.583 46.2646 14.648 45.9893 13.868C45.352 12.0639 43.9329 10.6448 42.1288 10.0076C41.3487 9.73204 40.4138 9.65744 38.5438 9.5082C37.7997 9.44882 37.4276 9.41914 37.0692 9.34837C36.2476 9.18618 35.4664 8.86262 34.7708 8.39642C34.4675 8.19304 34.1833 7.95091 33.6151 7.46665C32.1874 6.24996 31.4736 5.64161 30.7272 5.28487C29.0007 4.45973 26.9941 4.45973 25.2676 5.28487C24.5212 5.64159 23.8074 6.24996 22.3797 7.46665ZM38.2022 23.0133C38.9438 22.2717 38.9438 21.0694 38.2022 20.3277C37.4607 19.5861 36.2581 19.5861 35.5166 20.3277L24.1994 31.645L20.4781 27.9238C19.7365 27.1822 18.5341 27.1822 17.7925 27.9238C17.0509 28.6653 17.0509 29.8677 17.7925 30.6094L22.8566 35.6735C23.5981 36.415 24.8005 36.415 25.5423 35.6735L38.2022 23.0133Z" fill="url(#paint0_linear_4647_99315)"/>
-                          <defs>
-                            <linearGradient id="paint0_linear_4647_99315" x1="4.66406" y1="27.9994" x2="51.3307" y2="27.9994" gradientUnits="userSpaceOnUse">
-                              <stop stop-color="#0032A3"/>
-                              <stop offset="0.25" stop-color="#1A51CB"/>
-                              <stop offset="0.5" stop-color="#3B66C8"/>
-                              <stop offset="0.75" stop-color="#1A51CB"/>
-                              <stop offset="1" stop-color="#0032A3"/>
-                            </linearGradient>
-                          </defs>
-                        </svg></a>
-                           
-                        </div>
-                        <div class="d-flex flex-column gap-1">
-                        <a href="../Products/brandInformation.html"><Span class="subHeading-3">Brand</Span></a> 
-                         <span class="fs-14">Manage Brand</span>
-                        </div>
-                       
-                         </div>
-                         <div class="col-4 d-flex gap-3 settingsBusinessInformationCol">
-                            <div class="settingsBusinessInformation">
-                               <a href="AccountSetting.html"><svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M25.4181 7.01555C23.8501 4.38005 20.4185 3.39893 17.7132 4.99813L13.6882 7.30143C10.7195 8.99853 9.71288 12.8039 11.4088 15.7391L11.41 15.7412C12.2849 17.2506 12.1476 18.2148 11.8745 18.6886C11.6012 19.1628 10.8362 19.7636 9.0974 19.7636C5.67491 19.7636 2.91406 22.5598 2.91406 25.947V30.0536C2.91406 33.4409 5.67491 36.237 9.0974 36.237C10.8362 36.237 11.6012 36.8378 11.8745 37.3119C12.1476 37.7858 12.2849 38.75 11.41 40.2594L11.4088 40.2615C9.71288 43.1968 10.7204 47.0027 13.6892 48.6998L17.7134 51.0025C20.4187 52.6016 23.8501 51.6206 25.4181 48.9851L25.6853 48.5238C26.5603 47.0144 27.4677 46.6495 28.0177 46.6495C28.5653 46.6495 29.4658 47.0114 30.3291 48.5173L30.3328 48.5238L30.5895 48.9672L30.6 48.9851C32.168 51.6206 35.5994 52.6016 38.3047 51.0025L42.3299 48.6993C45.3007 47.0009 46.301 43.2218 44.6135 40.2687L44.6082 40.2594C43.7332 38.75 43.8706 37.7858 44.1436 37.3119C44.4168 36.8378 45.1819 36.237 46.9207 36.237C50.3433 36.237 53.1041 33.4409 53.1041 30.0536V25.947C53.1041 22.5245 50.3078 19.7636 46.9207 19.7636C45.1819 19.7636 44.4168 19.1628 44.1436 18.6886C43.8706 18.2148 43.7332 17.2506 44.6082 15.7412L44.6093 15.7391C46.3054 12.8036 45.2984 8.99772 42.329 7.30089L38.3049 4.99813C35.5996 3.39893 32.168 4.37996 30.6 7.01548L30.3328 7.47683C29.4578 8.98631 28.5504 9.35115 28.0002 9.35115C27.4528 9.35115 26.5524 8.98939 25.689 7.48331L25.6853 7.47683L25.4286 7.03345L25.4181 7.01555ZM34.9974 28.0003C34.9974 31.8664 31.8635 35.0003 27.9974 35.0003C24.1313 35.0003 20.9974 31.8664 20.9974 28.0003C20.9974 24.1342 24.1313 21.0003 27.9974 21.0003C31.8635 21.0003 34.9974 24.1342 34.9974 28.0003Z" fill="url(#paint0_linear_4647_99320)"/>
-                                <defs>
-                                  <linearGradient id="paint0_linear_4647_99320" x1="2.91406" y1="28.0003" x2="53.1041" y2="28.0003" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#0032A3"/>
-                                    <stop offset="0.25" stop-color="#1A51CB"/>
-                                    <stop offset="0.5" stop-color="#3B66C8"/>
-                                    <stop offset="0.75" stop-color="#1A51CB"/>
-                                    <stop offset="1" stop-color="#0032A3"/>
-                                  </linearGradient>
-                                </defs>
-                              </svg></a> 
-                            </div>
-                            <div class="d-flex flex-column gap-1">
-                           <a href="AccountSetting.html"> <Span class="subHeading-3">Account Settings</Span></a> 
-                             <span class="fs-14">Manage Login Account</span>
-                            </div>
-                           
-                             </div>
-                 </div>
-                 <div class="d-flex justify-content-between mt-40">
-                    <span class="heading-one">Finance</span>
-                         </div>
-                 <div class="row d-flex gap-2 mt-20">
-                    <div class="col-4 d-flex gap-3 settingsBusinessInformationCol">
-                        <div class="settingsFinance">
-                           <a href="BankAccount.html">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
-                            <path d="M51.3307 44.3333V51.3333H4.66406V44.3333C4.66406 43.05 5.71406 42 6.9974 42H48.9974C50.2807 42 51.3307 43.05 51.3307 44.3333Z" fill="url(#paint0_linear_4647_99324)" stroke="url(#paint1_linear_4647_99324)" stroke-width="3.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16.3307 25.666H11.6641V41.9993H16.3307V25.666Z" fill="url(#paint2_linear_4647_99324)"/>
-                            <path d="M25.6667 25.666H21V41.9993H25.6667V25.666Z" fill="url(#paint3_linear_4647_99324)"/>
-                            <path d="M35.0026 25.666H30.3359V41.9993H35.0026V25.666Z" fill="url(#paint4_linear_4647_99324)"/>
-                            <path d="M44.3307 25.666H39.6641V41.9993H44.3307V25.666Z" fill="url(#paint5_linear_4647_99324)"/>
-                            <path d="M53.6693 53.084H2.33594C1.37927 53.084 0.585938 52.2907 0.585938 51.334C0.585938 50.3773 1.37927 49.584 2.33594 49.584H53.6693C54.6259 49.584 55.4193 50.3773 55.4193 51.334C55.4193 52.2907 54.6259 53.084 53.6693 53.084Z" fill="url(#paint6_linear_4647_99324)"/>
-                            <path d="M49.8607 13.417L28.8607 5.01695C28.3941 4.83029 27.6007 4.83029 27.1341 5.01695L6.13406 13.417C5.3174 13.7436 4.66406 14.7003 4.66406 15.587V23.3336C4.66406 24.6169 5.71406 25.6669 6.9974 25.6669H48.9974C50.2807 25.6669 51.3307 24.6169 51.3307 23.3336V15.587C51.3307 14.7003 50.6774 13.7436 49.8607 13.417ZM27.9974 19.8336C26.0607 19.8336 24.4974 18.2703 24.4974 16.3336C24.4974 14.397 26.0607 12.8336 27.9974 12.8336C29.9341 12.8336 31.4974 14.397 31.4974 16.3336C31.4974 18.2703 29.9341 19.8336 27.9974 19.8336Z" fill="url(#paint7_linear_4647_99324)"/>
-                            <defs>
-                              <linearGradient id="paint0_linear_4647_99324" x1="4.66406" y1="46.6667" x2="51.3307" y2="46.6667" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#FFC136"/>
-                                <stop offset="0.197568" stop-color="#FAC142"/>
-                                <stop offset="0.525" stop-color="#FFD168"/>
-                                <stop offset="0.771328" stop-color="#F5BC3A"/>
-                                <stop offset="1" stop-color="#E09B00"/>
-                              </linearGradient>
-                              <linearGradient id="paint1_linear_4647_99324" x1="4.66406" y1="46.6667" x2="51.3307" y2="46.6667" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#FFC136"/>
-                                <stop offset="0.197568" stop-color="#FAC142"/>
-                                <stop offset="0.525" stop-color="#FFD168"/>
-                                <stop offset="0.771328" stop-color="#F5BC3A"/>
-                                <stop offset="1" stop-color="#E09B00"/>
-                              </linearGradient>
-                              <linearGradient id="paint2_linear_4647_99324" x1="11.6641" y1="33.8327" x2="16.3307" y2="33.8327" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#FFC136"/>
-                                <stop offset="0.197568" stop-color="#FAC142"/>
-                                <stop offset="0.525" stop-color="#FFD168"/>
-                                <stop offset="0.771328" stop-color="#F5BC3A"/>
-                                <stop offset="1" stop-color="#E09B00"/>
-                              </linearGradient>
-                              <linearGradient id="paint3_linear_4647_99324" x1="21" y1="33.8327" x2="25.6667" y2="33.8327" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#FFC136"/>
-                                <stop offset="0.197568" stop-color="#FAC142"/>
-                                <stop offset="0.525" stop-color="#FFD168"/>
-                                <stop offset="0.771328" stop-color="#F5BC3A"/>
-                                <stop offset="1" stop-color="#E09B00"/>
-                              </linearGradient>
-                              <linearGradient id="paint4_linear_4647_99324" x1="30.3359" y1="33.8327" x2="35.0026" y2="33.8327" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#FFC136"/>
-                                <stop offset="0.197568" stop-color="#FAC142"/>
-                                <stop offset="0.525" stop-color="#FFD168"/>
-                                <stop offset="0.771328" stop-color="#F5BC3A"/>
-                                <stop offset="1" stop-color="#E09B00"/>
-                              </linearGradient>
-                              <linearGradient id="paint5_linear_4647_99324" x1="39.6641" y1="33.8327" x2="44.3307" y2="33.8327" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#FFC136"/>
-                                <stop offset="0.197568" stop-color="#FAC142"/>
-                                <stop offset="0.525" stop-color="#FFD168"/>
-                                <stop offset="0.771328" stop-color="#F5BC3A"/>
-                                <stop offset="1" stop-color="#E09B00"/>
-                              </linearGradient>
-                              <linearGradient id="paint6_linear_4647_99324" x1="0.585938" y1="51.334" x2="55.4193" y2="51.334" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#FFC136"/>
-                                <stop offset="0.197568" stop-color="#FAC142"/>
-                                <stop offset="0.525" stop-color="#FFD168"/>
-                                <stop offset="0.771328" stop-color="#F5BC3A"/>
-                                <stop offset="1" stop-color="#E09B00"/>
-                              </linearGradient>
-                              <linearGradient id="paint7_linear_4647_99324" x1="4.66406" y1="15.2719" x2="51.3307" y2="15.2719" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#FFC136"/>
-                                <stop offset="0.197568" stop-color="#FAC142"/>
-                                <stop offset="0.525" stop-color="#FFD168"/>
-                                <stop offset="0.771328" stop-color="#F5BC3A"/>
-                                <stop offset="1" stop-color="#E09B00"/>
-                              </linearGradient>
-                            </defs>
-                          </svg>
-                        </a> 
-                        </div>
-                        <div class="d-flex flex-column gap-1">
-                        <a href="BankAccount.html"> <Span class="subHeading-3">Bank Account</Span></a>     
-                         <span class="fs-14">Manage Seller Bank</span>
-                        </div>
-                       
-                         </div>
-                         <div class="col-4 d-flex gap-3 settingsBusinessInformationCol">
-                            <div class="settingsFinance">
-                              <a href="Commission.html"><svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M28.1265 2.91602H27.8839C25.7874 2.91595 24.0392 2.9159 22.6514 3.10248C21.1866 3.29943 19.864 3.73266 18.8013 4.79542C17.7385 5.85819 17.3053 7.18072 17.1083 8.64556C16.9746 9.64043 16.9367 12.0194 16.9261 14.0592C12.2075 14.2133 9.37438 14.7642 7.40554 16.733C4.67188 19.4667 4.67188 23.8666 4.67188 32.666C4.67188 41.4655 4.67188 45.8655 7.40554 48.5989C10.1392 51.3327 14.539 51.3327 23.3385 51.3327H32.6719C41.4713 51.3327 45.8713 51.3327 48.6048 48.5989C51.3385 45.8655 51.3385 41.4655 51.3385 32.666C51.3385 23.8666 51.3385 19.4667 48.6048 16.733C46.6359 14.7642 43.803 14.2133 39.0843 14.0592C39.0736 12.0194 39.0358 9.64043 38.9021 8.64556C38.7052 7.18072 38.2719 5.85819 37.209 4.79542C36.1464 3.73266 34.8239 3.29943 33.359 3.10248C31.9712 2.9159 30.223 2.91595 28.1265 2.91602ZM35.5836 14.0037C35.5731 12.0282 35.5395 9.90218 35.4334 9.11195C35.2885 8.03519 35.0383 7.57438 34.7343 7.2703C34.4303 6.96622 33.9694 6.71604 32.8926 6.57128C31.7656 6.41975 30.2545 6.41602 28.0052 6.41602C25.7559 6.41602 24.2448 6.41975 23.1178 6.57128C22.041 6.71604 21.5802 6.96622 21.2762 7.2703C20.9721 7.57438 20.7219 8.03519 20.5771 9.11195C20.4709 9.90218 20.4373 12.0282 20.4267 14.0037C21.34 13.9994 22.3092 13.9994 23.3385 13.9994H32.6719C33.7013 13.9994 34.6704 13.9994 35.5836 14.0037ZM28.0052 21.5827C28.9717 21.5827 29.7552 22.3662 29.7552 23.3327V23.3565C32.2957 23.9965 34.4219 25.9997 34.4219 28.7771C34.4219 29.7435 33.6383 30.5271 32.6719 30.5271C31.7054 30.5271 30.9219 29.7435 30.9219 28.7771C30.9219 27.8811 29.9283 26.6383 28.0052 26.6383C26.0821 26.6383 25.0885 27.8811 25.0885 28.7771C25.0885 29.6733 26.0821 30.916 28.0052 30.916C31.2366 30.916 34.4219 33.1556 34.4219 36.555C34.4219 39.3324 32.2957 41.3355 29.7552 41.9756V41.9994C29.7552 42.9658 28.9717 43.7494 28.0052 43.7494C27.0387 43.7494 26.2552 42.9658 26.2552 41.9994V41.9756C23.7147 41.3355 21.5885 39.3324 21.5885 36.555C21.5885 35.5885 22.3721 34.805 23.3385 34.805C24.305 34.805 25.0885 35.5885 25.0885 36.555C25.0885 37.451 26.0821 38.6937 28.0052 38.6937C29.9283 38.6937 30.9219 37.451 30.9219 36.555C30.9219 35.6588 29.9283 34.416 28.0052 34.416C24.7738 34.416 21.5885 32.1767 21.5885 28.7771C21.5885 25.9997 23.7147 23.9965 26.2552 23.3565V23.3327C26.2552 22.3662 27.0387 21.5827 28.0052 21.5827Z" fill="url(#paint0_linear_4647_99332)"/>
-                                <defs>
-                                  <linearGradient id="paint0_linear_4647_99332" x1="4.67188" y1="27.1243" x2="51.3385" y2="27.1243" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#FFC136"/>
-                                    <stop offset="0.197568" stop-color="#FAC142"/>
-                                    <stop offset="0.525" stop-color="#FFD168"/>
-                                    <stop offset="0.771328" stop-color="#F5BC3A"/>
-                                    <stop offset="1" stop-color="#E09B00"/>
-                                  </linearGradient>
-                                </defs>
-                              </svg></a>
-                              
-                            </div>
-                            <div class="d-flex flex-column gap-1">
-                          <a href="Commission.html"> <Span class="subHeading-3">Comission</Span></a>  
-                             <span class="fs-14">Manage Commission</span>
-                            </div>
-                           
-                             </div>
-                 </div>
-                 <div class="d-flex justify-content-between mt-40">
-                    <span class="heading-one">Logistic</span>
-                         </div>
-                 <div class="row d-flex gap-2 mt-20">
-                    <div class="col-4 d-flex gap-3 settingsBusinessInformationCol">
-                        <div class="settingsFinance">
-                           <a href="InvoiceNumber.html"><svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
-                            <path d="M42.0026 4.66602H14.0026C12.7649 4.66602 11.5779 5.15768 10.7028 6.03285C9.8276 6.90802 9.33594 8.09501 9.33594 9.33268V51.3327L16.3359 44.3327L21.0026 51.3327L28.0026 44.3327L35.0026 51.3327L39.6693 44.3327L46.6693 51.3327V9.33268C46.6693 8.09501 46.1776 6.90802 45.3024 6.03285C44.4273 5.15768 43.2403 4.66602 42.0026 4.66602ZM28.0026 37.3327H18.6693C18.0504 37.3327 17.4569 37.0868 17.0194 36.6493C16.5818 36.2117 16.3359 35.6182 16.3359 34.9993C16.3359 34.3805 16.5818 33.787 17.0194 33.3494C17.4569 32.9118 18.0504 32.666 18.6693 32.666H28.0026C28.6214 32.666 29.2149 32.9118 29.6525 33.3494C30.0901 33.787 30.3359 34.3805 30.3359 34.9993C30.3359 35.6182 30.0901 36.2117 29.6525 36.6493C29.2149 37.0868 28.6214 37.3327 28.0026 37.3327ZM28.0026 27.9993H18.6693C18.0504 27.9993 17.4569 27.7535 17.0194 27.3159C16.5818 26.8783 16.3359 26.2849 16.3359 25.666C16.3359 25.0472 16.5818 24.4537 17.0194 24.0161C17.4569 23.5785 18.0504 23.3327 18.6693 23.3327H28.0026C28.6214 23.3327 29.2149 23.5785 29.6525 24.0161C30.0901 24.4537 30.3359 25.0472 30.3359 25.666C30.3359 26.2849 30.0901 26.8783 29.6525 27.3159C29.2149 27.7535 28.6214 27.9993 28.0026 27.9993ZM37.3359 37.3327H35.0026C34.3838 37.3327 33.7903 37.0868 33.3527 36.6493C32.9151 36.2117 32.6693 35.6182 32.6693 34.9993C32.6693 34.3805 32.9151 33.787 33.3527 33.3494C33.7903 32.9118 34.3838 32.666 35.0026 32.666H37.3359C37.9548 32.666 38.5483 32.9118 38.9859 33.3494C39.4234 33.787 39.6693 34.3805 39.6693 34.9993C39.6693 35.6182 39.4234 36.2117 38.9859 36.6493C38.5483 37.0868 37.9548 37.3327 37.3359 37.3327ZM37.3359 27.9993H35.0026C34.3838 27.9993 33.7903 27.7535 33.3527 27.3159C32.9151 26.8783 32.6693 26.2849 32.6693 25.666C32.6693 25.0472 32.9151 24.4537 33.3527 24.0161C33.7903 23.5785 34.3838 23.3327 35.0026 23.3327H37.3359C37.9548 23.3327 38.5483 23.5785 38.9859 24.0161C39.4234 24.4537 39.6693 25.0472 39.6693 25.666C39.6693 26.2849 39.4234 26.8783 38.9859 27.3159C38.5483 27.7535 37.9548 27.9993 37.3359 27.9993ZM37.3359 16.3327H18.6693C18.0504 16.3327 17.4569 16.0868 17.0194 15.6493C16.5818 15.2117 16.3359 14.6182 16.3359 13.9993C16.3359 13.3805 16.5818 12.787 17.0194 12.3494C17.4569 11.9118 18.0504 11.666 18.6693 11.666H37.3359C37.9548 11.666 38.5483 11.9118 38.9859 12.3494C39.4234 12.787 39.6693 13.3805 39.6693 13.9993C39.6693 14.6182 39.4234 15.2117 38.9859 15.6493C38.5483 16.0868 37.9548 16.3327 37.3359 16.3327Z" fill="#FB6514"/>
-                          </svg></a> 
-                        </div>
-                        <div class="d-flex flex-column gap-1">
-                       <a href="InvoiceNumber.html"><Span class="subHeading-3">Invoice Number</Span></a>
-                         <span class="fs-14">Manage Invoice Number</span>
-                        </div>
-                       
-                         </div>
-                         <div class="col-4 d-flex gap-3 settingsBusinessInformationCol">
-                            <div class="settingsFinance">
-                             <a href="Warehouse.html"> <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
-                              <g clip-path="url(#clip0_4647_99336)">
-                                <path d="M22.7499 28H21V31.5H19.25V28H17.5C15.5671 28 14 29.5671 14 31.5V36.7499C14 38.6828 15.5671 40.2499 17.5 40.2499H22.7499C24.6828 40.2499 26.2499 38.6828 26.2499 36.7499V31.5C26.2499 29.5671 24.6828 28 22.7499 28Z" fill="#FB6514"/>
-                                <path d="M38.4999 28H36.75V31.5H35V28H33.25C31.3171 28 29.75 29.5671 29.75 31.5V36.7499C29.75 38.6828 31.3171 40.2499 33.25 40.2499H38.4999C40.4328 40.2499 41.9999 38.6828 41.9999 36.7499V31.5C41.9999 29.5671 40.4328 28 38.4999 28Z" fill="#FB6514"/>
-                                <path d="M22.7499 43.75H21V47.25H19.25V43.75H17.5C15.5671 43.75 14 45.3171 14 47.25V52.4999C14 54.4328 15.5671 55.9999 17.5 55.9999H22.7499C24.6828 55.9999 26.2499 54.4328 26.2499 52.4999V47.25C26.2499 45.3171 24.6828 43.75 22.7499 43.75Z" fill="#FB6514"/>
-                                <path d="M38.4999 43.75H36.75V47.25H35V43.75H33.25C31.3171 43.75 29.75 45.3171 29.75 47.25V52.4999C29.75 54.4328 31.3171 55.9999 33.25 55.9999H38.4999C40.4328 55.9999 41.9999 54.4328 41.9999 52.4999V47.25C41.9999 45.3171 40.4328 43.75 38.4999 43.75Z" fill="#FB6514"/>
-                                <path d="M54.0653 12.6191L29.5654 0.369138C28.5793 -0.123046 27.4207 -0.123046 26.4346 0.369138L1.93472 12.6191C0.482994 13.3454 -0.279236 14.974 0.0941685 16.554C0.466698 18.1339 1.85958 19.2499 3.5002 19.2499V52.4997C3.5002 54.4326 5.06731 55.9997 7.00017 55.9997C8.93304 55.9997 10.5002 54.4326 10.5002 52.4997V24.4999H45.5V52.4997C45.5 54.4326 47.0671 55.9997 48.9999 55.9997C50.9328 55.9997 52.4999 54.4326 52.4999 52.4997V19.2499C54.1405 19.2499 55.5333 18.1339 55.9059 16.554C56.2792 14.974 55.5171 13.3453 54.0653 12.6191ZM21.0001 17.4999H17.5001V13.9999H21.0001V17.4999ZM31.5 17.4999H24.5001V13.9999H31.5V17.4999ZM38.5 17.4999H35V13.9999H38.5V17.4999Z" fill="#FB6514"/>
-                              </g>
-                              <defs>
-                                <clipPath id="clip0_4647_99336">
-                                  <rect width="56" height="56" fill="white"/>
-                                </clipPath>
-                              </defs>
-                            </svg></a>  
-                            </div>
-                            <div class="d-flex flex-column gap-1">
-                           <a href="Warehouse.html"><Span class="subHeading-3">Warehouse</Span></a>  
-                             <span class="fs-14">Your Delivery Address</span>
-                            </div>
-                           
-                             </div>
-                             <div class="col-4 d-flex gap-3 settingsBusinessInformationCol">
-                                <div class="settingsLogistic">
-                                   <a href="shippingProvider.html"><svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
-                                    <path d="M29.26 24.8959L28 25.5259L26.74 24.8959L8.07333 15.5626L26.74 5.06261C27.0947 4.85782 27.4971 4.75 27.9067 4.75C28.3163 4.75 28.7186 4.85782 29.0733 5.06261L47.74 15.5626L38.4067 20.2293C38.3482 20.1672 38.2764 20.1194 38.1967 20.0893L28.8633 15.4226C28.3194 15.1961 27.71 15.1838 27.1574 15.388C26.6048 15.5923 26.1499 15.998 25.8841 16.5238C25.6182 17.0496 25.5611 17.6564 25.7242 18.2226C25.8873 18.7887 26.2585 19.2722 26.7633 19.5759L33.2267 22.8193L29.26 24.8959ZM7 17.6393V38.6393C7.00071 39.0527 7.11127 39.4586 7.32037 39.8153C7.52946 40.172 7.82958 40.4667 8.19 40.6693L26.8567 51.1459V27.8126L25.69 27.2293L7 17.6393ZM49 17.6393L39.6667 22.3059V32.6659C39.6667 33.2848 39.4208 33.8783 38.9832 34.3159C38.5457 34.7534 37.9522 34.9993 37.3333 34.9993C36.7145 34.9993 36.121 34.7534 35.6834 34.3159C35.2458 33.8783 35 33.2848 35 32.6659V24.6393L29.1667 27.5559V50.8893L47.8333 40.4126C48.1727 40.2172 48.4575 39.9395 48.6614 39.6052C48.8653 39.2708 48.9817 38.8905 49 38.4993V17.4993C49.0123 17.5206 49.0188 17.5447 49.0188 17.5693C49.0188 17.5938 49.0123 17.618 49 17.6393Z" fill="#FB6514"/>
-                                  </svg>
-                                </a> 
-                                </div>
-                                <div class="d-flex flex-column gap-1">
-                                <a href="shippingProvider.html"><Span class="subHeading-3">Shipping Provider</Span></a> 
-                                 <span class="fs-14">Manage Shipping Provider</span>
-                                </div>
-                                </div>
-                 </div>
-                 <div class="d-flex justify-content-between mt-40">
-                    <span class="heading-one">User Management</span>
-                         </div>
-                 <div class="row d-flex gap-2 mt-20">
-                    <div class="col-4 d-flex gap-3 settingsBusinessInformationCol">
-                        <div class="settingsUserManagemnt">
-                        <a href="ManageSubAccount.html"><svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
-                          <path d="M27.9974 23.3327C33.1521 23.3327 37.3307 19.154 37.3307 13.9993C37.3307 8.84469 33.1521 4.66602 27.9974 4.66602C22.8427 4.66602 18.6641 8.84469 18.6641 13.9993C18.6641 19.154 22.8427 23.3327 27.9974 23.3327Z" fill="#12B76A"/>
-                          <path d="M46.6693 40.834C46.6693 46.633 46.6693 51.334 28.0026 51.334C9.33594 51.334 9.33594 46.633 9.33594 40.834C9.33594 35.035 17.6933 30.334 28.0026 30.334C38.312 30.334 46.6693 35.035 46.6693 40.834Z" fill="#12B76A"/>
-                        </svg></a>
-                        </div>
-                        <div class="d-flex flex-column gap-1">
-                         <a href="ManageSubAccount.html" id=""><span class="subHeading-3">Manage Users</span></a>
-                         <span class="fs-14">Manage Login Manage Users</span>
-                        </div>
-                       
-                         </div>
-                         <div class="col-4 d-flex gap-3 settingsBusinessInformationCol">
-                            <div class="settingsUserManagemnt">
-                            <a href="ManageSubAccount.html"> <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
-                              <path d="M36.7563 32.3318C36.7769 32.3318 36.7924 32.3284 36.8113 32.3284C36.8371 32.3284 36.856 32.3318 36.8835 32.3318H36.7563ZM29.6546 24.4136C29.6753 24.4085 29.689 24.3878 29.7097 24.3827C30.9543 28.8868 34.1759 32.2545 37.4474 32.3284C40.4283 32.1909 44.0883 28.8833 45.3071 24.405C45.8676 24.4394 46.428 23.7793 46.5862 22.8596C46.7495 21.8986 46.4074 21.0425 45.8297 20.9427C45.7919 20.9376 45.7558 20.9599 45.718 20.9617C45.5478 13.5506 42.0305 10.9392 37.5952 10.8258C33.0258 10.8481 28.9326 14.025 29.1905 20.9617C29.1492 20.9617 29.1062 20.9342 29.065 20.9427C28.4856 21.0425 28.1453 21.9003 28.3103 22.8596C28.4702 23.8102 29.0719 24.5099 29.6546 24.4136ZM37.1001 10.8103H36.538C36.6806 10.8086 36.8199 10.8172 36.9591 10.8206C37.0073 10.8206 37.0554 10.8103 37.1001 10.8103ZM11.9702 37.6181H9.3743L12.6269 34.3673C5.35503 35.079 0 37.8485 0 45.1925H15.9379L10.1685 39.4266L11.9702 37.6181ZM43.6069 33.6143L39.4553 41.7405L38.8003 36.456L39.8249 35.6171H37.3408H35.0698L36.0979 36.456L35.4412 41.7405L31.293 33.6143C24.0778 34.5822 18.8982 37.6748 18.8982 45.1925H56C55.9983 37.6748 50.8186 34.5822 43.6069 33.6143ZM23.6051 22.6361C23.3696 25.868 21.9909 29.6432 20.0104 31.6666H27.6656V23.1277C27.6656 14.1987 22.9432 10.8086 17.1206 10.8086C11.2963 10.8086 6.57559 14.197 6.57559 23.1277V31.6666H14.2291C12.314 29.7085 10.9524 26.1104 10.6516 22.9507L10.7255 22.9455C14.0211 22.9455 16.8645 21.5805 18.4289 19.5692C19.5738 21.0442 21.4081 22.1427 23.6051 22.6361Z" fill="#12B76A"/>
-                            </svg></a>   
-                            </div>
-                            <div class="d-flex flex-column gap-1">
-                          <a href="ManageSubAccount.html"><Span class="subHeading-3">Manage Roles</Span></a>   
-                             <span class="fs-14">Manage you login email/phone/passwords</span>
-                            </div>
-                           
-                             </div>
-                 </div>
-                 <div class="d-flex justify-content-between mt-40">
-                    <span class="heading-one">System</span>
-                         </div>
-                 <div class="row d-flex gap-2 mt-20">
-                    <div class="col-4 d-flex gap-3 settingsBusinessInformationCol">
-                        <div class="settingsSystem">
-                        <a href="notificationSetting.html"><svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
-                          <path d="M47.1062 32.8085L44.4695 28.4219C43.8862 27.4652 43.3728 25.6219 43.3728 24.5019V20.1385C43.3728 11.6685 36.4895 4.78516 28.0428 4.78516C19.5729 4.80849 12.6896 11.6685 12.6896 20.1385V24.4785C12.6896 25.5985 12.1762 27.4419 11.6162 28.3985L8.97957 32.7852C7.97624 34.4885 7.74291 36.4252 8.37291 38.1052C9.00291 39.8085 10.4262 41.1619 12.2929 41.7685C14.8129 42.6085 17.3562 43.2152 19.9462 43.6585C20.2029 43.7052 20.4596 43.7285 20.7162 43.7752C21.0429 43.8219 21.3929 43.8685 21.7429 43.9152C22.3496 44.0085 22.9562 44.0785 23.5862 44.1252C25.0562 44.2652 26.5495 44.3352 28.0428 44.3352C29.5128 44.3352 30.9828 44.2652 32.4295 44.1252C32.9662 44.0785 33.5028 44.0319 34.0162 43.9619C34.4362 43.9152 34.8562 43.8685 35.2762 43.7985C35.5328 43.7752 35.7895 43.7285 36.0462 43.6819C38.6595 43.2619 41.2495 42.6085 43.7695 41.7685C45.5662 41.1619 46.9428 39.8085 47.5962 38.0819C48.2495 36.3319 48.0628 34.4185 47.1062 32.8085ZM29.7462 23.3352C29.7462 24.3152 28.9528 25.1085 27.9728 25.1085C26.9928 25.1085 26.1995 24.3152 26.1995 23.3352V16.1018C26.1995 15.1218 26.9928 14.3285 27.9728 14.3285C28.9528 14.3285 29.7462 15.1218 29.7462 16.1018V23.3352Z" fill="#F04438"/>
-                          <path d="M34.6052 46.6893C33.6252 49.396 31.0352 51.3327 28.0019 51.3327C26.1586 51.3327 24.3386 50.586 23.0552 49.256C22.3085 48.556 21.7485 47.6227 21.4219 46.666C21.7252 46.7127 22.0285 46.736 22.3552 46.7827C22.8919 46.8527 23.4519 46.9227 24.0119 46.9693C25.3419 47.086 26.6952 47.156 28.0486 47.156C29.3786 47.156 30.7086 47.086 32.0152 46.9693C32.5052 46.9227 32.9952 46.8993 33.4619 46.8293C33.8352 46.7827 34.2086 46.736 34.6052 46.6893Z" fill="#F04438"/>
-                        </svg></a>    
-                        </div>
-                        <div class="d-flex flex-column gap-1">
-                       <a href="notificationSetting.html"><Span class="subHeading-3">Notification Settings</Span></a>  
-                         <span class="fs-14">Receive notification according to your preferences</span>
-                        </div>
-                       
-                         </div>
-                 </div>
+       </div>
+      
          </div>
        
-  
-        
-   </div>
-  
-   
-
-  
-  
- 
-  
-  </div>
     </main>
 
 

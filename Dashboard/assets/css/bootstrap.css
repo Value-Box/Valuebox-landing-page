@@ -2054,6 +2054,7 @@ textarea.form-control-lg {
 .form-select:disabled {
   color: #6c757d;
   background-color: #e9ecef;
+  opacity: 1;
 }
 .form-select:-moz-focusring {
   color: transparent;
@@ -9658,7 +9659,7 @@ line-height: 28px; /* 155.556% */
 }
 .TableWrapper table tbody tr {
   border-bottom: 1px solid #dbdbdb;
-  background-color: white;
+  background-color: #fcfcfc;
 }
 .input {
   display: flex;
@@ -9989,6 +9990,9 @@ font-size: 18px;
 font-style: normal;
 font-weight: 400;
 line-height: 28px
+}
+.Table-row-bg{
+  background-color: #F2F2F2 !important;
 }
 @media(max-width:1400px){
   .heading-one {
