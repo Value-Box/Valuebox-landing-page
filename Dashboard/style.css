@@ -1892,19 +1892,6 @@ background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
   height: 500px;
   overflow-y: auto;
  }
-.variant{
-  display: flex;
-padding: 10px 20px;
-align-items: center;
-gap: 10px;
-align-self: stretch;
-}
- .variant.active label {
-  color: #002882;
-}
-.variant.active{
-  background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
-}
 
  @media(max-width:1400px){
   .Order-detail-line{

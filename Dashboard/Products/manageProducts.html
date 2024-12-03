@@ -423,7 +423,7 @@
     <a class="active1" href="manageProducts.html">>Manage Product</a>
   </div>
  
-    <div class="container d-flex gap-5 mt-40">
+    <div class="container-fluid d-flex gap-5 mt-40">
        <div class="row w-100 p-0">
            <div class="col-12 manageproductsbuttons d-flex justify-content-center gap-2 m-0 p-0">
             <h3 class="text-dark me-auto heading-one p-0">Manage Products</h3>
@@ -447,34 +447,34 @@
            </div>
        </div>
        </div>
-       <div class="container mt-40">
+       <div class="container-fluid mt-40">
         <div class="card bg-transparent">
           <div class="card-content">
             <div class="card-body p-0">
-              <div class="list-group list-group-horizontal-sm mb-1 text-center allbar" role="tablist">
-                <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto active"
+              <div class="list-group d-flex gap-4 list-group-horizontal-sm mb-1 text-center allbar" role="tablist">
+                <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto active p-0"
                   id="list-all-list" data-bs-toggle="list" href="#list-all" role="tab">All</a>
-                <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto" id="list-active-list"
+                <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto p-0" id="list-active-list"
                   data-bs-toggle="list" href="#list-active" role="tab"> Active 
                   <span class="notification-badge">12</span></a>
-                  <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto" id="list-inactive-list"
+                  <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto p-0" id="list-inactive-list"
                   data-bs-toggle="list" href="#list-inactive" role="tab">Inactive 
                   <span class="notification-badge">27</span></a>
-                  <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto" id="list-draft-list"
+                  <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto p-0" id="list-draft-list"
                   data-bs-toggle="list" href="#list-draft" role="tab">Draft</a>
-                  <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto" id="list-pendingqc-list"
+                  <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto p-0" id="list-pendingqc-list"
                   data-bs-toggle="list" href="#list-pendingqc" role="tab">Pending QC</a>
-                  <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto" id="list-violation-list"
+                  <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto p-0" id="list-violation-list"
                   data-bs-toggle="list" href="#list-violation" role="tab">  Violation 
                   <span class="notification-badge">1</span></a>
-                  <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto" id="list-deleted-list"
+                  <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto p-0" id="list-deleted-list"
                   data-bs-toggle="list" href="#list-deleted" role="tab"> Deleted</a>
                  </div>
               <div class="tab-content text-justify ">
                 <div class="tab-pane fade show active" id="list-all" role="tabpanel"
                   aria-labelledby="list-all-list">
                   <form action="">
-                    <div class="container form1 mt-40">
+                    <div class="container-fluid form1 mt-40">
                    
                       <div class=" col d-flex gap-3 filterproduct py-2">
                           <span class="mt-2">Filter Product:</span>
@@ -482,14 +482,14 @@
                           <button class="btn-gray">Soon Out of stock</button>
                          </div>
                       <div class="row py-4 d-flex inputtitle ">
-                       <div class="col-3 ">
+                       <div class="col-xxl-3 col-6">
                         <div class="input-group">
                           <button class="btn titlebtn" type="button" id="button-addon2">Product Name</button>
-                          <input type="text" class="form-control form-select-input" placeholder="Please Input" aria-label="input" aria-describedby="button-addon2">
+                          <input type="text" class="form-control " placeholder="Please Input" aria-label="input" aria-describedby="button-addon2">
                          <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
                       </div>
                        </div>
-                       <div class="col-3">
+                       <div class="col-xxl-3 col-6">
                            <div class="input-group">
                                <label class="input-group-text" for="inputGroupSelect01">Select Category</label>
                                <select class="form-select" id="inputGroupSelect01">
@@ -500,7 +500,7 @@
                                </select>
                            </div>
                        </div>
-                       <div class="col-3 ">
+                       <div class="col-xxl-3 col-6">
                            <div class="input-group">
                                <label class="input-group-text title" for="inputGroupSelect01">Tags</label>
                                <select class="form-select" id="inputGroupSelect01">
@@ -511,7 +511,7 @@
                                </select>
                            </div>
                        </div>
-                       <div class="col-3">
+                       <div class="col-xxl-3 col-6">
                            <div class="input-group">
                                <label class="input-group-text title" for="inputGroupSelect01">Sort By</label>
                                <select class="form-select" id="inputGroupSelect01">
@@ -523,8 +523,9 @@
                            </div>
                        </div>
                       </div>
+                      
                      </div>
-                     <div class="container form1 mt-40">
+                     <div class="container-fluid form1 mt-40">
                       <div class="py-3 d-flex gap-2">
                        <button class="btn productsselectedbtn">32 Products Selected</button>
                        <button class="btn-gray">Deactivate</button>

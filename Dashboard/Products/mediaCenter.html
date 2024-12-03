@@ -414,7 +414,7 @@
     <a href="../index.html">Home</a>
     <a class="active1" href="mediaCenter.html">>Media Center</a>
   </div>      
-   <div class="container d-flex gap-5 mb-2 p-0">
+   <div class="container-fluid d-flex gap-5 mb-2 p-0">
       <div class="row w-100 m-0">
         <div class="col-12 manageproductsbuttons d-flex justify-content-center gap-2 m-0 p-0">
            <h3 class="text-dark me-auto heading-one">Media Center</h3>
@@ -422,14 +422,14 @@
       </div>
       </div>
       <form action="">
-      <div class="container form1 mt-40">
+      <div class="container-fluid form1 mt-40">
        <div class="row m-0">
            <div class="col-4 d-flex gap-2 p-0">
             <input class="d-none" type="file" id="img">
-               <label class="btn-blue cursor-pointer"  for="img">Upload Image</label>
-               <button class="btn-outline-blue">Select All</button>
+               <label class="btn-blue cursor-pointer h-auto"  for="img">Upload Image</label>
+               <button class="btn-outline-blue h-auto">Select All</button>
            </div>
-           <div class="col-8 d-flex gap-2 p-0">
+           <div class="col-8 d-flex justify-content-end gap-2 p-0">
                <div class="form-group position-relative d-flex gap-1 align-items-center startEndDate m-0">
                       <input type="date" class="form-control form-select-input"
                        placeholder="Start Date Date">
@@ -441,21 +441,21 @@
                <div class="d-flex gap-2">
                    <input type="text" class="form-control form-select-input"
                    placeholder="Search Picture">
-                   <button class="btn-outline-blue">Clear</button>
-                   <button class="btn-blue">Search</button>
+                   <button class="btn-outline-blue h-auto">Clear</button>
+                   <button class="btn-blue h-auto">Search</button>
                </div>
               </div>
            
        </div>
-       <div class="container p-0">
+       <div class="container-fluid p-0">
         <div class="card bg-transparent">
           <div class="card-content">
             <div class="card-body p-0 mt-40">
-              <div class="list-group list-group-horizontal-sm mb-1 text-center allbar" role="tablist">
-                  <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto active" id="list-images-list"
+              <div class="list-group d-flex gap-4 list-group-horizontal-sm mb-1 text-center allbar" role="tablist">
+                  <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto active p-0" id="list-images-list"
                   data-bs-toggle="list" href="#list-images" role="tab">Images
                   <span class="notification-badge">12</span></a>
-                  <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto" id="list-videos-list"
+                  <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto p-0" id="list-videos-list"
                   data-bs-toggle="list" href="#list-videos" role="tab">Videos
                   <span class="notification-badge">01</span></a>
                  </div>
@@ -498,7 +498,7 @@
                
         <div class="tab-pane fade" id="list-videos" role="tabpanel"
         aria-labelledby="list-videos-list">
-        <div class="row form1 mt-40 ">
+        <div class="row mt-40 ">
        <span>Deleted</span>
         </div>
       </div>

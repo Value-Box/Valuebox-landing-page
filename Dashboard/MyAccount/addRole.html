@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="../assets/css/app.css">
     <link rel="stylesheet" href="../assets/vendors/simple-datatables/style.css">
     <link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="stylesheet" href="../style.css" />
 </head>
@@ -357,10 +359,10 @@
                 <li class="submenu-item ">
                     <a href="../MyAccount/Settings.html">Settings</a>
                 </li>
-                <li class="submenu-item active">
-                    <a href="../MyAccount/ManageSubAccount.html">User Management</a>
-                </li>
                 <li class="submenu-item ">
+                  <a href="../MyAccount/ManageSubAccount.html">User Management</a>
+                </li>
+                <li class="submenu-item active">
                     <a href="../MyAccount/AccountSetting.html">Account Settings</a>
                 </li>
                 <li class="submenu-item ">
@@ -413,180 +415,81 @@
    <main class="backcolor" id="main">
     <div class="navigation anchortags py-4">
         <a href="../index.html">Home</a>
-        <a href="Settings.html">>Setting</a>
-        <a class="active1" href="ManageSubAccount.html">>Manage Sub Account</a>
+        <a href="ManageSubAccount.html">>Manage User</a>
+        <a class="active1" href="addRole.html">>Add Role</a>
       </div>   
   <div class="container-fluid p-0"> 
     <div class="d-flex justify-content-between">
-    <span class="heading-one">Manage Sub Account</span>
-    <div class="d-flex gap-3">
-      <a href="addUser.html"><button class="btn-outline-blue">Add Sub Account</button></a>
-      <a href="addRole.html"><button class="btn-outline-blue">Add New Role</button></a>
-    </div>
-       </div>
-        <div class="card bg-transparent">
-            <div class="card-content">
-              <div class="card-body p-0">
-                <div class="list-group d-flex gap-4 mt-40 list-group-horizontal-sm mb-1 text-center allbar" role="tablist">
-                  <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto p-0 active"
-                    id="list-sunday-list" data-bs-toggle="list" href="#list-sunday" role="tab">Manage Sub Accounts</a>
-                  <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto p-0" id="list-monday-list"
-                    data-bs-toggle="list" href="#list-monday" role="tab">Manage Roles</a>
-                </div>
-                <div class="tab-content text-justify ">
-                  <div class="tab-pane fade show active" id="list-sunday" role="tabpanel"
-                    aria-labelledby="list-sunday-list">
-                    <div class="row form1 mt-40 ">
-                      <div class="d-flex justify-content-between p-0">
-                        <div class="d-flex gap-4">
-                          <div class="input-group">
-                              <label class="input-group-text title" for="inputGroupSelect01">Brand Relation</label>
-                              <select class="form-select form-select-input" id="inputGroupSelect01">
-                                  <option selected="">Select</option>
-                                  <option value="1">One</option>
-                                  <option value="2">Two</option>
-                                  <option value="3">Three</option>
-                              </select>
-                          </div> 
-                          <div class="input-group">
-                              <label class="input-group-text title" for="inputGroupSelect01">Brand Relation</label>
-                              <select class="form-select form-select-input" id="inputGroupSelect01">
-                                  <option selected="">Select</option>
-                                  <option value="1">One</option>
-                                  <option value="2">Two</option>
-                                  <option value="3">Three</option>
-                              </select>
-                          </div> 
-                      </div> 
-                      <div>
-                        <div class="d-flex gap-2 justify-content-end ">
-                          <div class="input-group" style="max-width: 400px;">
-                            <input type="text" class="form-control form-control-lg form-select-input" disabled placeholder="Search here..." aria-label="Search here" aria-describedby="search-icon">
-                            <span class="input-group-text" id="search-icon">
-                              <i class="bi bi-search"></i>
-                            </span>
+    <span class="heading-one">Add Role</span>
+         </div>
+         <div class="row form1 mt-40">
+            <div class="d-flex flex-column gap-1 mt-30 p-0">
+                <span class="message-text text-dark fw-bold"><span class="text-warning">*</span> Role</span>
+                <input type="text" id="roundText" class="form-control form-control-lg round w-100 " placeholder="Please Input" >
+              </div>
+              <div class="d-flex flex-column gap-1 mt-30 p-0">
+                <span class="message-text text-dark fw-bold"><span class="text-warning">*</span> Roles Description</span>
+                <textarea class="form-control form-control-lg round w-100" id="w3review" name="w3review" placeholder="Please input" rows="4" cols="50"></textarea>
+              </div>
+              <div class="d-flex flex-column gap-1 mt-30 p-0">
+                <span class="message-text text-dark fw-bold"><span class="text-warning">*</span> Permissions</span>
+                <div class="card bg-transparent">
+                    <div class="card-content">
+                      <div class="card-body p-0">
+                        <div class="list-group d-flex gap-4 mt-40 list-group-horizontal-sm mb-1 text-center allbar" role="tablist">
+                          <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto p-0 active"
+                            id="list-pcSellerCenter-list" data-bs-toggle="list" href="#list-pcSellerCenter" role="tab">PC Seller Center Permission Management</a>
+                          <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto p-0" id="list-SellerAppPermission-list"
+                            data-bs-toggle="list" href="#list-SellerAppPermission" role="tab">Seller APP Permission Management</a>
+                        </div>
+                        <div class="tab-content text-justify ">
+                          <div class="tab-pane fade show active" id="list-pcSellerCenter" role="tabpanel"
+                            aria-labelledby="list-pcSellerCenter-list">
+                            <div class="pcSellerCenterPermision mt-40">
+                         <div class="d-flex gap-1 mt-30 p-0">
+                         <input class="form-check-input" type="checkbox" id="product" onclick="toggleCheckboxes(this)">
+                        <label for="select-all">Login</label>
+                        </div>
+                        <div class="d-flex gap-1 mt-30 p-0">
+                            <input class="form-check-input" type="checkbox" id="product" onclick="toggleCheckboxes(this)">
+                           <label for="select-all">Login</label>
+                           </div>
+                           <div class="d-flex gap-1 mt-30 p-0">
+                            <input class="form-check-input" type="checkbox" id="product" onclick="toggleCheckboxes(this)">
+                           <label for="select-all">Notification write</label>
+                           </div>
+                           <div class="d-flex gap-1 mt-30 p-0">
+                            <input class="form-check-input" type="checkbox" id="product" onclick="toggleCheckboxes(this)">
+                           <label for="select-all">registration read</label>
+                           </div>
                           </div>
-                        <button class="btn-gray h-auto">Reset</button>
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="list-SellerAppPermission" role="tabpanel"
+                            aria-labelledby="list-SellerAppPermission-list">
+                               <div> 
+                                <span>Seller App permission management</span>
+                               </div>
+
+            
+                          </div>
                         </div>
                       </div>
-                      </div>
-                      <div>
-                        
-                      </div>
-                      <div class="table-container TableWrapper mt-20 p-0">
-                        <table>
-                            <thead>
-                                <tr class="text-dark">
-                                        
-                                    <th>Name</th> 
-                                    <th>Email</th>
-                                    <th>Roles</th>
-                                    <th>Status</th>
-                                    <th>is Owner Account</th>
-                                    <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="py-5">
-                                    <tr>
-                                        <td>OnDemand Store</td>
-                                        <td>someone@gmail.com</td>
-                                        <td>See Full Access</td>
-                                        <td>
-                                           <div class="form-check form-switch p-0 d-flex justify-content-center gap-2 mt-2">
-                                          <input class="form-check-input m-0 toggleCheck" type="checkbox" id="flexSwitchCheckChecked">
-                                        </div>
-                                      </td>
-                                        <td><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                          <g clip-path="url(#clip0_4822_81503)">
-                                            <path d="M6.40469 12.0008L11.2047 16.0008L17.6047 8.00078M12.0047 23.2008C10.5339 23.2008 9.07748 22.9111 7.71863 22.3482C6.35979 21.7854 5.12511 20.9604 4.08509 19.9204C3.04508 18.8804 2.22009 17.6457 1.65724 16.2868C1.09438 14.928 0.804688 13.4716 0.804688 12.0008C0.804688 10.53 1.09438 9.07357 1.65724 7.71473C2.22009 6.35588 3.04508 5.1212 4.08509 4.08119C5.12511 3.04117 6.35979 2.21618 7.71863 1.65333C9.07748 1.09048 10.5339 0.800781 12.0047 0.800781C14.9751 0.800781 17.8239 1.98078 19.9243 4.08119C22.0247 6.18159 23.2047 9.03036 23.2047 12.0008C23.2047 14.9712 22.0247 17.82 19.9243 19.9204C17.8239 22.0208 14.9751 23.2008 12.0047 23.2008Z" stroke="#12B76A" stroke-width="1.6"/>
-                                          </g>
-                                          <defs>
-                                            <clipPath id="clip0_4822_81503">
-                                              <rect width="24" height="24" fill="white"/>
-                                            </clipPath>
-                                          </defs>
-                                        </svg>
-                                      </td>
-                                        <td class="gap-4 d-flex">
-                                        <a class="orderidColor" href="">Modify</a>   
-                                        <a class="text-danger" href="">Delete</a>  
-                                      </td>
-                                    </tr>
-                                </tbody>
-                                
-                          </table> 
-                       </div>
+                      
+                      
                     </div>
-                  </div>
-                  <div class="tab-pane fade" id="list-monday" role="tabpanel"
-                    aria-labelledby="list-monday-list">
-                    <div class="row form1 mt-40 ">
-                      <div class="d-flex justify-content-between p-0">
-                        <div class="d-flex gap-4">
-                          <div class="input-group">
-                              <label class="input-group-text title" for="inputGroupSelect01">Brand Relation</label>
-                              <select class="form-select form-select-input" id="inputGroupSelect01">
-                                  <option selected="">Select</option>
-                                  <option value="1">One</option>
-                                  <option value="2">Two</option>
-                                  <option value="3">Three</option>
-                              </select>
-                          </div> 
-                          <div class="input-group">
-                              <label class="input-group-text title" for="inputGroupSelect01">Brand Relation</label>
-                              <select class="form-select form-select-input" id="inputGroupSelect01">
-                                  <option selected="">Select</option>
-                                  <option value="1">One</option>
-                                  <option value="2">Two</option>
-                                  <option value="3">Three</option>
-                              </select>
-                          </div> 
-                      </div> 
-                      <div>
-                        <div class="d-flex gap-2 justify-content-end ">
-                          <div class="input-group" style="max-width: 400px;">
-                            <input type="text" class="form-control form-select-input sellerProfileBG " placeholder="Search here..." aria-label="Search here" aria-describedby="search-icon">
-                            <span class="input-group-text" id="search-icon">
-                              <i class="bi bi-search"></i>
-                            </span>
-                          </div>
-                        <button class="btn-gray">Reset</button>
-                        </div>
-                      </div>
-                      </div>
-                      <div>
-                        
-                      </div>
-                      <div class="table-container TableWrapper mt-20 p-0">
-                        <table>
-                            <thead>
-                                <tr class="text-dark">
-                                        
-                                    <th>Roles</th> 
-                                    <th class="w-50">Role Description</th>
-                                    <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="py-5">
-                                    <tr>
-                                        <td>Seller Full Access</td>
-                                        <td>The seller full access role aims to manage his whole account like products, orders, reports, settings</td>
-                                        <td class="orderidColor">View Permission</td>
-                                        </tr>
-                                </tbody>
-                                
-                          </table> 
-                       </div>
-                    </div>
-                  </div>
                 </div>
               </div>
               
-              
+      
+                  
+                 
+                   </div>
+         <div class="row form1 mt-40">
+            <div class="d-flex gap-2 justify-content-end">
+                <button class="btn-gray">Cancel</button>
+                <button class="btn-blue">Modify</button>
             </div>
-        </div>
-    
-       </div>
       
          </div>
        
@@ -608,7 +511,22 @@
 
 
 
+  <script>
+  function togglePassword() {
+    const passwordInput = document.getElementById("password");
+    const toggleIcon = document.getElementById("togglePasswordIcon");
   
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      toggleIcon.classList.remove("bi-eye-slash");
+      toggleIcon.classList.add("bi-eye");
+    } else {
+      passwordInput.type = "password";
+      toggleIcon.classList.remove("bi-eye");
+      toggleIcon.classList.add("bi-eye-slash");
+    }
+  }
+  </script>
     <script>
         function toggleCheckboxes(source) {
           const checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
