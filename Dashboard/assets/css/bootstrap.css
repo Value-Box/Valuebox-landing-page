@@ -2044,7 +2044,7 @@ textarea.form-control-lg {
 .form-select:focus {
   border-color: #CCC;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(67, 94, 190, 0.25);
+  /* box-shadow: 0 0 0 0.25rem rgba(67, 94, 190, 0.25); */
 }
 .form-select[multiple],
 .form-select[size]:not([size="1"]) {
@@ -2055,9 +2055,9 @@ textarea.form-control-lg {
   color: #6c757d;
   background-color: #e9ecef;
 }
-.form-select:focus option:hover{
+/* .form-select:focus option:hover{
   background-color: red !important;
-}
+} */
 .form-select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #607080;
@@ -9995,13 +9995,13 @@ text-underline-position: from-font;
     #e09b00 100%
   );
 }
-input:focus{
+/* input:focus{
 color: black;
 font-size: 18px;
 font-style: normal;
 font-weight: 400;
 line-height: 28px
-}
+} */
 @media(max-width:1400px){
   .heading-one {
     font-size: clamp(20px, 4vw, 24px);
