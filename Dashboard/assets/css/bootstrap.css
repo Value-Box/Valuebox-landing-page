@@ -2054,6 +2054,7 @@ textarea.form-control-lg {
 .form-select:disabled {
   color: #6c757d;
   background-color: #e9ecef;
+  opacity: 1;
 }
 /* .form-select:focus option:hover{
   background-color: red !important;
@@ -9670,7 +9671,7 @@ line-height: 18px;
 }
 .TableWrapper table tbody tr {
   border-bottom: 1px solid #dbdbdb;
-  background-color: white;
+  background-color: #fcfcfc;
 }
 .input {
   display: flex;
@@ -10001,7 +10002,7 @@ font-size: 18px;
 font-style: normal;
 font-weight: 400;
 line-height: 28px
-} */
+}
 @media(max-width:1400px){
   .heading-one {
     font-size: clamp(20px, 4vw, 24px);
