@@ -425,18 +425,18 @@
          <div class="row form1 mt-40">
             <div class="d-flex flex-column gap-1 mt-30 p-0">
                 <span class="message-text text-dark fw-bold"><span class="text-warning">*</span> Role</span>
-                <input type="text" id="roundText" class="form-control form-control-lg round w-100 " placeholder="Please Input" >
+                <input type="text" id="roundText" class="form-control form-control-lg required round w-100 " placeholder="Please Input" >
               </div>
               <div class="d-flex flex-column gap-1 mt-30 p-0">
                 <span class="message-text text-dark fw-bold"><span class="text-warning">*</span> Roles Description</span>
-                <textarea class="form-control form-control-lg round w-100" id="w3review" name="w3review" placeholder="Please input" rows="4" cols="50"></textarea>
+                <textarea class="form-control form-control-lg required round w-100" id="w3review" name="w3review" placeholder="Please input" rows="4" cols="50"></textarea>
               </div>
               <div class="d-flex flex-column gap-1 mt-30 p-0">
                 <span class="message-text text-dark fw-bold"><span class="text-warning">*</span> Permissions</span>
                 <div class="card bg-transparent">
                     <div class="card-content">
                       <div class="card-body p-0">
-                        <div class="list-group d-flex gap-4 mt-40 list-group-horizontal-sm mb-1 text-center allbar" role="tablist">
+                        <div class="list-group d-flex gap-4 list-group-horizontal-sm mb-1 text-center allbar" role="tablist">
                           <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto p-0 active"
                             id="list-pcSellerCenter-list" data-bs-toggle="list" href="#list-pcSellerCenter" role="tab">PC Seller Center Permission Management</a>
                           <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto p-0" id="list-SellerAppPermission-list"
@@ -446,21 +446,33 @@
                           <div class="tab-pane fade show active" id="list-pcSellerCenter" role="tabpanel"
                             aria-labelledby="list-pcSellerCenter-list">
                             <div class="pcSellerCenterPermision mt-40">
-                         <div class="d-flex gap-1 mt-30 p-0">
+                         <div class="d-flex gap-1 p-0">
                          <input class="form-check-input" type="checkbox" id="product" onclick="toggleCheckboxes(this)">
                         <label for="select-all">Login</label>
                         </div>
-                        <div class="d-flex gap-1 mt-30 p-0">
-                            <input class="form-check-input" type="checkbox" id="product" onclick="toggleCheckboxes(this)">
-                           <label for="select-all">Login</label>
-                           </div>
-                           <div class="d-flex gap-1 mt-30 p-0">
+                           <div class="d-flex gap-1 p-0">
                             <input class="form-check-input" type="checkbox" id="product" onclick="toggleCheckboxes(this)">
                            <label for="select-all">Notification write</label>
                            </div>
-                           <div class="d-flex gap-1 mt-30 p-0">
+                           <div class="d-flex gap-1 p-0">
                             <input class="form-check-input" type="checkbox" id="product" onclick="toggleCheckboxes(this)">
                            <label for="select-all">registration read</label>
+                           </div>
+                           <div class="d-flex gap-1 p-0">
+                            <input class="form-check-input" type="checkbox" id="product" onclick="toggleCheckboxes(this)">
+                           <label for="select-all">Products read</label>
+                           </div>
+                           <div class="d-flex gap-1 p-0">
+                            <input class="form-check-input" type="checkbox" id="product" onclick="toggleCheckboxes(this)">
+                           <label for="select-all">Products write</label>
+                           </div>
+                           <div class="d-flex gap-1 p-0">
+                            <input class="form-check-input" type="checkbox" id="product" onclick="toggleCheckboxes(this)">
+                           <label for="select-all">Orders read</label>
+                           </div>
+                           <div class="d-flex gap-1 p-0">
+                            <input class="form-check-input" type="checkbox" id="product" onclick="toggleCheckboxes(this)">
+                           <label for="select-all">Orders write</label>
                            </div>
                           </div>
                             </div>
@@ -488,7 +500,7 @@
          <div class="row form1 mt-40">
             <div class="d-flex gap-2 justify-content-end">
                 <button class="btn-gray">Cancel</button>
-                <button class="btn-blue">Modify</button>
+                <button class="btn-blue">Submit</button>
             </div>
       
          </div>
