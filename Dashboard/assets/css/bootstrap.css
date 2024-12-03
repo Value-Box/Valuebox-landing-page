@@ -9566,7 +9566,9 @@ line-height: 28px; /* 155.556% */
   transition: 1s ease;
   height: fit-content;
 }
-
+.btn-outline-blue:focus{
+  border: 1px solid var(--Brand-Color);
+}
 .btn-outline-gray {
   color: var(--Natural-Gray-Color);
   background: transparent;
