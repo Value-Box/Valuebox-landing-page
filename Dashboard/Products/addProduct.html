@@ -651,10 +651,10 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><input type="text" oninput="calculatPricing()" id="costPrice" class="form-control" placeholder="RS."  oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td>
-                  <td><input type="text" oninput="calculatPricing()" id="sellingPrice" class="form-control" placeholder="RS."  oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td>
+                  <td><input type="text"  id="costPrice" class="form-control" placeholder="RS."  oninput="this.value = this.value.replace(/[^0-9]/g, ''); calculatPricing();"></td>
+                  <td><input type="text" id="sellingPrice" class="form-control" placeholder="RS."  oninput="this.value = this.value.replace(/[^0-9]/g, ''); calculatPricing();"></td>
                   <td><p class="mb-0" id="Profit">Profit</p></td>
-                  <td><input type="text" oninput="calculatPricing()" id="specialPrice" class="form-control" placeholder="RS."  oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td>
+                  <td><input type="text" id="specialPrice" class="form-control" placeholder="RS."  oninput="this.value = this.value.replace(/[^0-9]/g, ''); calculatPricing();"></td>
 
                   <!-- <td><input type="text" oninput="calculatPricing()" id="specialPrice" class="form-control" placeholder="RS."  oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td> -->
                   <td class="text-center">
