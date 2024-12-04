@@ -15,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/bootstrap.css">
   <link rel="stylesheet" href="../assets/vendors/choices.js/choices.min.css" />
-
+  <link rel="stylesheet" href="../assets/css/bootstrap-tagsinput.css" />
   <link rel="stylesheet" href="../assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
   <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
   <link rel="stylesheet" href="../assets/css/app.css">
@@ -438,13 +438,13 @@
             <!-- Product Name Field -->
             <div class="form-group mt-20 mb-0">
                 <label for="productName" class="subHeading-4 gray-color"><span class="important">*</span> Product Name</label>
-                <input type="text" class="form-control form-control-lg required" id="productName" placeholder="Enter Product name" required>
+                <input type="text" class="form-control form-control-lg mt-2" id="productName" placeholder="Enter Product name" >
             </div>
         
             <!-- Category Field -->
             <div class="form-group mt-20 mb-0">
                 <label for="categoryDropDown" class="subHeading-4 gray-color"><span class="important">*</span> Category</label>
-                <select class="form-select form-select-lg required" id="basicSelect">
+                <select class="form-select form-select-lg mt-2" id="basicSelect" >
                   <option>IT</option>
                   <option>Blade Runner</option>
                   <option>Thor Ragnarok</option>
@@ -494,21 +494,21 @@
             
           </div>
           <div class="container-fluid mt-40 text-end p-0">
-            <button class=" ms-auto btn-blue" id="addProNextBtn">Next</button>
+            <button type="button" class="ms-auto btn-blue" id="addProNextBtn">Next</button>
         </div>
       </div>
 
-      <div class="container-fluid addProductSection p-0">
+      <div class="container-fluid addProductSection p-0" id="addProductSection" style="display: none;">
         <div class="row">
           <div class="col-8 ps-0">
                <div class="bg-white" id="basicInfo">
                  <h5 class="subHeading mb-0">Basic Information</h5>
                  <div class="form-group mt-20 mb-0 w-100">
                    <label for="productName" class=".gray-color mb-2"><span class="important">*</span> Product Name</label>
-                   <input type="text" class="form-control form-control-lg required" id="productName" placeholder="Enter Product name" required>
+                   <input type="text" class="form-control form-control-lg " id="productName" placeholder="Enter Product name" >
                  </div>
                
-               <div class="form-group w-100 mt-4">
+               <div class="form-group mb-0 w-100 mt-40">
                    <label for="categoryDropDown" class=".gray-color mb-2"><span class="important">*</span> Category</label>
                    <select class="form-select form-select-lg" id="basicSelect">
                      <option>IT</option>
@@ -516,15 +516,15 @@
                      <option>Thor Ragnarok</option>
                    </select>
                </div>
-               <div class="recentlyFeatures mt-4">
-  <span class="recentlyused text-natural-gray">Recently used:</span>
-  <button class="btn featurebtn" type="button">Features Phones</button>
+               <div class="recentlyFeatures mt-2">
+                  <span class="recentlyused text-natural-gray">Recently used:</span>
+                  <button class="btn featurebtn" type="button">Features Phones</button>
                </div>
-               <div class="d-flex gap-2 align-items-center customerInputTxt mt-4">
+               <div class="d-flex gap-2 align-items-center customerInputTxt mt-40">
                  <input type="checkbox" name="" id="customerInput">
                  <label for="customerInput">Enable customers to enter Input Text</label>
                </div>
-               <div class="card mb-0 w-100 mt-4">
+               <div class="card mb-0 w-100 mt-40">
 <p class="heading">Product Description <span>*</span></p>
 <div class="card-body p-0">
     <div id="productDesc">
@@ -532,7 +532,7 @@
     </div>
 </div>
                </div>
-               <div class="card mb-0 w-100 mt-4">
+               <div class="card mb-0 w-100 mt-40">
 <p class="heading">Highlights <span>*</span></p>
 <div class="card-body p-0">
     <div id="highlight">
@@ -540,7 +540,7 @@
     </div>
 </div>
                </div>
-               <div class="w-100 mt-4">
+               <div class="w-100 mt-40">
                 <p class="heading"><span>*</span> Upload Video</p>
                 <div class="uploadVidSec">
                   <div class="d-flex gap-3 uploadVidSecBtns">
@@ -573,14 +573,14 @@
                   <span>Mp4 format for videos with file size less then 5MB</span>
                   <p class="m-0">OR</p>
                   <div class="form-group m-0 w-100">
-                    <input type="url" class="form-control form-control-lg required" id="utubeUrl" placeholder="Enter YouTube Link" required>
+                    <input type="url" class="form-control form-control-lg " id="utubeUrl" placeholder="Enter YouTube Link" >
                     <p id="errorMessage" style="color: red; display: none;">Please enter a valid YouTube video link.</p>
                   </div>
                   
                 </div>
                                </div>
 
-               <div class="w-100 mt-4">
+               <div class="w-100 mt-40">
 <p class="heading"><span>*</span> Upload Product Image</p>
 <div class="uploadImgSec">
   <div class="d-flex gap-3 uploadImgSecBtns">
@@ -594,7 +594,7 @@
 
       </button> -->
     </label>
-    <input type="file" class="d-none" id="uploadImgSecinput" accept=".jpg, .jpeg, .png">
+    <input type="file" class="d-none" multiple="multiple" id="uploadImgSecinput" accept=".jpg, .jpeg, .png">
     <label class="mediaCenterBtn bg-transparent" for="mediaCenterinput">
       <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
         <path d="M16.5 10C17.6046 10 18.5 9.10457 18.5 8C18.5 6.89543 17.6046 6 16.5 6C15.3954 6 14.5 6.89543 14.5 8C14.5 9.10457 15.3954 10 16.5 10Z" stroke="#002882" stroke-width="1.5"/>
@@ -605,7 +605,7 @@
         <path d="M22.5 12C22.5 16.714 22.5 19.071 21.035 20.535C19.572 22 17.214 22 12.5 22C7.786 22 5.429 22 3.964 20.535C2.5 19.072 2.5 16.714 2.5 12C2.5 7.286 2.5 4.929 3.964 3.464C5.43 2 7.786 2 12.5 2C17.214 2 19.571 2 21.035 3.464C22.009 4.438 22.335 5.807 22.445 8" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
       </svg>
       Select from Media Center
-      <input type="file" class="d-none" id="mediaCenterinput" accept=".jpg, .webp, .png">
+      <input type="file" class="d-none" multiple="multiple" id="mediaCenterinput" accept=".jpg, .webp, .png">
 
     </label>
   </div>
@@ -635,27 +635,28 @@
 
         <div class="pricingSec bg-white mt-40">
           <h5 class="mb-0">Pricing</h5>
-          <span class="priceTableHead">Price Table</span>
+          <span class="priceTableHead mt-20">Price Table</span>
           
-          <div class="form-group w-100 priceTableWrapper">
+          <div class="form-group w-100 mt-2 priceTableWrapper">
             <table class="priceTable">
               <thead>
                 <tr>
                   <th>Cost Price</th>
                   <th>Selling Price</th> 
                   <th>Profit</th>
-                  <th id="specialPriceTxt">Special Price <span>(Optional)</span></th>
+                  <!-- <th id="specialPriceTxt">Special Price <span>(Optional)</span></th> -->
+                  <th>Special Price <sub>(Optional)</sub></th>
                   <th>Availability</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td><input type="text" oninput="calculatPricing()" id="costPrice" class="form-control" placeholder="RS." required oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td>
-                  <td><input type="text" oninput="calculatPricing()" id="sellingPrice" class="form-control" placeholder="RS." required oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td>
+                  <td><input type="text"  id="costPrice" class="form-control" placeholder="RS."  oninput="this.value = this.value.replace(/[^0-9]/g, ''); calculatPricing();"></td>
+                  <td><input type="text" id="sellingPrice" class="form-control" placeholder="RS."  oninput="this.value = this.value.replace(/[^0-9]/g, ''); calculatPricing();"></td>
                   <td><p class="mb-0" id="Profit">Profit</p></td>
-                  <td><input type="text" oninput="calculatPricing()" id="specialPrice" class="form-control" placeholder="RS." required oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td>
+                  <td><input type="text" id="specialPrice" class="form-control" placeholder="RS."  oninput="this.value = this.value.replace(/[^0-9]/g, ''); calculatPricing();"></td>
 
-                  <!-- <td><input type="text" oninput="calculatPricing()" id="specialPrice" class="form-control" placeholder="RS." required oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td> -->
+                  <!-- <td><input type="text" oninput="calculatPricing()" id="specialPrice" class="form-control" placeholder="RS."  oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td> -->
                   <td class="text-center">
                       <div class="form-check form-switch p-0 d-flex justify-content-center">
                           <input class="form-check-input mx-auto availabilityCheck" type="checkbox" id="flexSwitchCheckChecked">
@@ -675,9 +676,9 @@
 
         <div class="createVariantSec bg-white mt-40">
           <h5 class="mb-0">Create Variants</h5>
-          <span class="paragraph-1">Select Option Type</span>
+          <span class="paragraph-1 mt-20">Select Option Type</span>
           
-          <div class="d-flex gap-3 w-100">
+          <div class="d-flex gap-3 mt-2 w-100">
             <fieldset class="form-group  w-100 d-flex gap-2" >
                 <select class="form-select form-select-lg" id="selOptType">
                     <option value="">Please Select</option>
@@ -689,18 +690,19 @@
             </fieldset>
             
          </div>
-          <button class="addVariantBtn" id="addVariantBtn" onclick="addVariant()" type="button">
+          <button class="addVariantBtn p-0" id="addVariantBtn" onclick="addVariant()" type="button">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M1.66406 9.99935C1.66406 5.39685 5.3949 1.66602 9.9974 1.66602C14.5999 1.66602 18.3307 5.39685 18.3307 9.99935C18.3307 14.6018 14.5999 18.3327 9.9974 18.3327C5.3949 18.3327 1.66406 14.6018 1.66406 9.99935ZM9.9974 3.33268C8.22929 3.33268 6.53359 4.03506 5.28335 5.2853C4.03311 6.53555 3.33073 8.23124 3.33073 9.99935C3.33073 11.7675 4.03311 13.4632 5.28335 14.7134C6.53359 15.9636 8.22929 16.666 9.9974 16.666C11.7655 16.666 13.4612 15.9636 14.7114 14.7134C15.9617 13.4632 16.6641 11.7675 16.6641 9.99935C16.6641 8.23124 15.9617 6.53555 14.7114 5.2853C13.4612 4.03506 11.7655 3.33268 9.9974 3.33268Z" fill="#002882"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M1.66406 9.99935C1.66406 5.39685 5.3949 1.66602 9.9974 1.66602C14.5999 1.66602 18.3307 5.39685 18.3307 9.99935C18.3307 14.6018 14.5999 18.3327 9.9974 18.3327C5.3949 18.3327 1.66406 14.6018 1.66406 9.99935ZM9.9974 3.33268C8.22929 3.33268 6.53359 4.03506 5.28335 5.2853C4.03311 6.53555 3.33073 8.23124 3.33073 9.99935C3.33073 11.7675 4.03311 13.4632 5.28335 14.7134C6.53359 15.9636 8.22929 16.666 9.9974 16.666C11.7655 16.666 13.4612 15.9636 14.7114 14.7134C15.9617 13.4632 16.6641 11.7675 16.6641 9.99935C16.6641 8.23124 15.9617 6.53555 14.7114 5.2853C13.4612 4.03506 11.7655 3.33268 9.9974 3.33268Z" fill="black" fill-opacity="0.2"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M10.8333 5.83236C10.8333 5.61134 10.7455 5.39938 10.5893 5.2431C10.433 5.08682 10.221 4.99902 10 4.99902C9.77899 4.99902 9.56702 5.08682 9.41074 5.2431C9.25446 5.39938 9.16667 5.61134 9.16667 5.83236V9.16569H5.83333C5.61232 9.16569 5.40036 9.25349 5.24408 9.40977C5.0878 9.56605 5 9.77801 5 9.99902C5 10.22 5.0878 10.432 5.24408 10.5883C5.40036 10.7446 5.61232 10.8324 5.83333 10.8324H9.16667V14.1657C9.16667 14.3867 9.25446 14.5987 9.41074 14.7549C9.56702 14.9112 9.77899 14.999 10 14.999C10.221 14.999 10.433 14.9112 10.5893 14.7549C10.7455 14.5987 10.8333 14.3867 10.8333 14.1657V10.8324H14.1667C14.3877 10.8324 14.5996 10.7446 14.7559 10.5883C14.9122 10.432 15 10.22 15 9.99902C15 9.77801 14.9122 9.56605 14.7559 9.40977C14.5996 9.25349 14.3877 9.16569 14.1667 9.16569H10.8333V5.83236Z" fill="#002882"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M10.8333 5.83236C10.8333 5.61134 10.7455 5.39938 10.5893 5.2431C10.433 5.08682 10.221 4.99902 10 4.99902C9.77899 4.99902 9.56702 5.08682 9.41074 5.2431C9.25446 5.39938 9.16667 5.61134 9.16667 5.83236V9.16569H5.83333C5.61232 9.16569 5.40036 9.25349 5.24408 9.40977C5.0878 9.56605 5 9.77801 5 9.99902C5 10.22 5.0878 10.432 5.24408 10.5883C5.40036 10.7446 5.61232 10.8324 5.83333 10.8324H9.16667V14.1657C9.16667 14.3867 9.25446 14.5987 9.41074 14.7549C9.56702 14.9112 9.77899 14.999 10 14.999C10.221 14.999 10.433 14.9112 10.5893 14.7549C10.7455 14.5987 10.8333 14.3867 10.8333 14.1657V10.8324H14.1667C14.3877 10.8324 14.5996 10.7446 14.7559 10.5883C14.9122 10.432 15 10.22 15 9.99902C15 9.77801 14.9122 9.56605 14.7559 9.40977C14.5996 9.25349 14.3877 9.16569 14.1667 9.16569H10.8333V5.83236Z" fill="black" fill-opacity="0.2"/>
             </svg> 
+        
             Add Variant</button>
 
           <div  class="w-100">
             <div id="variantList" class="w-100 variantList"></div>
-            <div class="saveVariantDiv p-0" id="saveVariantDiv" style="display: none;">
+            <div class="saveVariantDiv p-0" id="saveVariantDiv" >
               <span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                   <g clip-path="url(#clip0_6142_4883)">
@@ -728,15 +730,15 @@
           <!-- This is where the new rows will be added -->
 
           <div class="w-100 " id="variantTabPar">
-            <div class="d-flex justify-content-between mb-3">
+            <div class="d-flex justify-content-between mt-20">
               <h5 class="mb-0">Variants</h5>
               <div class="d-flex gap-3">
-                <button  id="editVarBtn">Edit</button>
-              <button class="bulk-btn">Bulk Manage</button>
+                <button type="button" id="editVarBtn">Edit</button>
+              <button type="button" class="bulk-btn">Bulk Manage</button>
               </div>
               
             </div>
-            <div class="form-group w-100 variantTableWrapper">
+            <div class="form-group w-100 mt-20 variantTableWrapper">
 
               <table class="table variantTable">
                 <thead>
@@ -802,7 +804,7 @@
             <input class="form-check-input" type="checkbox" name="" id="track_quantity">
             <label class="paragraph-1" for="track_quantity">Track Quantity</label>
           </div>
-          <div class="mt-40 d-flex gap-10">
+          <div class="mt-20 d-flex gap-10">
             <input class="form-check-input" type="checkbox" name="" id="out_of_stock">
             <label class="paragraph-1" for="out_of_stock">Continue Selling when out of Stock</label>
           </div>
@@ -849,7 +851,7 @@
           <div class="mt-40">
             <div class="d-flex justify-content-between">
               <span class="paragraph-1">Quantity</span>
-              <a href="" class="text-Blue-80">Edit Location
+              <a href="" class="text-Blue-80 fs-18">Edit Location
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M20.5307 11.4692C20.6711 11.6098 20.75 11.8004 20.75 11.9992C20.75 12.1979 20.6711 12.3886 20.5307 12.5292L14.5307 18.5292C14.462 18.6029 14.3792 18.662 14.2872 18.703C14.1952 18.7439 14.0959 18.766 13.9952 18.7678C13.8945 18.7695 13.7944 18.751 13.7011 18.7133C13.6077 18.6756 13.5228 18.6194 13.4516 18.5482C13.3804 18.477 13.3243 18.3922 13.2865 18.2988C13.2488 18.2054 13.2303 18.1054 13.2321 18.0047C13.2338 17.904 13.2559 17.8046 13.2969 17.7126C13.3379 17.6206 13.397 17.5378 13.4707 17.4692L18.1907 12.7492L4.00066 12.7492C3.80175 12.7492 3.61098 12.6702 3.47033 12.5295C3.32968 12.3889 3.25066 12.1981 3.25066 11.9992C3.25066 11.8003 3.32968 11.6095 3.47033 11.4688C3.61098 11.3282 3.80175 11.2492 4.00066 11.2492L18.1907 11.2492L13.4707 6.52918C13.397 6.46051 13.3379 6.37771 13.2969 6.28571C13.2559 6.19372 13.2338 6.0944 13.2321 5.9937C13.2303 5.893 13.2488 5.79297 13.2865 5.69958C13.3243 5.60619 13.3804 5.52136 13.4516 5.45014C13.5228 5.37892 13.6077 5.32277 13.7011 5.28505C13.7945 5.24733 13.8945 5.22881 13.9952 5.23059C14.0959 5.23236 14.1952 5.2544 14.2872 5.2954C14.3792 5.33639 14.462 5.39549 14.5307 5.46918L20.5307 11.4692Z" fill="#33539B"/>
                 </svg>
@@ -908,7 +910,7 @@
           <div class="mt-40 d-flex gap-20">
             <div class="w-75">
               <span class="paragraph-1"><span class="secondary-yellow">*</span> Package Weight</span>
-              <input class="form-control form-control-lg required" type="text" placeholder="e.g.0.0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" name="" id="">
+              <input class="form-control form-control-lg mt-2 " type="text" placeholder="e.g.0.0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" name="" id="">
             </div>
               <fieldset class="form-group mb-0 w-25 d-flex align-items-end">
                   <select class="form-select form-select-lg ">
@@ -944,9 +946,9 @@
             </div>
           </div>
 
-          <p class="mb-0 line mt-30"></p>
+          <p class="mb-0 line mt-40"></p>
 
-          <div class="mt-30">
+          <div class="mt-40">
            <div class="d-flex gap-3">
             <div class="w-100">
               <span class="paragraph-1">Warranty Type</span>
@@ -991,7 +993,7 @@
            </div>
           </div>
 
-          <div class="mt-30">
+          <div class="mt-40">
             <div>
               <span class="paragraph-1">Warranty Policy</span>
               <input class="input mt-2" type="text" placeholder="Please Input" name="" id="">
@@ -1009,11 +1011,11 @@
             <div class="status bg-white">
               <h5 class="mb-0">Status</h5>
               
-              <div class="form-group w-100">
+              <div class="form-group mt-20 w-100">
                 <select class="form-select form-select-lg" id="basicSelect">
-                  <option>IT</option>
-                  <option>Blade Runner</option>
-                  <option>Thor Ragnarok</option>
+                  <option>Active</option>
+                  <option>Inactive</option>
+
               </select>
                              
             </div>
@@ -1021,28 +1023,45 @@
 
             <div class="productOrganiz mt-20 bg-white">
               <h5 class="mb-0">Product Organization</h5>
-              <div class="form-group w-100">
+              <div class="form-group mt-20 w-100">
                 <label for="productName">Product type</label>
-                <input type="text" class="form-control form-control-lg" id="productOrganization" placeholder="" required>
+                <input type="text" class="form-control form-control-lg mt-2" id="productOrganization" placeholder="" >
               </div>
-              <div class="form-group w-100">
-                <label for="productName">Collection</label>
-                <input type="text" class="form-control form-control-lg" id="productOrganization" placeholder="" required>
-              </div>
-              <div class="form-group w-100">
+              <div class="form-group mt-20 w-100">
+                <label for="productName" class="mb-2">Collection</label>
+                <select class="choices form-select multiple-remove"
+                multiple="multiple">
+                <optgroup label="Figures">
+                    <option value="romboid">Romboid</option>
+                    <option value="trapeze" selected>Trapeze</option>
+                    <option value="triangle">Triangle</option>
+                    <option value="polygon">Polygon</option>
+                </optgroup>
+                <optgroup label="Colors">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="blue" >Blue</option>
+                    <option value="purple">Purple</option>
+                </optgroup>
+            </select>              
+          </div>
+              
+              <div class="form-group mt-20 w-100">
                 <label for="productName">Select Brand</label>
-                <select class="form-select form-select-lg" id="basicSelect">
+                <select class="form-select form-select-lg mt-2" id="basicSelect">
                   <option>IT</option>
                   <option>Blade Runner</option>
                   <option>Thor Ragnarok</option>
               </select>     
             </div>
-            <div class="form-group w-100">
+            <div class="form-group mt-20 w-100">
               <label for="tagInput" >Tags</label>
-                <input type="text" class="form-control form-control-lg tagInput" id="tagInput" placeholder="" required>
+                <input type="text" class="form-control form-control-lg mt-2 tagInput" id="tagInput" placeholder="" >
             </div>
 
-            
+            <!-- <div class="tags-default">
+              <input type="text" data-role="tagsinput" placeholder="add tags" /> 
+            </div> -->
             <!-- <div class="form-group">
               <label class="form-label">Tag Input</label>
               <div id="tagInputContainer1" class="tag-input-container">
@@ -1063,10 +1082,12 @@
     <script src="../assets/vendors/ckeditor/ckeditor.js"></script>
     <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="../assets/vendors/choices.js/choices.min.js"></script> -->
+    <script src="../assets/vendors/choices.js/choices.min.js"></script>
     <script src="../assets/js/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="script.js"></script>
+    <script src="productscript.js"></script>
+    <!-- <script src="../assets/vendor_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.js"></script> -->
+    <script src="../assets/js/bootstrap-tagsinput.js"></script>
 
     <script>
       ClassicEditor.create(document.querySelector('#productDesc'))
@@ -1079,75 +1100,75 @@
               console.error(error);
           });
 
-(function () {
-  const tagsInput = {
-      init(opts) {
-          opts.ids.forEach(id => {
-              const inputElem = document.getElementById(id);
-              if (inputElem) {
-                console.log(`Initializing tags input for ID: ${id}`); 
-                  this.setupInput(inputElem, id);
-              }else {
-                    console.log(`Input element with ID: ${id} not found!`);  // Log if the ID is not found
-                }
-          });
-      },
+// (function () {
+//   const tagsInput = {
+//       init(opts) {
+//           opts.ids.forEach(id => {
+//               const inputElem = document.getElementById(id);
+//               if (inputElem) {
+//                 console.log(`Initializing tags input for ID: ${id}`); 
+//                   this.setupInput(inputElem, id);
+//               }else {
+//                     console.log(`Input element with ID: ${id} not found!`);  // Log if the ID is not found
+//                 }
+//           });
+//       },
 
-      setupInput(inputElem, id) {
-          // Wrapper for the tags input
-          const wrapper = document.createElement('div');
-          wrapper.className = 'tags-input-wrapper';
-          const input = document.createElement('input');
-          wrapper.append(input);
-          inputElem.setAttribute('hidden', true);
-          inputElem.parentNode.insertBefore(wrapper, inputElem);
+//       setupInput(inputElem, id) {
+//           // Wrapper for the tags input
+//           const wrapper = document.createElement('div');
+//           wrapper.className = 'tags-input-wrapper';
+//           const input = document.createElement('input');
+//           wrapper.append(input);
+//           inputElem.setAttribute('hidden', true);
+//           inputElem.parentNode.insertBefore(wrapper, inputElem);
 
-          // Array to store tags for each input
-          let tagsArray = [];
+//           // Array to store tags for each input
+//           let tagsArray = [];
 
-          // Keydown and Keyup for adding tags immediately on Enter or comma
-          input.addEventListener('keyup', (e) => {
-            console.log(`Key pressed in input field ${id}: ${e.key}`);
-              if (e.key === 'Enter' || e.key === ',') {
-                  e.preventDefault();
-                  this.createTag(input, tagsArray, wrapper, inputElem, id);
-              }
-          });
-      },
+//           // Keydown and Keyup for adding tags immediately on Enter or comma
+//           input.addEventListener('keyup', (e) => {
+//             console.log(`Key pressed in input field ${id}: ${e.key}`);
+//               if (e.key === 'Enter' || e.key === ',') {
+//                   e.preventDefault();
+//                   this.createTag(input, tagsArray, wrapper, inputElem, id);
+//               }
+//           });
+//       },
 
-      createTag(input, tagsArray, wrapper, inputElem, id) {
-          const tagText = input.value.trim();
-          if (tagText && !tagsArray.includes(tagText)) {
-              tagsArray.push(tagText);
-              this.addTag(wrapper, tagText, tagsArray, inputElem, id);
-              input.value = ''; // Clear input for the next tag
-          }
-      },
+//       createTag(input, tagsArray, wrapper, inputElem, id) {
+//           const tagText = input.value.trim();
+//           if (tagText && !tagsArray.includes(tagText)) {
+//               tagsArray.push(tagText);
+//               this.addTag(wrapper, tagText, tagsArray, inputElem, id);
+//               input.value = ''; // Clear input for the next tag
+//           }
+//       },
 
-      addTag(wrapper, tagText, tagsArray, inputElem, id) {
-          const tag = document.createElement('span');
-          tag.className = 'tag';
-          tag.innerHTML = `${tagText} <a href="#">&times;</a>`;
+//       addTag(wrapper, tagText, tagsArray, inputElem, id) {
+//           const tag = document.createElement('span');
+//           tag.className = 'tag';
+//           tag.innerHTML = `${tagText} <a href="#">&times;</a>`;
 
-          // Remove tag on click
-          tag.querySelector('a').onclick = (e) => {
-              e.preventDefault();
-              tagsArray.splice(tagsArray.indexOf(tagText), 1);
-              tag.remove();
-              inputElem.value = tagsArray.join(',');
-          };
+//           // Remove tag on click
+//           tag.querySelector('a').onclick = (e) => {
+//               e.preventDefault();
+//               tagsArray.splice(tagsArray.indexOf(tagText), 1);
+//               tag.remove();
+//               inputElem.value = tagsArray.join(',');
+//           };
 
-          // Insert the tag before the input field
-          wrapper.insertBefore(tag, wrapper.querySelector('input'));
-          inputElem.value = tagsArray.join(',');
-      }
-  };
+//           // Insert the tag before the input field
+//           wrapper.insertBefore(tag, wrapper.querySelector('input'));
+//           inputElem.value = tagsArray.join(',');
+//       }
+//   };
 
-  // Initialize the tags input on inputs with specific IDs
-  tagsInput.init({
-      ids: ['tagInput'], // Pass the IDs of the inputs to initialize
-  });
-})();
+//   // Initialize the tags input on inputs with specific IDs
+//   tagsInput.init({
+//       ids: ['tagInput'], // Pass the IDs of the inputs to initialize
+//   });
+// })();
 
 document.querySelectorAll('.varParToChild').forEach(item => {
   item.addEventListener('click', () => {
