@@ -1135,6 +1135,16 @@ input::placeholder {
   color: white;
   font-weight: 700;
 }
+.pendingApproval{
+  border-radius: 10px;
+background: var(--Natural-Color-40, #999) !important;
+display: flex;
+align-items: center;
+padding: 15px 20px ;
+}
+#logout_btn{
+  font-family: Sarabun;
+}
 .applicationStatusText h3 {
   font-size: 30px;
   font-style: normal;
