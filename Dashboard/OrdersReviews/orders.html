@@ -919,8 +919,8 @@
         <script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
         <script src="../assets/js/main.js"></script>
         <script>
-          let registerProTable = document.querySelector('#order_manage_Table');
-          new simpleDatatables.DataTable(registerProTable);
+          document.querySelector('#order_manage_Table').DataTable();
+      
     
           function replaceArrows() {
       // Select all elements with the page-link class
