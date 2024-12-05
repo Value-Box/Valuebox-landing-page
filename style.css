@@ -207,7 +207,7 @@ main {
 .reach-more-sell-better-container .reach-more,
 .sell-better {
   font-family: Anton;
-  font-size: 46px;
+  font-size: 60px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -296,7 +296,9 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
-
+#becomeSellerTxt{
+  text-align: left;
+}
 .explore-the-content {
   align-self: stretch;
   position: relative;
@@ -436,7 +438,77 @@ line-height: normal;
   align-items: center; /* Vertically center the image and text */
   margin-bottom: 50px; /* Add space between each service */
 }
+.utubeVideo {
+  position: relative; /* Positioning context for absolute elements */
+    width: 75vw !important;
+  margin: auto 0px !important;
+  height: 100% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.utubeVideo img {
+  position: absolute; /* Position the image absolutely */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  height: auto; /* Full height */
+  object-fit: cover; /* Cover the entire container while maintaining aspect ratio */
+  z-index: 1; /* Make sure the image is behind the iframe */
+}
+.youtubevideocontainer{
+position: absolute;
+display: flex;
+height: 100%;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+} 
+
+.successText p{
+  color: #CCD4E6 !important;
+
+/* Display xs/Regular */
+
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 32px; /* 133.333% */
+}
+.successText h2{
+  color: #FCFCFC !important;
+      /* Display lg/Bold */
+  font-family: Sarabun;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px; /* 125% */
+  letter-spacing: -0.96px;
+}
+.successText h4{
+  color: var(--Primary-Color-Dark-Blue-20, #CCD4E6);
+text-align: right;
+
+/* Display xs/Bold */
+font-family: Sarabun;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 32px; /* 133.333% */
+}
+.joinvalueboxbtn{
+  display: flex;
+  height: 50px;
+  padding: 8px 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: var(--Primary-Color-Dark-Blue, linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), #002882);
+  color: #f2f2f2;
+  border: none;
+  }
 .service img {
   height: 80px;
   width: 80px;
@@ -632,6 +704,45 @@ line-height: normal;
   border: none !important;
 }
 
+.youdelivertopnotchproducts1{
+  background-color: #002882;
+ 
+   }
+.youdelivertopnotchproductsheading h1{
+  color: var(--Secondary-Color-Mon-Yellow, #EEA500);
+  font-family: Anton;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.youdelivertopnotchproductsheading p{
+  color: var(--Secondary-Color-Mon-Yellow-10, #FEF6E6);
+
+/* Display xs/Medium */
+
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 32px; /* 133.333% */
+} 
+.youdelivertopnotchproductsbtn{
+  color:  #002882 !important;
+  /* Display xs/Semibold */
+ 
+  font-size: 24px ;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: 32px !important; /* 133.333% */
+  display: flex !important;
+height: 68px !important;
+padding: 10px 20px !important;
+justify-content: center !important;
+align-items: center !important;
+gap: 10px !important;
+border-radius: 10px !important;
+background:  #E6EAF3 !important;
+}
 /* Change background color of the accordion item when open */
 .accordion-item .accordion-button:not(.collapsed) {
   background: linear-gradient(
@@ -714,7 +825,9 @@ line-height: normal;
     font-size: 50px;
     text-align: center;
   }
- 
+  #becomeSellerTxt{
+    text-align: center;
+  }
 }
 @media(max-width:576px){
   .personalSignupText {
@@ -1506,7 +1619,7 @@ height: 24px;
 background: #CCC;
 }
 .loginPageBgPoster {
-  background: linear-gradient(45deg, #002068 0%, #33539B 100%);
+  /* background: linear-gradient(45deg, #002068 0%, #33539B 100%); */
   height: clamp(600px, 50vh, 1000px); /* Minimum height 300px, preferred height 50% of viewport height, max height 1000px */
 }
 
@@ -1522,6 +1635,14 @@ border: none;
   background-color: gray;
   color: #ccc; /* Light gray text */
   cursor: not-allowed; /* Show not-allowed cursor */
+}
+.LoginBgPoster{
+  height: clamp(600px, 50vh, 1000px);
+  position: relative;
+}
+.LoginBgPoster img{
+  position: absolute;
+  bottom: -10%;
 }
 @media (max-width: 1264px) {
   /* .links {
@@ -1770,7 +1891,7 @@ border: none;
   } */
   
   .LoginBgPoster img {
-    height: 108% !important;
+    /* height: 108% !important; */
   }
   .formParent {
     /* margin-top: 45px; */
@@ -2276,7 +2397,7 @@ svg path {
   }
 
   .LoginBgPoster img {
-    height: 104% !important;
+    /* height: 104% !important; */
   }
   .loginForm {
     /* height: 104% !important; */
@@ -2646,6 +2767,8 @@ line-height: 24px; /* 150% */
   line-height: 1.5; /* Add line height for better readability */
   color: #999999;
 }
+.loginPageBgPoster {
+  height: clamp(750px, 50vh, 1000px);
 }
 @media (max-width: 536px) {
   
@@ -2905,46 +3028,12 @@ line-height: 24px; /* 150% */
   .personalinfoimg img{
     padding: 10%;
   }
+  .loginPageBgPoster {
+    height: clamp(750px, 50vh, 1000px);
 }
-.youdelivertopnotchproducts1{
-  background-color: #002882;
- 
-   }
-.youdelivertopnotchproductsheading h1{
-  color: var(--Secondary-Color-Mon-Yellow, #EEA500);
-  font-family: Anton;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.youdelivertopnotchproductsheading p{
-  color: var(--Secondary-Color-Mon-Yellow-10, #FEF6E6);
 
-/* Display xs/Medium */
-
-font-size: 24px;
-font-style: normal;
-font-weight: 500;
-line-height: 32px; /* 133.333% */
-} 
-.youdelivertopnotchproductsbtn{
-  color:  #002882 !important;
-  /* Display xs/Semibold */
- 
-  font-size: 24px ;
-  font-style: normal !important;
-  font-weight: 600 !important;
-  line-height: 32px !important; /* 133.333% */
-  display: flex !important;
-height: 68px !important;
-padding: 10px 20px !important;
-justify-content: center !important;
-align-items: center !important;
-gap: 10px !important;
-border-radius: 10px !important;
-background:  #E6EAF3 !important;
 }
+
 .curveImg{
   max-width: 100%;
 }
@@ -3026,18 +3115,7 @@ gap: 10px;
   font-size: 24px;
 }
 
-.joinvalueboxbtn{
-  display: flex;
-  height: 50px;
-  padding: 8px 15px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border-radius: 10px;
-  background: var(--Primary-Color-Dark-Blue, linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), #002882);
-  color: #f2f2f2;
-  border: none;
-  }
+
   .ourstory h1{
     color: var(--Primary-Color-Dark-Blue, #002882);
     font-family: Anton;
@@ -3067,37 +3145,7 @@ font-style: normal;
 font-weight: 400;
 line-height: 32px; /* 133.333% */
   }
-  .successText p{
-    color: #CCD4E6 !important;
 
-/* Display xs/Regular */
-
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: 32px; /* 133.333% */
-  }
-  .successText h2{
-    color: #FCFCFC !important;
-        /* Display lg/Bold */
-    font-family: Sarabun;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 60px; /* 125% */
-    letter-spacing: -0.96px;
-  }
-  .successText h4{
-    color: var(--Primary-Color-Dark-Blue-20, #CCD4E6);
-text-align: right;
-
-/* Display xs/Bold */
-font-family: Sarabun;
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
-line-height: 32px; /* 133.333% */
-  }
   @media(max-width:1418px){
     .successText p{
       
@@ -3171,33 +3219,7 @@ font-size: 16px;
       font-size: 20px;
     }
   }
-  .utubeVideo {
-    position: relative; /* Positioning context for absolute elements */
-      width: 75vw !important;
-    margin: auto 0px !important;
-    height: 100% !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   
-  .utubeVideo img {
-    position: absolute; /* Position the image absolutely */
-    top: 0;
-    left: 0;
-    width: 100%; /* Full width */
-    height: auto; /* Full height */
-    object-fit: cover; /* Cover the entire container while maintaining aspect ratio */
-    z-index: 1; /* Make sure the image is behind the iframe */
-  }
- .youtubevideocontainer{
-  position: absolute;
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
- } 
  /* .youtubevideo iframe{
   width: 65%;
  }
@@ -3332,4 +3354,5 @@ letter-spacing: -1.2px;
     height: 100%; /* Ensures the image fills the container’s height */
     width: auto; /* Maintains the aspect ratio */
     object-fit: cover; /* Ensures the image covers the area */
+}
 }

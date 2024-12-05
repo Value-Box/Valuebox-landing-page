@@ -14,6 +14,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" rel="stylesheet">
     <!-- <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -55,8 +56,8 @@
     </header>
     <main>
       <div id="carouselExampleCaptions" class="carousel slide">
-        <div class="h-100 carousel-inner mw-1728 mx-auto">
-          <div class="h-100 carousel-item active">
+        <div class="h-100 carousel-inner  mx-auto">
+          <div class="h-100 carousel-item mw-1728 d-flex justify-content-center active">
             <img
               src="images/Hero Section.png"
               class="d-block h-100 w-100"
@@ -66,7 +67,7 @@
               <div class="imgText">
                 <div class="reach-more-sell-better-container">
                   <p class="reach-more">REACH MORE</p>
-                  <p class="sell-better">SELL BETTER</p>
+                  <p class="sell-better mb-0">SELL BETTER</p>
                 </div>
 
                 <div
@@ -88,7 +89,7 @@
               class="d-block h-100 w-100"
               alt="..."
             />
-            <div class="row position-absolute w-100 top-0 bg-transparent">
+            <div class="row position-absolute w-100 top-0 mw-1728 bg-transparent">
               <div class="col-8">
                 <!-- <div class="reach-more-sell-better-container"></div> -->
                 <div class="col-5 imgText">
@@ -200,6 +201,8 @@
         </div>
       </div>
 
+      
+      <!-- Carousel wrapper -->
       <div class="row p-3 p-sm-5 m-0 hero-section">
         <div class="col-12 p-0 our-sellers-with-container mw-1728 mx-auto">
           <span>
@@ -474,11 +477,13 @@
       <div class="youtubebgimage p-0 position-relative d-block d-md-none">
        <img class="w-100" src="images/youtubemobileimg.svg" alt=""> 
       </div>
-      <div class=" youtubevideocontainer mx-auto mw-1200 p-0">
-        <div class="youtubevideo w-md-75 w-100 h-75 h-md-100 p-3 mx-sm-5 px-sm-5 d-flex justify-content-center">
+      <div class=" youtubevideocontainer mx-auto  p-0">
+        <div class="youtubevideo w-md-75 w-100 mw-1728 h-75 h-md-100 p-3 mx-sm-5 px-sm-5 d-flex justify-content-center">
           <iframe class="rounded-4 w-100 w-md-75 mx-md-5" src="https://www.youtube.com/embed/3Q20xN2iGh4" title="This Is One Of The CRAZIEST Value Box Finds EVER At a Card Show! 😱" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        <div class="d-flex justify-content-center mt-sm-4 mt-1"><button class="joinvalueboxbtn">Join Marketplace</button></div>      
+        <div class="d-flex justify-content-center mt-sm-4 mt-1">
+          <button class="joinvalueboxbtn">Join Marketplace</button>
+        </div>      
       </div>
 
       </div>
@@ -839,7 +844,7 @@
             </p>
             <button class="mt-3" onclick="loginPage('2')">Join Marketplace</button>
           </div>
-          <div class="col-lg-2 mt-lg-0 mt-3 col-xl-3 px-xl-5 px-lg-4 d-flex flex-column align-items-lg-center">
+          <div class="col-lg-2 mt-lg-0 mt-3 col-xl-3 px-xl-5 px-lg-4 d-flex flex-column align-items-lg-end">
             <h6 class="text-warning">Seller Resources</h6>
             <a href="#" class="text-dark d-block text-decoration-none mt-4"
               >Seller Center <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -852,15 +857,17 @@
               </svg></a
             >
           </div>
-          <div class="col-lg-3 mt-lg-0 mt-5 px-xl-5 px-lg-4">
-            <h6 class="text-warning">About</h6>
+          <div class="col-lg-3 mt-lg-0 mt-5 ps-xl-5 pe-0 ps-lg-4 d-flex flex-column align-items-center">
+            <div>
+              <h6 class="text-warning">About</h6>
             <a href="#" class="text-dark d-block text-decoration-none mt-4"
               >Shop ValueBox.pk</a
             >
             <a href="#" class="text-dark d-block text-decoration-none mt-4"
               >Our Social Handles</a
             >
-            <div class="mt-3 col-12 socialIcons">
+            </div>
+            <div class="mt-3 col-12 socialIcons d-flex justify-content-end">
               <a
                 href="https://www.facebook.com/valueboxdotpk/"
                 class="text-decoration-none"
@@ -889,8 +896,8 @@
           </div>
         </div>
 
-        <div class="row px-lg-5 py-4 px-1">
-          <hr class="text-light py-1" />
+        <div class="row m-0 px-lg-5 py-4 px-1">
+          <hr class="py-1" />
 
           <!-- Logo Section -->
           <div class="col-12 col-lg-4 text-center text-lg-start px-0 logoVlaueBox mb-3 mb-lg-0">
@@ -917,6 +924,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

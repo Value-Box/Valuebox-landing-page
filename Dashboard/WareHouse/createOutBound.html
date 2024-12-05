@@ -422,11 +422,11 @@
             <div class="container-fluid form1 mt-40">
                 <span class="subHeading">Basic Information</span>
 
-                <div class="row mt-20">
+                <div class="row gap-20 mt-20">
                     <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">Inbound Warehouse</span>
-                        <fieldset class="form-group form-group-lg mb-0">
-                          <select class="form-select" id="basicSelect">
+                        <fieldset class="form-group form-group-lg mb-0 mt-10">
+                          <select class="form-select form-select-lg" id="basicSelect">
                               <option value="">Please Select</option>
                               <option value="kachehri">Kachehri Warehouse</option>
                               <option value="mda">MDA Warehouse</option>
@@ -436,14 +436,14 @@
 
                     <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">Warehouse Address</span>
-                        <input class="form-control form-control-lg" type="text"  placeholder="" disabled>
+                        <input class="form-control form-control-lg mt-10" type="text"  placeholder="" disabled>
                     </div>
                 </div>
                 <div class="d-flex mt-40 gap-80">
                     <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">Inventory Type</span>
-                        <fieldset class="form-group form-group-lg mb-0">
-                          <select class="form-select" id="basicSelect">
+                        <fieldset class="form-group form-group-lg mb-0 mt-10">
+                          <select class="form-select form-select-lg" id="basicSelect">
                               <option value="">Please Select</option>
                               <option value="kachehri">Damaged</option>
                               <option value="mda">Ok</option>
@@ -461,7 +461,7 @@
                     </div>
                     <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">Estimated Time</span>
-                        <input class="form-control" type="datetime">
+                        <input type="date" class="form-control form-control-lg bg-transparent mt-10" placeholder="Start Date">
                     </div>
                 </div>
             </div>
@@ -473,8 +473,8 @@
                 <div class="d-flex mt-20 gap-20">
                     <div class="col-6 p-0">
                         <span class="text-orange-star fs-18 gray-color">Warehouse</span>
-                        <fieldset class="form-group">
-                          <select class="form-select" id="basicSelect">
+                        <fieldset class="form-group mt-10">
+                          <select class="form-select form-select-lg" id="basicSelect">
                               <option value="">Please Select</option>
                               <option value="kachehri">Kachehri Warehouse</option>
                               <option value="mda">MDA Warehouse</option>
@@ -483,22 +483,22 @@
                     </div>
                     <div class="col-6 p-0">
                         <span class="text-orange-star fs-18 gray-color">Warehouse Address</span>
-                        <input class="form-control form-control-lg" type="text"  placeholder="" disabled>
+                        <input class="form-control form-control-lg mt-10" type="text"  placeholder="" disabled>
 
                     </div>
                 </div>
                 <div class="d-flex mt-40 gap-20">
                     <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">Country</span>
-                        <input class="form-control form-control-lg" type="text"  placeholder="" disabled>
+                        <input class="form-control form-control-lg mt-10" type="text"  placeholder="" disabled>
                     </div>
                     <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">City</span>
-                        <input class="form-control form-control-lg" type="text"  placeholder="" disabled>
+                        <input class="form-control form-control-lg mt-10" type="text"  placeholder="" disabled>
                     </div>
                     <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">Post Code</span>
-                        <input class="form-control form-control-lg" type="text"  placeholder="" disabled>
+                        <input class="form-control form-control-lg mt-10" type="text"  placeholder="" disabled>
                     </div>
                 </div>
                 <span class="subHeading-3 text-natural-dark mt-40 d-inline-block">Contact</span>
@@ -506,11 +506,11 @@
                 <div class="d-flex mt-40 gap-20">
                     <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">Contact Name</span>
-                        <input class="form-control form-control-lg" type="text"  placeholder="Please Input" >
+                        <input class="form-control form-control-lg mt-10" type="text"  placeholder="Please Input" >
                     </div>
                     <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">Mobile Number</span>
-                        <input class="form-control form-control-lg" type="text"  placeholder="Please Input" >
+                        <input class="form-control form-control-lg mt-10" type="text"  placeholder="Please Input" >
                     </div>
                 </div>
             </div>
@@ -522,6 +522,8 @@
                         <span class="paragraph-1 text-natural-gray">(Each Inbound order can contain maximum 200 SKUs)</span>
                     </div>
                     <div class="col p-0 d-flex gap-20 justify-content-end">
+                        <button class="btn-blue bg-natural shadow-sm border-0 text-brand-color h-auto">Outbound All</button>
+                        <button class="btn-blue bg-natural shadow-sm border-0 text-brand-color h-auto">Clear All</button>
                         <button class="btn-outline-gray">Import 
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                                 <path d="M12.5 4V14M12.5 14L15.5 11M12.5 14L9.5 11" stroke="#666666" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -536,36 +538,37 @@
             <div class="container-fluid form1 mt-40">
                 <div class="row d-flex justify-content-between align-items-center">
                     <div class="col p-0 TableWrapper">
-                        <table class="reg_Prod_Table" id="reg_Prod_Table">
+                        <table class="out_bound_Table w-min-1200" id="out_bound_Table">
                             <thead>
                               <tr>
-                                <th><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Fulfillment SKU</th>
+                                <th class="shadow "><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Fulfillment SKU</th>
                                 <th>Fulfillment SKU Name</th> 
                                 <th>Seller SKU</th>
+                                <th>Inventory in Warehouse</th>
                                 <th>Request Quantity</th>
                                 <th>Barcode</th>
-                                <th>Action</th>
+                                <th class="position-sticky end-0">Action</th>
                               </tr>
                             </thead>
                             <tbody>
                               
                               <tr>
-                                <td><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> 2245646_PK_14454120</td>
+                                <td><div class="d-flex gap-1"><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> 2245646_PK_14454120</div></td>
                                 <td>Pack of 6 - Pull B ack Mini Car Set For kids & boys toys</td>
                                 <td>MINI-CARS-6</td>
-                                <td><input type="text" oninput="calculatPricing()" id="costPrice" class="form-control text-center" placeholder="RS." required oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td>
+                                <td>15</td>
+                                <td><input type="text" id="costPrice" class="form-control text-center" placeholder="RS." required oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td>
                                 <td>VBPK789651</td>
-                                <td class="d-flex gap-20">
-                                    <a href="" class="text-underline text-brand-color">Edit</a>
+                                <td class="position-sticky end-0">
+                                    <div class="d-flex gap-20">
+
+                                        <a href="" class="text-underline text-brand-color">Edit</a>
                                     <a href="" class="text-underline text-brand-color">Remove</a>
+                                    </div>
                                 </td>
                                
-                            </tr>
-                           
-                              
+                              </tr>
                             </tbody>
-                            
-                            
                           </table>
                     </div>
                 </div>
@@ -596,9 +599,7 @@
             </div>
     </main>
 
-    <script>
-       
-    </script>
+    
     <script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
     <!-- <script src="../assets/vendors/ckeditor/ckeditor.js"></script> -->
     <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
@@ -606,5 +607,51 @@
     <!-- <script src="../assets/vendors/choices.js/choices.min.js"></script> -->
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        let outBoundTable = document.querySelector('#out_bound_Table');
+        new simpleDatatables.DataTable(outBoundTable);
+
+        function replaceArrows() {
+    // Select all elements with the page-link class
+    document.querySelectorAll(".page-link").forEach(function (link) {
+      if (link.innerHTML === "‹") {
+        link.innerHTML = "Previous"; // Replace left arrow with "Previous"
+      } else if (link.innerHTML === "›") {
+        link.innerHTML = "Next"; // Replace right arrow with "Next"
+      }
+    });
+  }
+
+  // Call this function once on page load
+  replaceArrows();
+
+  const paginationObserver = new MutationObserver(replaceArrows);
+  document.querySelectorAll(".pagination").forEach(function (pagination) {
+    paginationObserver.observe(pagination, { childList: true, subtree: true });
+  });
+
+
+        const textArea = document.getElementById('textArea');
+       const charCounter = document.getElementById('charCounter');
+       const maxChars = 200;
+   
+       textArea.addEventListener('input', () => {
+           const text = textArea.value;
+           const charCount = text.length;
+   
+           // Update the character counter display
+           charCounter.textContent = `${charCount}/${maxChars} characters`;
+   
+           // If the character count exceeds the limit
+           if (charCount > maxChars) {
+               textArea.value = text.slice(0, maxChars); // Truncate excess characters
+               charCounter.textContent = `${maxChars}/${maxChars} characters`;
+           }
+   
+           // Apply styling if limit is reached
+           charCounter.classList.toggle('limit-reached', charCount >= maxChars);
+       });
+   </script>
 </body>
 </html>

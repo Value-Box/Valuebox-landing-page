@@ -352,6 +352,7 @@ sup {
 a {
   color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
   text-decoration: underline;
+  cursor: pointer;
 }
 a:hover {
   --bs-link-color-rgb: var(--bs-link-hover-color-rgb);
@@ -12034,6 +12035,9 @@ bg-gray{
   max-width: 250px; /* Limit max width of text for responsiveness */
 }
 
+.bg-brand-liner{
+  background: linear-gradient(45deg, #002068 0%, #33539B 100%);
+}
 
 @media(max-width:776px){
   .heading{

@@ -57,15 +57,16 @@
 
     <!-- main section -->
     <main>
-      <div class="container-fluid p-0 loginPageBgPoster">
+      <div class="container-fluid p-0 bg-brand-liner loginPageBgPoster">
         <div class="row h-50 m-0 p-0 position-relative d-flex justify-content-center bg-transparent mw-1728 mx-auto">
           <div class="px-0 LoginBgPoster">
             <!-- <img class="w-100 d-none d-lg-block" src="images/loginbg.png" alt=""/> -->
-            <img class="w-100 d-none d-lg-block" src="images/loginPageVector.png" alt=""/>
+            <!-- <img class="w-100 d-none d-lg-block" src="images/loginPageVector.png" alt=""/> -->
+            <img class="w-100 d-none d-lg-block" src="images/bg login.png" alt=""/>
             <img class="w-100 d-lg-none" src="images/loginPoster2.png" alt="" />
           </div>
-<div class="row bg-transparent m-0 p-0 position-absolute mw-1728 ">
-  <div class="col-12 col-lg-6 col-xl-7 d-flex flex-column p-0 pb-2 pr-2 ps-3 ps-sm-5 pt-xl-5 pt-4 " id="becomeSellerTxt">
+<div class="row bg-transparent  m-0  p-0 position-absolute mw-1728 ">
+  <div class="col-12 col-lg-6 col-xl-7 d-flex flex-column p-0 pb-2 pr-2 ps-3 ps-sm-5 pt-xl-5 pt-5" id="becomeSellerTxt">
     <h1 class="text-white mb-0 mb-lg-4 my-lg-4" >
       BECOME A VALUEBOX SELLER TODAY
     </h1>
@@ -162,7 +163,15 @@
         </div>
 
         <div class="forgotForm" id="forgotForm" style="display: none">
-          <h2>Login as ValueBox Seller</h2>
+          <div>
+            <a class="blueTextLAble text-decoration-none d-flex align-items-center gap-1 cursor-pointer" id="backToLogin">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                <path d="M14.9965 7.49967H3.82651L8.70651 2.61967C9.09651 2.22967 9.09651 1.58967 8.70651 1.19967C8.61399 1.10697 8.5041 1.03342 8.38313 0.983238C8.26216 0.933056 8.13248 0.907227 8.00151 0.907227C7.87054 0.907227 7.74086 0.933056 7.61988 0.983238C7.49891 1.03342 7.38902 1.10697 7.29651 1.19967L0.706507 7.78967C0.613803 7.88218 0.540256 7.99207 0.490074 8.11305C0.439893 8.23402 0.414063 8.3637 0.414062 8.49467C0.414063 8.62564 0.439893 8.75532 0.490074 8.87629C0.540256 8.99727 0.613803 9.10716 0.706507 9.19967L7.29651 15.7897C7.38909 15.8823 7.499 15.9557 7.61996 16.0058C7.74093 16.0559 7.87058 16.0817 8.00151 16.0817C8.13244 16.0817 8.26209 16.0559 8.38305 16.0058C8.50401 15.9557 8.61392 15.8823 8.70651 15.7897C8.79909 15.6971 8.87253 15.5872 8.92263 15.4662C8.97274 15.3452 8.99853 15.2156 8.99853 15.0847C8.99853 14.9537 8.97274 14.8241 8.92263 14.7031C8.87253 14.5822 8.79909 14.4723 8.70651 14.3797L3.82651 9.49967H14.9965C15.5465 9.49967 15.9965 9.04967 15.9965 8.49967C15.9965 7.94967 15.5465 7.49967 14.9965 7.49967Z" fill="#002882"/>
+              </svg>
+              Back
+            </a>
+          </div>
+          <h2 class="mt-3">Enter your email or phone number</h2>
 
           <div class="form-group mt-4" id="emailDiv">
             <label for="loginInEmail" class="blueTextLAble">Email</label>
@@ -1281,7 +1290,7 @@
             </p>
             <button class="mt-3" onclick="loginPage('2')">Join Marketplace</button>
           </div>
-          <div class="col-lg-2 mt-lg-0 mt-3 col-xl-3 px-xl-5 px-lg-4 d-flex flex-column align-items-lg-center">
+          <div class="col-lg-2 mt-lg-0 mt-3 col-xl-3 px-xl-5 px-lg-4 d-flex flex-column align-items-lg-end">
             <h6 class="text-warning">Seller Resources</h6>
             <a href="#" class="text-dark d-block text-decoration-none mt-4"
               >Seller Center <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -1294,15 +1303,17 @@
               </svg></a
             >
           </div>
-          <div class="col-lg-3 mt-lg-0 mt-5 px-xl-5 px-lg-4">
-            <h6 class="text-warning">About</h6>
+          <div class="col-lg-3 mt-lg-0 mt-5 ps-xl-5 pe-0 ps-lg-4 d-flex flex-column align-items-center">
+            <div>
+              <h6 class="text-warning">About</h6>
             <a href="#" class="text-dark d-block text-decoration-none mt-4"
               >Shop ValueBox.pk</a
             >
             <a href="#" class="text-dark d-block text-decoration-none mt-4"
               >Our Social Handles</a
             >
-            <div class="mt-3 col-12 socialIcons">
+            </div>
+            <div class="mt-3 col-12 socialIcons d-flex justify-content-end">
               <a
                 href="https://www.facebook.com/valueboxdotpk/"
                 class="text-decoration-none"
@@ -1332,7 +1343,7 @@
         </div>
 
         <div class="row m-0 px-lg-5 py-4 px-1">
-          <hr class="text-light py-1" />
+          <hr class="py-1" />
 
           <!-- Logo Section -->
           <div class="col-12 col-lg-4 text-center text-lg-start px-0 logoVlaueBox mb-3 mb-lg-0">
@@ -1388,11 +1399,19 @@
       crossorigin="anonymous"
     ></script>
     <script>
+
   const forgotPassword =document.getElementById('forgotPassword')
 const logInForm =document.getElementById('logInForm')
 const forgotForm =document.getElementById('forgotForm')
 // const forgotNextBtn =document.getElementById('forgotNextBtn')
 // const varificationform =document.getElementById('varificationForm')
+
+const backToLogin =document.getElementById('backToLogin')
+
+backToLogin.addEventListener('click',function(){
+  forgotForm.style.display='none';
+  logInForm.style.display='block';
+})
 
 forgotPassword.addEventListener('click',()=>{
   logInForm.style.display='none'
@@ -1579,6 +1598,7 @@ editBtn.addEventListener('click', () => {
   // Hide the verification form and show the forgot form
   varificationForm.style.display = 'none';
   forgotForm.style.display = 'block';
+  otpErrorMsg.textContent=''
 
   // Clear the OTP input fields
   otpInputs.forEach(input => {

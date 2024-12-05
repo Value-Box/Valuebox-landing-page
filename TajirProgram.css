@@ -27,7 +27,7 @@ body{
     display: flex;
     flex-direction: row;
     /* width: 280px; */
-    gap: 30px; /* Adds space between the icons */
+    gap: 28px; /* Adds space between the icons */
   }
   
   .socialIcons i {

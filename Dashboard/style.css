@@ -1112,6 +1112,8 @@ td {
   height: 56px !important;
   /* overflow: auto; */
   background: transparent;
+  display: flex;
+  align-items: center;
 }
 #selOptType{
   height: fit-content;
@@ -1922,6 +1924,38 @@ align-self: stretch;
 .variant.active{
   background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
 }
+.custom-tooltip {
+  position: absolute;
+  display: none;
+  z-index: 1050;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  bottom: 100%; /* Move the tooltip above the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 5px; /* Space between tooltip and input */
+}
+
+.custom-tooltip.active {
+  display: block;
+}
+
+.trash-icon {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #1A1A1A;
+  margin-left: 10px;
+}
+
+#datePicker {
+  width: 200px; /* Set a fixed width, adjust as needed */
+}
+
+/* Alternatively, make it flexible */
+
  @media(max-width:1400px){
   .Order-detail-line{
     position: relative;
