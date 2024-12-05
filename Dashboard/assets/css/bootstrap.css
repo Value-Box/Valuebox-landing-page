@@ -1979,7 +1979,7 @@ progress {
 }
 .form-control-lg {
   min-height: calc(1.5em + 1rem + 2px);
-  padding: 12px 20px;
+  padding: 10px 20px;
   font-size: 1.25rem;
   border-radius: 0.3rem;
 }
@@ -2026,6 +2026,7 @@ textarea.form-control-lg {
   /* padding: 0.375rem 1.75rem 0.375rem 0.75rem; */
   padding: 11px 11px;
   font-size: 1rem;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
   color: #607080;
@@ -2074,7 +2075,7 @@ textarea.form-control-lg {
   padding-bottom: 0.5rem;
   padding-left: 1rem; */
   padding: 12px 20px;
-  font-size: 18px;
+  font-size: 16px;
   height: 56px !important;
   border: 1px solid var(--Natural-Color-20, #ccc);
 }
@@ -2356,6 +2357,8 @@ textarea.form-control-lg {
   flex-wrap: wrap;
   align-items: stretch;
   width: 100%;
+  border: 1px solid #CCC;
+  border-radius: 5px;
 }
 .input-group > .form-control,
 .input-group > .form-select {
@@ -9754,7 +9757,11 @@ line-height: 18px;
 
 .form-select-input {
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 18px;
+}
+.fs-36 {
+  font-size: clamp(34px, 4vw, 36px);
+  line-height: clamp(42px, 5vw, 44px);
 }
 .fs-20 {
   font-size: 20px;
@@ -9795,6 +9802,9 @@ line-height: 18px;
   font-size: 12px;
   line-height: clamp(20px, 5vw, 24px);
   font-weight: 400;
+}
+.l-h-25{
+  line-height: 25px ;
 }
 .l-h-24 {
   line-height: 24px;
@@ -9977,6 +9987,7 @@ border-top: 5px solid var(--Natural-Color-20, #CCC);
 .top-rouned-btn.active{
   border-top: 5px solid var(--Primary-Color-Dark-Blue-80, #33539B);
   background: var(--White, #FFF);
+  color: #33539B;
 }
 .text-underline{
   color: var(--Primary-Color-Dark-Blue-80, #33539B);
@@ -10025,27 +10036,13 @@ text-underline-position: from-font;
     #e09b00 100%
   );
 }
- /* input:focus{
+/* input:focus{
 color: black;
 font-size: 18px;
 font-style: normal;
 font-weight: 400;
 line-height: 28px
-} */
-
-.border-Gray-Dark{
-  border: 1px solid var(--Gray-Dark);
-}
-
-.rounded-7{
-  border-radius: 7px;
-}
-.w-min-1000{
-  min-width: 1000px;
-}
-.w-min-1200{
-  min-width: 1200px !important;
-}
+}*/
 @media(max-width:1400px){
   .heading-one {
     font-size: clamp(20px, 4vw, 24px);
@@ -10171,7 +10168,7 @@ line-height: 28px
 
   .input {
     font-size: 16px;
-    height: 56px;
+    height: 48px;
     padding: 10px 15px;
   }
   
@@ -10199,7 +10196,10 @@ line-height: 28px
   .fs-20 {
     font-size: 18px;
   }
-
+  .fs-36 {
+    font-size: clamp(32px, 4vw, 34px);
+    line-height: clamp(40px, 5vw, 42px);
+  }
   .fs-18 {
     font-size: clamp(14px, 4vw, 16px);
     line-height: clamp(20px, 5vw, 28px);

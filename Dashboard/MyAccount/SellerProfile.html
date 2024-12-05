@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../assets/css/app.css">
     <link rel="stylesheet" href="../assets/vendors/simple-datatables/style.css">
     <link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="stylesheet" href="../style.css" />
 </head>
@@ -181,7 +182,7 @@
                         </a>
                         <ul class="submenu ">
                             <li class="submenu-item ">
-                                <a href="component-button.html">Promo’s</a>
+                              <a href="../marketingCenter/Promos.html">Promo’s</a>
                             </li>
                             
                         </ul>
@@ -299,7 +300,7 @@
                 </a>
                 <ul class="submenu ">
                     <li class="submenu-item ">
-                        <a href="component-button.html">My Income</a>
+                      <a href="../Finanace/MyIncome.html">My Income</a>
                     </li>
                     
                 </ul>
@@ -363,9 +364,9 @@
                 <li class="submenu-item ">
                     <a href="../MyAccount/AccountSetting.html">Account Settings</a>
                 </li>
-                <li class="submenu-item ">
+                <!-- <li class="submenu-item ">
                     <a href="component-button.html">Chat Settings</a>
-                </li>
+                </li> -->
                 
             </ul>
         </li>
@@ -447,17 +448,13 @@
               <div class="d-flex align-items-center gap-2 mt-30">
                 <span class="message-text gray-color fw-bold">Holiday Mode</span>
                 <div class="form-check form-switch p-0 d-flex justify-content-center gap-2 mt-2">
-                    <input class="form-check-input m-0 toggleCheck" type="checkbox" id="flexSwitchCheckChecked">
+                    <input class="form-check-input m-0 toggleCheck" type="checkbox" id="flexSwitchCheckChecked" checked>
                   </div>
               </div>
               <div class="d-flex flex-column gap-1 mt-30">
                 <span class="message-text gray-color fw-bold">Holiday Mode Period</span>
-                <div class="form-group position-relative d-flex gap-1 align-items-center startEndDate m-0">
-                    <input type="date" class="form-control form-control-lg form-select-input w-25"
-                     placeholder="Start Date Date" disabled>
-                     <span class="gapLine"></span>
-                     <input type="date" class="form-control form-control-lg form-select-input w-25 "
-                     placeholder="End Date" disabled>
+                <div class="form-group d-flex gap-1 align-items-center startEndDate m-0">
+                  <input class="form-control form-control-lg w-50" name="daterange" type="text" id="date1" placeholder="2024-05-23  |  2034-05-24" disabled>
                 
              </div>
               </div>
@@ -500,6 +497,24 @@
         <script src="../assets/vendors/apexcharts/apexcharts.js"></script>
         <script src="../assets/js/pages/ui-apexchart.js"></script>
         <script src="../assets/js/main.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<script>
+  $(function () {
+    // Apply Date Range Picker to all inputs with the name 'daterange'
+    $('input[name="daterange"]').daterangepicker({
+      opens: 'center',
+      locale: {
+        format: 'DD MMM YYYY' // Example: 01 Jan 2022
+      },
+      autoUpdateInput: false // Prevents auto-updating input until selection
+    }, function (start, end, label) {
+      // Update input value with selected range
+      this.element.val(start.format('DD MMM YYYY') + ' | ' + end.format('DD MMM YYYY'));
+    });
+  });
+</script>
         <script>
         let registerProTable = document.querySelector('#report_Table');
         new simpleDatatables.DataTable(registerProTable);

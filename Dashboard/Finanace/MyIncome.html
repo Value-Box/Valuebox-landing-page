@@ -7,11 +7,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/bootstrap.css">
-  
+    <link rel="stylesheet" href="../assets/vendors/apexcharts/apexcharts.css">
     <link rel="stylesheet" href="../assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="../assets/css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../assets/vendors/simple-datatables/style.css">
     <link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="stylesheet" href="../style.css" />
 </head>
@@ -147,7 +151,7 @@
                               </svg>
                           </a>
                           <ul class="submenu ">
-                              <li class="submenu-item active">
+                              <li class="submenu-item ">
                                   <a href="../OrdersReviews/orders.html">Orders</a>
                               </li>
                               <li class="submenu-item ">
@@ -156,8 +160,7 @@
                               <li class="submenu-item ">
                                   <a href="../OrdersReviews/reviwesManagement.html">Reviews</a>
                               </li>
-                              
-                          </ul>
+                               </ul>
                       </li>
         
                       <li class="sidebar-item  has-sub">
@@ -181,7 +184,7 @@
                         </a>
                         <ul class="submenu ">
                             <li class="submenu-item ">
-                              <a href="../marketingCenter/Promos.html">Promo’s</a>
+                                <a href="../marketingCenter/Promos.html">Promo’s</a>
                             </li>
                             
                         </ul>
@@ -269,8 +272,8 @@
                       </svg>
                   </a>
                   <ul class="submenu ">
-                      <li class="submenu-item ">
-                        <a href="../Achivements/Levels.html">Current Level</a>
+                      <li class="submenu-item">
+                          <a href="../Achivements/Levels.html">Current Level</a>
                       </li>
                       
                   </ul>
@@ -298,8 +301,8 @@
                     </svg>
                 </a>
                 <ul class="submenu ">
-                    <li class="submenu-item ">
-                      <a href="../Finanace/MyIncome.html">My Income</a>
+                    <li class="submenu-item active">
+                        <a href="../Finanace/MyIncome.html">My Income</a>
                     </li>
                     
                 </ul>
@@ -353,20 +356,20 @@
                     </defs>
                 </svg>
             </a>
-            <ul class="submenu ">
+            <ul class="submenu">
                 <li class="submenu-item ">
-                  <a href="../MyAccount/Settings.html">Settings</a>
+                    <a href="../MyAccount/Settings.html">Settings</a>
                 </li>
                 <li class="submenu-item ">
                   <a href="../MyAccount/ManageSubAccount.html">User Management</a>
                 </li>
-                <li class="submenu-item ">
-                  <a href="../MyAccount/AccountSetting.html">Account Settings</a>
+                <li class="submenu-item">
+                    <a href="../MyAccount/AccountSetting.html">Account Settings</a>
                 </li>
                 <!-- <li class="submenu-item ">
                     <a href="component-button.html">Chat Settings</a>
-                </li> -->
-                
+                </li>
+                 -->
             </ul>
         </li>
                         
@@ -411,614 +414,610 @@
             </div>
         </div>
    <main class="backcolor" id="main">
-    <div class="navigation anchortags py-4">
-      <a href="../index.html">Home</a>
-      <a href="orders.html">>Orders</a>
-      <a class="active1" href="orderDetails.html">>Orders Details</a>
-    </div>    
-   <div class="container-fluid p-0 py-2">
-    <div>
-        <h3 class="heading-one pt-2">Order Details</h3>
-    </div>
-    
-   <div class="row d-flex ">
-    <div class="col-8 mt-40 p-0">
-      <div class="form1">
-        <div class="d-flex justify-content-between p-0">
-         <div class="d-flex align-items-center gap-2 p-0">
-             <span class="subHeading">Order: #7894565</span>
-             <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                 <path d="M15.8294 1.66602C16.2715 1.66602 16.6954 1.84161 17.0079 2.15417C17.3205 2.46673 17.4961 2.89065 17.4961 3.33268V13.3327C17.4961 13.7747 17.3205 14.1986 17.0079 14.5112C16.6954 14.8238 16.2715 14.9993 15.8294 14.9993H14.1628V16.666C14.1628 17.108 13.9872 17.532 13.6746 17.8445C13.362 18.1571 12.9381 18.3327 12.4961 18.3327H4.16276C3.72073 18.3327 3.29681 18.1571 2.98425 17.8445C2.67169 17.532 2.49609 17.108 2.49609 16.666V6.66602C2.49609 6.22399 2.67169 5.80006 2.98425 5.4875C3.29681 5.17494 3.72073 4.99935 4.16276 4.99935H5.82943V3.33268C5.82943 2.89065 6.00502 2.46673 6.31758 2.15417C6.63014 1.84161 7.05407 1.66602 7.49609 1.66602H15.8294ZM8.32943 12.4993H6.66276C6.45036 12.4996 6.24607 12.5809 6.09162 12.7267C5.93717 12.8725 5.84423 13.0718 5.83178 13.2838C5.81934 13.4959 5.88832 13.7047 6.02465 13.8675C6.16097 14.0304 6.35435 14.1351 6.56526 14.1602L6.66276 14.166H8.32943C8.54183 14.1658 8.74612 14.0844 8.90057 13.9386C9.05501 13.7928 9.14796 13.5936 9.1604 13.3815C9.17285 13.1695 9.10387 12.9607 8.96754 12.7978C8.83121 12.6349 8.63784 12.5303 8.42693 12.5052L8.32943 12.4993ZM15.8294 3.33268H7.49609V4.99935H12.4961C12.9381 4.99935 13.362 5.17494 13.6746 5.4875C13.9872 5.80006 14.1628 6.22399 14.1628 6.66602V13.3327H15.8294V3.33268ZM9.99609 9.16602H6.66276C6.44175 9.16602 6.22979 9.25381 6.0735 9.41009C5.91722 9.56637 5.82943 9.77833 5.82943 9.99935C5.82943 10.2204 5.91722 10.4323 6.0735 10.5886C6.22979 10.7449 6.44175 10.8327 6.66276 10.8327H9.99609C10.2171 10.8327 10.4291 10.7449 10.5853 10.5886C10.7416 10.4323 10.8294 10.2204 10.8294 9.99935C10.8294 9.77833 10.7416 9.56637 10.5853 9.41009C10.4291 9.25381 10.2171 9.16602 9.99609 9.16602Z" fill="#33539B"/>
-               </svg></span>
-               <span>Create Time: 25 Aug 2020 22:55</span>
+    <div class="navigation anchortags mt-40">
+        <a href="../index.html">Home</a>
+        <a href="Settings.html">>Finance</a>
+        <a class="active1" href="MyIncome.html">>My Income</a>
+      </div>   
+  <div class="container-fluid p-0 mt-20"> 
+    <div class="d-flex justify-content-between">
+    <span class="heading-one">My Income</span>
          </div>
-         <div>
-             <button class="bg-orange-light">Packed</button>
-         </div>
-        </div>
-        <div class="d-flex gap-1 py-2 p-0">
-         <span class="subHeading-4">Delivery type:</span>
-         <span class="paragraph-1">Standard</span>
-         </div>
-         <div class="py-2 p-0">
-             <div class="TableWrapper table-responsive  p-0">
-                 <table class="scrollable-table" style="overflow-x: auto; white-space: nowrap;">
-                  <thead>
-                      <tr class="text-dark">
-                              <th style="width: 40%; text-align: start;">
-                              <input class="form-check-input" type="checkbox" id="select-all" onclick="toggleCheckboxes(this)">
-                              <label for="select-all">Product</label>
-                            </th>
-                          <th class="manageproducttableheading" style="width: 15%">Retail Price</th>
-                          <th class="manageproducttableheading" style="width: 15%">Paid Price</th>
-                          <th class="manageproducttableheading" style="width: 15%">Delivery Type</th>
-                          <th class="manageproducttableheading" style="width: 15%">Status</th>
-                          </tr>
-                  </thead>
-                <tbody>
-                      <tr>
-                          <td>
-                             <div class="d-flex align-items-center gap-3 py-2 ">
-                              <input class="form-check-input" type="checkbox" id="product1">  
-                              <img class="" src="../Images/manage product image1.svg" alt="">
-                              <div class="tablecell1 text-start mt-2">
-                                  <h6 class="mb-0 justify-content-center">HIFI M16 MINI Wireless<br>Bluetooth Headset</h6>
-                                  <p class="mb-0">Seller SKu: HIFI M-16</p>
-                                  <p class="mb-0">Order ID: HIFI M-16</p>
-                                  <p class="mb-0">Item ID: HIFI M-16</p>
-                              </div>
-                             </div>
-                             </td>
-                          <td class="RS">RS<span> 4953</span></td>
-                          <td class="RS">RS<span> 4953</span></td> 
-                          <td><Span>Express</Span></td>
-                         
-                          <td> 
-                         <div class="bg-success-light">Delivered
- 
-                         </div>
-                     </td>
-                         </tr>
-                         <tr>
-                             <td class="p-0" > 
-                                 <div class="d-flex align-items-center gap-3">
-                                     <div class="orderdetail-input-text">
-                                         <span>Text Input</span>
-                                     </div>
-                                     <div class="p-2">
-                                         <label for="" class="paragraph-2 text-dark fw-bold">Arshad</label>
-                                     </div>
-                                 
-                                 </div>
-                                
-                           </td>
-                         
-                         </tr>
-                         <tr>
-                             <td class="p-0" > 
-                                 <div class="d-flex align-items-center gap-3">
-                                     <div class="orderdetail-input-text ">
-                                         <span>Delivery</span>
-                                     </div>
-                                   <div class="p-2 w-max-content">
-                                     <div class="d-flex gap-1 py-2 p-0">
-                                         <span class="paragraph-2 text-dark fw-bold">Delivery Option:</span>
-                                         <span class="paragraph-2">Standard</span>
-                                         </div>
-                                         <div class="d-flex gap-1 py-2 p-0">
-                                 <span class="paragraph-2 text-dark fw-bold">Delivery Time:</span>
-                                 <div>
-                                    <span class="rounded-3 border-radius bg-secondary rs-badge text-white fs-12 p-1">No Data</span>
-                                     </div>
-                                      </div>
-                                   </div>
-                                 </div>
-                                
-                           </td>
-                         
-                         </tr>
-                         <tr>
-                             <td class="p-0" > 
-                                 <div class="d-flex align-items-center gap-3">
-                                     <div class="orderdetail-input-text ">
-                                         <span>Total Amount</span>
-                                     </div>
-                                   <div class="p-2 w-max-content"> 
-                                     <div class="d-flex gap-1 py-2 p-0">
-                                         <span class="paragraph-2 text-dark fw-bold">Retail Price:</span>
-                                         <span class="fs-12">RS<span class="paragraph-2"> 800</span></span>
-                                         </div>
-                                         <div class="d-flex gap-1 py-2 p-0">
-                                             <span class="paragraph-2 text-dark fw-bold">Sipping Fee:</span>
-                                             <span class="fs-12">RS<span class="paragraph-2"> 200</span></span>
-                                             </div>
-                                             <div class="d-flex gap-1 py-2 p-0">
-                                                 <span class="paragraph-2 text-dark fw-bold">Paid Amount:</span>
-                                                 <span class="fs-12">RS<span class="paragraph-2"> 1000</span></span>
-                                                 </div>
-                                         
-                                   </div>
-                                 </div>
-                                
-                           </td>
-                         
-                         </tr>
-                         <tr>
-                             <td class="p-0" > 
-                                 <div class="d-flex align-items-center gap-3">
-                                     <div class="orderdetail-input-text ">
-                                         <span>Refund</span>
-                                     </div>
-                                   <div class="p-2 w-max-content">
-                                         <div class="d-flex gap-1 py-2 p-0">
-                                 <span class="paragraph-2 text-dark fw-bold">Refund:</span>
-                                 <div>
-                                    <span class="rounded-3 border-radius bg-secondary rs-badge text-white fs-12 p-1">No Data</span>
-                                     </div>
-                                      </div>
-                                   </div>
-                                 </div>
-                                
-                           </td>
-                         
-                         </tr>
-                         <tr>
-                             <td class="p-0" > 
-                           
-                           
-                              <div class="d-flex align-items-center gap-3">
-                                     <div class="orderdetail-input-text ">
-                                         <span>Logistics</span>
-                                     </div>
-                                   <div class="p-2 w-max-content">
-                                         <div class="d-flex gap-1 py-2 p-0">
-                                          <button class="btn-outline-Yellow" data-bs-toggle="modal" data-bs-target="#exampleModalToggle2">Logistic Status</button>
-                                        </div>
-                                   </div>
-                                 </div>
-                                 </td>
-                         </tr>
-                  </tbody>
-                 </table>
-             </div>
- 
-         </div>
-         <div class="py-2 p-0">
-          <div class="TableWrapper table-responsive p-0">
-            <div class="scrollable-table" style="overflow-x: auto; white-space: nowrap;">
-              <table class="w-100">
-                <thead>
-                  <tr class="text-dark">
-                    <th style="width: 40%; text-align: start;">
-                      <input class="form-check-input" type="checkbox" id="select-all" onclick="toggleCheckboxes(this)">
-                      <label for="select-all">Product</label>
-                    </th>
-                    <th class="manageproducttableheading" style="width: 15%">Retail Price</th>
-                    <th class="manageproducttableheading" style="width: 15%">Paid Price</th>
-                    <th class="manageproducttableheading" style="width: 15%">Delivery Type</th>
-                    <th class="manageproducttableheading" style="width: 15%">Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <div class="d-flex align-items-center gap-3 py-2">
-                        <input class="form-check-input" type="checkbox" id="product1">
-                        <img class="" src="../Images/manage product image1.svg" alt="">
-                        <div class="tablecell1 text-start mt-2">
-                          <h6 class="mb-0 justify-content-center">HIFI M16 MINI Wireless<br>Bluetooth Headset</h6>
-                          <p class="mb-0">Seller SKu: HIFI M-16</p>
-                          <p class="mb-0">Order ID: HIFI M-16</p>
-                          <p class="mb-0">Item ID: HIFI M-16</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="RS">RS<span> 4953</span></td>
-                    <td class="RS">RS<span> 4953</span></td>
-                    <td><span>Express</span></td>
-                    <td>
-                      <div class="bg-success-light">Delivered</div>
-                    </td>
-                  </tr>
-                  <!-- Add more rows here -->
-                </tbody>
-              </table>
-            </div>
-          </div>
-          
-
-      </div>
-
-     
-        </div>
-        <div class="row form1 mt-40 justify-content-center">
-          <div class="d-flex justify-content-between">
-           <span class="subHeading">Payment</span>
-           <div>
-             <button class="payment-pending-orange d-flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-               <path d="M13.1263 12.0837C12.9605 12.0837 12.8016 12.1495 12.6844 12.2667C12.5672 12.3839 12.5013 12.5429 12.5013 12.7087C12.5013 12.8744 12.5672 13.0334 12.6844 13.1506C12.8016 13.2678 12.9605 13.3337 13.1263 13.3337H15.2096C15.3754 13.3337 15.5344 13.2678 15.6516 13.1506C15.7688 13.0334 15.8346 12.8744 15.8346 12.7087C15.8346 12.5429 15.7688 12.3839 15.6516 12.2667C15.5344 12.1495 15.3754 12.0837 15.2096 12.0837H13.1263ZM1.66797 6.87533C1.66797 6.15703 1.95331 5.46816 2.46122 4.96024C2.96913 4.45233 3.65801 4.16699 4.3763 4.16699H15.6263C15.982 4.16699 16.3341 4.23705 16.6627 4.37315C16.9913 4.50926 17.2899 4.70875 17.5414 4.96024C17.7929 5.21174 17.9924 5.5103 18.1285 5.83889C18.2646 6.16748 18.3346 6.51966 18.3346 6.87533V13.1253C18.3346 13.481 18.2646 13.8332 18.1285 14.1618C17.9924 14.4904 17.7929 14.7889 17.5414 15.0404C17.2899 15.2919 16.9913 15.4914 16.6627 15.6275C16.3341 15.7636 15.982 15.8337 15.6263 15.8337H4.3763C3.65801 15.8337 2.96913 15.5483 2.46122 15.0404C1.95331 14.5325 1.66797 13.8436 1.66797 13.1253V6.87533ZM17.0846 7.91699V6.87533C17.0846 6.48855 16.931 6.11762 16.6575 5.84413C16.384 5.57064 16.0131 5.41699 15.6263 5.41699H4.3763C3.98953 5.41699 3.6186 5.57064 3.3451 5.84413C3.07161 6.11762 2.91797 6.48855 2.91797 6.87533V7.91699H17.0846ZM2.91797 9.16699V13.1253C2.91797 13.9303 3.5713 14.5837 4.3763 14.5837H15.6263C16.0131 14.5837 16.384 14.43 16.6575 14.1565C16.931 13.883 17.0846 13.5121 17.0846 13.1253V9.16699H2.91797Z" fill="#F79009"/>
-             </svg> Payment Pending</button>
-           </div>
-          </div>
-          <div class="orderdetailpayment mt-4 position-relative">
-            <div class="d-flex justify-content-between py-2">
-             <span>Subtotal</span>
-             <span>2 Items</span>
-             <span>RS 1,300.00</span>
-            </div>
-            <div class="d-flex justify-content-between py-2">
-              <span>Shipping</span>
-              <span>Standard Delivery (0.0 kg: Items 0.0 kg, Package 0.0 kg)</span>
-              <span>RS 1,300.00</span>
-             </div>
-             <div class="d-flex justify-content-between py-2">
-              <span>Comission</span>
-              <span>RS 400</span>
-             </div>
-             <div class="d-flex justify-content-between py-2 text-dark fw-bold payment-total">
-              <span >Total</span>
-              <span>RS 400</span>
-             </div>
-             <div class="d-flex justify-content-between py-2">
-              <span>Paid</span>
-              <span>RS 0.00</span>
-             </div>
-             <div class="d-flex justify-content-between py-2">
-              <span>Balance</span>
-              <span>RS 1300.00</span>
-             </div>
-            </div>
-            
-            </div>
-            <div class="mt-40">
-             <span class="subHeading">Timeline</span>
-            </div>
-           <div class="d-flex bg-white gap-4 align-items-center rounded-top p-4 p-0">
-           <div>
-            <img src="../Images/Valuebox logo 1 1.svg" alt=""> 
-           </div>
-           <div class="commentinput">
-            <input type="text" placeholder="Leave a comment">
-           </div>
-           </div>
-           <div class="d-flex gap-4 justify-content-between p-2 rounded-bottom post">
-            <div class="d-flex gap-4 align-items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22Z" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M16.5 14.5C16.5 14.5 15 16.5 12 16.5C9 16.5 7.5 14.5 7.5 14.5" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M15.5 9C15.3674 9 15.2402 8.94732 15.1464 8.85355C15.0527 8.75979 15 8.63261 15 8.5C15 8.36739 15.0527 8.24021 15.1464 8.14645C15.2402 8.05268 15.3674 8 15.5 8C15.6326 8 15.7598 8.05268 15.8536 8.14645C15.9473 8.24021 16 8.36739 16 8.5C16 8.63261 15.9473 8.75979 15.8536 8.85355C15.7598 8.94732 15.6326 9 15.5 9ZM8.5 9C8.36739 9 8.24021 8.94732 8.14645 8.85355C8.05268 8.75979 8 8.63261 8 8.5C8 8.36739 8.05268 8.24021 8.14645 8.14645C8.24021 8.05268 8.36739 8 8.5 8C8.63261 8 8.75979 8.05268 8.85355 8.14645C8.94732 8.24021 9 8.36739 9 8.5C9 8.63261 8.94732 8.75979 8.85355 8.85355C8.75979 8.94732 8.63261 9 8.5 9Z" fill="#333333" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="#333333" stroke-width="2"/>
-                <path d="M22 12C22 6.477 17.523 2 12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C14.252 22 16.33 21.256 18.001 20" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M16 8V12C16 13 16.6 15 19 15C21.4 15 22 13 22 12" stroke="#333333" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.723 3.20015C10.776 3.0084 10.7507 2.80343 10.6527 2.63034C10.5546 2.45724 10.3918 2.3302 10.2 2.27715C10.0082 2.22411 9.80328 2.24941 9.63018 2.34749C9.45709 2.44558 9.33004 2.6084 9.277 2.80015L7.763 8.25015H4C3.80109 8.25015 3.61032 8.32917 3.46967 8.46982C3.32902 8.61048 3.25 8.80124 3.25 9.00015C3.25 9.19907 3.32902 9.38983 3.46967 9.53048C3.61032 9.67114 3.80109 9.75015 4 9.75015H7.347L5.819 15.2502H2C1.80109 15.2502 1.61032 15.3292 1.46967 15.4698C1.32902 15.6105 1.25 15.8012 1.25 16.0002C1.25 16.1991 1.32902 16.3898 1.46967 16.5305C1.61032 16.6711 1.80109 16.7502 2 16.7502H5.402L4.277 20.8002C4.22396 20.9919 4.24926 21.1969 4.34734 21.37C4.44542 21.5431 4.60825 21.6701 4.8 21.7232C4.99175 21.7762 5.19672 21.7509 5.36982 21.6528C5.54291 21.5547 5.66996 21.3919 5.723 21.2002L6.959 16.7502H14.402L13.277 20.8002C13.224 20.9919 13.2493 21.1969 13.3473 21.37C13.4454 21.5431 13.6082 21.6701 13.8 21.7232C13.9918 21.7762 14.1967 21.7509 14.3698 21.6528C14.5429 21.5547 14.67 21.3919 14.723 21.2002L15.959 16.7502H20C20.1989 16.7502 20.3897 16.6711 20.5303 16.5305C20.671 16.3898 20.75 16.1991 20.75 16.0002C20.75 15.8012 20.671 15.6105 20.5303 15.4698C20.3897 15.3292 20.1989 15.2502 20 15.2502H16.376L17.903 9.75015H22C22.1989 9.75015 22.3897 9.67114 22.5303 9.53048C22.671 9.38983 22.75 9.19907 22.75 9.00015C22.75 8.80124 22.671 8.61048 22.5303 8.46982C22.3897 8.32917 22.1989 8.25015 22 8.25015H18.32L19.723 3.20015C19.7493 3.10521 19.7566 3.00602 19.7445 2.90825C19.7324 2.81048 19.7012 2.71605 19.6527 2.63034C19.6041 2.54463 19.5391 2.46933 19.4615 2.40873C19.3838 2.34813 19.2949 2.30342 19.2 2.27715C19.1051 2.25089 19.0059 2.24358 18.9081 2.25565C18.8103 2.26772 18.7159 2.29893 18.6302 2.34749C18.5445 2.39606 18.4692 2.46103 18.4086 2.5387C18.348 2.61637 18.3033 2.70521 18.277 2.80015L16.763 8.25015H9.32L10.723 3.20015ZM14.819 15.2502L16.347 9.75015H8.903L7.376 15.2502H14.819Z" fill="#333333"/>
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M15.7285 3.88438C17.1625 2.44438 19.2605 2.41438 20.4215 3.58038C21.5855 4.74838 21.5545 6.86038 20.1185 8.30038L17.6955 10.7334C17.559 10.875 17.4837 11.0646 17.4857 11.2612C17.4877 11.4579 17.5668 11.6459 17.7061 11.7848C17.8453 11.9236 18.0335 12.0022 18.2302 12.0037C18.4269 12.0051 18.6162 11.9292 18.7575 11.7924L21.1815 9.35938C23.0925 7.44038 23.3325 4.37738 21.4845 2.52138C19.6345 0.664382 16.5775 0.906382 14.6645 2.82538L9.81846 7.69238C7.90746 9.61138 7.66746 12.6744 9.51546 14.5294C9.58448 14.6012 9.6671 14.6585 9.75851 14.698C9.84991 14.7375 9.94827 14.7584 10.0478 14.7595C10.1474 14.7606 10.2462 14.7418 10.3385 14.7043C10.4307 14.6668 10.5146 14.6114 10.5851 14.5411C10.6557 14.4709 10.7116 14.3873 10.7495 14.2952C10.7875 14.2031 10.8067 14.1044 10.8061 14.0048C10.8054 13.9053 10.785 13.8068 10.7459 13.7152C10.7068 13.6236 10.6499 13.5407 10.5785 13.4714C9.41446 12.3034 9.44646 10.1914 10.8815 8.75138L15.7285 3.88438Z" fill="#333333"/>
-                <path d="M14.4855 9.4706C14.3449 9.32963 14.1541 9.25028 13.955 9.25C13.7559 9.24972 13.5649 9.32853 13.424 9.4691C13.283 9.60966 13.2036 9.80046 13.2034 9.99953C13.2031 10.1986 13.2819 10.3896 13.4225 10.5306C14.5865 11.6986 14.5555 13.8096 13.1195 15.2506L8.27246 20.1166C6.83746 21.5566 4.73946 21.5866 3.57846 20.4206C2.41446 19.2526 2.44646 17.1406 3.88146 15.7006L6.30546 13.2676C6.37499 13.1978 6.4301 13.115 6.46763 13.0239C6.50516 12.9328 6.52438 12.8352 6.5242 12.7367C6.52401 12.6382 6.50442 12.5406 6.46655 12.4497C6.42868 12.3587 6.37326 12.2761 6.30346 12.2066C6.23366 12.1371 6.15085 12.082 6.05976 12.0444C5.96866 12.0069 5.87107 11.9877 5.77254 11.9879C5.67402 11.988 5.5765 12.0076 5.48555 12.0455C5.3946 12.0834 5.31199 12.1388 5.24246 12.2086L2.81846 14.6416C0.907459 16.5616 0.667459 19.6236 2.51546 21.4796C4.36546 23.3376 7.42246 23.0946 9.33546 21.1756L14.1825 16.3086C16.0935 14.3906 16.3335 11.3256 14.4855 9.4706Z" fill="#333333"/>
-              </svg>
-            </div>
-            <div>
-              <button class="btn-blue">Post</button>
-             </div>
-            </div>
-            <div>
-              <div class="Order-detail-line">
-                <span class="orderdetaile-Line2"> <img src="../Images/Line 31.svg" alt=""></span>
-             
-              </div>
-             <div class="d-flex gap-4">
-              <div class="d-flex flex-column text-center">
-              <span class="subHeading-4">Feb 07</span>
-              <span>14:00</span>
-              </div>
-              <div class="d-flex flex-column align-items-center ">
-                <input class="form-radio-input" type="radio" name="relationship" value="brandowner">
-                <span class="orderdetaile-Line2"></span>
-              </div>
-              <div class="d-flex flex-column ">
-                <span class="subHeading-3">Order Confirmation</span>
-                <span>Order Confirmation Email was sent to Danish Sami (danishsami17@gmail.com).</span>
-              </div>
-               </div>
-               <div class="d-flex justify-content-end send-invoice-btn">
-                <button class="btn-gray">Send Invoice</button>
-              </div> 
-             <div class="d-flex gap-4">
-              <div class="d-flex flex-column text-center">
-              <span class="subHeading-4">Feb 07</span>
-              <span>14:00</span>
-              </div>
-              <div class="d-flex flex-column align-items-center text-center">
-                <input class="form-radio-input" type="radio" name="relationship" value="brandowner">
-                <span class="orderdetaile-Line2"></span>
-              </div>
-              <div class="d-flex flex-column">
-                <span class="subHeading-3">Payment</span>
-                <span>Order Confirmation Email was sent to Danish Sami (danishsami17@gmail.com).</span>
-              </div>
-             </div> 
-             <div class="d-flex gap-4">
-              <div class="d-flex flex-column text-center">
-              <span class="subHeading-4">Feb 07</span>
-              <span>14:00</span>
-              </div>
-              <div class="d-flex flex-column align-items-center">
-                <input class="form-radio-input" type="radio" name="relationship" value="brandowner">
-                <span class="orderdetaile-Line2"></span>
-              </div>
-              <div class="d-flex flex-column">
-                <span class="subHeading-3">Confirmation ID</span>
-                <span>Order Confirmation Email was sent to Danish Sami (danishsami17@gmail.com).</span>
-              </div>
-             </div> 
-             <div class="d-flex gap-4">
-              <div class="d-flex flex-column text-center">
-              <span class="subHeading-4">Feb 07</span>
-              <span>14:00</span>
-              </div>
-              <div class="d-flex flex-column align-items-center">
-                <input class="form-radio-input" type="radio" name="relationship" value="brandowner">
-              </div>
-              <div class="d-flex flex-column">
-                <span class="subHeading-3">Order Paced</span>
-                <span>Order Confirmation Email was sent to Danish Sami (danishsami17@gmail.com).</span>
-              </div>
-             </div> 
-            </div>
-         
-    </div>
-    <div class="col-4 mt-40">
-      <div class="mb-4">
-        
-          <button class="btn-danger w-100" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Cancel Order</button>
-
-         
-          <!-- <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a> -->
-      </div>
-   
-   <div class="d-flex flex-column shadow-sm p-3 mb-4 bg-white rounded p-0">
-       <span class="subHeading-3">Customer Note</span>
-       <label for="">No notes from customer</label>
-   </div>
-   <div class="shadow-sm p-3 mb-4 bg-white rounded p-0">
-       <div class="d-flex flex-column mb-4">
-           <span class="subHeading-3">Customer</span>
-           <span class="subHeading-3 text-primary">Danish Sami</span>
-           <span>01 Order</span>
-       </div>
-       <div class="d-flex flex-column">
-           <span class="subHeading-3">Shipping Address</span>
-           <span class="subHeading-3 text-primary">City:Multan</span>
-           <span>Country: Pakistan</span>
-       </div>
-   </div>
-   </div>
-     </div>
-     
-    </main>
-    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-      <div class="modal-dialog modal-dialog-centered d-flex justify-content-center position-relative">
-        <div class="modal-content" id="cancel-order-modal">
-         <div class=" p-4">
-          <div class="modal-header mb-3 p-0 ">
-            <h5 class="text-dark p-0">Reason for Cancellation<span class="text-warning">*</span></h5>
+         <div class="card-body p-0">
            
-              <div id="closeModalBtn" class="btn-blue closeModalBtn rounded-circle" data-bs-dismiss="modal" aria-label="Close">
-              <img src="../Images/carbon_close-filled.svg" alt="">
+            <div class="list-group d-flex gap-2 mt-40 list-group-horizontal-sm mb-1 text-center "
+                role="tablist">
+                <button class="top-rouned-btn active"
+                    id="list-incomeOverview-list" data-bs-toggle="list" href="#list-incomeOverview"
+                    role="tab">Income Overview</button>
+                <button class="top-rouned-btn" id="list-incomeStatement-list"
+                    data-bs-toggle="list" href="#list-incomeStatement" role="tab">Income Statement</button>
+                   
             </div>
-          </div>
-          <div class="modal-body d-flex flex-column gap-3 p-0">
-            <label class="d-flex gap-1">
-              <input class="form-radio-input" type="radio" name="relationship" value="brandowner"> Product out of Stock
-            </label>
-            <label class="d-flex gap-1">
-              <input class="form-radio-input" type="radio" name="relationship" value="blue"> Pricing Error
-              </label>
-            <label class="d-flex gap-1">
-              <input class="form-radio-input" type="radio" name="relationship" value="green"> Suspected Fraud
-            </label>
-            <label class="d-flex gap-1">
-              <input class="form-radio-input" type="radio" name="relationship" value="green"> Payment Problems
-            </label>
-            <label class="d-flex gap-1">
-              <input class="form-radio-input" type="radio" name="relationship" value="green"> Other
-            </label>
-          </div>
-          <div class="d-flex flex-column mt-4 mb-4 p-0 ">
-            <h5 class="text-dark p-0 mb-3">Explain Reason<span class="text-warning">*</span></h5>
-            <textarea id="w3review" name="w3review" placeholder="Please input" rows="4" cols="50"></textarea>
+            <div class="tab-content text-justify">
+                <div class="tab-pane fade show active" id="list-incomeOverview" role="tabpanel"
+                    aria-labelledby="list-incomeOverview-list">
+                  <div class="row form1 mt-40">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="subHeading">Income Overview</span>
+                            <div>
+                              <input type="date" class="form-control mt-2" id="customDateInput">
+                            </div>
+                            
+                        </div>
+                        <div class=" d-flex justify-content-between gap-3 mt-40">
+                            <div class="col MyIncomecard MyIncome-Blue-BG d-flex flex-column gap-1">
+                                <div class="d-flex justify-content-between">
+                                    <span class="paragraph-2 text-white">Total Earning</span>
+                                   </div>
+                                   <div class="d-flex align-items-end gap-2 mt-20">
+                                    <span class="paragraph-1 text-white">PKR</span>
+                                    <span class="heading-one text-white">18,456</span>
+                                   </div>
+                                   <div class="d-flex justify-content-between mt-20">
+                                    <span class="subHeading-5 text-success"><i class="fa-solid fa-caret-up"></i> 160.93%</span>
+                                    
+                                   </div>
+                            </div>
+                            <div class="col MyIncomecard d-flex flex-column gap-1">
+                              <div class="d-flex justify-content-between">
+                                  <span class="paragraph-2 ">ValueBox Fee</span>
+                                 </div>
+                                 <div class="d-flex align-items-end gap-2 mt-20">
+                                  <span class="paragraph-1 text-dark">PKR</span>
+                                  <span class="heading-one ">1,456</span>
+                                 </div>
+                                 <div class="d-flex justify-content-between mt-20">
+                                  <span class="subHeading-5 text-danger"><i class="fa fa-caret-down" aria-hidden="true"></i> 46.02%</span>
+                                  
+                                 </div>
+                          </div>
+                          <div class="col MyIncomecard d-flex flex-column gap-1">
+                            <div class="d-flex justify-content-between">
+                                <span class="paragraph-2 ">Release Amount</span>
+                               </div>
+                               <div class="d-flex align-items-end gap-2 mt-20">
+                                <span class="paragraph-1 text-dark">PKR</span>
+                                <span class="heading-one ">5,000</span>
+                               </div>
+                               <div class="d-flex justify-content-between mt-20">
+                                <span class="subHeading-5 text-success"><i class="fa-solid fa-caret-up"></i> 160.93%</span>
+                                
+                               </div>
+                        </div>
+                        <div class="col MyIncomecard d-flex flex-column gap-1">
+                          <div class="d-flex justify-content-between">
+                              <span class="paragraph-2 ">ValueBox Fee</span>
+                             </div>
+                             <div class="d-flex align-items-end gap-2 mt-20">
+                              <span class="paragraph-1 text-dark">PKR</span>
+                              <span class="heading-one ">12,000</span>
+                             </div>
+                             <div class="d-flex justify-content-between mt-20">
+                              <span class="paragraph-1 fs-12"> To be released on 21 Oct 2024 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <g clip-path="url(#clip0_4631_98749)">
+                                  <path d="M9.9974 18.3327C14.5998 18.3327 18.3307 14.6017 18.3307 9.99935C18.3307 5.39698 14.5998 1.66602 9.9974 1.66602C5.39502 1.66602 1.66406 5.39698 1.66406 9.99935C1.66406 14.6017 5.39502 18.3327 9.9974 18.3327Z" stroke="#333333" stroke-width="1.66667"/>
+                                  <path d="M9.99609 5.83203H10.0044" stroke="#333333" stroke-width="1.66667" stroke-linecap="round"/>
+                                  <path d="M8.33203 9.16602H9.9987V13.3327M8.33203 13.3327H11.6654" stroke="#333333" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_4631_98749">
+                                    <rect width="20" height="20" fill="white"/>
+                                  </clipPath>
+                                </defs>
+                              </svg></span>
 
-          </div>
-          <div class="d-flex gap-2 ">
-            <button class="btn-blue">Submitt</button>
-            <button class="btn-gray" data-bs-dismiss="modal">Cancel</button>
-          </div>
-          </div>
-          
-        </div>
-      </div>
-    </div>
-      <!-- Second Modal -->
-      <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered position-relative custom-modal-width">
-          <div class="modal-content p-4">
-            <div class="row logisticModal">
-              <div class="col-6">
-                <span class="subHeading-blue">Logistics Status </span>
-                <div id="closeModalBtn" class="btn-blue closeModalBtn rounded-circle" data-bs-dismiss="modal" aria-label="Close">
-                  <img src="../Images/carbon_close-filled.svg" alt="">
-                </div>
-                <div class="d-flex gap-2 mt-40 mb-2">
-                  <span class="text-dark message-text">Order ID:</span>
-                  <span class="orderidColor">456897432131685123</span>
-                  <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M19 2C19.5304 2 20.0391 2.21071 20.4142 2.58579C20.7893 2.96086 21 3.46957 21 4V16C21 16.5304 20.7893 17.0391 20.4142 17.4142C20.0391 17.7893 19.5304 18 19 18H17V20C17 20.5304 16.7893 21.0391 16.4142 21.4142C16.0391 21.7893 15.5304 22 15 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H7V4C7 3.46957 7.21071 2.96086 7.58579 2.58579C7.96086 2.21071 8.46957 2 9 2H19ZM10 15H8C7.74512 15.0003 7.49997 15.0979 7.31463 15.2728C7.1293 15.4478 7.01777 15.687 7.00283 15.9414C6.98789 16.1958 7.07067 16.4464 7.23426 16.6418C7.39786 16.8373 7.6299 16.9629 7.883 16.993L8 17H10C10.2549 16.9997 10.5 16.9021 10.6854 16.7272C10.8707 16.5522 10.9822 16.313 10.9972 16.0586C11.0121 15.8042 10.9293 15.5536 10.7657 15.3582C10.6021 15.1627 10.3701 15.0371 10.117 15.007L10 15ZM19 4H9V6H15C15.5304 6 16.0391 6.21071 16.4142 6.58579C16.7893 6.96086 17 7.46957 17 8V16H19V4ZM12 11H8C7.73478 11 7.48043 11.1054 7.29289 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.29289 12.7071C7.48043 12.8946 7.73478 13 8 13H12C12.2652 13 12.5196 12.8946 12.7071 12.7071C12.8946 12.5196 13 12.2652 13 12C13 11.7348 12.8946 11.4804 12.7071 11.2929C12.5196 11.1054 12.2652 11 12 11Z" fill="#33539B"/>
-                  </svg></span>
-                </div>
-                <div class="d-flex gap-4 align-items-center p-4 rounded orderReturncol ">
-                  <div class="d-flex justify-content-center">
-                    <img src="../Images/orderReturnimg.png" alt="">
-                  </div>
-                  <div class="d-flex flex-column gap-2">
-                    <span class="subHeading-4 text-dark">HIFI M16 MINI Wireless Bluetooth Headset</span>
-                    <div class="d-flex gap-2">
-                      <span class="">Seller SKU ID</span>
-                      <span class="text-dark message-text">HIFI M-16</span>
-                      <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                          <path d="..." fill="#33539B"/>
-                        </svg>
-                      </span>
+                              
+                             </div>
+                      </div>
+                            
+                         
+                        </div>
+                        
+                       
+                        </div>
+                     <div class="row form1 mt-40">
+                      <div class="card bg-transparent">
+                        <div class="card-content">
+                          <div class="card-body p-0">
+                            <div class="list-group d-flex gap-4 list-group-horizontal-sm mb-1 text-center allbar" role="tablist">
+                              <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto p-0 active"
+                                id="list-release-list" data-bs-toggle="list" href="#list-release" role="tab">Released</a>
+                              <a class="list-group-item list-group-item-action menu-item w-auto border-0 h-auto p-0" id="list-dueAmount-list"
+                                data-bs-toggle="list" href="#list-dueAmount" role="tab">Due Amount</a>
+                            </div>
+                            <div class="tab-content text-justify ">
+                              <div class="tab-pane fade show active" id="list-release" role="tabpanel"
+                                aria-labelledby="list-release-list">
+                                <div class="d-flex gap-2 mt-40">
+                                  <input class="form-control form-control-lg" name="daterange" type="text" id="date1" placeholder="Start Date  |  End Date">                            
+                                    <select class="form-select form-select-lg" id="basicSelect">
+                                    <option>Please Select</option>
+                                   </select>
+                                   <div class="input-group">
+                                    <input type="text" class="form-control form-control-lg form-select-input border-0" placeholder="Order ID" aria-label="Search here" aria-describedby="search-icon">
+                                    <span class="input-group-text border-0" id="search-icon">
+                                      <i class="bi bi-search"></i>
+                                    </span>
+                                  </div>
+                                </div>
+                                <div class="table-container TableWrapper mt-20">
+                                  <table class="table " id="income-overview-table">
+                                    <thead>
+                                       <tr class="text-dark">
+                                        <th>Product Info</th>
+                                        <th>Order Creation Date</th>
+                                        <th>Order Status</th>
+                                        <th>Release Amount</th>
+                                        <th>Release Status</th>
+                                        <th>Statement Number</th>
+                                        <th>Statement Number</th>
+                                        <th>Action</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="paragraph-2 p-0">
+                                          <td>
+                                            <div class="d-flex gap-3 py-2 ">
+                                            <img class="" src="../Images/manage product image1.svg" alt="">
+                                              <div class="d-flex flex-column gap-2 tablecell1 text-start">
+                                                  <span class="justify-content-center subHeading-4">Arm Rest Cushion For all cars</span>
+                                                  <span class="paragraph-2 fs-14">Seller SKu: HIFI M-16</span>
+                                                  <span class="paragraph-2 fs-14">Seller SKu: HIFI M-16</span>
+                                                 
+                                              </div>
+                                             </div>
+                                             </td>
+                                             <td>29 Aug 2024 09:19</td>
+                                             <td>Canceled</td>
+                                             <td>Amount</td>
+                                             <td>PKR -200.13</td>
+                                             <td > 
+                                              <div class="bg-warning-light">Pending
+                                              </div>    
+                                             </td>
+                                             <td> 
+                                              PK2NBNMIXFZ-2023-037                          
+                                              </td>
+                                             <td><a class="orderidcolor" href="../OrdersReviews/orderDetails.html">View Detail</a></td>
+                                        
+                                         </tr>
+                                         <tr class="paragraph-2 p-0">
+                                          <td>
+                                            <div class="d-flex gap-3 py-2 ">
+                                            <img class="" src="../Images/manage product image1.svg" alt="">
+                                              <div class="d-flex flex-column gap-2 tablecell1 text-start">
+                                                  <span class="justify-content-center subHeading-4">Arm Rest Cushion For all cars</span>
+                                                 <span class="paragraph-2 fs-14">Seller SKu: HIFI M-16</span>
+                                                 <span class="paragraph-2 fs-14">Seller SKu: HIFI M-16</span>
+                                                 
+                                              </div>
+                                             </div>
+                                             </td>
+                                             <td>29 Aug 2024 09:19</td>
+                                             <td>Canceled</td>
+                                             <td>Amount</td>
+                                             <td>PKR -200.13</td>
+                                             <td > 
+                                              <div class="bg-warning-light">Pending
+                                              </div>    
+                                             </td>
+                                             <td> 
+                                              PK2NBNMIXFZ-2023-037                          
+                                              </td>
+                                              <td><a class="orderidcolor" href="../OrdersReviews/orderDetails.html">View Detail</a></td>
+                                         </tr>
+                                     </tbody>
+                                  </table>
+                                </div>
+                                </div>
+                              <div class="tab-pane fade" id="list-dueAmount" role="tabpanel"
+                                aria-labelledby="list-dueAmount-list">
+                                <div class="d-flex gap-2 mt-40">
+                                  <input class="form-control form-control-lg" name="daterange" type="text" id="date2" placeholder="Start Date  |  End Date">
+                                  <select class="form-select form-select-lg" id="basicSelect">
+                                    <option>Please Select</option>
+                                   </select>
+                                   <div class="input-group">
+                                    <input type="text" class="form-control form-control-lg form-select-input border-0" placeholder="Order ID" aria-label="Search here" aria-describedby="search-icon">
+                                    <span class="input-group-text border-0" id="search-icon">
+                                      <i class="bi bi-search"></i>
+                                    </span>
+                                  </div>
+                                </div>
+                                <div class="table-container TableWrapper mt-20">
+                                  <table class="table " id="income-overview-table2">
+                                    <thead>
+                                       <tr class="text-dark">
+                                        <th>Product Info</th>
+                                        <th>Order Creation Date</th>
+                                        <th>Order Status</th>
+                                        <th>Release Amount</th>
+                                        <th>Release Status</th>
+                                        <th>Statement Number</th>
+                                        <th>Statement Number</th>
+                                        <th>Action</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="paragraph-2 p-0">
+                                          <td>
+                                            <div class="d-flex gap-3 py-2 ">
+                                            <img class="" src="../Images/manage product image1.svg" alt="">
+                                              <div class="tablecell1 text-start ">
+                                                  <span class="justify-content-center subHeading-4">Arm Rest Cushion For all cars</span>
+                                                  <p class="paragraph-2 fs-14">Seller SKu: HIFI M-16</p>
+                                                 
+                                              </div>
+                                             </div>
+                                             </td>
+                                             <td>29 Aug 2024 09:19</td>
+                                             <td>Canceled</td>
+                                             <td>Amount</td>
+                                             <td>PKR -200.13</td>
+                                             <td > 
+                                              <div class="bg-warning-light">Pending
+                                              </div>    
+                                             </td>
+                                             <td> 
+                                              PK2NBNMIXFZ-2023-037                          
+                                              </td>
+                                              <td><a class="orderidcolor" href="../OrdersReviews/orderDetails.html">View Detail</a></td>
+                                        
+                                         </tr>
+                                         <tr class="paragraph-2 p-0">
+                                          <td>
+                                            <div class="d-flex gap-3 py-2 ">
+                                            <img class="" src="../Images/manage product image1.svg" alt="">
+                                              <div class="tablecell1 text-start ">
+                                                  <span class="justify-content-center subHeading-4">Arm Rest Cushion For all cars</span>
+                                                  <p class="paragraph-2 fs-14">Seller SKu: HIFI M-16</p>
+                                                 
+                                              </div>
+                                             </div>
+                                             </td>
+                                             <td>29 Aug 2024 09:19</td>
+                                             <td>Canceled</td>
+                                             <td>Amount</td>
+                                             <td>PKR -200.13</td>
+                                             <td > 
+                                              <div class="bg-warning-light">Pending
+                                              </div>    
+                                             </td>
+                                             <td> 
+                                              PK2NBNMIXFZ-2023-037                          
+                                              </td>
+                                              <td><a class="orderidcolor" href="../OrdersReviews/orderDetails.html">View Detail</a></td>
+                                        
+                                         </tr>
+                                     </tbody>
+                                  </table>
+                                </div>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          
+                        </div>
                     </div>
-                    <div class="d-flex gap-2">
-                      <span class="">Item ID</span>
-                      <span class="text-dark">HIFI M-16</span>
-                      <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                          <path d="..." fill="#33539B"/>
-                        </svg>
-                      </span>
+                     </div>
+                    
+                </div>
+                <div class="tab-pane fade mt-40" id="list-incomeStatement" role="tabpanel"
+                    aria-labelledby="list-incomeStatement-list">  
+                    <span class="heading-one">View Statements</span>
+                    <div class="d-flex gap-2 mt-40">
+                     
+                      <input class="form-control form-control-lg" name="daterange" type="text" id="date3" placeholder="Start Date  |  End Date">
+                        <select class="form-select form-select-lg" id="basicSelect">
+                          <option>Please Select</option>
+                         </select>
+                         <div class="input-group">
+                          <input type="text" class="form-control form-control-lg form-select-input border-0" placeholder="Order ID" aria-label="Search here" aria-describedby="search-icon">
+                          <span class="input-group-text border-0" id="search-icon">
+                            <i class="bi bi-search"></i>
+                          </span>
+                        </div>
+                      
+                   
                     </div>
-                  </div>
-                  <div class="rounded d-flex">
-                    <span class="subHeading-5 rs-badge">1 X<span class="fs-14 text-secondary"> Rs.</span> 280</span>
-                  </div>
-                </div>
-                <div class="d-flex gap-2 mt-40 mb-2">
-                  <span class="text-dark message-text">Tracking Number:</span>
-                  <span class="orderidColor">PK-DEX0261156</span>
-                  <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M19 2C19.5304 2 20.0391 2.21071 20.4142 2.58579C20.7893 2.96086 21 3.46957 21 4V16C21 16.5304 20.7893 17.0391 20.4142 17.4142C20.0391 17.7893 19.5304 18 19 18H17V20C17 20.5304 16.7893 21.0391 16.4142 21.4142C16.0391 21.7893 15.5304 22 15 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H7V4C7 3.46957 7.21071 2.96086 7.58579 2.58579C7.96086 2.21071 8.46957 2 9 2H19ZM10 15H8C7.74512 15.0003 7.49997 15.0979 7.31463 15.2728C7.1293 15.4478 7.01777 15.687 7.00283 15.9414C6.98789 16.1958 7.07067 16.4464 7.23426 16.6418C7.39786 16.8373 7.6299 16.9629 7.883 16.993L8 17H10C10.2549 16.9997 10.5 16.9021 10.6854 16.7272C10.8707 16.5522 10.9822 16.313 10.9972 16.0586C11.0121 15.8042 10.9293 15.5536 10.7657 15.3582C10.6021 15.1627 10.3701 15.0371 10.117 15.007L10 15ZM19 4H9V6H15C15.5304 6 16.0391 6.21071 16.4142 6.58579C16.7893 6.96086 17 7.46957 17 8V16H19V4ZM12 11H8C7.73478 11 7.48043 11.1054 7.29289 11.2929C7.10536 11.4804 7 11.7348 7 12C7 12.2652 7.10536 12.5196 7.29289 12.7071C7.48043 12.8946 7.73478 13 8 13H12C12.2652 13 12.5196 12.8946 12.7071 12.7071C12.8946 12.5196 13 12.2652 13 12C13 11.7348 12.8946 11.4804 12.7071 11.2929C12.5196 11.1054 12.2652 11 12 11Z" fill="#33539B"/>
-                  </svg></span>
-                </div>
-                <div class=" row d-flex orderReturncol justify-content-between p-3">
-                <div class="col-5 d-flex flex-column gap-1 justify-content-center align-items-center text-center">
-                  <span class="subHeading-5">First Mile 3PL</span>
-                  <span class="paragraph-2">PK-DEX</span>
-                </div>
-                <div class="col-2 justify-content-center align-items-center text-center">
-                  <img src="../Images/Line 28.svg" alt="">
-                </div>
-                <div class=" col-5 d-flex flex-column gap-1 justify-content-center align-items-center text-center">
-                  <span class="subHeading-5">First Mile 3PL</span>
-                  <span class="paragraph-2">PK-DEX</span>
-                </div>
-                </div>
-                <div class="d-flex gap-2 mt-40 mb-2">
-                  <span class="text-dark message-text">Customer Info</span>
-                </div>
-                <div class="d-flex gap-4 align-items-center p-4 rounded orderReturncol ">
-                  <div class="d-flex gap-2">
-                    <span class="">Customer Name:</span>
-                    <span class="text-dark message-text">Muhammad Arshad</span>
-                  </div>
-              </div>
-              
+                    <div class="table-container TableWrapper mt-20">
+                      <table class="table " id="view-statement-table">
+                        <thead>
+                           <tr class="text-dark">
+                            <th>Statement Period</th>
+                            <th>Comission</th>
+                            <th>Total Earning</th>
+                            <th>Release Amount</th>
+                            <th>Release Status</th>
+                            <th>Statement Number</th>
+                             <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="paragraph-2 p-0">
+                           <td>01 Nov 2024 <br> 15 Nov 2024</td>
+                                 <td>PKR 413.13</td>
+                                 <td>PKR 5,000</td>
+                                 <td>PKR 5,000</td>
+                                  <td > 
+                                  <div class="bg-warning-light">Pending
+                                  </div>    
+                                 </td>
+                                 <td> 
+                                  PK2NBNMIXFZ-2023-037                          
+                                  </td>
+                                  <td><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
+                            
+                             </tr>
+                             <tr class="paragraph-2 p-0">
+                              <td>01 Nov 2024 <br> 15 Nov 2024</td>
+                                    <td>PKR 413.13</td>
+                                    <td>PKR 5,000</td>
+                                    <td>PKR 5,000</td>
+                                     <td > 
+                                     <div class="bg-warning-light">Pending
+                                     </div>    
+                                    </td>
+                                    <td> 
+                                     PK2NBNMIXFZ-2023-037                          
+                                     </td>
+                                     <td><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
+                               
+                                </tr>
+                                <tr class="paragraph-2 p-0">
+                                  <td>01 Nov 2024 <br> 15 Nov 2024</td>
+                                        <td>PKR 413.13</td>
+                                        <td>PKR 5,000</td>
+                                        <td>PKR 5,000</td>
+                                         <td > 
+                                         <div class="bg-warning-light">Pending
+                                         </div>    
+                                        </td>
+                                        <td> 
+                                         PK2NBNMIXFZ-2023-037                          
+                                         </td>
+                                         <td><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
+                                   
+                                    </tr>
+                                    <tr class="paragraph-2 p-0">
+                                      <td>01 Nov 2024 <br> 15 Nov 2024</td>
+                                            <td>PKR 413.13</td>
+                                            <td>PKR 5,000</td>
+                                            <td>PKR 5,000</td>
+                                             <td > 
+                                             <div class="bg-warning-light">Pending
+                                             </div>    
+                                            </td>
+                                            <td> 
+                                             PK2NBNMIXFZ-2023-037                          
+                                             </td>
+                                             <td><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
+                                       
+                                        </tr>
+                                        <tr class="paragraph-2 p-0">
+                                          <td>01 Nov 2024 <br> 15 Nov 2024</td>
+                                                <td>PKR 413.13</td>
+                                                <td>PKR 5,000</td>
+                                                <td>PKR 5,000</td>
+                                                 <td > 
+                                                 <div class="bg-warning-light">Pending
+                                                 </div>    
+                                                </td>
+                                                <td> 
+                                                 PK2NBNMIXFZ-2023-037                          
+                                                 </td>
+                                                 <td><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
+                                           
+                                            </tr>
+                                            <tr class="paragraph-2 p-0">
+                                              <td>01 Nov 2024 <br> 15 Nov 2024</td>
+                                                    <td>PKR 413.13</td>
+                                                    <td>PKR 5,000</td>
+                                                    <td>PKR 5,000</td>
+                                                     <td > 
+                                                     <div class="bg-warning-light">Pending
+                                                     </div>    
+                                                    </td>
+                                                    <td> 
+                                                     PK2NBNMIXFZ-2023-037                          
+                                                     </td>
+                                                     <td><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
+                                               
+                                                </tr>
+                                                <tr class="paragraph-2 p-0">
+                                                  <td>01 Nov 2024 <br> 15 Nov 2024</td>
+                                                        <td>PKR 413.13</td>
+                                                        <td>PKR 5,000</td>
+                                                        <td>PKR 5,000</td>
+                                                         <td > 
+                                                         <div class="bg-warning-light">Pending
+                                                         </div>    
+                                                        </td>
+                                                        <td> 
+                                                         PK2NBNMIXFZ-2023-037                          
+                                                         </td>
+                                                         <td><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
+                                                   
+                                                    </tr>
+                                                    <tr class="paragraph-2 p-0">
+                                                      <td>01 Nov 2024 <br> 15 Nov 2024</td>
+                                                            <td>PKR 413.13</td>
+                                                            <td>PKR 5,000</td>
+                                                            <td>PKR 5,000</td>
+                                                             <td > 
+                                                             <div class="bg-warning-light">Pending
+                                                             </div>    
+                                                            </td>
+                                                            <td> 
+                                                             PK2NBNMIXFZ-2023-037                          
+                                                             </td>
+                                                             <td><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
+                                                       
+                                                        </tr>
+                                                        <tr class="paragraph-2 p-0">
+                                                          <td>01 Nov 2024 <br> 15 Nov 2024</td>
+                                                                <td>PKR 413.13</td>
+                                                                <td>PKR 5,000</td>
+                                                                <td>PKR 5,000</td>
+                                                                 <td > 
+                                                                 <div class="bg-warning-light">Pending
+                                                                 </div>    
+                                                                </td>
+                                                                <td> 
+                                                                 PK2NBNMIXFZ-2023-037                          
+                                                                 </td>
+                                                                 <td><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
+                                                           
+                                                            </tr>
+                                                            <tr class="paragraph-2 p-0">
+                                                              <td>01 Nov 2024 <br> 15 Nov 2024</td>
+                                                                    <td>PKR 413.13</td>
+                                                                    <td>PKR 5,000</td>
+                                                                    <td>PKR 5,000</td>
+                                                                     <td > 
+                                                                     <div class="bg-warning-light">Pending
+                                                                     </div>    
+                                                                    </td>
+                                                                    <td> 
+                                                                     PK2NBNMIXFZ-2023-037                          
+                                                                     </td>
+                                                                     <td><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
+                                                               
+                                                                </tr>
+                                                                <tr class="paragraph-2 p-0">
+                                                                  <td>01 Nov 2024 <br> 15 Nov 2024</td>
+                                                                        <td>PKR 413.13</td>
+                                                                        <td>PKR 5,000</td>
+                                                                        <td>PKR 5,000</td>
+                                                                         <td > 
+                                                                         <div class="bg-warning-light">Pending
+                                                                         </div>    
+                                                                        </td>
+                                                                        <td> 
+                                                                         PK2NBNMIXFZ-2023-037                          
+                                                                         </td>
+                                                                         <td><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
+                                                                   
+                                                                    </tr>
+                                                                    <tr class="paragraph-2 p-0">
+                                                                      <td>01 Nov 2024 <br> 15 Nov 2024</td>
+                                                                            <td>PKR 413.13</td>
+                                                                            <td>PKR 5,000</td>
+                                                                            <td>PKR 5,000</td>
+                                                                             <td > 
+                                                                             <div class="bg-warning-light">Pending
+                                                                             </div>    
+                                                                            </td>
+                                                                            <td> 
+                                                                             PK2NBNMIXFZ-2023-037                          
+                                                                             </td>
+                                                                             <td><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
+                                                                       
+                                                                        </tr>
+                        
+                      </table>
+                    </div>
+                </div>   
             </div>
-            <div class="col-6 mb-2">
-              <span class="subHeading-blue">Shipping Status </span>
-              <div class="d-flex gap-4 justify-content-center align-items-center p-4 my-4 rounded orderReturncol ">
-                <div class="d-flex flex-column gap-2">
-                  <label class="d-flex flex-column align-items-center text-center gap-1">
-                    <input class="form-radio-input" type="radio" name="relationship" value="brandowner"> Pickup
-                  </label>
-                </div>
-                <span class="orderdetaile-Line"></span>
-                <div class="d-flex flex-column gap-2">
-                  <label class="d-flex flex-column align-items-center text-center gap-1">
-                    <input class="form-radio-input" type="radio" name="relationship" value="brandowner"> Shipping
-                  </label>
-                </div>
-                <span class="orderdetaile-Line"></span>
-                <div class="d-flex flex-column gap-2">
-                  <label class="d-flex flex-column align-items-center text-center gap-1">
-                    <input class="form-radio-input" type="radio" name="relationship" value="brandowner"> Delivery
-                  </label>
-                </div>
-                
-            </div>
-            <div class="justify-content-center align-items-center p-4 my-4 rounded orderReturncol">
-             <div class="row d-flex gap-4 m-0">
-              <div>
-               <div class="d-flex gap-4">
-                <div class="d-flex flex-column text-center">
-                <span class="subHeading-4">Feb 07</span>
-                <span>14:00</span>
-                </div>
-                <div class="d-flex flex-column align-items-center ">
-                  <input class="form-radio-input" type="radio" name="relationship" value="brandowner">
-                  <span class="orderdetaile-Line2"></span>
-                </div>
-                <div class="d-flex flex-column ">
-                  <span class="subHeading-3">Delivered</span>
-                  <span>Order Confirmation Email was sent to Danish Sami (danishsami17@gmail.com).</span>
-                </div>
-                 </div>
-               <div class="d-flex gap-4">
-                <div class="d-flex flex-column text-center">
-                <span class="subHeading-4">Feb 07</span>
-                <span>14:00</span>
-                </div>
-                <div class="d-flex flex-column align-items-center text-center">
-                  <input class="form-radio-input" type="radio" name="relationship" value="brandowner">
-                  <span class="orderdetaile-Line2"></span>
-                </div>
-                <div class="d-flex flex-column">
-                  <span class="subHeading-3">Out For Delivery</span>
-                  <span>Order Confirmation Email was sent to Danish Sami (danishsami17@gmail.com).</span>
-                </div>
-               </div> 
-               <div class="d-flex gap-4">
-                <div class="d-flex flex-column text-center">
-                <span class="subHeading-4">Feb 07</span>
-                <span>14:00</span>
-                </div>
-                <div class="d-flex flex-column align-items-center">
-                  <input class="form-radio-input" type="radio" name="relationship" value="brandowner">
-                  <span class="orderdetaile-Line2"></span>
-                </div>
-                <div class="d-flex flex-column">
-                  <span class="subHeading-3">Arrived at Main Logistics Facility</span>
-                  <span>Order Confirmation Email was sent to Danish Sami (danishsami17@gmail.com).</span>
-                </div>
-               </div> 
-               <div class="d-flex gap-4">
-                <div class="d-flex flex-column text-center">
-                <span class="subHeading-4">Feb 07</span>
-                <span>14:00</span>
-                </div>
-                <div class="d-flex flex-column align-items-center">
-                  <input class="form-radio-input" type="radio" name="relationship" value="brandowner">
-                </div>
-                <div class="d-flex flex-column">
-                  <span class="subHeading-3">Packed by Seller / warehouse</span>
-                  <span>Order Confirmation Email was sent to Danish Sami (danishsami17@gmail.com).</span>
-                </div>
-               </div> 
-              </div>
-             
-               </div>
-            </div>
-            </div>
-          </div>
         </div>
-      </div>
-      </div>
+         </div>
+     </div>
+    </main>
 
 
 
+
+
+
+  <script>
+  function togglePassword() {
+    const passwordInput = document.getElementById("password");
+    const toggleIcon = document.getElementById("togglePasswordIcon");
+  
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      toggleIcon.classList.remove("bi-eye-slash");
+      toggleIcon.classList.add("bi-eye");
+    } else {
+      passwordInput.type = "password";
+      toggleIcon.classList.remove("bi-eye");
+      toggleIcon.classList.add("bi-eye-slash");
+    }
+  }
+  </script>
     <script>
         function toggleCheckboxes(source) {
           const checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
           checkboxes.forEach(checkbox => checkbox.checked = source.checked);
         }
         </script>
+   
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+        <script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
         <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
         <script src="../assets/js/bootstrap.bundle.min.js"></script>
         <script src="../assets/js/main.js"></script>
+        <script>
+          // document.querySelector('#view-statement-table').DataTable({ordering: false});
+          
+        
+          </script> 
+            <script>
+              let statementDetailTable = document.querySelector('#view-statement-table');
+          new simpleDatatables.DataTable(statementDetailTable, {
+            sortable: false // Disables sorting arrows globally
+            
+});
+
+              //  document.querySelector('#income-overview-table').DataTable({ordering: false});
+               let incomeOverviewTable = document.querySelector('#income-overview-table');
+          new simpleDatatables.DataTable(incomeOverviewTable, {
+            sortable: false // Disables sorting arrows globally
+            
+});
+let incomeOverviewTable2 = document.querySelector('#income-overview-table2');
+          new simpleDatatables.DataTable(incomeOverviewTable2, {
+            sortable: false // Disables sorting arrows globally
+            
+});
+             function replaceArrows() {
+          // Select all elements with the page-link class
+            document.querySelectorAll(".page-link").forEach(function (link) {
+            if (link.innerHTML === "‹") {
+              link.innerHTML = "Previous"; // Replace left arrow with "Previous"
+            } else if (link.innerHTML === "›") {
+              link.innerHTML = "Next"; // Replace right arrow with "Next"
+            }
+          });
+        }
+        
+        // Call this function once on page load
+        replaceArrows();
+        
+        // Observe for changes in pagination to handle dynamic updates
+        const paginationObserver = new MutationObserver(replaceArrows);
+        document.querySelectorAll(".pagination").forEach(function (pagination) {
+          paginationObserver.observe(pagination, { childList: true, subtree: true });
+        });
+        
+              </script> 
+        <script>
+          $(function () {
+            // Apply Date Range Picker to all inputs with the name 'daterange'
+            $('input[name="daterange"]').daterangepicker({
+              opens: 'center',
+              locale: {
+                format: 'DD MMM YYYY' // Example: 01 Jan 2022
+              },
+              autoUpdateInput: false // Prevents auto-updating input until selection
+            }, function (start, end, label) {
+              // Update input value with selected range
+              this.element.val(start.format('DD MMM YYYY') + ' | ' + end.format('DD MMM YYYY'));
+            });
+          });
+        </script>
 </body>
 </html>
