@@ -297,7 +297,7 @@
                 </a>
                 <ul class="submenu ">
                     <li class="submenu-item ">
-                        <a href="component-button.html">My Income</a>
+                      <a href="../Finanace/MyIncome.html">My Income</a>
                     </li>
                     
                 </ul>
@@ -361,9 +361,9 @@
                 <li class="submenu-item ">
                   <a href="../MyAccount/AccountSetting.html">Account Settings</a>
                 </li>
-                <li class="submenu-item ">
+                <!-- <li class="submenu-item ">
                     <a href="component-button.html">Chat Settings</a>
-                </li>
+                </li> -->
                 
             </ul>
         </li>
@@ -422,14 +422,16 @@
 </div>
 <div class="row mt-20 p-0">
 <h6 class="text-dark p-0"><span class="text-warning">*</span> Category</h6>
-<input type="text" id="roundText" class="form-control form-control-lg round" placeholder="Please Select">
+<select class="form-select form-select-lg" id="basicSelect">
+  <option>Please Select</option>
+ </select>
 </div>
 <div class="row mt-20 p-0">
 <h6 class="text-dark p-0"><span class="text-warning">*</span> Relationship with brand</h6>
 <p class="p-0">Select the correct brand relation, this wil help us to verify your document and assign the right Tag</p>
 <div class="d-flex gap-4 text-dark fw-bold p-0 d-inline">
    <label class="d-flex gap-1">
-       <input class="form-radio-input" type="radio" name="relationship" value="brandowner"> Brand Owner
+       <input class="form-radio-input" type="radio" name="relationship" value="brandowner" checked> Brand Owner
      </label>
      <label class="d-flex gap-1">
        <input class="form-radio-input" type="radio" name="relationship" value="blue"> Distribuuter
@@ -444,20 +446,20 @@
 <div class="mt-20 p-0">
    <h6 class="text-dark p-0"><span class="text-warning">*</span> Authorization Validity</h6>
    <div class="d-flex gap-5">
-       <div class="w-25">
-           <p>*Start Date</p>
-           <input type="date" class="form-control form-control-lg bg-transparent "
+       <div class="w-25 m-0">
+           <p class="m-0">*Start Date</p>
+           <input type="date" class="form-control form-control-lg  bg-transparent mt-1"
        placeholder="Start Date">
        </div>
        <div class="text-center">
-           <p>*Have end Date</p>
+           <p class="m-0">*Have End Date</p>
            <div class="form-check form-switch p-0 d-flex justify-content-center gap-2 mt-2">
-            <input class="form-check-input m-0 toggleCheck" type="checkbox" id="flexSwitchCheckChecked">
+            <input class="form-check-input m-0 toggleCheck" type="checkbox" id="flexSwitchCheckChecked" checked>
           </div>
        </div>
        <div class="w-25">
-           <p>*End Date</p>
-           <input type="date" class="form-control form-control-lg bg-transparent"
+           <p class="m-0 ">*End Date</p>
+           <input type="date" class="form-control form-control-lg bg-transparent mt-1"
        placeholder="End Date">
        </div>
    </div>
@@ -473,7 +475,7 @@
 <div class="col-12 mt-40 p-0">
 <h6 class="text-dark p-0"><span class="text-warning">*</span> Authentication Documents</h6>
 </div>
-<div class="row uploadfile mt-20 justify-content-between">
+<div class="row uploadfile justify-content-between">
 <div class="col-3">
 <div class="uploadFileContainer d-flex flex-column text-center align-items-center p-5">
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">

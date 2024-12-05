@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="../assets/css/app.css">
     <link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="stylesheet" href="../style.css" />
 </head>
@@ -298,7 +299,7 @@
             </a>
             <ul class="submenu ">
                 <li class="submenu-item ">
-                    <a href="component-button.html">My Income</a>
+                  <a href="../Finanace/MyIncome.html">My Income</a>
                 </li>
                 
             </ul>
@@ -361,9 +362,9 @@
             <li class="submenu-item ">
               <a href="../MyAccount/AccountSetting.html">Account Settings</a>
             </li>
-            <li class="submenu-item ">
+            <!-- <li class="submenu-item ">
                 <a href="component-button.html">Chat Settings</a>
-            </li>
+            </li> -->
             
         </ul>
     </li>
@@ -430,23 +431,12 @@
                <button class="btn-outline-blue h-auto">Select All</button>
            </div>
            <div class="col-8 d-flex justify-content-end gap-2 p-0">
-               <div class="form-group position-relative d-flex gap-1 align-items-center startEndDate m-0">
-                      <input type="date" class="form-control form-control-lg form-select-input"
-                       placeholder="Start Date Date">
-                       <span class="gapLine"></span>
-                       <input type="date" class="form-control form-control-lg form-select-input"
-                       placeholder="End Date">
-                  
-               </div>
-               <div class="d-flex gap-2">
-                   <input type="text" class="form-control form-control-lg form-select-input"
-                   placeholder="Search Picture">
+           <input class="form-control form-control-lg" name="daterange" type="text" id="date" placeholder="Start Date  |  End Date" disabled>  
+            <input type="text" disabled class="form-control form-control-lg" placeholder="muhammadarshad@gmail.com">
                    <button class="btn-outline-blue h-auto">Clear</button>
                    <button class="btn-blue h-auto">Search</button>
-               </div>
+                </div>
               </div>
-           
-       </div>
        <div class="container-fluid p-0">
         <div class="card bg-transparent">
           <div class="card-content">
@@ -549,9 +539,9 @@
    
  </main>
   
-
-
-
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
  <script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
  <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
   <script>
@@ -566,8 +556,7 @@
     <script>
       let registerProTable = document.querySelector('#media_center_Table');
       new simpleDatatables.DataTable(registerProTable);
-
-      function replaceArrows() {
+       function replaceArrows() {
   // Select all elements with the page-link class
   document.querySelectorAll(".page-link").forEach(function (link) {
     if (link.innerHTML === "‹") {
@@ -586,7 +575,18 @@ const paginationObserver = new MutationObserver(replaceArrows);
 document.querySelectorAll(".pagination").forEach(function (pagination) {
   paginationObserver.observe(pagination, { childList: true, subtree: true });
 });
-
+$(function() {
+    $('input[name="daterange"]').daterangepicker({
+      opens: 'center',
+      locale: {
+        format: 'DD MMM YYYY' // Example: 01 Jan 2022
+      },
+      autoUpdateInput: false  // This stops the input from updating automatically before selection
+    }, function(start, end, label) {
+      // When a user selects a range, update the input field with the selected dates
+      $('input[name="daterange"]').val(start.format('DD MMM YYYY') + ' | ' + end.format('DD MMM YYYY'));
+    });
+  });
       </script> 
 </body>
 </html>

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="../assets/css/app.css">
     <link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="stylesheet" href="../style.css" />
 </head>
@@ -180,7 +181,7 @@
                         </a>
                         <ul class="submenu ">
                             <li class="submenu-item ">
-                                <a href="component-button.html">Promo’s</a>
+                              <a href="../marketingCenter/Promos.html">Promo’s</a>
                             </li>
                             
                         </ul>
@@ -298,7 +299,7 @@
                 </a>
                 <ul class="submenu ">
                     <li class="submenu-item ">
-                        <a href="component-button.html">My Income</a>
+                      <a href="../Finanace/MyIncome.html">My Income</a>
                     </li>
                     
                 </ul>
@@ -362,9 +363,9 @@
                 <li class="submenu-item ">
                   <a href="../MyAccount/AccountSetting.html">Account Settings</a>
                 </li>
-                <li class="submenu-item ">
+                <!-- <li class="submenu-item ">
                     <a href="component-button.html">Chat Settings</a>
-                </li>
+                </li> -->
                 
             </ul>
         </li>
@@ -510,8 +511,8 @@
   <div class="row form1 d-flex flex-column gap-2 mt-40 ">
     <div class="d-flex gap-2 p-0">
         <div class="input-group">
-            <label class="input-group-text " for="inputGroupSelect01">Status</label>
-            <select class="form-select form-select-input" id="inputGroupSelect01">
+            <label class="input-group-text border-0" for="inputGroupSelect01">Status</label>
+            <select class="form-select form-check-lg border-0" id="inputGroupSelect01">
                 <option selected="">Replied</option>
                 <option value="1">One</option>
                 <option value="2">Two</option>
@@ -519,8 +520,8 @@
             </select>
             </div>
             <div class="input-group">
-                <label class="input-group-text " for="inputGroupSelect01">Content</label>
-                <select class="form-select form-select-input" id="inputGroupSelect01">
+                <label class="input-group-text border-0" for="inputGroupSelect01">Content</label>
+                <select class="form-select form-control-lg border-0" id="inputGroupSelect01">
                     <option selected="">With Content</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
@@ -528,15 +529,15 @@
                 </select>
             </div>
                 <div class="input-group">
-                    <label class="input-group-text " for="inputGroupSelect01">Overall Rating</label>
-                    <select class="form-select form-select-input" id="inputGroupSelect01">
+                    <label class="input-group-text border-0" for="inputGroupSelect01">Overall Rating</label>
+                    <select class="form-select form-control-lg border-0" id="inputGroupSelect01">
                         <option selected="">03 Stars</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
                     </select>
                 </div>
-                <button class="btn-gray">Reset</button>
+                <button class="btn-gray h-auto">Reset</button>
     </div>
     <div class="d-flex gap-2 p-0 mt-2">
         <fieldset class="form-group w-100 " id="linkGroup1">
@@ -575,27 +576,34 @@
                       <option>Custom</option>
                     </select>
                     </fieldset>
-                    <div class="form-group input gap-0 p-0 w-100 d-flex ">
-                        <input type="text" class="form-control border-0 form-control-lg" placeholder="Product ID" aria-label="input" aria-describedby="button-addon2">
-                       <span class="input-group-text h-inherit rounded-right" id="basic-addon1"><i class="bi bi-search"></i></span>
+                    <div class="form-group p-0 w-100 d-flex ">
+                      <div class="input-group">
+                        <input type="text" class="form-control form-control-lg form-select-input border-0" placeholder="Product ID" aria-label="Search here" aria-describedby="search-icon">
+                        <span class="input-group-text border-0" id="search-icon">
+                          <i class="bi bi-search"></i>
+                        </span>
+                      </div>
                     </div>
-                    <div class="form-group input gap-0 p-0 w-100 d-flex ">
-                        <input type="text" class="form-control border-0 form-control-lg" placeholder="Order ID" aria-label="input" aria-describedby="button-addon2">
-                       <span class="input-group-text h-inherit rounded-right" id="basic-addon1"><i class="bi bi-search"></i></span>
+                    <div class="form-group p-0 w-100 d-flex ">
+                      <div class="input-group">
+                        <input type="text" class="form-control form-control-lg form-select-input border-0" placeholder="Order ID" aria-label="Search here" aria-describedby="search-icon">
+                        <span class="input-group-text border-0" id="search-icon">
+                          <i class="bi bi-search"></i>
+                        </span>
+                      </div>
                     </div>
     </div>
                     <div class="d-flex gap-2 m-0 p-0">
-                        <div class="form-group input gap-0 p-0 d-flex m-0">
-                            <input type="text" class="form-control border-0 form-control-lg" placeholder="Buyer Name" aria-label="input" aria-describedby="button-addon2">
-                           <span class="input-group-text h-inherit rounded-right" id="basic-addon1"><i class="bi bi-search"></i></span>
+                        <div class="form-group gap-0 p-0 d-flex m-0 w-25">
+                          <div class="input-group">
+                            <input type="text" class="form-control form-control-lg form-select-input border-0" placeholder="Buyer Name" aria-label="Search here" aria-describedby="search-icon">
+                            <span class="input-group-text border-0" id="search-icon">
+                              <i class="bi bi-search"></i>
+                            </span>
+                          </div>
                         </div>
                    <div class="form-group position-relative d-flex gap-1 align-items-center startEndDate m-0">
-                   <input type="date" class="form-control form-select-input"
-                     placeholder="Start Date Date">
-                     <span class="gapLine"></span>
-                     <input type="date" class="form-control form-select-input"
-                     placeholder="End Date">
-                
+                    <input class="form-control form-control-lg" name="daterange" type="text" id="date1" placeholder="Start Date  |  End Date">
              </div>
                  </div>
                 
@@ -987,6 +995,24 @@
         <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
         <script src="../assets/js/bootstrap.bundle.min.js"></script>
         <script src="../assets/js/main.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<script>
+  $(function () {
+    // Apply Date Range Picker to all inputs with the name 'daterange'
+    $('input[name="daterange"]').daterangepicker({
+      opens: 'center',
+      locale: {
+        format: 'DD MMM YYYY' // Example: 01 Jan 2022
+      },
+      autoUpdateInput: false // Prevents auto-updating input until selection
+    }, function (start, end, label) {
+      // Update input value with selected range
+      this.element.val(start.format('DD MMM YYYY') + ' | ' + end.format('DD MMM YYYY'));
+    });
+  });
+</script>
         <script>
           let registerProTable = document.querySelector('#review_management_Table');
           new simpleDatatables.DataTable(registerProTable);
