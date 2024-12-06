@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/bootstrap.css">
-  
+    <link rel="stylesheet" href="../assets/vendors/simple-datatables/style.css">
     <link rel="stylesheet" href="../assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="../assets/css/app.css">
@@ -413,7 +413,7 @@
    <main class="backcolor" id="main">
     <div class="navigation anchortags py-4">
       <a href="../index.html">Home</a>
-      <a href="">>Settings</a>
+      <a href="../MyAccount/Settings.html">>Settings</a>
       <a class="active1" href="brandInformation.html">>Brand</a>
     </div>   
         <div class="container-fluid d-flex gap-5 mb-2 p-0 ">
@@ -465,7 +465,7 @@
   
                </div>
                <div class="TableWrapper">
-                <table>
+                <table id="brand-information-table">
                     <thead>
                         <tr class="text-dark">
                                 
@@ -485,13 +485,13 @@
                                 <td><div class="bg-warning-light text-warning rounded-2 text-center w-75">Pending</div></td>
                                 <td>03-Aug-2024</td>
                                 <td class="gap-2 d-flex">
-                                     <div class="rounded-2 p-2 iconsbackcolor">
+                                     <div class="rounded-2 p-2 iconsbackcolor btn">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M1.67188 5.71449C1.67188 4.64103 2.09831 3.61153 2.85736 2.85248C3.61641 2.09342 4.64591 1.66699 5.71937 1.66699H10.0052C10.2262 1.66699 10.4382 1.75479 10.5945 1.91107C10.7507 2.06735 10.8385 2.27931 10.8385 2.50033C10.8385 2.72134 10.7507 2.9333 10.5945 3.08958C10.4382 3.24586 10.2262 3.33366 10.0052 3.33366H5.71937C5.08794 3.33366 4.48236 3.5845 4.03587 4.03099C3.58938 4.47748 3.33854 5.08306 3.33854 5.71449V14.2862C3.33854 14.9176 3.58938 15.5232 4.03587 15.9697C4.48236 16.4162 5.08794 16.667 5.71937 16.667H14.291C14.9225 16.667 15.5281 16.4162 15.9745 15.9697C16.421 15.5232 16.6719 14.9176 16.6719 14.2862V10.0003C16.6719 9.77931 16.7597 9.56735 16.916 9.41107C17.0722 9.25479 17.2842 9.16699 17.5052 9.16699C17.7262 9.16699 17.9382 9.25479 18.0945 9.41107C18.2507 9.56735 18.3385 9.77931 18.3385 10.0003V14.2862C18.3385 15.3596 17.9121 16.3891 17.1531 17.1482C16.394 17.9072 15.3645 18.3337 14.291 18.3337H5.71937C4.64591 18.3337 3.61641 17.9072 2.85736 17.1482C2.09831 16.3891 1.67188 15.3596 1.67188 14.2862V5.71449Z" fill="#999999"/>
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6165 11.0164L10.779 12.1247L9.91818 10.6972L11.7557 9.58887L11.7582 9.5872C11.8286 9.54478 11.8935 9.49384 11.9515 9.43553L16.1265 5.23887C16.1683 5.1967 16.2086 5.15307 16.2473 5.10803C16.5232 4.78637 16.9315 4.1497 16.4373 3.65303C16.0198 3.23303 15.4215 3.6297 15.034 3.97053C14.9301 4.06217 14.83 4.15808 14.734 4.25803L14.7057 4.28637L10.589 8.42387C10.4913 8.52103 10.4147 8.63735 10.364 8.76553L9.67735 10.493C9.66432 10.5255 9.66187 10.5613 9.67034 10.5953C9.6788 10.6293 9.69775 10.6597 9.7245 10.6823C9.75125 10.7049 9.78444 10.7185 9.81935 10.7212C9.85427 10.7239 9.88831 10.7155 9.91818 10.6972L10.779 12.1247C9.27485 13.0314 7.47901 11.508 8.12901 9.87637L8.81651 8.1497C8.95037 7.81228 9.1517 7.50574 9.40818 7.24887L13.524 3.11053L13.5482 3.08637C13.6707 2.96137 14.0823 2.5397 14.5815 2.23637C14.854 2.0722 15.289 1.8547 15.8265 1.81303C16.4432 1.76387 17.1015 1.95803 17.6182 2.4772C18.0136 2.86786 18.2623 3.3829 18.3223 3.93553C18.3636 4.36628 18.2978 4.80055 18.1307 5.1997C17.889 5.7972 17.4857 6.23637 17.3082 6.41387L13.1332 10.6105C12.9776 10.7666 12.8054 10.9019 12.6165 11.0164ZM16.3273 5.07803C16.3273 5.07803 16.324 5.08053 16.3165 5.08303L16.3273 5.07803Z" fill="#999999"/>
                                       </svg>
                                 </div>
-                                <div class="rounded-2 p-2 iconsbackcolor">
+                                <div class="rounded-2 p-2 iconsbackcolor btn">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                         <path d="M17.0885 5H2.92188M7.92188 9.16667L8.33854 13.3333M12.0885 9.16667L11.6719 13.3333" stroke="#999999" stroke-width="1.25" stroke-linecap="round"/>
                                         <path d="M5.42188 5H5.51354C5.84891 4.99143 6.17389 4.88185 6.44598 4.68559C6.71806 4.48934 6.92459 4.21553 7.03854 3.9L7.06688 3.81417L7.14771 3.57167C7.21688 3.36417 7.25188 3.26083 7.29771 3.1725C7.38788 2.99949 7.5173 2.84999 7.67561 2.73597C7.83391 2.62194 8.01671 2.54655 8.20938 2.51583C8.30688 2.5 8.41604 2.5 8.63437 2.5H11.376C11.5944 2.5 11.7035 2.5 11.801 2.51583C11.9937 2.54655 12.1765 2.62194 12.3348 2.73597C12.4931 2.84999 12.6225 2.99949 12.7127 3.1725C12.7585 3.26083 12.7935 3.36417 12.8627 3.57167L12.9435 3.81417C13.0491 4.16523 13.2676 4.47167 13.5649 4.68605C13.8623 4.90043 14.2221 5.01077 14.5885 5" stroke="#999999" stroke-width="1.25"/>
@@ -528,7 +528,34 @@
         </script>
         <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
         <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    
+        <script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
         <script src="../assets/js/main.js"></script>
+        <script>
+          let brandinformationtable = document.querySelector('#brand-information-table');
+               new simpleDatatables.DataTable(brandinformationtable, {
+                 sortable: false // Disables sorting arrows globally
+                 
+     });
+                  function replaceArrows() {
+               // Select all elements with the page-link class
+                 document.querySelectorAll(".page-link").forEach(function (link) {
+                 if (link.innerHTML === "‹") {
+                   link.innerHTML = "Previous"; // Replace left arrow with "Previous"
+                 } else if (link.innerHTML === "›") {
+                   link.innerHTML = "Next"; // Replace right arrow with "Next"
+                 }
+               });
+             }
+             
+             // Call this function once on page load
+             replaceArrows();
+             
+             // Observe for changes in pagination to handle dynamic updates
+             const paginationObserver = new MutationObserver(replaceArrows);
+             document.querySelectorAll(".pagination").forEach(function (pagination) {
+               paginationObserver.observe(pagination, { childList: true, subtree: true });
+             });
+             
+                   </script> 
 </body>
 </html>

@@ -439,33 +439,29 @@
                     <div class="row form1 mt-40 ">
                       <div class="d-flex justify-content-between p-0">
                         <div class="d-flex gap-4">
-                          <div class="input-group">
-                              <label class="input-group-text title" for="inputGroupSelect01">Brand Relation</label>
-                              <select class="form-select form-select-input" id="inputGroupSelect01">
-                                  <option selected="">Select</option>
-                                  <option value="1">One</option>
-                                  <option value="2">Two</option>
-                                  <option value="3">Three</option>
-                              </select>
-                          </div> 
-                          <div class="input-group">
-                              <label class="input-group-text title" for="inputGroupSelect01">Brand Relation</label>
-                              <select class="form-select form-select-input" id="inputGroupSelect01">
-                                  <option selected="">Select</option>
-                                  <option value="1">One</option>
-                                  <option value="2">Two</option>
-                                  <option value="3">Three</option>
-                              </select>
-                          </div> 
+                          <div class="input-group input-group-lg border-Gray-Dark rounded-7">
+                            <label class="input-group-text title bg-light-gray-10 border-0" for="inputGroupSelect01">Roles</label>
+                            <select class="form-select border-0" id="inputGroupSelect01">
+                                <option selected="">Please Select</option>
+                            </select>
+                        </div>
+                        <div class="input-group input-group-lg border-Gray-Dark rounded-7">
+                          <label class="input-group-text title bg-light-gray-10 border-0" for="inputGroupSelect01">Status</label>
+                          <select class="form-select border-0" id="inputGroupSelect01">
+                              <option selected="">Please Select</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                          </select>
+                      </div>
                       </div> 
                       <div>
                         <div class="d-flex gap-2 justify-content-end ">
-                          <div class="input-group" style="max-width: 400px;">
-                            <input type="text" class="form-control form-control-lg form-select-input" disabled placeholder="Search here..." aria-label="Search here" aria-describedby="search-icon">
-                            <span class="input-group-text" id="search-icon">
-                              <i class="bi bi-search"></i>
-                            </span>
-                          </div>
+                          <div class="input-group">
+                            <input type="text" class="form-control border-0 form-control-lg" placeholder="Category Name" aria-label="input" aria-describedby="button-addon2">
+                            <span class="input-group-text h-inherit rounded-right border-0" id="basic-addon1"><i class="bi bi-search"></i></span>
+                          </span>
+                        </div>
                         <button class="btn-gray h-auto">Reset</button>
                         </div>
                       </div>
@@ -474,7 +470,7 @@
                         
                       </div>
                       <div class="table-container TableWrapper mt-20 p-0">
-                        <table>
+                        <table id="manage-sub-acc-table">
                             <thead>
                                 <tr class="text-dark">
                                         
@@ -522,34 +518,30 @@
                     aria-labelledby="list-monday-list">
                     <div class="row form1 mt-40 ">
                       <div class="d-flex justify-content-between p-0">
-                        <div class="d-flex gap-4">
-                          <div class="input-group">
-                              <label class="input-group-text title" for="inputGroupSelect01">Brand Relation</label>
-                              <select class="form-select form-select-input" id="inputGroupSelect01">
-                                  <option selected="">Select</option>
-                                  <option value="1">One</option>
-                                  <option value="2">Two</option>
-                                  <option value="3">Three</option>
-                              </select>
-                          </div> 
-                          <div class="input-group">
-                              <label class="input-group-text title" for="inputGroupSelect01">Brand Relation</label>
-                              <select class="form-select form-select-input" id="inputGroupSelect01">
-                                  <option selected="">Select</option>
-                                  <option value="1">One</option>
-                                  <option value="2">Two</option>
-                                  <option value="3">Three</option>
-                              </select>
-                          </div> 
+                        <div class=" d-flex gap-4">
+                          <div class="input-group input-group-lg border-Gray-Dark rounded-7">
+                            <label class="input-group-text title bg-light-gray-10 border-0" for="inputGroupSelect01">Roles</label>
+                            <select class="form-select border-0" id="inputGroupSelect01">
+                                <option selected="">Please Select</option>
+                            </select>
+                        </div>
+                        <div class="input-group input-group-lg border-Gray-Dark rounded-7">
+                          <label class="input-group-text title bg-light-gray-10 border-0" for="inputGroupSelect01">Status</label>
+                          <select class="form-select border-0" id="inputGroupSelect01">
+                              <option selected="">Please Select</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                          </select>
+                      </div>
                       </div> 
                       <div>
                         <div class="d-flex gap-2 justify-content-end ">
-                          <div class="input-group" style="max-width: 400px;">
-                            <input type="text" class="form-control form-select-input " placeholder="Search here..." aria-label="Search here" aria-describedby="search-icon" disabled>
-                            <span class="input-group-text" id="search-icon">
-                              <i class="bi bi-search"></i>
-                            </span>
-                          </div>
+                          <div class="input-group">
+                            <input type="text" class="form-control border-0 form-control-lg" placeholder="Category Name" aria-label="input" aria-describedby="button-addon2">
+                            <span class="input-group-text h-inherit rounded-right border-0" id="basic-addon1"><i class="bi bi-search"></i></span>
+                          </span>
+                        </div>
                         <button class="btn-gray h-auto">Reset</button>
                         </div>
                       </div>
@@ -558,7 +550,7 @@
                         
                       </div>
                       <div class="table-container TableWrapper mt-20 p-0">
-                        <table>
+                        <table id="manage-roles-table">
                             <thead>
                                 <tr class="text-dark">
                                         
@@ -622,29 +614,36 @@
         <script src="../assets/js/pages/ui-apexchart.js"></script>
         <script src="../assets/js/main.js"></script>
         <script>
-        let registerProTable = document.querySelector('#report_Table');
-        new simpleDatatables.DataTable(registerProTable);
-
-        function replaceArrows() {
-    // Select all elements with the page-link class
-    document.querySelectorAll(".page-link").forEach(function (link) {
-      if (link.innerHTML === "‹") {
-        link.innerHTML = "Previous"; // Replace left arrow with "Previous"
-      } else if (link.innerHTML === "›") {
-        link.innerHTML = "Next"; // Replace right arrow with "Next"
-      }
-    });
-  }
-
-  // Call this function once on page load
-  replaceArrows();
-
-  // Observe for changes in pagination to handle dynamic updates
-  const paginationObserver = new MutationObserver(replaceArrows);
-  document.querySelectorAll(".pagination").forEach(function (pagination) {
-    paginationObserver.observe(pagination, { childList: true, subtree: true });
-  });
-
-        </script> 
+          let managesubacctable = document.querySelector('#manage-sub-acc-table');
+               new simpleDatatables.DataTable(managesubacctable, {
+                 sortable: false // Disables sorting arrows globally
+                 
+     });
+     let managerolestable = document.querySelector('#manage-roles-table');
+               new simpleDatatables.DataTable(managerolestable, {
+                 sortable: false // Disables sorting arrows globally
+                 
+     });
+                  function replaceArrows() {
+               // Select all elements with the page-link class
+                 document.querySelectorAll(".page-link").forEach(function (link) {
+                 if (link.innerHTML === "‹") {
+                   link.innerHTML = "Previous"; // Replace left arrow with "Previous"
+                 } else if (link.innerHTML === "›") {
+                   link.innerHTML = "Next"; // Replace right arrow with "Next"
+                 }
+               });
+             }
+             
+             // Call this function once on page load
+             replaceArrows();
+             
+             // Observe for changes in pagination to handle dynamic updates
+             const paginationObserver = new MutationObserver(replaceArrows);
+             document.querySelectorAll(".pagination").forEach(function (pagination) {
+               paginationObserver.observe(pagination, { childList: true, subtree: true });
+             });
+             
+                   </script> 
 </body>
 </html>

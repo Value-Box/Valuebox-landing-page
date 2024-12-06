@@ -460,18 +460,22 @@
                                </div>
                                <div class="d-flex gap-2">
                                 <div class="form-group w-100">
-                                  <select class="form-select form-select-lg" id="basicSelect">
-                                    <option>All categories</option>
-                                   </select>
+                                  <fieldset class="form-group mb-0 w-100 d-flex align-items-end">
+                                    <select class="form-select form-select-lg " >
+                                        <option value="">All Categories</option>
+                                     </select>
+                                </fieldset>
                               </div>
                               <div class="form-group w-100">
-                                <select class="form-select form-select-lg" id="basicSelect">
-                                  <option>All Brands</option>
-                                 </select>
+                                <fieldset class="form-group mb-0 w-100 d-flex align-items-end">
+                                  <select class="form-select form-select-lg " >
+                                      <option value="">All Brands</option>
+                                   </select>
+                              </fieldset>
                             </div>
                                 <div class="form-group input gap-0 p-0 w-100 d-flex ">
-                                    <input type="text" class="form-control border-0 form-control-lg" placeholder="Seller SKU" aria-label="input" aria-describedby="button-addon2">
-                                   <span class="input-group-text  bg-light-gray h-inherit rounded-right" id="basic-addon1">Search</span>
+                                    <input type="text" class="form-control border-0 form-control-lg rounded-left" placeholder="Seller SKU" aria-label="input" aria-describedby="button-addon2">
+                                   <span class="input-group-text bg-light-gray h-inherit rounded-right border-0" id="basic-addon1">Search</span>
                                 </div>
                                 
                                <button class="btn-blue bg-transparent text-brand-color px-0 border-0">Download <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -497,7 +501,7 @@
                             </div>
                            
                          </div>
-                         <div class="d-flex gap-40 mt-40 flex-wrap">
+                         <div class="d-flex gap-40 mt-20 flex-wrap">
                             <span class="subHeading-3">Add to Cart:</span>
                             <div class="d-flex gap-40 align-items-center">
                               <!-- First row -->
@@ -526,7 +530,7 @@
                               </div>
                             </div>
                           </div>
-                          <div class="d-flex gap-40 mt-40 flex-wrap">
+                          <div class="d-flex gap-40 flex-wrap mt-20">
                             <span class="subHeading-3">Conversion:</span>
                             <div class="d-flex gap-40 align-items-center">
                               <!-- First row -->
@@ -611,63 +615,141 @@
                 </div>
                 <div class="tab-pane fade" id="list-monday" role="tabpanel"
                     aria-labelledby="list-monday-list">
-                   <div class="row d-flex m-0">
-                    <div class="col-4 p-0">
-                    <span class="diagnosisBackColor text-warning subHeading-3">Out/Short of Stock (0)</span>
-                    </div>
-                    <div class="col-4 ">
-                        <span class="diagnosisBackColor bg-white text-natural-gray subHeading-3">Low Conversion Rate (0)</span>
-                        </div>
-                        <div class="col-4 p-0">
-                            <span class="diagnosisBackColor bg-white text-natural-gray subHeading-3">Poor Reviews (0)</span>
-                            </div>
-                   </div>
-                   <div class="d-flex align-items-center gap-3 mt-20 DiagnosisOutofStock ">
-                    <div>
-                        <span><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                            <path d="M18 33C26.2843 33 33 26.2843 33 18C33 9.71573 26.2843 3 18 3C9.71573 3 3 9.71573 3 18C3 26.2843 9.71573 33 18 33Z" stroke="#002882" stroke-width="3"/>
-                            <path d="M18 10.5H18.015" stroke="#002882" stroke-width="3" stroke-linecap="round"/>
-                            <path d="M15 16.5H18V24M15 24H21" stroke="#002882" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg></span>
-                    </div>
-                      <div class="d-flex flex-column gap-2 w-50">
-                        <span class="subHeading-5">Out/Short of Stock (0)</span>
-                        <span class="l-h-24">Definition: These are products whose stock is about to finish within 7 days.
-                            Tips: Increase stock prevent revenue loss.</span>
+                    <div class="card-body">
+                    <div class="list-group list-group-horizontal-sm mb-1 d-flex gap-2 text-center" role="tablist">
+                          <a class="diagnosisBackColor active" id="list-oos-list" data-bs-toggle="list" href="#list-oos" role="tab" aria-selected="true">Out/Short of Stock (0)</a>
+                          <a class="diagnosisBackColor" id="list-lowconversion-list" data-bs-toggle="list" href="#list-lowconversion" role="tab" aria-selected="false">Low Conversion Rate (0)</a>
+                          <a class="diagnosisBackColor" id="list-poorreviews-list" data-bs-toggle="list" href="#list-poorreviews" role="tab" aria-selected="false">Poor Reviews (0)</a>
                       </div>
-                       </div>
-                       <div class="TableWrapper mt-20">
-                        <table>
-                            <thead>
-                                <tr class="text-dark">
-                                    <th># SKU</th> 
-                                    <th>Days of Out Of Stock</th>
-                                    <th>Stock Yesterday</th>
-                                    <th>Daily avg Units Sold</th>
-                                    <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="py-5">
-                                    <tr>
-                                        <td class="text-dark"></td>
-                                        <td></td>
-                                        <td>No Data</td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                </tbody>
-                                
-                          </table> 
-                       </div>
+                      <div class="tab-content text-justify">
+                          <div class="tab-pane fade active show" id="list-oos" role="tabpanel" aria-labelledby="list-oos-list">
+                          <div class="d-flex align-items-center gap-3 mt-20 DiagnosisOutofStock ">
+                              <div>
+                                  <span><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                      <path d="M18 33C26.2843 33 33 26.2843 33 18C33 9.71573 26.2843 3 18 3C9.71573 3 3 9.71573 3 18C3 26.2843 9.71573 33 18 33Z" stroke="#002882" stroke-width="3"/>
+                                      <path d="M18 10.5H18.015" stroke="#002882" stroke-width="3" stroke-linecap="round"/>
+                                      <path d="M15 16.5H18V24M15 24H21" stroke="#002882" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg></span>
+                              </div>
+                                <div class="d-flex flex-column gap-2 w-50">
+                                  <span class="subHeading-5">Out/Short of Stock (0)</span>
+                                  <span class="l-h-24">Definition: These are products whose stock is about to finish within 7 days.
+                                      Tips: Increase stock prevent revenue loss.</span>
+                                </div>
+                                 </div>
+                                 <div class="TableWrapper mt-20">
+                                  <table id="Diagnosistable">
+                                      <thead>
+                                          <tr class="text-dark">
+                                              <th># SKU</th> 
+                                              <th>Days of Out Of Stock</th>
+                                              <th>Stock Yesterday</th>
+                                              <th>Daily avg Units Sold</th>
+                                              <th>Action</th>
+                                              </tr>
+                                          </thead>
+                                          <tbody class="py-5">
+                                              <tr>
+                                                  <td class="text-dark"></td>
+                                                  <td></td>
+                                                  <td>No Data</td>
+                                                  <td></td>
+                                                  <td></td>
+                                              </tr>
+                                          </tbody>
+                                          
+                                    </table> 
+                                 </div>
+                          </div>
+                          <div class="tab-pane fade" id="list-lowconversion" role="tabpanel" aria-labelledby="list-lowconversion-list">
+                            <div class="d-flex align-items-center gap-3 mt-20 DiagnosisOutofStock ">
+                              <div>
+                                  <span><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                      <path d="M18 33C26.2843 33 33 26.2843 33 18C33 9.71573 26.2843 3 18 3C9.71573 3 3 9.71573 3 18C3 26.2843 9.71573 33 18 33Z" stroke="#002882" stroke-width="3"/>
+                                      <path d="M18 10.5H18.015" stroke="#002882" stroke-width="3" stroke-linecap="round"/>
+                                      <path d="M15 16.5H18V24M15 24H21" stroke="#002882" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg></span>
+                              </div>
+                                <div class="d-flex flex-column gap-2 w-50">
+                                  <span class="subHeading-5">Low Conversion Rate (0)</span>
+                                  <span class="l-h-24">Definition: These are products whose stock is about to finish within 7 days.
+                                      Tips: Increase stock prevent revenue loss.</span>
+                                </div>
+                                 </div>
+                                 <div class="TableWrapper mt-20">
+                                  <table id="Diagnosistable">
+                                      <thead>
+                                          <tr class="text-dark">
+                                              <th># SKU</th> 
+                                              <th>Days of Out Of Stock</th>
+                                              <th>Stock Yesterday</th>
+                                              <th>Daily avg Units Sold</th>
+                                              <th>Action</th>
+                                              </tr>
+                                          </thead>
+                                          <tbody class="py-5">
+                                              <tr>
+                                                  <td class="text-dark"></td>
+                                                  <td></td>
+                                                  <td>No Data</td>
+                                                  <td></td>
+                                                  <td></td>
+                                              </tr>
+                                          </tbody>
+                                          
+                                    </table> 
+                                 </div>
+                          </div>
+                          <div class="tab-pane fade" id="list-poorreviews" role="tabpanel" aria-labelledby="list-poorreviews-list">
+                            <div class="d-flex align-items-center gap-3 mt-20 DiagnosisOutofStock ">
+                              <div>
+                                  <span><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                      <path d="M18 33C26.2843 33 33 26.2843 33 18C33 9.71573 26.2843 3 18 3C9.71573 3 3 9.71573 3 18C3 26.2843 9.71573 33 18 33Z" stroke="#002882" stroke-width="3"/>
+                                      <path d="M18 10.5H18.015" stroke="#002882" stroke-width="3" stroke-linecap="round"/>
+                                      <path d="M15 16.5H18V24M15 24H21" stroke="#002882" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg></span>
+                              </div>
+                                <div class="d-flex flex-column gap-2 w-50">
+                                  <span class="subHeading-5">Poor Reviews (0)</span>
+                                  <span class="l-h-24">Definition: These are products whose stock is about to finish within 7 days.
+                                      Tips: Increase stock prevent revenue loss.</span>
+                                </div>
+                                 </div>
+                                 <div class="TableWrapper mt-20">
+                                  <table id="Diagnosistable">
+                                      <thead>
+                                          <tr class="text-dark">
+                                              <th># SKU</th> 
+                                              <th>Days of Out Of Stock</th>
+                                              <th>Stock Yesterday</th>
+                                              <th>Daily avg Units Sold</th>
+                                              <th>Action</th>
+                                              </tr>
+                                          </thead>
+                                          <tbody class="py-5">
+                                              <tr>
+                                                  <td class="text-dark"></td>
+                                                  <td></td>
+                                                  <td>No Data</td>
+                                                  <td></td>
+                                                  <td></td>
+                                              </tr>
+                                          </tbody>
+                                          
+                                    </table> 
+                                 </div>  </div>
+                      </div>
+                  </div>
+                 
                 </div>
                 <div class="tab-pane fade" id="list-tuesday" role="tabpanel"
                     aria-labelledby="list-tuesday-list">
                     <div class="form1 vh-100 ">
                         <span class="subHeading">Search For Product</span>
-                        <div class="form-group input gap-0 p-0 w-100 d-flex mt-20">
-                         <input type="text" class="form-control border-0 form-control-lg" placeholder="Search Reports" aria-label="input" aria-describedby="button-addon2">
-                        <span class="input-group-text h-inherit rounded-right" id="basic-addon1"><i class="bi bi-search"></i></span>
-                     </div>
+                        <div class="input-group gap-0 p-0 w-100 d-flex mt-20">
+                          <input type="text" class="form-control border-0 form-control-lg" placeholder="Product Name" aria-label="input" aria-describedby="button-addon2">
+                         <span class="input-group-text h-inherit rounded-right border-0" id="basic-addon1"><i class="bi bi-search"></i></span>
+                      </div>
                      <span class="paragraph-2 fs-14">Search input should matc the name stricktly. E.g: For “iPhone Pro Max”, you can find it by “iPhone” or “max” or “Pro”, but not by “iPhoneMax” or “iPhone Max”</span>
                         </div>
                 </div>
@@ -709,6 +791,11 @@
         <script>
         let registerProTable = document.querySelector('#buss_advis_Table');
         new simpleDatatables.DataTable(registerProTable);
+        let Diagnosistable = document.querySelector('#Diagnosistable');
+          new simpleDatatables.DataTable(Diagnosistable, {
+            sortable: false // Disables sorting arrows globally
+            
+});
 
         function replaceArrows() {
     // Select all elements with the page-link class

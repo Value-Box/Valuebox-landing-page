@@ -97,10 +97,24 @@ main {
 .closeIcon {
   display: none;
 } */
-#carouselExampleCaptions {
+/* #carouselExampleCaptions {
   height: 430px;
   background: linear-gradient(45deg, #002068 0%, #33539B 100%);
+} */
+#carouselExampleCaptions {
+  height: 430px;
+  background: #002068; /* Default to the first slide's background */
+  transition: background .2s ease-in-out; /* Smooth transition for background changes */
 }
+
+.carousel-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
 
 .lessThan {
   width: 45px;
@@ -534,9 +548,15 @@ line-height: 32px; /* 133.333% */
   margin: 0px -3px;
   padding: 0px;
 }
+/* Center alignments for content */
+.carousel-inner {
+  max-width: 1728px; /* Ensure the inner carousel respects this limit */
+  margin: 0 auto;
+}
+
 .row {
   /* padding: 100px 80px 100px 80px; */
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
   margin-right: 0px !important;
 }
 
@@ -2263,8 +2283,27 @@ svg path {
   margin-top: -6px;
 }
 .parentRewSection .reviewSection {
-  margin: 10px;
+  margin-top: 10px;
 }
+/* Remove margin or spacing for carousel indicators */
+.carousel-indicators {
+  margin: 0 !important; /* Remove margin from the carousel indicators */
+  padding: 0; /* Remove padding */
+  list-style: none; /* Remove list-style */
+  text-align: center; /* Center the indicators if needed */
+  gap: 10px;
+}
+
+.carousel-indicators li {
+  margin: 0 !important; /* Remove margin from individual list items */
+  padding: 0; /* Remove padding from individual list items */
+  display: inline-block; /* Display the list items inline */
+}
+
+.carousel-indicators li.active {
+  background-color: #ff6600; /* Customize active indicator color */
+}
+
 .reviewerName {
   font-size: 14px;
   font-style: normal;
@@ -3356,4 +3395,5 @@ letter-spacing: -1.2px;
     object-fit: cover; /* Ensures the image covers the area */
 }
 }
+
 
