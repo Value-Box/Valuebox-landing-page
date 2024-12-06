@@ -356,13 +356,13 @@
                 </svg>
             </a>
             <ul class="submenu">
-                <li class="submenu-item ">
+                <li class="submenu-item active">
                     <a href="../MyAccount/Settings.html">Settings</a>
                 </li>
                 <li class="submenu-item ">
                   <a href="../MyAccount/ManageSubAccount.html">User Management</a>
                 </li>
-                <li class="submenu-item active">
+                <li class="submenu-item ">
                     <a href="../MyAccount/AccountSetting.html">Account Settings</a>
                 </li>
                 <!-- <li class="submenu-item ">
@@ -428,7 +428,7 @@
       <div class="row form1 d-flex mt-40 gap-2">
         <span class="heading-one">Returning Address</span>
         <div class="TableWrapper p-0 mt-20">
-            <table class="w-100" style="table-layout: fixed; border-collapse: collapse;">
+            <table class="w-100" id="returning-address-table" style="table-layout: fixed; border-collapse: collapse;" >
               <thead>
                 <tr class="text-dark">
                   <th>Name</th>
@@ -456,7 +456,7 @@
       <div class="row form1 d-flex mt-40 gap-2">
         <span class="heading-one">Warehouse Address</span>
         <div class=" TableWrapper p-0 mt-20">
-            <table class="table w-100" style="table-layout: fixed; border-collapse: collapse;">
+            <table class="table w-100" id="warehouse-address-table" style="table-layout: fixed; border-collapse: collapse;">
               <thead>
                 <tr class="text-dark">
                   <th>Name</th>
@@ -500,7 +500,7 @@
       <div class="row form1 d-flex mt-40 gap-2">
         <span class="heading-one">Holiday Mode for per WH</span>
         <div class="TableWrapper p-0 mt-20">
-            <table class="w-100" style="table-layout: fixed; border-collapse: collapse;">
+            <table class="w-100" id="holiday-table" style="table-layout: fixed; border-collapse: collapse;">
               <thead>
                 <tr class="text-dark">
                   <th>Name</th>
@@ -570,29 +570,43 @@
         <script src="../assets/js/pages/ui-apexchart.js"></script>
         <script src="../assets/js/main.js"></script>
         <script>
-        let registerProTable = document.querySelector('#report_Table');
-        new simpleDatatables.DataTable(registerProTable);
+          let returningaddressTable = document.querySelector('#returning-address-table');
+      new simpleDatatables.DataTable(returningaddressTable, {
+        sortable: false // Disables sorting arrows globally
+        
+});
 
-        function replaceArrows() {
-    // Select all elements with the page-link class
-    document.querySelectorAll(".page-link").forEach(function (link) {
-      if (link.innerHTML === "‹") {
-        link.innerHTML = "Previous"; // Replace left arrow with "Previous"
-      } else if (link.innerHTML === "›") {
-        link.innerHTML = "Next"; // Replace right arrow with "Next"
-      }
+          //  document.querySelector('#income-overview-table').DataTable({ordering: false});
+           let wareHouseTable = document.querySelector('#warehouse-address-table');
+      new simpleDatatables.DataTable(wareHouseTable, {
+        sortable: false // Disables sorting arrows globally
+        
+});
+let holidayTable = document.querySelector('#holiday-table');
+      new simpleDatatables.DataTable(holidayTable, {
+        sortable: false // Disables sorting arrows globally
+        
+});
+         function replaceArrows() {
+      // Select all elements with the page-link class
+        document.querySelectorAll(".page-link").forEach(function (link) {
+        if (link.innerHTML === "‹") {
+          link.innerHTML = "Previous"; // Replace left arrow with "Previous"
+        } else if (link.innerHTML === "›") {
+          link.innerHTML = "Next"; // Replace right arrow with "Next"
+        }
+      });
+    }
+    
+    // Call this function once on page load
+    replaceArrows();
+    
+    // Observe for changes in pagination to handle dynamic updates
+    const paginationObserver = new MutationObserver(replaceArrows);
+    document.querySelectorAll(".pagination").forEach(function (pagination) {
+      paginationObserver.observe(pagination, { childList: true, subtree: true });
     });
-  }
-
-  // Call this function once on page load
-  replaceArrows();
-
-  // Observe for changes in pagination to handle dynamic updates
-  const paginationObserver = new MutationObserver(replaceArrows);
-  document.querySelectorAll(".pagination").forEach(function (pagination) {
-    paginationObserver.observe(pagination, { childList: true, subtree: true });
-  });
-
-        </script> 
+    
+          </script> 
 </body>
 </html>
