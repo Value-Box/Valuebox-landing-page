@@ -442,7 +442,7 @@
          </div>
          <div class="py-2 p-0">
              <div class="TableWrapper table-responsive  p-0">
-                 <table class="scrollable-table" style="overflow-x: auto; white-space: nowrap;">
+                 <table class="scrollable-table" id="order_detail_Table" style="overflow-x: auto; white-space: nowrap;">
                   <thead>
                       <tr class="text-dark">
                               <th style="width: 40%; text-align: start;">
@@ -585,8 +585,8 @@
          </div>
          <div class="py-2 p-0">
           <div class="TableWrapper table-responsive p-0">
-            <div class="scrollable-table" style="overflow-x: auto; white-space: nowrap;">
-              <table class="w-100">
+            <div class="scrollable-table"  style="overflow-x: auto; white-space: nowrap;">
+              <table class="w-100" id="order_detail_Table2">
                 <thead>
                   <tr class="text-dark">
                     <th style="width: 40%; text-align: start;">
@@ -1017,8 +1017,41 @@
           checkboxes.forEach(checkbox => checkbox.checked = source.checked);
         }
         </script>
+         <script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
         <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
         <script src="../assets/js/bootstrap.bundle.min.js"></script>
         <script src="../assets/js/main.js"></script>
+        <script>
+          let orderdetailtable = document.querySelector('#order_detail_Table');
+               new simpleDatatables.DataTable(orderdetailtable, {
+                 sortable: false // Disables sorting arrows globally
+                 
+     });
+     let orderdetailtable2 = document.querySelector('#order_detail_Table2');
+               new simpleDatatables.DataTable(orderdetailtable2, {
+                 sortable: false // Disables sorting arrows globally
+                 
+     });
+                  function replaceArrows() {
+               // Select all elements with the page-link class
+                 document.querySelectorAll(".page-link").forEach(function (link) {
+                 if (link.innerHTML === "‹") {
+                   link.innerHTML = "Previous"; // Replace left arrow with "Previous"
+                 } else if (link.innerHTML === "›") {
+                   link.innerHTML = "Next"; // Replace right arrow with "Next"
+                 }
+               });
+             }
+             
+             // Call this function once on page load
+             replaceArrows();
+             
+             // Observe for changes in pagination to handle dynamic updates
+             const paginationObserver = new MutationObserver(replaceArrows);
+             document.querySelectorAll(".pagination").forEach(function (pagination) {
+               paginationObserver.observe(pagination, { childList: true, subtree: true });
+             });
+             
+                   </script> 
 </body>
 </html>

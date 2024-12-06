@@ -1128,6 +1128,24 @@ padding: 15px 20px;
 }
 .dataTable-container {
   overflow-x: auto;
+  max-width: 100%;
+white-space: nowrap;
+}
+
+.dataTable-container::-webkit-scrollbar {
+height: 8px; /* Adjust the height of the scrollbar track */
+background-color: #000; /* Background color of the scrollbar track */
+}
+
+.dataTable-container::-webkit-scrollbar-thumb {
+height: 8px; /* Height matches the track for consistency */
+background-color: #888; /* Color of the scrollbar thumb */
+border-radius: 5px; /* Rounded corners for a smoother look */
+}
+
+/* Optional: Add hover effects for better UX */
+.dataTable-container::-webkit-scrollbar-thumb:hover {
+background-color: #555;
 }
 .progress.progress-primary {
   overflow: visible;

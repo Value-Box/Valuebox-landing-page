@@ -2041,6 +2041,7 @@ textarea.form-control-lg {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  border: 1px solid var(--Natural-Color-20, #ccc);
 }
 .form-select:focus {
   border-color: #CCC;
@@ -9693,14 +9694,11 @@ line-height: 18px;
   border-bottom: 1px solid #dbdbdb;
   background-color: var(--bs-white);
 }
-.TableWrapper table tbody tr td{
-  background-color: var(--bs-white);
-}
 .input {
   display: flex;
-  font-size: 18px;
+  font-size: 16px;
   height: 56px;
-  padding: 12px 20px;
+  padding: 10px 20px;
   align-items: center;
   gap: 12px;
   align-self: stretch;
@@ -9815,6 +9813,7 @@ line-height: 18px;
 .l-h-40 {
   line-height: 40px;
 }
+
 .rounded-5 {
   border-radius: 5px;
 }
@@ -10293,6 +10292,6 @@ line-height: 28px
   }
   .form-select-lg {
    
-    height: 42px !important;
+    height: 50px !important;
 }
 }
