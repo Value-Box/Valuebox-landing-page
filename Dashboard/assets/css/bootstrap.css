@@ -1980,7 +1980,7 @@ progress {
 .form-control-lg {
   min-height: calc(1.5em + 1rem + 2px);
   padding: 10px 20px;
-  font-size: 1.25rem;
+  /* font-size: 1.25rem; */
   border-radius: 0.3rem;
 }
 .form-control-lg::file-selector-button {
@@ -9757,7 +9757,7 @@ line-height: 18px;
 
 .form-select-input {
   padding: 10px 20px;
-  font-size: 18px;
+  font-size: 16px;
 }
 .fs-36 {
   font-size: clamp(34px, 4vw, 36px);
@@ -10293,6 +10293,6 @@ line-height: 28px
   }
   .form-select-lg {
    
-    height: 48px !important;
+    height: 42px !important;
 }
 }
