@@ -14,17 +14,22 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css"
+      rel="stylesheet"
+    />
     <!-- <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     /> -->
-    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap.min.css" />
   </head>
   <body>
-    <button onclick="topFunction()" id="topBtn" title="Go to top"><i class="fa-solid fa-arrow-up" style="color: #f9fafa;"></i></button>
+    <button onclick="topFunction()" id="topBtn" title="Go to top">
+      <i class="fa-solid fa-arrow-up" style="color: #f9fafa"></i>
+    </button>
     <header class="header">
       <input type="checkbox" class="checkBox" id="menuToggle" />
 
@@ -34,11 +39,26 @@
       </div>
 
       <div class="links">
-        <a href="#" class="d-flex align-items-center gap-2" onclick="redirectSanatPage()">ValueBox Sanat Program</a> 
+        <a
+          href="#"
+          class="d-flex align-items-center gap-2"
+          onclick="redirectSanatPage()"
+          >ValueBox Sanat Program</a
+        >
         <!-- <span class="verticleLine"></span> -->
-       <a href="#" class="d-flex align-items-center gap-2" onclick="redirectTajirPage()">ValueBox Tajer Program</a>
+        <a
+          href="#"
+          class="d-flex align-items-center gap-2"
+          onclick="redirectTajirPage()"
+          >ValueBox Tajer Program</a
+        >
         <!-- <span class="verticleLine"></span> -->
-        <a href="#" class="d-flex align-items-center gap-2" onclick="redirectZinatPage()">ValueBox Zinat</a>
+        <a
+          href="#"
+          class="d-flex align-items-center gap-2"
+          onclick="redirectZinatPage()"
+          >ValueBox Zinat</a
+        >
         <button class="loginBtn" onclick="loginPage()">Login</button>
       </div>
 
@@ -55,11 +75,20 @@
       </label>
     </header>
     <main>
-      <div id="carouselExampleCaptions" class="carousel slide">
-        <div class="h-100 carousel-inner  mx-auto">
-          <div class="h-100 carousel-item mw-1728 d-flex justify-content-center active">
-            <img
+      <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <div class="h-100 carousel-inner mx-auto">
+          <!-- First Slide -->
+          <div
+            class="h-100 carousel-item mw-1728 d-flex justify-content-center active"
+            data-bg="#002068"
+          >
+            <!-- <img
               src="images/Hero Section.png"
+              class="d-block h-100 w-100"
+              alt="..."
+            /> -->
+            <img
+              src="images/carouselImg!.png"
               class="d-block h-100 w-100"
               alt="..."
             />
@@ -69,21 +98,24 @@
                   <p class="reach-more">REACH MORE</p>
                   <p class="sell-better mb-0">SELL BETTER</p>
                 </div>
-
                 <div
                   class="col-3 col-lg-8 col-md-8 col-sm-4 col-xl-11 showcase-your-products"
                 >
                   Showcase your products to millions of potential customers on
                   ValueBox with zero setup hassle.
                 </div>
-
                 <div>
                   <button onclick="loginPage('2')">Join Marketplace</button>
                 </div>
               </div>
             </div>
           </div>
-          <div class="h-100 carousel-item secondCrousel">
+      
+          <!-- Second Slide -->
+          <div
+            class="h-100 carousel-item secondCrousel"
+            data-bg="#0133A4"
+          >
             <img
               src="images/homeDeliveryBackground.png"
               class="d-block h-100 w-100"
@@ -91,15 +123,13 @@
             />
             <div class="row position-absolute w-100 top-0 mw-1728 bg-transparent">
               <div class="col-8">
-                <!-- <div class="reach-more-sell-better-container"></div> -->
                 <div class="col-5 imgText">
                   <div class="reach-more-sell-better-container">
                     <p class="sell-better">Pick, Pack, Ship</p>
                   </div>
-
                   <div class="col-12 col-xl-12 showcase-your-products">
-                    We'll pick the item from your shop, pack it with care, and
-                    deliver it straight to your customer, hassle-free!
+                    We'll pick the item from your shop, pack it with care, and deliver
+                    it straight to your customer, hassle-free!
                     <div>
                       <button>Read it Now</button>
                     </div>
@@ -107,26 +137,23 @@
                 </div>
               </div>
               <div
-                class="col-3 col-xl-2 h-100 p-2 mt-4 d-flex justify-content-center align-items-center crouselImgbg">
+                class="col-3 col-xl-2 h-100 p-2 mt-4 d-flex justify-content-center align-items-center crouselImgbg"
+              >
                 <img class="w-100" src="images/home delivery.gif" alt="" />
               </div>
             </div>
           </div>
         </div>
-
+      
+        <!-- Carousel Controls -->
         <h2
           class="lessThan"
           data-bs-target="#carouselExampleCaptions"
           data-bs-slide="prev"
         >
-          <!-- <img src="images/Component 14.svg" alt=""> -->
-          <!-- <svg width="82" height="322" viewBox="0 0 22 322" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="hover-path" d="M0.000427246 0.497321C0.000427246 0.222663 0.223082 0 0.497739 0C0.774488 0 0.997998 0.225927 0.995023 0.502659L0.248248 69.9527C0.0873775 84.9136 5.08179 99.444 11.2437 113.078C16.7382 125.235 22.1522 141.867 22.0004 160C21.8494 178.047 15.6701 196.079 9.89952 209.035C4.21581 221.796 0.0795751 235.44 0.228179 249.409L0.99508 321.497C0.998024 321.774 0.77451 322 0.497768 322C0.223094 322 0.000427246 321.777 0.000427246 321.503V0.497321Z" fill="red" fill-opacity="1"/>
-            </svg> -->
           <i class="fa-solid fa-angle-left" id="lessthan1"></i>
           <i class="fa-solid fa-angles-left" id="lessthan2"></i>
         </h2>
-
         <h2
           class="greaterThan"
           data-bs-target="#carouselExampleCaptions"
@@ -136,6 +163,9 @@
           <i class="fa-solid fa-angles-left" id="lessthan2"></i>
         </h2>
       </div>
+      
+      
+      
 
       <!-- <svg width="44" height="201" viewBox="0 0 44 501" fill="none"
         xmlns="http://www.w3.org/2000/svg" class="wave-svg">
@@ -201,7 +231,6 @@
         </div>
       </div>
 
-      
       <!-- Carousel wrapper -->
       <div class="row p-3 p-sm-5 m-0 hero-section">
         <div class="col-12 p-0 our-sellers-with-container mw-1728 mx-auto">
@@ -471,91 +500,112 @@
         </div>
       </div> -->
       <div class="row position-relative d-flex justify-content-center p-0 m-0">
-      <div class="youtubebgimage p-0 position-relative d-none d-md-block">
-       <img class="w-100 h-100 h-xxl-25" src="images/youtubebgimage.svg" alt=""> 
-       </div>
-      <div class="youtubebgimage p-0 position-relative d-block d-md-none">
-       <img class="w-100" src="images/youtubemobileimg.svg" alt=""> 
-      </div>
-      <div class=" youtubevideocontainer mx-auto  p-0">
-        <div class="youtubevideo w-md-75 w-100 mw-1728 h-75 h-md-100 p-3 mx-sm-5 px-sm-5 d-flex justify-content-center">
-          <iframe class="rounded-4 w-100 w-md-75 mx-md-5" src="https://www.youtube.com/embed/3Q20xN2iGh4" title="This Is One Of The CRAZIEST Value Box Finds EVER At a Card Show! 😱" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="youtubebgimage p-0 position-relative d-none d-md-block">
+          <img
+            class="w-100 h-100 h-xxl-25"
+            src="images/youtubebgimage.svg"
+            alt=""
+          />
         </div>
-        <div class="d-flex justify-content-center mt-sm-4 mt-1">
-          <button class="joinvalueboxbtn">Join Marketplace</button>
-        </div>      
-      </div>
-
+        <div class="youtubebgimage p-0 position-relative d-block d-md-none">
+          <img class="w-100" src="images/youtubemobileimg.svg" alt="" />
+        </div>
+        <div class="youtubevideocontainer mx-auto p-0">
+          <div
+            class="youtubevideo w-md-75 w-100 mw-1728 h-75 h-md-100 p-3 mx-sm-5 px-sm-5 d-flex justify-content-center"
+          >
+            <iframe
+              class="rounded-4 w-100 w-md-75 mx-md-5"
+              src="https://www.youtube.com/embed/3Q20xN2iGh4"
+              title="This Is One Of The CRAZIEST Value Box Finds EVER At a Card Show! 😱"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="d-flex justify-content-center mt-sm-4 mt-1">
+            <button class="joinvalueboxbtn">Join Marketplace</button>
+          </div>
+        </div>
       </div>
 
       <div class="row p-3 pt-0 p-sm-5 mr-0 m-0 justify-content-between">
-       <div class="mw-1728 row gap-2 mx-auto justify-content-center">
-        <div class="col-lg-7 m-0 p-0 services">
-          <div class="service d-flex p-0 justify-content-center">
-            <img src="images/chart-column-grow-svgrepo-com 1.png" alt="" />
-            <div class="text">
-              <span class="text2"
-                ><b
-                  >Ready to grow your business? Join ValueBox Marketplace
-                  today!</b
+        <div class="mw-1728 row gap-2 mx-auto justify-content-center">
+          <div class="col-lg-7 m-0 p-0 services">
+            <div class="service d-flex p-0 justify-content-center">
+              <img src="images/chart-column-grow-svgrepo-com 1.png" alt="" />
+              <div class="text">
+                <span class="text2"
+                  ><b
+                    >Ready to grow your business? Join ValueBox Marketplace
+                    today!</b
+                  >
+                  We’re a community built on trust, fairness, and support.</span
                 >
-                We’re a community built on trust, fairness, and support.</span
-              >
+              </div>
+            </div>
+            <div class="service d-flex p-0 justify-content-center">
+              <img src="images/money-shield-svgrepo-com 1.png" alt="" />
+              <div class="text">
+                <span class="text2"
+                  ><b>Keep more of what you earn!</b> With no monthly fees and
+                  straightforward commission rates, we make sure you can focus
+                  on what matters most, your business.</span
+                >
+              </div>
+            </div>
+            <div class="service d-flex p-0 justify-content-center">
+              <img
+                src="images/customer-care-hospital-svgrepo-com 1.png"
+                alt=""
+              />
+              <div class="text">
+                <span class="text2"
+                  ><b>Connect with millions of eager shoppers!</b> Our
+                  marketplace is buzzing with visitors actively searching for
+                  products just like yours. It’s the perfect place to showcase
+                  your offerings.</span
+                >
+              </div>
+            </div>
+            <div class="service d-flex p-0 justify-content-center">
+              <img src="images/parcel-icon-svgrepo-com 1.png" alt="" />
+              <div class="text">
+                <span class="text2"
+                  ><b>Take control of your success!</b> Our user-friendly tools
+                  make it easy to manage pricing, inventory, shipping, and
+                  returns, so you can spend more time doing what you love.</span
+                >
+              </div>
+            </div>
+            <div class="service d-flex p-0 justify-content-center">
+              <img
+                src="images/shopping-app-ecommerce-svgrepo-com 1.png"
+                alt=""
+              />
+              <div class="text">
+                <span class="text2"
+                  ><b>Getting started is a breeze!</b> With our simple sign-up
+                  process, you’ll be up and running in no time, ready to share
+                  your products with the world.</span
+                >
+              </div>
             </div>
           </div>
-          <div class="service d-flex p-0 justify-content-center">
-            <img src="images/money-shield-svgrepo-com 1.png" alt="" />
-            <div class="text">
-              <span class="text2"
-                ><b>Keep more of what you earn!</b> With no monthly fees and
-                straightforward commission rates, we make sure you can focus on
-                what matters most, your business.</span
-              >
-            </div>
-          </div>
-          <div class="service d-flex p-0 justify-content-center">
-            <img src="images/customer-care-hospital-svgrepo-com 1.png" alt="" />
-            <div class="text">
-              <span class="text2"
-                ><b>Connect with millions of eager shoppers!</b> Our marketplace
-                is buzzing with visitors actively searching for products just
-                like yours. It’s the perfect place to showcase your
-                offerings.</span
-              >
-            </div>
-          </div>
-          <div class="service d-flex p-0 justify-content-center">
-            <img src="images/parcel-icon-svgrepo-com 1.png" alt="" />
-            <div class="text">
-              <span class="text2"
-                ><b>Take control of your success!</b> Our user-friendly tools
-                make it easy to manage pricing, inventory, shipping, and
-                returns, so you can spend more time doing what you love.</span
-              >
-            </div>
-          </div>
-          <div class="service d-flex p-0 justify-content-center">
-            <img src="images/shopping-app-ecommerce-svgrepo-com 1.png" alt="" />
-            <div class="text">
-              <span class="text2"
-                ><b>Getting started is a breeze!</b> With our simple sign-up
-                process, you’ll be up and running in no time, ready to share
-                your products with the world.</span
-              >
-            </div>
+          <div
+            class="col-lg-4 p-0 serviceImg d-flex justify-content-center align-items-center"
+          >
+            <img
+              src="images/Group 656.png"
+              alt="Promotional Graphic"
+              class="promotional-image w-100 justify-content-center"
+            />
           </div>
         </div>
-        <div class="col-lg-4 p-0 serviceImg d-flex justify-content-center align-items-center">
-          <img
-            src="images/Group 656.png"
-            alt="Promotional Graphic"
-            class="promotional-image w-100 justify-content-center"
-          />
-        </div>
-       </div>
       </div>
 
-       <div class="row story pt-0 m-0">
+      <div class="row story pt-0 m-0">
         <div class="col-12 p-0 text-center ourstory mw-1728 mx-auto">
           <h1 class="pt-3 pt-sm-5 m-0">OUR STORY SO FAR</h1>
           <p class="col-12 px-3 px-sm-5 py-3 m-0">
@@ -569,7 +619,7 @@
           <div class="col-12 p-3 p-sm-5 text-center">
             <div class="row justify-content-center px-md-5 yearinfo">
               <div
-                class="col-3 col-sm-3 mt-4 mt-sm-0 col-md-4 col-lg-3 col-xl-2 year d-flex flex-column align-items-center "
+                class="col-3 col-sm-3 mt-4 mt-sm-0 col-md-4 col-lg-3 col-xl-2 year d-flex flex-column align-items-center"
               >
                 <span>2024</span>
                 <img src="images/Line 18.png" alt="" />
@@ -697,7 +747,7 @@
           </div>
         </div>
       </div>
-      
+
       <!-- <div class="row p-0 position-relative m-0">
         <img
           class="w-100 p-0 heroSection1"
@@ -743,49 +793,63 @@
       </div> -->
 
       <div class="container-fluid p-0">
+        <div class="row m-0 justify-content-center bg-brand-liner">
+          <div class="col-12 p-0">
+            <!-- <img class="w-100 p-0 heroSection1" src="images/Hero Section (2).png" alt="Background Image"/>
+        <img class="w-100 p-0 heroSection2" src="images/Hero Section (3).png" alt="Alternate Background Image"/> -->
+          </div>
 
-      <div class="row position-relative m-0 justify-content-center">
-        <div class="col-12 p-0">
-         <img class="w-100 p-0 heroSection1" src="images/Hero Section (2).png" alt="Background Image"/>
-        <img class="w-100 p-0 heroSection2" src="images/Hero Section (3).png" alt="Alternate Background Image"/>
-        </div>
-
-        <div class="row position-absolute m-0 bg-transparent h-100 mw-1728 mx-auto p-0 overflow-hidden">
-          <div class="col-12 col-lg-8 p-0 p-3 px-lg-4">
-            <h2 class="text-light d-inline">Success Stories</h2>
-              <div class="d-flex col-12 py-3">
-                <h1 class="pr-4 align-items-start d-flex quoteIcon">
+          <div
+            class="row m-0 bg-transparent h-100 mw-1728 mx-auto p-0 overflow-hidden"
+          >
+            <div class="col-12 col-lg-8 p-0 p-3 px-lg-4">
+              <h2 class="text-light d-inline">Success Stories</h2>
+              <div class="row bg-transparent m-0 col-12 py-3">
+                <h1
+                  class="col-lg-2 pr-4 d-flex align-items-start justify-content-end quoteIcon"
+                >
                   <i class="fa fa-quote-left" aria-hidden="true"></i>
                 </h1>
-                <div class="d-flex flex-column successText">
+                <div class="col-lg-10 d-flex flex-column successText">
                   <p class="p-2 d-inline">
-                    ValueBox Marketplace has been a game-changer for my business!
-                    The platform is incredibly user-friendly, making it easy to
-                    manage my listings, track orders, and handle returns. I've been
-                    able to reach a whole new audience, and my sales have grown
-                    steadily since joining. The best part? There are no hidden fees,
-                    and the commission rates are fair, so I keep more of what I
-                    earn. Their support team is also top-notch, always ready to help
-                    with any questions. If you're looking for a reliable marketplace
-                    that truly supports sellers, ValueBox is the way to go!
+                    ValueBox Marketplace has been a game-changer for my
+                    business! The platform is incredibly user-friendly, making
+                    it easy to manage my listings, track orders, and handle
+                    returns. I've been able to reach a whole new audience, and
+                    my sales have grown steadily since joining. The best part?
+                    There are no hidden fees, and the commission rates are fair,
+                    so I keep more of what I earn. Their support team is also
+                    top-notch, always ready to help with any questions. If
+                    you're looking for a reliable marketplace that truly
+                    supports sellers, ValueBox is the way to go!
                   </p>
                   <h4 class="text-lg-end">Founder & CEO HAMARI CHHAT</h4>
                 </div>
               </div>
-          </div>
-          <div class="col-12 col-lg-4 d-flex align-items-end justify-content-center p-0 ">
-            <div class="col-4 col-md-3 col-lg-6">
-              <img class=" w-100"  src="images/Rectangle 1094.png" alt="Founder Image" />
+            </div>
+            <div
+              class="col-12 col-lg-4 d-flex align-items-end justify-content-center p-0 pt-3 pt-lg-4"
+            >
+              <div class="col-4 col-md-3 col-lg-6">
+                <img
+                  class="w-100"
+                  src="images/Rectangle 1094.png"
+                  alt="Founder Image"
+                />
+              </div>
             </div>
           </div>
         </div>
-       </div>
       </div>
-      
+
       <div class="container-fluid p-0 siteExperience">
-        <div class="row d-flex align-items-center pt-0 pb-0 m-0 justify-content-between p-0 px--5">
+        <div
+          class="row d-flex align-items-center pt-0 pb-0 m-0 justify-content-between p-0 px--5"
+        >
           <div class="mw-1728 d-flex gap-2 mx-auto justify-content-center">
-            <div class="col-12 p-3 col-md-5 d-flex flex-column justify-content-center siteText">
+            <div
+              class="col-12 p-3 col-md-5 d-flex flex-column justify-content-center siteText"
+            >
               <h1>Site Experience</h1>
               <p>
                 ValueBox gives customers the flexibility to shop wherever,
@@ -799,23 +863,32 @@
         </div>
       </div>
 
-      <div class="container-fluid youdelivertopnotchproducts1 p-0 ">
-      <div class="d-flex justify-content-end align-items-end">
-       <img class="curveImg" src="images/Group (2).svg" alt="">
-      </div>           
-  <div class="row px-3 px-sm-5 d-flex justify-content-evenly mw-1728 mx-auto bg-transparent">
-     <div class="col-lg-8 col-12 youdelivertopnotchproductsheading">
-     <h1>You deliver top-notch products. We deliver them to millions of customers</h1>
-     <p>Join our community of professional sellers today!</p>
-     </div>
-     <div class="col-lg-3 col-12 d-flex justify-content-center mt-4 mt-lg-0">
-     <button class="btn youdelivertopnotchproductsbtn">Join Marketplace</button>
-     </div>
-     </div>
-     <div>
-     <img class="curveImg" src="images/Group (1).svg" alt="">
-     </div>
-  </div>
+      <div class="container-fluid youdelivertopnotchproducts1 p-0">
+        <div class="d-flex justify-content-end align-items-end">
+          <img class="curveImg" src="images/Group (2).svg" alt="" />
+        </div>
+        <div
+          class="row px-3 px-sm-5 d-flex justify-content-evenly mw-1728 mx-auto bg-transparent"
+        >
+          <div class="col-lg-8 col-12 youdelivertopnotchproductsheading">
+            <h1>
+              You deliver top-notch products. We deliver them to millions of
+              customers
+            </h1>
+            <p>Join our community of professional sellers today!</p>
+          </div>
+          <div
+            class="col-lg-3 col-12 d-flex justify-content-center mt-4 mt-lg-0"
+          >
+            <button class="btn youdelivertopnotchproductsbtn">
+              Join Marketplace
+            </button>
+          </div>
+        </div>
+        <div>
+          <img class="curveImg" src="images/Group (1).svg" alt="" />
+        </div>
+      </div>
     </main>
 
     <!-- footer Section -->
@@ -824,7 +897,7 @@
         <div class="row p-3 p-sm-5 pb-5 m-0">
           <div class="col-12 col-lg-6 p-0 about">
             <h3 class="text-warning">About ValueBox</h3>
-            <p class=" mt-3">
+            <p class="mt-3">
               ValueBox Marketplace is all about helping sellers succeed and
               connecting them with customers anytime and anywhere through our
               easy-to-use online platform and mobile app. Every week, thousands
@@ -836,30 +909,57 @@
               opportunities for everyone in our marketplace. Join us and be part
               of a vibrant community that cares!
             </p>
-            <button class="mt-3" onclick="loginPage('2')">Join Marketplace</button>
+            <button class="mt-3" onclick="loginPage('2')">
+              Join Marketplace
+            </button>
           </div>
-          <div class="col-lg-2 mt-lg-0 mt-3 col-xl-3 px-xl-5 px-lg-4 d-flex flex-column align-items-lg-end">
+          <div
+            class="col-lg-2 mt-lg-0 mt-3 col-xl-3 px-xl-5 px-lg-4 d-flex flex-column align-items-lg-end"
+          >
             <h6 class="text-warning">Seller Resources</h6>
             <a href="#" class="text-dark d-block text-decoration-none mt-4"
-              >Seller Center <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M3 13L13 3M13 3L5.5 3M13 3V10.5" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg></a
-            >
+              >Seller Center
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M3 13L13 3M13 3L5.5 3M13 3V10.5"
+                  stroke="#333333"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"/></svg></a>
             <a href="#" class="text-dark text-decoration-none mt-3"
-              >Seller Support <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M3 13L13 3M13 3L5.5 3M13 3V10.5" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg></a
-            >
+              >Seller Support
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M3 13L13 3M13 3L5.5 3M13 3V10.5"
+                  stroke="#333333"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg></a>
           </div>
-          <div class="col-lg-3 mt-lg-0 mt-5 ps-xl-5 pe-0 ps-lg-4 d-flex flex-column align-items-center">
+          <div
+            class="col-lg-3 mt-lg-0 mt-5 ps-xl-5 pe-0 ps-lg-4 d-flex flex-column align-items-center"
+          >
             <div>
               <h6 class="text-warning">About</h6>
-            <a href="#" class="text-dark d-block text-decoration-none mt-4"
-              >Shop ValueBox.pk</a
-            >
-            <a href="#" class="text-dark d-block text-decoration-none mt-4"
-              >Our Social Handles</a
-            >
+              <a href="#" class="text-dark d-block text-decoration-none mt-4"
+                >Shop ValueBox.pk</a
+              >
+              <a href="#" class="text-dark d-block text-decoration-none mt-4"
+                >Our Social Handles</a
+              >
             </div>
             <div class="mt-3 col-12 socialIcons d-flex justify-content-end">
               <a
@@ -894,7 +994,9 @@
           <hr class="py-1" />
 
           <!-- Logo Section -->
-          <div class="col-12 col-lg-4 text-center text-lg-start px-0 logoVlaueBox mb-3 mb-lg-0">
+          <div
+            class="col-12 col-lg-4 text-center text-lg-start px-0 logoVlaueBox mb-3 mb-lg-0"
+          >
             <span class="bg-light">
               <img src="images/Group 1.svg" alt="ValueBox Logo" />
             </span>
@@ -922,9 +1024,24 @@
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
     <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const carousel = document.getElementById('carouselExampleCaptions');
+
+  // Add an event listener for the Bootstrap carousel slide event
+  carousel.addEventListener('slide.bs.carousel', (event) => {
+    // Get the next slide element
+    const nextSlide = event.relatedTarget;
+
+    // Get the background color for the next slide
+    const newBackground = nextSlide.getAttribute('data-bg');
+
+    // Apply the new background color with a fade effect
+    carousel.style.background = newBackground;
+  });
+});
+
       
     </script>
   </body>
