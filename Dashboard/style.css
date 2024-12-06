@@ -1993,6 +1993,10 @@ background: var(--Natural-Color-00, #FCFCFC);
   justify-content: center;
   align-items: center;
 }
+.showFeeDetail:focus {
+  outline: none;
+  box-shadow: none; 
+}
  @media(max-width:1400px){
   .Order-detail-line{
     position: relative;
