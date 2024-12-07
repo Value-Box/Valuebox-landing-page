@@ -12789,4 +12789,15 @@ fieldset:disabled .btn {
      
       height: 50px !important;
   } */
+
+
+.form-select-lg {
+    height: 38px;
   }
+  }
+
+  @media (min-width: 1400px) {
+    .h-md-44 {
+        height: 44px;
+    }
+}
