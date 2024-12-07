@@ -2045,9 +2045,9 @@ progress {
 .form-control:focus {
   color: var(--bs-body-color);
   background-color: var(--bs-body-bg);
-  border-color: #86b7fe;
+  border-color: #002882;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  /* box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); */
 }
 .form-control::-webkit-date-and-time-value {
   min-width: 85px;
@@ -2234,9 +2234,13 @@ textarea.form-control-lg {
   }
 }
 .form-select:focus {
-  border-color: #86b7fe;
+  /* border-color: #002882; */
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  /* box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); */
+  background-color: #fff;
+  /* border-color: #667eb4; */
+  border: .5px solid #99a9cd;
+  box-shadow: 0 0 0 2px rgba(0, 86, 245, .2);
 }
 .form-select[multiple],
 .form-select[size]:not([size="1"]) {
