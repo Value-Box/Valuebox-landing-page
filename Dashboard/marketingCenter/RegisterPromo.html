@@ -454,43 +454,51 @@
 
 
 
-                    <div id="reg_Pro_Content" class="collapse show mt-2">
-                        <div class="col allbar d-flex gap-3 p-0">
-                            <a class="active" href="">All SKUs <span class="notification-badge">12</span></a>
-                            <a class="" href="">Pending Review SKs <span class="notification-badge">0</span></a>
-                            <a class="" href="">Approved SKUs <span class="notification-badge">0</span></a>
-                            <a class="" href="">Rejected SKUs <span class="notification-badge">0</span></a>
-                            <a class="" href="">Withdrawn SKUs <span class="notification-badge">0</span></a>
+                    <div id="reg_Pro_Content" class="collapse show mt-40">
+                      <div class="list-group d-flex gap-4 list-group-horizontal-sm mb-1 text-center fs-20 allbar" role="tablist">
+                        <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto active p-0" id="list-all-list" data-bs-toggle="list" href="#list-all" role="tab">All SKUs <span class="notification-badge">12</span></a>
+                        <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto p-0" id="list-active-list" data-bs-toggle="list" href="#list-active" role="tab">Pending Review SKs <span class="notification-badge">0</span></a>
+                          <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto p-0" id="list-inactive-list" data-bs-toggle="list" href="#list-inactive" role="tab">Approved SKUs <span class="notification-badge">0</span></a>
+                          <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto p-0" id="list-draft-list" data-bs-toggle="list" href="#list-draft" role="tab">Rejected SKUs <span class="notification-badge">0</span></a>
+                          <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto p-0" id="list-pendingqc-list" data-bs-toggle="list" href="#list-pendingqc" role="tab">Withdrawn SKUs <span class="notification-badge">0</span></a>
+                          
+                         </div>
+                       
+                        <div class="d-flex gap-40 align-items-center mt-40">
+                          <div class="form-group w-100 mb-0">
+                            <select class="choices form-select">
+                                <option value="square">Square</option>
+                                <option value="rectangle">Rectangle</option>
+                                <option value="rombo">Rombo</option>
+                                <option value="romboid">Romboid</option>
+                                <option value="trapeze">Trapeze</option>
+                                <option value="traible">Triangle</option>
+                                <option value="polygon">Polygon</option>
+                            </select>
                         </div>
 
-                        <div class="d-flex gap-40 mt-40">
-                            <fieldset class="form-group mb-0 w-100">
-                                <select class="form-select" id="basicSelect">
-                                    <option value="">Please Select the category or enter the keyword</option>
-                                    <option value="tshirt">T-Shirt</option>
-                                    <option value="pants">Pants</option>
-                                </select>
-                            </fieldset>
-
-                            <div class="input-group p-0 w-100 h-max-content">
+                            <div class="input-group input-group-lg p-0 w-100 border-Gray-Dark rounded-7 h-max-content">
         
-                                <fieldset class="form-group mb-0">
+                                <fieldset class="form-group bg-light-gray-10 mb-0">
                                     <select class="form-select form-select-input sllerSku" id="basicSelect">
                                         <option value="bulkManage">Seller SKU</option>
-                                        <option value="bulkManage">PRoduct Name</option>
+                                        <option value="bulkManage">Product Name</option>
                                         <option value="bulkManage">SKU ID</option>                                    </select>
                                 </fieldset>
-                                <input type="text" class="form-control form-select-input" placeholder="Please Input" aria-label="input" aria-describedby="button-addon2">
-                                <span class="input-group-text bg-transparent border-start-0" id="basic-addon1"><i class="bi bi-search"></i></span>
+                                <input type="text" class="form-control form-select-input border-0" placeholder="Please Input" aria-label="input" aria-describedby="button-addon2">
+                                <span class="input-group-text bg-transparent border-0" id="basic-addon1"><i class="bi bi-search"></i></span>
                            </div>
                            
                            <div class="w-100 d-flex align-items-center gap-2">
                             <input class="form-check-input" type="checkbox" name="" id="pend_Adj_Sku">
                             <label class="paragraph-1" for="pend_Adj_Sku">Pending Adjusted SKUs</label>
                           </div>
+
+                         
                         </div>
-                            <div class="form-group w-100 TableWrapper mt-40 pb-0 ">
-                            <table class="reg_Prod_Table" id="reg_Prod_Table">
+
+                            <!-- <div class="form-group w-100 tab-content text-justify TableWrapper mt-40 pb-0 ">
+                            <table class="reg_Prod_Table" id="all_sku" role="tabpanel" aria-labelledby="list-sunday-list">
                               <thead>
                                 <tr>
                                   <th><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Basic info</th>
@@ -520,9 +528,178 @@
                               
                               
                             </table>
-                          <!-- </select> -->
                                          
-                        </div>
+                            </div> -->
+
+
+
+
+                            <div class="card-body p-0 mt-40">
+                              
+                              <div class="tab-content text-justify ">
+                                <div class="TableWrapper tab-pane fade show active" id="list-all" role="tabpanel" aria-labelledby="list-all-list">
+                                  <table class="reg_Prod_Table" id="all_sku" role="tabpanel" aria-labelledby="list-sunday-list">
+                                    <thead>
+                                      <tr>
+                                        <th><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Basic info</th>
+                                        <th>Category Name</th> 
+                                        <th>Status</th>
+                                        <th>Current Price</th>
+                                        <th>Current Stock</th>
+                                        <th>Promo Price</th>
+                                        <th>Action</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      
+                                      <tr>
+                                        <td>Basic info</td>
+                                        <td>Category Name</td>
+                                        <td>Status</td>
+                                        <td>Current Price</td>
+                                        <td>Current Stock</td>
+                                        <td>Promo Price</td>
+                                        <td>Action</td>
+                                       
+                                    </tr>
+                                   
+                                      
+                                    </tbody>
+                                    
+                                    
+                                  </table>
+                                </div>
+                                <div class="TableWrapper tab-pane fade" id="list-active" role="tabpanel" aria-labelledby="list-active-list">
+                                  <table class="reg_Prod_Table" id="pending_sku" role="tabpanel" aria-labelledby="list-monday-list">
+                                    <thead>
+                                      <tr>
+                                        <th><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Basic info</th>
+                                        <th>Category Name</th> 
+                                        <th>Status</th>
+                                        <th>Current Price</th>
+                                        <th>Current Stock</th>
+                                        <th>Promo Price</th>
+                                        <th>Action</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      
+                                      <tr>
+                                        <td>Basic info</td>
+                                        <td>Category Name</td>
+                                        <td>Status</td>
+                                        <td>Current Price</td>
+                                        <td>Current Stock</td>
+                                        <td>Promo Price</td>
+                                        <td>Action</td>
+                                       
+                                    </tr>
+                                   
+                                      
+                                    </tbody>
+                                    
+                                    
+                                  </table>
+                                </div>
+                                <div class="TableWrapper tab-pane fade" id="list-inactive" role="tabpanel" aria-labelledby="list-inactive-list">
+                                  <table class="reg_Prod_Table" id="approved_sku" role="tabpanel" aria-labelledby="list-monday-list">
+                                    <thead>
+                                      <tr>
+                                        <th><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Basic info</th>
+                                        <th>Category Name</th> 
+                                        <th>Status</th>
+                                        <th>Current Price</th>
+                                        <th>Current Stock</th>
+                                        <th>Promo Price</th>
+                                        <th>Action</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      
+                                      <tr>
+                                        <td>Basic info</td>
+                                        <td>Category Name</td>
+                                        <td>Status</td>
+                                        <td>Current Price</td>
+                                        <td>Current Stock</td>
+                                        <td>Promo Price</td>
+                                        <td>Action</td>
+                                       
+                                    </tr>
+                                   
+                                      
+                                    </tbody>
+                                    
+                                    
+                                  </table>
+                              </div>
+                              <div class="TableWrapper tab-pane fade" id="list-draft" role="tabpanel" aria-labelledby="list-draft-list">
+                                <table class="reg_Prod_Table" id="rejected_sku" role="tabpanel" aria-labelledby="list-monday-list">
+                                  <thead>
+                                    <tr>
+                                      <th><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Basic info</th>
+                                      <th>Category Name</th> 
+                                      <th>Status</th>
+                                      <th>Current Price</th>
+                                      <th>Current Stock</th>
+                                      <th>Promo Price</th>
+                                      <th>Action</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    
+                                    <tr>
+                                      <td>Basic info</td>
+                                      <td>Category Name</td>
+                                      <td>Status</td>
+                                      <td>Current Price</td>
+                                      <td>Current Stock</td>
+                                      <td>Promo Price</td>
+                                      <td>Action</td>
+                                     
+                                  </tr>
+                                 
+                                    
+                                  </tbody>
+                                  
+                                  
+                                </table>
+                            </div>
+                            <div class="TableWrapper tab-pane fade" id="list-pendingqc" role="tabpanel" aria-labelledby="list-pendingqc-list">
+                              <table class="reg_Prod_Table" id="withdrawn_sku" role="tabpanel" aria-labelledby="list-monday-list">
+                                <thead>
+                                  <tr>
+                                    <th><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Basic info</th>
+                                    <th>Category Name</th> 
+                                    <th>Status</th>
+                                    <th>Current Price</th>
+                                    <th>Current Stock</th>
+                                    <th>Promo Price</th>
+                                    <th>Action</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  
+                                  <tr>
+                                    <td>Basic info</td>
+                                    <td>Category Name</td>
+                                    <td>Status</td>
+                                    <td>Current Price</td>
+                                    <td>Current Stock</td>
+                                    <td>Promo Price</td>
+                                    <td>Action</td>
+                                   
+                                </tr>
+                               
+                                  
+                                </tbody>
+                                
+                                
+                              </table>
+                          </div>
+                          
+                              </div>
+                            </div>
                       </div>
                       
                       <div id="pending_Sub_Content" class="collapse mt-2">
@@ -815,11 +992,16 @@
           pendProBtn.classList.add("active");
           regProdbtn.classList.remove("active");
         });
+        
+        document.querySelectorAll('.reg_Prod_Table').forEach(table => {
+    new simpleDatatables.DataTable(table);
+});
 
-        let registerProTable = document.querySelector('#reg_Prod_Table');
+
+        // let registerProTable = document.querySelector('#reg_Prod_Table');
     let pendingProTable = document.querySelector('#pend_Pro_Table');
     let addProTable = document.querySelector('#add_Pro_Table');
-    new simpleDatatables.DataTable(registerProTable);
+    // new simpleDatatables.DataTable(registerProTable);
     new simpleDatatables.DataTable(pendingProTable);
     new simpleDatatables.DataTable(addProTable);
     console.log(registerProTable);

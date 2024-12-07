@@ -10058,6 +10058,20 @@ line-height: 28px
 .w-min-1200{
   min-width: 1200px !important;
 }
+.input-group-addon {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  text-align: center;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.custom-addon {
+  width: 35%;
+}
 @media(max-width:1400px){
   .heading-one {
     font-size: clamp(20px, 4vw, 24px);
