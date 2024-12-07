@@ -21,14 +21,36 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="../assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />    <link rel="stylesheet" href="../assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="../assets/css/app.css">
     <link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/x-icon">
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-    
+    <style>
+      .select2{
+        width: 100% !important;
+      }
+      .select2-selection{
+        height: 38px !important;
+        display: flex !important;
+    align-items: center;
+    border: 1px solid #CCC !important;
+    border-radius: 5px !important;
+      }
+      .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 38px;
+}
+@media (min-width: 1400px) {
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+        height: 44px !important;
+    }
+    .select2-selection {
+        height: 44px !important;
+    }
+}
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-sm navbar-light bg-white sticky-top" id="navbar">
@@ -37,7 +59,7 @@
           <path fill-rule="evenodd" clip-rule="evenodd" d="M124.277 32.3746L124.277 32.3748C123.412 33.1506 122.07 33.0779 121.295 32.2135L117.274 27.7328L113.335 32.1157C112.559 32.9797 111.217 33.0513 110.353 32.275L110.353 32.2748C109.489 31.4985 109.417 30.1568 110.194 29.2926L114.436 24.571L109.936 19.556C109.16 18.6914 109.232 17.3498 110.097 16.574L110.097 16.5738C110.962 15.7981 112.303 15.8705 113.079 16.735L117.276 21.4111L121.561 16.6425C122.337 15.7787 123.679 15.7069 124.543 16.4833C125.407 17.2596 125.479 18.6018 124.702 19.4656L120.113 24.5729L124.438 29.3926C125.214 30.257 125.141 31.5989 124.277 32.3746ZM67.8867 8.75567V33.2219L79.1931 33.1355C80.0496 33.1291 80.9122 33.1729 81.7588 33.0203C86.7866 32.1121 93.2292 25.8353 86.9847 20.1099C89.2014 17.9213 89.7397 11.9666 84.2398 9.48055C82.4043 8.651 81.5532 8.70916 79.6331 8.71564L67.8867 8.75567ZM100.487 15.2885C102.816 15.2885 104.86 16.1093 106.618 17.7506C108.376 19.392 109.255 21.4835 109.255 24.025C109.255 25.7829 108.799 27.3448 107.889 28.7108C106.978 30.0769 105.871 31.0829 104.569 31.7289C103.266 32.375 101.927 32.6978 100.55 32.6978C99.1311 32.6978 97.765 32.3538 96.4518 31.6654C95.1387 30.9771 94.0321 29.9605 93.132 28.6157C92.2319 27.2706 91.7818 25.7511 91.7818 24.0568C91.7818 21.5152 92.6713 19.4184 94.4505 17.7666C96.2295 16.1145 98.2416 15.2885 100.487 15.2885ZM98.4215 26.3282C99.0993 26.8471 99.7875 27.1065 100.487 27.1065C101.185 27.1065 101.884 26.8419 102.583 26.3123C103.282 25.7829 103.632 24.9993 103.632 23.9615C103.632 22.9237 103.303 22.1507 102.647 21.6424C101.99 21.134 101.259 20.8798 100.455 20.8798C99.7347 20.8798 99.0463 21.1446 98.3897 21.6741C97.7332 22.2037 97.4048 22.9766 97.4048 23.9933C97.4048 25.0311 97.7438 25.8092 98.4215 26.3282Z" fill="#EEA500"/>
           <path fill-rule="evenodd" clip-rule="evenodd" d="M75.0056 9.1261C72.3989 8.25041 70.9558 7.76328 69.0947 4.49059C68.5836 3.59191 68.4573 2.58374 69.0911 1.54987C69.6409 0.653009 70.9662 0.585123 72.178 1.10259C74.3244 2.01904 74.8914 4.24817 75.803 6.24446C77.0344 4.08694 78.3602 2.98197 80.5062 3.51291C82.4292 4.3421 82.3597 5.82719 81.0287 7.02838C79.7894 8.1434 78.234 8.92463 76.4315 9.19647L76.4846 15.3243L88.5487 15.3236C88.5999 15.8514 88.5531 16.2728 88.5071 16.7495H76.497L76.6395 33.1552L75.2146 33.1694L75.0719 16.7495H67.8867V15.3244H75.0595L75.0056 9.1261ZM74.8408 7.9908C74.6251 6.19598 73.1819 2.3803 71.088 2.08511C70.6586 2.02461 70.2381 2.12568 70.0711 2.44618C69.2781 3.96755 73.1431 7.46146 74.8408 7.9908ZM76.3611 8.15706C76.8087 6.59315 77.6991 5.32226 78.9384 4.67714C79.9439 4.12878 81.4094 4.95561 80.2566 6.20925C79.2079 7.18262 77.9172 8.00712 76.3611 8.15706Z" fill="#002882"/>
         </svg></a>
-        <a href="#" class="burger-btn ">
+        <a class="burger-btn cursor-pointer">
           <i class="bi bi-justify fs-3"></i>
       </a>
         <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -454,82 +476,47 @@
                       <button class="btn-natural-gray">Reset</button>
                     </div>
                   </div>
-                  <div class="row mt-40  g-3">
-                    <!-- <div class="col p-0">
-                      <span class="message-text">Fulfilment SKU</span>
-                      <input class="form-control form-control-lg mt-10" type="text" placeholder="Please Input">
-                    </div>
-  
-                    <div class="col p-0">
-                      <span class="message-text">Fulfilment SKU Name</span>
-                      <input class="form-control form-control-lg mt-10" type="text" placeholder="Please Input">
-                    </div>
-  
-                    <div class="col p-0">
-                      <span class="message-text">Seller SKU</span>
-                      <input class="form-control form-control-lg mt-10" type="text" placeholder="Please Input">  
-                  </div>
-  
-                    <div class="col p-0">
-                      <span class="message-text">Warehouse</span>
-                      <fieldset class="form-group">
-                        <select class="form-select form-select-lg mt-10" id="basicSelect">
-                            <option value="">Please Select</option>
-                            <option value="Standard">Standard</option>
-                            
-                        </select>
-                     </fieldset>  
-                    </div>
-  
-                   <div class="col p-0">
-                    <span class="message-text">Min. Stock Report</span>
-                    <fieldset class="form-group">
-                      <select class="form-select form-select-lg mt-10" id="basicSelect">
-                          <option value="">Please Select</option>
-                          <option value="Standard">Standard</option>
-                          
-                      </select>
-                    </fieldset>  
-                   </div> -->
-                   <div class="col-md-3">
-                    <label for="filters" class="form-label message-text">Fulfilment SKU or Name</label>
-                    <div class="input-group">
-                      <input type="text" id="filters" name="filters" class="form-control " placeholder="Please Input"/>
+                  <div class="row w-100 mx-0 mt-40 g-3">
+          
+                   <div class="col-md-3 m-0 ps-0">
+                    <label for="filters" class="form-label message-text">Product Name</label>
+                    <div class="input-group h-md-44">
+                      <input type="text" id="filters" name="filters" class="form-control" placeholder="Please Input"/>                      
                     </div>
                   </div>
     
-                  <div class="col-md-3">
+                  <div class="col-md-3 m-0">
                     <label for="filters" class="form-label message-text">Seller SKU</label>
-                    <div class="input-group">
+                    <div class="input-group h-md-44">
                       <input type="text" id="filters" name="filters" class="form-control" placeholder="Please Input"/>
-
                     </div>
                   </div>
                   <!-- Select Category -->
-                  <div class="col-md-3">
+                  <div class="col-md-3 m-0">
                     <label for="queryCategory" class="form-label message-text">Warehouse</label>
-                    <select id="queryCategory" name="queryCategory" class="form-select">
-                      <option value="" selected disabled>Please Select</option>
-                      <option value="electronics">Electronics</option>
-                      <option value="fashion">Fashion</option>
-                      <option value="home">Home</option>
-                    </select>
+                    <div class="input-group h-md-44">
+                      <select id="queryCategory" name="queryCategory" class="select-dropdown form-select">
+                        <option value="" selected disabled>Please Select</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="fashion">Fashion</option>
+                        <option value="home">Home</option>
+                      </select>
+                    </div>
                   </div>
     
                   <!-- Sort By -->
-                  <div class="col-md-3">
+                  <div class="col-md-3 m-0 pe-0">
                     <label for="sort" class="form-label message-text">Min. Stock Report</label>
-                    <select id="sort" name="sort" class="form-select">
-                      <option value="" selected disabled>Please Select</option>
-                      <option value="price_asc">Price: Low to High</option>
-                      <option value="price_desc">Price: High to Low</option>
-                      <option value="newest">Newest</option>
-                    </select>
+                    <div class="input-group h-md-44">
+                      <select id="sort" name="sort" class="select-dropdown form-select">
+                        <option value="" selected disabled>Please Select</option>
+                        <option value="price_asc">Price: Low to High</option>
+                        <option value="price_desc">Price: High to Low</option>
+                        <option value="newest">Newest</option>
+                      </select>
+                    </div>
                   </div>
-                 <div class="row g-3">
-                  <!-- Search Input -->
-                  
-                </div>
+                 
                 </div>
   
                   
@@ -554,7 +541,7 @@
                   <table class="live_inventory_Table" id="live_inventory_Table">
                     <thead>
                       <tr>
-                        <th>Fulfilment Product</th>
+                        <th>Product Name</th>
                         <th>Seller SKU</th> 
                         <th>Sellable</th>
                         <th>Campaign Occupy Quantity</th>
@@ -585,38 +572,39 @@
                         <button class="btn-natural-gray">Reset</button>
                       </div>
                     </div>
-                    <div class="row mt-40 gap-20">
-                      <div class="col p-0">
-                        <span class="message-text">Fulfilment SKU</span>
-                        <input class="form-control form-control-lg mt-10" type="text" placeholder="Please Input">
-                      </div>
-    
-                      <div class="col p-0">
-                        <span class="message-text">Fulfilment SKU Name</span>
-                        <input class="form-control form-control-lg mt-10" type="text" placeholder="Please Input">
-                      </div>
-    
-                      <div class="col p-0">
-                        <span class="message-text">Seller SKU</span>
-                        <input class="form-control form-control-lg mt-10" type="text" placeholder="Please Input">  
-                    </div>
-    
-                      <div class="col p-0">
-                        <span class="message-text">Warehouse</span>
-                        <fieldset class="form-group">
-                          <select class="form-select form-select-lg mt-10" id="basicSelect">
-                              <option value="">Please Select</option>
-                              <option value="Standard">Standard</option>
-                              
-                          </select>
-                       </fieldset>  
-                     </div>
-    
-                     
-                      
-                    </div>
-    
                     
+    
+                    <div class="row w-100 mx-0 mt-40 g-3">
+          
+                      <div class="col-md-3 ps-0 m-0">
+                       <label for="filters" class="form-label message-text">Product Name</label>
+                       <div class="input-group h-md-44">
+                         <input type="text" id="filters" name="filters" class="form-control" placeholder="Please Input"/>                      
+                       </div>
+                     </div>
+       
+                     <div class="col-md-3 m-0">
+                       <label for="filters" class="form-label message-text">Seller SKU</label>
+                       <div class="input-group h-md-44">
+                         <input type="text" id="filters" name="filters" class="form-control" placeholder="Please Input"/>
+                       </div>
+                     </div>
+                     <!-- Select Category -->
+                     <div class="col-md-3 m-0">
+                      <label for="queryCategory" class="form-label message-text">Warehouse</label>
+                      <div class="input-group h-md-44">
+                        <select id="queryCategory" name="queryCategory" class="select-dropdown form-select">
+                          <option value="" selected disabled>Please Select</option>
+                          <option value="electronics">Electronics</option>
+                          <option value="fashion">Fashion</option>
+                          <option value="home">Home</option>
+                        </select>
+                      </div>
+                    </div>
+       
+                    
+                    
+                   </div>
                   </div>
                   <div class="form1 mt-40">
                     <div class="d-flex justify-content-between align-items-center">
@@ -637,7 +625,7 @@
                     <table class="inventory_aging_Table" id="inventory_aging_Table">
                       <thead>
                         <tr>
-                          <th>Fulfilment SKU Name/ID</th>
+                          <th>Product Name/ID</th>
                           <th>Seller SKU</th> 
                           <th>Volume(m<sup>3</sup>)</th>
                           <th>Avg. Agging</th>
@@ -686,7 +674,14 @@
  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
  <!-- Daterangepicker CSS and JS -->
  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
  <script>
+  $(document).ready(function () {
+      $('.select-dropdown').select2();
+  });
+
+        console.log($('.select-dropdown').length); // Log the count of elements with 'select-dropdown'
+
   $(function() {
     $('input[name="daterange"]').daterangepicker({
       opens: 'center',

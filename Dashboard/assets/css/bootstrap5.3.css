@@ -11,6 +11,11 @@
   --bs-pink: #d63384;
   --bs-red: #dc3545;
   --bs-orange: #fd7e14;
+  --bs-orange-500: #fb6514;
+  --bs-orange-40: #f8db99;
+  --bs-orange-25: #fffaf5;
+  --bs-orange-200: #fddcab;
+  --bs-orange-100: #ffead5;
   --bs-yellow: #ffc107;
   --bs-green: #198754;
   --bs-teal: #20c997;
@@ -2043,11 +2048,16 @@ progress {
   cursor: pointer;
 }
 .form-control:focus {
-  color: var(--bs-body-color);
+  /* color: var(--bs-body-color);
   background-color: var(--bs-body-bg);
   border-color: #002882;
-  outline: 0;
+  outline: 0; */
   /* box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); */
+    /* border-color: #002882; */
+    outline: 0;
+    background-color: #fff;
+    border: .5px solid #99a9cd;
+    box-shadow: 0 0 0 2px rgba(0, 86, 245, .2);
 }
 .form-control::-webkit-date-and-time-value {
   min-width: 85px;
@@ -7133,6 +7143,12 @@ fieldset:disabled .btn {
   bottom: 0;
   z-index: 1020;
 }
+.sticky-right {
+  position: -webkit-sticky;
+  position: sticky;
+  right: 0;
+  /* z-index: 1020; */
+}
 @media (min-width: 576px) {
   .sticky-sm-top {
     position: -webkit-sticky;
@@ -12172,7 +12188,7 @@ fieldset:disabled .btn {
   }
   .TableWrapper table tbody tr {
     border-bottom: 1px solid #dbdbdb;
-    background-color: var(--bs-white);
+    background-color: var(--bs-white) !important;
   }
   .input {
     display: flex;
@@ -12294,7 +12310,7 @@ fieldset:disabled .btn {
     line-height: 40px;
   }
   
-  .rounded-5 {
+  .rounded-5px {
     border-radius: 5px;
   }
   .rounded-12 {
@@ -12550,8 +12566,10 @@ fieldset:disabled .btn {
   }
   
   .custom-addon {
-   
     width: 35%;
+  }
+  .bg-bs-white{
+    background-color: var(--bs-white)
   }
   @media(max-width:1400px){
     .heading-one {
@@ -12798,6 +12816,6 @@ fieldset:disabled .btn {
 
   @media (min-width: 1400px) {
     .h-md-44 {
-        height: 44px;
+        height: 44px !important;
     }
 }
