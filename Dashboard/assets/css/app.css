@@ -764,10 +764,12 @@
   background: #555; 
 }
 #sidebar:not(.active) .sidebar-wrapper {
-  left: -300px;
+  /* left: -300px; */
+  left: -215px;
+  margin-top: 76px;
 }
 #sidebar:not(.active) ~ #main {
-  margin-left: 0;
+  margin-left: 85px;
 }
 .sidebar-wrapper {
   width: 300px;
@@ -775,10 +777,13 @@
   position: fixed;
   top: 0;
   z-index: 10;
-  overflow-y: auto;
+  /* overflow-y: auto; */
   background-color: #fff;
   bottom: 0;
   transition: left 0.5s ease-out;
+}
+.sidebar-wrapper::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge: Hides scrollbar */
 }
 .sidebar-wrapper .sidebar-header {
   padding: 2rem 2rem 1rem;
@@ -1279,15 +1284,15 @@ background-color: #555;
   transition: .6s;
 }
 @media screen and (max-width: 1280px) {
-  #main {
+  /* #main {
     margin-left: 0;
-  }
+  } */
   .burger-btn {
     display: block;
   }
-  #sidebar:not(.active) .sidebar-wrapper {
+  /* #sidebar:not(.active) .sidebar-wrapper {
     left: -300px;
-}
+} */
 }
 #main.layout-navbar {
   padding: 0;
@@ -1654,3 +1659,68 @@ outline: none;
   background: var(--Natural-Color-10, #F2F2F2);
 }
 
+.d_menu_toggle {
+  position: absolute !important;
+  right: -20px;
+  top: 8px;
+  transform: rotate(90deg); /* Use transform instead of rotate */
+  z-index: 9999;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  border-radius: 24px;
+  transition: transform 0.7s ease; /* Add transition for smooth rotation */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #fff;
+  box-shadow: 0 2px 40px #00000029;
+}
+
+#sidebar:not(.active) .d_menu_toggle {
+  transform: rotate(-90deg); /* Rotate in opposite direction */
+}
+
+/* Sidebar is not active */
+#sidebar:not(.active) .sidebar-item .sidebar-link .downArrowSvg, 
+#sidebar:not(.active) .sidebar-item .sidebar-link span {
+  display: none;
+}
+
+/* Sidebar is active */
+#sidebar.active .sidebar-item .sidebar-link .downArrowSvg, 
+#sidebar.active .sidebar-item .sidebar-link span {
+  display: block;
+}
+
+
+#sidebar:not(.active) .sidebar-item .sidebar-link{
+  display: flex;
+  justify-content: end;
+}
+
+/* By Default, Hide the Submenu */
+/* Initially hide submenu */
+#sidebar:not(.active) .sidebar-item .submenu {
+  display: none;
+  position: absolute;
+  left: 100%; /* Aligns to the right of the parent menu */
+  top: 12px; /* Keeps it aligned to the top */
+  background: #FFF;
+  width: max-content; /* Auto-adjusts width */
+  z-index: 1000; /* Ensures it appears above other elements */
+  box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.10), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+  padding: 5px; /* Adds some spacing inside the submenu */
+  border-radius: 12px; /* Smooth corners for better UI */
+}
+
+/* Show submenu on hover over either anchor tag or submenu */
+#sidebar:not(.active) .sidebar-item:hover .submenu {
+  display: block; /* Make the submenu visible when hovering over the sidebar item */
+}
+
+#sidebar:not(.active) .sidebar-item .sidebar-link:hover + .submenu,
+#sidebar:not(.active) .sidebar-item .submenu:hover {
+  display: block; /* Keep submenu visible when hovering over the submenu itself */
+}
