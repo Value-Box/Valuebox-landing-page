@@ -1724,3 +1724,4 @@ outline: none;
 #sidebar:not(.active) .sidebar-item .submenu:hover {
   display: block; /* Keep submenu visible when hovering over the submenu itself */
 }
+

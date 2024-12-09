@@ -8,8 +8,9 @@
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/bootstrap.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap5.3.css">
   <link rel="stylesheet" href="../assets/vendors/choices.js/choices.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="../assets/css/bootstrap-tagsinput.css" />
   <link rel="stylesheet" href="../assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
   <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
@@ -21,7 +22,37 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
 <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script> -->
-
+<style>
+  .select2-selection {
+        height: 38px !important;
+        display: flex !important;
+        align-items: center;
+        border: 1px solid #ccc !important;
+        border-radius: 5px !important;
+      }
+      .select2-container--default
+        .select2-selection--single
+        .select2-selection__arrow {
+        height: 38px;
+        color: #607080 !important;
+        position: absolute;
+    right: 3px;
+      }
+      .select2-selection__rendered{
+        color: #607080 !important;
+        font-weight: 500;
+      }
+      /* @media (min-width: 1400px) {
+        .select2-container--default
+          .select2-selection--single
+          .select2-selection__arrow {
+          height: 56px !important;
+        }
+        .select2-selection {
+          height: 56px !important;
+        }
+      } */
+</style>
 </head>
 <body>
   <nav class="navbar navbar-expand-sm navbar-light bg-white sticky-top" id="navbar">
@@ -30,9 +61,9 @@
       <path fill-rule="evenodd" clip-rule="evenodd" d="M124.277 32.3746L124.277 32.3748C123.412 33.1506 122.07 33.0779 121.295 32.2135L117.274 27.7328L113.335 32.1157C112.559 32.9797 111.217 33.0513 110.353 32.275L110.353 32.2748C109.489 31.4985 109.417 30.1568 110.194 29.2926L114.436 24.571L109.936 19.556C109.16 18.6914 109.232 17.3498 110.097 16.574L110.097 16.5738C110.962 15.7981 112.303 15.8705 113.079 16.735L117.276 21.4111L121.561 16.6425C122.337 15.7787 123.679 15.7069 124.543 16.4833C125.407 17.2596 125.479 18.6018 124.702 19.4656L120.113 24.5729L124.438 29.3926C125.214 30.257 125.141 31.5989 124.277 32.3746ZM67.8867 8.75567V33.2219L79.1931 33.1355C80.0496 33.1291 80.9122 33.1729 81.7588 33.0203C86.7866 32.1121 93.2292 25.8353 86.9847 20.1099C89.2014 17.9213 89.7397 11.9666 84.2398 9.48055C82.4043 8.651 81.5532 8.70916 79.6331 8.71564L67.8867 8.75567ZM100.487 15.2885C102.816 15.2885 104.86 16.1093 106.618 17.7506C108.376 19.392 109.255 21.4835 109.255 24.025C109.255 25.7829 108.799 27.3448 107.889 28.7108C106.978 30.0769 105.871 31.0829 104.569 31.7289C103.266 32.375 101.927 32.6978 100.55 32.6978C99.1311 32.6978 97.765 32.3538 96.4518 31.6654C95.1387 30.9771 94.0321 29.9605 93.132 28.6157C92.2319 27.2706 91.7818 25.7511 91.7818 24.0568C91.7818 21.5152 92.6713 19.4184 94.4505 17.7666C96.2295 16.1145 98.2416 15.2885 100.487 15.2885ZM98.4215 26.3282C99.0993 26.8471 99.7875 27.1065 100.487 27.1065C101.185 27.1065 101.884 26.8419 102.583 26.3123C103.282 25.7829 103.632 24.9993 103.632 23.9615C103.632 22.9237 103.303 22.1507 102.647 21.6424C101.99 21.134 101.259 20.8798 100.455 20.8798C99.7347 20.8798 99.0463 21.1446 98.3897 21.6741C97.7332 22.2037 97.4048 22.9766 97.4048 23.9933C97.4048 25.0311 97.7438 25.8092 98.4215 26.3282Z" fill="#EEA500"/>
       <path fill-rule="evenodd" clip-rule="evenodd" d="M75.0056 9.1261C72.3989 8.25041 70.9558 7.76328 69.0947 4.49059C68.5836 3.59191 68.4573 2.58374 69.0911 1.54987C69.6409 0.653009 70.9662 0.585123 72.178 1.10259C74.3244 2.01904 74.8914 4.24817 75.803 6.24446C77.0344 4.08694 78.3602 2.98197 80.5062 3.51291C82.4292 4.3421 82.3597 5.82719 81.0287 7.02838C79.7894 8.1434 78.234 8.92463 76.4315 9.19647L76.4846 15.3243L88.5487 15.3236C88.5999 15.8514 88.5531 16.2728 88.5071 16.7495H76.497L76.6395 33.1552L75.2146 33.1694L75.0719 16.7495H67.8867V15.3244H75.0595L75.0056 9.1261ZM74.8408 7.9908C74.6251 6.19598 73.1819 2.3803 71.088 2.08511C70.6586 2.02461 70.2381 2.12568 70.0711 2.44618C69.2781 3.96755 73.1431 7.46146 74.8408 7.9908ZM76.3611 8.15706C76.8087 6.59315 77.6991 5.32226 78.9384 4.67714C79.9439 4.12878 81.4094 4.95561 80.2566 6.20925C79.2079 7.18262 77.9172 8.00712 76.3611 8.15706Z" fill="#002882"/>
     </svg></a>
-    <a class="burger-btn cursor-pointer">
+    <!-- <a class="burger-btn cursor-pointer">
       <i class="bi bi-justify fs-3"></i>
-  </a>
+  </a> -->
     <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button> -->
@@ -83,9 +114,20 @@
   
     </div>
   </nav>
-  <div id="sidebar" class="active">
+  <div id="sidebar" class="">
     <div class="sidebar-wrapper active">
-        
+      <div data-spm="d_menu_toggle" data-more="false" class="burger-btn d_menu_toggle d-flex justify-content-end" data-aplus-ae="x1_5e1c2f60" data-spm-anchor-id="Seller_PK.17752401.0.d_menu_toggle.2b7b2a97UxvN36" data-aplus-clk="x1_2fba9830">
+        <svg xmlns="http://www.w3.org/2000/svg" class="downArrowSvg" width="24" height="12" viewBox="0 0 24 12" fill="none">
+          <g clip-path="url(#clip0_5577_4249)">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.2884 10.1569L5.63137 4.49994L7.04537 3.08594L11.9954 8.03594L16.9454 3.08594L18.3594 4.49994L12.7024 10.1569C12.5148 10.3444 12.2605 10.4497 11.9954 10.4497C11.7302 10.4497 11.4759 10.3444 11.2884 10.1569Z" fill="currentColor"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_5577_4249">
+              <rect width="12" height="24" fill="white" transform="matrix(0 1 -1 0 24 0)"/>
+            </clipPath>
+          </defs>
+        </svg>
+      </div>
         <div class="sidebar-menu">
             <ul class="menu">
 
@@ -218,7 +260,7 @@
               </a>
               <ul class="submenu ">
                   <li class="submenu-item ">
-                      <a href="component-badge.html">Business Advisor</a>
+                      <a href="../DataInsight/dataInsightdashboard.html">Business Advisor</a>
                   </li>
                   <!-- <li class="submenu-item ">
                       <a href="component-breadcrumb.html">Account Health</a>
@@ -247,12 +289,14 @@
             </a>
             <ul class="submenu ">
                 <li class="submenu-item ">
-                    <a href="component-breadcrumb.html">Inventory Overview</a>
+                    <a href="../WareHouse/InventoryOverview.html">Inventory Overview</a>
                 </li>
                 <li class="submenu-item ">
-                    <a href="component-button.html">Inventory Control</a>
+                    <a href="../WareHouse/InventoryControl.html">Inventory Control</a>
                 </li>
-                
+                <li class="submenu-item ">
+                  <a href="../WareHouse/inventoryReport.html">Inventory Report</a>
+              </li>
             </ul>
         </li>
 
@@ -435,13 +479,13 @@
             <!-- Product Name Field -->
             <div class="form-group mt-20 mb-0">
                 <label for="productName" class="subHeading-4 gray-color"><span class="important">*</span> Product Name</label>
-                <input type="text" class="form-control form-control-lg mt-2" id="productName" placeholder="Enter Product name" >
+                <input type="text" class="form-control mt-2" id="productName" placeholder="Enter Product name" >
             </div>
         
             <!-- Category Field -->
             <div class="form-group mt-20 mb-0">
                 <label for="categoryDropDown" class="subHeading-4 gray-color"><span class="important">*</span> Category</label>
-                <select class="choices form-select">
+                <select class="select-dropdown form-select">
                   <option value="square">Square</option>
                   <option value="rectangle">Rectangle</option>
                   <option value="rombo">Rombo</option>
@@ -506,12 +550,12 @@
                  <h5 class="subHeading mb-0">Basic Information</h5>
                  <div class="form-group mt-20 mb-0 w-100">
                    <label for="productName" class=".gray-color mb-2"><span class="important">*</span> Product Name</label>
-                   <input type="text" class="form-control form-control-lg " id="productName" placeholder="Enter Product name" disabled>
+                   <input type="text" class="form-control " id="productName" placeholder="Enter Product name" disabled>
                  </div>
                
                <div class="form-group mb-0 w-100 mt-40">
                    <label for="categoryDropDown" class=".gray-color mb-2"><span class="important">*</span> Category</label>
-                   <select class="choices form-select" disabled>
+                   <select class="select-dropdown form-select" disabled>
                     <option value="square">Square</option>
                     <option value="rectangle">Rectangle</option>
                     <option value="rombo">Rombo</option>
@@ -547,7 +591,7 @@
                 <div class="uploadVidSec">
                   <div class="d-flex gap-3 uploadVidSecBtns">
                     <label class="newVidFileBTn" for="newVidFileBTn">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 25 24" fill="none">
                         <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="#E6EAF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="#E6EAF3" stroke-width="1.5" stroke-linecap="round"/>
                       </svg>
@@ -559,7 +603,7 @@
                     <input type="file" class="d-none" id="newVidFileBTn" accept="video/mp4">
                 
                     <label class="mediaVidCenterBtn bg-transparent" for="mediaVidCenterBtn">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 25 24" fill="none">
                         <path d="M16.5 10C17.6046 10 18.5 9.10457 18.5 8C18.5 6.89543 17.6046 6 16.5 6C15.3954 6 14.5 6.89543 14.5 8C14.5 9.10457 15.3954 10 16.5 10Z" stroke="#002882" stroke-width="1.5"/>
                         <path d="M16.5 10C17.6046 10 18.5 9.10457 18.5 8C18.5 6.89543 17.6046 6 16.5 6C15.3954 6 14.5 6.89543 14.5 8C14.5 9.10457 15.3954 10 16.5 10Z" stroke="black" stroke-opacity="0.2" stroke-width="1.5"/>
                         <path d="M2.5 12.4999L4.252 10.9669C4.69114 10.583 5.25974 10.3802 5.84272 10.3997C6.4257 10.4192 6.97949 10.6595 7.392 11.0719L11.682 15.3619C12.0149 15.6947 12.4546 15.8995 12.9235 15.9401C13.3925 15.9807 13.8608 15.8546 14.246 15.5839L14.545 15.3739C15.1006 14.9837 15.7721 14.7935 16.4498 14.8343C17.1275 14.8752 17.7713 15.1447 18.276 15.5989L21.5 18.4999" stroke="#002882" stroke-width="1.5" stroke-linecap="round"/>
@@ -575,7 +619,7 @@
                   <span>Mp4 format for videos with file size less then 5MB</span>
                   <p class="m-0">OR</p>
                   <div class="form-group m-0 w-100">
-                    <input type="url" class="form-control form-control-lg " id="utubeUrl" placeholder="Enter YouTube Link" >
+                    <input type="url" class="form-control" id="utubeUrl" placeholder="Enter YouTube Link" >
                     <p id="errorMessage" style="color: red; display: none;">Please enter a valid YouTube video link.</p>
                   </div>
                   
@@ -587,7 +631,7 @@
 <div class="uploadImgSec">
   <div class="d-flex gap-3 uploadImgSecBtns">
     <label class="newFileBTn" for="uploadImgSecinput">
-      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 25 24" fill="none">
         <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="#E6EAF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="#E6EAF3" stroke-width="1.5" stroke-linecap="round"/>
       </svg>
@@ -598,7 +642,7 @@
     </label>
     <input type="file" class="d-none" multiple="multiple" id="uploadImgSecinput" accept=".jpg, .jpeg, .png">
     <label class="mediaCenterBtn bg-transparent" for="mediaCenterinput">
-      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 25 24" fill="none">
         <path d="M16.5 10C17.6046 10 18.5 9.10457 18.5 8C18.5 6.89543 17.6046 6 16.5 6C15.3954 6 14.5 6.89543 14.5 8C14.5 9.10457 15.3954 10 16.5 10Z" stroke="#002882" stroke-width="1.5"/>
         <path d="M16.5 10C17.6046 10 18.5 9.10457 18.5 8C18.5 6.89543 17.6046 6 16.5 6C15.3954 6 14.5 6.89543 14.5 8C14.5 9.10457 15.3954 10 16.5 10Z" stroke="black" stroke-opacity="0.2" stroke-width="1.5"/>
         <path d="M2.5 12.4999L4.252 10.9669C4.69114 10.583 5.25974 10.3802 5.84272 10.3997C6.4257 10.4192 6.97949 10.6595 7.392 11.0719L11.682 15.3619C12.0149 15.6947 12.4546 15.8995 12.9235 15.9401C13.3925 15.9807 13.8608 15.8546 14.246 15.5839L14.545 15.3739C15.1006 14.9837 15.7721 14.7935 16.4498 14.8343C17.1275 14.8752 17.7713 15.1447 18.276 15.5989L21.5 18.4999" stroke="#002882" stroke-width="1.5" stroke-linecap="round"/>
@@ -693,7 +737,7 @@
           
           <div class="d-flex gap-3 mt-2 w-100">
             <fieldset class="form-group  w-100 d-flex gap-2" >
-                <select class="form-select form-select-lg" id="selOptType">
+                <select class="select-dropdown form-select" id="selOptType">
                     <option value="">Please Select</option>
                     <option value="color">Color</option>
                     <option value="size">Size</option>
@@ -746,7 +790,7 @@
             <div class="d-flex justify-content-between mt-20">
               <h5 class="mb-0">Variants</h5>
               <div class="d-flex gap-3">
-                <button type="button" id="editVarBtn">Edit</button>
+                <button type="button" class="btn-blue" id="editVarBtn">Edit</button>
               <button type="button" class="bulk-btn" data-bs-toggle="modal" data-bs-target="#exampleModalToggle2">Bulk Manage</button>
               </div>
               
@@ -912,11 +956,11 @@
           <div class="mt-40 d-flex gap-20">
             <div class="w-100">
               <span class="paragraph-1">Seller SKU</span>
-              <input class="mt-2 form-control form-control-lg" type="text" placeholder="Enter SKU" name="" id="">
+              <input class="mt-2 form-control " type="text" placeholder="Enter SKU" name="" id="">
             </div>
             <div class="w-100">
               <span class="paragraph-1">Barcode</span>
-              <input class="mt-2 form-control form-control-lg" type="text" placeholder="Enter Barcode" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="" id="">
+              <input class="mt-2 form-control " type="text" placeholder="Enter Barcode" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="" id="">
             </div>
           </div>
 
@@ -1010,10 +1054,10 @@
           <div class="mt-40 d-flex gap-20">
             <div class="w-75">
               <span class="paragraph-1"><span class="secondary-yellow">*</span> Package Weight</span>
-              <input class="form-control form-control-lg mt-2 " type="text" placeholder="e.g.0.0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" name="" id="">
+              <input class="form-control mt-2 " type="text" placeholder="e.g.0.0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" name="" id="">
             </div>
               <fieldset class="form-group mb-0 w-25 d-flex align-items-end">
-                  <select class="form-select form-select-lg ">
+                  <select class="select-dropdown form-select">
                       <option value="KG">KG</option>
                       <option value="Grams">Grams</option>
                       <option value="Pound">Pound</option>
@@ -1024,11 +1068,11 @@
           <div class="mt-40">
             <span class="paragraph-1">Package Length(cm) * Width(cm) * Height(cm)</span>
             <div class="w-100 d-flex gap-2 mt-2">
-              <input class="input" type="text" placeholder="0.01 ~ 300" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" name="" id="">
+              <input class="form-control" type="text" placeholder="0.01 ~ 300" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" name="" id="">
               <span class="fs-18 d-flex align-items-center">X</span>
-              <input class="input" type="text" placeholder="0.01 ~ 300" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" name="" id="">
+              <input class="form-control" type="text" placeholder="0.01 ~ 300" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" name="" id="">
               <span class="fs-18 d-flex align-items-center">X</span>
-              <input class="input" type="text" placeholder="0.01 ~ 300" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" name="" id="">
+              <input class="form-control" type="text" placeholder="0.01 ~ 300" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" name="" id="">
             </div>
           </div>
 
@@ -1053,7 +1097,7 @@
             <div class="w-100">
               <span class="paragraph-1">Warranty Type</span>
               <fieldset class="form-group mb-0 mt-2 w-100 d-flex align-items-end">
-                <select class="form-select form-select-lg " >
+                <select class="select-dropdown form-select" >
                     <option value="">Please Select</option>
                     <option value="Grams">No Warranty</option>
                     <option value="Pound">Brand V</option>
@@ -1064,7 +1108,7 @@
             <div class="w-100">
               <span class="paragraph-1">Warranty Period</span>
               <fieldset class="form-group mb-0 mt-2 w-100 d-flex align-items-end">
-                <select class="form-select form-select-lg ">
+                <select class="select-dropdown form-select">
                     <option value="">Please Select</option>
                     <option value="Grams">Life Time Warranty</option>
                     <option value="Pound">1 Month</option>
@@ -1096,7 +1140,7 @@
           <div class="mt-40">
             <div>
               <span class="paragraph-1">Warranty Policy</span>
-              <input class="input mt-2" type="text" placeholder="Please Input" name="" id="">
+              <input class="form-control mt-2" type="text" placeholder="Please Input" name="" id="">
             </div>
           </div>
         </div>
@@ -1112,7 +1156,7 @@
               <h5 class="mb-0">Status</h5>
               
               <div class="form-group mt-20 w-100">
-                <select class="form-select form-select-lg" id="basicSelect">
+                <select class="select-dropdown form-select" id="basicSelect">
                   <option>Active</option>
                   <option>Inactive</option>
 
@@ -1125,7 +1169,7 @@
               <h5 class="mb-0">Product Organization</h5>
               <div class="form-group mt-20 w-100">
                 <label for="productName">Product type</label>
-                <input type="text" class="form-control form-control-lg mt-2" id="productOrganization" placeholder="" >
+                <input type="text" class="form-control mt-2" id="productOrganization" placeholder="" >
               </div>
               <div class="form-group mt-20 w-100">
                 <label for="productName" class="mb-2">Collection</label>
@@ -1148,14 +1192,14 @@
               
           <div class="form-group mt-20 w-100">
             <label for="productName">Select Brand</label>
-            <select class="choices form-select" id="brandSelector">
+            <select class="select-dropdown form-select" id="brandSelector">
               <option value="none" selected>Not Brand</option>
               <option value="addNew">Add New Brand</option>
             </select>
           </div>
           <div class="form-group mt-20 w-100">
             <label for="tagInput" >Tags</label>
-              <input type="text" class="form-control form-control-lg mt-2 tagInput" id="tagInput" placeholder="" >
+              <input type="text" class="form-control mt-2 tagInput" id="tagInput" placeholder="" >
           </div>   
             </div>
             
@@ -1197,7 +1241,12 @@
 
 <!-- Date Range Picker -->
 <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
+      $(document).ready(function () {
+        $(".select-dropdown").select2();
+        // $(".select-dropdown2").select2();
+      });
       ClassicEditor.create(document.querySelector('#productDesc'))
           .catch(error => {
               console.error(error);
@@ -1220,75 +1269,6 @@
     }
   });
 
-// (function () {
-//   const tagsInput = {
-//       init(opts) {
-//           opts.ids.forEach(id => {
-//               const inputElem = document.getElementById(id);
-//               if (inputElem) {
-//                 console.log(`Initializing tags input for ID: ${id}`); 
-//                   this.setupInput(inputElem, id);
-//               }else {
-//                     console.log(`Input element with ID: ${id} not found!`);  // Log if the ID is not found
-//                 }
-//           });
-//       },
-
-//       setupInput(inputElem, id) {
-//           // Wrapper for the tags input
-//           const wrapper = document.createElement('div');
-//           wrapper.className = 'tags-input-wrapper';
-//           const input = document.createElement('input');
-//           wrapper.append(input);
-//           inputElem.setAttribute('hidden', true);
-//           inputElem.parentNode.insertBefore(wrapper, inputElem);
-
-//           // Array to store tags for each input
-//           let tagsArray = [];
-
-//           // Keydown and Keyup for adding tags immediately on Enter or comma
-//           input.addEventListener('keyup', (e) => {
-//             console.log(`Key pressed in input field ${id}: ${e.key}`);
-//               if (e.key === 'Enter' || e.key === ',') {
-//                   e.preventDefault();
-//                   this.createTag(input, tagsArray, wrapper, inputElem, id);
-//               }
-//           });
-//       },
-
-//       createTag(input, tagsArray, wrapper, inputElem, id) {
-//           const tagText = input.value.trim();
-//           if (tagText && !tagsArray.includes(tagText)) {
-//               tagsArray.push(tagText);
-//               this.addTag(wrapper, tagText, tagsArray, inputElem, id);
-//               input.value = ''; // Clear input for the next tag
-//           }
-//       },
-
-//       addTag(wrapper, tagText, tagsArray, inputElem, id) {
-//           const tag = document.createElement('span');
-//           tag.className = 'tag';
-//           tag.innerHTML = `${tagText} <a href="#">&times;</a>`;
-
-//           // Remove tag on click
-//           tag.querySelector('a').onclick = (e) => {
-//               e.preventDefault();
-//               tagsArray.splice(tagsArray.indexOf(tagText), 1);
-//               tag.remove();
-//               inputElem.value = tagsArray.join(',');
-//           };
-
-//           // Insert the tag before the input field
-//           wrapper.insertBefore(tag, wrapper.querySelector('input'));
-//           inputElem.value = tagsArray.join(',');
-//       }
-//   };
-
-//   // Initialize the tags input on inputs with specific IDs
-//   tagsInput.init({
-//       ids: ['tagInput'], // Pass the IDs of the inputs to initialize
-//   });
-// })();
 
 document.querySelectorAll('.varParToChild').forEach(item => {
   item.addEventListener('click', () => {

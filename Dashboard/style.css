@@ -950,7 +950,7 @@ outline: none;
 .uploadVidSec .uploadVidSecBtns .newVidFileBTn,
 .uploadVidSec .uploadVidSecBtns .mediaVidCenterBtn {
   display: flex;
-  padding: 10px 20px;
+  padding: 5px 10px;
   justify-content: center;
   align-items: center;
   gap: 12px;
@@ -1110,15 +1110,15 @@ td {
   cursor: move;
 }
 .choices__inner {
-  height: 56px !important;
+  height: 38px !important;
   /* overflow: auto; */
   background: transparent;
   display: flex;
   align-items: center;
-  line-height: 30px;
+  /* line-height: 30px; */
     font-size: 16px;
     font-weight: 500;
-    padding: 10px 20px;
+    /* padding: 4px 10px; */
 }
 #selOptType{
   height: fit-content;
@@ -1198,7 +1198,7 @@ td {
 .saveVariantDiv #discardBtn,
 #saveBtn {
   display: flex;
-  padding: 10px 40px;
+  padding: 5px 10px;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -1564,7 +1564,7 @@ align-self: stretch;
 background: #F2F2F2;
 }
 #editVarBtn{
-  color: var(--Brand-white-Color);
+  /* color: var(--Brand-white-Color);
   background-color: var(--Brand-Color);
   padding: 7px 20px;
   line-height: 30px;
@@ -1576,7 +1576,7 @@ background: #F2F2F2;
   gap: 10px;
   border-radius: 5px;
   height: fit-content;
-  border: 1px solid var(--Brand-Color);
+  border: 1px solid var(--Brand-Color); */
   }
 
   /* Remove the border-bottom from the modal header */
@@ -2068,9 +2068,9 @@ background: var(--Natural-Color-00, #FCFCFC);
   }
   
 
-  .choices__inner {
+  /* .choices__inner {
     height: 48px !important;
-  }
+  } */
   }
 
   tr.sticky {
@@ -2121,3 +2121,9 @@ background: var(--Natural-Color-00, #FCFCFC);
     border-right: 1px solid var(--borderColor);
     background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.08) 100%);
   }
+  .min-stock-report {
+    transition: all 0.3s ease-in-out;
+  }
+  .select2 {
+    width: 100% !important;
+  }  
