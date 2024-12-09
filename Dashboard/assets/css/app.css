@@ -1134,7 +1134,7 @@ padding: 15px 20px;
 .dataTable-container {
   overflow-x: auto;
   max-width: 100%;
-white-space: nowrap;
+/* white-space: nowrap; */
 }
 
 .dataTable-container::-webkit-scrollbar {

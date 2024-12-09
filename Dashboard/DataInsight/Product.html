@@ -6,7 +6,8 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="../assets/css/bootstrap.css"> -->
+    <link rel="stylesheet" href="../assets/css/bootstrap5.3.css">
     <link rel="stylesheet" href="../assets/vendors/apexcharts/apexcharts.css">
     <link rel="stylesheet" href="../assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
@@ -454,31 +455,28 @@
                 <div class="tab-pane fade show active" id="list-sunday" role="tabpanel"
                     aria-labelledby="list-sunday-list">
                     <div class="form1">
-                        <div class="d-flex justify-content-between">
-                            <div class="">
+                        <div class="row">
+                            <div class="col-xxl-3 col-12">
                                 <span class="subHeading">Product Performance</span>
                                </div>
-                               <div class="d-flex gap-2">
-                                <div class="form-group w-100">
-                                  <fieldset class="form-group mb-0 w-100 d-flex align-items-end">
-                                    <select class="form-select form-select-lg " >
-                                        <option value="">All Categories</option>
-                                     </select>
-                                </fieldset>
-                              </div>
-                              <div class="form-group w-100">
-                                <fieldset class="form-group mb-0 w-100 d-flex align-items-end">
-                                  <select class="form-select form-select-lg " >
-                                      <option value="">All Brands</option>
-                                   </select>
-                              </fieldset>
-                            </div>
-                                <div class="form-group input gap-0 p-0 w-100 d-flex ">
-                                    <input type="text" class="form-control border-0 form-control-lg rounded-left" placeholder="Seller SKU" aria-label="input" aria-describedby="button-addon2">
-                                   <span class="input-group-text bg-light-gray h-inherit rounded-right border-0" id="basic-addon1">Search</span>
+                               <div class="col-xxl-9 col-12 d-flex gap-2 mt-4 mt-xxl-0">
+                                <div class="input-group h-md-44">
+                                  <select id="sort" name="sort" class="form-select">
+                                    <option value="" selected disabled>All Categories</option>
+                                    <option value="price_asc">Price: Low to High</option>
+                                  </select>
                                 </div>
-                                
-                               <button class="btn-blue bg-transparent text-brand-color px-0 border-0">Download <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <div class="input-group h-md-44">
+                                  <select id="sort" name="sort" class="form-select">
+                                    <option value="" selected disabled>All Brands</option>
+                                    <option value="price_asc">Price: Low to High</option>
+                                  </select>
+                                </div>
+                                <div class="input-group h-md-44">
+                                  <input type="text" id="filters" name="filters" class="form-control" placeholder="Seller SkU">
+                                  <span class="input-group-text " id="basic-addon1">Search</span>
+                                </div>
+                                <button class="btn-blue bg-transparent text-brand-color px-0 border-0 h-md-44">Download <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                             <path d="M12 16L7 11L8.4 9.55L11 12.15V4H13V12.15L15.6 9.55L17 11L12 16ZM6 20C5.45 20 4.97933 19.8043 4.588 19.413C4.19667 19.0217 4.00067 18.5507 4 18V15H6V18H18V15H20V18C20 18.55 19.8043 19.021 19.413 19.413C19.0217 19.805 18.5507 20.0007 18 20H6Z" fill="#002882"/>
                                           </svg></button>
                                </div>
@@ -746,10 +744,10 @@
                     aria-labelledby="list-tuesday-list">
                     <div class="form1 vh-100 ">
                         <span class="subHeading">Search For Product</span>
-                        <div class="input-group gap-0 p-0 w-100 d-flex mt-20">
-                          <input type="text" class="form-control border-0 form-control-lg" placeholder="Product Name" aria-label="input" aria-describedby="button-addon2">
-                         <span class="input-group-text h-inherit rounded-right border-0" id="basic-addon1"><i class="bi bi-search"></i></span>
-                      </div>
+                        <div class="input-group mt-20 h-md-44">
+                          <input type="text" id="filters" name="filters" class="form-control" placeholder="Product ID">
+                          <span class="input-group-text " id="basic-addon1"><i class="bi bi-search"></i></span>
+                        </div>
                      <span class="paragraph-2 fs-14">Search input should matc the name stricktly. E.g: For “iPhone Pro Max”, you can find it by “iPhone” or “max” or “Pro”, but not by “iPhoneMax” or “iPhone Max”</span>
                         </div>
                 </div>

@@ -6,7 +6,8 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="../assets/css/bootstrap.css"> -->
+    <link rel="stylesheet" href="../assets/css/bootstrap5.3.css">
     <link rel="stylesheet" href="../assets/vendors/simple-datatables/style.css">
     <link rel="stylesheet" href="../assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
@@ -511,100 +512,74 @@
   </div>
   <div class="row form1 d-flex flex-column gap-2 mt-40 ">
     <div class="d-flex gap-2 p-0">
-        <div class="input-group">
-            <label class="input-group-text border-0" for="inputGroupSelect01">Status</label>
-            <select class="form-select form-select-lg form-control form-control-lg border-0" id="inputGroupSelect01">
-                <option selected="">Replied</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-            </select>
-            </div>
-            <div class="input-group">
-                <label class="input-group-text border-0" for="inputGroupSelect01">Content</label>
-                <select class="form-select form-control-lg form-control form-control-lg border-0" id="inputGroupSelect01">
-                    <option selected="">With Content</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                </select>
-            </div>
-                <div class="input-group">
-                    <label class="input-group-text border-0" for="inputGroupSelect01">Overall Rating</label>
-                    <select class="form-select form-select-lg form-control form-control-lg border-0" id="inputGroupSelect01">
-                        <option selected="">03 Stars</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                </div>
-                <button class="btn-gray h-auto">Reset</button>
+      <div class="input-group h-md-44">
+        <span class="input-group-text"
+          >Status</span>
+        <select
+          id="queryCategory"
+          name="queryCategory"
+          class="form-select">
+          <option value="" selected disabled>Replied</option>
+        </select>
+      </div>
+      <div class="input-group h-md-44">
+        <span class="input-group-text"
+          >Content</span>
+        <select
+          id="queryCategory"
+          name="queryCategory"
+          class="form-select">
+          <option value="" selected disabled>With Content</option>
+        </select>
+      </div>
+      <div class="input-group h-md-44">
+        <span class="input-group-text"
+          >Overall Rating</span>
+        <select
+          id="queryCategory"
+          name="queryCategory"
+          class="form-select">
+          <option value="" selected disabled>03 Stars</option>
+        </select>
+      </div>
+                <button class="btn-gray h-md-44">Reset</button>
     </div>
     <div class="d-flex gap-2 p-0 mt-2">
-        <fieldset class="form-group w-100 " id="linkGroup1">
-            <select class="form-select form-select-lg form-control form-control-lg" id="basicSelect">
-              <option value="">Please Select</option>
-              <option>Instagram</option>
-              <option>TikTok</option>
-              <option>Instagram</option>
-              <option>YouTube</option>
-              <option>SnapChat</option>
-              <option>Facebook</option>
-              <option>Custom</option>
-            </select>
-            </fieldset>
-            <fieldset class="form-group w-100 " id="linkGroup1">
-                <select class="form-select form-select-lg form-control form-control-lg" id="basicSelect">
-                  <option value="">Please Select</option>
-                  <option>Instagram</option>
-                  <option>TikTok</option>
-                  <option>Instagram</option>
-                  <option>YouTube</option>
-                  <option>SnapChat</option>
-                  <option>Facebook</option>
-                  <option>Custom</option>
-                </select>
-                </fieldset>
-                <fieldset class="form-group w-100" id="linkGroup1">
-                    <select class="form-select form-select-lg form-control form-control-lg" id="basicSelect">
-                      <option value="">Please Select</option>
-                      <option>Instagram</option>
-                      <option>TikTok</option>
-                      <option>Instagram</option>
-                      <option>YouTube</option>
-                      <option>SnapChat</option>
-                      <option>Facebook</option>
-                      <option>Custom</option>
-                    </select>
-                    </fieldset>
-                    <div class="form-group p-0 w-100 d-flex ">
-                      <div class="input-group">
-                        <input type="text" class="form-control form-control-lg form-select-input border-0" placeholder="Product ID" aria-label="Search here" aria-describedby="search-icon">
-                        <span class="input-group-text border-0" id="search-icon">
-                          <i class="bi bi-search"></i>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="form-group p-0 w-100 d-flex ">
-                      <div class="input-group">
-                        <input type="text" class="form-control form-control-lg form-select-input border-0" placeholder="Order ID" aria-label="Search here" aria-describedby="search-icon">
-                        <span class="input-group-text border-0" id="search-icon">
-                          <i class="bi bi-search"></i>
-                        </span>
-                      </div>
-                    </div>
+      <div class="input-group h-md-44">
+        <select id="sort" name="sort" class="form-select">
+          <option value="" selected disabled>Product Quality</option>
+          <option value="price_asc">Price: Low to High</option>
+        </select>
+      </div>
+
+      <div class="input-group h-md-44">
+        <select id="sort" name="sort" class="form-select">
+          <option value="" selected disabled>Shipping Service</option>
+          <option value="price_asc">Price: Low to High</option>
+        </select>
+      </div>
+      <div class="input-group h-md-44">
+        <select id="sort" name="sort" class="form-select">
+          <option value="" selected disabled>Seller Service</option>
+          <option value="price_asc">Price: Low to High</option>
+        </select>
+      </div>
+      <div class="input-group h-md-44">
+        <input type="text" id="filters" name="filters" class="form-control" placeholder="Product ID">
+        <span class="input-group-text " id="basic-addon1"><i class="bi bi-search"></i></span>
+      </div>
+        <div class="input-group h-md-44">
+        <input type="text" id="filters" name="filters" class="form-control " placeholder="Order ID">
+        <span class="input-group-text " id="basic-addon1"><i class="bi bi-search"></i></span>
+      </div>
     </div>
-                    <div class="d-flex gap-2 m-0 p-0">
-                        <div class="form-group gap-0 p-0 d-flex m-0 w-25">
-                          <div class="input-group">
-                            <input type="text" class="form-control form-control-lg form-select-input border-0" placeholder="Buyer Name" aria-label="Search here" aria-describedby="search-icon">
-                            <span class="input-group-text border-0" id="search-icon">
-                              <i class="bi bi-search"></i>
-                            </span>
-                          </div>
-                        </div>
-                   <div class="form-group position-relative d-flex gap-1 align-items-center startEndDate m-0">
-                    <input class="form-control form-control-lg" name="daterange" type="text" id="date1" placeholder="Start Date  |  End Date">
+                    <div class="col-6 d-flex gap-2 m-0 p-0">
+                      <div class="input-group h-md-44">
+                        <input type="text" id="filters" name="filters" class="form-control" placeholder="Buyer Name">
+                        <span class="input-group-text " id="basic-addon1"><i class="bi bi-search"></i></span>
+                      </div>
+                   <div class="form-group position-relative d-flex gap-1 align-items-center startEndDate m-0 h-md-44">
+                    <input class="form-control form-control-lg h-md-44" name="daterange" type="text" id="date1" placeholder="Start Date  |  End Date">
              </div>
                  </div>
                 

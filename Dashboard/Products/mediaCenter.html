@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="../assets/css/app.css">
     <link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="stylesheet" href="../style.css" />
 </head>
@@ -443,7 +443,7 @@
                <button class="btn-outline-blue h-auto">Select All</button>
            </div>
            <div class="col-8 d-flex justify-content-end gap-2 p-0">
-           <input class="form-control form-control-lg" name="daterange" type="text" id="date" placeholder="Start Date  |  End Date" disabled>  
+            <input type="text" id="datePicker" class="form-control" name="daterange"placeholder="Start Date  |  End Date" disabled>
             <input type="text" disabled class="form-control form-control-lg" placeholder="muhammadarshad@gmail.com">
                    <button class="btn-outline-blue h-auto">Clear</button>
                    <button class="btn-blue h-auto">Search</button>
@@ -550,11 +550,25 @@
  
    
  </main>
-  
+
+
+
+
+
+
+
+ <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+ <!-- Moment.js -->
  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+ <!-- Daterangepicker CSS and JS -->
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
- <script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
  <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
   <script>
     function toggleCheckboxes(source) {
@@ -562,9 +576,7 @@
       checkboxes.forEach(checkbox => checkbox.checked = source.checked);
     }
     </script>
-    <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/main.js"></script>
+    
     <script>
       let registerProTable = document.querySelector('#media_center_Table');
       new simpleDatatables.DataTable(registerProTable);
@@ -597,8 +609,20 @@ $(function() {
     }, function(start, end, label) {
       // When a user selects a range, update the input field with the selected dates
       $('input[name="daterange"]').val(start.format('DD MMM YYYY') + ' | ' + end.format('DD MMM YYYY'));
-    });
-  });
+});
+ });
+$(function() {
+    $('input[name="daterange"]').daterangepicker({
+      opens: 'center',
+      locale: {
+        format: 'DD MMM YYYY' // Example: 01 Jan 2022
+      },
+      autoUpdateInput: false  // This stops the input from updating automatically before selection
+    }, function(start, end, label) {
+      // When a user selects a range, update the input field with the selected dates
+      $('input[name="daterange"]').val(start.format('DD MMM YYYY') + ' | ' + end.format('DD MMM YYYY'));
+});
+});
       </script> 
 </body>
 </html>

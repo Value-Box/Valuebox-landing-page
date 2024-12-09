@@ -6,7 +6,8 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="../assets/css/bootstrap.css"> -->
+    <link rel="stylesheet" href="../assets/css/bootstrap5.3.css">
     <link rel="stylesheet" href="../assets/vendors/apexcharts/apexcharts.css">
     <link rel="stylesheet" href="../assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
@@ -424,44 +425,307 @@
          <div class="row form1 mt-40">
             <div class="d-flex flex-column gap-1 mt-30 p-0">
                 <span class="message-text gray-color fw-bold">Contact Email Address</span>
-                <input type="text" id="roundText" class="form-control form-control-lg round w-50 " placeholder="muhammadarshad465@gmail.com" disabled>
-              </div>
-            <div class="d-flex flex-column gap-1 mt-30 p-0">
-                <span class="message-text gray-color fw-bold">Contact Mobile Phone Number</span>
-                <div class="d-flex  gap-1">
-                    <input type="text" id="roundText" class="form-control form-control-lg round w-25" placeholder="+923456789123" disabled>
-                    <input type="text" id="roundText" class="form-control form-control-lg round w-25" placeholder="+923456789123" disabled>  
+                <div class="d-flex align-items-center">
+                  <span class="paragraph-3 text-natural-gray">muhammadarshad456@gmail.com</span>
+                   <button class="bg-white text-brand-color border-0" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Modify</button>
                 </div>
-                </div>
-                <div class="form-group position-relative w-50 p-0 mt-30">
-                    <label for="password" class="form-label message-text gray-color fw-bold">Password</label>
-                    <input type="password" id="password" class="form-control form-control-lg w-100" placeholder="Enter your password" disabled>
-                    <span class="position-absolute top-50 end-0 translate-middle-y pe-3 cursor-pointer mt-3" onclick="togglePassword()">
-                      <i id="togglePasswordIcon" class="bi bi-eye-slash"></i>
-                    </span>
+                <div class="d-flex flex-column gap-1 mt-30 p-0">
+                  <span class="message-text gray-color fw-bold">Contact Mobile Phone Number</span>
+                  <div class="d-flex align-items-center">
+                    <span class="paragraph-3 text-natural-gray">+923456789123</span>
+                    <button class="bg-white text-brand-color border-0" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Modify</button>
                   </div>
-                  
-                  
-      
-         </div>
-         <div class="row form1 mt-40">
-            <div class="d-flex justify-content-end">
-                <button class="btn-blue">Modify</button>
-            </div>
-      
-         </div>
-       
-  
-        
-   </div>
-  
-   
-
-  
-  
- 
-  
+                  <div class="d-flex flex-column gap-1 mt-30 p-0">
+                    <span class="message-text gray-color fw-bold">Password</span>
+                    <div class="d-flex align-items-center">
+                      <span class="paragraph-3 text-natural-gray">*******************</span>
+                      <button class="bg-white text-brand-color border-0" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal">Modify</button>
+                    </div>
+              
+              </div>
+           </div>
+     
+    </div>
   </div>
+  <div class="row form1 mt-40">
+    <div class="d-flex justify-content-end">
+        <button class="btn-blue">Modify</button>
+    </div>
+</div>
+</div>
+
+  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered d-flex justify-content-center position-relative">
+      <div class="modal-content accountSetting-Email-modal">
+       <div class="w-100">
+        <div class="modal-header mb-3 p-0 ">
+          <span class="text-brand-color p-0 subHeading text-start">Email Modification<span>
+         
+            <div id="closeModalBtn" class="btn-blue closeModalBtn rounded-circle" data-bs-dismiss="modal" aria-label="Close">
+            <img src="../Images/carbon_close-filled.svg" alt="">
+          </div>
+        </div>
+        <div class="modal-body d-flex flex-column gap-3 p-0">
+       <div class="" id="emailform">
+        <div class="d-flex align-items-center justify-content-between px-5">
+          <div class="d-flex flex-column align-items-center pe-4">
+            <span class="accountSettingCircle active d-flex ">01</span>
+            <span class="fs-16 text-dark text-center">Please verify your account</span>
+          </div>
+          <hr class="w-75">
+          <div class="d-flex flex-column align-items-center ps-4">
+            <span class="accountSettingCircle  d-flex ">02</span>
+            <span class="fs-16 text-dark text-center ">Modify the Email</span>
+          </div>
+        </div>
+           <div class="d-flex flex-column gap-1 mt-40">
+            <span class="fs-20 paragraph-2">Your current Phone Number</span>
+            <span class="fs-20 text-natural-gray mt-1">+921032456782</span>
+           </div>
+           <div class="d-flex flex-column gap-1 mt-40">
+            <span class="fs-20 paragraph-2">Your current email Address</span>
+            <span class="fs-20 text-natural-gray mt-1">muhammadarshad456@gmail.com</span>
+           </div>
+          <div class="mt-40">
+            <span class="fs-20 paragraph-2" id="email_varify_text">Check your email for the verification code</span>
+            <span class="fs-20 paragraph-2" style="display: none;" id="number_varify_text">Check your SMS for the verification code</span>
+            <div class="d-flex mt-1 justify-content-between">
+              <div class=" input-group d-flex gap-2 h-md-44 w-75">
+                <input type="text" id="filters" name="filters" class="form-control " placeholder="Enter the Code"/>
+            </div>
+              <button class="btn-outline-gray h-md-44">Send Code</button>
+            </div>
+            <div class="mt-20 cursor-pointer" id="varify_number_btn">
+              <span class="text-brand-color"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M6.54 5C6.6 5.89 6.75 6.76 6.99 7.59L5.79 8.79C5.38 7.59 5.12 6.32 5.03 5H6.54ZM16.4 17.02C17.25 17.26 18.12 17.41 19 17.47V18.96C17.68 18.87 16.41 18.61 15.2 18.21L16.4 17.02ZM7.5 3H4C3.45 3 3 3.45 3 4C3 13.39 10.61 21 20 21C20.55 21 21 20.55 21 20V16.51C21 15.96 20.55 15.51 20 15.51C18.76 15.51 17.55 15.31 16.43 14.94C16.331 14.903 16.2256 14.886 16.12 14.89C15.86 14.89 15.61 14.99 15.41 15.18L13.21 17.38C10.3755 15.9303 8.06966 13.6245 6.62 10.79L8.82 8.59C9.1 8.31 9.18 7.92 9.07 7.57C8.69132 6.41789 8.4989 5.21274 8.5 4C8.5 3.45 8.05 3 7.5 3Z" fill="#002882"/>
+              </svg> Verify via phone number</span>
+            </div>
+            <div class="mt-20 cursor-pointer" id="varify_email_btn" style="display: none;">
+              <span class="text-brand-color"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M7 9L12 12.5L17 9" stroke="#002882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 17V7C2 6.46957 2.21071 5.96086 2.58579 5.58579C2.96086 5.21071 3.46957 5 4 5H20C20.5304 5 21.0391 5.21071 21.4142 5.58579C21.7893 5.96086 22 6.46957 22 7V17C22 17.5304 21.7893 18.0391 21.4142 18.4142C21.0391 18.7893 20.5304 19 20 19H4C3.46957 19 2.96086 18.7893 2.58579 18.4142C2.21071 18.0391 2 17.5304 2 17Z" stroke="#002882" stroke-width="1.5"/>
+              </svg> Verify via email address</span>
+            </div>
+            <div class="d-flex gap-2 mt-40 justify-content-end">
+              <button class="btn-blue" id="emailFormNxtBtn">Next</button>
+              <!-- <button class="btn-gray" data-bs-dismiss="modal">Cancel</button> -->
+              <button class="btn-gray">Submit</button>
+            </div>
+          </div>
+          </div>
+       
+          <div class="" id="newEmailform" style="display: none;">
+            <div class="d-flex align-items-center justify-content-between px-5">
+              <div class="d-flex flex-column align-items-center pe-4">
+                <span class="accountSettingCircle  d-flex ">01</span>
+                <span class="fs-16 text-dark text-center">Please verify your account </span>
+              </div>
+              <hr class="w-75">
+              <div class="d-flex flex-column align-items-center ps-4">
+                <span class="accountSettingCircle active d-flex ">02</span>
+                <span class="fs-16 text-dark text-center">Modify the Email</span>
+              </div>
+            </div>
+           <div class="mt-40">
+                <span class="fs-20 paragraph-2">Enter New Email</span>
+                <div class="d-flex mt-1 justify-content-between">
+                  <div class=" input-group mt-1 h-md-44 ">
+                    <input type="text" id="filters" name="filters" class="form-control " placeholder="Enter Email"/>
+                </div>
+           </div>
+         <div class="d-flex gap-2 mt-40 justify-content-end">
+                  <button class="btn-blue">Submit</button>
+          </div>
+              </div>
+              </div>
+       </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <!-- Second Modal -->
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggle2Label" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered d-flex justify-content-center position-relative">
+        <div class="modal-content accountSetting-Email-modal">
+            <div class="modal-header w-100">
+              <span class="text-brand-color p-0 subHeading ">Phone Number Modification<span>
+                <div id="closeModalBtn" class="btn-blue closeModalBtn rounded-circle" data-bs-dismiss="modal" aria-label="Close">
+                <img src="../Images/carbon_close-filled.svg" alt="">
+            </div>
+       </div>
+       <div class="modal-body d-flex flex-column gap-3 p-0 w-100">
+        <div class="" id="phoneform">
+         <div class="d-flex align-items-center justify-content-between px-5">
+           <div class="d-flex flex-column align-items-center pe-2">
+             <span class="accountSettingCircle active d-flex ">01</span>
+             <span class="fs-16 text-dark text-center">Please verify your account</span>
+           </div>
+           <hr class="w-75">
+           <div class="d-flex flex-column align-items-center ps-2">
+             <span class="accountSettingCircle  d-flex ">02</span>
+             <span class="fs-16 text-dark text-center">Modify the Phone Number</span>
+           </div>
+         </div>
+         <div class="d-flex flex-column gap-1 mt-40">
+          <span class="fs-20 paragraph-2">Your current Phone Number</span>
+          <span class="fs-20 text-natural-gray mt-1">+921032456782</span>
+         </div>
+         <div class="d-flex flex-column gap-1 mt-40">
+          <span class="fs-20 paragraph-2">Your current email Address</span>
+          <span class="fs-20 text-natural-gray mt-1">muhammadarshad456@gmail.com</span>
+         </div>
+           <div class="mt-40">
+             <span class="fs-20 paragraph-2" id="email_varify_text1">Check your email for the verification code</span>
+             <span class="fs-20 paragraph-2" style="display: none;" id="number_varify_text1">Check your SMS for the verification code</span>
+             <div class="d-flex mt-1 justify-content-between">
+               <div class=" input-group d-flex gap-2 h-md-44 w-75">
+                 <input type="text" id="filters" name="filters" class="form-control " placeholder="Enter the Code"/>
+             </div>
+               <button class="btn-outline-gray h-md-44">Send Code</button>
+             </div>
+             <div class="mt-20 cursor-pointer" id="varify_number_btn1">
+               <span class="text-brand-color"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M6.54 5C6.6 5.89 6.75 6.76 6.99 7.59L5.79 8.79C5.38 7.59 5.12 6.32 5.03 5H6.54ZM16.4 17.02C17.25 17.26 18.12 17.41 19 17.47V18.96C17.68 18.87 16.41 18.61 15.2 18.21L16.4 17.02ZM7.5 3H4C3.45 3 3 3.45 3 4C3 13.39 10.61 21 20 21C20.55 21 21 20.55 21 20V16.51C21 15.96 20.55 15.51 20 15.51C18.76 15.51 17.55 15.31 16.43 14.94C16.331 14.903 16.2256 14.886 16.12 14.89C15.86 14.89 15.61 14.99 15.41 15.18L13.21 17.38C10.3755 15.9303 8.06966 13.6245 6.62 10.79L8.82 8.59C9.1 8.31 9.18 7.92 9.07 7.57C8.69132 6.41789 8.4989 5.21274 8.5 4C8.5 3.45 8.05 3 7.5 3Z" fill="#002882"/>
+              </svg> Verify via phone number</span>
+             </div>
+             <div class="mt-20 cursor-pointer" id="varify_email_btn1" style="display: none;">
+               <span class="text-brand-color"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                 <path d="M7 9L12 12.5L17 9" stroke="#002882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                 <path d="M2 17V7C2 6.46957 2.21071 5.96086 2.58579 5.58579C2.96086 5.21071 3.46957 5 4 5H20C20.5304 5 21.0391 5.21071 21.4142 5.58579C21.7893 5.96086 22 6.46957 22 7V17C22 17.5304 21.7893 18.0391 21.4142 18.4142C21.0391 18.7893 20.5304 19 20 19H4C3.46957 19 2.96086 18.7893 2.58579 18.4142C2.21071 18.0391 2 17.5304 2 17Z" stroke="#002882" stroke-width="1.5"/>
+               </svg> Verify via email address</span>
+             </div>
+             <div class="d-flex gap-2 mt-40 justify-content-end">
+               <button class="btn-blue" id="phoneFormNxtBtn">Next</button>
+               <!-- <button class="btn-gray" data-bs-dismiss="modal">Cancel</button> -->
+               <button class="btn-gray">Submit</button>
+             </div>
+           </div>
+           </div>
+        <div class="" id="newphoneform" style="display: none;">
+             <div class="d-flex align-items-center justify-content-between px-5">
+               <div class="d-flex flex-column align-items-center pe-4">
+                 <span class="accountSettingCircle d-flex ">01</span>
+                 <span class="fs-16 text-dark text-center">Please verify your account </span>
+               </div>
+               <hr class="w-75">
+               <div class="d-flex flex-column align-items-center ps-4">
+                 <span class="accountSettingCircle active d-flex ">02</span>
+                 <span class="fs-16 text-dark text-center">Modify the Phone Number</span>
+               </div>
+             </div>
+            <div class="mt-40">
+                 <span class="fs-20 paragraph-2">Enter New Phone Number</span>
+                 <div class="d-flex mt-1 justify-content-between">
+                   <div class=" input-group mt-1 h-md-44 ">
+                     <input type="text" id="filters" name="filters" class="form-control " placeholder="Enter Email"/>
+                 </div>
+            </div>
+          <div class="d-flex gap-2 mt-40 justify-content-end">
+                   <button class="btn-blue">Submit</button>
+           </div>
+               </div>
+               </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- third modal -->
+<div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggle3Label" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered d-flex justify-content-center position-relative">
+      <div class="modal-content accountSetting-Email-modal">
+          <div class="modal-header w-100">
+            <span class="text-brand-color p-0 subHeading ">Password Modification<span>
+              <div id="closeModalBtn" class="btn-blue closeModalBtn rounded-circle" data-bs-dismiss="modal" aria-label="Close">
+              <img src="../Images/carbon_close-filled.svg" alt="">
+          </div>
+        </div>
+   <div class="modal-body d-flex flex-column gap-3 p-0 w-100">
+            <div class="" id="passwordform">
+             <div class="d-flex align-items-center justify-content-between px-5">
+               <div class="d-flex flex-column align-items-center pe-2">
+                 <span class="accountSettingCircle active d-flex ">01</span>
+                 <span class="fs-16 text-dark text-center">Please verify your account</span>
+               </div>
+               <hr class="w-75">
+               <div class="d-flex flex-column align-items-center ps-2">
+                 <span class="accountSettingCircle  d-flex ">02</span>
+                 <span class="fs-16 text-dark text-center">Modify the Password</span>
+               </div>
+             </div>
+             <div class="d-flex flex-column gap-1 mt-40">
+              <span class="fs-20 paragraph-2">Your current Phone Number</span>
+              <span class="fs-20 text-natural-gray mt-1">+921032456782</span>
+             </div>
+             <div class="d-flex flex-column gap-1 mt-40">
+              <span class="fs-20 paragraph-2">Your current email Address</span>
+              <span class="fs-20 text-natural-gray mt-1">muhammadarshad456@gmail.com</span>
+             </div>
+               <div class="mt-40">
+                 <span class="fs-20 paragraph-2" id="email_varify_text2">Check your email for the verification code</span>
+                 <span class="fs-20 paragraph-2" style="display: none;" id="number_varify_text2">Check your SMS for the verification code</span>
+                 <div class="d-flex mt-1 justify-content-between">
+                   <div class=" input-group d-flex gap-2 h-md-44 w-75">
+                     <input type="text" id="filters" name="filters" class="form-control " placeholder="Enter the Code"/>
+                 </div>
+                   <button class="btn-outline-gray h-md-44">Send Code</button>
+                 </div>
+                 <div class="mt-20 cursor-pointer" id="varify_number_btn2">
+                   <span class="text-brand-color"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M6.54 5C6.6 5.89 6.75 6.76 6.99 7.59L5.79 8.79C5.38 7.59 5.12 6.32 5.03 5H6.54ZM16.4 17.02C17.25 17.26 18.12 17.41 19 17.47V18.96C17.68 18.87 16.41 18.61 15.2 18.21L16.4 17.02ZM7.5 3H4C3.45 3 3 3.45 3 4C3 13.39 10.61 21 20 21C20.55 21 21 20.55 21 20V16.51C21 15.96 20.55 15.51 20 15.51C18.76 15.51 17.55 15.31 16.43 14.94C16.331 14.903 16.2256 14.886 16.12 14.89C15.86 14.89 15.61 14.99 15.41 15.18L13.21 17.38C10.3755 15.9303 8.06966 13.6245 6.62 10.79L8.82 8.59C9.1 8.31 9.18 7.92 9.07 7.57C8.69132 6.41789 8.4989 5.21274 8.5 4C8.5 3.45 8.05 3 7.5 3Z" fill="#002882"/>
+                  </svg> Verify via phone number</span>
+                 </div>
+                 <div class="mt-20 cursor-pointer" id="varify_email_btn2" style="display: none;">
+                   <span class="text-brand-color"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                     <path d="M7 9L12 12.5L17 9" stroke="#002882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                     <path d="M2 17V7C2 6.46957 2.21071 5.96086 2.58579 5.58579C2.96086 5.21071 3.46957 5 4 5H20C20.5304 5 21.0391 5.21071 21.4142 5.58579C21.7893 5.96086 22 6.46957 22 7V17C22 17.5304 21.7893 18.0391 21.4142 18.4142C21.0391 18.7893 20.5304 19 20 19H4C3.46957 19 2.96086 18.7893 2.58579 18.4142C2.21071 18.0391 2 17.5304 2 17Z" stroke="#002882" stroke-width="1.5"/>
+                   </svg> Verify via email address</span>
+                 </div>
+                 <div class="d-flex gap-2 mt-40 justify-content-end">
+                   <button class="btn-blue" id="passwordFormNxtBtn">Next</button>
+                   <!-- <button class="btn-gray" data-bs-dismiss="modal">Cancel</button> -->
+                   <button class="btn-gray">Submit</button>
+                 </div>
+               </div>
+               </div>
+            
+               <div class="" id="newpasswordform" style="display: none;">
+                 <div class="d-flex align-items-center justify-content-between px-5">
+                   <div class="d-flex flex-column align-items-center pe-4">
+                     <span class="accountSettingCircle d-flex ">01</span>
+                     <span class="fs-16 text-dark text-center">Please verify your account </span>
+                   </div>
+                   <hr class="w-75">
+                   <div class="d-flex flex-column align-items-center ps-4">
+                     <span class="accountSettingCircle active d-flex ">02</span>
+                     <span class="fs-16 text-dark text-center">Modify the Phone Number</span>
+                   </div>
+                 </div>
+                <div class="mt-40">
+                     <span class="fs-20 paragraph-2">Enter New Password</span>
+                     <div class="d-flex mt-1 justify-content-between">
+                       <div class=" input-group mt-1 h-md-44 ">
+                         <input type="text" id="filters" name="filters" class="form-control " placeholder="Enter Email"/>
+                     </div>
+                    </div>
+                </div>
+                <div class="mt-40">
+                  <span class="fs-20 paragraph-2">Confirm Password</span>
+                  <div class="d-flex mt-1 justify-content-between">
+                    <div class=" input-group mt-1 h-md-44 ">
+                      <input type="text" id="filters" name="filters" class="form-control " placeholder="Enter Email"/>
+                  </div>
+                 </div>
+             </div>
+              <div class="d-flex gap-2 mt-40 justify-content-end">
+                       <button class="btn-blue">Submit</button>
+               </div>
+                   </div>
+                   </div>
+            </div>
+      </div>
+  </div>
+</div>
     </main>
 
 
@@ -470,9 +734,91 @@
 
 
   <script>
+     const emailfor=document.getElementById('emailform')
+  const newEmailform=document.getElementById('newEmailform')
+  const emailFormNxtBtn = document.getElementById("emailFormNxtBtn");
+
+    emailFormNxtBtn.addEventListener('click',()=>{
+      emailfor.style.display='none'
+      newEmailform.style.display='block'
+    })
+
+    const varifyNumberBtn=document.getElementById('varify_number_btn')
+    const varifyEmailBtn=document.getElementById('varify_email_btn')
+    const numberVarifyText=document.getElementById('number_varify_text')
+    const emailVarifyText=document.getElementById('email_varify_text')
+
+    varifyNumberBtn.addEventListener('click',()=>{
+      emailVarifyText.style.display='none';
+      numberVarifyText.style.display='block';
+      varifyEmailBtn.style.display='block';
+      varifyNumberBtn.style.display='none';
+    })
+    varifyEmailBtn.addEventListener('click',()=>{
+      emailVarifyText.style.display='block';
+      numberVarifyText.style.display='none';
+      varifyEmailBtn.style.display='none';
+      varifyNumberBtn.style.display='block';
+    })
+  //  phone number modal
+  const phonefor=document.getElementById('phoneform')
+  const newphoneform=document.getElementById('newphoneform')
+  const phoneFormNxtBtn = document.getElementById("phoneFormNxtBtn");
+
+    phoneFormNxtBtn.addEventListener('click',()=>{
+      phonefor.style.display='none'
+      newphoneform.style.display='block'
+    })
+
+    const varifyNumberBtn1=document.getElementById('varify_number_btn1')
+    const varifyEmailBtn1=document.getElementById('varify_email_btn1')
+    const numberVarifyText1=document.getElementById('number_varify_text1')
+    const emailVarifyText1=document.getElementById('email_varify_text1')
+
+    varifyNumberBtn1.addEventListener('click',()=>{
+      emailVarifyText1.style.display='none';
+      numberVarifyText1.style.display='block';
+      varifyEmailBtn1.style.display='block';
+      varifyNumberBtn1.style.display='none';
+    })
+    varifyEmailBtn1.addEventListener('click',()=>{
+      emailVarifyText1.style.display='block';
+      numberVarifyText1.style.display='none';
+      varifyEmailBtn1.style.display='none';
+      varifyNumberBtn1.style.display='block';
+    })
+  //  password number modal
+  const passwordfor=document.getElementById('passwordform')
+  const newpasswordform=document.getElementById('newpasswordform')
+  const passwordFormNxtBtn = document.getElementById("passwordFormNxtBtn");
+
+    passwordFormNxtBtn.addEventListener('click',()=>{
+      passwordfor.style.display='none'
+      newpasswordform.style.display='block'
+    })
+
+    const varifyNumberBtn2=document.getElementById('varify_number_btn2')
+    const varifyEmailBtn2=document.getElementById('varify_email_btn2')
+    const numberVarifyText2=document.getElementById('number_varify_text2')
+    const emailVarifyText2=document.getElementById('email_varify_text2')
+
+    varifyNumberBtn2.addEventListener('click',()=>{
+      emailVarifyText2.style.display='none';
+      numberVarifyText2.style.display='block';
+      varifyEmailBtn2.style.display='block';
+      varifyNumberBtn2.style.display='none';
+    })
+    varifyEmailBtn2.addEventListener('click',()=>{
+      emailVarifyText2.style.display='block';
+      numberVarifyText2.style.display='none';
+      varifyEmailBtn2.style.display='none';
+      varifyNumberBtn2.style.display='block';
+    })
+  
   function togglePassword() {
     const passwordInput = document.getElementById("password");
     const toggleIcon = document.getElementById("togglePasswordIcon");
+    
   
     if (passwordInput.type === "password") {
       passwordInput.type = "text";
@@ -484,7 +830,9 @@
       toggleIcon.classList.add("bi-eye-slash");
     }
   }
-  </script>
+
+
+ </script>
     <script>
         function toggleCheckboxes(source) {
           const checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
