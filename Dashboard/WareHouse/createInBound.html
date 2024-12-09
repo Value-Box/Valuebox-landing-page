@@ -6,10 +6,11 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap5.3.css">
     <!-- <link rel="stylesheet" href="../assets/vendors/choices.js/choices.min.css" /> -->
-  
+
     <link rel="stylesheet" href="../assets/vendors/simple-datatables/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
 
     <link rel="stylesheet" href="../assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
@@ -432,10 +433,10 @@
                 <span class="subHeading">Basic Information</span>
 
                 <div class="row mt-20">
-                    <div class="col-6 p-0">
+                    <div class="col-4 p-0">
                         <span class="text-orange-star fs-18 gray-color">Inbound Warehouse</span>
                         <fieldset class="form-group">
-                          <select class="form-select form-select-lg" id="basicSelect">
+                          <select class="select-dropdown form-select" id="basicSelect1">
                               <option value="">Please Select</option>
                               <option value="kachehri">Kachehri Warehouse</option>
                               <option value="mda">MDA Warehouse</option>
@@ -446,7 +447,7 @@
                 <div class="d-flex mt-40 gap-80">
                     <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">Warehouse Address</span>
-                        <input class="form-control form-control-lg" type="text"  placeholder="" disabled>
+                        <input class="form-control" type="text"  placeholder="" disabled>
                     </div>
                     <div class="  p-0">
                         <div class="d-flex flex-column align-items-start gap-2">
@@ -460,7 +461,7 @@
                     <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">Inbound Warehouse</span>
                         <fieldset class="form-group">
-                          <select class="form-select form-select-lg" id="basicSelect">
+                          <select class="select-dropdown form-select" id="basicSelect2">
                               <option value="">Please Select</option>
                               <option value="kachehri">Kachehri Warehouse</option>
                               <option value="mda">MDA Warehouse</option>
@@ -475,46 +476,45 @@
                 <span class="subHeading-3 text-natural-dark mt-40 d-inline-block">Warehouse Address</span>
 
                 <div class="d-flex mt-20 gap-20">
-                    <div class="col-6 p-0">
+                    <div class="col-4 p-0">
                         <span class="text-orange-star fs-18 gray-color">Warehouse</span>
                         <fieldset class="form-group">
-                          <select class="form-select form-select-lg" id="basicSelect">
+                          <select class="select-dropdown form-select" id="basicSelect">
                               <option value="">Please Select</option>
                               <option value="kachehri">Kachehri Warehouse</option>
                               <option value="mda">MDA Warehouse</option>
                           </select>
                       </fieldset>  
                     </div>
-                    <div class="col-6 p-0">
+                    <div class="col-4 p-0">
                         <span class="text-orange-star fs-18 gray-color">Warehouse Address</span>
-                        <input class="form-control form-control-lg" type="text"  placeholder="" disabled>
-
+                        <input class="form-control" type="text"  placeholder="" disabled>
                     </div>
                 </div>
                 <div class="d-flex mt-40 gap-20">
-                    <div class="col p-0">
+                    <div class="col-4 p-0">
                         <span class="text-orange-star fs-18 gray-color">Country</span>
-                        <input class="form-control form-control-lg" type="text"  placeholder="" disabled>
+                        <input class="form-control" type="text"  placeholder="" disabled>
                     </div>
-                    <div class="col p-0">
+                    <div class="col-4 p-0">
                         <span class="text-orange-star fs-18 gray-color">City</span>
-                        <input class="form-control form-control-lg" type="text"  placeholder="" disabled>
+                        <input class="form-control" type="text"  placeholder="" disabled>
                     </div>
-                    <div class="col p-0">
+                    <div class="col-4 p-0">
                         <span class="text-orange-star fs-18 gray-color">Post Code</span>
-                        <input class="form-control form-control-lg" type="text"  placeholder="" disabled>
+                        <input class="form-control" type="text"  placeholder="" disabled>
                     </div>
                 </div>
                 <span class="subHeading-3 text-natural-dark mt-40 d-inline-block">Contact</span>
 
                 <div class="d-flex mt-40 gap-20">
-                    <div class="col p-0">
+                    <div class="col-4 p-0">
                         <span class="text-orange-star fs-18 gray-color">Contact Name</span>
-                        <input class="form-control form-control-lg" type="text"  placeholder="Please Input" >
+                        <input class="form-control" type="text"  placeholder="Please Input" >
                     </div>
-                    <div class="col p-0">
+                    <div class="col-4 p-0">
                         <span class="text-orange-star fs-18 gray-color">Mobile Number</span>
-                        <input class="form-control form-control-lg" type="text"  placeholder="Please Input" >
+                        <input class="form-control" type="text"  placeholder="Please Input" >
                     </div>
                 </div>
             </div>
@@ -540,7 +540,7 @@
             <div class="container-fluid form1 mt-40">
                 <div class="row d-flex justify-content-between align-items-center">
                     <div class="col p-0 TableWrapper">
-                        <table class="reg_Prod_Table" id="reg_Prod_Table">
+                        <table class="inbound_Table" id="inbound_Table">
                             <thead>
                               <tr>
                                 <th><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Fulfillment SKU</th>
@@ -548,25 +548,25 @@
                                 <th>Seller SKU</th>
                                 <th>Request Quantity</th>
                                 <th>Barcode</th>
-                                <th>Action</th>
+                                <th class="sticky-right text-center bg-bs-white">Action</th>
                               </tr>
                             </thead>
                             <tbody>
                               
                               <tr>
-                                <td><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> 2245646_PK_14454120</td>
+                                <td class="d-flex align-items-center gap-2"><input class="form-check-input mt-0" type="checkbox" name="" id="pend_Adj_Sku"> 2245646_PK_14454120</td>
                                 <td>Pack of 6 - Pull B ack Mini Car Set For kids & boys toys</td>
                                 <td>MINI-CARS-6</td>
                                 <td><input type="text" oninput="calculatPricing()" id="costPrice" class="form-control text-center" placeholder="RS." required oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td>
                                 <td>VBPK789651</td>
-                                <td >
+                                <td class="sticky-right text-center bg-bs-white px-5">
                                   <div class="d-flex gap-20">
                                       <a href="" class="text-underline text-brand-color">Edit</a>
                                   <a href="" class="text-underline text-brand-color">Remove</a>
                                   </div>
-                              </td>
-                               
-                            </tr>
+                                </td>
+                              </tr>
+                              
                            
                               
                             </tbody>
@@ -602,28 +602,7 @@
             </div>
     </main>
 
-    <script>
-        const textArea = document.getElementById('textArea');
-        const charCounter = document.getElementById('charCounter');
-        const maxChars = 200;
-    
-        textArea.addEventListener('input', () => {
-            const text = textArea.value;
-            const charCount = text.length;
-    
-            // Update the character counter display
-            charCounter.textContent = `${charCount}/${maxChars} characters`;
-    
-            // If the character count exceeds the limit
-            if (charCount > maxChars) {
-                textArea.value = text.slice(0, maxChars); // Truncate excess characters
-                charCounter.textContent = `${maxChars}/${maxChars} characters`;
-            }
-    
-            // Apply styling if limit is reached
-            charCounter.classList.toggle('limit-reached', charCount >= maxChars);
-        });
-    </script>
+
     <script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
     <!-- <script src="../assets/vendors/ckeditor/ckeditor.js"></script> -->
     <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
@@ -631,5 +610,52 @@
     <!-- <script src="../assets/vendors/choices.js/choices.min.js"></script> -->
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".select-dropdown").select2();
+        // $(".select-dropdown2").select2();
+      });
+      let pendingProTable = document.querySelector('#inbound_Table');
+      new simpleDatatables.DataTable(pendingProTable);
+      const textArea = document.getElementById('textArea');
+
+      function replaceArrows() {
+    // Select all elements with the page-link class
+    document.querySelectorAll(".page-link").forEach(function (link) {
+      if (link.innerHTML === "‹") {
+        link.innerHTML = "Previous"; // Replace left arrow with "Previous"
+      } else if (link.innerHTML === "›") {
+        link.innerHTML = "Next"; // Replace right arrow with "Next"
+      }
+    });
+  }
+
+  // Call this function once on page load
+  replaceArrows();
+
+
+      const charCounter = document.getElementById('charCounter');
+      const maxChars = 200;
+  
+      textArea.addEventListener('input', () => {
+          const text = textArea.value;
+          const charCount = text.length;
+  
+          // Update the character counter display
+          charCounter.textContent = `${charCount}/${maxChars} characters`;
+  
+          // If the character count exceeds the limit
+          if (charCount > maxChars) {
+              textArea.value = text.slice(0, maxChars); // Truncate excess characters
+              charCounter.textContent = `${maxChars}/${maxChars} characters`;
+          }
+  
+          // Apply styling if limit is reached
+          charCounter.classList.toggle('limit-reached', charCount >= maxChars);
+      });
+  </script>
 </body>
 </html>

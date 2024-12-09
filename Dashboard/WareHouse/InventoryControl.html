@@ -549,15 +549,17 @@
                     </div>
                   </div>
   
-                  <div class="col allbar d-flex gap-3 p-0 mt-40">
-                    <a class="active" href="">All</a>
-                    <a class="" href="">All Pending <span class="notification-badge">12</span></a>
-                    <a class="" href="">All Approved <span class="notification-badge">27</span></a>
-                    <a class="" href="">All Completed <span class="notification-badge">1</span></a>
-                </div>
+                  <div class="col allbar list-group list-group-horizontal-sm fs-20 d-flex gap-3 p-0 mt-40">
+                    <div class="list-group d-flex gap-4 list-group-horizontal-sm mb-1 text-center fs-20 allbar" role="tablist">
+                      <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto active p-0" id="list-all-list" data-bs-toggle="list" href="#list-all" role="tab">All</a>
+                      <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto p-0" id="list-active-list" data-bs-toggle="list" href="#list-pending" role="tab">All Pending <span class="notification-badge">12</span></a>
+                      <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto p-0" id="list-active-list" data-bs-toggle="list" href="#list-pending" role="tab">All Approved <span class="notification-badge">27</span></a>
+                      <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto p-0" id="list-active-list" data-bs-toggle="list" href="#list-pending" role="tab">All Completed <span class="notification-badge">1</span></a>
+                    </div>
+                  </div>
   
                 <div class="form-group w-100 TableWrapper mt-40 pb-0 ">
-                  <table class="send_wareh_Table" id="send_wareh_Table">
+                  <table class="dataTable" id="send_wareh_Table">
                     <thead>
                       <tr>
                         <th><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Inbound Order No.</th>
@@ -666,7 +668,7 @@
   
                   </div>
                 </div>
-                <div class="form1 mt-40">
+                <!-- <div class="form1 mt-40">
                   <div class="d-flex justify-content-between align-items-center">
                     <span class="subHeading">Return from warehouse</span>
                     <div class="d-flex gap-3">
@@ -681,15 +683,47 @@
                     </div>
                   </div>
   
-                  <div class="col allbar d-flex gap-3 p-0 mt-40">
-                    <a class="active" href="">All</a>
-                    <a class="" href="">All Pending <span class="notification-badge">12</span></a>
-                    <a class="" href="">All Approved <span class="notification-badge">27</span></a>
-                    <a class="" href="">All Completed <span class="notification-badge">1</span></a>
+                  <div class="col allbar collapse show d-flex gap-3 p-0 mt-40">
+                    <div class="list-group d-flex gap-4 list-group-horizontal-sm mb-1 text-center fs-20 allbar" role="tablist">
+                      <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto active p-0" id="list-all-list" data-bs-toggle="list" href="#list-all" role="tab">All</a>
+                      <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto p-0" id="list-active-list" data-bs-toggle="list" href="#list-pending" role="tab">All Pending <span class="notification-badge">12</span></a>
+                      <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto p-0" id="list-active-list" data-bs-toggle="list" href="#list-approved" role="tab">All Approved <span class="notification-badge">27</span></a>
+                      <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto p-0" id="list-active-list" data-bs-toggle="list" href="#list-completed" role="tab">All Completed <span class="notification-badge">1</span></a>
+                    </div>
                 </div>
   
-                <div class="form-group w-100 TableWrapper mt-40 pb-0 ">
-                  <table class="send_wareh_Table" id="send_wareh_Table">
+                <div class="tab-content text-justify">
+                  <div class="form-group w-100 TableWrapper tab-pane fade show active mt-40 pb-0" id="list-all">
+                    <table class="dataTable" id="send_wareh_Table">
+                      <thead>
+                        <tr>
+                          <th><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Inbound Order No.</th>
+                          <th>IO Status</th> 
+                          <th>Created Time</th>
+                          <th>Estimated Time</th>
+                          <th>Inbound Time</th>
+                          <th>SKU Requested</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="d-flex gap-1">
+                            <input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku">
+                             <a href="#">IO7845123895623</a>
+                          </td>
+                          <td>Cancelled by VakueBox</td>
+                          <td>2024-06-11 23:28:26</td>
+                          <td>2024-06-11 23:28:26</td>
+                          <td>RS 1,299.00</td>
+                          <td></td>
+                      </tr>
+    
+                      </tbody>
+                    </table>        
+                </div>
+
+                <div class="form-group w-100 TableWrapper tab-pane fade  mt-40 pb-0" id="list-pending">
+                  <table class="dataTable" id="send_wareh_Table">
                     <thead>
                       <tr>
                         <th><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Inbound Order No.</th>
@@ -716,7 +750,66 @@
                     </tbody>
                   </table>        
               </div>
-                 </div>
+
+              <div class="form-group w-100 TableWrapper tab-pane fade  mt-40 pb-0" id="list-approved">
+                <table class="dataTable" id="send_wareh_Table">
+                  <thead>
+                    <tr>
+                      <th><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Inbound Order No.</th>
+                      <th>IO Status</th> 
+                      <th>Created Time</th>
+                      <th>Estimated Time</th>
+                      <th>Inbound Time</th>
+                      <th>SKU Requested</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="d-flex gap-1">
+                        <input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku">
+                         <a href="#">IO7845123895623</a>
+                      </td>
+                      <td>Cancelled by VakueBox</td>
+                      <td>2024-06-11 23:28:26</td>
+                      <td>2024-06-11 23:28:26</td>
+                      <td>RS 1,299.00</td>
+                      <td></td>
+                  </tr>
+
+                  </tbody>
+                </table>        
+            </div>
+
+            <div class="form-group w-100 TableWrapper tab-pane fade mt-40 pb-0" id="list-completed">
+              <table class="dataTable" id="send_wareh_Table">
+                <thead>
+                  <tr>
+                    <th><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Inbound Order No.</th>
+                    <th>IO Status</th> 
+                    <th>Created Time</th>
+                    <th>Estimated Time</th>
+                    <th>Inbound Time</th>
+                    <th>SKU Requested</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-flex gap-1">
+                      <input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku">
+                       <a href="#">IO7845123895623</a>
+                    </td>
+                    <td>Cancelled by VakueBox</td>
+                    <td>2024-06-11 23:28:26</td>
+                    <td>2024-06-11 23:28:26</td>
+                    <td>RS 1,299.00</td>
+                    <td></td>
+                </tr>
+
+                </tbody>
+              </table>        
+          </div>
+                </div>
+                 </div> -->
                </div>
               
               
@@ -758,8 +851,12 @@
     });
   });
 
-  let sendwarehouseTable = document.querySelector('#send_wareh_Table');
-  new simpleDatatables.DataTable(sendwarehouseTable);
+  const sendwarehouseTables = document.querySelectorAll('.dataTable');
+
+// Loop through each table and apply DataTable
+sendwarehouseTables.forEach(table => {
+  new simpleDatatables.DataTable(table);
+});
 
 
   function replaceArrows() {
