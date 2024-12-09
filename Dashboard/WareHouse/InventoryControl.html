@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="../assets/css/bootstrap5.3.css">
     <!-- <link rel="stylesheet" href="../assets/vendors/choices.js/choices.min.css" /> -->
   
     <link rel="stylesheet" href="../assets/vendors/simple-datatables/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
 
     <link rel="stylesheet" href="../assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
@@ -18,7 +19,27 @@
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-    
+    <style>
+      .select2-selection {
+        height: 38px !important;
+        display: flex !important;
+        align-items: center;
+        border: 1px solid #ccc !important;
+        border-radius: 5px !important;
+      }
+      .select2-container--default
+        .select2-selection--single
+        .select2-selection__arrow {
+        height: 38px;
+        color: #607080 !important;
+        position: absolute;
+    right: 3px;
+      }
+      .select2-selection__rendered{
+        color: #607080 !important;
+        font-weight: 500;
+      }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-sm navbar-light bg-white sticky-top" id="navbar">
@@ -456,18 +477,18 @@
                   <div class="row mt-40 gap-20">
                     <div class="col p-0">
                       <span class="message-text">Inbound Order No.</span>
-                      <input class="form-control form-control-lg" type="text" placeholder="Please Input">
+                      <input class="form-control" type="text" placeholder="Please Input">
                     </div>
   
                     <div class="col p-0">
                       <span class="message-text">Created Time</span>
-                      <input class="form-control form-control-lg" name="daterange" type="text" id="date" placeholder="Start Date  |  End Date">
+                      <input class="form-control" name="daterange" type="text" id="date" placeholder="Start Date  |  End Date">
                     </div>
   
                     <div class="col p-0">
                       <span class="message-text">Inbound Warehouse</span>
                       <fieldset class="form-group">
-                        <select class="form-select form-select-lg" id="basicSelect">
+                        <select class="select-dropdown form-select" id="basicSelect">
                             <option value="">Please Select</option>
                             <option value="kachehri">Kachehri Warehouse</option>
                             <option value="mda">MDA Warehouse</option>
@@ -478,7 +499,7 @@
                     <div class="col p-0">
                       <span class="message-text">Delivery Type</span>
                       <fieldset class="form-group">
-                        <select class="form-select form-select-lg" id="basicSelect">
+                        <select class="select-dropdown form-select" id="deliveryType">
                             <option value="">Please Select</option>
                             <option value="Standard">Standard</option>
                             
@@ -491,19 +512,19 @@
                   </div>
   
                   <div class="row mt-20 gap-20">
-                    <div class="col p-0">
+                    <div class="col-3 p-0">
                       <span class="message-text">Fulfilment SKU</span>
-                      <input class="form-control form-control-lg" type="text" placeholder="Large Input">
+                      <input class="form-control" type="text" placeholder="Large Input">
                     </div>
-                    <div class="col p-0">
+                    <div class="col-3 p-0">
                       <span class="message-text">Seller SKU</span>
-                      <input class="form-control form-control-lg" type="text" placeholder="Please Input">
+                      <input class="form-control" type="text" placeholder="Please Input">
                     </div>
    
-                    <div class="col p-0">
+                    <div class="col-3 p-0">
                       <span class="message-text">On Time</span>
                       <div>
-                        <input type="datetime-local" name="onTime" id="onTime" class="form-control form-control-lg">
+                        <input type="datetime-local" name="onTime" id="onTime" class="form-control">
                       </div>
                    </div>    
                   </div>
@@ -576,18 +597,18 @@
                   <div class="row mt-40 gap-20">
                     <div class="col p-0">
                       <span class="message-text">Outbound Order No.</span>
-                      <input class="form-control form-control-lg" type="text" placeholder="Please Input">
+                      <input class="form-control" type="text" placeholder="Please Input">
                     </div>
   
                     <div class="col p-0">
                       <span class="message-text">Created Time</span>
-                      <input class="form-control form-control-lg" name="daterange" type="text" id="date" placeholder="Start Date  |  End Date">
+                      <input class="form-control" name="daterange" type="text" id="date" placeholder="Start Date  |  End Date">
                     </div>
   
                     <div class="col p-0">
                       <span class="message-text">Outbound Time</span>
                       <fieldset class="form-group">
-                        <select class="form-select form-select-lg" id="basicSelect">
+                        <select class="select-dropdown" id="basicSelect1">
                             <option value="">Please Select</option>
                             <option value="kachehri">Kachehri Warehouse</option>
                             <option value="mda">MDA Warehouse</option>
@@ -598,7 +619,7 @@
                     <div class="col p-0">
                       <span class="message-text">Outbound Warehouse</span>
                       <fieldset class="form-group">
-                        <select class="form-select form-select-lg" id="basicSelect">
+                        <select class="select-dropdown form-select" id="basicSelect2">
                             <option value="">Please Select</option>
                             <option value="Standard">Standard</option>
                             
@@ -611,18 +632,15 @@
                   </div>
   
                   <div class="row mt-20 gap-20">
+                    
                     <div class="col p-0">
-                      <span class="message-text">Fulfilment SKU</span>
-                      <input class="form-control form-control-lg" type="text" placeholder="Large Input">
-                    </div>
-                    <div class="col p-0">
-                      <span class="message-text">Fulfilment SKU Name</span>
-                      <input class="form-control form-control-lg" type="text" placeholder="Large Input">
+                      <span class="message-text">Product Name</span>
+                      <input class="form-control" type="text" placeholder="Large Input">
                     </div>
                     <div class="col p-0">
                       <span class="message-text">Delivery Type</span>
                       <fieldset class="form-group">
-                        <select class="form-select form-select-lg" id="basicSelect">
+                        <select class="select-dropdown form-select" id="basicSelect3">
                             <option value="">Please Select</option>
                             <option value="kachehri">Kachehri Warehouse</option>
                             <option value="mda">MDA Warehouse</option>
@@ -631,14 +649,14 @@
                   </div>
                     <div class="col p-0">
                       <span class="message-text">Seller SKU</span>
-                      <input class="form-control form-control-lg" type="text" placeholder="Please Input">
+                      <input class="form-control" type="text" placeholder="Please Input">
                     </div>
    
                     
                    <div class="col p-0">
                     <span class="message-text">Outbound Reason</span>
                     <fieldset class="form-group">
-                      <select class="form-select form-select-lg" id="basicSelect">
+                      <select class="select-dropdown form-select" id="basicSelect4">
                           <option value="">Please Select</option>
                           <option value="kachehri">Kachehri Warehouse</option>
                           <option value="mda">MDA Warehouse</option>
@@ -720,7 +738,13 @@
  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
  <!-- Daterangepicker CSS and JS -->
  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
  <script>
+  $(document).ready(function () {
+        $(".select-dropdown").select2();
+        // $(".select-dropdown2").select2();
+      });
   $(function() {
     $('input[name="daterange"]').daterangepicker({
       opens: 'center',

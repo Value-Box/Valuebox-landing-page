@@ -126,3 +126,5 @@ document
     event.preventDefault(); // Prevent the default behavior (page reload or scroll)
     // Add any other actions you want to trigger on click (e.g., opening a menu)
   });
+
+

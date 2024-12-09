@@ -31,6 +31,9 @@
       }
       .select2-container--default .select2-selection--single .select2-selection__arrow {
     height: 38px;
+    color: #607080 !important;
+        position: absolute;
+    right: 3px;
 }
 @media (min-width: 1400px) {
     .select2-container--default .select2-selection--single .select2-selection__arrow {
@@ -524,7 +527,7 @@
                                 <option>Option 2</option>
                               </select>
                               <input type="text" id="filters" name="filters" class="form-control border-right-0" placeholder="Please Input">
-                              <span class="input-group-text bg-transparent" id="basic-addon1"><i class="bi bi-search"></i></span>
+                              <button class="input-group-text bg-transparent d-flex align-items-start " id="basic-addon1"><i class="bi bi-search"></i></button>
     
                             </div>
                           </div>
@@ -1089,7 +1092,33 @@ console.log(pendingProTable);
     paginationObserver.observe(pagination, { childList: true, subtree: true });
   });
 
+      // Function to update the width of the select element based on the selected option
+      function adjustSelectWidth() {
+      // Get all select elements with class 'custom-addon' and 'input-group-addon'
+      const selectElements = document.querySelectorAll('.custom-addon.input-group-addon');
   
+      selectElements.forEach(selectElement => {
+        const customAddon = selectElement.closest('.input-group').querySelector('.custom-addon');
+  
+        // Update width on option change
+        selectElement.addEventListener("change", function () {
+          // Get the width of the selected option
+          const selectedOption = selectElement.options[selectElement.selectedIndex];
+          const optionWidth = selectedOption.textContent.length * 8; // Approximate width per character
+  
+          // Set the width of the select element dynamically
+          customAddon.style.width = `${optionWidth + 30}px`; // Adding extra padding
+        });
+  
+        // Initialize width on page load based on the default selected option
+        const initialOption = selectElement.options[selectElement.selectedIndex];
+        const initialWidth = initialOption.textContent.length * 8;
+        customAddon.style.width = `${initialWidth + 30}px`;
+      });
+    }
+  
+    // Call the function to adjust width on page load
+    adjustSelectWidth();
       </script>
     
 </body>
