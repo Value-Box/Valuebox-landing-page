@@ -12220,6 +12220,9 @@ fieldset:disabled .btn {
     color: var(--Brand-Color);
     font-weight: 500;
   }
+  .bg-brand-color{
+   background-color: #002882;
+  }
   .cursor-pointer {
     cursor: pointer;
   }
@@ -12549,6 +12552,40 @@ fieldset:disabled .btn {
    
     width: 35%;
   }
+.accountSettingCircle{
+width: 60px;
+height: 60px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 6000px;
+border: 1px solid var(--Natural-Color-40, #999);
+color: var(--Natural-Color-40, #999);
+/* Display xs/Medium */
+font-family: Sarabun;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 32px
+}
+.accountSettingCircle.active{
+    display: flex;
+width: 60px;
+height: 60px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 6000px;
+background: var(--Primary-Color-Dark-Blue, #002882);
+color: var(--Natural-Color-00, #FCFCFC);
+font-family: Sarabun;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 32px; /* 133.333% */
+}
   @media(max-width:1400px){
     .heading-one {
       font-size: clamp(20px, 4vw, 24px);
