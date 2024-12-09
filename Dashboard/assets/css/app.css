@@ -426,7 +426,7 @@
   transition: all 0.5s;
 }
 .form-group {
-  margin-bottom: 0.7rem;
+  /* margin-bottom: 0.7rem; */
 }
 .form-group label {
   /* color: rgba(35, 28, 99, 0.7); */
