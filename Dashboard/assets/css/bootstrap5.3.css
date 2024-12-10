@@ -12722,7 +12722,12 @@ background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
 .notificationTab.active{
   background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
   color: var(--Primary-Color-Dark-Blue, #002882);
-
+}
+.white-space-nowrap{
+  white-space: nowrap;
+}
+.overflow-y{
+  overflow-y: hidden;
 }
   @media(max-width:1400px){
     .heading-one {
