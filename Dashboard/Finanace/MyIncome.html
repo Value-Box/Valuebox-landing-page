@@ -19,7 +19,29 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="stylesheet" href="../style.css" />
-</head>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
+    <style>
+      .select2-selection {
+      height: 38px !important;
+      display: flex !important;
+      align-items: center;
+      border: 1px solid #ccc !important;
+      border-radius: 5px !important;
+    }
+    .select2-container--default
+      .select2-selection--single
+      .select2-selection__arrow {
+      height: 38px;
+      color: #607080 !important;
+      position: absolute;
+  right: 3px;
+    }
+    .select2-selection__rendered{
+      color: #607080 !important;
+      font-weight: 500;
+   }
+    </style>
+  </head>
 <body>
     
         <nav class="navbar navbar-expand-sm navbar-light bg-white sticky-top" id="navbar">
@@ -541,16 +563,16 @@
                                 <div class="d-flex gap-2 mt-40">
                                   <input class="form-control" name="daterange" type="text" id="date1" placeholder="Start Date  |  End Date">                            
                                   <div class="input-group h-md-44">
-                                    <select id="sort" name="sort" class="form-select">
-                                      <option value="" selected disabled>Ready to Release</option>
-                                    </select>
+                                    <select class="select-dropdown form-select " id="basicSelect2">
+                                      <option>Ready to Release</option>
+                                     </select>
                                   </div>
                                   <div class="input-group h-md-44">
                                     <input type="text" id="filters" name="filters" class="form-control " placeholder="Order ID">
                                     <span class="input-group-text " id="basic-addon1"><i class="bi bi-search"></i></span>
                                   </div>
                                 </div>
-                                <div class="table-container TableWrapper mt-20">
+                                <div class="table-container TableWrapper mt-20 white-space-nowrap">
                                   <table class="table " id="income-overview-table">
                                     <thead>
                                        <tr class="text-dark">
@@ -561,7 +583,7 @@
                                         <th>Release Status</th>
                                         <th>Statement Number</th>
                                         <th>Statement Number</th>
-                                        <th>Action</th>
+                                        <th class="sticky-right text-center bg-bs-white">Action</th>
                                       </tr>
                                     </thead>
                                     <tbody>
@@ -595,7 +617,7 @@
                                              <td> 
                                               PK2NBNMIXFZ-2023-037                          
                                               </td>
-                                             <td><a class="orderidcolor" href="../OrdersReviews/orderDetails.html">View Detail</a></td>
+                                             <td class="sticky-right text-center bg-bs-white"><a class="orderidcolor" href="../OrdersReviews/orderDetails.html">View Detail</a></td>
                                         
                                          </tr>
                                          <tr class="paragraph-2 p-0">
@@ -628,7 +650,7 @@
                                              <td> 
                                               PK2NBNMIXFZ-2023-037                          
                                               </td>
-                                              <td><a class="orderidcolor" href="../OrdersReviews/orderDetails.html">View Detail</a></td>
+                                              <td class="sticky-right text-center bg-bs-white"><a class="orderidcolor" href="../OrdersReviews/orderDetails.html">View Detail</a></td>
                                          </tr>
                                      </tbody>
                                   </table>
@@ -639,16 +661,16 @@
                                 <div class="d-flex gap-2 mt-40">
                                   <input class="form-control" name="daterange" type="text" id="date2" placeholder="Start Date  |  End Date">
                                   <div class="input-group h-md-44">
-                                    <select id="sort" name="sort" class="form-select">
-                                      <option value="" selected disabled>Ready to Release</option>
-                                    </select>
+                                    <select class="select-dropdown form-select " id="basicSelect">
+                                      <option>Ready to Release</option>
+                                     </select>
                                   </div>
                                   <div class="input-group h-md-44">
                                     <input type="text" id="filters" name="filters" class="form-control " placeholder="Order ID">
                                     <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
                                   </div>
                                 </div>
-                                <div class="table-container TableWrapper mt-20">
+                                <div class="table-container TableWrapper mt-20 white-space-nowrap">
                                   <table class="table " id="income-overview-table2">
                                     <thead>
                                        <tr class="text-dark">
@@ -659,7 +681,7 @@
                                         <th>Release Status</th>
                                         <th>Statement Number</th>
                                         <th>Statement Number</th>
-                                        <th>Action</th>
+                                        <th class="sticky-right text-center bg-bs-white">Action</th>
                                       </tr>
                                     </thead>
                                     <tbody>
@@ -693,7 +715,7 @@
                                              <td> 
                                               PK2NBNMIXFZ-2023-037                          
                                               </td>
-                                              <td><a class="orderidcolor" href="../OrdersReviews/orderDetails.html">View Detail</a></td>
+                                              <td class="sticky-right text-center bg-bs-white"><a class="orderidcolor" href="../OrdersReviews/orderDetails.html">View Detail</a></td>
                                         
                                          </tr>
                                          <tr class="paragraph-2 p-0">
@@ -727,7 +749,7 @@
                                              <td> 
                                               PK2NBNMIXFZ-2023-037                          
                                               </td>
-                                              <td><a class="orderidcolor" href="../OrdersReviews/orderDetails.html">View Detail</a></td>
+                                              <td class="sticky-right text-center bg-bs-white"><a class="orderidcolor" href="../OrdersReviews/orderDetails.html">View Detail</a></td>
                                         
                                          </tr>
                                      </tbody>
@@ -750,9 +772,9 @@
                       <div class="d-flex gap-2 mt-20">
                       <input class="form-control " name="daterange" type="text" id="date3" placeholder="Start Date  |  End Date">
                         <div class="input-group h-md-44">
-                          <select id="sort" name="sort" class="form-select">
-                            <option value="" selected disabled>Ready to Release</option>
-                          </select>
+                          <select class="select-dropdown form-select " id="basicSelect1">
+                            <option>Ready to Release</option>
+                           </select>
                         </div>
                         <div class="input-group h-md-44">
                           <input type="text" id="filters" name="filters" class="form-control " placeholder="Statment Number">
@@ -770,7 +792,7 @@
                               <th>Release Amount</th>
                               <th>Release Status</th>
                               <th>Statement Number</th>
-                               <th>Action</th>
+                               <th class="sticky-right text-center bg-bs-white">Action</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -786,7 +808,7 @@
                                    <td> 
                                     PK2NBNMIXFZ-2023-037                          
                                     </td>
-                                    <td><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
+                                    <td class="sticky-right text-center bg-bs-white"><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
                               
                                </tr>
                                <tr class="paragraph-2 p-0">
@@ -801,7 +823,7 @@
                                       <td> 
                                        PK2NBNMIXFZ-2023-037                          
                                        </td>
-                                       <td><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
+                                       <td class="sticky-right text-center bg-bs-white"><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
                                  
                                   </tr>
                                   <tr class="paragraph-2 p-0">
@@ -816,7 +838,7 @@
                                           <td> 
                                            PK2NBNMIXFZ-2023-037                          
                                            </td>
-                                           <td><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
+                                           <td class="sticky-right text-center bg-bs-white"><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
                                      
                                       </tr>
                                       <tr class="paragraph-2 p-0">
@@ -831,7 +853,7 @@
                                               <td> 
                                                PK2NBNMIXFZ-2023-037                          
                                                </td>
-                                               <td><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
+                                               <td class="sticky-right text-center bg-bs-white"><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
                                          
                                           </tr>
                                           <tr class="paragraph-2 p-0">
@@ -846,7 +868,7 @@
                                                   <td> 
                                                    PK2NBNMIXFZ-2023-037                          
                                                    </td>
-                                                   <td><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
+                                                   <td class="sticky-right text-center bg-bs-white"><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
                                              
                                               </tr>
                                               <tr class="paragraph-2 p-0">
@@ -861,7 +883,7 @@
                                                       <td> 
                                                        PK2NBNMIXFZ-2023-037                          
                                                        </td>
-                                                       <td><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
+                                                       <td class="sticky-right text-center bg-bs-white"><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
                                                  
                                                   </tr>
                                                   <tr class="paragraph-2 p-0">
@@ -876,7 +898,7 @@
                                                           <td> 
                                                            PK2NBNMIXFZ-2023-037                          
                                                            </td>
-                                                           <td><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
+                                                           <td class="sticky-right text-center bg-bs-white"><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
                                                      
                                                       </tr>
                                                       <tr class="paragraph-2 p-0">
@@ -891,7 +913,7 @@
                                                               <td> 
                                                                PK2NBNMIXFZ-2023-037                          
                                                                </td>
-                                                               <td><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
+                                                               <td class="sticky-right text-center bg-bs-white"><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
                                                          
                                                           </tr>
                                                           <tr class="paragraph-2 p-0">
@@ -906,7 +928,7 @@
                                                                   <td> 
                                                                    PK2NBNMIXFZ-2023-037                          
                                                                    </td>
-                                                                   <td><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
+                                                                   <td class="sticky-right text-center bg-bs-white"><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
                                                              
                                                               </tr>
                                                               <tr class="paragraph-2 p-0">
@@ -921,7 +943,7 @@
                                                                       <td> 
                                                                        PK2NBNMIXFZ-2023-037                          
                                                                        </td>
-                                                                       <td><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
+                                                                       <td class="sticky-right text-center bg-bs-white"><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
                                                                  
                                                                   </tr>
                                                                   <tr class="paragraph-2 p-0">
@@ -936,7 +958,7 @@
                                                                           <td> 
                                                                            PK2NBNMIXFZ-2023-037                          
                                                                            </td>
-                                                                           <td><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
+                                                                           <td class="sticky-right text-center bg-bs-white"><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
                                                                      
                                                                       </tr>
                                                                       <tr class="paragraph-2 p-0">
@@ -951,7 +973,7 @@
                                                                               <td> 
                                                                                PK2NBNMIXFZ-2023-037                          
                                                                                </td>
-                                                                               <td><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
+                                                                               <td class="sticky-right text-center bg-bs-white"><a class="orderidcolor" href="statementDetail.html">View Detail</a></td>
                                                                          
                                                                           </tr>
                           
@@ -968,9 +990,15 @@
 
 
 
-
-
-
+    <script src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+         <script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
+         <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+         <script src="../assets/js/bootstrap.bundle.min.js"></script>
+         <script src="../assets/js/main.js"></script>
   <script>
   function togglePassword() {
     const passwordInput = document.getElementById("password");
@@ -993,20 +1021,11 @@
           checkboxes.forEach(checkbox => checkbox.checked = source.checked);
         }
         </script>
-   
-   <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-   <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-        <script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
-        <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-        <script src="../assets/js/bootstrap.bundle.min.js"></script>
-        <script src="../assets/js/main.js"></script>
-        <script>
-          // document.querySelector('#view-statement-table').DataTable({ordering: false});
-          
-        
-          </script> 
-            <script>
+      <script>
+              $(document).ready(function () {
+        $(".select-dropdown").select2();
+        // $(".select-dropdown2").select2();
+      });
               let statementDetailTable = document.querySelector('#view-statement-table');
           new simpleDatatables.DataTable(statementDetailTable, {
             sortable: false // Disables sorting arrows globally

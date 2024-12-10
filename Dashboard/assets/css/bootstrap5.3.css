@@ -12674,6 +12674,12 @@ color: #333 !important;
   text-overflow: ellipsis;
   max-width: 250px; /* Limit max width of text for responsiveness */
 }
+.white-space-nowrap{
+  white-space: nowrap;
+}
+.overflow-y{
+  overflow-y: hidden;
+}
   @media(max-width:1400px){
     .heading-one {
       font-size: clamp(20px, 4vw, 24px);
