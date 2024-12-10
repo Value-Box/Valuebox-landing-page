@@ -2240,3 +2240,7 @@ right: 3px;
     color: #607080 !important;
     font-weight: 500;
   }
+  .input-group-text i {
+    font-size: 16px; /* Adjust icon size */
+    cursor: pointer;
+  }
