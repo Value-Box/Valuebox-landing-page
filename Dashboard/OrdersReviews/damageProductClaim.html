@@ -14,6 +14,28 @@
     <link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/x-icon">
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="stylesheet" href="../style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
+    <style>
+      .select2-selection {
+        height: 38px !important;
+        display: flex !important;
+        align-items: center;
+        border: 1px solid #ccc !important;
+        border-radius: 5px !important;
+      }
+      .select2-container--default
+        .select2-selection--single
+        .select2-selection__arrow {
+        height: 38px;
+        color: #607080 !important;
+        position: absolute;
+    right: 3px;
+      }
+      .select2-selection__rendered{
+        color: #607080 !important;
+        font-weight: 500;
+}
+    </style>
 </head>
 <body>
     
@@ -469,7 +491,7 @@
               <div class="mt-40">
                 <span class="subHeading-4 mt-40"><span class="text-warning">*</span>Seller Type</span>
                 <fieldset class="form-group w-100 mt-2" id="linkGroup1">
-                <select class="form-select form-select-lg" id="basicSelect">
+                <select class="form-select select-dropdown" id="basicSelect1">
                   <option value="">Please Select</option>
                   <option>Instagram</option>
                   <option>TikTok</option>
@@ -483,8 +505,7 @@
               </div>
               <div class="mt-40">
                 <span class="subHeading-4 mt-40"><span class="text-warning">*</span> Outbound Order Number</span>
-                <fieldset class="form-group w-100 mt-2" id="linkGroup1">
-                <select class="form-select form-select-lg" id="basicSelect">
+             <select class="form-select select-dropdown" id="basicSelect2">
                   <option value="">Please Select</option>
                   <option>Instagram</option>
                   <option>TikTok</option>
@@ -494,20 +515,20 @@
                   <option>Facebook</option>
                   <option>Custom</option>
                 </select>
-                </fieldset>
+               
               </div>
               <div class="mt-40 d-flex gap-4 justify-content-between">
                 <div class="w-100">
                     <span class="subHeading-4 "><span class="text-warning">*</span> SKU</span>
-                    <input type="text" class="form-control input mt-2" id="basicInput" placeholder="Please Input">
+                    <input type="text" class="form-control mt-2" id="basicInput" placeholder="Please Input">
                   </div>
                   <div class="w-100">
                     <span class="subHeading-4"><span class="text-warning">*</span> Quantity of SKU</span>
-                    <input type="text" class="form-control input mt-2" id="basicInput" placeholder="Please Input">
+                    <input type="text" class="form-control  mt-2" id="basicInput" placeholder="Please Input">
                   </div>
                   <div class="w-100">
                     <span class="subHeading-4"><span class="text-warning">*</span> Return Received Date</span>
-                    <input type="date" class="form-control input mt-2 d-block"
+                    <input type="date" class="form-control mt-2 d-block"
                     placeholder="Date">
                   </div>
               </div>
@@ -543,7 +564,7 @@
               <div class="row m-0 py-40 px-60 justify-content-between">
                <div class="col-6 p-0">
               <div>
-                <button id="closeModalBtn" type="button" class="btn-blue closeModalBtn rounded-circle" data-bs-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+                <button id="closeModalBtn" type="button" class="btn-blue closeModalBtn rounded-circle cursor-pointer" data-bs-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
                     <g clip-path="url(#clip0_4468_11858)">
                       <rect width="60" height="60" fill="url(#paint0_radial_4468_11858)"/>
                       <path d="M30 0C13.2857 0 0 13.2857 0 30C0 46.7143 13.2857 60 30 60C46.7143 60 60 46.7143 60 30C60 13.2857 46.7143 0 30 0ZM41.5714 45L30 33.4286L18.4286 45L15 41.5714L26.5714 30L15 18.4286L18.4286 15L30 26.5714L41.5714 15L45 18.4286L33.4286 30L45 41.5714L41.5714 45Z" fill="#002882"/>
@@ -580,11 +601,17 @@
 
 
     <script>
+     $(document).ready(function () {
+        $(".select-dropdown").select2();
+        // $(".select-dropdown2").select2();
+      });
         function toggleCheckboxes(source) {
           const checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
           checkboxes.forEach(checkbox => checkbox.checked = source.checked);
         }
         </script>
+        <script src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
         <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
         <script src="../assets/js/bootstrap.bundle.min.js"></script>
     

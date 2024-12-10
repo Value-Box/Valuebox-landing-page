@@ -13,7 +13,32 @@
     <link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/x-icon">
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="stylesheet" href="../style.css" />
-</head>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
+<style>
+  .select2-selection {
+        height: 38px !important;
+        display: flex !important;
+        align-items: center;
+        border: 1px solid #ccc !important;
+        border-radius: 5px !important;
+      }
+      .select2-container--default
+        .select2-selection--single
+        .select2-selection__arrow {
+        height: 38px;
+        color: #607080 !important;
+        position: absolute;
+    right: 3px;
+      }
+      .select2-selection__rendered{
+        color: #607080 !important;
+        font-weight: 500;
+}
+.select2{
+  padding: 0px;
+}
+</style>
+  </head>
 <body>
     
         <nav class="navbar navbar-expand-sm navbar-light bg-white sticky-top" id="navbar">
@@ -432,13 +457,13 @@
 <div class="row mt-20 p-0">
 <h6 class="text-dark p-0"><span class="text-warning">*</span> Brand Name</h6>
 <p class="p-0">Enter a new Brand or Apply Against Existing Brand. This will be your brand identity</p>
-<input type="text" id="roundText" class="form-control form-control-lg round" placeholder="Please Input">
+<input type="text" id="roundText" class="form-control round" placeholder="Please Input">
 </div>
 <div class="row mt-20 p-0">
 <h6 class="text-dark p-0"><span class="text-warning">*</span> Category</h6>
-<select class="form-select form-select-lg" id="basicSelect">
-  <option>Please Select</option>
- </select>
+<select id="queryCategory" name="queryCategory" class="select-dropdown p-0">
+<option value="" selected>Please Select</option>
+</select>
 </div>
 <div class="row mt-20 p-0">
 <h6 class="text-dark p-0"><span class="text-warning">*</span> Relationship with brand</h6>
@@ -462,7 +487,7 @@
    <div class="d-flex gap-5">
        <div class="w-25 m-0">
            <p class="m-0">*Start Date</p>
-           <input type="date" class="form-control form-control-lg  bg-transparent mt-1"
+           <input type="date" class="form-control bg-transparent mt-1"
        placeholder="Start Date">
        </div>
        <div class="text-center">
@@ -473,7 +498,7 @@
        </div>
        <div class="w-25">
            <p class="m-0 ">*End Date</p>
-           <input type="date" class="form-control form-control-lg bg-transparent mt-1"
+           <input type="date" class="form-control bg-transparent mt-1"
        placeholder="End Date">
        </div>
    </div>
@@ -491,15 +516,16 @@
 </div>
 <div class="row uploadfile justify-content-between">
 <div class="col-3">
-<div class="uploadFileContainer d-flex flex-column text-center align-items-center p-5">
+<label for="auth_docuument" class="uploadFileContainer d-flex flex-column text-center align-items-center p-5">
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
 <path d="M12 15V2M12 2L15 5.5M12 2L9 5.5" stroke="#002882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M12 15V2M12 2L15 5.5M12 2L9 5.5" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M8 22H16C18.828 22 20.243 22 21.121 21.122C22 20.242 22 18.829 22 16V15C22 12.172 22 10.758 21.121 9.87895C20.353 9.11095 19.175 9.01395 17 9.00195M7 9.00195C4.825 9.01395 3.647 9.11095 2.879 9.87895C2 10.758 2 12.172 2 15V16C2 18.829 2 20.243 2.879 21.122C3.179 21.422 3.541 21.619 4 21.749" stroke="#002882" stroke-width="1.5" stroke-linecap="round"/>
 <path d="M8 22H16C18.828 22 20.243 22 21.121 21.122C22 20.242 22 18.829 22 16V15C22 12.172 22 10.758 21.121 9.87895C20.353 9.11095 19.175 9.01395 17 9.00195M7 9.00195C4.825 9.01395 3.647 9.11095 2.879 9.87895C2 10.758 2 12.172 2 15V16C2 18.829 2 20.243 2.879 21.122C3.179 21.422 3.541 21.619 4 21.749" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
 </svg>
-<label for="">Upload File</label>
-</div>
+<label for="auth_docuument">Upload File</label>
+</label>
+<input type="file" class="d-none" id="auth_docuument">
 
 
 </div>
@@ -631,16 +657,21 @@
 
 
 
-
+<script src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/main.js"></script>
     <script>
+      $(document).ready(function () {
+        $(".select-dropdown").select2();
+        // $(".select-dropdown2").select2();
+      });
         function toggleCheckboxes(source) {
           const checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
           checkboxes.forEach(checkbox => checkbox.checked = source.checked);
         }
         </script>
-        <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-        <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    
-        <script src="../assets/js/main.js"></script>
+      
 </body>
 </html>
