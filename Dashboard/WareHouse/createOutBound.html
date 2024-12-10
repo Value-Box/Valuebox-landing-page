@@ -10,7 +10,10 @@
     <!-- <link rel="stylesheet" href="../assets/vendors/choices.js/choices.min.css" /> -->
   
     <link rel="stylesheet" href="../assets/vendors/simple-datatables/style.css">
-
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="../assets/css/app.css">
@@ -433,7 +436,7 @@
                     <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">Inbound Warehouse</span>
                         <fieldset class="form-group form-group-lg mb-0 mt-10">
-                          <select class="form-select form-select-lg" id="basicSelect">
+                          <select class="select-dropdown form-select" id="basicSelect">
                               <option value="">Please Select</option>
                               <option value="kachehri">Kachehri Warehouse</option>
                               <option value="mda">MDA Warehouse</option>
@@ -443,14 +446,14 @@
 
                     <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">Warehouse Address</span>
-                        <input class="form-control form-control-lg mt-10" type="text"  placeholder="" disabled>
+                        <input class="form-control mt-10" type="text"  placeholder="" disabled>
                     </div>
                 </div>
                 <div class="d-flex mt-40 gap-80">
                     <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">Inventory Type</span>
                         <fieldset class="form-group form-group-lg mb-0 mt-10">
-                          <select class="form-select form-select-lg" id="basicSelect">
+                          <select class="select-dropdown form-select" id="basicSelect1">
                               <option value="">Please Select</option>
                               <option value="kachehri">Damaged</option>
                               <option value="mda">Ok</option>
@@ -468,7 +471,7 @@
                     </div>
                     <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">Estimated Time</span>
-                        <input type="date" class="form-control form-control-lg bg-transparent mt-10" placeholder="Start Date">
+                        <input type="date" class="form-control bg-transparent mt-10" placeholder="Start Date">
                     </div>
                 </div>
             </div>
@@ -481,7 +484,7 @@
                     <div class="col-6 p-0">
                         <span class="text-orange-star fs-18 gray-color">Warehouse</span>
                         <fieldset class="form-group mt-10">
-                          <select class="form-select form-select-lg" id="basicSelect">
+                          <select class="select-dropdown form-select" id="basicSelect2">
                               <option value="">Please Select</option>
                               <option value="kachehri">Kachehri Warehouse</option>
                               <option value="mda">MDA Warehouse</option>
@@ -490,22 +493,22 @@
                     </div>
                     <div class="col-6 p-0">
                         <span class="text-orange-star fs-18 gray-color">Warehouse Address</span>
-                        <input class="form-control form-control-lg mt-10" type="text"  placeholder="" disabled>
+                        <input class="form-control mt-10" type="text"  placeholder="" disabled>
 
                     </div>
                 </div>
                 <div class="d-flex mt-40 gap-20">
                     <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">Country</span>
-                        <input class="form-control form-control-lg mt-10" type="text"  placeholder="" disabled>
+                        <input class="form-control mt-10" type="text"  placeholder="" disabled>
                     </div>
                     <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">City</span>
-                        <input class="form-control form-control-lg mt-10" type="text"  placeholder="" disabled>
+                        <input class="form-control mt-10" type="text"  placeholder="" disabled>
                     </div>
                     <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">Post Code</span>
-                        <input class="form-control form-control-lg mt-10" type="text"  placeholder="" disabled>
+                        <input class="form-control mt-10" type="text"  placeholder="" disabled>
                     </div>
                 </div>
                 <span class="subHeading-3 text-natural-dark mt-40 d-inline-block">Contact</span>
@@ -513,11 +516,11 @@
                 <div class="d-flex mt-40 gap-20">
                     <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">Contact Name</span>
-                        <input class="form-control form-control-lg mt-10" type="text"  placeholder="Please Input" >
+                        <input class="form-control mt-10" type="text"  placeholder="Please Input" >
                     </div>
                     <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">Mobile Number</span>
-                        <input class="form-control form-control-lg mt-10" type="text"  placeholder="Please Input" >
+                        <input class="form-control mt-10" type="text"  placeholder="Please Input" >
                     </div>
                 </div>
             </div>
@@ -559,7 +562,7 @@
                                 <th>Inventory in Warehouse</th>
                                 <th>Request Quantity</th>
                                 <th>Barcode</th>
-                                <th class="position-sticky end-0">Action</th>
+                                <th class="sticky-right text-center bg-bs-white">Action</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -571,7 +574,7 @@
                                 <td>15</td>
                                 <td><input type="text" id="costPrice" class="form-control text-center" placeholder="RS." required oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td>
                                 <td>VBPK789651</td>
-                                <td class="position-sticky end-0">
+                                <td class="sticky-right text-center bg-bs-white px-5">
                                     <div class="d-flex gap-20">
 
                                         <a href="" class="text-underline text-brand-color">Edit</a>
@@ -619,8 +622,19 @@
     <!-- <script src="../assets/vendors/choices.js/choices.min.js"></script> -->
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+  ></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     <script>
+      $(document).ready(function () {
+        $(".select-dropdown").select2();
+       
+      });
+
+
         let outBoundTable = document.querySelector('#out_bound_Table');
         new simpleDatatables.DataTable(outBoundTable);
 

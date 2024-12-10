@@ -369,7 +369,7 @@ body {
   background: rgba(130, 128, 255, 0.21);
 }
 .chartCard {
-  max-width: 95%;
+  /* max-width: 95%; */
 }
 .iceTrendingDown p span {
   color: #f04438;
