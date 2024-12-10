@@ -2088,7 +2088,66 @@ justify-content: center;
 align-items: center;
 gap: 20px;
 }
+.orderIdBG{
+  border-top: 1px solid #DBDBDB
+}
+.d-none {
+  display: none;
+}
+ /* Reduce the size of the daterangepicker container */
+ .daterangepicker {
+  font-size: 12px; /* Adjust font size */
+  width: 450px; /* Adjust width */
+}
 
+/* Resize the calendar cells */
+.daterangepicker .calendar-table {
+  width: 100%;
+}
+
+.daterangepicker td,
+.daterangepicker th {
+  padding: 5px; /* Reduce padding for smaller cells */
+  font-size: 12px; /* Smaller text size */
+}
+
+/* Adjust the header (date range display) */
+.daterangepicker .drp-calendar {
+  padding: 8px;
+}
+
+.daterangepicker .ranges {
+  padding: 8px;
+}
+
+/* Resize buttons */
+.daterangepicker .drp-buttons {
+  padding: 5px;
+}
+
+.daterangepicker .drp-buttons .btn {
+  font-size: 12px;
+  padding: 4px 8px;
+}
+
+/* Adjust the input size if necessary */
+input[name="daterange"] {
+  font-size: 14px; /* Keep input readable */
+}
+.daterangepicker .calendar-table th, .daterangepicker .calendar-table td {
+white-space: nowrap;
+text-align: center;
+vertical-align: middle;
+min-width: 6px;
+width: 26px;
+/* height: 9px; */
+line-height: 20px;
+font-size: 12px;
+border-radius: 4px;
+border: 1px solid transparent;
+white-space: nowrap;
+cursor: pointer;
+}
  @media(max-width:1400px){
   .Order-detail-line{
     position: relative;
@@ -2162,3 +2221,7 @@ gap: 20px;
   .select2 {
     width: 100% !important;
   }  
+  .input-group-text i {
+    font-size: 16px; /* Adjust icon size */
+    cursor: pointer; /* Show pointer cursor on hover */
+  }

@@ -1474,7 +1474,7 @@ outline: none;
  }
  .table-container {
    overflow-x: auto; /* Enables horizontal scrolling */
-   white-space: nowrap; /* Prevents table contents from wrapping */
+   /* white-space: nowrap;  */
    width: 100%; /* Ensure container adjusts to the available width */
  }
  
