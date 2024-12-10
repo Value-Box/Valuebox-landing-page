@@ -12674,6 +12674,56 @@ color: #333 !important;
   text-overflow: ellipsis;
   max-width: 250px; /* Limit max width of text for responsiveness */
 }
+.notificationBtn{
+  display: flex;
+padding: 10px 20px !important;
+align-items: center;
+gap: 10px;
+align-self: stretch;
+color: var(--Natural-Color-100, #1A1A1A);
+font-family: Sarabun;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px; /* 150% */
+border-left: 5px solid white;
+}
+
+.notificationBtn.active{
+  border-radius: 5px;
+border-left: 5px solid var(--Primary-Color-Dark-Blue, #002882);
+background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
+}
+        .notificationBtn.active .svgWithStr path{
+    stroke: #002882 !important;
+}
+.notificationBtn.active .svgWithoutStr path {
+  fill: #002882 !important;
+}
+
+.notificationBtn.active {
+  color: #002882 !important;
+  font-weight: 500;
+}
+.notificationBtn .svgWithStr {
+    stroke: black !important;
+}
+.notificationBtn .svgWithStr path{
+    stroke: black !important;
+}
+.notificationTab{
+  padding: 5px 20px;
+  border-radius: 5px;
+  background: var(--Natural-Color-10, #F2F2F2);
+  color: var(--Natural-Color-60, #666);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+.notificationTab.active{
+  background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
+  color: var(--Primary-Color-Dark-Blue, #002882);
+
+}
   @media(max-width:1400px){
     .heading-one {
       font-size: clamp(20px, 4vw, 24px);
