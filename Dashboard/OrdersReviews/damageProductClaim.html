@@ -34,7 +34,7 @@
       .select2-selection__rendered{
         color: #607080 !important;
         font-weight: 500;
-}
+ }
     </style>
 </head>
 <body>
@@ -488,35 +488,23 @@
                               </label>
                                </div>
               </div>
-              <div class="mt-40">
-                <span class="subHeading-4 mt-40"><span class="text-warning">*</span>Seller Type</span>
-                <fieldset class="form-group w-100 mt-2" id="linkGroup1">
-                <select class="form-select select-dropdown" id="basicSelect1">
-                  <option value="">Please Select</option>
-                  <option>Instagram</option>
-                  <option>TikTok</option>
-                  <option>Instagram</option>
-                  <option>YouTube</option>
-                  <option>SnapChat</option>
-                  <option>Facebook</option>
-                  <option>Custom</option>
-                </select>
-                </fieldset>
+              <div class="d-flex gap-4 justify-content-between">
+                <div class="mt-40 w-100">
+                  <span class="subHeading-4 mt-40"><span class="text-warning">*</span>Seller Type</span>
+                  <fieldset class="form-group " id="linkGroup1">
+                  <select class="form-select select-dropdown" id="basicSelect1">
+                    <option value="">Please Select</option>
+                  </select>
+                  </fieldset>
+                </div>
+                <div class="mt-40 w-100">
+                  <span class="subHeading-4 mt-40"><span class="text-warning">*</span> Outbound Order Number</span>
+               <select class="form-select select-dropdown" id="basicSelect2">
+                    <option value="">Please Select</option>
+                 </select>
+               </div>
               </div>
-              <div class="mt-40">
-                <span class="subHeading-4 mt-40"><span class="text-warning">*</span> Outbound Order Number</span>
-             <select class="form-select select-dropdown" id="basicSelect2">
-                  <option value="">Please Select</option>
-                  <option>Instagram</option>
-                  <option>TikTok</option>
-                  <option>Instagram</option>
-                  <option>YouTube</option>
-                  <option>SnapChat</option>
-                  <option>Facebook</option>
-                  <option>Custom</option>
-                </select>
-               
-              </div>
+             
               <div class="mt-40 d-flex gap-4 justify-content-between">
                 <div class="w-100">
                     <span class="subHeading-4 "><span class="text-warning">*</span> SKU</span>
@@ -524,17 +512,17 @@
                   </div>
                   <div class="w-100">
                     <span class="subHeading-4"><span class="text-warning">*</span> Quantity of SKU</span>
-                    <input type="text" class="form-control  mt-2" id="basicInput" placeholder="Please Input">
+                    <input type="number" class="form-control  mt-2" id="basicInput" placeholder="Please Input">
                   </div>
                   <div class="w-100">
                     <span class="subHeading-4"><span class="text-warning">*</span> Return Received Date</span>
-                    <input type="date" class="form-control mt-2 d-block"
-                    placeholder="Date">
+                    <input type="date" class="form-control mt-2 d-block w-100" id="datePicker" placeholder="Date">
+
                   </div>
               </div>
               <div class="mt-40">
                 <span class="subHeading-4 mt-40">
-                  <span class="text-warning">*</span> Seller Type
+                  <span class="text-warning">*</span>  Please Explain what went wrong:
                 </span>
                 <div class="w-100 mt-20">
                   <textarea class="form-control " id="sellerTypeTextarea" placeholder="Please input" rows="4"></textarea>
@@ -544,10 +532,22 @@
                 <span class="subHeading-4 mt-40">
                   <span class="text-warning">*</span> Attachment
                 </span>
-                <button class="btn-gray mt-20"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <div class="">
+                  <label for="uploadImgSecinput" class="btn-gray mt-20 w-25"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M17 9.00195C19.175 9.01395 20.353 9.11095 21.121 9.87895C22 10.758 22 12.172 22 15V16C22 18.829 22 20.243 21.121 21.122C20.243 22 18.828 22 16 22H8C5.172 22 3.757 22 2.879 21.122C2 20.242 2 18.829 2 16V15C2 12.172 2 10.758 2.879 9.87895C3.647 9.11095 4.825 9.01395 7 9.00195" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
                     <path d="M12 15V2M12 2L15 5.5M12 2L9 5.5" stroke="#666666" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg> Your files Upload</button>
+                  </svg> Your files Upload</label>
+                  <div class="mt-20" id="previewContainer">
+                   
+                  </div>
+                  <input type="file" class="d-none" multiple="multiple" id="uploadImgSecinput" accept=".jpg, .jpeg, .png">
+                </div>
+                
+                <!-- <button class="btn-gray mt-20"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M17 9.00195C19.175 9.01395 20.353 9.11095 21.121 9.87895C22 10.758 22 12.172 22 15V16C22 18.829 22 20.243 21.121 21.122C20.243 22 18.828 22 16 22H8C5.172 22 3.757 22 2.879 21.122C2 20.242 2 18.829 2 16V15C2 12.172 2 10.758 2.879 9.87895C3.647 9.11095 4.825 9.01395 7 9.00195" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M12 15V2M12 2L15 5.5M12 2L9 5.5" stroke="#666666" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg> Your files Upload</button> -->
+                  
                   <div class="mt-20">
                   <span class="paragraph-2 ">Please provide picture of packaging, the item/component and the damaged part.</span>
                   </div>
@@ -600,21 +600,110 @@
 
 
 
-    <script>
-     $(document).ready(function () {
-        $(".select-dropdown").select2();
-        // $(".select-dropdown2").select2();
-      });
-        function toggleCheckboxes(source) {
-          const checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
-          checkboxes.forEach(checkbox => checkbox.checked = source.checked);
-        }
-        </script>
+    
         <script src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
         <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
         <script src="../assets/js/bootstrap.bundle.min.js"></script>
     
         <script src="../assets/js/main.js"></script>
+
+        <script>
+          function handleFileUpload(inputId, containerId) {
+    $("#" + inputId).on("change", function(event) {
+        const files = event.target.files;
+        const previewContainer = $("#" + containerId);
+        
+        // Clear existing previews and error messages
+        previewContainer.empty();
+
+        let isValid = true;
+
+        // Check all files before displaying previews
+        $.each(files, function(index, file) {
+            // Check if the file size is greater than 500KB (500 * 1024 bytes = 512000 bytes)
+            if (file.size > 512000) {
+                isValid = false;
+                return false; // Stop processing further files if any file is too large
+            }
+        });
+
+        if (!isValid) {
+            // Show error message if any file is larger than 500KB
+            const errorMessage = $("<div>").addClass("error-message").text("Your image is too large! Maximum allowed size is 500KB.");
+            previewContainer.append(errorMessage);
+        } else {
+            // Process files and display previews if all files are within the size limit
+            $.each(files, function(index, file) {
+                const reader = new FileReader();
+
+                // Create a container for each image/video
+                const fileContainer = $("<div>").addClass("file-container");
+
+                // Create a file preview (image or video)
+                const filePreview = $("<div>").addClass("file-preview");
+
+                // Create a button for removing the file
+                const removeBtn = $("<button>").addClass("remove-btn").text("X");
+                removeBtn.on("click", function() {
+                    fileContainer.remove(); // Remove the file container
+                });
+
+                // Create a label for the file name
+                const fileName = $("<div>").addClass("file-name").text(file.name);
+
+                // Check if the file is an image or video
+                if (file.type.startsWith("image")) {
+                    const img = $("<img>").addClass("w-100px rounded-2");
+                    
+                    // Load the image
+                    reader.onload = function(e) {
+                        img.attr("src", e.target.result);
+                    };
+                    reader.readAsDataURL(file);
+
+                    // Append image and remove button to the container
+                    filePreview.append(img);
+                } else if (file.type.startsWith("video")) {
+                    const video = $("<video>").addClass("w-100px rounded-2").attr("controls", true);
+                    const videoSource = $("<source>").attr("src", URL.createObjectURL(file)).attr("type", file.type);
+
+                    // Append video source and remove button to the container
+                    video.append(videoSource);
+                    filePreview.append(video);
+                }
+
+                // Append elements to the container
+                fileContainer.append(filePreview);
+                fileContainer.append(removeBtn);
+                fileContainer.append(fileName);
+
+                // Add the file container to the preview container
+                previewContainer.append(fileContainer);
+            });
+        }
+    });
+}
+
+
+handleFileUpload("uploadImgSecinput", "previewContainer");
+          document.addEventListener('DOMContentLoaded', function () {
+      const datePicker = document.getElementById('datePicker');
+    
+      // Set the maximum date to today's date
+      const today = new Date().toISOString().split('T')[0];
+      datePicker.setAttribute('max', today);
+    });
+    
+    $(document).ready(function () {
+            $(".select-dropdown").select2();
+            // $(".select-dropdown2").select2();
+    });
+            function toggleCheckboxes(source) {
+              const checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
+              checkboxes.forEach(checkbox => checkbox.checked = source.checked);
+            }
+            
+            </script>
 </body>
 </html>

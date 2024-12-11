@@ -21,25 +21,25 @@
     <link rel="stylesheet" href="../style.css" />
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
     <style>
-      .select2-selection {
-      height: 38px !important;
-      display: flex !important;
-      align-items: center;
-      border: 1px solid #ccc !important;
-      border-radius: 5px !important;
-    }
-    .select2-container--default
-      .select2-selection--single
-      .select2-selection__arrow {
-      height: 38px;
-      color: #607080 !important;
-      position: absolute;
-  right: 3px;
-    }
-    .select2-selection__rendered{
-      color: #607080 !important;
-      font-weight: 500;
-   }
+     .select2-selection {
+        height: 38px !important;
+        display: flex !important;
+        align-items: center;
+        border: 1px solid #ccc !important;
+        border-radius: 5px !important;
+      }
+      .select2-container--default
+        .select2-selection--single
+        .select2-selection__arrow {
+        height: 38px;
+        color: #607080 !important;
+        position: absolute;
+    right: 3px;
+      }
+      .select2-selection__rendered{
+        color: #607080 !important;
+        font-weight: 500;
+}
     </style>
   </head>
 <body>
@@ -274,11 +274,14 @@
                     </a>
                     <ul class="submenu ">
                         <li class="submenu-item ">
-                            <a href="component-breadcrumb.html">Inventory Overview</a>
+                            <a href="../WareHouse/InventoryOverview.html">Inventory Overview</a>
                         </li>
                         <li class="submenu-item ">
-                            <a href="component-button.html">Inventory Control</a>
+                            <a href="../WareHouse/InventoryControl.html">Inventory Control</a>
                         </li>
+                        <li class="submenu-item ">
+                          <a href="../WareHouse/inventoryReport.html">Inventory Report</a>
+                      </li>
                         
                     </ul>
                 </li>
@@ -563,7 +566,7 @@
                                 <div class="d-flex gap-2 mt-40">
                                   <input class="form-control" name="daterange" type="text" id="date1" placeholder="Start Date  |  End Date">                            
                                   <div class="input-group h-md-44">
-                                    <select class="select-dropdown form-select " id="basicSelect2">
+                                    <select class="select-dropdown form-select" id="basicSelect2">
                                       <option>Ready to Release</option>
                                      </select>
                                   </div>
@@ -990,15 +993,16 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-         <script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
-         <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-         <script src="../assets/js/bootstrap.bundle.min.js"></script>
-         <script src="../assets/js/main.js"></script>
+    <script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
+    <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+  
   <script>
   function togglePassword() {
     const passwordInput = document.getElementById("password");
@@ -1022,10 +1026,10 @@
         }
         </script>
       <script>
-              $(document).ready(function () {
+        $(document).ready(function () {
         $(".select-dropdown").select2();
         // $(".select-dropdown2").select2();
-      });
+ });
               let statementDetailTable = document.querySelector('#view-statement-table');
           new simpleDatatables.DataTable(statementDetailTable, {
             sortable: false // Disables sorting arrows globally
