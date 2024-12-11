@@ -461,7 +461,7 @@
 </div>
 <div class="row mt-20 p-0">
 <h6 class="text-dark p-0"><span class="text-warning">*</span> Category</h6>
-<select id="queryCategory" name="queryCategory" class="select-dropdown p-0">
+<select id="queryCategory1" name="queryCategory" class="select-dropdown p-0">
 <option value="" selected>Please Select</option>
 </select>
 </div>
@@ -516,7 +516,7 @@
 </div>
 <div class="row uploadfile justify-content-between">
 <div class="col-3">
-<label for="auth_docuument" class="uploadFileContainer d-flex flex-column text-center align-items-center p-5">
+<label for="uploadImgSecinput" class="uploadFileContainer d-flex flex-column text-center align-items-center p-5">
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
 <path d="M12 15V2M12 2L15 5.5M12 2L9 5.5" stroke="#002882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M12 15V2M12 2L15 5.5M12 2L9 5.5" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -525,7 +525,10 @@
 </svg>
 <label for="auth_docuument">Upload File</label>
 </label>
-<input type="file" class="d-none" id="auth_docuument">
+<div class="mt-20" id="previewContainer">
+  
+</div>
+<input type="file" class="d-none" multiple="multiple" id="uploadImgSecinput" accept=".jpg, .jpeg, .png">
 
 
 </div>
@@ -554,8 +557,8 @@
 <p class="p-0">Please provide the URL to your brand official website, social media profile and store link on other eCommerce platforms.</p>
 <div class="d-flex w-100 justify-content-between gap-2 p-0">
   <div class="form-group w-75 mb-0">
-    <select class="form-select form-select-lg" id="basicSelect">
-      <option>Please Select</option>
+    <select id="queryCategory" name="queryCategory" class="select-dropdown p-0">
+      <option value="" selected>Please Select</option>
       <option>Instagram</option>
       <option>Facebook</option>
       <option>Twitter</option>
@@ -563,11 +566,11 @@
      </select>
 </div>
 <div class=" w-100">
-<div class="input-group input-group-lg h-100" id="linkGroup">
+<div class="input-group h-100" id="linkGroup">
 <span class="input-group-text" id="basic-addon1" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
   <path d="M10.2303 10.2307C11.1374 9.32362 12.3585 8.79992 13.6409 8.7679C14.9233 8.73589 16.169 9.19801 17.1203 10.0587L17.3013 10.2307L20.1293 13.0597C21.0503 13.9824 21.5745 15.2283 21.5902 16.5319C21.6059 17.8355 21.1119 19.0937 20.2133 20.0382C19.3148 20.9828 18.0828 21.5391 16.7801 21.5885C15.4773 21.6379 14.2068 21.1765 13.2393 20.3027L13.0593 20.1307L10.9373 18.0087C10.7579 17.8287 10.6538 17.5873 10.646 17.3333C10.6383 17.0794 10.7275 16.832 10.8955 16.6414C11.0636 16.4508 11.2978 16.3314 11.5508 16.3073C11.8037 16.2832 12.0563 16.3563 12.2573 16.5117L12.3513 16.5947L14.4733 18.7167C15.0234 19.27 15.7673 19.5872 16.5474 19.6011C17.3275 19.6149 18.0823 19.3244 18.6517 18.791C19.2211 18.2576 19.5603 17.5234 19.5974 16.7441C19.6344 15.9648 19.3665 15.2017 18.8503 14.6167L18.7153 14.4737L15.8873 11.6457C15.6087 11.3671 15.278 11.146 14.9139 10.9952C14.5499 10.8444 14.1598 10.7668 13.7658 10.7668C13.3718 10.7668 12.9816 10.8444 12.6176 10.9952C12.2536 11.146 11.9229 11.3671 11.6443 11.6457C11.4566 11.8332 11.2022 11.9385 10.9369 11.9384C10.6717 11.9383 10.4173 11.8328 10.2298 11.6452C10.0423 11.4575 9.93698 11.2031 9.93707 10.9378C9.93717 10.6726 10.0426 10.4182 10.2303 10.2307ZM3.86628 3.86669C4.77341 2.95962 5.99447 2.43592 7.27691 2.4039C8.55934 2.37189 9.80502 2.83401 10.7563 3.69469L10.9373 3.86669L13.0583 5.98969C13.2376 6.16964 13.3417 6.41112 13.3495 6.66507C13.3573 6.91902 13.2681 7.1664 13.1 7.35697C12.932 7.54753 12.6977 7.66699 12.4448 7.69109C12.1919 7.71518 11.9393 7.6421 11.7383 7.48669L11.6443 7.40369L9.52328 5.28269C8.97225 4.73525 8.23037 4.42286 7.45371 4.41126C6.67706 4.39966 5.92618 4.68974 5.35904 5.22047C4.7919 5.75121 4.45272 6.48123 4.41285 7.25695C4.37298 8.03266 4.63554 8.79361 5.14528 9.37969L5.28028 9.52369L8.10928 12.3527C8.67186 12.9151 9.43478 13.231 10.2303 13.231C11.0258 13.231 11.7887 12.9151 12.3513 12.3527C12.4441 12.2598 12.5544 12.1861 12.6757 12.1358C12.797 12.0854 12.9271 12.0595 13.0584 12.0595C13.1898 12.0594 13.3198 12.0853 13.4412 12.1355C13.5626 12.1857 13.6729 12.2593 13.7658 12.3522C13.8587 12.445 13.9324 12.5553 13.9827 12.6766C14.033 12.7979 14.0589 12.928 14.059 13.0593C14.059 13.1907 14.0332 13.3208 13.983 13.4421C13.9328 13.5635 13.8591 13.6738 13.7663 13.7667C12.8591 14.6738 11.6381 15.1975 10.3556 15.2295C9.07321 15.2615 7.82754 14.7994 6.87628 13.9387L6.69428 13.7667L3.86628 10.9377C2.92892 10 2.40234 8.72851 2.40234 7.40269C2.40234 6.07687 2.92892 4.80433 3.86628 3.86669Z" fill="#666666"/>
 </svg></span>
-<input type="text" class="form-control form-control-lg " placeholder="Paste Link Here" aria-label="Username" aria-describedby="basic-addon1">
+<input type="text" class="form-control" placeholder="Paste Link Here" aria-label="Username" aria-describedby="basic-addon1">
 </div>
 </div>
 </div>
@@ -667,6 +670,85 @@
         $(".select-dropdown").select2();
         // $(".select-dropdown2").select2();
       });
+
+function handleFileUpload(inputId, containerId) {
+    $("#" + inputId).on("change", function(event) {
+        const files = event.target.files;
+        const previewContainer = $("#" + containerId);
+        
+        // Clear existing previews and error messages
+        previewContainer.empty();
+
+        let isValid = true;
+
+        // Check all files before displaying previews
+        $.each(files, function(index, file) {
+            // Check if the file size is greater than 500KB (500 * 1024 bytes = 512000 bytes)
+            if (file.size > 512000) {
+                isValid = false;
+                return false; // Stop processing further files if any file is too large
+            }
+        });
+
+        if (!isValid) {
+            // Show error message if any file is larger than 500KB
+            const errorMessage = $("<div>").addClass("error-message").text("Your image is too large! Maximum allowed size is 500KB.");
+            previewContainer.append(errorMessage);
+        } else {
+            // Process files and display previews if all files are within the size limit
+            $.each(files, function(index, file) {
+                const reader = new FileReader();
+
+                // Create a container for each image/video
+                const fileContainer = $("<div>").addClass("file-container");
+
+                // Create a file preview (image or video)
+                const filePreview = $("<div>").addClass("file-preview");
+
+                // Create a button for removing the file
+                const removeBtn = $("<button>").addClass("remove-btn").text("X");
+                removeBtn.on("click", function() {
+                    fileContainer.remove(); // Remove the file container
+                });
+
+                // Create a label for the file name
+                const fileName = $("<div>").addClass("file-name").text(file.name);
+
+                // Check if the file is an image or video
+                if (file.type.startsWith("image")) {
+                    const img = $("<img>").addClass("w-100px rounded-2");
+                    
+                    // Load the image
+                    reader.onload = function(e) {
+                        img.attr("src", e.target.result);
+                    };
+                    reader.readAsDataURL(file);
+
+                    // Append image and remove button to the container
+                    filePreview.append(img);
+                } else if (file.type.startsWith("video")) {
+                    const video = $("<video>").addClass("w-100px rounded-2").attr("controls", true);
+                    const videoSource = $("<source>").attr("src", URL.createObjectURL(file)).attr("type", file.type);
+
+                    // Append video source and remove button to the container
+                    video.append(videoSource);
+                    filePreview.append(video);
+                }
+
+                // Append elements to the container
+                fileContainer.append(filePreview);
+                fileContainer.append(removeBtn);
+                fileContainer.append(fileName);
+
+                // Add the file container to the preview container
+                previewContainer.append(fileContainer);
+            });
+        }
+    });
+}
+
+
+handleFileUpload("uploadImgSecinput", "previewContainer");
         function toggleCheckboxes(source) {
           const checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
           checkboxes.forEach(checkbox => checkbox.checked = source.checked);

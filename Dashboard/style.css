@@ -1631,8 +1631,8 @@ background: #F2F2F2;
   max-width: 1350px;
 }
 .closeModalBtn{
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
 }
 .closeModalBtn{
   position: absolute;
@@ -2133,7 +2133,7 @@ gap: 20px;
 
 /* Adjust the input size if necessary */
 input[name="daterange"] {
-  font-size: 14px; /* Keep input readable */
+  font-size: 16px; /* Keep input readable */
 }
 .daterangepicker .calendar-table th, .daterangepicker .calendar-table td {
 white-space: nowrap;
@@ -2320,4 +2320,5 @@ right: 3px;
 }
 .variant_selection{
   width: 350px;
+    word-wrap: break-word;
 }
