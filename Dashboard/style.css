@@ -1110,6 +1110,7 @@ td {
   cursor: move;
 }
 .choices__inner {
+  min-height: 30px;
   height: 38px !important;
   /* overflow: auto; */
   background: transparent;
@@ -2244,3 +2245,79 @@ right: 3px;
     font-size: 16px; /* Adjust icon size */
     cursor: pointer;
   }
+
+  .w-100px {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    position: relative;
+  }
+  
+  .file-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .file-container .remove-btn {
+    position: absolute !important;
+    top: -10px;
+    right: -10px;
+    background-color: #002882;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+  }
+  
+  .file-container .file-name {
+    text-align: center;
+    margin-top: 5px;
+    max-width: 100px;
+    font-size: 12px;
+    color: #555;
+    word-wrap: break-word;
+  }
+  
+  .video-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .videoPreview {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 5px;
+  }
+  
+  .remove-video {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #002882;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .file-name {
+    color: #333;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+.error-message{
+  color: red;
+  margin: 0px auto;
+}
+.variant_selection{
+  width: 350px;
+}

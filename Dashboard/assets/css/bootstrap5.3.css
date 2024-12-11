@@ -2057,7 +2057,7 @@ progress {
     outline: 0;
     background-color: #fff;
     border: .5px solid #99a9cd;
-    box-shadow: 0 0 0 2px rgba(0, 86, 245, .2);
+    /* box-shadow: 0 0 0 2px rgba(0, 86, 245, .2); */
 }
 .form-control::-webkit-date-and-time-value {
   min-width: 85px;
@@ -12193,8 +12193,8 @@ fieldset:disabled .btn {
   .input {
     display: flex;
     font-size: 16px;
-    height: 56px;
-    padding: 10px 20px;
+    height: 44px;
+    padding: 0px 10px;
     align-items: center;
     gap: 12px;
     align-self: stretch;
@@ -12852,11 +12852,11 @@ background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
       padding: 10px 10px;
     }
   
-    .input {
+    /* .input {
       font-size: 16px;
       height: 48px;
       padding: 10px 15px;
-    }
+    } */
     
     .table-input {
       display: flex;

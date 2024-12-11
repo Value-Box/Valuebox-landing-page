@@ -93,15 +93,15 @@ window.addEventListener("DOMContentLoaded", (event) => {
     document.getElementById("sidebar").classList.remove("active");
   }
 });
-window.addEventListener("resize", (event) => {
-  var w = window.innerWidth;
-  console.log(w);
-  if (w < 1280) {
-    document.getElementById("sidebar").classList.remove("active");
-  } else {
-    document.getElementById("sidebar").classList.add("active");
-  }
-});
+// window.addEventListener("resize", (event) => {
+//   var w = window.innerWidth;
+//   console.log(w);
+//   if (w < 1280) {
+//     document.getElementById("sidebar").classList.remove("active");
+//   } else {
+//     document.getElementById("sidebar").classList.add("active");
+//   }
+// });
 
 document.querySelector(".burger-btn").addEventListener("click", () => {
   document.getElementById("sidebar").classList.toggle("active");
