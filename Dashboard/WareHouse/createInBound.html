@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/bootstrap5.3.css">
     <!-- <link rel="stylesheet" href="../assets/vendors/choices.js/choices.min.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="../assets/vendors/simple-datatables/style.css">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
@@ -532,7 +533,7 @@
                                 <path d="M12.5 20C10.3783 20 8.34344 19.1571 6.84315 17.6569C5.34285 16.1566 4.5 14.1217 4.5 12M20.5 12C20.5007 13.1994 20.2314 14.3835 19.7121 15.4646C19.1928 16.5457 18.4367 17.496 17.5 18.245" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
                               </svg>
                         </button>
-                        <button class="btn-blue">Add SKU</button>
+                        <button class="btn-blue" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal" data-bs-dismiss="modal">Add SKU</button>
                     </div>
                 </div>
             </div>
@@ -561,7 +562,7 @@
                                 <td>VBPK789651</td>
                                 <td class="sticky-right text-center bg-bs-white px-5">
                                   <div class="d-flex gap-20">
-                                      <a href="" class="text-underline text-brand-color">Edit</a>
+                                      <a href="../Products/addProduct.html" target="_blank" class="text-underline text-brand-color">Edit</a>
                                   <a href="" class="text-underline text-brand-color">Remove</a>
                                   </div>
                                 </td>
@@ -602,6 +603,75 @@
             </div>
     </main>
 
+    <div class="modal fade p-4" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+      <div class=" modal-dialog modal-dialog-centered d-flex justify-content-center position-relative">
+        <div class="modal-content" id="cancel-order-modal">
+         <div class="p-4">
+          <span class="heading-one">Basic Information</span>
+          <div id="closeModalBtn" class="btn-blue closeModalBtn rounded-circle cursor-pointer" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fa-solid fa-xmark"></i>
+            </div>
+          <div class="d-flex gap-4 mt-30">
+            <div class="col p-0">
+              <span class="fs-18 gray-color">Fulfillment SKU</span>
+              <input class="form-control mt-10" type="text"  placeholder="Please Input" >
+           </div>
+            <div class="col p-0">
+              <span class="fs-18 gray-color">Seller SKU</span>
+              <input class="form-control mt-10" type="text"  placeholder="Please Input" >
+           </div>
+           <div class="col p-0">
+            <span class="fs-18 gray-color">Fulfillment Name</span>
+            <input class="form-control mt-10" type="text"  placeholder="Please Input" >
+           </div>
+           <div class="col p-0 d-flex justify-content-end gap-2 mt-auto">
+            <button class="btn-gray">Reset</button>
+            <button class="btn-blue">Search</button>
+           </div>
+          </div>
+          <div class="table-container TableWrapper p-0 mt-30">
+              <table class="w-100" id="add-sku-table">
+                <thead>
+                  <tr class="text-dark">
+                    <th class="d-flex gap-2"><input class="form-check-input" type="checkbox"> Product Name</th>
+                    <th class="border-bottom-0">Seller SKU</th>
+                    <th>Sellable Inventory in Warehouse</th>
+                    
+                  </tr>
+                </thead>
+                <tbody class="py-5">
+                  <tr>
+                   <td class="d-flex gap-2"><input class="form-check-input" type="checkbox"> Pack of 6 - Pull B ack Mini Car Set For kids & boys toys</td>
+                   <td>MINI-CARS-6</td>
+                   <td>50</td>
+                   
+                  </tr>
+                     <tr>
+                      <td class="d-flex gap-2"><input class="form-check-input" type="checkbox"> Pack of 6 - Pull B ack Mini Car Set For kids & boys toys</td>
+                      <td>MINI-CARS-6</td>
+                      <td>50</td>
+                      
+                     </tr>
+                     <tr>
+                      <td class="d-flex gap-2"><input class="form-check-input" type="checkbox"> Pack of 6 - Pull B ack Mini Car Set For kids & boys toys</td>
+                      <td>MINI-CARS-6</td>
+                      <td>50</td>
+                     </tr>
+                     
+                </tbody>
+              </table>
+            </div>
+            <div class="d-flex gap-2 justify-content-end mt-30">
+              <button class="btn-gray" data-bs-dismiss="modal">Cancel</button>
+              <button class="btn-blue">Confirm</button>
+
+            </div>
+         </div>
+          
+        </div>
+      </div>
+    </div>
+
 
     <script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
     <!-- <script src="../assets/vendors/ckeditor/ckeditor.js"></script> -->
@@ -621,7 +691,8 @@
       let pendingProTable = document.querySelector('#inbound_Table');
       new simpleDatatables.DataTable(pendingProTable);
       const textArea = document.getElementById('textArea');
-
+      let addSkuTable = document.querySelector('#add-sku-table');
+        new simpleDatatables.DataTable(addSkuTable);
       function replaceArrows() {
     // Select all elements with the page-link class
     document.querySelectorAll(".page-link").forEach(function (link) {

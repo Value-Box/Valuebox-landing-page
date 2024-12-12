@@ -729,7 +729,7 @@
             </fieldset>
             
          </div>
-          <button class="addVariantBtn p-0" id="addVariantBtn" onclick="addVariant()" type="button">
+          <button class="addVariantBtn p-0 mt-2" id="addVariantBtn" onclick="addVariant()" type="button">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M1.66406 9.99935C1.66406 5.39685 5.3949 1.66602 9.9974 1.66602C14.5999 1.66602 18.3307 5.39685 18.3307 9.99935C18.3307 14.6018 14.5999 18.3327 9.9974 18.3327C5.3949 18.3327 1.66406 14.6018 1.66406 9.99935ZM9.9974 3.33268C8.22929 3.33268 6.53359 4.03506 5.28335 5.2853C4.03311 6.53555 3.33073 8.23124 3.33073 9.99935C3.33073 11.7675 4.03311 13.4632 5.28335 14.7134C6.53359 15.9636 8.22929 16.666 9.9974 16.666C11.7655 16.666 13.4612 15.9636 14.7114 14.7134C15.9617 13.4632 16.6641 11.7675 16.6641 9.99935C16.6641 8.23124 15.9617 6.53555 14.7114 5.2853C13.4612 4.03506 11.7655 3.33268 9.9974 3.33268Z" fill="#002882"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M1.66406 9.99935C1.66406 5.39685 5.3949 1.66602 9.9974 1.66602C14.5999 1.66602 18.3307 5.39685 18.3307 9.99935C18.3307 14.6018 14.5999 18.3327 9.9974 18.3327C5.3949 18.3327 1.66406 14.6018 1.66406 9.99935ZM9.9974 3.33268C8.22929 3.33268 6.53359 4.03506 5.28335 5.2853C4.03311 6.53555 3.33073 8.23124 3.33073 9.99935C3.33073 11.7675 4.03311 13.4632 5.28335 14.7134C6.53359 15.9636 8.22929 16.666 9.9974 16.666C11.7655 16.666 13.4612 15.9636 14.7114 14.7134C15.9617 13.4632 16.6641 11.7675 16.6641 9.99935C16.6641 8.23124 15.9617 6.53555 14.7114 5.2853C13.4612 4.03506 11.7655 3.33268 9.9974 3.33268Z" fill="black" fill-opacity="0.2"/>
@@ -1166,9 +1166,9 @@
                          </div>
                         </div>
                      </td>
-                     <td class="RS"><input type="text" id="costPrice" class="form-control" placeholder="RS." oninput="this.value = this.value.replace(/[^0-9]/g, '');"></td>
-                       <td class="number1"><input type="text" id="costPrice" class="form-control" placeholder="RS." oninput="this.value = this.value.replace(/[^0-9]/g, '');"></td>
-                       <td class="number1"><input type="text" id="costPrice" class="form-control" placeholder="RS." oninput="this.value = this.value.replace(/[^0-9]/g, '');"></td> 
+                     <td class="RS"><input type="text" id="costPrice" class="form-control" placeholder="RS." oninput=" this.value = this.value .replace(/[^0-9.]/g, '') .replace(/(\..*?)\..*/g, '$1');"></td>
+                       <td class="number1"><input type="text" id="costPrice" class="form-control" placeholder="Sku" oninput="this.value = this.value.replace(/[^a-zA-Z0-9]/g, '');"></td>
+                       <td class="number1"><input type="text" id="costPrice" class="form-control" placeholder="Stock" oninput="this.value = this.value.replace(/[^0-9]/g, '');"></td> 
                  </tr>
                  <tr>
                      <td>
@@ -1179,9 +1179,9 @@
                          </div>
                         </div>
                      </td>
-                     <td class="RS"><input type="text" id="costPrice" class="form-control" placeholder="RS." oninput="this.value = this.value.replace(/[^0-9]/g, '');"></td>
-                       <td class="number1"><input type="text" id="costPrice" class="form-control" placeholder="RS." oninput="this.value = this.value.replace(/[^0-9]/g, '');"></td>
-                       <td class="number1"><input type="text" id="costPrice" class="form-control" placeholder="RS." oninput="this.value = this.value.replace(/[^0-9]/g, '');"></td> 
+                     <td class="RS"><input type="text" id="costPrice" class="form-control" placeholder="RS." oninput=" this.value = this.value .replace(/[^0-9.]/g, '') .replace(/(\..*?)\..*/g, '$1');"></td>
+                       <td class="number1"><input type="text" id="costPrice" class="form-control" placeholder="Sku" oninput="this.value = this.value.replace(/[^a-zA-Z0-9]/g, '');"></td>
+                       <td class="number1"><input type="text" id="costPrice" class="form-control" placeholder="Stock" oninput="this.value = this.value.replace(/[^0-9]/g, '');"></td> 
                  </tr>
                  <tr>
                      <td>
@@ -1192,9 +1192,9 @@
                          </div>
                         </div>
                      </td>
-                     <td class="RS"><input type="text" id="costPrice" class="form-control" placeholder="RS." oninput="this.value = this.value.replace(/[^0-9]/g, '');"></td>
-                       <td class="number1"><input type="text" id="costPrice" class="form-control" placeholder="RS." oninput="this.value = this.value.replace(/[^0-9]/g, '');"></td>
-                       <td class="number1"><input type="text" id="costPrice" class="form-control" placeholder="RS." oninput="this.value = this.value.replace(/[^0-9]/g, '');"></td> 
+                     <td class="RS"><input type="text" id="costPrice" class="form-control" placeholder="RS." oninput=" this.value = this.value .replace(/[^0-9.]/g, '') .replace(/(\..*?)\..*/g, '$1');"></td>
+                       <td class="number1"><input type="text" id="costPrice" class="form-control" placeholder="Sku" oninput="this.value = this.value.replace(/[^a-zA-Z0-9]/g, '');"></td>
+                       <td class="number1"><input type="text" id="costPrice" class="form-control" placeholder="Stock" oninput="this.value = this.value.replace(/[^0-9]/g, '');"></td> 
                  </tr>
                  
              </tbody>
@@ -1309,10 +1309,21 @@
                     <input type="url" class="form-control" id="utubeUrl" placeholder="Enter YouTube Link" >
                     <p id="errorMessage" style="color: red; display: none;">Please enter a valid YouTube video link.</p>
                   </div>
-                  <div class="medCenVideoPreviewContainer">
-                  </div>
+                  
                 </div>
-                 
+                <div class="medCenVideoPreviewContainer d-flex flex-wrap gap-3 mt-40 ">
+                  <video class="video-thumbnail img-fluid rounded" data-bs-toggle="modal" data-bs-target="#videoModal" data-video="https://www.w3schools.com/html/mov_bbb.mp4" muted>
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                  </video>
+
+                  <video class="video-thumbnail img-fluid rounded" data-bs-toggle="modal" data-bs-target="#videoModal" data-video="https://www.w3schools.com/html/movie.mp4" muted>
+                    <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+                  </video>
+
+                  <video class="video-thumbnail img-fluid rounded" data-bs-toggle="modal" data-bs-target="#videoModal" data-video="https://www.w3schools.com/html/mov_bbb.mp4" muted>
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                  </video>
+                </div>
               </div>
                   
   
@@ -1329,6 +1340,23 @@
         </div>
       </div>
     </div>
+
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content w-75 mx-auto">
+          <div class="modal-header">
+            <h5 class="modal-title" id="videoModalLabel">Watch Video</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <video width="100%" height="auto" controls id="modalVideo">
+              <source src="" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
      
     <script src="../assets/vendors/ckeditor/ckeditor.js"></script>
@@ -1350,6 +1378,25 @@
 <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
+      $(document).ready(function () {
+  const $modalVideo = $('#modalVideo');
+  const $modalVideoSource = $modalVideo.find('source');
+
+  // Handle thumbnail clicks
+  $('.video-thumbnail').on('click', function () {
+    const videoSrc = $(this).data('video');
+    $modalVideoSource.attr('src', videoSrc);
+    $modalVideo[0].load(); // Load video in modal but do not play automatically
+  });
+
+  // Stop video playback and reset source when modal is closed
+  $('#videoModal').on('hidden.bs.modal', function () {
+    $modalVideo[0].pause();
+    $modalVideo[0].currentTime = 0; // Reset video to the beginning
+    $modalVideoSource.attr('src', ''); // Clear the video source
+  });
+});
+
 $(document).ready(function () {
     // Initialize Select2
     $(".select-dropdown").select2();

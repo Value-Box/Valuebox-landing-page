@@ -1119,7 +1119,7 @@ padding: 15px 20px;
 }
 .dataTable-table:not(.table-borderless) thead th,
 .table:not(.table-borderless) thead th {
-  border-bottom: 1px solid #dedede !important;
+  /* border-bottom: 1px solid #dedede !important; */
 }
 .table-md.dataTable-table tr td,
 .table-md.dataTable-table tr th,
@@ -1738,4 +1738,17 @@ outline: none;
 #sidebar:not(.active) .sidebar-item .submenu:hover {
   display: block; /* Keep submenu visible when hovering over the submenu itself */
 }
+#sidebar:not(.active) .sidebar-item:hover .submenu .itemsMenu ul li{
+  list-style: none;
+}
+#sidebar:not(.active) .sidebar-item:hover .submenu .itemsMenu{
+  position: fixed;
+  box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.10), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+  background: #FFF;
+  border-radius: 12px;
+}
 
+/* #sidebar:not(.active) .menu{
+  max-height: 70vh;
+  overflow-y: auto;
+} */
