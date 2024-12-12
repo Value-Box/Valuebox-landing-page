@@ -444,7 +444,7 @@
                 <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
             </div>
         </div>
-   <main class="backcolor" id="main">
+   <main class="backcolor gray-color" id="main" >
     <div class="navigation anchortags mt-40">
         <a href="../index.html">Home</a>
         <a href="MyIncome.html">>My Income</a>
@@ -459,26 +459,26 @@
                 <span class="heading-one">Statement Overview</span>
                 <span class="text-brand-color fs-36">PKR 34,642</span>
             </div>
-          <div class=" row mt-20">
-            <div class="col-xxl-3 col-6 d-flex p-0 gap-2">
+          <div class=" row mt-20 d-flex justify-content-between statementDetailmenu ">
+            <div class="col-3 w-auto d-flex p-0 gap-1">
                 <span class="">Statement Number:</span>
                 <span class="text-dark message-text">PK10DP1-2024-046</span>
                </div>
-               <div class="col-xxl-3 col-6 d-flex p-0 gap-2">
+               <div class="col-3 w-auto d-flex p-0 gap-1">
                 <span class="">Statement Period</span>
                 <span class="text-dark message-text">13 Nov 2023 - 19 Nov 2023</span>
                </div>
-               <div class="col-xxl-3 col-6 d-flex mt-xxl-0 mt-20 p-0 gap-2">
+               <div class="col-3 w-auto d-flex p-0 gap-1">
                 <span class="">Statement Status</span>
                 <span class=" StatementOverview-badge">Ready to Release</span>
                </div>
-               <div class="col-xxl-3 col-6 d-flex mt-xxl-0 mt-20 p-0 gap-2">
+               <div class="col-3 w-auto d-flex p-0 gap-1">
                 <span class="">Expected Payout Date</span>
-                <span class="text-dark message-text">13 Nov 2023 - 19 Nov 2023</span>
+                <span class="text-dark message-text ">13 Nov 2023 - 19 Nov 2023</span>
                </div>
           </div>
           <div class="table-container TableWrapper mt-40">
-            <table class="table " id="">
+            <table class="table">
               <thead>
                 <tr class="text-dark">
                   <th>Fee Type</th>
@@ -486,13 +486,13 @@
                   <th class="text-end">Fee Amount(PKR)</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr class="paragraph-2 p-0">
-                       <td colspan="2">Opening Balance</td>
-                       <td class="text-end">PKR 00.00</td>
+              <tbody class="">
+                <tr class="paragraph-2  p-0">
+                       <td class="text-dark fw-bold" colspan="2">Opening Balance</td>
+                       <td class="text-end text-dark fw-bold">PKR 00.00</td>
                 </tr>
                 <tr class="paragraph-2 p-0">
-                    <td>Opening Balance</td>
+                    <td>Transaction Fee</td>
                     <td>
                         <div class="d-flex flex-column gap-1">
                            <span class="text-dark fw-bold ">Subtotal</span>
@@ -501,7 +501,7 @@
                            <span>Shipping Fee</span>
                         </div></td>
                     <td class="text-end">
-                        <div class="d-flex flex-column gap-1">
+                        <div class="d-flex flex-column gap-1 ">
                             <span class="text-dark fw-bold ">PKR -6,198</span>
                            <span>PKR -441</span>
                            <span>PKR -1,510</span>
@@ -509,9 +509,91 @@
                         </div>
                     </td>
              </tr>
-              
-               
-                
+             <tr class="paragraph-2 p-0">
+              <td>Delivered Orders</td>
+              <td>
+                  <div class="d-flex flex-column gap-1">
+                     <span class="text-dark fw-bold ">Subtotal</span>
+                     <span>Shipping Fee paid by Buyer</span>
+                     <span>Product Price paid by Buyer</span>
+                    </div>
+                  </td>
+              <td class="text-end">
+                  <div class="d-flex flex-column gap-1 ">
+                      <span class="text-dark fw-bold ">PKR 41,299</span>
+                     <span>PKR 3,281</span>
+                     <span>PKR 38,018</span>
+                  
+                  </div>
+              </td>
+       </tr>
+       <tr class="paragraph-2 p-0">
+        <td>Approved Claims</td>
+        <td>
+            <div class="d-flex flex-column gap-1">
+               <span class="text-dark fw-bold ">Subtotal</span>
+               <span>Claims for Damage & incorrect Items</span>
+             </div>
+            </td>
+        <td class="text-end">
+            <div class="d-flex flex-column gap-1 ">
+                <span class="text-dark fw-bold ">PKR 1,516</span>
+               <span>PKR 1,516</span>
+              </div>
+        </td>
+ </tr>
+ <tr class="paragraph-2 p-0">
+  <td>Returned Orders</td>
+  <td>
+      <div class="d-flex flex-column gap-1">
+         <span class="text-dark fw-bold ">Subtotal</span>
+         <span>Product Price Refunded to Buyer</span>
+       </div>
+      </td>
+  <td class="text-end">
+      <div class="d-flex flex-column gap-1 ">
+          <span class="text-dark fw-bold ">PKR -2,256</span>
+         <span>PKR -2,256</span>
+        </div>
+  </td>
+</tr>
+<tr class="paragraph-2 p-0">
+  <td>Logistics & Fulfillment Services</td>
+  <td>
+      <div class="d-flex flex-column gap-1">
+         <span class="text-dark fw-bold ">Subtotal</span>
+         <span>Adjustments FVB</span>
+       </div>
+      </td>
+  <td class="text-end">
+      <div class="d-flex flex-column gap-1 ">
+          <span class="text-dark fw-bold ">PKR 168</span>
+         <span>PKR 168</span>
+        </div>
+  </td>
+</tr>         
+<tr class="paragraph-2 p-0">
+  <td>Transaction Fee Refunded</td>
+  <td>
+      <div class="d-flex flex-column gap-1">
+         <span class="text-dark fw-bold ">Subtotal</span>
+         <span>Payment Fee Refunded</span>
+         <span>Commission Fee Refunded</span>
+        </div>
+      </td>
+  <td class="text-end">
+      <div class="d-flex flex-column gap-1 ">
+          <span class="text-dark fw-bold ">PKR 41,299</span>
+         <span>PKR 26</span>
+         <span>PKR 89</span>
+      
+      </div>
+  </td>
+</tr>      
+<tr class="paragraph-2  p-0">
+  <td class="text-dark fw-bold" colspan="2">Closing Balance</td>
+  <td class="text-end text-dark fw-bold">PKR 34,642</td>
+</tr>             
                    
                 
                </tbody>
@@ -645,11 +727,12 @@
     <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/main.js"></script>
-  <script>
-    $(document).ready(function () {
+   <script>
+      $(document).ready(function () {
         $(".select-dropdown").select2();
         // $(".select-dropdown2").select2();
  });
+
   function togglePassword() {
     const passwordInput = document.getElementById("password");
     const toggleIcon = document.getElementById("togglePasswordIcon");
@@ -664,14 +747,7 @@
       toggleIcon.classList.add("bi-eye-slash");
     }
   }
-  </script>
-    <script>
-        function toggleCheckboxes(source) {
-          const checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
-          checkboxes.forEach(checkbox => checkbox.checked = source.checked);
-        }
-        </script>
-   <script>
+
   $(function () {
     // Apply Date Range Picker to all inputs with the name 'daterange'
     $('input[name="daterange"]').daterangepicker({
@@ -685,15 +761,13 @@
       this.element.val(start.format('DD MMM YYYY') + ' | ' + end.format('DD MMM YYYY'));
     });
   });
-        </script> 
-     
-          <script>
-          let statementDetailTable = document.querySelector('#statement_detail_Table2');
+
+  let statementDetailTable = document.querySelector('#statement_detail_Table2');
 new simpleDatatables.DataTable(statementDetailTable, {
     sortable: false // Disables sorting arrows globally
 });
 
-            // document.querySelector('#statement_detail_Table2').DataTable({ordering: false});
+// document.querySelector('#statement_detail_Table2').DataTable({ordering: false});
 
            function replaceArrows() {
         // Select all elements with the page-link class
@@ -714,7 +788,7 @@ new simpleDatatables.DataTable(statementDetailTable, {
       document.querySelectorAll(".pagination").forEach(function (pagination) {
         paginationObserver.observe(pagination, { childList: true, subtree: true });
       });
-      
-            </script> 
+   </script> 
+     
 </body>
 </html>

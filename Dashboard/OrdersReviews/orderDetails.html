@@ -1024,17 +1024,19 @@
 
 
 
-    <script>
-        function toggleCheckboxes(source) {
-          const checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
-          checkboxes.forEach(checkbox => checkbox.checked = source.checked);
-        }
-        </script>
+   
          <script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
         <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
         <script src="../assets/js/bootstrap.bundle.min.js"></script>
         <script src="../assets/js/main.js"></script>
         <script>
+            $(document).ready(function () {
+        // Function to toggle all checkboxes
+        $('#selectAllCheckbox').on('change', function () {
+          const isChecked = $(this).prop('checked'); // Check if the "select all" checkbox is checked
+          $('tbody input[type="checkbox"]').prop('checked', isChecked); // Set all checkboxes to the same state
+        });
+      });
           let orderdetailtable = document.querySelector('#order_detail_Table');
                new simpleDatatables.DataTable(orderdetailtable, {
                  sortable: false // Disables sorting arrows globally

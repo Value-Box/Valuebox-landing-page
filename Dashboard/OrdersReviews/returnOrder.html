@@ -656,16 +656,18 @@
 
 
 
-
+    <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
     <script>
-        function toggleCheckboxes(source) {
-          const checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
-          checkboxes.forEach(checkbox => checkbox.checked = source.checked);
-        }
+        $(document).ready(function () {
+        // Function to toggle all checkboxes
+        $('#selectAllCheckbox').on('change', function () {
+          const isChecked = $(this).prop('checked'); // Check if the "select all" checkbox is checked
+          $('tbody input[type="checkbox"]').prop('checked', isChecked); // Set all checkboxes to the same state
+        });
+      });
         </script>
-        <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-        <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    
-        <script src="../assets/js/main.js"></script>
+     
 </body>
 </html>

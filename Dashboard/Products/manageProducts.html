@@ -534,7 +534,7 @@
                        </div>
            </td>
                            <td class="RS"><input type="text" id="costPrice" class="form-control" placeholder="RS." oninput="this.value = this.value.replace(/[^0-9]/g, '');"></td>
-                             <td class="number1"><input type="text" id="costPrice" class="form-control" placeholder="RS." oninput="this.value = this.value.replace(/[^0-9]/g, '');"></td>
+                             <td class="number1"><input type="text" id="costPrice" class="form-control" placeholder="Stock" oninput="this.value = this.value.replace(/[^0-9]/g, '');"></td>
                             
 
                              
@@ -1791,18 +1791,17 @@
       
  </main>
  <script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
- 
-
-  <script>
-    function toggleCheckboxes(source) {
-      const checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
-      checkboxes.forEach(checkbox => checkbox.checked = source.checked);
-    }
-    </script>
-    <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/main.js"></script>
-    <script>
+ <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+ <script src="../assets/js/bootstrap.bundle.min.js"></script>
+ <script src="../assets/js/main.js"></script>
+<script>
+ $(document).ready(function () {
+  // Function to toggle all checkboxes
+  $('#selectAllCheckbox').on('change', function () {
+    const isChecked = $(this).prop('checked'); // Check if the "select all" checkbox is checked
+    $('tbody input[type="checkbox"]').prop('checked', isChecked); // Set all checkboxes to the same state
+  });
+});
       let registerProTable = document.querySelector('#manage_product_Table');
       new simpleDatatables.DataTable(registerProTable);
 
@@ -1825,7 +1824,6 @@ const paginationObserver = new MutationObserver(replaceArrows);
 document.querySelectorAll(".pagination").forEach(function (pagination) {
   paginationObserver.observe(pagination, { childList: true, subtree: true });
 });
-
-      </script> 
+</script> 
 </body>
 </html>

@@ -444,7 +444,7 @@
            </div>
            <div class="col-8 d-flex justify-content-end gap-2 p-0">
             <input type="text" id="datePicker" class="form-control" name="daterange"placeholder="Start Date  |  End Date">
-            <input type="text" class="form-control" placeholder="muhammadarshad@gmail.com">
+            <input type="text" class="form-control" placeholder="Search picture name">
                    <button class="btn-outline-blue h-auto">Clear</button>
                    <button class="btn-blue h-auto">Search</button>
                 </div>
@@ -571,13 +571,6 @@
 <script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
  <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
   <script>
-    function toggleCheckboxes(source) {
-      const checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
-      checkboxes.forEach(checkbox => checkbox.checked = source.checked);
-    }
-    </script>
-    
-    <script>
       let registerProTable = document.querySelector('#media_center_Table');
       new simpleDatatables.DataTable(registerProTable);
        function replaceArrows() {
@@ -611,18 +604,6 @@ $(function() {
       $('input[name="daterange"]').val(start.format('DD MMM YYYY') + ' | ' + end.format('DD MMM YYYY'));
 });
  });
-$(function() {
-    $('input[name="daterange"]').daterangepicker({
-      opens: 'center',
-      locale: {
-        format: 'DD MMM YYYY' // Example: 01 Jan 2022
-      },
-      autoUpdateInput: false  // This stops the input from updating automatically before selection
-    }, function(start, end, label) {
-      // When a user selects a range, update the input field with the selected dates
-      $('input[name="daterange"]').val(start.format('DD MMM YYYY') + ' | ' + end.format('DD MMM YYYY'));
-});
-});
       </script> 
 </body>
 </html>

@@ -249,13 +249,15 @@
                         </svg>
                     </a>
                     <ul class="submenu ">
-                        <li class="submenu-item ">
-                            <a href="component-breadcrumb.html">Inventory Overview</a>
-                        </li>
-                        <li class="submenu-item ">
-                            <a href="component-button.html">Inventory Control</a>
-                        </li>
-                        
+                      <li class="submenu-item ">
+                        <a href="../WareHouse/InventoryOverview.html">Inventory Overview</a>
+                    </li>
+                    <li class="submenu-item ">
+                        <a href="../WareHouse/InventoryControl.html">Inventory Control</a>
+                    </li>
+                    <li class="submenu-item ">
+                      <a href="../WareHouse/inventoryReport.html">Inventory Report</a>
+                  </li>
                     </ul>
                 </li>
         
@@ -540,12 +542,7 @@
 
 
   
-    <script>
-        function toggleCheckboxes(source) {
-          const checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
-          checkboxes.forEach(checkbox => checkbox.checked = source.checked);
-        }
-        </script>
+    
         <script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
         <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
         <script src="../assets/js/bootstrap.bundle.min.js"></script>
@@ -555,26 +552,24 @@
         <script>
         let registerProTable = document.querySelector('#report_Table');
         new simpleDatatables.DataTable(registerProTable);
-
         function replaceArrows() {
-    // Select all elements with the page-link class
-    document.querySelectorAll(".page-link").forEach(function (link) {
-      if (link.innerHTML === "‹") {
+        // Select all elements with the page-link class
+        document.querySelectorAll(".page-link").forEach(function (link) {
+        if (link.innerHTML === "‹") {
         link.innerHTML = "Previous"; // Replace left arrow with "Previous"
       } else if (link.innerHTML === "›") {
         link.innerHTML = "Next"; // Replace right arrow with "Next"
       }
-    });
-  }
-
-  // Call this function once on page load
-  replaceArrows();
-
-  // Observe for changes in pagination to handle dynamic updates
-  const paginationObserver = new MutationObserver(replaceArrows);
-  document.querySelectorAll(".pagination").forEach(function (pagination) {
-    paginationObserver.observe(pagination, { childList: true, subtree: true });
-  });
+        });
+        }
+        // Call this function once on page load
+         replaceArrows();
+       
+         // Observe for changes in pagination to handle dynamic updates
+         const paginationObserver = new MutationObserver(replaceArrows);
+         document.querySelectorAll(".pagination").forEach(function (pagination) {
+           paginationObserver.observe(pagination, { childList: true, subtree: true });
+          });
 
         </script> 
 </body>

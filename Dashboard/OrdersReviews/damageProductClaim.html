@@ -148,7 +148,7 @@
                                 <li class="submenu-item ">
                                     <a href="../Products/mediaCenter.html">Media Center</a>
                                 </li>
-                                <li class="submenu-item active">
+                                <li class="submenu-item">
                                     <a href="../Products/brandInformation.html">Brand Management</a>
                                 </li>
                                 
@@ -181,7 +181,7 @@
                               <li class="submenu-item ">
                                   <a href="../OrdersReviews/orders.html">Orders</a>
                               </li>
-                              <li class="submenu-item ">
+                              <li class="submenu-item active">
                                   <a href="../OrdersReviews/returnOrder.html">Return Orders</a>
                               </li>
                               <li class="submenu-item ">
@@ -540,7 +540,7 @@
                   <div class="mt-20" id="previewContainer">
                    
                   </div>
-                  <input type="file" class="d-none" multiple="multiple" id="uploadImgSecinput" accept=".jpg, .jpeg, .png">
+                  <input type="file" class="d-none" multiple="multiple" id="uploadImgSecinput" accept=".jpg, .webp, .png">
                 </div>
                 
                 <!-- <button class="btn-gray mt-20"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -603,10 +603,8 @@
     
         <script src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-        <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-        <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    
-        <script src="../assets/js/main.js"></script>
+      <script src="../assets/js/bootstrap.bundle.min.js"></script>
+     <script src="../assets/js/main.js"></script>
 
         <script>
           function handleFileUpload(inputId, containerId) {
@@ -699,10 +697,13 @@ handleFileUpload("uploadImgSecinput", "previewContainer");
             $(".select-dropdown").select2();
             // $(".select-dropdown2").select2();
     });
-            function toggleCheckboxes(source) {
-              const checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
-              checkboxes.forEach(checkbox => checkbox.checked = source.checked);
-            }
+    $(document).ready(function () {
+        // Function to toggle all checkboxes
+        $('#selectAllCheckbox').on('change', function () {
+          const isChecked = $(this).prop('checked'); // Check if the "select all" checkbox is checked
+          $('tbody input[type="checkbox"]').prop('checked', isChecked); // Set all checkboxes to the same state
+        });
+      });
             
             </script>
 </body>

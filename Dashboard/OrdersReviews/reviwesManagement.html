@@ -18,7 +18,9 @@
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="stylesheet" href="../style.css" />
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
-    <style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+   <style>
       .select2-selection {
         height: 38px !important;
         display: flex !important;
@@ -38,7 +40,7 @@
         color: #607080 !important;
         font-weight: 500;
    }
-    </style>
+ </style>
 </head>
 <body>
     
@@ -610,7 +612,7 @@
   </div>
   
   <div class="row form1 mt-40 ">
-    <div class="d-flex align-items-center justify-content-between gap-3">
+    <div class="d-flex align-items-center justify-content-between gap-3 mb-2">
         <div class="d-flex gap-1 align-items-center">
             <input class="form-check-input" type="checkbox" id="product" onclick="toggleCheckboxes(this)">
             <label for="select-all">Select All</label>
@@ -652,12 +654,9 @@
                                               <path d="M12 10C13.6569 10 15 8.65685 15 7C15 5.34315 13.6569 4 12 4C10.3431 4 9 5.34315 9 7C9 8.65685 10.3431 10 12 10Z" stroke="#666666" stroke-width="2" />
                                             </svg>
                                           </span>
-                                          <span class="orderidColor">4651321321</span>
+                                          <span class="orderidColor">Rana Ramzan</span>
                                           <span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                              <path d="M8 9H16M8 13H14M18 4C18.7956 4 19.5587 4.31607 20.1213 4.87868C20.6839 5.44129 21 6.20435 21 7V15C21 15.7956 20.6839 16.5587 20.1213 17.1213C19.5587 17.6839 18.7956 18 18 18H13L8 21V18H6C5.20435 18 4.44129 17.6839 3.87868 17.1213C3.31607 16.5587 3 15.7956 3 15V7C3 6.20435 3.31607 5.44129 3.87868 4.87868C4.44129 4.31607 5.20435 4 6 4H18Z" stroke="#EEA500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                          </span>
+                                         </span>
                                         </div>
                                       </th>
                                     </tr>
@@ -960,8 +959,9 @@
                                           <td class="sticky-right text-center bg-bs-white overflow-y">
                                             <div class="d-flex flex-column gap-2">
                                               <button class="btn-blue" data-bs-toggle="modal" data-bs-target="#exampleModalToggle2">Reply</button>
-                                                <button class="btn-outline-blue">Report Reviews</button>
-                                                <button class="btn-outline-blue">Hide Reply</button>
+                                                <!-- <button class="btn-outline-blue">Report Reviews</button> -->
+                                                <button class="btn-outline-blue" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Report Reviews</button>
+                                                <button class="btn-outline-blue" onclick="openConfirmationModal(this)">Hide Reply</button>
                                             </div>
                                            </td>
                                     </tr>
@@ -986,12 +986,9 @@
                                               <path d="M12 10C13.6569 10 15 8.65685 15 7C15 5.34315 13.6569 4 12 4C10.3431 4 9 5.34315 9 7C9 8.65685 10.3431 10 12 10Z" stroke="#666666" stroke-width="2" />
                                             </svg>
                                           </span>
-                                          <span class="orderidColor">4651321321</span>
+                                          <span class="orderidColor">Rana Ramzan</span>
                                           <span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                              <path d="M8 9H16M8 13H14M18 4C18.7956 4 19.5587 4.31607 20.1213 4.87868C20.6839 5.44129 21 6.20435 21 7V15C21 15.7956 20.6839 16.5587 20.1213 17.1213C19.5587 17.6839 18.7956 18 18 18H13L8 21V18H6C5.20435 18 4.44129 17.6839 3.87868 17.1213C3.31607 16.5587 3 15.7956 3 15V7C3 6.20435 3.31607 5.44129 3.87868 4.87868C4.44129 4.31607 5.20435 4 6 4H18Z" stroke="#EEA500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                          </span>
+                                         </span>
                                         </div>
                                       </th>
                                     </tr>
@@ -1294,8 +1291,8 @@
                                           <td class="sticky-right text-center bg-bs-white overflow-y">
                                             <div class="d-flex flex-column gap-2">
                                               <button class="btn-blue" data-bs-toggle="modal" data-bs-target="#exampleModalToggle2">Reply</button>
-                                                <button class="btn-outline-blue">Report Reviews</button>
-                                                <button class="btn-outline-blue">Hide Reply</button>
+                                              <button class="btn-outline-blue" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Report Reviews</button>
+                                              <button class="btn-outline-blue" onclick="openConfirmationModal(this)">Hide Reply</button>
                                             </div>
                                            </td>
                                     </tr>
@@ -1308,28 +1305,93 @@
   </div>
     </main>
     <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-      <div class="modal-dialog modal-dialog-centered position-relative custom-modal-width">
+      <div class="modal-dialog modal-dialog-centered custom-modal-width">
         <div class="modal-content bg-natural p-4">
           <div class="modal-header p-0 ">
             <div class="d-flex flex-column gap-2 replyBox w-100">
               <span class="text-natural-gray">Customer Name: <span class="text-dark message-text">Muhammad Arshad</span></span>
               <span class="text-natural-gray">Main Review: <span class="text-dark message-text">Good</span></span>
-          </div>
-        <div id="closeModalBtn" class="btn-blue closeModalBtn rounded-circle cursor-pointer" data-bs-dismiss="modal" aria-label="Close">
-          <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div id="closeModalBtn" class="btn-blue closeModalBtn rounded-circle cursor-pointer" data-bs-dismiss="modal" aria-label="Close">
+              <i class="fa-solid fa-xmark"></i>
             </div>
           </div>
           <div class="modal-body d-flex flex-column gap-1 p-0 mt-20">
             <span class="subHeading-blue">Reply Customer</span>
-            <span class="gray-color">Your reply will be display at the front end under user review in reply section!</span>
+            <span class="gray-color">Your reply will be displayed at the front end under user review in reply section!</span>
             <textarea class="mt-1" id="w3review" name="w3review" placeholder="Share your thoughts or select the brief review above." rows="4" cols="50"></textarea>
           </div>
           <div class="mt-20">
-            <button class="btn-blue ">Post Reply</button>  
+            <button class="btn-blue">Post Reply</button>
           </div>
-     </div>
+        </div>
+      </div>
     </div>
+    
+<!-- second modal -->
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered d-flex justify-content-center position-relative Review-Modal">
+    <div class="modal-content" id="cancel-order-modal">
+     <div class=" p-4">
+      <div class="modal-header mb-3 p-0 ">
+        <h5 class="text-dark p-0">Reason To Report<span class="text-warning">*</span></h5>
+       
+          <div id="closeModalBtn" class="btn-blue closeModalBtn rounded-circle cursor-pointer" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+      <div class="modal-body d-flex flex-column gap-3 p-0">
+        <label class="d-flex gap-1">
+          <input class="form-radio-input" type="radio" name="relationship" value="brandowner"> False or Misleading
+        </label>
+        <label class="d-flex gap-1">
+          <input class="form-radio-input" type="radio" name="relationship" value="blue"> Inappropriate or abusive words
+          </label>
+        <label class="d-flex gap-1">
+          <input class="form-radio-input" type="radio" name="relationship" value="green"> Irrelevant Statement
+        </label>
+        <label class="d-flex gap-1">
+          <input class="form-radio-input" type="radio" name="relationship" value="green"> Spam or Fake Reviews
+        </label>
+        <label class="d-flex gap-1">
+          <input class="form-radio-input" type="radio" name="relationship" value="green"> Other
+        </label>
+      </div>
+      <div class="d-flex flex-column mt-4 mb-4 p-0 ">
+        <h5 class="text-dark p-0 mb-3">Explain Reason<span class="text-warning">*</span></h5>
+        <textarea id="w3review" name="w3review" placeholder="Please input" rows="4" cols="50"></textarea>
+
+      </div>
+      <div class="d-flex gap-2 ">
+        <button class="btn-blue">Submitt</button>
+        <button class="btn-gray" data-bs-dismiss="modal">Cancel</button>
+      </div>
+      </div>
+      
     </div>
+  </div>
+</div>
+<!-- third modal -->
+ <!-- Confirmation Modal -->
+<div class="modal fade" id="confirmationModal" aria-hidden="true" aria-labelledby="confirmationModalLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="text-dark pb-0">Confirmation</span></h5>
+       <div id="closeModalBtn" class="btn-blue closeModalBtn rounded-circle cursor-pointer" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+      <div class="modal-body py-0">
+      <span class="paragraph-1">Are you sure you want to hide the reply?</span>
+      </div>
+      <div class="modal-footer ">
+        <button type="button" class="btn-gray" data-bs-dismiss="modal">No</button>
+        <button type="button" class="btn-blue" id="confirmHideReply" onclick="confirmAction()">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -1342,9 +1404,13 @@
     <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/main.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <script>
+  
+        </script>
+       
+<script>
       $(document).ready(function () {
         $(".select-dropdown").select2();
         // $(".select-dropdown2").select2();
@@ -1353,9 +1419,27 @@
           const checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
           checkboxes.forEach(checkbox => checkbox.checked = source.checked);
         }
-        </script>
-       
-<script>
+ let selectedButton = null; // To keep track of the clicked button
+
+// Function to open the confirmation modal and store the clicked button reference
+function openConfirmationModal(button) {
+  selectedButton = button; // Store the reference of the clicked button
+  const confirmationModal = new bootstrap.Modal(document.getElementById('confirmationModal'));
+  confirmationModal.show();
+}
+
+// Function to handle the confirmation action
+function confirmAction() {
+  if (selectedButton) {
+    // Change the text of the clicked button
+    selectedButton.textContent = selectedButton.textContent === 'Hide Reply' ? 'Show Reply' : 'Hide Reply';
+  }
+
+  // Close the modal
+  const confirmationModal = bootstrap.Modal.getInstance(document.getElementById('confirmationModal'));
+  confirmationModal.hide();
+}
+
   $(document).ready(function() {
   $('.toggle-button').on('click', function() {
     const collapsibleContent = $('.collapsible-content');
@@ -1383,11 +1467,7 @@
       this.element.val(start.format('DD MMM YYYY') + ' | ' + end.format('DD MMM YYYY'));
     });
   });
-</script>
-        <script>
-         
-    
-          let reviewManagmentTable = document.querySelector('#review_management_Table');
+  let reviewManagmentTable = document.querySelector('#review_management_Table');
       new simpleDatatables.DataTable(reviewManagmentTable, {
         sortable: false 
       });
@@ -1410,6 +1490,7 @@
       paginationObserver.observe(pagination, { childList: true, subtree: true });
     });
     
-          </script> 
+</script>
+        
 </body>
 </html>
