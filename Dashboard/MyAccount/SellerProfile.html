@@ -486,92 +486,66 @@
                 <button class="btn-blue">Modify</button>
             </div>
           </div>
-       
-  
-        
-   </div>
-  
-   
-
-  
-  
- 
-  
+ </div>
   </div>
-  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered d-flex justify-content-center position-relative">
-      <div class="modal-content warehouse-modal">
-       <div class="w-100">
-        <div class="modal-header p-0 ">
-        
-          <span class="text-brand-color p-0 subHeading text-start">Update Holiday Mode<span>
-           <div id="closeModalBtn" class="btn-blue closeModalBtn rounded-circle cursor-pointer" data-bs-dismiss="modal" aria-label="Close">
-            <img src="../Images/carbon_close-filled.svg" alt="">
-          </div>
-        </div>
-        <div class="modal-body d-flex flex-column gap-3 p-0">
-       <div class="" id="wareHouseform">
-      <div class="mt-20">
-            <span class="fs-14 paragraph-2" id="email_varify_text">Holiday Period</span>
-           <input type="text" id="datePicker" class="form-control w-100 mt-10" name="daterange"placeholder="Start Date  |  End Date">
-            <div class="d-flex gap-2 mt-20 justify-content-end">
-             <button class="btn-outline-gray" data-bs-dismiss="modal">Cancel</button>
-             <button class="btn-blue" id="wareHouseFormNxtBtn">Next</button>
+   </main>
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered d-flex justify-content-center position-relative">
+        <div class="modal-content warehouse-modal">
+         <div class="w-100">
+          <div class="modal-header p-0 ">
+          
+            <span class="text-brand-color p-0 subHeading text-start">Update Holiday Mode<span>
+             <div id="closeModalBtn" class="btn-blue closeModalBtn rounded-circle cursor-pointer" data-bs-dismiss="modal" aria-label="Close">
+              <img src="../Images/carbon_close-filled.svg" alt="">
             </div>
           </div>
-          </div>
-        <div class="" id="newWareHouseform" style="display: none;">
-            <div class="d-flex flex-column gap-1 mt-20">
-              <span class="fs-14 paragraph-2" id="email_varify_text">Please confirm that you have set up the holiday mode for below date:</span>
-              <span class="fs-14 paragraph-2" id="email_varify_text">Warehouse: drop shipping</span>
-              <span class="fs-14 paragraph-2" id="email_varify_text">Date: 2024-12-24 ~ 2024-12-28</span>
-            </div>
-            <div class="mt-20">
+          <div class="modal-body d-flex flex-column gap-3 p-0">
+         <div class="" id="wareHouseform">
+        <div class="mt-20">
               <span class="fs-14 paragraph-2" id="email_varify_text">Holiday Period</span>
-              <input type="text" id="datePicker" class="form-control w-100 mt-10" name="daterange"placeholder="Start Date  |  End Date">
-             <div class="d-flex gap-2 mt-20 justify-content-end">
-              <button class="btn-outline-gray" data-bs-dismiss="modal">Cancel</button>
-                <button class="btn-gray" id="Prev_btn">Previous</button>
+             <input type="text" id="datePicker" class="form-control w-100 mt-10" name="daterange"placeholder="Start Date  |  End Date">
+              <div class="d-flex gap-2 mt-20 justify-content-end">
+               <button class="btn-outline-gray" data-bs-dismiss="modal">Cancel</button>
                <button class="btn-blue" id="wareHouseFormNxtBtn">Next</button>
               </div>
-              </div>
             </div>
-       </div>
+            </div>
+          <div class="" id="newWareHouseform" style="display: none;">
+              <div class="d-flex flex-column gap-1 mt-20">
+                <span class="fs-14 paragraph-2" id="email_varify_text">Please confirm that you have set up the holiday mode for below date:</span>
+                <span class="fs-14 paragraph-2" id="email_varify_text">Warehouse: drop shipping</span>
+                <span class="fs-14 paragraph-2" id="email_varify_text">Date: 2024-12-24 ~ 2024-12-28</span>
+              </div>
+              <div class="mt-20">
+                <span class="fs-14 paragraph-2" id="email_varify_text">Holiday Period</span>
+                <input type="text" id="datePicker" class="form-control w-100 mt-10" name="daterange"placeholder="Start Date  |  End Date">
+               <div class="d-flex gap-2 mt-20 justify-content-end">
+                <button class="btn-outline-gray" data-bs-dismiss="modal">Cancel</button>
+                  <button class="btn-gray" id="Prev_btn">Previous</button>
+                 <button class="btn-blue" id="wareHouseFormNxtBtn">Next</button>
+                </div>
+                </div>
+              </div>
+         </div>
+          </div>
+          
         </div>
-        
       </div>
     </div>
-  </div>
-    </main>
 
 
 
 
 
-
-  
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script>
-        function toggleCheckboxes(source) {
-          const checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
-          checkboxes.forEach(checkbox => checkbox.checked = source.checked);
-        }
-        </script>
-         <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-         <!-- Moment.js -->
-         <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-         <!-- Daterangepicker CSS and JS -->
-         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-        <script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
-        <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-        <script src="../assets/js/bootstrap.bundle.min.js"></script>
-        <script src="../assets/vendors/apexcharts/apexcharts.js"></script>
-        <script src="../assets/js/pages/ui-apexchart.js"></script>
-        <script src="../assets/js/main.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-<script>
-    const wareHouseform=document.getElementById('wareHouseform')
+  const wareHouseform=document.getElementById('wareHouseform')
   const newWareHouseform=document.getElementById('newWareHouseform')
   const wareHouseFormNxtBtn= document.getElementById("wareHouseFormNxtBtn");
 
@@ -585,6 +559,13 @@
       newWareHouseform.style.display='none'
       wareHouseform.style.display='block'
     })
+    $(document).ready(function () {
+        // Function to toggle all checkboxes
+        $('#selectAllCheckbox').on('change', function () {
+          const isChecked = $(this).prop('checked'); // Check if the "select all" checkbox is checked
+          $('tbody input[type="checkbox"]').prop('checked', isChecked); // Set all checkboxes to the same state
+        });
+      });
   $(function () {
     // Apply Date Range Picker to all inputs with the name 'daterange'
     $('input[name="daterange"]').daterangepicker({
@@ -599,30 +580,5 @@
     });
   });
 </script>
-        <script>
-        let registerProTable = document.querySelector('#report_Table');
-        new simpleDatatables.DataTable(registerProTable);
-
-        function replaceArrows() {
-    // Select all elements with the page-link class
-    document.querySelectorAll(".page-link").forEach(function (link) {
-      if (link.innerHTML === "‹") {
-        link.innerHTML = "Previous"; // Replace left arrow with "Previous"
-      } else if (link.innerHTML === "›") {
-        link.innerHTML = "Next"; // Replace right arrow with "Next"
-      }
-    });
-  }
-
-  // Call this function once on page load
-  replaceArrows();
-
-  // Observe for changes in pagination to handle dynamic updates
-  const paginationObserver = new MutationObserver(replaceArrows);
-  document.querySelectorAll(".pagination").forEach(function (pagination) {
-    paginationObserver.observe(pagination, { childList: true, subtree: true });
-  });
-
-        </script> 
 </body>
 </html>

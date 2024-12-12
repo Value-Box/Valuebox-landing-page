@@ -431,9 +431,7 @@
   <div class="container-fluid p-0"> 
     <div class="d-flex justify-content-between">
     <span class="heading-one">Commission</span>
-    <div>
-      <input type="date" class="form-control mt-2" id="customDateInput">
-  </div>
+    
          </div>
       <div class="row form1 d-flex mt-40 gap-2">
         <div class="d-flex gap-2 justify-content-end ">
@@ -501,34 +499,12 @@
 
 
 
-  <script>
-  function togglePassword() {
-    const passwordInput = document.getElementById("password");
-    const toggleIcon = document.getElementById("togglePasswordIcon");
-  
-    if (passwordInput.type === "password") {
-      passwordInput.type = "text";
-      toggleIcon.classList.remove("bi-eye-slash");
-      toggleIcon.classList.add("bi-eye");
-    } else {
-      passwordInput.type = "password";
-      toggleIcon.classList.remove("bi-eye");
-      toggleIcon.classList.add("bi-eye-slash");
-    }
-  }
-  </script>
-    <script>
-        function toggleCheckboxes(source) {
-          const checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
-          checkboxes.forEach(checkbox => checkbox.checked = source.checked);
-        }
-        </script>
+ 
+   
         <script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
         <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
         <script src="../assets/js/bootstrap.bundle.min.js"></script>
-        <script src="../assets/vendors/apexcharts/apexcharts.js"></script>
-        <script src="../assets/js/pages/ui-apexchart.js"></script>
-        <script src="../assets/js/main.js"></script>
+       <script src="../assets/js/main.js"></script>
         <script>
      let comissiontable = document.querySelector('#comission-table');
           new simpleDatatables.DataTable(comissiontable, {

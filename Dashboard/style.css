@@ -1627,7 +1627,7 @@ background: #F2F2F2;
     max-width: 1400px;
 }
 .custom-modal-width{
-  max-width: 1350px;
+  max-width: 1350px !important;
 }
 .closeModalBtn{
   height: 50px;
@@ -1711,14 +1711,7 @@ font-style: normal;
 font-weight: 400;
 line-height: 30px; /* 150% */
 }
-@media(max-width:1400px){
-  .custom-modal-width{
-    max-width: 1250px;
-  }
-  .tags-input-wrapper {
-    min-height: 48px;
-  }
-}
+
 .reviewsPerfomanceOverview{
   display: flex;
 padding: 20px;
@@ -2058,7 +2051,7 @@ background: var(--Natural-Color-00, #FCFCFC);
   padding: 5px 10px;
   border-radius: 5px;
   display: block;
-  font-size: 16px;
+  font-size: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2148,24 +2141,7 @@ border: 1px solid transparent;
 white-space: nowrap;
 cursor: pointer;
 }
- @media(max-width:1400px){
-  .Order-detail-line{
-    position: relative;
-    left: 81px;
-  }
-  .custom-modal-width{
-    max-width: 1200px;
-  }
-  .viewcollectionbtn {
-    padding: 5px 10px;
-    line-height: 25px;
-  }
-  
-
-  /* .choices__inner {
-    height: 48px !important;
-  } */
-  }
+ 
 
   tr.sticky {
     position: sticky;
@@ -2237,8 +2213,8 @@ cursor: pointer;
 right: 3px;
   }
   .select2-selection__rendered{
-    color: #607080 !important;
-    font-weight: 500;
+    /* color: #607080 !important; */
+    /* font-weight: 500; */
   }
   .input-group-text i {
     font-size: 16px; /* Adjust icon size */
@@ -2274,3 +2250,63 @@ right: 3px;
     color: #555;
     word-wrap: break-word;
 }
+#confirmationModal .modal-header,
+#confirmationModal .modal-body,
+#confirmationModal .modal-footer {
+  border: none; /* Removes the default borders */
+}
+
+#confirmationModal .modal-content {
+  box-shadow: none; /* Optional: Removes shadow around modal */
+}
+.Review-Modal{
+  max-width: 1030px !important;
+}
+.profile-picture-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-picture {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  cursor: pointer;
+}
+@media(max-width:1400px){
+  .custom-modal-width{
+    max-width: 1250px !important;
+  }
+  .tags-input-wrapper {
+    min-height: 48px;
+  }
+}
+@media(max-width:1400px){
+  .Order-detail-line{
+    position: relative;
+    left: 81px;
+  }
+  .custom-modal-width{
+    max-width: 1200px !important;
+  }
+  .viewcollectionbtn {
+    padding: 5px 10px;
+    line-height: 25px;
+  }
+  .StatementOverview-badge {
+    padding: 0px 5px;
+    border-radius: 5px;
+    font-size: 12px;
+   }
+   
+   .statementDetailmenu span{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+   }
+  
+
+  /* .choices__inner {
+    height: 48px !important;
+  } */
+  }

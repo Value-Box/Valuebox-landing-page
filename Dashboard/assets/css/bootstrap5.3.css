@@ -12185,6 +12185,7 @@ fieldset:disabled .btn {
   }
   .TableWrapper table tbody tr td {
     padding: 10px 20px;
+    color: #999;
   }
   .TableWrapper table tbody tr {
     border-bottom: 1px solid #dbdbdb;

@@ -591,40 +591,17 @@
 
 
 
-  <script>
-  function togglePassword() {
-    const passwordInput = document.getElementById("password");
-    const toggleIcon = document.getElementById("togglePasswordIcon");
   
-    if (passwordInput.type === "password") {
-      passwordInput.type = "text";
-      toggleIcon.classList.remove("bi-eye-slash");
-      toggleIcon.classList.add("bi-eye");
-    } else {
-      passwordInput.type = "password";
-      toggleIcon.classList.remove("bi-eye");
-      toggleIcon.classList.add("bi-eye-slash");
-    }
-  }
-  </script>
-    <script>
-        function toggleCheckboxes(source) {
-          const checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
-          checkboxes.forEach(checkbox => checkbox.checked = source.checked);
-        }
-        </script>
+   
         <script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
         <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
         <script src="../assets/js/bootstrap.bundle.min.js"></script>
-        <script src="../assets/vendors/apexcharts/apexcharts.js"></script>
-        <script src="../assets/js/pages/ui-apexchart.js"></script>
-        <script src="../assets/js/main.js"></script>
+       <script src="../assets/js/main.js"></script>
         <script>
-          let shippingprovidertable = document.querySelector('#shipping-provider-table');
-               new simpleDatatables.DataTable(shippingprovidertable, {
-                 sortable: false // Disables sorting arrows globally
-                 
-     });
+        let shippingprovidertable = document.querySelector('#shipping-provider-table');
+         new simpleDatatables.DataTable(shippingprovidertable, {
+          sortable: false // Disables sorting arrows globally
+      });
      let requesthistorytable = document.querySelector('#request-history-table');
                new simpleDatatables.DataTable(requesthistorytable, {
                  sortable: false // Disables sorting arrows globally
@@ -649,7 +626,6 @@
              document.querySelectorAll(".pagination").forEach(function (pagination) {
                paginationObserver.observe(pagination, { childList: true, subtree: true });
              });
-             
-                   </script> 
+             </script> 
 </body>
 </html>

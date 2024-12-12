@@ -1466,13 +1466,8 @@ outline: none;
 .dataTable-top{
   display: none;
 }
-/* .dataTable-bottom{
-  display: none;
-} */
-
-
 #cancel-order-modal{
-  width: 1030px;
+  width: 1030px !important;
   }
   .scrollable-table {
    overflow-x: auto; /* Enables horizontal scrolling */
@@ -1488,7 +1483,6 @@ outline: none;
    width: 100%; /* Ensure table takes full width of the container */
    border-collapse: collapse; /* Ensure no gaps between table cells */
  }
- 
  .table th,
  .table td {
    padding: 10px; /* Adds spacing */

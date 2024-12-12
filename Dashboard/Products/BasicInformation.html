@@ -460,7 +460,7 @@
 <input type="text" id="roundText" class="form-control round" placeholder="Please Input">
 </div>
 <div class="row mt-20 p-0">
-<h6 class="text-dark p-0"><span class="text-warning">*</span> Category</h6>
+<h6 class="text-dark p-0"><span class="text-warning">*</span>Product Category</h6>
 <select id="queryCategory1" name="queryCategory" class="select-dropdown p-0">
 <option value="" selected>Please Select</option>
 </select>
@@ -528,7 +528,7 @@
 <div class="mt-20" id="previewContainer">
   
 </div>
-<input type="file" class="d-none" multiple="multiple" id="uploadImgSecinput" accept=".jpg, .jpeg, .png">
+<input type="file" class="d-none" multiple="multiple" id="uploadImgSecinput" accept=".jpg,.webp,.png">
 
 
 </div>
@@ -669,9 +669,9 @@
       $(document).ready(function () {
         $(".select-dropdown").select2();
         // $(".select-dropdown2").select2();
-      });
+});
 
-function handleFileUpload(inputId, containerId) {
+  function handleFileUpload(inputId, containerId) {
     $("#" + inputId).on("change", function(event) {
         const files = event.target.files;
         const previewContainer = $("#" + containerId);
