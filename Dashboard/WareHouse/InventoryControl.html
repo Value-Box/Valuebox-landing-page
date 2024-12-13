@@ -555,8 +555,11 @@
                       </div>
                    </div>    
                   </div>
+
+
+                  
                 </div>
-                <div class="tab-pane fade" id="return_warehouse" role="tabpanel" aria-labelledby="list-monday-list">
+                <div class="tab-pane fade" id="return_warehouse_fields" role="tabpanel" aria-labelledby="list-monday-list">
                   <div class="row mt-40 gap-20">
                        <div class="col p-0">
                          <span class="message-text">Outbound Order No.</span>
@@ -880,6 +883,7 @@ sendwarehouseTables.forEach(table => {
     const returnWarehouse = document.querySelector("#incont_return_warehouse");
     const sendWarehouseTxt = document.querySelector("#send_warehouse_txt");
     const returnWarehouseTxt = document.querySelector("#return_warehouse_txt");
+    const returnWarehouseFields = document.querySelector("#return_warehouse_fields");
     const ioBtn = document.querySelector("#io_btn");
     const ooBtn = document.querySelector("#oo_btn");
    
@@ -891,7 +895,6 @@ sendwarehouseTables.forEach(table => {
 
     // Event listener for tab clicks
     sendWarehouse.addEventListener("click", () => {
-
       ooBtn.style.display = "none"; // Show field
       sendWarehouseTxt.style.display = "block"; // Show field
       ioBtn.style.display = "block";
