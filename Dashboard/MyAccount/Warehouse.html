@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap5.3.css">
     <link rel="stylesheet" href="../assets/vendors/apexcharts/apexcharts.css">
     <link rel="stylesheet" href="../assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
@@ -525,8 +525,11 @@
                    <td>Standard</td>
                    <td>Not set</td>
                    <td> 
-                    <div class="form-check form-switch p-0 d-flex  gap-2 mt-2">
-                    <input class="form-check-input m-0 toggleCheck"data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal" type="checkbox" id="flexSwitchCheckChecked">
+                    <div class="form-check form-switch p-0 d-flex gap-2 mt-2">
+                      <input 
+                        class="form-check-input m-0 toggleCheck" 
+                        type="checkbox" 
+                        id="flexSwitchCheckChecked">
                     </div>
                    </td>
                 </tr>
@@ -542,43 +545,44 @@
     <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered d-flex justify-content-center position-relative">
         <div class="modal-content warehouse-modal">
-         <div class="w-100">
-          <div class="modal-header p-0 ">
-            <span class="text-brand-color p-0 subHeading text-start">Update Holiday Mode<span>
-             <div id="closeModalBtn" class="btn-blue closeModalBtn rounded-circle cursor-pointer" data-bs-dismiss="modal" aria-label="Close">
-              <i class="fa-solid fa-xmark w-25 h-25"></i>
-            </div>
-          </div>
-          <div class="modal-body d-flex flex-column gap-3 p-0">
-         <div class="" id="wareHouseform">
-        <div class="mt-20">
-              <span class="fs-14 paragraph-2" id="email_varify_text">Holiday Period</span>
-             <input type="text" id="datePicker" class="form-control w-100 mt-10" name="daterange"placeholder="Start Date  |  End Date">
-              <div class="d-flex gap-2 mt-20 justify-content-end">
-               <button class="btn-outline-gray" data-bs-dismiss="modal">Cancel</button>
-               <button class="btn-blue" id="wareHouseFormNxtBtn">Next</button>
+          <div class="w-100">
+            <div class="modal-header p-0">
+              <span class="text-brand-color p-0 subHeading text-start">Update Holiday Mode</span>
+              <div id="closeModalBtn" class="btn-blue closeModalBtn rounded-circle cursor-pointer" data-bs-dismiss="modal" aria-label="Close">
+                <i class="fa-solid fa-xmark w-25 h-25"></i>
               </div>
             </div>
-            </div>
-          <div class="" id="newWareHouseform" style="display: none;">
-              <div class="d-flex flex-column gap-1 mt-20">
-                <span class="fs-14 paragraph-2" id="email_varify_text">Please confirm that you have set up the holiday mode for below date:</span>
-                <span class="fs-14 paragraph-2" id="email_varify_text">Warehouse: drop shipping</span>
-                <span class="fs-14 paragraph-2" id="email_varify_text">Date: 2024-12-24 ~ 2024-12-28</span>
-              </div>
-              <div class="mt-20">
-                <span class="fs-14 paragraph-2" id="email_varify_text">Holiday Period</span>
-                <input type="text" id="datePicker" class="form-control w-100 mt-10" name="daterange"placeholder="Start Date  |  End Date">
-               <div class="d-flex gap-2 mt-20 justify-content-end">
-                <button class="btn-outline-gray" data-bs-dismiss="modal">Cancel</button>
-                  <button class="btn-gray" id="Prev_btn">Previous</button>
-                 <button class="btn-blue" id="wareHouseFormNxtBtn">Next</button>
-                </div>
+            <div class="modal-body d-flex flex-column gap-3 p-0">
+              <!-- Form 1 -->
+              <div class="" id="wareHouseform">
+                <div class="mt-20">
+                  <span class="fs-14 paragraph-2">Holiday Period</span>
+                  <input type="text" id="datePicker" class="form-control w-100 mt-10" name="daterange" placeholder="Start Date  |  End Date">
+                  <div class="d-flex gap-2 mt-20 justify-content-end">
+                    <button class="btn-outline-gray" data-bs-dismiss="modal">Cancel</button>
+                    <button class="btn-blue" id="wareHouseFormNxtBtn">Next</button>
+                  </div>
                 </div>
               </div>
-         </div>
+              <!-- Form 2 -->
+              <div class="" id="newWareHouseform" style="display: none;">
+                <div class="d-flex flex-column gap-1 mt-20">
+                  <span class="fs-14 paragraph-2">Please confirm that you have set up the holiday mode for below date:</span>
+                  <span class="fs-14 paragraph-2">Warehouse: drop shipping</span>
+                  <span class="fs-14 paragraph-2">Date: 2024-12-24 ~ 2024-12-28</span>
+                </div>
+                <div class="mt-20">
+                  <span class="fs-14 paragraph-2">Holiday Period</span>
+                  <input type="text" id="datePicker" class="form-control w-100 mt-10" name="daterange" placeholder="Start Date  |  End Date">
+                  <div class="d-flex gap-2 mt-20 justify-content-end">
+                    <button class="btn-outline-gray" data-bs-dismiss="modal">Cancel</button>
+                    <button class="btn-gray" id="Prev_btn">Previous</button>
+                    <button class="btn-blue" id="wareHouseFormNxtBtn">Next</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          
         </div>
       </div>
     </div>
@@ -591,8 +595,6 @@
     <script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
     <script src="../assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/vendors/apexcharts/apexcharts.js"></script>
-    <script src="../assets/js/pages/ui-apexchart.js"></script>
     <script src="../assets/js/main.js"></script>
 
   
@@ -611,6 +613,18 @@
       newWareHouseform.style.display='none'
       wareHouseform.style.display='block'
     })
+    $(document).ready(function () {
+    // Listen for checkbox state changes
+    $('#flexSwitchCheckChecked').on('change', function () {
+      if ($(this).is(':checked')) {
+        // Open modal if checked
+        $('#exampleModalToggle').modal('show');
+      } else {
+        // Close modal if unchecked
+        $('#exampleModalToggle').modal('hide');
+      }
+    });
+  });
            $(document).ready(function () {
         // Function to toggle all checkboxes
         $('#selectAllCheckbox').on('change', function () {
