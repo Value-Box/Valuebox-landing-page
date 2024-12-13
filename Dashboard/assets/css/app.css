@@ -835,10 +835,10 @@
   stroke: #333;
   transition: all 0.5s;
 }
-/* .sidebar-wrapper .menu .sidebar-link .shapeSvg2 {
-  stroke: '' !important;
-  transition: all 0.5s;
-} */
+.sidebar-wrapper .menu .sidebar-link .shapeSvg2 {
+  stroke: none !important;
+  transition: all 0s;
+}
 .sidebar-wrapper .menu .sidebar-link span {
   margin-left: 1rem;
   /* color: #333; */
