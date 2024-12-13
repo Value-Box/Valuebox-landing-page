@@ -7,18 +7,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/bootstrap5.3.css">
-    <link rel="stylesheet" href="../assets/vendors/apexcharts/apexcharts.css">
     <link rel="stylesheet" href="../assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
-    <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="../assets/css/app.css">
     <link rel="stylesheet" href="../assets/vendors/simple-datatables/style.css">
     <link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-    <!-- <link rel="stylesheet" href="style.css" /> -->
-    <link rel="stylesheet" href="../style.css" />
-    <style>
-     
-      </style>
+   <link rel="stylesheet" href="../style.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
       
 </head>
 <body>
@@ -462,9 +458,12 @@
               </div>
               <div class="d-flex align-items-center gap-2 mt-30">
                 <span class="message-text gray-color fw-bold">Holiday Mode</span>
-                <div class="form-check form-switch p-0 d-flex  gap-2 mt-2">
-                  <input class="form-check-input m-0 toggleCheck"data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal" type="checkbox" id="flexSwitchCheckChecked">
-                  </div>
+                <div class="form-check form-switch p-0 d-flex gap-2 mt-2">
+                  <input 
+                    class="form-check-input m-0 toggleCheck" 
+                    type="checkbox" 
+                    id="flexSwitchCheckChecked">
+                </div>
               </div>
               <div class="d-flex flex-column gap-1 mt-30">
                 <span class="message-text gray-color fw-bold">Holiday Mode Period</span>
@@ -489,50 +488,50 @@
  </div>
   </div>
    </main>
-    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-      <div class="modal-dialog modal-dialog-centered d-flex justify-content-center position-relative">
-        <div class="modal-content warehouse-modal">
-         <div class="w-100">
-          <div class="modal-header p-0 ">
-          
-            <span class="text-brand-color p-0 subHeading text-start">Update Holiday Mode<span>
-             <div id="closeModalBtn" class="btn-blue closeModalBtn rounded-circle cursor-pointer" data-bs-dismiss="modal" aria-label="Close">
-              <img src="../Images/carbon_close-filled.svg" alt="">
+   <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered d-flex justify-content-center position-relative">
+      <div class="modal-content warehouse-modal">
+        <div class="w-100">
+          <div class="modal-header p-0">
+            <span class="text-brand-color p-0 subHeading text-start">Update Holiday Mode</span>
+            <div id="closeModalBtn" class="btn-blue closeModalBtn rounded-circle cursor-pointer" data-bs-dismiss="modal" aria-label="Close">
+              <i class="fa-solid fa-xmark w-25 h-25"></i>
             </div>
           </div>
           <div class="modal-body d-flex flex-column gap-3 p-0">
-         <div class="" id="wareHouseform">
-        <div class="mt-20">
-              <span class="fs-14 paragraph-2" id="email_varify_text">Holiday Period</span>
-             <input type="text" id="datePicker" class="form-control w-100 mt-10" name="daterange"placeholder="Start Date  |  End Date">
-              <div class="d-flex gap-2 mt-20 justify-content-end">
-               <button class="btn-outline-gray" data-bs-dismiss="modal">Cancel</button>
-               <button class="btn-blue" id="wareHouseFormNxtBtn">Next</button>
+            <!-- Form 1 -->
+            <div class="" id="wareHouseform">
+              <div class="mt-20">
+                <span class="fs-14 paragraph-2">Holiday Period</span>
+                <input type="text" id="datePicker" class="form-control w-100 mt-10" name="daterange" placeholder="Start Date  |  End Date">
+                <div class="d-flex gap-2 mt-20 justify-content-end">
+                  <button class="btn-outline-gray" data-bs-dismiss="modal">Cancel</button>
+                  <button class="btn-blue" id="wareHouseFormNxtBtn">Next</button>
+                </div>
               </div>
             </div>
-            </div>
-          <div class="" id="newWareHouseform" style="display: none;">
+            <!-- Form 2 -->
+            <div class="" id="newWareHouseform" style="display: none;">
               <div class="d-flex flex-column gap-1 mt-20">
-                <span class="fs-14 paragraph-2" id="email_varify_text">Please confirm that you have set up the holiday mode for below date:</span>
-                <span class="fs-14 paragraph-2" id="email_varify_text">Warehouse: drop shipping</span>
-                <span class="fs-14 paragraph-2" id="email_varify_text">Date: 2024-12-24 ~ 2024-12-28</span>
+                <span class="fs-14 paragraph-2">Please confirm that you have set up the holiday mode for below date:</span>
+                <span class="fs-14 paragraph-2">Warehouse: drop shipping</span>
+                <span class="fs-14 paragraph-2">Date: 2024-12-24 ~ 2024-12-28</span>
               </div>
               <div class="mt-20">
-                <span class="fs-14 paragraph-2" id="email_varify_text">Holiday Period</span>
-                <input type="text" id="datePicker" class="form-control w-100 mt-10" name="daterange"placeholder="Start Date  |  End Date">
-               <div class="d-flex gap-2 mt-20 justify-content-end">
-                <button class="btn-outline-gray" data-bs-dismiss="modal">Cancel</button>
+                <span class="fs-14 paragraph-2">Holiday Period</span>
+                <input type="text" id="datePicker" class="form-control w-100 mt-10" name="daterange" placeholder="Start Date  |  End Date">
+                <div class="d-flex gap-2 mt-20 justify-content-end">
+                  <button class="btn-outline-gray" data-bs-dismiss="modal">Cancel</button>
                   <button class="btn-gray" id="Prev_btn">Previous</button>
-                 <button class="btn-blue" id="wareHouseFormNxtBtn">Next</button>
-                </div>
+                  <button class="btn-blue" id="wareHouseFormNxtBtn">Next</button>
                 </div>
               </div>
-         </div>
+            </div>
           </div>
-          
         </div>
       </div>
     </div>
+  </div>
 
 
 
@@ -543,7 +542,6 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/main.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script>
   const wareHouseform=document.getElementById('wareHouseform')
   const newWareHouseform=document.getElementById('newWareHouseform')
@@ -560,25 +558,36 @@
       wareHouseform.style.display='block'
     })
     $(document).ready(function () {
+    // Listen for checkbox state changes
+    $('#flexSwitchCheckChecked').on('change', function () {
+      if ($(this).is(':checked')) {
+        // Open modal if checked
+        $('#exampleModalToggle').modal('show');
+      } else {
+        // Close modal if unchecked
+        $('#exampleModalToggle').modal('hide');
+      }
+    });
+  });
+    $(document).ready(function () {
         // Function to toggle all checkboxes
         $('#selectAllCheckbox').on('change', function () {
           const isChecked = $(this).prop('checked'); // Check if the "select all" checkbox is checked
           $('tbody input[type="checkbox"]').prop('checked', isChecked); // Set all checkboxes to the same state
         });
       });
-  $(function () {
-    // Apply Date Range Picker to all inputs with the name 'daterange'
+      $(function() {
     $('input[name="daterange"]').daterangepicker({
       opens: 'center',
       locale: {
         format: 'DD MMM YYYY' // Example: 01 Jan 2022
       },
-      autoUpdateInput: false // Prevents auto-updating input until selection
-    }, function (start, end, label) {
-      // Update input value with selected range
-      this.element.val(start.format('DD MMM YYYY') + ' | ' + end.format('DD MMM YYYY'));
-    });
-  });
+      autoUpdateInput: false  // This stops the input from updating automatically before selection
+    }, function(start, end, label) {
+      // When a user selects a range, update the input field with the selected dates
+      $('input[name="daterange"]').val(start.format('DD MMM YYYY') + ' | ' + end.format('DD MMM YYYY'));
+});
+});
 </script>
 </body>
 </html>
