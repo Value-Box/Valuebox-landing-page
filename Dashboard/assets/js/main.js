@@ -52,6 +52,8 @@ function j(t, e, o, i) {
 }
 
 let sidebarItems = document.querySelectorAll(".sidebar-item.has-sub");
+const sidebar = document.getElementById("sidebar");
+
 for (let i = 0; i < sidebarItems.length; i++) {
   let sidebarItem = sidebarItems[i];
 
@@ -60,6 +62,11 @@ for (let i = 0; i < sidebarItems.length; i++) {
     .querySelector(".sidebar-link")
     .addEventListener("click", function (e) {
       e.preventDefault();
+
+      // Check if sidebar is active
+      if (!sidebar.classList.contains("active")) {
+        return; // Exit if sidebar is not active
+      }
 
       let submenu = sidebarItem.querySelector(".submenu");
 
@@ -87,6 +94,42 @@ for (let i = 0; i < sidebarItems.length; i++) {
     });
 }
 
+// Handle sidebar collapse
+sidebar.addEventListener("classChange", () => {
+  if (!sidebar.classList.contains("active")) {
+    // Reset all submenus when sidebar is inactive
+    sidebarItems.forEach((item) => {
+      let submenu = item.querySelector(".submenu");
+
+      // Remove 'active' class but do not apply display styles
+      submenu.classList.remove("active");
+      submenu.style.display = ""; 
+      
+    });
+  }
+});
+
+// Utility function to detect class changes on the sidebar
+const observeSidebarClassChange = (element, callback) => {
+  const observer = new MutationObserver((mutationsList) => {
+    for (const mutation of mutationsList) {
+      if (mutation.type === "attributes" && mutation.attributeName === "class") {
+        callback();
+      }
+    }
+  });
+
+  observer.observe(element, { attributes: true });
+};
+
+// Start observing class changes on the sidebar
+observeSidebarClassChange(sidebar, () => {
+  const event = new Event("classChange");
+  sidebar.dispatchEvent(event);
+});
+
+
+
 window.addEventListener("DOMContentLoaded", (event) => {
   var w = window.innerWidth;
   if (w < 1200) {
@@ -106,9 +149,30 @@ window.addEventListener("DOMContentLoaded", (event) => {
 document.querySelector(".burger-btn").addEventListener("click", () => {
   document.getElementById("sidebar").classList.toggle("active");
 });
-document.querySelector(".sidebar-hide").addEventListener("click", () => {
-  document.getElementById("sidebar").classList.toggle("active");
+// document.querySelector(".sidebar-hide").addEventListener("click", () => {
+//   document.getElementById("sidebar").classList.toggle("active");
+// });
+
+// const sidebarHideButton = document.querySelector(".sidebar-hide");
+
+// if (sidebarHideButton) {
+//   sidebarHideButton.addEventListener("click", () => {
+//     document.getElementById("sidebar").classList.toggle("active");
+//   });
+// }
+// Add `active` class to the corresponding sidebar item based on the current page
+document.addEventListener("DOMContentLoaded", () => {
+  const currentPage = window.location.pathname.split("/").pop(); // Get the current page name
+  const sidebarItems = document.querySelectorAll(".sidebar-item");
+
+  sidebarItems.forEach((item) => {
+    const link = item.querySelector(".sidebar-link");
+    if (link && link.getAttribute("href").includes(currentPage)) {
+      item.classList.add("page-active"); // Add a unique class for active page
+    }
+  });
 });
+
 
 // Perfect Scrollbar Init
 if (typeof PerfectScrollbar == "function") {
@@ -119,12 +183,76 @@ if (typeof PerfectScrollbar == "function") {
 }
 
 // Scroll into active sidebar
-document.querySelector(".sidebar-item.active").scrollIntoView(false);
-document
-  .getElementById("burger-btn")
-  .addEventListener("click", function (event) {
-    event.preventDefault(); // Prevent the default behavior (page reload or scroll)
-    // Add any other actions you want to trigger on click (e.g., opening a menu)
-  });
+// document.querySelector(".sidebar-item.active").scrollIntoView(false);
+// document.getElementById("burger-btn").addEventListener("click", function (event) {
+//     event.preventDefault(); // Prevent the default behavior (page reload or scroll)
+    
+//   });
 
+document.addEventListener("DOMContentLoaded", (event) => {
+  const activeSidebarItem = document.querySelector(".sidebar-item.active");
+  if (activeSidebarItem) {
+    activeSidebarItem.scrollIntoView(false);
+  }
+});
+
+  
+const menuItems = document.querySelectorAll('.sidebar-item');
+
+menuItems.forEach((menuItem) => {
+  const submenu = menuItem.querySelector('.itemsMenu');
+  const sidebarLink = menuItem.querySelector('.sidebar-link');
+  const sidebar = document.getElementById('sidebar');
+
+  if (submenu && sidebarLink) {
+    menuItem.addEventListener('mouseenter', () => {
+      // If sidebar is active, reset submenu styles and skip hover logic
+      if (sidebar && sidebar.classList.contains('active')) {
+        submenu.style.display = ""; // Reset any inline display styles
+        submenu.style.position = "";
+        submenu.style.top = "";
+        submenu.style.left = "";
+        return;
+      }
+
+      // Get the bounding rectangle of the sidebar-link
+      const rect = sidebarLink.getBoundingClientRect();
+
+      // Dynamically set the position of itemsMenu
+      submenu.style.position = 'fixed'; // Keeps submenu fixed to viewport
+      submenu.style.top = `${rect.top+5}px`; // Use rect.top relative to viewport
+      submenu.style.left = `${rect.right}px`; // Position to the right of sidebar-link
+      submenu.style.display = 'block';
+    });
+
+    menuItem.addEventListener('mouseleave', () => {
+      // If sidebar is active, reset submenu styles and skip hide logic
+      if (sidebar && sidebar.classList.contains('active')) {
+        submenu.style.display = ""; // Reset inline styles
+        submenu.style.position = "";
+        submenu.style.top = "";
+        submenu.style.left = "";
+        return;
+      }
+
+      // Hide submenu when hover ends
+      submenu.style.display = 'none';
+    });
+
+    sidebarLink.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      // Ensure submenu styles are reset for active sidebar
+      if (sidebar && sidebar.classList.contains('active')) {
+        submenu.style.display = ""; // Reset inline styles
+        submenu.style.position = "";
+        submenu.style.top = "";
+        submenu.style.left = "";
+      }
+
+      // Toggle submenu visibility for click behavior
+      submenu.classList.toggle('open');
+    });
+  }
+});
 
