@@ -2362,6 +2362,7 @@ line-height: 24px;
 .notificationSection.read {
   background-color: #FFF; /* Read state */
 }
+
 @media(max-width:1400px){
   .custom-modal-width{
     max-width: 1250px !important;

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap5.3.css">
     <link rel="stylesheet" href="assets/css/app.css">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="../style.css">
@@ -75,7 +75,7 @@
             </div>
           </div>
 
-        <div class="container-fluid d-flex justify-content-center px-md-5 px-2 p-0">
+        <div class="container-fluid d-flex justify-content-center px-md-5 px-2 p-0 d-none">
         <div class="row w-100 bg-white p-md-5 p-2 rounded-4 m-0">
         <div class="col-lg-1 col-md-2 col-3  d-flex flex-column gap-5 position-relative">
           <div class="PendingApprovalPage">
@@ -139,7 +139,101 @@
       </div>
         </div>
         </div>
+        <div class="container-fluid d-flex flex-column gap-5 justify-content-center px-md-5 px-2 p-0">
+          <div class="row w-100 bg-white p-md-5 p-2 m-0 Rejection-Reason">
+            <span class="heading-one">Reason for Rejection:</span>
+            <ul class="paragraph-2 text-NColor p-3">
+              <li>Applied with fake identity.</li>
+              <li>No business named “Business Name” is registered under Pakistan Government</li>
+              <li>Fake NTN</li>
+            </ul>
+          </div>
+          <div class="row w-100 bg-white p-md-5 p-2 rounded-4 m-0 ">
+            <p class="text-yellow">Seller Support</p>
+            <div class="row m-0 align-items-center applicationStatus justify-content-between border border-secondary mb-5 mb-sm-0 px-4">
+              <div class="col-md-5 col-xl-7 p-0 applicationStatusText">
+                <h3>Request for Application Review</h3>
+                <p class="mx-1 col-md-12 col-lg-12 col-xl-12">NOTE: If you think we made a mistake while review your application you can request a review</p>
+              </div>
+              <div class="col-md-7 col-xl-5 p-0 d-flex justify-content-end ">
+                  
+                  <button class="btn-blue" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal"> Request a Review</button>
+                 
+              
+            </div> 
+          </div>
+         <span class="heading-one text-center py-2">OR</span>
+         <span class="heading-one  py-2">Contact Support Via:</span>
+         <span class="paragraph-3 gray-color py-2 d-flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M7 9L10.75 12C11.1047 12.284 11.5456 12.4388 12 12.4388C12.4544 12.4388 12.8953 12.284 13.25 12L17 9M21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17Z" stroke="#999999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>   Email: care@valuebox.com</span>
+         <span class="paragraph-3 gray-color py-2 d-flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M19.2 20C17.3987 20 15.5927 19.5853 13.782 18.756C11.9713 17.9267 10.303 16.749 8.777 15.223C7.26367 13.697 6.08933 12.0233 5.254 10.202C4.418 8.38 4 6.57933 4 4.8V4H8.439L9.287 8.083L6.591 10.593C7.047 11.3837 7.51933 12.106 8.008 12.76C8.49667 13.414 9.00567 14.0037 9.535 14.529C10.0697 15.089 10.6723 15.6123 11.343 16.099C12.0137 16.5857 12.779 17.0657 13.639 17.539L16.25 14.831L20 15.587V20H19.2Z" fill="#999999"/>
+        </svg>   Phone Number: 7894561234</span>
+        </div>
     </main>
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered d-flex justify-content-center position-relative">
+        <div class="modal-content" id="Request-Order-Modal">
+         <div class=" p-4" >
+          <div class="modal-header mb-3 p-0 ">
+            <h5 class="text-dark p-0">Reason to Request<span class="text-warning">*</span></h5>
+           
+              <div id="closeModalBtn" class="btn-blue closeModalBtn rounded-circle cursor-pointer" data-bs-dismiss="modal" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+          </div>
+          <div class="modal-body d-flex flex-column gap-3 p-0">
+            <label class="d-flex gap-1">
+              <input class="form-radio-input" type="radio" name="relationship" value="brandowner"> Disagreement with Rejection Reason
+            </label>
+            <label class="d-flex gap-1">
+              <input class="form-radio-input" type="radio" name="relationship" value="blue"> Disagreement with Rejection Reason
+              </label>
+            <label class="d-flex gap-1">
+              <input class="form-radio-input" type="radio" name="relationship" value="green"> Misunderstanding of Business Details
+            </label>
+            <label class="d-flex gap-1">
+              <input class="form-radio-input" type="radio" name="relationship" value="green"> Technical Issues During Submission
+            </label>
+            <label class="d-flex gap-1">
+              <input class="form-radio-input" type="radio" name="relationship" value="green"> Clarification on Eligibility Criteria
+            </label> 
+            <label class="d-flex gap-1">
+              <input class="form-radio-input" type="radio" name="relationship" value="green"> Other
+            </label>
+          </div>
+          <div class="d-flex flex-column mt-4 mb-4 p-0 ">
+            <h5 class="text-dark p-0 mb-3">Explain Reason<span class="text-warning">*</span></h5>
+            <textarea id="w3review" name="w3review" placeholder="Please input" rows="4" cols="50"></textarea>
+         <div class="">
+          <div class="mt-20" id="previewContainer">
+             <img src="Images/Rectangle 1140.png" alt="">  
+             <img src="Images/Rectangle 1140.png" alt="">  
+             <img src="Images/Rectangle 1140.png" alt="">  
+             <img src="Images/Rectangle 1140.png" alt="">  
+          </div>
+          <div class="w-25">
+            <label for="uploadImgSecinput" class="btn-gray w-75 mt-20"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6564 12L16.2424 10.586L18.3634 8.46402C18.5544 8.27952 18.7068 8.05884 18.8116 7.81483C18.9164 7.57082 18.9716 7.30838 18.9739 7.04282C18.9762 6.77726 18.9256 6.5139 18.825 6.26811C18.7245 6.02232 18.576 5.79901 18.3882 5.61123C18.2004 5.42344 17.9771 5.27494 17.7313 5.17437C17.4855 5.07381 17.2221 5.02321 16.9566 5.02552C16.691 5.02782 16.4286 5.083 16.1846 5.18782C15.9406 5.29263 15.7199 5.445 15.5354 5.63602L11.2924 9.87902C10.9174 10.2541 10.7068 10.7627 10.7068 11.293C10.7068 11.8233 10.9174 12.332 11.2924 12.707L9.87838 14.121C9.50693 13.7496 9.21227 13.3086 9.01124 12.8233C8.81021 12.338 8.70674 11.8178 8.70674 11.2925C8.70674 10.7672 8.81021 10.2471 9.01124 9.76174C9.21227 9.27642 9.50693 8.83545 9.87838 8.46402L14.1204 4.22202C14.8705 3.47185 15.888 3.05042 16.9489 3.05042C17.4742 3.05042 17.9943 3.15388 18.4797 3.3549C18.965 3.55593 19.4059 3.85057 19.7774 4.22202C20.1488 4.59346 20.4435 5.03443 20.6445 5.51974C20.8455 6.00506 20.949 6.52522 20.949 7.05052C20.949 7.57582 20.8455 8.09598 20.6445 8.58129C20.4435 9.06661 20.1488 9.50757 19.7774 9.87902L17.6564 12ZM6.34238 12L7.75638 13.414L5.63538 15.536C5.44436 15.7205 5.292 15.9412 5.18718 16.1852C5.08236 16.4292 5.02719 16.6917 5.02488 16.9572C5.02258 17.2228 5.07318 17.4861 5.17374 17.7319C5.2743 17.9777 5.42281 18.201 5.61059 18.3888C5.79838 18.5766 6.02168 18.7251 6.26748 18.8257C6.51327 18.9262 6.77663 18.9768 7.04219 18.9745C7.30775 18.9722 7.57019 18.917 7.81419 18.8122C8.0582 18.7074 8.27889 18.555 8.46338 18.364L12.7064 14.121C13.0813 13.746 13.292 13.2373 13.292 12.707C13.292 12.1767 13.0813 11.6681 12.7064 11.293L14.1204 9.87902C14.4918 10.2505 14.7865 10.6914 14.9875 11.1767C15.1886 11.6621 15.292 12.1822 15.292 12.7075C15.292 13.2328 15.1886 13.753 14.9875 14.2383C14.7865 14.7236 14.4918 15.1646 14.1204 15.536L9.87938 19.778C9.50794 20.1495 9.06697 20.4441 8.58166 20.6451C8.09634 20.8462 7.57619 20.9496 7.05088 20.9496C6.52558 20.9496 6.00543 20.8462 5.52011 20.6451C5.0348 20.4441 4.59383 20.1495 4.22238 19.778C3.47222 19.0279 3.05078 18.0104 3.05078 16.9495C3.05078 15.8886 3.47222 14.8712 4.22238 14.121L6.34238 12Z" fill="#999999"/>
+            </svg> Attachments</label>
+          </div>
+          <input type="file" class="d-none" multiple="multiple" id="uploadImgSecinput" accept=".jpg, .webg, .png">
+            </div>
+           </div>
+          <div class="d-flex gap-2 ">
+            <button class="btn-blue">Submitt</button>
+            <button class="btn-gray" data-bs-dismiss="modal">Cancel</button>
+          </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
   
+
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
