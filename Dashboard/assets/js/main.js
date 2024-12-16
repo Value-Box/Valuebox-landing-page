@@ -274,48 +274,45 @@ menuItems.forEach((menuItem) => {
   }
 });
 
+
+
+
 function redirectBasedOnScreenSize() {
   // Get the screen width
   const screenWidth = window.innerWidth;
-
-  console.log("Current screen width:", screenWidth); // Debugging log
 
   // Determine the base path dynamically
   const basePath = window.location.pathname.includes("Valuebox-landing-page")
     ? "/Valuebox-landing-page"
     : "";
 
-  // Get the current path
-  const currentPath = window.location.pathname;
-
+  // Check screen size and redirect
   if (screenWidth <= 992) {
-    const targetPath = `${basePath}/Dashboard/downloadAppPage.html`;
-
-    // Redirect only if not already on the target page
-    if (currentPath !== targetPath) {
+    // Prevent infinite redirect by checking current page
+    if (!window.location.pathname.includes("downloadAppPage.html")) {
       console.log("Redirecting to downloadAppPage.html");
-      window.location.href = targetPath;
+      window.location.href = `${basePath}/Dashboard/downloadAppPage.html`; // Adjust the path
+    } else {
+      console.log("Already on downloadAppPage.html, no further redirect");
     }
   } else {
-    const targetPath = `${basePath}/Dashboard/index.html`;
-
-    // Redirect only if not already on the target page
-    if (currentPath !== targetPath && window.history.length > 1) {
-      console.log("Screen size > 992px, going back to the previous page");
+    // Only go back if not already handled
+    if (window.history.length > 1) {
+      console.log("Navigating back");
       window.history.back();
     } else {
-      console.log("No previous history or already on the correct page.");
+      console.log("No history to navigate back to");
     }
   }
 }
 
-// Run the function on page load
-redirectBasedOnScreenSize();
-
-// Add event listener for resize
+// Add event listeners
 window.addEventListener("resize", () => {
   // Add a debounce to avoid frequent checks on resize
   clearTimeout(window.redirectTimeout);
   window.redirectTimeout = setTimeout(redirectBasedOnScreenSize, 200); // Delay for 200ms
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  redirectBasedOnScreenSize(); // Run once on page load
+});
