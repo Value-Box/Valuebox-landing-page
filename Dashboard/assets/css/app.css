@@ -1745,6 +1745,18 @@ outline: none;
   background: #FFF;
   border-radius: 12px;
 }
+#sidebar:not(.active) .sidebar-item .sidebar-link:hover .shapeSvg {
+  stroke: #f5bc3a;
+  fill: none; /* Optional: To remove any fill */
+}
+#sidebar:not(.active) .sidebar-item .sidebar-link .shapeSvg2 {
+transition: all 0.5s;
+}
+#sidebar:not(.active) .sidebar-item .sidebar-link:hover .shapeSvg2 {
+  fill: #e09b00;
+  color: white;
+}
+
 
 #sidebar:not(.active) .menu{
   max-height: 70vh;
