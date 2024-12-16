@@ -755,6 +755,7 @@ $(document).ready(function () {
     if ($(this).is(':checked')) {
       // Ensure FBV is unchecked
       $('#VB').prop('checked', false);
+      $('#location_fieldset').css('display', 'flex'); // Set display to flex
 
       // Animate FBM table and section
       $('#fullByMerchant').slideDown(animationSpeed);
@@ -773,7 +774,7 @@ $(document).ready(function () {
     if ($(this).is(':checked')) {
       // Ensure FBM is unchecked
       $('#merchant').prop('checked', false);
-
+      $('#location_fieldset').hide();
       // Animate FBV table
       $('#fbvTable').slideDown(animationSpeed);
 
@@ -783,6 +784,7 @@ $(document).ready(function () {
     } else {
       // Ensure at least one checkbox remains checked
       $(this).prop('checked', true);
+      $('#location_fieldset').show();
     }
   });
 });

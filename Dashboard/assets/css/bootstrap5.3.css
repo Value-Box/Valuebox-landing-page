@@ -2305,7 +2305,7 @@ textarea.form-control-lg {
   --bs-form-check-bg: var(--bs-body-bg);
   width: 1em;
   height: 1em;
-  margin-top: 0.25em;
+  /* margin-top: 0.25em; */
   vertical-align: top;
   background-color: var(--bs-form-check-bg);
   background-image: var(--bs-form-check-bg-image);
@@ -3296,7 +3296,7 @@ fieldset:disabled .btn {
 }
 .fade:not(.show) {
   opacity: 0;
-  position:absolute;
+  /* position:absolute; */
 }
 .collapse:not(.show) {
   display: none;
@@ -12097,6 +12097,11 @@ fieldset:disabled .btn {
     background-color: var(--Natural-Gray-Color);
     border: 1px solid var(--Natural-Gray-Color);
   }
+  .btn-outline-gray:hover svg{
+    stroke: var(--Gray-Color);
+    /* background-color: var(--Natural-Gray-Color);
+    border: 1px solid var(--Natural-Gray-Color); */
+  }
   .btn-green{
     padding: 5px 20px;
     border-radius: 5px;
@@ -12735,37 +12740,37 @@ background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
     .heading-one {
       font-size: clamp(20px, 4vw, 24px);
       line-height: clamp(24px, 5vw, 32px);
-      font-weight: 600;
+      font-weight: 500;
     }
     .subHeading {
       font-size: clamp(18px, 4vw, 20px);
       line-height: clamp(20px, 5vw, 30px);
-      font-weight: 600;
+      font-weight: 500;
     }
     .subHeading-blue {
       font-size: clamp(18px, 4vw, 20px);
       line-height: clamp(20px, 5vw, 30px);
-      font-weight: 600;
+      font-weight: 500;
     }
     .subHeading-3 {
       font-size: clamp(16px, 4vw, 18px);
       line-height: clamp(20px, 5vw, 28px);
-      font-weight: 600;
+      font-weight: 500;
     }
     .subHeading-4 {
       font-size: clamp(14px, 4vw, 16px);
       line-height: clamp(20px, 5vw, 24px);
-      font-weight: 600;
+      font-weight: 500;
     }
     .subHeading-5 {
       font-size: clamp(14px, 4vw, 16px);
       line-height: clamp(20px, 5vw, 24px);
-      font-weight: 600;
+      font-weight: 500;
     }
     .message-text {
       font-size: clamp(12px, 4vw, 14px);
       line-height: clamp(20px, 5vw, 24px);
-      font-weight: 600;
+      font-weight: 500;
     }
     .paragraph-1 {
       font-size: clamp(14px, 4vw, 16px);
@@ -12785,7 +12790,7 @@ background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
     .paragraph-3 {
       font-size: clamp(12px, 4vw, 14px);
       line-height: clamp(16px, 5vw, 20px);
-      font-weight: 600;
+      font-weight: 500;
     }
     .btn-blue {
       padding: 5px 10px;

@@ -1112,7 +1112,7 @@ td {
 .choices__inner {
   min-height: 30px;
   height: 38px !important;
-  /* overflow: auto; */
+  overflow: auto;
   background: transparent;
   display: flex;
   align-items: center;
@@ -1121,7 +1121,12 @@ td {
     font-weight: 500;
     /* padding: 4px 10px; */
 }
-
+.choices__inner::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge */
+}
+.choices__list--multiple{
+  height: 38px !important;
+}
 #selOptType{
   height: fit-content;
 }
@@ -1658,7 +1663,7 @@ background: #F2F2F2;
   border-radius: 5px;
   display: block;
   font-size: 16px;
-  width: 180px !important;
+  /* width: 180px !important; */
   display: flex;
   justify-content: center;
   align-items: center;

@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap5.3.css">
     <!-- <link rel="stylesheet" href="../assets/vendors/choices.js/choices.min.css" /> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -41,18 +41,59 @@
                 <input type="search" class="w-100 border-0 bg-transparent" placeholder="Search for anything...">
           </div>
           <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link p-0 position-relative" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="30" viewBox="0 0 29 30" fill="none">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3157 0.857178C9.69515 0.857178 7.49368 2.82759 7.20429 5.4321L5.99833 16.2857H2.56975C1.62298 16.2857 0.855469 17.0533 0.855469 18V19.7143C0.855469 20.6611 1.62298 21.4286 2.56975 21.4286H26.5698C27.5165 21.4286 28.284 20.6611 28.284 19.7143V18C28.284 17.0533 27.5165 16.2857 26.5698 16.2857H23.1412L21.9352 5.4321C21.6458 2.82759 19.4444 0.857178 16.8238 0.857178H12.3157Z" fill="#002882"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3157 0.857178C9.69515 0.857178 7.49368 2.82759 7.20429 5.4321L5.99833 16.2857H2.56975C1.62298 16.2857 0.855469 17.0533 0.855469 18V19.7143C0.855469 20.6611 1.62298 21.4286 2.56975 21.4286H26.5698C27.5165 21.4286 28.284 20.6611 28.284 19.7143V18C28.284 17.0533 27.5165 16.2857 26.5698 16.2857H23.1412L21.9352 5.4321C21.6458 2.82759 19.4444 0.857178 16.8238 0.857178H12.3157Z" fill="black" fill-opacity="0.2"/>
-                  <rect opacity="0.3" x="11.1406" y="23.1431" width="6.85714" height="6.85714" rx="2.57143" fill="#F1B733"/>
-                </svg>
-                <div class="notification">
-                  <span>6</span>
-                </div>
-              </a>
-            </li>
+            <div class="dropdown ms-auto">
+              <button class="border-0 bg-transparent dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <ul class="navbar-nav ms-3 w-25">
+                  <li class="nav-item active ">
+                    <a class="nav-link p-0 position-relative" href="#">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="29" height="30" viewBox="0 0 29 30" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3157 0.857178C9.69515 0.857178 7.49368 2.82759 7.20429 5.4321L5.99833 16.2857H2.56975C1.62298 16.2857 0.855469 17.0533 0.855469 18V19.7143C0.855469 20.6611 1.62298 21.4286 2.56975 21.4286H26.5698C27.5165 21.4286 28.284 20.6611 28.284 19.7143V18C28.284 17.0533 27.5165 16.2857 26.5698 16.2857H23.1412L21.9352 5.4321C21.6458 2.82759 19.4444 0.857178 16.8238 0.857178H12.3157Z" fill="#002882"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3157 0.857178C9.69515 0.857178 7.49368 2.82759 7.20429 5.4321L5.99833 16.2857H2.56975C1.62298 16.2857 0.855469 17.0533 0.855469 18V19.7143C0.855469 20.6611 1.62298 21.4286 2.56975 21.4286H26.5698C27.5165 21.4286 28.284 20.6611 28.284 19.7143V18C28.284 17.0533 27.5165 16.2857 26.5698 16.2857H23.1412L21.9352 5.4321C21.6458 2.82759 19.4444 0.857178 16.8238 0.857178H12.3157Z" fill="black" fill-opacity="0.2"/>
+                        <rect opacity="0.3" x="11.1406" y="23.1431" width="6.85714" height="6.85714" rx="2.57143" fill="#F1B733"/>
+                      </svg>
+                      <div class="notification">
+                        <span>6</span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </button>
+            
+              <!-- Dropdown menu with notifications -->
+              <ul class="dropdown-menu min-w-150 max-w-400">
+                <li><a class="dropdown-item text-truncate" href="../notifications.html">Notification</a></li>
+                <li>
+                  <a class="dropdown-item notification-item" href="../notifications.html">
+                    <img src="https://img.icons8.com/flat_round/64/000000/bell.png" alt="Notification Icon">
+                    <div class="notification-text">
+                      <h6>System Alert</h6>
+                      <p>The system will undergo maintenance tomorrow. Please be prepared for potential downtime...</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item notification-item" href="../notifications.html">
+                    <img src="https://img.icons8.com/flat_round/64/000000/bell.png" alt="Notification Icon">
+                    <div class="notification-text">
+                      <h6>New Message</h6>
+                      <p>You have a new message in your inbox from John.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item notification-item" href="../notifications.html">
+                    <img src="https://img.icons8.com/flat_round/64/000000/bell.png" alt="Notification Icon">
+                    <div class="notification-text">
+                      <h6>Meeting Reminder</h6>
+                      <p>Your meeting with the team is scheduled for 3:00 PM tomorrow.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-truncate" href="../notifications.html">See More...</a>
+                </li>
+              </ul>
+            </div>
             <li class="nav-item p-0">
               <a class="nav-link p-0" href="#">
                   <img class="w-100" src="../Images/UserProfile.svg" alt="">
@@ -458,8 +499,8 @@
     <main class="backcolor" id="main">
         <div class="navigation anchortags">
             <a href="../index.html">Home</a>
-            <a href="Promos.html">> Warehouse </a>
-            <a class="active1" href="manageProducts.html">> Create Outbound</a>
+            <a href="InventoryControl.html">> Warehouse </a>
+            <a class="active1" href="createOutBound.html">> Create Outbound</a>
         </div>
             <span class="heading-one mt-20 d-inline-block">Create Outbound</span>
        
@@ -469,7 +510,7 @@
                 <div class="row gap-20 mt-20">
                     <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">Outbound Warehouse</span>
-                        <fieldset class="form-group form-group-lg mb-0 mt-10">
+                        <fieldset class="form-group form-group-lg mb-0 ">
                           <select class="select-dropdown form-select" id="basicSelect">
                               <option value="">Please Select</option>
                               <option value="kachehri">Kachehri Warehouse</option>
@@ -480,13 +521,13 @@
 
                     <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">Warehouse Address</span>
-                        <input class="form-control mt-10" type="text"  placeholder="" disabled>
+                        <input class="form-control " type="text"  placeholder="" disabled>
                     </div>
                 </div>
                 <div class="d-flex mt-40 gap-80">
                     <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">Inventory Type</span>
-                        <fieldset class="form-group form-group-lg mb-0 mt-10">
+                        <fieldset class="form-group form-group-lg mb-0 ">
                           <select class="select-dropdown form-select" id="basicSelect1">
                               <option value="">Please Select</option>
                               <option value="kachehri">Damaged</option>
@@ -500,18 +541,18 @@
                         <div class="d-flex flex-column align-items-start justify-content-start gap-1">
                             <div class="d-flex align-items-center gap-2">
                               <input class="form-radio-input" type="radio" name="option" id="drop_of_vb" checked>
-                            <span class=" fs-18 text-brand-color" id="drop_of_vb_txt">Drop Off by VB</span>
+                            <label class=" fs-18 text-brand-color" id="drop_of_vb_txt" for="drop_of_vb">Drop Off by VB</label>
                             </div>
                             <div class="d-flex align-items-center gap-2">
                               <input class="form-radio-input" type="radio" name="option" id="pick_up_sell" >
-                            <span class=" fs-18 text-brand-color" id="pick_up_sell_txt">Pick Up by Seller</span>
+                            <label class=" fs-18 text-brand-color" id="pick_up_sell_txt" for="pick_up_sell">Pick Up by Seller</label>
                             </div>
                         </div>
                         </div>
                     </div>
                     <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">Estimated Time</span>
-                        <input type="date" class="form-control bg-transparent mt-10" placeholder="Start Date">
+                        <input type="datetime-local" class="form-control bg-transparent " placeholder="Start Date" id="datetimeInput">
                     </div>
                 </div>
             </div>
@@ -523,7 +564,7 @@
                 <div class="d-flex mt-20 gap-20">
                     <div class="col-6 p-0">
                         <span class="text-orange-star fs-18 gray-color">Warehouse</span>
-                        <fieldset class="form-group mt-10">
+                        <fieldset class="form-group ">
                           <select class="select-dropdown form-select" id="basicSelect2">
                               <option value="">Please Select</option>
                               <option value="kachehri">Kachehri Warehouse</option>
@@ -533,21 +574,21 @@
                     </div>
                     <div class="col-6 p-0">
                         <span class="text-orange-star fs-18 gray-color">Warehouse Address</span>
-                        <input class="form-control mt-10" type="text"  placeholder="" disabled>
+                        <input class="form-control " type="text"  placeholder="" disabled>
                     </div>
                 </div>
                 <div class="d-flex mt-40 gap-20">
                     <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">Country</span>
-                        <input class="form-control mt-10" type="text"  placeholder="" disabled>
+                        <input class="form-control " type="text"  placeholder="" disabled>
                     </div>
                     <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">City</span>
-                        <input class="form-control mt-10" type="text"  placeholder="" disabled>
+                        <input class="form-control " type="text"  placeholder="" disabled>
                     </div>
                     <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">Post Code</span>
-                        <input class="form-control mt-10" type="text"  placeholder="" disabled>
+                        <input class="form-control " type="text"  placeholder="" disabled>
                     </div>
                 </div>
                 <span class="subHeading-3 text-natural-dark mt-40 d-inline-block">Contact</span>
@@ -555,11 +596,11 @@
                 <div class="d-flex mt-40 gap-20">
                     <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">Contact Name</span>
-                        <input class="form-control mt-10" type="text"  placeholder="Please Input" >
+                        <input class="form-control " type="text"  placeholder="Please Input" >
                     </div>
                     <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">Mobile Number</span>
-                        <input class="form-control mt-10" type="text"  placeholder="Please Input" >
+                        <input class="form-control " type="text" placeholder="Please Input" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="" id="" minlength="11" maxlength="11">
                     </div>
                 </div>
             </div>
@@ -595,7 +636,7 @@
                         <table class="out_bound_Table w-min-1200" id="out_bound_Table">
                             <thead>
                               <tr>
-                                <th class="shadow "><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Fulfillment SKU</th>
+                                <th class="shadow "><input class="form-check-input master-checkbox me-1" type="checkbox" name="" id="pend_Adj_Sku"> Fulfillment SKU</th>
                                 <th>Fulfillment SKU Name</th> 
                                 <th>Seller SKU</th>
                                 <th>Inventory in Warehouse</th>
@@ -607,11 +648,11 @@
                             <tbody>
                               
                               <tr>
-                                <td><div class="d-flex gap-1"><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> 2245646_PK_14454120</div></td>
+                                <td><div class="d-flex gap-1"><input class="form-check-input row-checkbox me-1" type="checkbox" name="" id="pend_Adj_Sku"> 2245646_PK_14454120</div></td>
                                 <td>Pack of 6 - Pull B ack Mini Car Set For kids & boys toys</td>
                                 <td>MINI-CARS-6</td>
                                 <td>15</td>
-                                <td><input type="text" id="costPrice" class="form-control text-center" placeholder="RS." required oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td>
+                                <td><input type="text" id="costPrice" class="form-control text-center" placeholder="00" required oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td>
                                 <td>VBPK789651</td>
                                 <td class="sticky-right text-center bg-bs-white px-5">
                                     <div class="d-flex gap-20">
@@ -664,16 +705,16 @@
             </div>
           <div class="d-flex gap-4 mt-30">
             <div class="col p-0">
-              <span class="fs-18 gray-color">Fulfillment SKU</span>
-              <input class="form-control mt-10" type="text"  placeholder="Please Input" >
+              <span class="fs-18 gray-color">Product Name</span>
+              <input class="form-control " type="text"  placeholder="Please Input" >
            </div>
             <div class="col p-0">
               <span class="fs-18 gray-color">Seller SKU</span>
-              <input class="form-control mt-10" type="text"  placeholder="Please Input" >
+              <input class="form-control " type="text"  placeholder="Please Input" >
            </div>
            <div class="col p-0">
             <span class="fs-18 gray-color">Fulfillment Name</span>
-            <input class="form-control mt-10" type="text"  placeholder="Please Input" >
+            <input class="form-control " type="text"  placeholder="Please Input" >
            </div>
            <div class="col p-0 d-flex justify-content-end gap-2 mt-auto">
             <button class="btn-gray">Reset</button>
@@ -684,7 +725,7 @@
               <table class="w-100" id="add-sku-table">
                 <thead>
                   <tr class="text-dark">
-                    <th class="d-flex gap-2"><input class="form-check-input" type="checkbox"> Product Name</th>
+                    <th class="d-flex gap-2"><input class="form-check-input master-checkbox" type="checkbox"> Product Name</th>
                     <th class="border-bottom-0">Seller SKU</th>
                     <th>Sellable Inventory in Warehouse</th>
                     
@@ -692,19 +733,19 @@
                 </thead>
                 <tbody class="py-5">
                   <tr>
-                   <td class="d-flex gap-2"><input class="form-check-input" type="checkbox"> Pack of 6 - Pull B ack Mini Car Set For kids & boys toys</td>
+                   <td class="d-flex gap-2"><input class="form-check-input row-checkbox" type="checkbox"> Pack of 6 - Pull B ack Mini Car Set For kids & boys toys</td>
                    <td>MINI-CARS-6</td>
                    <td>50</td>
                    
                   </tr>
                      <tr>
-                      <td class="d-flex gap-2"><input class="form-check-input" type="checkbox"> Pack of 6 - Pull B ack Mini Car Set For kids & boys toys</td>
+                      <td class="d-flex gap-2"><input class="form-check-input row-checkbox" type="checkbox"> Pack of 6 - Pull B ack Mini Car Set For kids & boys toys</td>
                       <td>MINI-CARS-6</td>
                       <td>50</td>
                       
                      </tr>
                      <tr>
-                      <td class="d-flex gap-2"><input class="form-check-input" type="checkbox"> Pack of 6 - Pull B ack Mini Car Set For kids & boys toys</td>
+                      <td class="d-flex gap-2"><input class="form-check-input row-checkbox" type="checkbox"> Pack of 6 - Pull B ack Mini Car Set For kids & boys toys</td>
                       <td>MINI-CARS-6</td>
                       <td>50</td>
                      </tr>
@@ -731,6 +772,8 @@
     <!-- <script src="../assets/vendors/choices.js/choices.min.js"></script> -->
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+
     <script
     type="text/javascript"
     src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
@@ -739,6 +782,10 @@
 
     <script>
       $(document).ready(function () {
+        var currentDate = new Date();
+    var formattedDate = currentDate.toISOString().slice(0, 16);
+    $('#datetimeInput').attr('min', formattedDate);
+
         $(".select-dropdown").select2();
         $('#pick_up_sell_txt').css('color', '#666');
         $('input[name="option"]').on('change', function () {
@@ -750,6 +797,13 @@
         $('#drop_of_vb_txt').css('color', '#666');
       }
     });
+    function handleCheckbox(master, rows) {
+      $(master).on('change', () => $(rows).prop('checked', $(master).is(':checked')));
+      $(rows).on('change', () => $(master).prop('checked', $(rows + ':checked').length === $(rows).length));
+    }
+
+    // Initialize
+    $(document).ready(() => handleCheckbox('.master-checkbox', '.row-checkbox'));
       });
 
 

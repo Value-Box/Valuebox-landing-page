@@ -39,18 +39,59 @@
                 <input type="search" class="w-100 border-0 bg-transparent" placeholder="Search for anything...">
           </div>
           <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link p-0 position-relative" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="30" viewBox="0 0 29 30" fill="none">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3157 0.857178C9.69515 0.857178 7.49368 2.82759 7.20429 5.4321L5.99833 16.2857H2.56975C1.62298 16.2857 0.855469 17.0533 0.855469 18V19.7143C0.855469 20.6611 1.62298 21.4286 2.56975 21.4286H26.5698C27.5165 21.4286 28.284 20.6611 28.284 19.7143V18C28.284 17.0533 27.5165 16.2857 26.5698 16.2857H23.1412L21.9352 5.4321C21.6458 2.82759 19.4444 0.857178 16.8238 0.857178H12.3157Z" fill="#002882"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3157 0.857178C9.69515 0.857178 7.49368 2.82759 7.20429 5.4321L5.99833 16.2857H2.56975C1.62298 16.2857 0.855469 17.0533 0.855469 18V19.7143C0.855469 20.6611 1.62298 21.4286 2.56975 21.4286H26.5698C27.5165 21.4286 28.284 20.6611 28.284 19.7143V18C28.284 17.0533 27.5165 16.2857 26.5698 16.2857H23.1412L21.9352 5.4321C21.6458 2.82759 19.4444 0.857178 16.8238 0.857178H12.3157Z" fill="black" fill-opacity="0.2"/>
-                  <rect opacity="0.3" x="11.1406" y="23.1431" width="6.85714" height="6.85714" rx="2.57143" fill="#F1B733"/>
-                </svg>
-                <div class="notification">
-                  <span>6</span>
-                </div>
-              </a>
-            </li>
+            <div class="dropdown ms-auto">
+              <button class="border-0 bg-transparent dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <ul class="navbar-nav ms-3 w-25">
+                  <li class="nav-item active ">
+                    <a class="nav-link p-0 position-relative" href="#">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="29" height="30" viewBox="0 0 29 30" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3157 0.857178C9.69515 0.857178 7.49368 2.82759 7.20429 5.4321L5.99833 16.2857H2.56975C1.62298 16.2857 0.855469 17.0533 0.855469 18V19.7143C0.855469 20.6611 1.62298 21.4286 2.56975 21.4286H26.5698C27.5165 21.4286 28.284 20.6611 28.284 19.7143V18C28.284 17.0533 27.5165 16.2857 26.5698 16.2857H23.1412L21.9352 5.4321C21.6458 2.82759 19.4444 0.857178 16.8238 0.857178H12.3157Z" fill="#002882"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3157 0.857178C9.69515 0.857178 7.49368 2.82759 7.20429 5.4321L5.99833 16.2857H2.56975C1.62298 16.2857 0.855469 17.0533 0.855469 18V19.7143C0.855469 20.6611 1.62298 21.4286 2.56975 21.4286H26.5698C27.5165 21.4286 28.284 20.6611 28.284 19.7143V18C28.284 17.0533 27.5165 16.2857 26.5698 16.2857H23.1412L21.9352 5.4321C21.6458 2.82759 19.4444 0.857178 16.8238 0.857178H12.3157Z" fill="black" fill-opacity="0.2"/>
+                        <rect opacity="0.3" x="11.1406" y="23.1431" width="6.85714" height="6.85714" rx="2.57143" fill="#F1B733"/>
+                      </svg>
+                      <div class="notification">
+                        <span>6</span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </button>
+            
+              <!-- Dropdown menu with notifications -->
+              <ul class="dropdown-menu min-w-150 max-w-400">
+                <li><a class="dropdown-item text-truncate" href="../notifications.html">Notification</a></li>
+                <li>
+                  <a class="dropdown-item notification-item" href="../notifications.html">
+                    <img src="https://img.icons8.com/flat_round/64/000000/bell.png" alt="Notification Icon">
+                    <div class="notification-text">
+                      <h6>System Alert</h6>
+                      <p>The system will undergo maintenance tomorrow. Please be prepared for potential downtime...</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item notification-item" href="../notifications.html">
+                    <img src="https://img.icons8.com/flat_round/64/000000/bell.png" alt="Notification Icon">
+                    <div class="notification-text">
+                      <h6>New Message</h6>
+                      <p>You have a new message in your inbox from John.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item notification-item" href="../notifications.html">
+                    <img src="https://img.icons8.com/flat_round/64/000000/bell.png" alt="Notification Icon">
+                    <div class="notification-text">
+                      <h6>Meeting Reminder</h6>
+                      <p>Your meeting with the team is scheduled for 3:00 PM tomorrow.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-truncate" href="../notifications.html">See More...</a>
+                </li>
+              </ul>
+            </div>
             <li class="nav-item p-0">
               <a class="nav-link p-0" href="#">
                   <img class="w-100" src="../Images/UserProfile.svg" alt="">
@@ -456,8 +497,8 @@
     <main class="backcolor" id="main">
         <div class="navigation anchortags">
             <a href="../index.html">Home</a>
-            <a href="Promos.html">> Warehouse </a>
-            <a class="active1" href="manageProducts.html">> Create Inbound</a>
+            <a href="InventoryControl.html">> Warehouse </a>
+            <a class="active1" href="createInBound.html">> Create Inbound</a>
         </div>
             <span class="heading-one mt-20 d-inline-block">Create Inbound</span>
        
@@ -491,14 +532,9 @@
                         </div>
                     </div>
                     <div class="col p-0">
-                        <span class="text-orange-star fs-18 gray-color">Inbound Warehouse</span>
-                        <fieldset class="form-group">
-                          <select class="select-dropdown form-select" id="basicSelect2">
-                              <option value="">Please Select</option>
-                              <option value="kachehri">Kachehri Warehouse</option>
-                              <option value="mda">MDA Warehouse</option>
-                          </select>
-                      </fieldset>  
+                        <span class="text-orange-star fs-18 gray-color">Estimated Time</span>
+                        <input type="datetime-local" class="form-control" id="datetimeInput">
+
                     </div>
                 </div>
             </div>
@@ -523,16 +559,16 @@
                         <input class="form-control" type="text"  placeholder="" disabled>
                     </div>
                 </div>
-                <div class="d-flex mt-40 gap-20">
-                    <div class="col-4 p-0">
+                <div class="row mt-40 gap-20">
+                    <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">Country</span>
                         <input class="form-control" type="text"  placeholder="" disabled>
                     </div>
-                    <div class="col-4 p-0">
+                    <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">City</span>
                         <input class="form-control" type="text"  placeholder="" disabled>
                     </div>
-                    <div class="col-4 p-0">
+                    <div class="col p-0">
                         <span class="text-orange-star fs-18 gray-color">Post Code</span>
                         <input class="form-control" type="text"  placeholder="" disabled>
                     </div>
@@ -546,7 +582,7 @@
                     </div>
                     <div class="col-4 p-0">
                         <span class="text-orange-star fs-18 gray-color">Mobile Number</span>
-                        <input class="form-control" type="text"  placeholder="Please Input" >
+                        <input class="form-control " type="text" placeholder="Please Input" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="" id="" minlength="11" maxlength="11">
                     </div>
                 </div>
             </div>
@@ -589,7 +625,7 @@
                                 <td class="d-flex align-items-center gap-2"><input class="form-check-input mt-0" type="checkbox" name="" id="pend_Adj_Sku"> 2245646_PK_14454120</td>
                                 <td>Pack of 6 - Pull B ack Mini Car Set For kids & boys toys</td>
                                 <td>MINI-CARS-6</td>
-                                <td><input type="text" oninput="calculatPricing()" id="costPrice" class="form-control text-center" placeholder="RS." required oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td>
+                                <td><input type="text" id="costPrice" class="form-control text-center" placeholder="00" required oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td>
                                 <td>VBPK789651</td>
                                 <td class="sticky-right text-center bg-bs-white px-5">
                                   <div class="d-flex gap-20">
@@ -712,11 +748,18 @@
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-
+    <script src="../assets/js/bootstrap.min.js"></script>
     <script>
       $(document).ready(function () {
         $(".select-dropdown").select2();
         // $(".select-dropdown2").select2();
+        var currentDate = new Date();
+    
+    // Format the date to 'YYYY-MM-DDTHH:mm' for datetime-local input
+    var formattedDate = currentDate.toISOString().slice(0, 16);
+
+    // Set the 'min' attribute of the input
+    $('#datetimeInput').attr('min', formattedDate);
       });
       let pendingProTable = document.querySelector('#inbound_Table');
       new simpleDatatables.DataTable(pendingProTable);

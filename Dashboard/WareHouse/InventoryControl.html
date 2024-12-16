@@ -60,18 +60,59 @@
                 <input type="search" class="w-100 border-0 bg-transparent" placeholder="Search for anything...">
           </div>
           <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link p-0 position-relative" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="30" viewBox="0 0 29 30" fill="none">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3157 0.857178C9.69515 0.857178 7.49368 2.82759 7.20429 5.4321L5.99833 16.2857H2.56975C1.62298 16.2857 0.855469 17.0533 0.855469 18V19.7143C0.855469 20.6611 1.62298 21.4286 2.56975 21.4286H26.5698C27.5165 21.4286 28.284 20.6611 28.284 19.7143V18C28.284 17.0533 27.5165 16.2857 26.5698 16.2857H23.1412L21.9352 5.4321C21.6458 2.82759 19.4444 0.857178 16.8238 0.857178H12.3157Z" fill="#002882"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3157 0.857178C9.69515 0.857178 7.49368 2.82759 7.20429 5.4321L5.99833 16.2857H2.56975C1.62298 16.2857 0.855469 17.0533 0.855469 18V19.7143C0.855469 20.6611 1.62298 21.4286 2.56975 21.4286H26.5698C27.5165 21.4286 28.284 20.6611 28.284 19.7143V18C28.284 17.0533 27.5165 16.2857 26.5698 16.2857H23.1412L21.9352 5.4321C21.6458 2.82759 19.4444 0.857178 16.8238 0.857178H12.3157Z" fill="black" fill-opacity="0.2"/>
-                  <rect opacity="0.3" x="11.1406" y="23.1431" width="6.85714" height="6.85714" rx="2.57143" fill="#F1B733"/>
-                </svg>
-                <div class="notification">
-                  <span>6</span>
-                </div>
-              </a>
-            </li>
+            <div class="dropdown ms-auto">
+              <button class="border-0 bg-transparent dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <ul class="navbar-nav ms-3 w-25">
+                  <li class="nav-item active ">
+                    <a class="nav-link p-0 position-relative" href="#">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="29" height="30" viewBox="0 0 29 30" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3157 0.857178C9.69515 0.857178 7.49368 2.82759 7.20429 5.4321L5.99833 16.2857H2.56975C1.62298 16.2857 0.855469 17.0533 0.855469 18V19.7143C0.855469 20.6611 1.62298 21.4286 2.56975 21.4286H26.5698C27.5165 21.4286 28.284 20.6611 28.284 19.7143V18C28.284 17.0533 27.5165 16.2857 26.5698 16.2857H23.1412L21.9352 5.4321C21.6458 2.82759 19.4444 0.857178 16.8238 0.857178H12.3157Z" fill="#002882"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3157 0.857178C9.69515 0.857178 7.49368 2.82759 7.20429 5.4321L5.99833 16.2857H2.56975C1.62298 16.2857 0.855469 17.0533 0.855469 18V19.7143C0.855469 20.6611 1.62298 21.4286 2.56975 21.4286H26.5698C27.5165 21.4286 28.284 20.6611 28.284 19.7143V18C28.284 17.0533 27.5165 16.2857 26.5698 16.2857H23.1412L21.9352 5.4321C21.6458 2.82759 19.4444 0.857178 16.8238 0.857178H12.3157Z" fill="black" fill-opacity="0.2"/>
+                        <rect opacity="0.3" x="11.1406" y="23.1431" width="6.85714" height="6.85714" rx="2.57143" fill="#F1B733"/>
+                      </svg>
+                      <div class="notification">
+                        <span>6</span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </button>
+            
+              <!-- Dropdown menu with notifications -->
+              <ul class="dropdown-menu min-w-150 max-w-400">
+                <li><a class="dropdown-item text-truncate" href="../notifications.html">Notification</a></li>
+                <li>
+                  <a class="dropdown-item notification-item" href="../notifications.html">
+                    <img src="https://img.icons8.com/flat_round/64/000000/bell.png" alt="Notification Icon">
+                    <div class="notification-text">
+                      <h6>System Alert</h6>
+                      <p>The system will undergo maintenance tomorrow. Please be prepared for potential downtime...</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item notification-item" href="../notifications.html">
+                    <img src="https://img.icons8.com/flat_round/64/000000/bell.png" alt="Notification Icon">
+                    <div class="notification-text">
+                      <h6>New Message</h6>
+                      <p>You have a new message in your inbox from John.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item notification-item" href="../notifications.html">
+                    <img src="https://img.icons8.com/flat_round/64/000000/bell.png" alt="Notification Icon">
+                    <div class="notification-text">
+                      <h6>Meeting Reminder</h6>
+                      <p>Your meeting with the team is scheduled for 3:00 PM tomorrow.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-truncate" href="../notifications.html">See More...</a>
+                </li>
+              </ul>
+            </div>
             <li class="nav-item p-0">
               <a class="nav-link p-0" href="#">
                   <img class="w-100" src="../Images/UserProfile.svg" alt="">
@@ -494,7 +535,7 @@
          
           <div class="list-group list-group-horizontal-sm mb-1 text-center gap-20" role="tablist">
               <a class="top-rouned-btn active" id="incont_send_warehouse" data-bs-toggle="list" href="#send_warehouse" role="tab">Send to Warehouse</a>
-              <a class="top-rouned-btn" id="incont_return_warehouse" data-bs-toggle="list" href="#return_warehouse" role="tab">Return From Warehouse</a>
+              <a class="top-rouned-btn" id="incont_return_warehouse" data-bs-toggle="list" href="#return_warehouse_fields" role="tab">Return From Warehouse</a>
           </div>
           <div class="tab-content text-justify mt-40">
              
@@ -508,15 +549,15 @@
                   <div class="tab-pane fade show active " id="send_warehouse" role="tabpanel" aria-labelledby="list-sunday-list">
                   <div class="row mt-40 gap-20">
                     <div class="col p-0">
-                      <span class="message-text">Inbound Order No.</span>
+                      <span class="message-text boundText">Inbound Order No.</span>
                       <input class="form-control" type="text" placeholder="Please Input">
                     </div>
   
-                    <div class="col p-0">
+                    <div class="col p-0 ">
                       <span class="message-text">Created Time</span>
                       <input class="form-control" name="daterange" type="text" id="date" placeholder="Start Date  |  End Date">
                     </div>
-                   <div class="col p-0">
+                   <div class="col p-0 ">
                       <span class="message-text">Inbound Warehouse</span>
                       <fieldset class="form-group">
                         <select class="select-dropdown form-select" id="basicSelect">
@@ -527,7 +568,7 @@
                     </fieldset>  
                   </div>
   
-                    <div class="col p-0">
+                    <div class="col p-0 ">
                       <span class="message-text">Delivery Type</span>
                       <fieldset class="form-group">
                         <select class="select-dropdown form-select" id="deliveryType">
@@ -543,23 +584,51 @@
                   </div>
                   <div class="row mt-20 gap-20">
                     
-                    <div class="col-3 p-0">
-                      <span class="message-text">Seller SKU</span>
+                    <div class="col-3 p-0 ">
+                      <span class="message-text">Product Name</span>
                       <input class="form-control" type="text" placeholder="Please Input">
                     </div>
    
-                    <div class="col-3 p-0">
+                    <div class="col-3 p-0 inboundBox">
                       <span class="message-text">On Time</span>
                       <div>
                         <input type="datetime-local" name="onTime" id="onTime" class="form-control">
                       </div>
-                   </div>    
+                   </div>  
+                   
+                   <div class="col p-0 outboundBox">
+                    <span class="message-text">Outbound Time</span>
+                    <fieldset class="form-group">
+                      <select class="select-dropdown" id="basicSelect1">
+                          <option value="">Please Select</option>
+                          <option value="kachehri">Kachehri Warehouse</option>
+                          <option value="mda">MDA Warehouse</option>
+                      </select>
+                    </fieldset>  
+                  </div>
+                   
+                   <div class="col p-0 outboundBox">
+                    <span class="message-text">Seller SKU</span>
+                    <input class="form-control" type="text" placeholder="Please Input">
+                  </div>
+ 
+                  
+                 <div class="col p-0 outboundBox">
+                  <span class="message-text">Outbound Reason</span>
+                  <fieldset class="form-group">
+                    <select class="select-dropdown form-select" id="basicSelect4">
+                        <option value="">Please Select</option>
+                        <option value="kachehri">Kachehri Warehouse</option>
+                        <option value="mda">MDA Warehouse</option>
+                    </select>
+                </fieldset>  
+              </div>
                   </div>
 
 
                   
                 </div>
-                <div class="tab-pane fade" id="return_warehouse_fields" role="tabpanel" aria-labelledby="list-monday-list">
+                <!-- <div class="tab-pane fade" id="return_warehouse_fields" role="tabpanel" aria-labelledby="list-monday-list">
                   <div class="row mt-40 gap-20">
                        <div class="col p-0">
                          <span class="message-text">Outbound Order No.</span>
@@ -579,8 +648,8 @@
                                <option value="kachehri">Kachehri Warehouse</option>
                                <option value="mda">MDA Warehouse</option>
                            </select>
-                       </fieldset>  
-                     </div>
+                         </fieldset>  
+                       </div>
      
                        <div class="col p-0">
                          <span class="message-text">Outbound Warehouse</span>
@@ -631,7 +700,7 @@
                    </div>
      
                      </div>
-                   </div>
+                   </div> -->
                  </div>
                
              
@@ -673,11 +742,11 @@
                   <table class="dataTable" id="send_wareh_Table">
                     <thead>
                       <tr>
-                        <th><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Inbound Order No.</th>
-                        <th>IO Status</th> 
+                        <th class="boundOrderNo"><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Inbound Order No.</th>
+                        <th class="boundStatus">IO Status</th> 
                         <th>Created Time</th>
                         <th>Estimated Time</th>
-                        <th>Inbound Time</th>
+                        <th class="boundTime">Inbound Time</th>
                         <th>SKU Requested</th>
                       </tr>
                     </thead>
@@ -696,43 +765,18 @@
   
                     </tbody>
                   </table>
-                  <table class="dataTable" id="return_wareh_Table">
-                    <thead>
-                      <tr>
-                        <th><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Outbound Order No.</th>
-                        <th>OO Status</th> 
-                        <th>Created Time</th>
-                        <th>Estimated Time</th>
-                        <th>Outbound Time</th>
-                        <th>SKU Requested</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="d-flex gap-1">
-                          <input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku">
-                           <a href="#">IO7845123895623</a>
-                        </td>
-                        <td>Cancelled by VakueBox</td>
-                        <td>2024-06-11 23:28:26</td>
-                        <td>2024-06-11 23:28:26</td>
-                        <td>RS 1,299.00</td>
-                        <td></td>
-                    </tr>
-  
-                    </tbody>
-                  </table>        
+                  
               </div>
 
               <div class="form-group w-100 TableWrapper tab-pane fade  mt-40 pb-0" id="list-pending">
                 <table class="dataTable" id="send_wareh_Table">
                   <thead>
                     <tr>
-                      <th><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Inbound Order No.</th>
-                      <th>IO Status</th> 
+                      <th class="boundOrderNo"><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Inbound Order No.</th>
+                      <th class="boundStatus">IO Status</th> 
                       <th>Created Time</th>
                       <th>Estimated Time</th>
-                      <th>Inbound Time</th>
+                      <th class="boundTime">Inbound Time</th>
                       <th>SKU Requested</th>
                     </tr>
                   </thead>
@@ -742,7 +786,7 @@
                         <input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku">
                          <a href="#">IO7845123895623</a>
                       </td>
-                      <td>Cancelled by VakueBox</td>
+                      <td>Cancelled by VaueBox</td>
                       <td>2024-06-11 23:28:26</td>
                       <td>2024-06-11 23:28:26</td>
                       <td>RS 1,299.00</td>
@@ -750,18 +794,18 @@
                   </tr>
 
                   </tbody>
-                </table>        
+                </table>
             </div>
 
             <div class="form-group w-100 TableWrapper tab-pane fade  mt-40 pb-0" id="list-approved">
               <table class="dataTable" id="send_wareh_Table">
                 <thead>
                   <tr>
-                    <th><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Inbound Order No.</th>
-                    <th>IO Status</th> 
+                    <th class="boundOrderNo"><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Inbound Order No.</th>
+                    <th class="boundStatus">IO Status</th> 
                     <th>Created Time</th>
                     <th>Estimated Time</th>
-                    <th>Inbound Time</th>
+                    <th class="boundTime">Inbound Time</th>
                     <th>SKU Requested</th>
                   </tr>
                 </thead>
@@ -771,7 +815,7 @@
                       <input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku">
                        <a href="#">IO7845123895623</a>
                     </td>
-                    <td>Cancelled by VakueBox</td>
+                    <td>Cancelled by VaueBox</td>
                     <td>2024-06-11 23:28:26</td>
                     <td>2024-06-11 23:28:26</td>
                     <td>RS 1,299.00</td>
@@ -779,18 +823,18 @@
                 </tr>
 
                 </tbody>
-              </table>        
+              </table>    
           </div>
 
           <div class="form-group w-100 TableWrapper tab-pane fade mt-40 pb-0" id="list-completed">
             <table class="dataTable" id="send_wareh_Table">
               <thead>
                 <tr>
-                  <th><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Inbound Order No.</th>
-                  <th>IO Status</th> 
+                  <th class="boundOrderNo"><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Inbound Order No.</th>
+                  <th class="boundStatus">IO Status</th> 
                   <th>Created Time</th>
                   <th>Estimated Time</th>
-                  <th>Inbound Time</th>
+                  <th class="boundTime">Inbound Time</th>
                   <th>SKU Requested</th>
                 </tr>
               </thead>
@@ -800,7 +844,7 @@
                     <input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku">
                      <a href="#">IO7845123895623</a>
                   </td>
-                  <td>Cancelled by VakueBox</td>
+                  <td>Cancelled by VaueBox</td>
                   <td>2024-06-11 23:28:26</td>
                   <td>2024-06-11 23:28:26</td>
                   <td>RS 1,299.00</td>
@@ -808,7 +852,7 @@
               </tr>
 
               </tbody>
-            </table>        
+            </table>    
         </div>
               </div>
                </div>
@@ -823,6 +867,8 @@
     <!-- <script src="../assets/vendors/choices.js/choices.min.js"></script> -->
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+
  <!-- jQuery -->
  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
  <!-- Moment.js -->
@@ -879,35 +925,57 @@ sendwarehouseTables.forEach(table => {
 
 
 
-    const sendWarehouse = document.querySelector("#incont_send_warehouse");
-    const returnWarehouse = document.querySelector("#incont_return_warehouse");
-    const sendWarehouseTxt = document.querySelector("#send_warehouse_txt");
-    const returnWarehouseTxt = document.querySelector("#return_warehouse_txt");
-    const returnWarehouseFields = document.querySelector("#return_warehouse_fields");
-    const ioBtn = document.querySelector("#io_btn");
-    const ooBtn = document.querySelector("#oo_btn");
-   
+  $(document).ready(function () {
+    const $sendWarehouse = $("#incont_send_warehouse");
+    const $returnWarehouse = $("#incont_return_warehouse");
+    const $sendWarehouseTxt = $("#send_warehouse_txt");
+    const $boundText = $(".boundText");
+    const $inboundBox = $(".inboundBox");
+    const $boundOrderNo = $(".boundOrderNo");
+    const $boundStatus = $(".boundStatus");
+    const $boundTime = $(".boundTime");
+    const $returnWarehouseTxt = $("#return_warehouse_txt");
+    const $outboundBox = $(".outboundBox");
+    const $ioBtn = $("#io_btn");
+    const $ooBtn = $("#oo_btn");
+
+
+    $outboundBox.hide();
     // Default state: Show the field only for Live Inventory
-    if (!sendWarehouse.classList.contains("active")) {
-      ioBtn.style.display = "block";
-      sendWarehouseTxt.style.display = "block";
+    if (!$sendWarehouse.hasClass("active")) {
+        $ioBtn.show();
+        $sendWarehouseTxt.show();
+        
     }
 
     // Event listener for tab clicks
-    sendWarehouse.addEventListener("click", () => {
-      ooBtn.style.display = "none"; // Show field
-      sendWarehouseTxt.style.display = "block"; // Show field
-      ioBtn.style.display = "block";
-      returnWarehouseTxt.style.display = "none";
+    $sendWarehouse.on("click", function () {
+        $ooBtn.hide(); // Hide field
+        $sendWarehouseTxt.show(); // Show field
+        $ioBtn.show();
+        $returnWarehouseTxt.hide();
+        $boundText.text("Inbound Order No.");
+        $boundOrderNo.text("Inbound Order No.");
+        $boundStatus.text("IO Status");
+        $boundTime.text("Inbound Time");
+        $inboundBox.show();
+        $outboundBox.hide();
     });
 
-    returnWarehouse.addEventListener("click", () => {
-
-      ooBtn.style.display = "block"; // Hide field
-      sendWarehouseTxt.style.display = "none"; // Hide field
-      returnWarehouseTxt.style.display = "block";
-      ioBtn.style.display = "none";
+    $returnWarehouse.on("click", function () {
+        $ooBtn.show(); // Show field
+        $sendWarehouseTxt.hide(); // Hide field
+        $returnWarehouseTxt.show();
+        $ioBtn.hide();
+        $boundText.text("Outbound Order No.");
+        $boundOrderNo.text("Outbound Order No.");
+        $boundStatus.text("OO Status");
+        $boundTime.text("Outbound Time");
+        $inboundBox.hide();
+        $outboundBox.show();
     });
+});
+
   </script>
 </body>
 </html>
