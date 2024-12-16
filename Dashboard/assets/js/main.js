@@ -95,47 +95,55 @@ for (let i = 0; i < sidebarItems.length; i++) {
 }
 
 // Handle sidebar collapse
-sidebar.addEventListener("classChange", () => {
-  if (!sidebar.classList.contains("active")) {
-    // Reset all submenus when sidebar is inactive
-    sidebarItems.forEach((item) => {
-      let submenu = item.querySelector(".submenu");
-
-      // Remove 'active' class but do not apply display styles
-      submenu.classList.remove("active");
-      submenu.style.display = ""; 
-      
-    });
-  }
-});
+if(sidebar){
+  sidebar.addEventListener("classChange", () => {
+    if (!sidebar.classList.contains("active")) {
+      // Reset all submenus when sidebar is inactive
+      sidebarItems.forEach((item) => {
+        let submenu = item.querySelector(".submenu");
+  
+        // Remove 'active' class but do not apply display styles
+        submenu.classList.remove("active");
+        submenu.style.display = ""; 
+        
+      });
+    }
+  });
+}
 
 // Utility function to detect class changes on the sidebar
 const observeSidebarClassChange = (element, callback) => {
-  const observer = new MutationObserver((mutationsList) => {
-    for (const mutation of mutationsList) {
-      if (mutation.type === "attributes" && mutation.attributeName === "class") {
-        callback();
+  if (element) {  // Ensure element is not null
+    const observer = new MutationObserver((mutationsList) => {
+      for (const mutation of mutationsList) {
+        if (mutation.type === "attributes" && mutation.attributeName === "class") {
+          callback();
+        }
       }
-    }
-  });
+    });
 
-  observer.observe(element, { attributes: true });
+    observer.observe(element, { attributes: true });
+  }
 };
 
 // Start observing class changes on the sidebar
-observeSidebarClassChange(sidebar, () => {
-  const event = new Event("classChange");
-  sidebar.dispatchEvent(event);
-});
+// const sidebar = document.getElementById("sidebar");
+if (sidebar) {
+  observeSidebarClassChange(sidebar, () => {
+    const event = new Event("classChange");
+    sidebar.dispatchEvent(event);
+  });
+}
 
 
 
-window.addEventListener("DOMContentLoaded", (event) => {
-  var w = window.innerWidth;
-  if (w < 1200) {
-    document.getElementById("sidebar").classList.remove("active");
-  }
-});
+
+// window.addEventListener("DOMContentLoaded", (event) => {
+//   var w = window.innerWidth;
+//   if (w < 1200) {
+//     document.getElementById("sidebar").classList.remove("active");
+//   }
+// });
 // window.addEventListener("resize", (event) => {
 //   var w = window.innerWidth;
 //   console.log(w);
@@ -146,9 +154,21 @@ window.addEventListener("DOMContentLoaded", (event) => {
 //   }
 // });
 
-document.querySelector(".burger-btn").addEventListener("click", () => {
-  document.getElementById("sidebar").classList.toggle("active");
+// document.querySelector(".burger-btn").addEventListener("click", () => {
+//   document.getElementById("sidebar").classList.toggle("active");
+// });
+document.addEventListener("DOMContentLoaded", function () {
+  const burgerBtn = document.querySelector(".burger-btn");
+  
+  if (burgerBtn) {
+    burgerBtn.addEventListener("click", () => {
+      document.getElementById("sidebar").classList.toggle("active");
+    });
+  } else {
+    console.error("Burger button not found");
+  }
 });
+
 // document.querySelector(".sidebar-hide").addEventListener("click", () => {
 //   document.getElementById("sidebar").classList.toggle("active");
 // });
@@ -255,4 +275,38 @@ menuItems.forEach((menuItem) => {
     });
   }
 });
+
+
+
+
+
+function redirectBasedOnScreenSize() {
+  // Get the screen width
+  const screenWidth = window.innerWidth;
+
+  console.log("Current screen width:", screenWidth); // Debugging log
+
+  // Check screen size and redirect
+  if (screenWidth <= 992) {
+    console.log("Redirecting to downloadAppPage.html");
+    window.location.href = "/dashboard/downloadAppPage.html"; // Adjust the path
+  } else {
+    // Redirect only if not already on the dashboard index page
+    if (window.location.pathname !== "/dashboard/index.html") {
+      console.log("Redirecting to dashboard/index.html");
+      window.location.href = "/dashboard/index.html"; // Adjust the path
+    }
+  }
+}
+
+// Add event listeners
+window.addEventListener("load", redirectBasedOnScreenSize); // Check when the page loads
+window.addEventListener("resize", () => {
+  // Add a debounce to avoid frequent checks on resize
+  clearTimeout(window.redirectTimeout);
+  window.redirectTimeout = setTimeout(redirectBasedOnScreenSize, 200); // Delay for 200ms
+});
+
+
+
 
