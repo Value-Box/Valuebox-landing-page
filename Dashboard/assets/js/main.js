@@ -95,17 +95,16 @@ for (let i = 0; i < sidebarItems.length; i++) {
 }
 
 // Handle sidebar collapse
-if(sidebar){
+if (sidebar) {
   sidebar.addEventListener("classChange", () => {
     if (!sidebar.classList.contains("active")) {
       // Reset all submenus when sidebar is inactive
       sidebarItems.forEach((item) => {
         let submenu = item.querySelector(".submenu");
-  
+
         // Remove 'active' class but do not apply display styles
         submenu.classList.remove("active");
-        submenu.style.display = ""; 
-        
+        submenu.style.display = "";
       });
     }
   });
@@ -113,10 +112,14 @@ if(sidebar){
 
 // Utility function to detect class changes on the sidebar
 const observeSidebarClassChange = (element, callback) => {
-  if (element) {  // Ensure element is not null
+  if (element) {
+    // Ensure element is not null
     const observer = new MutationObserver((mutationsList) => {
       for (const mutation of mutationsList) {
-        if (mutation.type === "attributes" && mutation.attributeName === "class") {
+        if (
+          mutation.type === "attributes" &&
+          mutation.attributeName === "class"
+        ) {
           callback();
         }
       }
@@ -134,9 +137,6 @@ if (sidebar) {
     sidebar.dispatchEvent(event);
   });
 }
-
-
-
 
 // window.addEventListener("DOMContentLoaded", (event) => {
 //   var w = window.innerWidth;
@@ -159,7 +159,7 @@ if (sidebar) {
 // });
 document.addEventListener("DOMContentLoaded", function () {
   const burgerBtn = document.querySelector(".burger-btn");
-  
+
   if (burgerBtn) {
     burgerBtn.addEventListener("click", () => {
       document.getElementById("sidebar").classList.toggle("active");
@@ -193,7 +193,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
 // Perfect Scrollbar Init
 if (typeof PerfectScrollbar == "function") {
   const container = document.querySelector(".sidebar-wrapper");
@@ -206,7 +205,7 @@ if (typeof PerfectScrollbar == "function") {
 // document.querySelector(".sidebar-item.active").scrollIntoView(false);
 // document.getElementById("burger-btn").addEventListener("click", function (event) {
 //     event.preventDefault(); // Prevent the default behavior (page reload or scroll)
-    
+
 //   });
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -216,18 +215,17 @@ document.addEventListener("DOMContentLoaded", (event) => {
   }
 });
 
-  
-const menuItems = document.querySelectorAll('.sidebar-item');
+const menuItems = document.querySelectorAll(".sidebar-item");
 
 menuItems.forEach((menuItem) => {
-  const submenu = menuItem.querySelector('.itemsMenu');
-  const sidebarLink = menuItem.querySelector('.sidebar-link');
-  const sidebar = document.getElementById('sidebar');
+  const submenu = menuItem.querySelector(".itemsMenu");
+  const sidebarLink = menuItem.querySelector(".sidebar-link");
+  const sidebar = document.getElementById("sidebar");
 
   if (submenu && sidebarLink) {
-    menuItem.addEventListener('mouseenter', () => {
+    menuItem.addEventListener("mouseenter", () => {
       // If sidebar is active, reset submenu styles and skip hover logic
-      if (sidebar && sidebar.classList.contains('active')) {
+      if (sidebar && sidebar.classList.contains("active")) {
         submenu.style.display = ""; // Reset any inline display styles
         submenu.style.position = "";
         submenu.style.top = "";
@@ -239,15 +237,15 @@ menuItems.forEach((menuItem) => {
       const rect = sidebarLink.getBoundingClientRect();
 
       // Dynamically set the position of itemsMenu
-      submenu.style.position = 'fixed'; // Keeps submenu fixed to viewport
-      submenu.style.top = `${rect.top+5}px`; // Use rect.top relative to viewport
+      submenu.style.position = "fixed"; // Keeps submenu fixed to viewport
+      submenu.style.top = `${rect.top + 5}px`; // Use rect.top relative to viewport
       submenu.style.left = `${rect.right}px`; // Position to the right of sidebar-link
-      submenu.style.display = 'block';
+      submenu.style.display = "block";
     });
 
-    menuItem.addEventListener('mouseleave', () => {
+    menuItem.addEventListener("mouseleave", () => {
       // If sidebar is active, reset submenu styles and skip hide logic
-      if (sidebar && sidebar.classList.contains('active')) {
+      if (sidebar && sidebar.classList.contains("active")) {
         submenu.style.display = ""; // Reset inline styles
         submenu.style.position = "";
         submenu.style.top = "";
@@ -256,14 +254,14 @@ menuItems.forEach((menuItem) => {
       }
 
       // Hide submenu when hover ends
-      submenu.style.display = 'none';
+      submenu.style.display = "none";
     });
 
-    sidebarLink.addEventListener('click', (e) => {
+    sidebarLink.addEventListener("click", (e) => {
       e.preventDefault();
 
       // Ensure submenu styles are reset for active sidebar
-      if (sidebar && sidebar.classList.contains('active')) {
+      if (sidebar && sidebar.classList.contains("active")) {
         submenu.style.display = ""; // Reset inline styles
         submenu.style.position = "";
         submenu.style.top = "";
@@ -271,14 +269,10 @@ menuItems.forEach((menuItem) => {
       }
 
       // Toggle submenu visibility for click behavior
-      submenu.classList.toggle('open');
+      submenu.classList.toggle("open");
     });
   }
 });
-
-
-
-
 
 function redirectBasedOnScreenSize() {
   // Get the screen width
@@ -289,12 +283,12 @@ function redirectBasedOnScreenSize() {
   // Check screen size and redirect
   if (screenWidth <= 992) {
     console.log("Redirecting to downloadAppPage.html");
-    window.location.href = "/dashboard/downloadAppPage.html"; // Adjust the path
+    window.location.href = "../../dashboard/downloadAppPage.html"; // Adjust the path
   } else {
     // Redirect only if not already on the dashboard index page
-    if (window.location.pathname !== "/dashboard/index.html") {
+    if (window.location.pathname !== "../../dashboard/index.html") {
       console.log("Redirecting to dashboard/index.html");
-      window.location.href = "/dashboard/index.html"; // Adjust the path
+      window.location.href = "../../dashboard/index.html"; // Adjust the path
     }
   }
 }
@@ -305,7 +299,3 @@ window.addEventListener("resize", () => {
   clearTimeout(window.redirectTimeout);
   window.redirectTimeout = setTimeout(redirectBasedOnScreenSize, 200); // Delay for 200ms
 });
-
-
-
-
