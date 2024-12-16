@@ -280,31 +280,31 @@ menuItems.forEach((menuItem) => {
 
 
 
-function redirectBasedOnScreenSize() {
-  // Get the screen width
-  const screenWidth = window.innerWidth;
+// function redirectBasedOnScreenSize() {
+//   // Get the screen width
+//   const screenWidth = window.innerWidth;
 
-  console.log("Current screen width:", screenWidth); // Debugging log
+//   console.log("Current screen width:", screenWidth); // Debugging log
 
-  // Check screen size and redirect
-  if (screenWidth <= 992) {
-    console.log("Redirecting to downloadAppPage.html");
-    window.location.href = "/dashboard/downloadAppPage.html"; // Adjust the path
-  } else {
-    // Redirect only if not already on the dashboard index page
-    if (window.location.pathname !== "/dashboard/index.html") {
-      console.log("Redirecting to dashboard/index.html");
-      window.location.href = "/dashboard/index.html"; // Adjust the path
-    }
-  }
-}
+//   // Check screen size and redirect
+//   if (screenWidth <= 992) {
+//     console.log("Redirecting to downloadAppPage.html");
+//     window.location.href = "/dashboard/downloadAppPage.html"; // Adjust the path
+//   } else {
+//     // Redirect only if not already on the dashboard index page
+//     if (window.location.pathname !== "/dashboard/index.html") {
+//       console.log("Redirecting to dashboard/index.html");
+//       window.location.href = "/dashboard/index.html"; // Adjust the path
+//     }
+//   }
+// }
 
-// Add event listeners
-window.addEventListener("resize", () => {
-  // Add a debounce to avoid frequent checks on resize
-  clearTimeout(window.redirectTimeout);
-  window.redirectTimeout = setTimeout(redirectBasedOnScreenSize, 200); // Delay for 200ms
-});
+// // Add event listeners
+// window.addEventListener("resize", () => {
+//   // Add a debounce to avoid frequent checks on resize
+//   clearTimeout(window.redirectTimeout);
+//   window.redirectTimeout = setTimeout(redirectBasedOnScreenSize, 200); // Delay for 200ms
+// });
 
 
 
