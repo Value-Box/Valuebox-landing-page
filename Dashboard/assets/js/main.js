@@ -300,7 +300,6 @@ function redirectBasedOnScreenSize() {
 }
 
 // Add event listeners
-window.addEventListener("load", redirectBasedOnScreenSize); // Check when the page loads
 window.addEventListener("resize", () => {
   // Add a debounce to avoid frequent checks on resize
   clearTimeout(window.redirectTimeout);
