@@ -285,20 +285,34 @@ function redirectBasedOnScreenSize() {
     ? "/Valuebox-landing-page"
     : "";
 
-  // Check screen size and redirect
+  // Get the current path
+  const currentPath = window.location.pathname;
+
   if (screenWidth <= 992) {
-    console.log("Redirecting to downloadAppPage.html");
-    window.location.href = `${basePath}/Dashboard/downloadAppPage.html`; // Adjust the path
+    const targetPath = `${basePath}/Dashboard/downloadAppPage.html`;
+
+    // Redirect only if not already on the target page
+    if (currentPath !== targetPath) {
+      console.log("Redirecting to downloadAppPage.html");
+      window.location.href = targetPath;
+    }
   } else {
-    // Redirect only if not already on the dashboard index page
-    if (window.location.pathname !== `${basePath}/Dashboard/index.html`) {
-      console.log("Redirecting to dashboard/index.html");
-      window.location.href = `${basePath}/Dashboard/index.html`; // Adjust the path
+    const targetPath = `${basePath}/Dashboard/index.html`;
+
+    // Redirect only if not already on the target page
+    if (currentPath !== targetPath && window.history.length > 1) {
+      console.log("Screen size > 992px, going back to the previous page");
+      window.history.back();
+    } else {
+      console.log("No previous history or already on the correct page.");
     }
   }
 }
 
-// Add event listeners
+// Run the function on page load
+redirectBasedOnScreenSize();
+
+// Add event listener for resize
 window.addEventListener("resize", () => {
   // Add a debounce to avoid frequent checks on resize
   clearTimeout(window.redirectTimeout);
