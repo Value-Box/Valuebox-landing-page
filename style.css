@@ -2036,12 +2036,13 @@ border: none;
 /* For extra small screens, no additional styling needed as Bootstrap handles it */
 
 
-
+#Request-Order-Modal{
+  max-width: 1030px !important;
+}
 .siteExperience {
   background-color: #e6eaf3;
   padding: 0px;
 }
-
 .siteText h1{
   color: var(--Primary-Color-Dark-Blue, #002882);
   font-family: Anton;
@@ -2356,6 +2357,9 @@ svg path {
   background-color: #fef6e6;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
+}
+.Rejection-Reason{
+  border-top: 10px solid red;
 }
 @media (max-width: 1200px) {
   .serviceImg {
