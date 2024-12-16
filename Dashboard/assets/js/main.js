@@ -296,12 +296,12 @@ function redirectBasedOnScreenSize() {
       console.log("Already on downloadAppPage.html, no further redirect");
     }
   } else {
-    // Only go back if not already handled
-    if (window.history.length > 1) {
+    // Only navigate back if coming from `downloadAppPage.html`
+    if (window.location.pathname.includes("downloadAppPage.html")) {
       console.log("Navigating back");
       window.history.back();
     } else {
-      console.log("No history to navigate back to");
+      console.log("No need to navigate back, not on downloadAppPage.html");
     }
   }
 }
