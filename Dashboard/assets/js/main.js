@@ -288,12 +288,12 @@ function redirectBasedOnScreenSize() {
   // Check screen size and redirect
   if (screenWidth <= 992) {
     console.log("Redirecting to downloadAppPage.html");
-    window.location.href = `${basePath}/dashboard/downloadAppPage.html`; // Adjust the path
+    window.location.href = `${basePath}/Dashboard/downloadAppPage.html`; // Adjust the path
   } else {
     // Redirect only if not already on the dashboard index page
-    if (window.location.pathname !== `${basePath}/dashboard/index.html`) {
+    if (window.location.pathname !== `${basePath}/Dashboard/index.html`) {
       console.log("Redirecting to dashboard/index.html");
-      window.location.href = `${basePath}/dashboard/index.html`; // Adjust the path
+      window.location.href = `${basePath}/Dashboard/index.html`; // Adjust the path
     }
   }
 }
