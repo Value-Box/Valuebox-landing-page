@@ -2367,7 +2367,73 @@ line-height: 24px;
 .notificationSection.read {
   background-color: #FFF; /* Read state */
 }
-
+.LandingMain {
+  display: flex;
+  padding: 40px 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex: 1 0 0;
+  align-self: stretch;
+  height: 100vh;
+  background: linear-gradient(90deg, #0032A3 0%, #1A51CB 25%, #3B66C8 50%, #1A51CB 75%, #0032A3 100%);
+}
+#downloadApp{
+  max-width: 400px;
+}
+.valueBoxLogo{
+  display: flex;
+width: 114.21px;
+height: 40px;
+padding: 3.846px 15.385px;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 7.692px;
+  border-radius: 769.231px;
+background: var(--Natural-Color-10, #F2F2F2);
+}
+.DownloadHeading{
+  color: var(--Natural-Color-00, #FCFCFC);
+text-align: center;
+/* font-family: "Anton SC"; */
+font-size: 36px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.downloadBtn{
+  display: flex;
+height: 40px;
+padding: 15px 20px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+align-self: stretch;
+border-radius: 5px;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px;
+background:linear-gradient(90deg, #FFC136 0%, #FAC142 19.76%, #FFD168 52.5%, #F5BC3A 77.13%, #E09B00 100%);
+}
+.GoBackBtn{
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  align-self: stretch;
+  border-radius: 5px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  color:#E6EAF3;
+  border: 1px solid var(--Primary-Color-Dark-Blue-10, #E6EAF3);
+  background: transparent;
+}
 @media(max-width:1400px){
   .custom-modal-width{
     max-width: 1250px !important;
@@ -2404,3 +2470,5 @@ line-height: 24px;
     height: 48px !important;
   } */
   }
+
+ 
