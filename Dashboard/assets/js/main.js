@@ -274,11 +274,12 @@ menuItems.forEach((menuItem) => {
   }
 });
 
+
+
+
 function redirectBasedOnScreenSize() {
   // Get the screen width
   const screenWidth = window.innerWidth;
-
-  console.log("Current screen width:", screenWidth); // Debugging log
 
   // Determine the base path dynamically
   const basePath = window.location.pathname.includes("Valuebox-landing-page")
@@ -287,13 +288,20 @@ function redirectBasedOnScreenSize() {
 
   // Check screen size and redirect
   if (screenWidth <= 992) {
-    console.log("Redirecting to downloadAppPage.html");
-    window.location.href = `${basePath}/Dashboard/downloadAppPage.html`; // Adjust the path
+    // Prevent infinite redirect by checking current page
+    if (!window.location.pathname.includes("downloadAppPage.html")) {
+      console.log("Redirecting to downloadAppPage.html");
+      window.location.href = `${basePath}/Dashboard/downloadAppPage.html`; // Adjust the path
+    } else {
+      console.log("Already on downloadAppPage.html, no further redirect");
+    }
   } else {
-    // Redirect only if not already on the dashboard index page
-    if (window.location.pathname !== `${basePath}/Dashboard/index.html`) {
-      console.log("Redirecting to dashboard/index.html");
-      window.location.href = `${basePath}/Dashboard/index.html`; // Adjust the path
+    // Only navigate back if coming from `downloadAppPage.html`
+    if (window.location.pathname.includes("downloadAppPage.html")) {
+      console.log("Navigating back");
+      window.history.back();
+    } else {
+      console.log("No need to navigate back, not on downloadAppPage.html");
     }
   }
 }
@@ -305,3 +313,6 @@ window.addEventListener("resize", () => {
   window.redirectTimeout = setTimeout(redirectBasedOnScreenSize, 200); // Delay for 200ms
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  redirectBasedOnScreenSize(); // Run once on page load
+});
