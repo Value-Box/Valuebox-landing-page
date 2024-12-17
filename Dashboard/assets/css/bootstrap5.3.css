@@ -12989,6 +12989,6 @@ background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
 }
 
 .Table-row-bg td:first-child{
-  color: #002882 !important;
+    color: #002882 !important;
 
 }
