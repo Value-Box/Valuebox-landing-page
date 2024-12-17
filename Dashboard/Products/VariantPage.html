@@ -15,6 +15,8 @@
     <link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/x-icon">
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar navbar-expand-sm navbar-light bg-white sticky-top" id="navbar">
@@ -603,184 +605,167 @@
                         </div>
                     </div>
 
-                    <div class="form1 mt-40">
-                        <span class="subHeading">Pricing</span>
-                        
-                        <div class="mt-20">
-                            <span class="paragraph-1">Price Table</span>
-
-                            <div class="form-group w-100 priceTableWrapper mt-2">
-                                <table class="priceTable">
-                                    <thead>
-                                      <tr>
-                                        <th>Cost Price</th>
-                                        <th>Selling Price</th>
-                                        <th>Profit</th>
-                                        <th id="specialPriceTxt">Special Price <span>(Optional)</span></th>
-                                        <th>Availability</th>
-                                      </tr>
-                                    </thead>
-                                    <tbody>
-                                      <tr>
-                                        <td>
-                                          <input
-                                            type="text"
-                                            id="varCostPrice"
-                                            class="form-control"
-                                            placeholder="RS."
-                                            required
-                                            oninput=" this.value = this.value .replace(/[^0-9.]/g, '') .replace(/(\..*?)\..*/g, '$1'); calculatPricing();"
-                                          />
-                                        </td>
-                                        <td>
-                                          <input
-                                            type="text"
-                                            id="varSellingPrice"
-                                            class="form-control"
-                                            placeholder="RS."
-                                            required
-                                            oninput=" this.value = this.value .replace(/[^0-9.]/g, '') .replace(/(\..*?)\..*/g, '$1'); calculatPricing();"
-                                          />
-                                        </td>
-                                        <td>
-                                          <p class="mb-0" id="varProfit">Profit</p>
-                                        </td>
-                                        <td>
-                                          <input
-                                            type="text"
-                                            id="varSpecialPrice"
-                                            class="form-control"
-                                            placeholder="RS."
-                                            oninput=" this.value = this.value .replace(/[^0-9.]/g, '') .replace(/(\..*?)\..*/g, '$1'); calculatPricing();"
-                                          />
-                                        </td>
-                                        <td class="text-center">
-                                          <div class="form-check form-switch p-0 d-flex justify-content-center">
-                                            <input
-                                              class="form-check-input mx-auto availabilityCheck"
-                                              type="checkbox"
-                                              id="flexSwitchCheckChecked"
-                                            />
-                                          </div>
-                                        </td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                                                               
-                            </div>
-                        </div>
+                    <div class="pricingSec bg-white mt-40">
+                      <h5 class="mb-0">Pricing</h5>
+                      <span class="priceTableHead mt-20">Price Table</span>
+                      
+                      <div class="form-group w-100 mt-2 priceTableWrapper">
+                        <table class="priceTable">
+                          <thead>
+                            <tr>
+                              <th>Cost Price</th>
+                              <th>Selling Price</th> 
+                              <th>Profit</th>
+                              <!-- <th id="specialPriceTxt">Special Price <span>(Optional)</span></th> -->
+                              <th>Special Price <sub>(Optional)</sub></th>
+                              <th>Availability</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><input type="text"  id="costPrice" class="form-control" placeholder="RS."  oninput=" this.value = this.value .replace(/[^0-9.]/g, '') .replace(/(\..*?)\..*/g, '$1'); calculatPricing();"></td>
+                              <td><input type="text" id="sellingPrice" class="form-control" placeholder="RS." oninput=" this.value = this.value .replace(/[^0-9.]/g, '') .replace(/(\..*?)\..*/g, '$1'); calculatPricing();"></td>
+                              <td><p class="mb-0" id="Profit">Profit</p></td>
+                              <td class="d-flex gap-2 align-items-center"><input type="text" id="specialPrice" class="form-control" placeholder="RS."  oninput=" this.value = this.value .replace(/[^0-9.]/g, '') .replace(/(\..*?)\..*/g, '$1'); calculatPricing();">
+                                <div class="calendar-container position-relative">
+                                  <i class="calendar-icon cursor-pointer" id="calendarIcon" title="Select a date"><i class="fa fa-calendar" aria-hidden="true"></i>
+                                </i>
+                                  <div class="custom-tooltip" id="tooltip">
+                                    <div class="d-flex align-items-center">
+                                      <input type="text" id="datePicker" class="form-control" name="daterange" placeholder="Select date range">
+                                                                <i class="fas fa-trash trash-icon" id="trashIcon" title="Clear date"></i> <!-- Trash Icon -->
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+            
+                              <!-- <td><input type="text" oninput="calculatPricing()" id="specialPrice" class="form-control" placeholder="RS."  oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td> -->
+                              <td class="text-center">
+                                  <div class="form-check form-switch p-0 d-flex justify-content-center">
+                                      <input class="form-check-input mx-auto availabilityCheck" type="checkbox" id="flexSwitchCheckChecked">
+                                  </div>
+                              </td>
+                          </tr>
+                          
+                            </tr>
+                          </tbody>
+                          
+                          
+                        </table>
+                      <!-- </select> -->
+                                     
+                    </div>
                     </div>
 
                     <div class="form1 mt-40">
-                        <p class="subHeading">Inventory & Stock</p>
-                        <div class="mt-40 d-flex gap-2 cursor-pointer">
-                          <input class="form-check-input" type="checkbox" name="" id="varTrackQ">
-                          <label class="paragraph-1" for="varTrackQ">Track Quantity</label>
+                      <p class="subHeading">Inventory & Stock</p>
+                      <div class="mt-40 d-flex gap-10">
+                        <input class="form-check-input" type="checkbox" name="" id="track_quantity">
+                        <label class="paragraph-1" for="track_quantity">Track Quantity</label>
+                      </div>
+                      <div class="mt-20 d-flex gap-10">
+                        <input class="form-check-input" type="checkbox" name="" id="out_of_stock">
+                        <label class="paragraph-1" for="out_of_stock">Continue Selling when out of Stock</label>
+                      </div>
+                      
+                      <div class="mt-40 d-flex gap-20">
+                        <div class="w-100">
+                          <span class="paragraph-1">Seller SKU</span>
+                          <input class="mt-2 form-control " type="text" placeholder="Enter SKU" name="" id="">
                         </div>
-                        <div class="mt-40 d-flex gap-2 cursor-pointer">
-                          <input class="form-check-input" type="checkbox" name="" id="varOutStock">
-                          <label class="paragraph-1" for="varOutStock">Continue Selling when out of Stock</label>
+                        <div class="w-100">
+                          <span class="paragraph-1">Barcode</span>
+                          <input class="mt-2 form-control " type="text" placeholder="Enter Barcode" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="" id="">
+                        </div>
+                      </div>
+            
+                      <div class="mt-40">
+                        <span class="paragraph-1">Warehouse Type</span>
+                        <div class="mt-2 d-flex gap-10" >
+                          <input class="form-check-input" type="checkbox" name="" id="merchant" checked>
+                          <label class="paragraph-1 cursor-pointer" for="merchant">FBM (Fulfillment by Merchant)</label>
                         </div>
                         
-                        <div class="mt-40 d-flex gap-20">
-                          <div class="w-100">
-                            <span class="paragraph-1">Seller SKU</span>
-                            <input class="form-control mt-2" type="text" placeholder="Enter SKU" name="" id="">
+                        <div class="px-4 " id="fullByMerchant">
+                          <div class="mt-3 d-flex align-items-center gap-2">
+                            <input class="form-radio-input" id="fbmDrop" type="radio" name="fbmCheck" checked>
+                            <label class="paragraph-1" for="fbmDrop">Drop Off</label>
                           </div>
-                          <div class="w-100">
-                            <span class="paragraph-1">Barcode</span>
-                            <input class="form-control mt-2" type="text" placeholder="Enter Barcode" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="" id="">
+                          <div class="mt-2 d-flex align-items-center gap-2">
+                            <input class="form-radio-input" id="fbmPickUp" name="fbmCheck" type="radio" >
+                            <label class="paragraph-1"  for="fbmPickUp">Pickup</label>
                           </div>
                         </div>
-              
-                        <div class="mt-40">
-                          <span class="paragraph-1">Warehouse Type</span>
-                          <div class="mt-2 d-flex gap-10" >
-                            <input class="form-check-input" type="checkbox" name="" id="merchant" checked>
-                            <label class="paragraph-1 cursor-pointer" for="merchant">FBM (Fulfillment by Merchant)</label>
-                          </div>
-                          
-                          <div class="px-4 " id="fullByMerchant">
-                            <div class="mt-3 d-flex align-items-center gap-2">
-                              <input class="form-radio-input" type="radio" id="fbmDrop" name="fbmChecked" checked>
-                              <label class="paragraph-1" for="fbmDrop">Drop Off</label>
-                            </div>
-                            <div class="mt-2 d-flex align-items-center gap-2">
-                              <input class="form-radio-input" name="fbmChecked" id="fbmPickUp" type="radio" >
-                              <label class="paragraph-1" for="fbmPickUp">Pickup</label>
-                            </div>
-                          </div>
-              
-                         <div class="mt-30" >
-                          <div class="d-flex gap-10">
-                            <input class="form-check-input" type="checkbox" name="" id="VB">
-                            <label class="paragraph-1 cursor-pointer" for="VB">FBV (Fulfillment by ValueBox)</label>
-                          </div>
-                         </div>
-              
-                          
-                          
+            
+                       <div class="mt-30" >
+                        <div class="d-flex gap-10">
+                          <input class="form-check-input" type="checkbox" name="" id="VB">
+                          <label class="paragraph-1 cursor-pointer" for="VB">FBV (Fulfillment by ValueBox)</label>
                         </div>
-                        <div class="mt-40">
-                          <div class="d-flex justify-content-between">
-                            <span class="paragraph-1">Quantity</span>
-                            <!-- <a href="" class="text-Blue-80 fs-18">Edit Location
-                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.5307 11.4692C20.6711 11.6098 20.75 11.8004 20.75 11.9992C20.75 12.1979 20.6711 12.3886 20.5307 12.5292L14.5307 18.5292C14.462 18.6029 14.3792 18.662 14.2872 18.703C14.1952 18.7439 14.0959 18.766 13.9952 18.7678C13.8945 18.7695 13.7944 18.751 13.7011 18.7133C13.6077 18.6756 13.5228 18.6194 13.4516 18.5482C13.3804 18.477 13.3243 18.3922 13.2865 18.2988C13.2488 18.2054 13.2303 18.1054 13.2321 18.0047C13.2338 17.904 13.2559 17.8046 13.2969 17.7126C13.3379 17.6206 13.397 17.5378 13.4707 17.4692L18.1907 12.7492L4.00066 12.7492C3.80175 12.7492 3.61098 12.6702 3.47033 12.5295C3.32968 12.3889 3.25066 12.1981 3.25066 11.9992C3.25066 11.8003 3.32968 11.6095 3.47033 11.4688C3.61098 11.3282 3.80175 11.2492 4.00066 11.2492L18.1907 11.2492L13.4707 6.52918C13.397 6.46051 13.3379 6.37771 13.2969 6.28571C13.2559 6.19372 13.2338 6.0944 13.2321 5.9937C13.2303 5.893 13.2488 5.79297 13.2865 5.69958C13.3243 5.60619 13.3804 5.52136 13.4516 5.45014C13.5228 5.37892 13.6077 5.32277 13.7011 5.28505C13.7945 5.24733 13.8945 5.22881 13.9952 5.23059C14.0959 5.23236 14.1952 5.2544 14.2872 5.2954C14.3792 5.33639 14.462 5.39549 14.5307 5.46918L20.5307 11.4692Z" fill="#33539B"/>
-                              </svg>
-                            </a> -->
-                            <fieldset class="form-group mb-0 w-25  align-items-end" id="location_fieldset">
-                              <select class="select-dropdown form-select" id="locationDropdown">
-                                  <option value="all">All Locations</option>
-                                  <option value="1">Mda road multan</option>
-                                  <option value="2">Gulgasht colony opposit habib bank Multan</option>
-                                  <option value="3">Garden Town, Lahore, Punjab, Pakistan</option>
-                              </select>
-                          </fieldset>
-                          </div>
-                          <div class="TableWrapper mt-2">
-                            <table id="fbmTable" class="">
-                              <thead>
-                                <tr >
-                                    <th class="paragraph-3">Location</th>
-                                    <th class="text-center paragraph-3">Available</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr data-location="1">
-                                    <td><span class="subHeading-4">Mda road multan</span></td>
-                                    <td class="px-4 py-2"><input class="table-input mx-auto" type="text" placeholder="00" oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td>
-                                </tr>
-                                <tr data-location="2">
-                                  <td><span class="subHeading-4">Gulgasht colony opposit habib bank Multan</span></td>
+                       </div>
+            
+                        
+                        
+                      </div>
+                      <div class="mt-40">
+                        <div class="d-flex justify-content-between">
+                          <span class="paragraph-1">Quantity</span>
+                          <!-- <a href="" class="text-Blue-80 fs-18">Edit Location
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M20.5307 11.4692C20.6711 11.6098 20.75 11.8004 20.75 11.9992C20.75 12.1979 20.6711 12.3886 20.5307 12.5292L14.5307 18.5292C14.462 18.6029 14.3792 18.662 14.2872 18.703C14.1952 18.7439 14.0959 18.766 13.9952 18.7678C13.8945 18.7695 13.7944 18.751 13.7011 18.7133C13.6077 18.6756 13.5228 18.6194 13.4516 18.5482C13.3804 18.477 13.3243 18.3922 13.2865 18.2988C13.2488 18.2054 13.2303 18.1054 13.2321 18.0047C13.2338 17.904 13.2559 17.8046 13.2969 17.7126C13.3379 17.6206 13.397 17.5378 13.4707 17.4692L18.1907 12.7492L4.00066 12.7492C3.80175 12.7492 3.61098 12.6702 3.47033 12.5295C3.32968 12.3889 3.25066 12.1981 3.25066 11.9992C3.25066 11.8003 3.32968 11.6095 3.47033 11.4688C3.61098 11.3282 3.80175 11.2492 4.00066 11.2492L18.1907 11.2492L13.4707 6.52918C13.397 6.46051 13.3379 6.37771 13.2969 6.28571C13.2559 6.19372 13.2338 6.0944 13.2321 5.9937C13.2303 5.893 13.2488 5.79297 13.2865 5.69958C13.3243 5.60619 13.3804 5.52136 13.4516 5.45014C13.5228 5.37892 13.6077 5.32277 13.7011 5.28505C13.7945 5.24733 13.8945 5.22881 13.9952 5.23059C14.0959 5.23236 14.1952 5.2544 14.2872 5.2954C14.3792 5.33639 14.462 5.39549 14.5307 5.46918L20.5307 11.4692Z" fill="#33539B"/>
+                            </svg>
+                          </a> -->
+                          <fieldset class="form-group mb-0 w-25  align-items-end" id="location_fieldset">
+                            <select class="select-dropdown form-select" id="locationDropdown">
+                                <option value="all">All Locations</option>
+                                <option value="1">Mda road multan</option>
+                                <option value="2">Gulgasht colony opposit habib bank Multan</option>
+                                <option value="3">Garden Town, Lahore, Punjab, Pakistan</option>
+                            </select>
+                        </fieldset>
+                        </div>
+                        <div class="TableWrapper mt-2">
+                          <table id="fbmTable" class="">
+                            <thead>
+                              <tr >
+                                  <th class="paragraph-3">Location</th>
+                                  <th class="text-center paragraph-3">Available</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr data-location="1">
+                                  <td><span class="subHeading-4">Mda road multan</span></td>
                                   <td class="px-4 py-2"><input class="table-input mx-auto" type="text" placeholder="00" oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td>
                               </tr>
-                              <tr data-location="3">
-                                <td><span class="subHeading-4">Garden Town, Lahore, Punjab, Pakistan</span></td>
+                              <tr data-location="2">
+                                <td><span class="subHeading-4">Gulgasht colony opposit habib bank Multan</span></td>
                                 <td class="px-4 py-2"><input class="table-input mx-auto" type="text" placeholder="00" oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td>
                             </tr>
-                            </tbody>
-                            </table>
-                            <table id="fbvTable" class="" style="display: none;">
-                              <thead>
-                                <tr>
-                                    <th class="paragraph-3">Location</th>
-                                    <th class="text-center paragraph-3">Available</th>
-                                    <th class="text-center paragraph-3">Reserved</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><span class="subHeading-4 text-brand-color">FVB (Fulfillment by ValueBox)</span></td>
-                                    <td class="px-4 py-2 text-center text-brand-color">85</td>
-                                    <td class="px-4 py-2 text-center text-brand-color">66</td>
-                                </tr>
-                            </tbody>
-                            </table>
-                          </div>
+                            <tr data-location="3">
+                              <td><span class="subHeading-4">Garden Town, Lahore, Punjab, Pakistan</span></td>
+                              <td class="px-4 py-2"><input class="table-input mx-auto" type="text" placeholder="00" oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td>
+                          </tr>
+                          </tbody>
+                          </table>
+                          <table id="fbvTable" class="" style="display: none;">
+                            <thead>
+                              <tr>
+                                  <th class="paragraph-3">Location</th>
+                                  <th class="text-center paragraph-3">Available</th>
+                                  <th class="text-center paragraph-3">Reserved</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td><span class="subHeading-4 text-brand-color">FVB (Fulfillment by ValueBox)</span></td>
+                                  <td class="px-4 py-2 text-center text-brand-color">85</td>
+                                  <td class="px-4 py-2 text-center text-brand-color">66</td>
+                              </tr>
+                          </tbody>
+                          </table>
                         </div>
-
                       </div>
+                    </div>
               
                       <div class="form1 mt-40">
                         <p class="subHeading">Shipping & Warranty</p>
@@ -902,13 +887,17 @@
 
     
 
-    <script src="../assets/vendors/ckeditor/ckeditor.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/vendors/choices.js/choices.min.js"></script>
     <script src="../assets/js/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- <script src="productscript.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
     <script src="productscript.js"></script>
     <!-- <script>
       function handleFileUpload(inputId, containerId) {

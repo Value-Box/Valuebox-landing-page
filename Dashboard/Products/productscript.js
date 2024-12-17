@@ -1,4 +1,4 @@
-$(".select-dropdown").select2();
+
 
   
   // Form submission or button click validation
@@ -73,15 +73,20 @@ $(".select-dropdown").select2();
       });
 
   // Classic editor
-        ClassicEditor.create(document.querySelector('#productDesc'))
-            .catch(error => {
-                console.error(error);
-            });
-            ClassicEditor
-            .create(document.querySelector('#highlight'))
-            .catch(error => {
-                console.error(error);
-            });
+  if ($('#productDesc').length > 0) {
+    ClassicEditor.create($('#productDesc')[0])
+        .catch(error => {
+            console.error(error);
+        });
+}
+
+// Check if the element exists before initializing CKEditor for #highlight
+if ($('#highlight').length > 0) {
+    ClassicEditor.create($('#highlight')[0])
+        .catch(error => {
+            console.error(error);
+        });
+}
   
 
             //upload images with preview
@@ -470,3 +475,33 @@ $(".select-dropdown").select2();
 
 
 
+  $(document).ready(function() {
+    $(".select-dropdown").select2({
+        dropdownAutoWidth: true,  // Auto width based on the input field
+        dropdownParent: $("body")  // Append dropdown to body
+    });
+
+    // Listen for when the dropdown opens
+    $(".select-dropdown").on("select2:open", function() {
+        var dropdown = $(this).data('select2').dropdown.$dropdown;
+        var dropdownHeight = dropdown.outerHeight();
+        var windowHeight = $(window).height();
+        var inputTop = $(this).offset().top;
+        var inputHeight = $(this).outerHeight();
+
+        // Check if the dropdown is near the bottom of the screen
+        if (inputTop + inputHeight + dropdownHeight > windowHeight) {
+            // Open upwards
+            dropdown.css({
+                top: 'auto',    // Reset top
+                bottom: '100%'   // Position from the bottom
+            });
+        } else {
+            // Open downwards
+            dropdown.css({
+                top: '100%',     // Position from the top
+                bottom: 'auto'   // Reset bottom
+            });
+        }
+    });
+});
