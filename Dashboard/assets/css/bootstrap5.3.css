@@ -12175,6 +12175,7 @@ fieldset:disabled .btn {
   .mt-30 {
     margin-top: 30px;
   }
+  
   .TableWrapper {
     border-radius: 8px;
     overflow: hidden;
@@ -12195,7 +12196,7 @@ fieldset:disabled .btn {
   }
   .TableWrapper table tbody tr {
     border-bottom: 1px solid #dbdbdb;
-    background-color: var(--bs-white) !important;
+    background-color: var(--bs-white) ;
   }
   .input {
     display: flex;
@@ -12548,10 +12549,7 @@ fieldset:disabled .btn {
   font-weight: 400;
   line-height: 28px
   }*/
-  .Table-row-bg {
-    background-color: #E6EAF3 !important;
-    color: #002882;
-  }
+  
   .border-Gray-Dark{
     border: 1px solid var(--Gray-Dark);
   }
@@ -12984,4 +12982,13 @@ background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
     .h-md-44 {
         height: 44px !important;
     }
+}
+.Table-row-bg {
+  background-color: #E6EAF3 !important;
+  color: #002882 !important;
+}
+
+.Table-row-bg td:first-child{
+  color: #002882 !important;
+
 }
