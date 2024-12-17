@@ -310,7 +310,7 @@ function redirectBasedOnScreenSize() {
 window.addEventListener("resize", () => {
   // Add a debounce to avoid frequent checks on resize
   clearTimeout(window.redirectTimeout);
-  window.redirectTimeout = setTimeout(redirectBasedOnScreenSize, 200); // Delay for 200ms
+  window.redirectTimeout = setTimeout(redirectBasedOnScreenSize, 0); // Delay for 200ms
 });
 
 document.addEventListener("DOMContentLoaded", () => {
