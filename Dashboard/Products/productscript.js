@@ -90,99 +90,103 @@ if ($('#highlight').length > 0) {
   
 
             //upload images with preview
-          function handleFileUpload(inputId, containerId, errorContainerId) {
-          $("#" + inputId).on("change", function(event) {
-          const files = event.target.files;
-          const previewContainer = $("#" + containerId);
-          const errorContainer = $("#" + errorContainerId);
-  
-          // Clear existing previews and error messages
-          previewContainer.empty();
-          errorContainer.empty().hide();
-  
-          let isValid = true;
-          let errorMessage = "";
-  
-          // Allowed formats
-          const allowedFormats = ["image/jpeg", "image/png", "image/webp"];
-          const maxFileSize = 512000; // 500KB
-  
-          // Check all files before displaying previews
-          $.each(files, function(index, file) {
-              if (!allowedFormats.includes(file.type)) {
-                  isValid = false;
-                  errorMessage += `File \"${file.name}\" is not in an allowed format (JPG, PNG, WEBP).\n`;
-                  return false; // Stop processing further files
-              }
-              if (file.size > maxFileSize) {
-                  isValid = false;
-                  errorMessage += `File \"${file.name}\" exceeds the maximum size of 500KB.\n`;
-                  return false; // Stop processing further files
-              }
-          });
-  
-          if (!isValid) {
-              // Show error message if any file is invalid
-              const errorElement = $("<div>").addClass("error-message").css("color", "red").text(errorMessage);
-              errorContainer.append(errorElement).show();
-          } else {
-              // Process files and display previews if all files are valid
-              $.each(files, function(index, file) {
-                  const reader = new FileReader();
-  
-                  // Create a container for each image
-                  const fileContainer = $("<div>").addClass("file-container").css({
+            function handleFileUpload(inputId, containerId, errorContainerId) {
+              $("#" + inputId).on("change", function (event) {
+                const files = event.target.files;
+                const previewContainer = $("#" + containerId);
+                const errorContainer = $("#" + errorContainerId);
+            
+                // Clear existing error messages only
+                errorContainer.empty().hide();
+            
+                let isValid = true;
+                let errorMessage = "";
+            
+                // Allowed formats
+                const allowedFormats = ["image/jpeg", "image/png", "image/webp"];
+                const maxFileSize = 512000; // 500KB
+            
+                // Check all files before displaying previews
+                $.each(files, function (index, file) {
+                  if (!allowedFormats.includes(file.type)) {
+                    isValid = false;
+                    errorMessage += `File "${file.name}" is not in an allowed format (JPG, PNG, WEBP).\n`;
+                    return false; // Stop processing further files
+                  }
+                  if (file.size > maxFileSize) {
+                    isValid = false;
+                    errorMessage += `File "${file.name}" exceeds the maximum size of 500KB.\n`;
+                    return false; // Stop processing further files
+                  }
+                });
+            
+                if (!isValid) {
+                  // Show error message if any file is invalid
+                  const errorElement = $("<div>").addClass("error-message").css("color", "red").text(errorMessage);
+                  errorContainer.append(errorElement).show();
+                } else {
+                  // Process files and display previews if all files are valid
+                  $.each(files, function (index, file) {
+                    const reader = new FileReader();
+            
+                    // Create a container for each image
+                    const fileContainer = $("<div>").addClass("file-container").css({
                       "display": "inline-block",
                       "margin": "5px",
                       "position": "relative"
-                  });
-  
-                  // Create a file preview (image)
-                  const filePreview = $("<div>").addClass("file-preview");
-  
-                  // Create a button for removing the file
-                  const removeBtn = $("<button>").addClass("remove-btn").text("X").css({
-                      "cursor": "pointer"
-                  });
-                  removeBtn.on("click", function() {
+                    });
+            
+                    // Create a file preview (image)
+                    const filePreview = $("<div>").addClass("file-preview");
+            
+                    // Create a button for removing the file
+                    const removeBtn = $("<button>").addClass("remove-btn").text("X").css({
+                      "cursor": "pointer",
+                      "position": "absolute",
+                      "top": "-5px",
+                      "right": "-5px"
+                    });
+            
+                    removeBtn.on("click", function () {
                       fileContainer.remove(); // Remove the file container
-                  });
-  
-                  // Create a label for the file name
-                  const fileName = $("<div>").addClass("file-name").text(file.name);
-  
-                  // Check if the file is an image
-                  if (file.type.startsWith("image")) {
+                    });
+            
+                    // Create a label for the file name
+                    const fileName = $("<div>").addClass("file-name").text(file.name);
+            
+                    // Check if the file is an image
+                    if (file.type.startsWith("image")) {
                       const img = $("<img>").addClass("w-100px rounded-2").css({
-                          "width": "100px",
-                          "border-radius": "4px"
+                        "width": "100px",
+                        "border-radius": "4px"
                       });
-  
+            
                       // Load the image
-                      reader.onload = function(e) {
-                          img.attr("src", e.target.result);
+                      reader.onload = function (e) {
+                        img.attr("src", e.target.result);
                       };
                       reader.readAsDataURL(file);
-  
+            
                       // Append image and remove button to the container
                       filePreview.append(img);
-                  }
-  
-                  // Append elements to the container
-                  fileContainer.append(filePreview);
-                  fileContainer.append(removeBtn); // Add remove button
-                  fileContainer.append(fileName);
-  
-                  // Add the file container to the preview container
-                  previewContainer.append(fileContainer);
+                    }
+            
+                    // Append elements to the container
+                    fileContainer.append(filePreview);
+                    fileContainer.append(removeBtn); // Add remove button
+                    //fileContainer.append(fileName);
+            
+                    // Add the file container to the preview container
+                    previewContainer.append(fileContainer);
+                  });
+                }
               });
-          }
-      });
-  }
-  
-  // Attach event listeners to file inputs
-  handleFileUpload("uploadImgSecinput", "previewContainer", "errorContainerUpload");
-  handleFileUpload("medCenImg", "medCenPreviewContainer", "errorContainerMedCen");
+            }
+            
+            // Attach event listeners to file inputs
+            handleFileUpload("uploadImgSecinput", "previewContainer", "errorContainerUpload");
+            handleFileUpload("medCenImg", "medCenPreviewContainer", "errorContainerMedCen");
+            
   
   
   

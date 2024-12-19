@@ -2434,6 +2434,16 @@ background:linear-gradient(90deg, #FFC136 0%, #FAC142 19.76%, #FFD168 52.5%, #F5
   border: 1px solid var(--Primary-Color-Dark-Blue-10, #E6EAF3);
   background: transparent;
 }
+.video-preview{
+  border-radius: 12px;
+}
+.video-thumbnail {
+  height: 150px;
+  width: 270px;
+  object-fit: cover; /* Ensures the video fills the container */
+  display: block; /* Removes any inline-level gaps */
+}
+
 @media(max-width:1400px){
   .custom-modal-width{
     max-width: 1250px !important;
