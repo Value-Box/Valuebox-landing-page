@@ -261,7 +261,7 @@ if ($('#highlight').length > 0) {
       const errorContainer = $("#" + errorContainerId);
   
       // Clear existing previews and error messages
-      previewContainer.empty();
+      //previewContainer.empty();
       errorContainer.empty().hide();
   
       // Allowed formats and file size
