@@ -1364,17 +1364,26 @@
               <div class="tab-pane fade" id="list-monday" role="tabpanel" aria-labelledby="list-monday-list">
                 
                 <div class="medCenVideoPreviewContainer d-flex flex-wrap gap-3 mt-40" id="medCenVideoPreviewContainer">
-                  <video class="video-thumbnail img-fluid rounded" data-bs-toggle="modal" data-bs-target="#videoModal" data-video="https://www.w3schools.com/html/mov_bbb.mp4" muted>
-                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                  </video>
+                  <div class="position-relative">
+                    <video class="video-thumbnail  img-fluid rounded" data-bs-toggle="modal" data-bs-target="#videoModal" data-video="https://www.w3schools.com/html/mov_bbb.mp4" muted>
+                      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    </video>
+                    <input class="form-check-input position-absolute ms-2 mt-2 start-0 top-0" type="checkbox">
+  
+                  </div>
+                  <div class="position-relative">
+                    <video class="video-thumbnail img-fluid rounded" data-bs-toggle="modal" data-bs-target="#videoModal" data-video="https://www.w3schools.com/html/movie.mp4" muted>
+                      <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+                    </video>
+                    <input class="form-check-input position-absolute ms-2 mt-2 start-0 top-0" type="checkbox">
+                  </div>
                 
-                  <video class="video-thumbnail img-fluid rounded" data-bs-toggle="modal" data-bs-target="#videoModal" data-video="https://www.w3schools.com/html/movie.mp4" muted>
-                    <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
-                  </video>
-                
-                  <video class="video-thumbnail img-fluid rounded" data-bs-toggle="modal" data-bs-target="#videoModal" data-video="https://www.w3schools.com/html/mov_bbb.mp4" muted>
-                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                  </video>
+                  <div class="position-relative">
+                    <video class="video-thumbnail img-fluid rounded" data-bs-toggle="modal" data-bs-target="#videoModal" data-video="https://www.w3schools.com/html/mov_bbb.mp4" muted>
+                      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    </video>
+                    <input class="form-check-input position-absolute ms-2 mt-2 start-0 top-0" type="checkbox">
+                  </div>
                 </div>
                 
               </div>
@@ -1396,7 +1405,7 @@
 
     <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
-        <div class="modal-content w-75 mx-auto">
+        <div class="modal-content w-50 mx-auto">
           <div class="modal-header">
             <h5 class="modal-title" id="videoModalLabel">Watch Video</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
