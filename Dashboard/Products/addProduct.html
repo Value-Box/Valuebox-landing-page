@@ -689,7 +689,7 @@
                     <input type="url" class="form-control" id="utubeUrl" placeholder="Enter YouTube Link" >
                     <p id="errorMessage" class="text-center mt-10" style="color: red; display: none;">Please enter a valid YouTube video link.</p>
                   </div>
-                  <div class="videoPreviewContainer" id="videoPreviewContainer">
+                  <div class="videoPreviewContainer w-100" id="videoPreviewContainer">
                   </div>
                 </div>
                                </div>
@@ -1341,22 +1341,7 @@
 
               <div class="tab-content text-justify px-0">
                 <div class="tab-pane fade show active" id="list-sunday" role="tabpanel" aria-labelledby="list-sunday-list">
-                  <div class="uploadImgSec">
-                    <div class="d-flex gap-3 uploadImgSecBtns">
-                      <label class="newFileBTn" for="medCenImg">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 25 24" fill="none">
-                          <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="#E6EAF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="#E6EAF3" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>
-                        Upload New Files
-                      </label>
-                      <input type="file" class="d-none" multiple="multiple" id="medCenImg" accept=".jpg, .WEBp, .png">
-                    </div>
-                    <span>Only PNG, JPG and WEBp files are Accepted less then 500kb</span>
-                    <p id="errorContainerMedCen" style="color: red; display: none;"></p>
-
-                    
-                  </div>
+                  
                   <div class="w-100 d-flex flex-wrap gap-3 mt-40" id="medCenPreviewContainer">
                      <div class="position-relative ">
                       <img src="../Images/orderReturnimg.png" alt="">
@@ -1377,39 +1362,21 @@
                   </div>
               </div>
               <div class="tab-pane fade" id="list-monday" role="tabpanel" aria-labelledby="list-monday-list">
-                <div class="uploadVidSec">
-                  <div class="d-flex gap-3 uploadVidSecBtns">
-                    <label class="newVidFileBTn" for="medCenNewVidFileBTn">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 25 24" fill="none">
-                        <path d="M12.5 15V2M12.5 2L15.5 5.5M12.5 2L9.5 5.5" stroke="#E6EAF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M8.5 22H16.5C19.328 22 20.743 22 21.621 21.122C22.5 20.242 22.5 18.829 22.5 16V15C22.5 12.172 22.5 10.758 21.621 9.87895C20.853 9.11095 19.675 9.01395 17.5 9.00195M7.5 9.00195C5.325 9.01395 4.147 9.11095 3.379 9.87895C2.5 10.758 2.5 12.172 2.5 15V16C2.5 18.829 2.5 20.243 3.379 21.122C3.679 21.422 4.041 21.619 4.5 21.749" stroke="#E6EAF3" stroke-width="1.5" stroke-linecap="round"/>
-                      </svg>
-                      Upload New Files
-                    </label>
-                    <input type="file" class="d-none" id="medCenNewVidFileBTn" accept="video/mp4">
                 
-                  </div>
-                  <span>Mp4 format for videos with file size less then 5MB</span>
-                  <p class="m-0">OR</p>
-                  <div class="form-group m-0 w-100">
-                    <input type="url" class="form-control" id="utubeUrl" placeholder="Enter YouTube Link" >
-                    <p id="medCenVidErrMes" class="text-center mt-10" style="color: red; display: none;">Please enter a valid YouTube video link.</p>
-                  </div>
-                  
-                </div>
-                <div class="medCenVideoPreviewContainer d-flex flex-wrap gap-3 mt-40 " id="medCenVideoPreviewContainer">
+                <div class="medCenVideoPreviewContainer d-flex flex-wrap gap-3 mt-40" id="medCenVideoPreviewContainer">
                   <video class="video-thumbnail img-fluid rounded" data-bs-toggle="modal" data-bs-target="#videoModal" data-video="https://www.w3schools.com/html/mov_bbb.mp4" muted>
                     <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
                   </video>
-
+                
                   <video class="video-thumbnail img-fluid rounded" data-bs-toggle="modal" data-bs-target="#videoModal" data-video="https://www.w3schools.com/html/movie.mp4" muted>
                     <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
                   </video>
-
+                
                   <video class="video-thumbnail img-fluid rounded" data-bs-toggle="modal" data-bs-target="#videoModal" data-video="https://www.w3schools.com/html/mov_bbb.mp4" muted>
                     <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
                   </video>
                 </div>
+                
               </div>
                   
   

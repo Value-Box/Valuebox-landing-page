@@ -160,14 +160,16 @@ if (sidebar) {
 document.addEventListener("DOMContentLoaded", function () {
   const burgerBtn = document.querySelector(".burger-btn");
 
+  // Check if the burger button exists on the page
   if (burgerBtn) {
     burgerBtn.addEventListener("click", () => {
       document.getElementById("sidebar").classList.toggle("active");
     });
   } else {
-    console.error("Burger button not found");
+    console.log("Burger button not found on this page.");
   }
 });
+
 
 // document.querySelector(".sidebar-hide").addEventListener("click", () => {
 //   document.getElementById("sidebar").classList.toggle("active");
@@ -273,9 +275,6 @@ menuItems.forEach((menuItem) => {
     });
   }
 });
-
-
-
 
 function redirectBasedOnScreenSize() {
   // Get the screen width
