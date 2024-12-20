@@ -23,23 +23,23 @@
 
 
 
-        //video preview in modal
-    const $modalVideo = $('#modalVideo');
-    const $modalVideoSource = $modalVideo.find('source');
+    //     //video preview in modal
+    // const $modalVideo = $('#modalVideo');
+    // const $modalVideoSource = $modalVideo.find('source');
   
-    // Handle thumbnail clicks
-    $('.video-thumbnail').on('click', function () {
-      const videoSrc = $(this).data('video');
-      $modalVideoSource.attr('src', videoSrc);
-      $modalVideo[0].load(); // Load video in modal but do not play automatically
-    });
+    // // Handle thumbnail clicks
+    // $('.video-thumbnail').on('click', function () {
+    //   const videoSrc = $(this).data('video');
+    //   $modalVideoSource.attr('src', videoSrc);
+    //   $modalVideo[0].load(); // Load video in modal but do not play automatically
+    // });
   
-    // Stop video playback and reset source when modal is closed
-    $('#videoModal').on('hidden.bs.modal', function () {
-      $modalVideo[0].pause();
-      $modalVideo[0].currentTime = 0; // Reset video to the beginning
-      $modalVideoSource.attr('src', ''); // Clear the video source
-    });
+    // // Stop video playback and reset source when modal is closed
+    // $('#videoModal').on('hidden.bs.modal', function () {
+    //   $modalVideo[0].pause();
+    //   $modalVideo[0].currentTime = 0; // Reset video to the beginning
+    //   $modalVideoSource.attr('src', ''); // Clear the video source
+    // });
   
       // Initialize Select2
   
@@ -88,247 +88,346 @@ if ($('#highlight').length > 0) {
         });
 }
   
+//Modal open for videos and images selection
+function openMediaCenter(param) {
+  console.log("Parameter received:", param);
 
-            //upload images with preview
-            function handleFileUpload(inputId, containerId, errorContainerId) {
-              $("#" + inputId).on("change", function (event) {
-                const files = event.target.files;
-                const previewContainer = $("#" + containerId);
-                const errorContainer = $("#" + errorContainerId);
-            
-                // Clear existing error messages only
-                errorContainer.empty().hide();
-            
-                let isValid = true;
-                let errorMessage = "";
-            
-                // Allowed formats
-                const allowedFormats = ["image/jpeg", "image/png", "image/webp"];
-                const maxFileSize = 512000; // 500KB
-            
-                // Check all files before displaying previews
-                $.each(files, function (index, file) {
-                  if (!allowedFormats.includes(file.type)) {
-                    isValid = false;
-                    errorMessage += `File "${file.name}" is not in an allowed format (JPG, PNG, WEBP).\n`;
-                    return false; // Stop processing further files
-                  }
-                  if (file.size > maxFileSize) {
-                    isValid = false;
-                    errorMessage += `File "${file.name}" exceeds the maximum size of 500KB.\n`;
-                    return false; // Stop processing further files
-                  }
-                });
-            
-                if (!isValid) {
-                  // Show error message if any file is invalid
-                  const errorElement = $("<div>").addClass("error-message").css("color", "red").text(errorMessage);
-                  errorContainer.append(errorElement).show();
-                } else {
-                  // Process files and display previews if all files are valid
-                  $.each(files, function (index, file) {
-                    const reader = new FileReader();
-            
-                    // Create a container for each image
-                    const fileContainer = $("<div>").addClass("file-container").css({
-                      "display": "inline-block",
-                      "margin": "5px",
-                      "position": "relative"
-                    });
-            
-                    // Create a file preview (image)
-                    const filePreview = $("<div>").addClass("file-preview");
-            
-                    // Create a button for removing the file
-                    const removeBtn = $("<button>").addClass("remove-btn").text("X").css({
-                      "cursor": "pointer",
-                      "position": "absolute",
-                      "top": "-5px",
-                      "right": "-5px"
-                    });
-            
-                    removeBtn.on("click", function () {
-                      fileContainer.remove(); // Remove the file container
-                    });
-            
-                    // Create a label for the file name
-                    const fileName = $("<div>").addClass("file-name").text(file.name);
-            
-                    // Check if the file is an image
-                    if (file.type.startsWith("image")) {
-                      const img = $("<img>").addClass("w-100px rounded-2").css({
-                        "width": "100px",
-                        "border-radius": "4px"
-                      });
-            
-                      // Load the image
-                      reader.onload = function (e) {
-                        img.attr("src", e.target.result);
-                      };
-                      reader.readAsDataURL(file);
-            
-                      // Append image and remove button to the container
-                      filePreview.append(img);
-                    }
-            
-                    // Append elements to the container
-                    fileContainer.append(filePreview);
-                    fileContainer.append(removeBtn); // Add remove button
-                    //fileContainer.append(fileName);
-            
-                    // Add the file container to the preview container
-                    previewContainer.append(fileContainer);
-                  });
-                }
-              });
-            }
-            
-            // Attach event listeners to file inputs
-            handleFileUpload("uploadImgSecinput", "previewContainer", "errorContainerUpload");
-            handleFileUpload("medCenImg", "medCenPreviewContainer", "errorContainerMedCen");
-            
-  
-  
-  
-  // function handleVideoUpload(inputId, containerId, errorMessage) {
-  //   $("#" + inputId).on("change", function(event) {
-  //     var $videoPreviewContainer = $(`#${containerId}`);
-  //     var files = event.target.files; // Corrected variable name
-  
-  //     // Clear previous previews and errors
-  //     $videoPreviewContainer.empty();
-  
-  //     for (var i = 0; i < files.length; i++) {
-  //       var file = files[i];
-  
-  //       // Validate file type (MP4 only)
-  //       if (file.type !== "video/mp4") {
-  //         var typeErrorElement = $('<div>', {
-  //           'class': 'error-message',
-  //           'text': 'Only MP4 videos are allowed.' // Error message for invalid file type
-  //         });
-  //         $videoPreviewContainer.append(typeErrorElement);
-  //         continue; // Skip this file
-  //       }
-  
-  //       // Check if the file is larger than 5MB
-  //       if (file.size > 5242880) {
-  //         var sizeErrorElement = $('<div>', {
-  //           'class': 'error-message',
-  //           'text': errorMessage || 'Your file is too large! Maximum allowed size is 5MB.' // Error message for large file
-  //         });
-  //         $videoPreviewContainer.append(sizeErrorElement);
-  //         continue; // Skip this file
-  //       }
-  
-  //       // If file type and size are valid, show video preview
-  //       var videoElement = $('<video>', {
-  //         'controls': true,
-  //         'width': '300',
-  //         'class': 'videoPreview',
-  //         'src': URL.createObjectURL(file) // Create a local object URL for the video
-  //       });
-  
-  //       var removeButton = $('<button>', {
-  //         'class': 'remove-video',
-  //         'text': 'X' // Button to remove the video preview
-  //       });
-  
-  //       var fileName = $('<div>', {
-  //         'class': 'file-name',
-  //         'text': file.name // Display the file name
-  //       });
-  
-  //       // Append video preview with file name and remove button
-  //       var videoWrapper = $('<div>', { 'class': 'video-wrapper' }).append(videoElement, fileName, removeButton);
-  //       $videoPreviewContainer.append(videoWrapper);
-  
-  //       // Remove video preview functionality
-  //       removeButton.on('click', function () {
-  //         $(this).closest('.video-wrapper').remove();
-  
-  //         // Reset the file input so the same file can be uploaded again
-  //         $(`#${inputId}`).val('');
-  //       });
-  //     }
-  //   });
-  // }
+  // Select containers using jQuery
+  const imgContainer = $('#mod_Med_Img');
+  const vidContainer = $('#mod_Med_Video');
+  const imgTab = $('#pictureTab');
+  const vidTab = $('#videoTab');
 
-  function handleVideoUpload(inputId, containerId, errorContainerId) {
-    $("#" + inputId).on("change", function (event) {
-      const files = event.target.files;
-      const previewContainer = $("#" + containerId);
-      const errorContainer = $("#" + errorContainerId);
-  
-      // Clear existing previews and error messages
-      //previewContainer.empty();
-      errorContainer.empty().hide();
-  
-      // Allowed formats and file size
-      const allowedFormats = ["video/mp4"];
-      const maxFileSize = 5242880; // 5MB
-      let isValid = true;
-  
-      // Check all files and display previews or errors
-      $.each(files, function (index, file) {
-        if (!allowedFormats.includes(file.type)) {
-          isValid = false;
-          const errorMessage = `Only MP4 videos are allowed. Please upload a valid MP4 video file.`;
-          errorContainer.append($("<div>").addClass("error-message").css("color", "red").text(errorMessage));
-          return false; // Stop further processing
-        }
-  
-        if (file.size > maxFileSize) {
-          isValid = false;
-          const errorMessage = `File size exceeds the maximum allowed size of 5MB. Please upload a smaller file.`;
-          errorContainer.append($("<div>").addClass("error-message").css("color", "red").text(errorMessage));
-          return false; // Stop further processing
-        }
-  
-        // If valid, display video preview
-        const videoWrapper = $("<div>").addClass("video-wrapper").css({
-          "display": "inline-block",
-          "margin": "5px",
-          "position": "relative"
-        });
-  
-        const videoElement = $("<video>", {
-          controls: true,
-          width: 300,
-          src: URL.createObjectURL(file), // Use URL.createObjectURL for video previews
-          class: "video-preview"
-        });
-  
-        const removeBtn = $("<button>").addClass("remove-btn").text("X").css({
-          "position": "absolute",
-          "top": "5px",
-          "right": "5px",
-          "cursor": "pointer"
-        });
-  
+  // Show/Hide containers based on the parameter
+  if (param === 'picture') {
+      imgContainer.show();  
+      imgTab.show();  
+      vidContainer.hide();  
+      vidTab.hide(); 
+      $("#doneButton").addClass('pictureDoneBTn')
+      $("#doneButton").removeClass('videoDoneBTn') 
+  } 
+  if (param === 'video') {
+      vidContainer.show();  
+      vidTab.show();  
+      imgContainer.hide();  
+      imgTab.hide(); 
+      $("#doneButton").addClass('videoDoneBTn')
+      $("#doneButton").removeClass('pictureDoneBTn') 
+  }
+}
+
+
+//only one input checked on videos
+$(document).on('click', '#medCenVideoPreviewContainer input[type="checkbox"]', function() {      
+  $('input[type="checkbox"]').not(this).prop('checked', false);      
+});
+
+// Function to handle image preview selection
+function handleImagePreviewSelection() {
+  const $previewContainer = $('#previewContainer');
+
+  // Handle selected images (allow multiple selection)
+  $('#medCenImgPreviewContainer .form-check-input:checked').each(function() {
+      const $parentDiv = $(this).closest('div').clone(); // Clone parent div (image container)
+      const imageSrc = $parentDiv.find('img').attr('src');  // Get image source
+
+      // Check if the image is already added in the preview container
+      if ($previewContainer.find(`img[src="${imageSrc}"]`).length === 0) {
+          $parentDiv.find('.form-check-input').remove(); // Remove checkbox in preview
+
+          // Create a cross icon and append to the image with the class '.remove-btn'
+          const $closeButton = $('<span class="remove-btn" style="position: absolute; top: -5px; right: -5px; cursor: pointer;">&#10006;</span>');
+          $parentDiv.append($closeButton);  // Add the close button to the image div
+
+          // Event to remove the image on cross click
+          $closeButton.on('click', function() {
+              $(this).closest('div').remove();  // Remove the parent div (image container)
+          });
+
+          $previewContainer.append($parentDiv); // Add cloned div to image preview container
+      }
+  });
+
+  console.log("Selected images moved to preview container.");
+}
+
+// Function to handle video preview selection (allow only one video)
+function handleVideoPreviewSelection() {
+  const $videoPreviewContainer = $('#videoPreviewContainer');
+  let videoAlreadyAdded = false; // Flag to check if a video is already added
+
+  console.log("Handle video preview selection triggered");
+
+  // Handle selected videos
+  $('#medCenVideoPreviewContainer .form-check-input:checked').each(function () {
+      const $parentDiv = $(this).closest('div').clone(); // Clone parent div (video container)
+      const videoSrc = $parentDiv.find('video').attr('src'); // Get video source
+      console.log("Selected video source:", videoSrc);
+
+      // Check if a video is already added in the preview container
+      if ($videoPreviewContainer.find('video').length === 0) {
+          console.log("No video exists, adding a new one");
+          $parentDiv.find('.form-check-input').remove(); // Remove checkbox in preview
+
+          // Set width of video container to 'fit-content'
+          $parentDiv.css('width', 'fit-content');
+
+          // Create a cross icon for the video with the class '.remove-btn' and append it
+          const $closeButton = $('<span class="remove-btn" style="position: absolute; top: 0; right: 0; cursor: pointer;">&#10006;</span>');
+          $parentDiv.append($closeButton); // Add the close button to the video div
+
+          // Event to remove the video on cross click
+          $closeButton.on('click', function () {
+              console.log("Video removed from preview container");
+              $(this).closest('div').remove(); // Remove the parent div (video container)
+              videoAlreadyAdded = false; // Reset the flag
+          });
+
+          $videoPreviewContainer.append($parentDiv); // Add cloned div to video preview container
+      } else {
+          // If a video already exists, show the alert
+          console.log("Video already exists, alerting user");
+          videoAlreadyAdded = true;
+      }
+  });
+
+  // If a video already exists, show alert message
+  if (videoAlreadyAdded) {
+      alert("A video is already added to the preview container!");
+  }
+
+  console.log("Selected videos moved to preview container.");
+}
+
+$('#doneButton').on('click', function() {
+  if ($("#doneButton").hasClass('pictureDoneBTn')) {
+      handleImagePreviewSelection();
+  } else if ($("#doneButton").hasClass('videoDoneBTn')) {
+      handleVideoPreviewSelection();
+  }
+});
+
+
+
+
+
+
+
+
+//upload images with preview
+function handleFileUpload(inputId, containerId, errorContainerId) {
+  const processedFiles = new Set(); // To track processed file names
+
+  $("#" + inputId).on("change", function (event) {
+    const files = event.target.files;
+    const previewContainer = $("#" + containerId);
+    const errorContainer = $("#" + errorContainerId);
+
+    // Clear previous errors
+    errorContainer.empty().hide();
+
+    // Allowed formats and size
+    const allowedFormats = ["image/jpeg", "image/png", "image/webp"];
+    const maxFileSize = 512000; // 500KB
+
+    // Variables to track errors
+    const errorMessages = {
+      size: [],
+      format: [],
+      duplicate: [],
+    };
+
+    $.each(files, function (index, file) {
+      if (processedFiles.has(file.name)) {
+        // Duplicate file error
+        errorMessages.duplicate.push(file.name);
+      } else if (!allowedFormats.includes(file.type)) {
+        // Invalid format error
+        errorMessages.format.push(file.name);
+      } else if (file.size > maxFileSize) {
+        // Size error
+        errorMessages.size.push(file.name);
+      } else {
+        // Add valid file to processedFiles set and display preview
+        processedFiles.add(file.name);
+
+        const reader = new FileReader();
+
+        // Create a container for the file preview
+        const fileContainer = $("<div>")
+          .addClass("file-container")
+          .css({
+            display: "inline-block",
+            position: "relative",
+            
+          });
+
+        const filePreview = $("<div>").addClass("file-preview");
+
+        const removeBtn = $(
+          '<span class="remove-btn" style="position: absolute; top: -5px; right: -5px; cursor: pointer;">&#10006;</span>'
+        );
+
         removeBtn.on("click", function () {
-          videoWrapper.remove(); // Remove video preview
+          fileContainer.remove();
+          processedFiles.delete(file.name);
         });
-  
-        const fileName = $("<div>").addClass("file-name").text(file.name);
-  
-        // Append video, file name, and remove button
-        videoWrapper.append(videoElement, fileName, removeBtn);
-        previewContainer.append(videoWrapper);
-      });
-  
-      // Show error container if there are errors
-      if (!isValid) {
-        errorContainer.show();
+
+        if (file.type.startsWith("image")) {
+          const img = $("<img>")
+            .addClass("w-100px rounded-2")
+            .css({
+              width: "100px",
+              borderRadius: "4px",
+            });
+
+          reader.onload = function (e) {
+            img.attr("src", e.target.result);
+          };
+          reader.readAsDataURL(file);
+
+          filePreview.append(img);
+        }
+
+        fileContainer.append(filePreview).append(removeBtn);
+        previewContainer.append(fileContainer);
       }
     });
-  }
-  
-  // Initialize on DOM ready
 
-    // Call the function to attach the change listener to the input
-    handleVideoUpload("newVidFileBTn", "videoPreviewContainer", "errorMessage");
-    handleVideoUpload("medCenNewVidFileBTn", "medCenVideoPreviewContainer", "medCenVidErrMes");
+    // Generate consolidated error message
+    let consolidatedMessage = "";
+    if (errorMessages.size.length > 0) {
+      consolidatedMessage += `The following files exceed the maximum size of 500KB.`;
+    }
+    if (errorMessages.format.length > 0) {
+      consolidatedMessage += `The following files are not in allowed formats (JPG, PNG, WEBP).`;
+    }
+    if (errorMessages.duplicate.length > 0) {
+      consolidatedMessage += `The following files have already been added.`;
+    }
+
+    // Display consolidated error message
+    if (consolidatedMessage) {
+      const errorElement = $("<div>")
+        .addClass("error-message")
+        .css("color", "red")
+        .text(consolidatedMessage.trim());
+      errorContainer.append(errorElement).show();
+      setTimeout(() => {
+        errorElement.fadeOut("slow", () => {
+          errorElement.remove(); // Remove the error element from the DOM
+        });
+      }, 10000);
+    }
+  });
+}
+
+// Attach event listeners to file inputs
+handleFileUpload("uploadImgSecinput", "previewContainer", "errorContainerUpload");
+handleFileUpload("medCenImg", "medCenPreviewContainer", "errorContainerMedCen");
+
+
+  function handleVideoUpload(inputId, containerId, errorContainerId) {
+    const inputSelector = $("#" + inputId);
+
+    // Remove any existing event listener to prevent duplication
+    inputSelector.off("change");
+
+    // Attach the change event listener
+    inputSelector.on("change", function (event) {
+        const files = event.target.files;
+        const previewContainer = $("#" + containerId);
+        const errorContainer = $("#" + errorContainerId);
+
+        // Clear existing error messages
+        errorContainer.empty().hide();
+
+        // Allowed formats and file size
+        const allowedFormats = ["video/mp4"];
+        const maxFileSize = 5242880; // 5MB
+        let isValid = true;
+
+        // Check if a video already exists in the preview container
+        if (previewContainer.find("video").length > 0) {
+            isValid = false;
+            const errorMessage = `Only one video is allowed. Please remove the existing video before adding a new one.`;
+            errorContainer.append($("<div>").addClass("error-message").css("color", "red").text(errorMessage));
+            errorContainer.show();
+
+            // Reset the input value to allow re-selection
+            inputSelector.val('');
+            return; // Stop further processing
+        }
+
+        // Check all files and display previews or errors
+        $.each(files, function (index, file) {
+            if (!allowedFormats.includes(file.type)) {
+                isValid = false;
+                const errorMessage = `Only MP4 videos are allowed. Please upload a valid MP4 video file.`;
+                errorContainer.append($("<div>").addClass("error-message").css("color", "red").text(errorMessage));
+
+                // Reset the input value to allow re-selection
+                inputSelector.val('');
+                return false; // Stop further processing
+            }
+
+            if (file.size > maxFileSize) {
+                isValid = false;
+                const errorMessage = `File size exceeds the maximum allowed size of 5MB. Please upload a smaller file.`;
+                errorContainer.append($("<div>").addClass("error-message").css("color", "red").text(errorMessage));
+
+                // Reset the input value to allow re-selection
+                inputSelector.val('');
+                return false; // Stop further processing
+            }
+
+            // If valid, display video preview
+            const videoWrapper = $("<div>").addClass("video-wrapper").css({
+                "display": "inline-block",
+                "margin": "5px",
+                "position": "relative"
+            });
+
+            const videoElement = $("<video>", {
+                controls: true,
+                width: 300,
+                src: URL.createObjectURL(file), // Use URL.createObjectURL for video previews
+                class: "video-preview"
+            });
+
+            const removeBtn = $('<span class="remove-btn" style="position: absolute; top: -5; right: -5; cursor: pointer;">&#10006;</span>');
+
+            removeBtn.on("click", function () {
+                videoWrapper.remove(); // Remove video preview
+                errorContainer.empty().hide(); // Clear error messages
+                inputSelector.val(''); // Reset the input to allow re-adding files
+            });
+
+            const fileName = $("<div>").addClass("file-name").text(file.name);
+
+            // Append video, file name, and remove button
+            videoWrapper.append(videoElement, fileName, removeBtn);
+            previewContainer.append(videoWrapper);
+        });
+
+        // Show error container if there are errors
+        if (!isValid) {
+            errorContainer.show();
+        }
+    });
+}
+
+// Reattach the event listeners every time the input field is clicked
+$(document).ready(function () {
+    $("#newVidFileBTn, #medCenNewVidFileBTn").on("click", function () {
+        handleVideoUpload("newVidFileBTn", "videoPreviewContainer", "errorMessage");
+        handleVideoUpload("medCenNewVidFileBTn", "medCenVideoPreviewContainer", "medCenVidErrMes");
+    });
+});
+
+
+
 
   
 

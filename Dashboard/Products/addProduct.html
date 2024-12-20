@@ -669,7 +669,7 @@
                     </label>
                     <input type="file" class="d-none" id="newVidFileBTn" accept="video/mp4">
                 
-                    <label class="mediaVidCenterBtn bg-transparent" for="mediaVidCenterBtn">
+                    <label class="mediaVidCenterBtn bg-transparent" for="mediaVidCenterBtn" onclick="openMediaCenter('video')" data-bs-toggle="modal" data-bs-target="#mediaCenterImg">
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 25 24" fill="none">
                         <path d="M16.5 10C17.6046 10 18.5 9.10457 18.5 8C18.5 6.89543 17.6046 6 16.5 6C15.3954 6 14.5 6.89543 14.5 8C14.5 9.10457 15.3954 10 16.5 10Z" stroke="#002882" stroke-width="1.5"/>
                         <path d="M16.5 10C17.6046 10 18.5 9.10457 18.5 8C18.5 6.89543 17.6046 6 16.5 6C15.3954 6 14.5 6.89543 14.5 8C14.5 9.10457 15.3954 10 16.5 10Z" stroke="black" stroke-opacity="0.2" stroke-width="1.5"/>
@@ -706,7 +706,7 @@
       Upload New Files
     </label>
     <input type="file" class="d-none" multiple="multiple" id="uploadImgSecinput" accept=".jpg, .WEBp, .png">
-    <label class="mediaCenterBtn bg-transparent" for="mediaCenterinput" data-bs-toggle="modal" data-bs-target="#mediaCenterImg">
+    <label class="mediaCenterBtn bg-transparent" for="mediaCenterinput" onclick="openMediaCenter('picture')" data-bs-toggle="modal" data-bs-target="#mediaCenterImg">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 25 24" fill="none">
         <path d="M16.5 10C17.6046 10 18.5 9.10457 18.5 8C18.5 6.89543 17.6046 6 16.5 6C15.3954 6 14.5 6.89543 14.5 8C14.5 9.10457 15.3954 10 16.5 10Z" stroke="#002882" stroke-width="1.5"/>
         <path d="M16.5 10C17.6046 10 18.5 9.10457 18.5 8C18.5 6.89543 17.6046 6 16.5 6C15.3954 6 14.5 6.89543 14.5 8C14.5 9.10457 15.3954 10 16.5 10Z" stroke="black" stroke-opacity="0.2" stroke-width="1.5"/>
@@ -722,7 +722,7 @@
   <span>Only PNG, JPG and WEBp files are Accepted less then 500kb</span>
   <p id="errorContainerUpload" style="color: red; display: none;"></p>
 
-  <div class="w-100 d-flex flex-wrap gap-3" id="previewContainer">
+  <div class="w-100 d-flex flex-wrap gap-2" id="previewContainer">
    
   </div>
 </div>
@@ -1335,51 +1335,51 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 20V7m0 13l-4-4m4 4l4-4m4-12v13m0-13l4 4m-4-4l-4 4"/></svg> Sort</button>
                 </div>
                 <div class="list-group list-group-horizontal-sm mb-1 text-center py-3 d-flex gap-2" role="tablist">
-                  <a class=" notificationTab active" id="list-sunday-list" data-bs-toggle="list" href="#list-sunday" role="tab">Picture</a>
-                  <a class=" notificationTab" id="list-monday-list" data-bs-toggle="list" href="#list-monday" role="tab">Video</a>
+                  <a class=" notificationTab active" id="pictureTab" data-bs-toggle="list" href="#Picture" role="tab">Picture</a>
+                  <a class=" notificationTab active" id="videoTab" data-bs-toggle="list" href="#Video" role="tab">Video</a>
               </div>
 
               <div class="tab-content text-justify px-0">
-                <div class="tab-pane fade show active" id="list-sunday" role="tabpanel" aria-labelledby="list-sunday-list">
+                <div class="" id="mod_Med_Img" role="tabpanel" aria-labelledby="list-sunday-list">
                   
-                  <div class="w-100 d-flex flex-wrap gap-3 mt-40" id="medCenPreviewContainer">
+                  <div class="w-100 d-flex flex-wrap gap-3 mt-40" id="medCenImgPreviewContainer">
                      <div class="position-relative ">
-                      <img src="../Images/orderReturnimg.png" alt="">
-                      <input class="form-check-input position-absolute ms-2 mt-2 start-0 top-0" type="checkbox">
+                      <img class="w-100px rounded-2" src="../Images/orderReturnimg.png" alt="">
+                      <input class="form-check-input position-absolute ms-2 mt-2 start-0 top-0 img" type="checkbox">
                      </div>
                      <div class="position-relative ">
-                      <img src="../Images/orderReturnimg.png" alt="">
-                      <input class="form-check-input position-absolute ms-2 mt-2 start-0 top-0" type="checkbox">
+                      <img class="w-100px rounded-2" src="../Images/productImage.png" alt="">
+                      <input class="form-check-input position-absolute ms-2 mt-2 start-0 top-0 img" type="checkbox">
                      </div>
                      <div class="position-relative ">
-                      <img src="../Images/orderReturnimg.png" alt="">
-                      <input class="form-check-input position-absolute ms-2 mt-2 start-0 top-0" type="checkbox">
+                      <img class="w-100px rounded-2" src="../Images/Rectangle 1140.png" alt="">
+                      <input class="form-check-input position-absolute ms-2 mt-2 start-0 top-0 img" type="checkbox">
                      </div>
                      <div class="position-relative ">
-                      <img src="../Images/orderReturnimg.png" alt="">
-                      <input class="form-check-input position-absolute ms-2 mt-2 start-0 top-0" type="checkbox">
+                      <img class="w-100px rounded-2" src="../Images/ValueBOXSettings.png" alt="">
+                      <input class="form-check-input position-absolute ms-2 mt-2 start-0 top-0 img" type="checkbox">
                      </div>
                   </div>
               </div>
-              <div class="tab-pane fade" id="list-monday" role="tabpanel" aria-labelledby="list-monday-list">
+              <div class="" id="mod_Med_Video" role="tabpanel" aria-labelledby="list-monday-list">
                 
                 <div class="medCenVideoPreviewContainer d-flex flex-wrap gap-3 mt-40" id="medCenVideoPreviewContainer">
                   <div class="position-relative">
-                    <video class="video-thumbnail  img-fluid rounded" data-bs-toggle="modal" data-bs-target="#videoModal" data-video="https://www.w3schools.com/html/mov_bbb.mp4" muted>
+                    <video class="video-thumbnail  img-fluid rounded" controls>
                       <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
                     </video>
                     <input class="form-check-input position-absolute ms-2 mt-2 start-0 top-0" type="checkbox">
   
                   </div>
                   <div class="position-relative">
-                    <video class="video-thumbnail img-fluid rounded" data-bs-toggle="modal" data-bs-target="#videoModal" data-video="https://www.w3schools.com/html/movie.mp4" muted>
+                    <video class="video-thumbnail img-fluid rounded" controls>
                       <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
                     </video>
                     <input class="form-check-input position-absolute ms-2 mt-2 start-0 top-0" type="checkbox">
                   </div>
                 
                   <div class="position-relative">
-                    <video class="video-thumbnail img-fluid rounded" data-bs-toggle="modal" data-bs-target="#videoModal" data-video="https://www.w3schools.com/html/mov_bbb.mp4" muted>
+                    <video class="video-thumbnail img-fluid rounded" controls>
                       <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
                     </video>
                     <input class="form-check-input position-absolute ms-2 mt-2 start-0 top-0" type="checkbox">
@@ -1395,7 +1395,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn-gray" data-bs-dismiss="modal">Cancel</button>
-              <button type="button" class="btn-blue">Done</button>
+              <button type="button" class="btn-blue" id="doneButton" data-bs-dismiss="modal">Done</button>
             </div>
            </div>
         </div>
