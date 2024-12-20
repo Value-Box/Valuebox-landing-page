@@ -536,7 +536,7 @@
                         <option value="bulkmanage">Bulk Manage</option>     
                 </select>
               </fieldset> -->
-              <button type="button" class="bulk-btn" data-bs-toggle="modal" data-bs-target="#exampleModalToggle2">Bulk Manage</button>
+              <button type="button" class="bulk-btn" id="bulkModal" data-bs-toggle="modal" data-bs-target="#exampleModalToggle2">Bulk Manage</button>
            <a href="collection.html"><button class="btn-blue bg-dark-blue">View Collection</button></a> 
            <a href="addProduct.html"> <button class=" btn-blue"><svg class="m" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M12 6V18M18 12H6" stroke="#E6EAF3" stroke-width="2" stroke-linecap="round"/>
@@ -734,7 +734,7 @@
                                <tr class="text-dark">
                                        
                                    <th style="width: 40%; text-align: start;">
-                                       <input class="form-check-input" type="checkbox" id="select-all" onclick="toggleCheckboxes(this)">
+                                       <input class="form-check-input " type="checkbox" id="select-all" onclick="toggleCheckboxes(this)">
                                        <label for="select-all">Product</label>
                                      </th>
                                    <th class="manageproducttableheading" style="width: 12%">Price</th>
@@ -749,7 +749,7 @@
                                <tr>
                                    <td>
                                       <div class="d-flex align-items-end gap-3 py-2 ">
-                                       <input class="form-check-input" type="checkbox" id="product1">  
+                                       <input class="form-check-input row-checkbox" type="checkbox" id="product1">  
                                        <img class="" src="../Images/manage product image1.svg" alt="">
                                        <div class="tablecell1 text-start mt-2">
                                            <h6 class="mb-0 justify-content-center">HIFI M16 MINI Wireless<br>Bluetooth Headset</h6>
@@ -1425,7 +1425,7 @@
                  <button class="btn-gray">Export Selected Products</button>
                 </div>
                 <div class="TableWrapper dataTable-container">
-                    <table class="w-100 w-min-1000" id="manage_product_Table">
+                    <table class="w-100 w-min-1000" id="mainTable">
                      <thead>
                          <tr class="text-dark">
                                  
@@ -1618,7 +1618,7 @@
                        <tr>
                            <td>
                               <div class="d-flex align-items-end gap-3 py-2 ">
-                               <input class="form-check-input" type="checkbox" id="product1">  
+                               <input class="form-check-input row-checkbox" type="checkbox" id="product1">  
                                <img class="" src="../Images/manage product image1.svg" alt="">
                                <div class="tablecell1 text-start mt-2">
                                    <h6 class="mb-0 justify-content-center">HIFI M16 MINI Wireless<br>Bluetooth Headset</h6>
@@ -1951,7 +1951,7 @@
                 </table>
             </div>
             <div class="d-flex gap-2 justify-content-end mt-40">
-              <button class="btn-outline-gray">Cancel</button>
+              <button class="btn-outline-gray" closeModal>Cancel</button>
               <button class="btn-blue">Save</button>
             </div>
            
@@ -2001,6 +2001,49 @@ document.querySelectorAll(".pagination").forEach(function (pagination) {
   paginationObserver.observe(pagination, { childList: true, subtree: true });
 });
 
+
+$(document).ready(function () {
+    const $modalTableBody = $("#manage_product_Table tbody");
+
+    // Handle checkbox change event
+    $("#mainTable").on("change", ".row-checkbox", function () {
+      const $row = $(this).closest("tr");
+      const rowId = $row.index();
+
+      if ($(this).is(":checked")) {
+        // Add row to modal
+        addRowToModal($row, rowId);
+      } else {
+        // Remove row from modal
+        removeRowFromModal(rowId);
+      }
+    });
+
+    function addRowToModal($row, rowId) {
+      // Check if row already exists in modal
+      if ($modalTableBody.find(`tr[data-row-id="${rowId}"]`).length > 0) return;
+
+      // Clone the row and remove the checkbox cell
+      const $newRow = $row.clone();
+      $newRow.find("td:first").remove(); // Remove checkbox cell
+      $newRow.attr("data-row-id", rowId); // Add identifier
+      $modalTableBody.append($newRow);
+    }
+
+    function removeRowFromModal(rowId) {
+      $modalTableBody.find(`tr[data-row-id="${rowId}"]`).remove();
+    }
+
+    // Open Modal
+    $("#bulkModal").on("click", function () {
+      $("#overlay, #modal").fadeIn();
+    });
+
+    // Close Modal
+    $("#closeModal, #overlay").on("click", function () {
+      $("#overlay, #modal").fadeOut();
+    });
+  });
 </script> 
 <script>
   $('.deleteBtn').on('click', function () {
