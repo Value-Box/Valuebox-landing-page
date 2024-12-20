@@ -634,11 +634,16 @@
           </div>
           <div class="d-flex flex-column gap-1 mt-30 p-0">
             <span class="message-text gray-color fw-bold">Bank Name</span>
-            <input type="text" id="roundText" class="form-control  round w-100" placeholder="E.g Habib Bank Limited" >
+            <div class="form-group w-100">
+              <select class="select-dropdown form-select " id="basicSelect1 ">
+                <option>Habib Bank Limited</option>
+               </select>
+          </div>
+            <!-- <input type="text" id="roundText" class="form-control  round w-100" placeholder="E.g Habib Bank Limited" > -->
           </div>
           <div class="d-flex flex-column gap-1 mt-30 p-0">
             <span class="message-text gray-color fw-bold">IBAN (e.g PK00AAAA0000000000000000) <span class="orderidColor">(Optional)</span></span>
-            <input type="text" id="roundText" class="form-control round w-100 "  placeholder="E.g PK56MZAN452354685215264685">
+            <input type="text" id="roundText" class="form-control round w-100 "  placeholder="E.g PK56MZAN452354685215264685" minlength="24" maxlength="24">
           </div>
           <div class="d-flex flex-column gap-1 mt-30 p-0">
             <span class="message-text gray-color fw-bold">Upload cheque Copy</span>
@@ -664,11 +669,13 @@
      <div class="col-6">
         <div class="d-flex flex-column gap-1 mt-30 p-0">
             <span class="message-text gray-color fw-bold">Account Number</span>
-            <input type="text" id="roundText" class="form-control round w-100 " placeholder="E.g 789546892223" >
+            <input class="form-control text-start" type="text" placeholder="E.g 789546892223" minlength="14" maxlength="14" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <!-- <input type="text" id="roundText" class="form-control round w-100 " placeholder="E.g 789546892223" > -->
           </div>
           <div class="d-flex flex-column gap-1 mt-30 p-0">
             <span class="message-text gray-color fw-bold">Bank code</span>
-            <input type="text" id="roundText" class="form-control round w-100" placeholder="E.g 36854">
+            <input class="form-control text-start" type="text" placeholder="E.g 3685" minlength="4" maxlength="4" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <!-- <input type="text" id="roundText" class="form-control round w-100" placeholder="E.g 36854"> -->
           </div>
           <div class="d-flex flex-column gap-1 mt-30 p-0">
             <span class="message-text gray-color fw-bold">SWIFT <span class="orderidColor">(Optional)</span></span>

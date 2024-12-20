@@ -631,6 +631,7 @@
              </div>
            <div class="d-flex gap-2 mt-40 justify-content-end">
                     <button class="btn-blue">Submit</button>
+                    <button class="btn-gray" id="emailFormPreBtn">Previous</button>
             </div>
                 </div>
                 </div>
@@ -695,7 +696,7 @@
                  <button class="btn-blue" id="phoneFormNxtBtn">Next</button>
                  <!-- <button class="btn-gray" data-bs-dismiss="modal">Cancel</button> -->
                  <button class="btn-gray">Submit</button>
-               </div>
+                </div>
              </div>
              </div>
           <div class="" id="newphoneform" style="display: none;">
@@ -715,11 +716,12 @@
                    <div class="d-flex mt-1 justify-content-between">
                      <div class=" input-group mt-1 h-md-44 ">
                        <!-- <input type="number" id="filters" name="filters" class="form-control " placeholder="Enter Phone Number"/> -->
-                       <input class="table-input form-control text-start" type="text" placeholder="+921032456782" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                       <input class="table-input form-control text-start" type="text" placeholder="031032456782" minlength="11" maxlength="11" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
                       </div>
               </div>
             <div class="d-flex gap-2 mt-40 justify-content-end">
                      <button class="btn-blue">Submit</button>
+                     <button class="btn-gray" id="contactFormPreBtn">Previous</button>
              </div>
                  </div>
                  </div>
@@ -816,6 +818,7 @@
                </div>
                 <div class="d-flex gap-2 mt-40 justify-content-end">
                          <button class="btn-blue">Submit</button>
+                         <button class="btn-gray" id="passwordFormPreBtn">Previous</button>
                  </div>
                      </div>
                      </div>
@@ -832,11 +835,17 @@
   const emailfor=document.getElementById('emailform')
   const newEmailform=document.getElementById('newEmailform')
   const emailFormNxtBtn = document.getElementById("emailFormNxtBtn");
+  const emailFormPreBtn = document.getElementById("emailFormPreBtn");
 
     emailFormNxtBtn.addEventListener('click',()=>{
       emailfor.style.display='none'
       newEmailform.style.display='block'
-    })
+      })
+      emailFormPreBtn.addEventListener('click',()=>{
+      emailfor.style.display='block'
+      newEmailform.style.display='none'
+      })
+      
 
     const varifyNumberBtn=document.getElementById('varify_number_btn')
     const varifyEmailBtn=document.getElementById('varify_email_btn')
@@ -859,12 +868,15 @@
   const phonefor=document.getElementById('phoneform')
   const newphoneform=document.getElementById('newphoneform')
   const phoneFormNxtBtn = document.getElementById("phoneFormNxtBtn");
-
+  const phoneFormPreBtn = document.getElementById("contactFormPreBtn");
     phoneFormNxtBtn.addEventListener('click',()=>{
       phonefor.style.display='none'
       newphoneform.style.display='block'
     })
-
+    phoneFormPreBtn.addEventListener('click',()=>{
+      phonefor.style.display='block'
+      newphoneform.style.display='none'
+    })
     const varifyNumberBtn1=document.getElementById('varify_number_btn1')
     const varifyEmailBtn1=document.getElementById('varify_email_btn1')
     const numberVarifyText1=document.getElementById('number_varify_text1')
@@ -886,12 +898,15 @@
   const passwordfor=document.getElementById('passwordform')
   const newpasswordform=document.getElementById('newpasswordform')
   const passwordFormNxtBtn = document.getElementById("passwordFormNxtBtn");
-
+  const passwordFormPreBtn = document.getElementById("passwordFormPreBtn");
     passwordFormNxtBtn.addEventListener('click',()=>{
       passwordfor.style.display='none'
       newpasswordform.style.display='block'
     })
-
+    passwordFormPreBtn.addEventListener('click',()=>{
+      passwordfor.style.display='block'
+      newpasswordform.style.display='none'
+      })
     const varifyNumberBtn2=document.getElementById('varify_number_btn2')
     const varifyEmailBtn2=document.getElementById('varify_email_btn2')
     const numberVarifyText2=document.getElementById('number_varify_text2')
@@ -909,7 +924,7 @@
       varifyEmailBtn2.style.display='none';
       varifyNumberBtn2.style.display='block';
     })
-  
+   
   </script>
 </body>
 </html>
