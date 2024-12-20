@@ -1020,109 +1020,112 @@
 
         <div class="form1 mt-40">
           <p class="subHeading">Shipping & Warranty</p>
-          <div class="mt-40">
-            <p class="m-0 gray-color fs-18">Switch to enter different package dimensions & weights for variations</p>
-            <div class="form-check form-switch p-0 d-flex align-items-center gap-2 mt-2">
-              <input class="form-check-input m-0 toggleCheck" type="checkbox" id="flexSwitchCheckChecked">
-              <span class="message-text">Switch on if you need different dimension & weight for different products variants</span>
-            </div>
-          </div>
+          
 
           <div class="mt-40 d-flex gap-10">
             <input class="form-check-input" type="checkbox" name="" id="digital_product">
             <label class="paragraph-1" for="digital_product">Digital Product</label>
           </div>
 
-          <div class="mt-40 d-flex gap-20">
-            <div class="w-75">
-              <span class="paragraph-1"><span class="secondary-yellow">*</span> Package Weight</span>
-              <input class="form-control mt-2 " type="text" placeholder="e.g.0.0" oninput=" this.value = this.value .replace(/[^0-9.]/g, '') .replace(/(\..*?)\..*/g, '$1');" name="" id="">
+          <div class="product_type">
+            <div class="mt-40">
+              <p class="m-0 gray-color fs-18">Switch to enter different package dimensions & weights for variations</p>
+              <div class="form-check form-switch p-0 d-flex align-items-center gap-2 mt-2">
+                <input class="form-check-input m-0 toggleCheck" type="checkbox" id="flexSwitchCheckChecked">
+                <span class="message-text">Switch on if you need different dimension & weight for different products variants</span>
+              </div>
             </div>
-              <fieldset class="form-group mb-0 w-25 d-flex align-items-end">
-                  <select class="select-dropdown form-select">
-                      <option value="KG">KG</option>
-                      <option value="Grams">Grams</option>
-                      <option value="Pound">Pound</option>
+            <div class="mt-40 d-flex gap-20">
+              <div class="w-75">
+                <span class="paragraph-1"><span class="secondary-yellow">*</span> Package Weight</span>
+                <input class="form-control mt-2 " type="text" placeholder="e.g.0.0" oninput=" this.value = this.value .replace(/[^0-9.]/g, '') .replace(/(\..*?)\..*/g, '$1');" name="" id="">
+              </div>
+                <fieldset class="form-group mb-0 w-25 d-flex align-items-end">
+                    <select class="select-dropdown form-select">
+                        <option value="KG">KG</option>
+                        <option value="Grams">Grams</option>
+                        <option value="Pound">Pound</option>
+                    </select>
+                </fieldset>
+            </div>
+  
+            <div class="mt-40">
+              <span class="paragraph-1">Package Length(cm) * Width(cm) * Height(cm)</span>
+              <div class="w-100 d-flex gap-2 mt-2">
+                <input class="form-control" type="text" placeholder="0.01 ~ 300" oninput=" this.value = this.value .replace(/[^0-9.]/g, '') .replace(/(\..*?)\..*/g, '$1');" name="" id="">
+                <span class="fs-18 d-flex align-items-center">X</span>
+                <input class="form-control" type="text" placeholder="0.01 ~ 300" oninput=" this.value = this.value .replace(/[^0-9.]/g, '') .replace(/(\..*?)\..*/g, '$1');" name="" id="">
+                <span class="fs-18 d-flex align-items-center">X</span>
+                <input class="form-control" type="text" placeholder="0.01 ~ 300" oninput=" this.value = this.value .replace(/[^0-9.]/g, '') .replace(/(\..*?)\..*/g, '$1');" name="" id="">
+              </div>
+            </div>
+  
+            <div class="mt-40">
+              <p class="paragraph-1"><span class="secondary-yellow">*</span> Dangerous Goods</p>
+              <div class="d-flex gap-5">
+                <div class="d-flex align-items-center gap-10">
+                  <input class="form-radio-input" type="radio" name="option" id="none" checked>
+                  <label class="paragraph-1" for="none">None</label>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <input class="form-radio-input" type="radio" name="option" id="contain">
+                  <label class="paragraph-1" for="contain">Contains battery/flammables/liquid</label>
+                </div>
+              </div>
+            </div>
+  
+            <p class="mb-0 line mt-40"></p>
+  
+            <div class="mt-40">
+             <div class="d-flex gap-3">
+              <div class="w-100">
+                <span class="paragraph-1">Warranty Type</span>
+                <fieldset class="form-group mb-0 mt-2 w-100 d-flex align-items-end">
+                  <select class="select-dropdown form-select" >
+                      <option value="">Please Select</option>
+                      <option value="Grams">No Warranty</option>
+                      <option value="Pound">Brand V</option>
+                      <option value="Pound">Seller Warranty</option>
                   </select>
               </fieldset>
-          </div>
-
-          <div class="mt-40">
-            <span class="paragraph-1">Package Length(cm) * Width(cm) * Height(cm)</span>
-            <div class="w-100 d-flex gap-2 mt-2">
-              <input class="form-control" type="text" placeholder="0.01 ~ 300" oninput=" this.value = this.value .replace(/[^0-9.]/g, '') .replace(/(\..*?)\..*/g, '$1');" name="" id="">
-              <span class="fs-18 d-flex align-items-center">X</span>
-              <input class="form-control" type="text" placeholder="0.01 ~ 300" oninput=" this.value = this.value .replace(/[^0-9.]/g, '') .replace(/(\..*?)\..*/g, '$1');" name="" id="">
-              <span class="fs-18 d-flex align-items-center">X</span>
-              <input class="form-control" type="text" placeholder="0.01 ~ 300" oninput=" this.value = this.value .replace(/[^0-9.]/g, '') .replace(/(\..*?)\..*/g, '$1');" name="" id="">
-            </div>
-          </div>
-
-          <div class="mt-40">
-            <p class="paragraph-1"><span class="secondary-yellow">*</span> Dangerous Goods</p>
-            <div class="d-flex gap-5">
-              <div class="d-flex align-items-center gap-10">
-                <input class="form-radio-input" type="radio" name="option" id="none" checked>
-                <label class="paragraph-1" for="none">None</label>
               </div>
-              <div class="d-flex align-items-center gap-2">
-                <input class="form-radio-input" type="radio" name="option" id="contain">
-                <label class="paragraph-1" for="contain">Contains battery/flammables/liquid</label>
+              <div class="w-100">
+                <span class="paragraph-1">Warranty Period</span>
+                <fieldset class="form-group mb-0 mt-2 w-100 d-flex align-items-end">
+                  <select class="select-dropdown form-select">
+                      <option value="">Please Select</option>
+                      <option value="Grams">Life Time Warranty</option>
+                      <option value="Pound">1 Month</option>
+                      <option value="Pound">2 Month</option>
+                      <option value="Pound">3 Month</option>
+                      <option value="Pound">4 Month</option>
+                      <option value="Pound">5 Month</option>
+                      <option value="Pound">6 Month</option>
+                      <option value="Pound">7 Month</option>
+                      <option value="Pound">8 Month</option>
+                      <option value="Pound">9 Month</option>
+                      <option value="Pound">10 Month</option>
+                      <option value="Pound">1 year</option>
+                      <option value="Pound">2 year</option>
+                      <option value="Pound">3 year</option>
+                      <option value="Pound">4 year</option>
+                      <option value="Pound">5 year</option>
+                      <option value="Pound">6 year</option>
+                      <option value="Pound">7 year</option>
+                      <option value="Pound">8 year</option>
+                      <option value="Pound">9 year</option>
+                      <option value="Pound">10 year</option>
+                  </select>
+              </fieldset>
               </div>
+             </div>
             </div>
-          </div>
-
-          <p class="mb-0 line mt-40"></p>
-
-          <div class="mt-40">
-           <div class="d-flex gap-3">
-            <div class="w-100">
-              <span class="paragraph-1">Warranty Type</span>
-              <fieldset class="form-group mb-0 mt-2 w-100 d-flex align-items-end">
-                <select class="select-dropdown form-select" >
-                    <option value="">Please Select</option>
-                    <option value="Grams">No Warranty</option>
-                    <option value="Pound">Brand V</option>
-                    <option value="Pound">Seller Warranty</option>
-                </select>
-            </fieldset>
-            </div>
-            <div class="w-100">
-              <span class="paragraph-1">Warranty Period</span>
-              <fieldset class="form-group mb-0 mt-2 w-100 d-flex align-items-end">
-                <select class="select-dropdown form-select">
-                    <option value="">Please Select</option>
-                    <option value="Grams">Life Time Warranty</option>
-                    <option value="Pound">1 Month</option>
-                    <option value="Pound">2 Month</option>
-                    <option value="Pound">3 Month</option>
-                    <option value="Pound">4 Month</option>
-                    <option value="Pound">5 Month</option>
-                    <option value="Pound">6 Month</option>
-                    <option value="Pound">7 Month</option>
-                    <option value="Pound">8 Month</option>
-                    <option value="Pound">9 Month</option>
-                    <option value="Pound">10 Month</option>
-                    <option value="Pound">1 year</option>
-                    <option value="Pound">2 year</option>
-                    <option value="Pound">3 year</option>
-                    <option value="Pound">4 year</option>
-                    <option value="Pound">5 year</option>
-                    <option value="Pound">6 year</option>
-                    <option value="Pound">7 year</option>
-                    <option value="Pound">8 year</option>
-                    <option value="Pound">9 year</option>
-                    <option value="Pound">10 year</option>
-                </select>
-            </fieldset>
-            </div>
-           </div>
-          </div>
-
-          <div class="mt-40">
-            <div>
-              <span class="paragraph-1">Warranty Policy</span>
-              <input class="form-control mt-2" type="text" placeholder="Please Input" name="" id="">
+  
+            <div class="mt-40">
+              <div>
+                <span class="paragraph-1">Warranty Policy</span>
+                <input class="form-control mt-2" type="text" placeholder="Please Input" name="" id="">
+              </div>
             </div>
           </div>
         </div>
