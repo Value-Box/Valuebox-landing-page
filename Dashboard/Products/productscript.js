@@ -1,12 +1,18 @@
-
-
-  
   // Form submission or button click validation
   $("#addProNextBtn").on("click", function () {
     // If valid, proceed further
     $("#basicInformationForm").hide();
     $("#addProductSection").show();
+  
+    // Scroll to the top of the #addProductSection
+    $("html, body").animate(
+      {
+        scrollTop: 0,
+      },
+      5 // Duration in milliseconds (500ms = 0.5 seconds)
+    );
   });
+  
 
   // YouTube URL validation on input
   $("#utubeUrl").on("input", function () {
@@ -426,15 +432,6 @@ $(document).ready(function () {
     });
 });
 
-
-
-
-  
-
-  
-
-
-
     // Calculate Pricing
     function calculatPricing() {
       let costPrice = parseInt($("#costPrice").val()) || 0;
@@ -611,4 +608,14 @@ $(document).ready(function () {
             });
         }
     });
+});
+
+// $("#digital_product")
+
+$("#digital_product").click(function () {
+  if (this.checked) {
+      $(".product_type").fadeOut(400); // Adjust the duration (400ms) as needed for smoothness
+  } else {
+      $(".product_type").fadeIn(400); // Adjust the duration (400ms) as needed for smoothness
+  }
 });
