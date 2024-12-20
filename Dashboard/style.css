@@ -1651,7 +1651,7 @@ background: #F2F2F2;
   border-radius: 5px;
   display: block;
   font-size: 16px;
-  width: 180px !important;
+  width: 182px !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1663,7 +1663,7 @@ background: #F2F2F2;
   border-radius: 5px;
   display: block;
   font-size: 16px;
-  /* width: 180px !important; */
+  width: 182px !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2433,6 +2433,9 @@ background:linear-gradient(90deg, #FFC136 0%, #FAC142 19.76%, #FFD168 52.5%, #F5
   color:#E6EAF3;
   border: 1px solid var(--Primary-Color-Dark-Blue-10, #E6EAF3);
   background: transparent;
+}
+div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm){
+  background-color: #002882 !important;
 }
 @media(max-width:1400px){
   .custom-modal-width{
