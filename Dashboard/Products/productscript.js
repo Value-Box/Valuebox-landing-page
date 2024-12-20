@@ -444,7 +444,10 @@ $(document).ready(function () {
   
       let profit = sellingPrice - costPrice;
       let finalProfit = specialPrice - costPrice;
-  
+      if (costPrice === 0) {
+        profitElement.text("0.00");
+        return; // Exit the function early
+      }
       console.log("Special Price:", specialPrice);
   
       if (specialPrice > 0) {
@@ -460,6 +463,7 @@ $(document).ready(function () {
           profitElement.text("0.00");
         }
       }
+ 
     }
 
 
