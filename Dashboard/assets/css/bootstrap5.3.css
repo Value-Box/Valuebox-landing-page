@@ -12028,6 +12028,7 @@ fieldset:disabled .btn {
     padding: 10px 20px;
     color: var(--Primary-Color-Dark-Blue, #002882);
     font-size: 16px;
+    line-height: 30px;
   }
   .bulk-btn:focus {
     border: 1px solid var(--Primary-Color-Dark-Blue, #002882);
