@@ -506,16 +506,16 @@
         </div>
         
    <main class="backcolor" id="main">
-    <div class="navigation anchortags py-4">
+    <div class="navigation anchortags mt-40">
       <a href="../index.html">Home</a>
       <a href="../MyAccount/Settings.html">>Settings</a>
       <a class="active1" href="brandInformation.html">>Brand</a>
     </div>   
         <div class="container-fluid d-flex gap-5 mb-2 p-0 ">
-            <div class="row w-100 m-0 justify-content-between">
-              <div class="col-7 manageproductsbuttons gap-2 m-0">
-                 <h3 class="text-dark me-auto">Brand Information</h3>
-                 <p>See the performance of the Brand Registered here</p>
+            <div class="row w-100 m-0 justify-content-between align-items-center">
+              <div class="col-7 d-flex flex-column manageproductsbuttons gap-2  p-0 m-0">
+                 <span class="heading-one me-auto mt-20">Brand Information</span>
+                 <span class="paragraph-2 gray-color">See the performance of the Brand Registered here</span>
                </div>
                <div class="col-3 manageproductsbuttons gap-2 m-0 d-flex py-3 justify-content-end">
                <a href="../Products/BasicInformation.html"> <button class=" btn-blue">Apply for new Brand</button></a>
@@ -524,45 +524,47 @@
             </div>
         </div>
         <form action="">
-          <div class="container-fluid  form1">
-            <div class="row d-flex gap-2 m-0 mb-4 ">
-              <div class="col-md-3 m-0 p-0">
-                  <div class="input-group">
-                    <span class="input-group-text h-md-44" id="basic-addon1">Name</span>
-                    <input type="text" id="filters" name="filters" class="form-control " placeholder="Enter Brand Name">
-                    <span class="input-group-text " id="basic-addon1"><i class="bi bi-search"></i></span>
+          <div class="container-fluid form1 mt-40">
+            <div class="row d-flex justify-content-between m-0">
+             <div class="col-10 d-flex gap-2 p-0">
+              <div class="col-md-4 m-0 p-0">
+                <div class="input-group">
+                  <span class="input-group-text h-md-44" id="basic-addon1">Name</span>
+                  <input type="text" id="filters" name="filters" class="form-control " placeholder="Enter Brand Name">
+                  <span class="input-group-text " id="basic-addon1"><i class="bi bi-search"></i></span>
+                </div>
+              </div>
+               <div class="col-md-4 m-0 p-0">
+                  <div class="input-group h-md-44">
+                    <span class="input-group-text"
+                      >Brand Relation</span>
+                    <select
+                      id="queryCategory"
+                      name="queryCategory"
+                      class="form-select">
+                      <option value="" selected disabled>Select</option>
+                    </select>
                   </div>
                 </div>
-                 <div class="col-md-3 m-0 p-0">
-                    <div class="input-group h-md-44">
-                      <span class="input-group-text"
-                        >Brand Relation</span>
-                      <select
-                        id="queryCategory"
-                        name="queryCategory"
-                        class="form-select">
-                        <option value="" selected disabled>Select</option>
-                      </select>
-                    </div>
+                <div class="col-md-4 m-0 p-0">
+                  <div class="input-group h-md-44">
+                    <span class="input-group-text"
+                      >Status</span>
+                    <select
+                      id="queryCategory"
+                      name="queryCategory"
+                      class="form-select">
+                      <option value="" selected disabled>Select Status</option>
+                    </select>
                   </div>
-                  <div class="col-md-3 m-0 p-0">
-                    <div class="input-group h-md-44">
-                      <span class="input-group-text"
-                        >Status</span>
-                      <select
-                        id="queryCategory"
-                        name="queryCategory"
-                        class="form-select">
-                        <option value="" selected disabled>Select Status</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="col-md-2 d-flex justify-content-end gap-2 m-0 p-0">
+                </div>
+             </div>
+             <div class="col-2 d-flex justify-content-end gap-2 m-0 p-0">
                   <button class="btn-blue h-md-44">Search</button>
                   <button class="btn-outline-blue h-md-44">Reset</button>
                   </div>
                 </div>
-               <div class="TableWrapper">
+               <div class="TableWrapper mt-20">
                 <table id="brand-information-table">
                     <thead>
                         <tr class="text-dark">
