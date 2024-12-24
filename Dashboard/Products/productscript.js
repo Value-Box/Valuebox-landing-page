@@ -98,41 +98,58 @@
 //     $('#basicInfoCategory2').val(selectedValue).trigger('change'); // Update dropdown2
 // });
 
+//Apply select2
+$('.select2').select2();
+$(document).ready(function () {
+// Prevent form submission on Enter key press in the tags input field
+$(".bootstrap-tagsinput input").on("keydown", function (e) {
+  if (e.key === "Enter") {
+    e.preventDefault(); // Prevent form submission
+    // Trigger the event that creates a tag if your tags input library supports it
+    $(this).trigger("blur"); // Simulate losing focus to create the tag
+    $(this).focus();
+  }
+});
+});
   // YouTube URL validation on input
   $("#utubeUrl").on("input", function () {
     const youtubeUrl = $(this).val();
     const youtubePattern =
-      /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/(watch\?v=|shorts\/|embed\/)?([a-zA-Z0-9_-]{11})$/;
+        /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/(watch\?v=|shorts\/|embed\/)?([a-zA-Z0-9_-]{11})$/;
     const videoPreviewContainer = $("#videoPreviewContainer");
-  
-    console.log(youtubeUrl);
-  
-    // Toggle buttons based on input
+
+    console.log("Current Input:", youtubeUrl);
+
+    // Clear error and preview container initially
+    $("#errorMessage").hide();
+    videoPreviewContainer.empty();
+
+    // If input is empty
     if (youtubeUrl === '') {
-      $(".mediaVidCenterBtn").attr("disabled", false);
-      $("#newVidFileBTn").attr("disabled", false);
-      videoPreviewContainer.empty(); // Clear the video preview container
-      return;
-    } else {
-      $(".mediaVidCenterBtn").attr("disabled", true);
-      $("#newVidFileBTn").attr("disabled", true);
+        $(".mediaVidCenterBtn").attr("disabled", false);
+        $("#newVidFileBTn").attr("disabled", false);
+        return;
     }
-  
+
+    // Disable other buttons while a YouTube URL is present
+    $(".mediaVidCenterBtn").attr("disabled", true);
+    $("#newVidFileBTn").attr("disabled", true);
+
     // Validate the YouTube URL
     const match = youtubeUrl.match(youtubePattern);
     if (!match) {
-      $("#errorMessage").show(); // Show error message
-      videoPreviewContainer.empty(); // Clear the container for invalid input
-    } else {
-      $("#errorMessage").hide(); // Hide error message
-  
-      // Extract YouTube video ID and display preview
-      const videoId = match[5];
-      const iframe = `
+        $("#errorMessage").text("Invalid YouTube URL. Please enter a valid link.").show();
+        return;
+    }
+
+    // Extract YouTube video ID and display preview
+    const videoId = match[5];
+    const iframe = `
         <div style="position: relative; display: inline-block; width: 258px;">
           <span 
             class="remove-btn" 
-            style="position: absolute; top: 0px; right: 0px; padding: 5px; cursor: pointer; border-radius: 50%;">
+            style="position: absolute; top: -5px; right: -5px; padding: 5px; cursor: pointer; border-radius: 50%;"
+          >
             &#10006;
           </span>
           <iframe 
@@ -142,20 +159,21 @@
             src="https://www.youtube.com/embed/${videoId}" 
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-          </iframe>
+            allowfullscreen
+          ></iframe>
         </div>`;
-      videoPreviewContainer.html(iframe); // Insert the video preview into the container
-  
-      // Add click event to remove the video and clear the input
-      $(".remove-btn").on("click", function () {
+
+    videoPreviewContainer.html(iframe);
+
+    // Add click event to remove the video and clear the input
+    $(".remove-btn").on("click", function () {
         videoPreviewContainer.empty(); // Clear the video preview
         $("#utubeUrl").val(''); // Clear the input field
         $(".mediaVidCenterBtn").attr("disabled", false); // Re-enable buttons
         $("#newVidFileBTn").attr("disabled", false);
-      });
-    }
-  });
+    });
+});
+
   
   
   //select lcations from location dropdown and change the table tbody
@@ -290,15 +308,13 @@ function handleVideoPreviewSelection() {
           // Set width of video container to 'fit-content'
           $parentDiv.css('width', 'fit-content');
           const inputSelector = $("#utubeUrl");
-          
-        
           // Check if there is a video in the preview container
           
               // Disable the input if a video is present
               inputSelector.prop('disabled', true);
          
           // Create a cross icon for the video with the class '.remove-btn' and append it
-          const $closeButton = $('<span class="remove-btn" style="position: absolute; top: 0; right: 0; cursor: pointer;">&#10006;</span>');
+          const $closeButton = $('<span class="remove-btn" style="position: absolute; top: -5; right: -5; cursor: pointer;">&#10006;</span>');
           $parentDiv.append($closeButton); // Add the close button to the video div
 
           // Event to remove the video on cross click
@@ -452,20 +468,8 @@ handleFileUpload("uploadImgSecinput", "previewContainer", "errorContainerUpload"
 // handleFileUpload("medCenImg", "medCenPreviewContainer", "errorContainerMedCen");
 
 
-function toggleInputState(inputId, containerId) {
-  const inputSelector = $("#" + inputId);
-  const previewContainer = $("#" + containerId);
-
-  // Check if there is a video in the preview container
-  if (previewContainer.find("video").length > 0) {
-      // Disable the input if a video is present
-      inputSelector.prop('disabled', true);
-  } else {
-      // Enable the input if no video is present
-      inputSelector.prop('disabled', false);
-  }
-}
   function handleVideoUpload(inputId, containerId, errorContainerId) {
+    const processedFiles = new Set();
     const inputSelector = $("#" + inputId);
 
     // Remove any existing event listener to prevent duplication
@@ -531,14 +535,20 @@ function toggleInputState(inputId, containerId) {
                 src: URL.createObjectURL(file), // Use URL.createObjectURL for video previews
                 class: "video-preview"
             });
-
+            processedFiles.add(file.name);
+            console.log(processedFiles)
             const removeBtn = $('<span class="remove-btn" style="position: absolute; top: -5; right: -5; cursor: pointer;">&#10006;</span>');
+            const utubeUrl = $("#utubeUrl");
 
             removeBtn.on("click", function () {
                 videoWrapper.remove(); // Remove video preview
                 errorContainer.empty().hide(); // Clear error messages
-                inputSelector.val(''); // Reset the input to allow re-adding files
-                toggleInputState("utubeUrl", containerId);
+                //inputSelector.val(''); // Reset the input to allow re-adding files
+                processedFiles.delete(file.name);
+                console.log("Removed file:", file.name);
+                // Check if there is a video in the preview container
+                    // Disable the input if a video is present
+                    utubeUrl.prop('disabled', false);
             });
 
             const fileName = $("<div>").addClass("file-name").text(file.name);
@@ -547,7 +557,8 @@ function toggleInputState(inputId, containerId) {
             videoWrapper.append(videoElement, fileName, removeBtn);
             previewContainer.append(videoWrapper);
 
-            toggleInputState("utubeUrl", containerId);
+            utubeUrl.prop('disabled', true);
+            inputSelector.val('');
         });
 
         // Show error container if there are errors
@@ -846,6 +857,32 @@ $("#digital_product").click(function () {
 
 
 
+// $(document).ready(function () {
+//   // Get the CKEditor instance for Product Description
+//   const productDescEditor = $('.ck-content').first(); // Target the first CKEditor content container
+//   const charCountDisplay = $('#charCountDisplay'); // Assuming you have a span/div for showing character count
+
+//   // Function to get raw text content from CKEditor
+//   function getRawText(editor) {
+//     return editor.text().trim();
+//   }
+
+//   // Monitor changes in CKEditor content
+//   productDescEditor.on('input', function () {
+//     const content = getRawText(productDescEditor); // Get raw text content
+//     const charCount = content.length; // Calculate character count
+
+//     // Update the character count display
+//     charCountDisplay.text(`Character Count: ${charCount}`);
+
+//     // Add validation
+//     if (charCount < 125 || charCount > 1500) {
+//       charCountDisplay.css('color', 'red'); // Show error if out of range
+//     } else {
+//       charCountDisplay.css('color', '#666'); // Normal color
+//     }
+//   });
+// });
 
 $('#addProductForm').on('submit', function (e) {
   e.preventDefault(); // Prevent form submission for validation
@@ -854,7 +891,17 @@ $('#addProductForm').on('submit', function (e) {
   let firstInvalidElement = null;
   let ckEditorTriggered = false; // Flag to track SweetAlert for CKEditor validation
 
-  // 1. Validate required fields
+  // 1. Get the content from the first CKEditor (Product Description)
+  const productDescEditor = $('.ck-content').first(); // Target the first CKEditor (Product Description)
+  const productDescContent = productDescEditor.text().trim(); // Get text content of the <p> tag
+
+  // Remove any extra spaces or unwanted line breaks (to ensure accurate character count)
+  const cleanProductDescContent = productDescContent.replace(/\s+/g, ' ').trim();
+
+  // Log the character count in the console
+  console.log("Product Description character count:", cleanProductDescContent.length);
+
+  // 2. Validate required fields
   $('.required').each(function () {
     const isSelect = $(this).is('select') && $(this).hasClass('select-dropdown');
     const value = $(this).val()?.trim();
@@ -881,7 +928,7 @@ $('#addProductForm').on('submit', function (e) {
     }
   });
 
-  // 2. Validate image upload (Ensure at least one image is uploaded)
+  // 3. Validate image upload (Ensure at least one image is uploaded)
   const previewContainer = $('#previewContainer');
   if (previewContainer.children().length === 0) {
     isValid = false;
@@ -894,56 +941,84 @@ $('#addProductForm').on('submit', function (e) {
     $('#errorContainerUpload').hide(); // Hide upload error if valid
   }
 
-  // 3. Validate CKEditor content (Ensure there are at least 3 non-empty items)
-  $(".ck-content").each(function () {
-    const ul = $(this).find("ul");
-    const liElements = ul.find("li").filter(function () {
-      return $(this).text().trim() !== ''; // Check for non-empty list items
-    });
-
-    if (liElements.length < 3) {
-      isValid = false;
-      $(this).addClass('error-border'); // Add error border to CKEditor content
-
-      // Mark the first invalid CKEditor element
-      if (!firstInvalidElement) {
-        firstInvalidElement = $(this);
-        console.log(firstInvalidElement)
-      }
-
-      if (!ckEditorTriggered) {
-        ckEditorTriggered = true; // Set CKEditor triggered flag to true
-        
-        Swal.fire({
-          icon: "error",
-          title: "Oops...",
-          text: "Please add at least 3 bullet points in Product Description",
-          allowOutsideClick: false,
-          allowEscapeKey: false,
-          confirmButtonText: "OK"
-        }).then(() => {
-          // After SweetAlert closes, scroll to the invalid CKEditor and focus it
-          $('html, body').animate({ scrollTop: $(this).offset().top - 100 }, 300);
-
-          const editorId = $(this).find('.ck-editor__editable').attr('id');
-          const editor = $(this).find('.ck-editor__editable').data('editor');
-
-
-          if (editor) {
-            editor.focus(); // Focus CKEditor instance
-          } else {
-            $(this).find('.ck-editor__editable').focus(); // Fallback: Focus the editable area directly
-          }
-        });
-      }
-
-      return false; // Stop iteration once we find invalid CKEditor content
-    } else {
-      $(this).removeClass('error-border'); // Remove error border if valid
+  // 4. Validate Product Description (150 characters minimum)
+  if (cleanProductDescContent.length < 160 || cleanProductDescContent.length > 1500) {
+    isValid = false;
+    productDescEditor.addClass('error-border'); // Add error border for Product Description CKEditor
+    
+    if (!firstInvalidElement) {
+      firstInvalidElement = productDescEditor;
     }
-  });
+  
+    if (!ckEditorTriggered) {
+      ckEditorTriggered = true; // Set CKEditor triggered flag to true
+  
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Product Description must contain between 160 and 1500 characters!",
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        confirmButtonText: "OK"
+      }).then(() => {
+        // After SweetAlert closes, scroll to the invalid CKEditor and focus it
+        $('html, body').animate({ scrollTop: productDescEditor.offset().top - 100 }, 300);
+        
+        const editor = productDescEditor.find('.ck-editor__editable').data('editor');
+        if (editor) {
+          editor.focus(); // Focus CKEditor instance
+        } else {
+          productDescEditor.find('.ck-editor__editable').focus(); // Fallback: Focus the editable area directly
+        }
+      });
+    }
+    return; // Stop further validation
+  }
+  
 
-  // 4. Handle form submission if it's invalid
+  // 5. Validate Highlights (Ensure at least 3 <li> items in <ul> or <ol>)
+const highlightEditor = $('.ck-content').eq(1); // Target the second CKEditor
+const highlightListItems = highlightEditor.find("ul li, ol li").filter(function () {
+  return $(this).text().trim() !== ''; // Check for non-empty list items
+});
+
+if (highlightListItems.length < 3) {
+  isValid = false;
+  highlightEditor.addClass('error-border'); // Add error border for Highlights CKEditor
+
+  if (!firstInvalidElement) {
+    firstInvalidElement = highlightEditor;
+  }
+
+  if (!ckEditorTriggered) {
+    ckEditorTriggered = true; // Set CKEditor triggered flag to true
+
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Highlights must contain at least 3 bullet points!",
+      allowOutsideClick: false,
+      allowEscapeKey: false,
+      confirmButtonText: "OK"
+    }).then(() => {
+      // After SweetAlert closes, scroll to the invalid CKEditor and focus it
+      $('html, body').animate({ scrollTop: highlightEditor.offset().top - 100 }, 300);
+
+      const editor = highlightEditor.find('.ck-editor__editable').data('editor');
+      if (editor) {
+        editor.focus(); // Focus CKEditor instance
+      } else {
+        highlightEditor.find('.ck-editor__editable').focus(); // Fallback: Focus the editable area directly
+      }
+    });
+  }
+  return; // Stop further validation
+} else {
+  highlightEditor.removeClass('error-border'); // Remove error border if valid
+}
+
+
+  // 6. Handle form submission if it's invalid
   if (!isValid) {
     if (firstInvalidElement && !ckEditorTriggered) {
       if (firstInvalidElement.is('select')) {
@@ -975,6 +1050,9 @@ $('#addProductForm').on('submit', function (e) {
     this.submit();
   }
 });
+
+
+
 
 
 
