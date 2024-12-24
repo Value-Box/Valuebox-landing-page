@@ -2104,15 +2104,21 @@ $(document).ready(function () {
         }
     });
     function handleCheckbox(master, rows) {
-        $(master).on('change', function () {
-            $(rows).prop('checked', $(this).is(':checked')).trigger('change');
-            $("#bulkModal").attr("disabled", false);
-        });
-        $(rows).on('change', function () {
-            $(master).prop('checked', $(rows + ':checked').length === $(rows).length);
-            $("#bulkModal").attr("disabled", true);
-        });
-    }
+    $(master).on('change', function () {
+        const isChecked = $(this).is(':checked');
+        $(rows).prop('checked', isChecked).trigger('change');
+        $("#bulkModal").attr("disabled", !isChecked); // Enable the button only if master checkbox is checked
+    });
+
+    $(rows).on('change', function () {
+        const totalRows = $(rows).length;
+        const checkedRows = $(rows).filter(':checked').length;
+
+        $(master).prop('checked', totalRows === checkedRows); // Check/uncheck master checkbox
+        $("#bulkModal").attr("disabled", checkedRows === 0); // Disable button if no rows are selected
+    });
+}
+
 
     // Initialize checkbox handler
     handleCheckbox('.master-checkbox', '.rowCheckbox');
