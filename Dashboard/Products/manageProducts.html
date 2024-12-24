@@ -697,7 +697,7 @@
                                <tr class="text-dark">
                                        
                                    <th style="width: 40%; text-align: start;">
-                                       <input class="form-check-input " type="checkbox" id="select-all" onclick="toggleCheckboxes(this)">
+                                       <input class="form-check-input master-checkbox" type="checkbox" id="select-all" onclick="toggleCheckboxes(this)">
                                        <label for="select-all">Product</label>
                                      </th>
                                    <th class="manageproducttableheading" style="width: 12%">Price</th>
@@ -713,7 +713,7 @@
                                <tr>
                                    <td>
                                       <div class="d-flex align-items-end gap-3 ">
-                                       <input class="form-check-input rowCheckbox" type="checkbox" id="product1">  
+                                       <input class="form-check-input row-checkbox rowCheckbox" type="checkbox" id="product1">  
                                        <img class="productImage" src="../Images/manage product image1.svg" alt="">
                                        <div class="tablecell1 text-start">
                                            <h6 class="mb-0 justify-content-center productTitle">HIFI M16 MINI Wireless Bluetooth Headset</h6>
@@ -791,7 +791,7 @@
                               <tr>
                                 <td>
                                    <div class="d-flex align-items-end gap-3 py-2 ">
-                                    <input class="form-check-input rowCheckbox" type="checkbox" id="product1">  
+                                    <input class="form-check-input row-checkbox rowCheckbox" type="checkbox" id="product1">  
                                     <img class="productImage" src="../Images/manage product image1.svg" alt="">
                                     <div class="tablecell1 text-start">
                                         <h6 class="mb-0 justify-content-center productTitle">HIFI M16 MINI Wireless Bluetooth HeadPhone</h6>
@@ -2013,6 +2013,7 @@
  <script src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
 
 <script>
+  
  $(document).ready(function () {
   // Function to toggle all checkboxes
   $('#selectAllCheckbox').on('change', function () {
@@ -2020,6 +2021,9 @@
     $('tbody input[type="checkbox"]').prop('checked', isChecked); // Set all checkboxes to the same state
   });
 });
+
+
+
       let registerProTable = document.querySelector('#manage_product_Table');
       new simpleDatatables.DataTable(registerProTable);
 
@@ -2044,6 +2048,7 @@ document.querySelectorAll(".pagination").forEach(function (pagination) {
 });
 
 $(document).ready(function () {
+  $("#bulkModal").attr("disabled", true);
     $('#manage_product_Table').on('change', '.rowCheckbox', function () {
         let $row = $(this).closest('tr'); // Get the current row
         let $destTable = $('#bulkManageModalTable tbody'); // Destination table body
@@ -2098,7 +2103,27 @@ $(document).ready(function () {
             $destTable.find(`tr[data-temp-id="row-${rowIndex}"]`).remove(); // Match and remove the row
         }
     });
+    function handleCheckbox(master, rows) {
+    $(master).on('change', function () {
+        const isChecked = $(this).is(':checked');
+        $(rows).prop('checked', isChecked).trigger('change');
+        $("#bulkModal").attr("disabled", !isChecked); // Enable the button only if master checkbox is checked
+    });
+
+    $(rows).on('change', function () {
+        const totalRows = $(rows).length;
+        const checkedRows = $(rows).filter(':checked').length;
+
+        $(master).prop('checked', totalRows === checkedRows); // Check/uncheck master checkbox
+        $("#bulkModal").attr("disabled", checkedRows === 0); // Disable button if no rows are selected
+    });
+}
+
+
+    // Initialize checkbox handler
+    handleCheckbox('.master-checkbox', '.rowCheckbox');
 });
+
 
 </script> 
 <script>

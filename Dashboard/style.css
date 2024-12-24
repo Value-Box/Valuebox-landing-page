@@ -1355,7 +1355,7 @@ background:  #F2F2F2;
   border-radius: 10px;
 border: 1px dashed  #002882;
 display: flex;
-padding: 40px;
+padding: 30px;
 flex-direction: column;
 justify-content: center;
 align-items: center;
@@ -1413,10 +1413,9 @@ line-height: 32px;
  }
  .socialMedia{
   display: flex;
-padding: 10px 8px;
+padding: 10px 20px;
 align-items: center;
 gap: 12px;
-flex: 1 0 0;
 border-radius: 5px;
 border: 1px solid var(--Natural-Color-20, #CCC);
 background: var(--Natural-Color-10, #F2F2F2);
@@ -2255,6 +2254,9 @@ cursor: pointer;
     border: 1px solid #ccc !important;
     border-radius: 5px !important;
   }
+ #productCollections .select2-selection{
+  height: auto !important;
+ }
   .select2-container--default
     .select2-selection--single
     .select2-selection__arrow {
@@ -2509,6 +2511,16 @@ div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm){
 .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover, .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:focus{
   background-color: #002882 !important;
   color: white;
+}
+button:disabled{
+  background-color: gray;
+  cursor: not-allowed;
+  color: white;
+  border: 1px solid gray;
+}
+.newBrandModal{
+  max-height: 500px;
+  overflow-y:auto;
 }
 @media(max-width:1400px){
   .custom-modal-width{
