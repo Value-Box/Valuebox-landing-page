@@ -576,7 +576,7 @@
                  <h5 class="subHeading mb-0">Basic Information</h5>
                  <div class="form-group mt-20 mb-0 w-100">
                    <label for="productName2" class=".gray-color mb-2"><span class="important">*</span> Product Name</label>
-                   <input type="text" class="form-control required" id="productName2" placeholder="Enter Product name">
+                   <input type="text" class="form-control required" id="productName2" placeholder="Enter Product name" maxlength="80">
                  </div>
                
                <div class="form-group mb-0 w-100 mt-40">
@@ -713,7 +713,7 @@
                 <tr>
                   <td><input type="text"  id="costPrice" class="form-control" placeholder="RS."  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^(\d*\.?\d{0,2}).*/, '$1'); calculatPricing();"></td>
                   <td><input type="text" id="sellingPrice" class="form-control required" placeholder="RS." oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^(\d*\.?\d{0,2}).*/, '$1'); calculatPricing();"></td>
-                  <td><input type="text" id="profitPercentage" class="form-control" placeholder="RS." oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^(\d*\.?\d{0,2}).*/, '$1'); calculatPricing();"></td>
+                  <td><input type="text" id="profitPercentage" class="form-control" placeholder="%" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^(\d*\.?\d{0,2}).*/, '$1'); calculatPricing();"></td>
                   <td><p class="mb-0" id="Profit">Profit</p></td>
                   <td class="d-flex gap-2 align-items-center"><input type="text" id="specialPrice" class="form-control" placeholder="RS."  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^(\d*\.?\d{0,2}).*/, '$1'); calculatPricing();">
                     <div class="calendar-container position-relative">
@@ -1119,7 +1119,7 @@
                 <label for="productName">Product type</label>
                 <input type="text" class="form-control mt-2" id="productOrganization" placeholder="" >
               </div>
-              <div class="form-group mt-20 w-100">
+              <div class="form-group mt-20 w-100" id="productCollections">
                 <label for="productName" class="mb-2">Collection</label>
                 <select class="select2 form-select "
                 multiple="multiple">
@@ -1135,7 +1135,7 @@
                     <option value="blue" >Blue</option>
                     <option value="purple">Purple</option>
                 </optgroup>
-            </select>              
+               </select>              
           </div>
               
           <div class="form-group mt-20 w-100">
