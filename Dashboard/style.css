@@ -192,6 +192,7 @@ body {
 }
 #navbar {
   padding: 13px 30px;
+  z-index: 9999;
 }
 .navbar-nav {
   display: flex;
@@ -958,6 +959,7 @@ outline: none;
   outline: 0;
   cursor: pointer;
 }
+
 .uploadImgSec .uploadImgSecBtns .newFileBTn,
 .uploadVidSec .uploadVidSecBtns .newVidFileBTn {
   color: #e6eaf3;
@@ -974,6 +976,23 @@ outline: none;
   border: 1px solid #eea500;
   color: #002882;
 }
+.mediaVidCenterBtn:disabled{
+  color: gray !important;
+  border: 1px solid gray !important;
+}
+.mediaVidCenterBtn svg path{
+stroke: #002882 !important;
+}
+.mediaVidCenterBtn:disabled svg path{
+stroke: gray !important;
+}
+#newVidFileBTn:disabled +  label {
+  background-color: gray !important;
+  border: 1px solid gray !important;
+  cursor: not-allowed;
+}
+
+
 .uploadImgSec input[type="file"] {
   display: none;
   position: absolute;
@@ -989,12 +1008,29 @@ outline: none;
 }
 .priceTableWrapper {
   border-radius: 8px;
-  overflow: hidden;
+  overflow-x: scroll;
   border: 1px solid #ccc;
+}
+.priceTableWrapper::-webkit-scrollbar {
+  width: 0px;
+}
+.priceTableWrapper::-webkit-scrollbar:hover {
+  width: 10px;
+}
+.priceTableWrapper::-webkit-scrollbar-thumb {
+  background: none; 
+}
+
+.priceTableWrapper:hover::-webkit-scrollbar-thumb {
+  background: #ccc; /* Change the scrollbar color on hover */
+}
+.priceTableWrapper::-webkit-scrollbar-track{
+background: none;
 }
 .priceTable {
   border-collapse: collapse;
   width: 100%;
+  min-width: 860px;
 }
 .priceTable thead tr th {
   background: var(--Natural-Color-10, #f2f2f2);
@@ -1126,6 +1162,7 @@ td {
 }
 .choices__list--multiple{
   height: 38px !important;
+  padding: 4px;
 }
 #selOptType{
   height: fit-content;
@@ -2005,7 +2042,7 @@ align-self: stretch;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   bottom: 100%; /* Move the tooltip above the icon */
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-60%);
   margin-bottom: 5px; /* Space between tooltip and input */
 }
 
@@ -2021,7 +2058,14 @@ align-self: stretch;
 }
 
 #datePicker {
-  width: 200px; /* Set a fixed width, adjust as needed */
+  width: 220px; /* Set a fixed width, adjust as needed */
+}
+.daterangepicker td.active, .daterangepicker td.active:hover{
+  background-color: #002882 !important;
+}
+.daterangepicker .drp-buttons .btn{
+  background-color: #002882;
+  color: white;
 }
 
 /* Alternatively, make it flexible */
@@ -2439,12 +2483,31 @@ background:linear-gradient(90deg, #FFC136 0%, #FAC142 19.76%, #FFD168 52.5%, #F5
 }
 .video-thumbnail {
   height: 150px;
-  width: 270px;
+  width: 258px;
   object-fit: cover; /* Ensures the video fills the container */
   display: block; /* Removes any inline-level gaps */
 }
 div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm){
   background-color: #002882 !important;
+}
+.productTitle{
+  width: 180px;
+}
+.error-border {
+  border: 1px solid red !important;
+  border-radius: 6px;
+}
+.medCenVideoPreviewContainer,#mod_Med_Img{
+  max-height: 200px;
+    overflow: auto;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice{
+  background-color: #002882 !important;
+  color: white;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover, .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:focus{
+  background-color: #002882 !important;
+  color: white;
 }
 @media(max-width:1400px){
   .custom-modal-width{
