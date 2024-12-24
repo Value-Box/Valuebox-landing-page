@@ -979,6 +979,7 @@ outline: none;
 .mediaVidCenterBtn:disabled{
   color: gray !important;
   border: 1px solid gray !important;
+  cursor: not-allowed !important;
 }
 .mediaVidCenterBtn svg path{
 stroke: #002882 !important;
