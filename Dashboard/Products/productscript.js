@@ -1,54 +1,164 @@
-  // Form submission or button click validation
-  $("#addProNextBtn").on("click", function () {
-    // If valid, proceed further
-    $("#basicInformationForm").hide();
-    $("#addProductSection").show();
-  
-    // Scroll to the top of the #addProductSection
-    $("html, body").animate(
-      {
-        scrollTop: 0,
-      },
-      5 // Duration in milliseconds (500ms = 0.5 seconds)
-    );
-  });
-  
+// // Form submission or button click validation
+// $("#addProNextBtn").on("click", function () {
+//   // Check if the Product Name and Category are valid
+//   const productName = $("#productName1").val().trim();
+//   const category = $(".select-dropdown").val();
+
+//   let isValid = true;
+
+//   if (category==="") {
+//     $("#basicInformationForm .select2-selection").addClass("error-border");
+//     isValid = false;
+//   }
+//   // Validate Product Name
+//   if (productName === "") {
+//     const basicInformationForm=$("#basicInformationForm")
+//     $("#productName1").addClass("error-border"); // Apply error border
+//     $("#productName1").focus(); // Focus on the Product Name field
+//     $('html, body').animate({ scrollTop: basicInformationForm.offset().top-100 }, 300);
+//     isValid = false;
+//   } else {
+//     $("#productName1").removeClass("error-border"); // Remove error border
+//   }
+
+//   // Validate Category
+//   if(productName!==''){
+//     if (!category) {
+//       $("#basicInformationForm .select2-selection").addClass("error-border"); // Apply error border to select dropdown
+//       $("#basicInfoCategory").focus(); // Focus on the Category dropdown
+//       $("#basicInfoCategory").select2("open");
+//       isValid = false;
+//     } else {
+//       $("#basicInformationForm .select2-selection").removeClass("error-border"); // Remove error border
+//     }
+//   }
+
+//   // If both fields are valid, proceed
+//   if (isValid) {
+//     $("#basicInformationForm").hide();
+//     $("#addProductSection").show();
+
+//     // Scroll to the top of the #addProductSection
+//     $("html, body").animate(
+//       {
+//         scrollTop: 0,
+//       },
+//       500 // Duration in milliseconds (500ms = 0.5 seconds)
+//     );
+//   } else {
+//     // Optionally, show an alert or display a message if fields are invalid
+//     Swal.fire({
+//       icon: "error",
+//       title: "Oops...",
+//       text: "Please fill out the all fields."
+//     });
+//   }
+// });
+
+// // Remove error border when user starts typing
+// $("#productName1").on("input", function () {
+//   if ($(this).val().trim() !== "") {
+//     $(this).removeClass("error-border"); // Remove error border when the user starts typing
+//   }
+// });
+
+// // Remove error border when user selecting a category
+// $(".select-dropdown").on("change", function () {
+//   if ($(this).val()) {
+//     $("#basicInformationForm .select2-selection").removeClass("error-border"); // Remove error border when a category is selected
+//   }
+// });
+
+// // Add error border when product nme is empty
+// $("#productName1").on("blur", function () {
+//   if ($(this).val().trim() === "") {
+//     $(this).addClass("error-border"); // Add error border if the field is empty
+//   }
+// });
+
+// // Add error border when category not select
+// $(".select-dropdown").on("blur", function () {
+//   if (!$(this).val()) {
+//     $("#basicInformationForm .select2-selection").addClass("error-border"); // Add error border if no option is selected
+//   }
+// });
+
+
+// // Sync product name with product name2
+// $('#productName1').on('keyup', function () {
+//   // Get the value from the first input
+//   const value = $(this).val();
+//   // Set the same value in the second input
+//   $('#productName2').val(value);
+// });
+
+// // Sync dropdown2 with dropdown1
+// $('#basicInfoCategory').on('change', function () {
+//     const selectedValue = $(this).val(); // Get selected value from dropdown1
+//     $('#basicInfoCategory2').val(selectedValue).trigger('change'); // Update dropdown2
+// });
 
   // YouTube URL validation on input
   $("#utubeUrl").on("input", function () {
     const youtubeUrl = $(this).val();
     const youtubePattern =
-      /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/(watch\?v=|shorts\/)([a-zA-Z0-9_-]{11})$/;
-
-    if (!youtubePattern.test(youtubeUrl)) {
+      /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/(watch\?v=|shorts\/|embed\/)?([a-zA-Z0-9_-]{11})$/;
+    const videoPreviewContainer = $("#videoPreviewContainer");
+  
+    console.log(youtubeUrl);
+  
+    // Toggle buttons based on input
+    if (youtubeUrl === '') {
+      $(".mediaVidCenterBtn").attr("disabled", false);
+      $("#newVidFileBTn").attr("disabled", false);
+      videoPreviewContainer.empty(); // Clear the video preview container
+      return;
+    } else {
+      $(".mediaVidCenterBtn").attr("disabled", true);
+      $("#newVidFileBTn").attr("disabled", true);
+    }
+  
+    // Validate the YouTube URL
+    const match = youtubeUrl.match(youtubePattern);
+    if (!match) {
       $("#errorMessage").show(); // Show error message
+      videoPreviewContainer.empty(); // Clear the container for invalid input
     } else {
       $("#errorMessage").hide(); // Hide error message
+  
+      // Extract YouTube video ID and display preview
+      const videoId = match[5];
+      const iframe = `
+        <div style="position: relative; display: inline-block; width: 258px;">
+          <span 
+            class="remove-btn" 
+            style="position: absolute; top: 0px; right: 0px; padding: 5px; cursor: pointer; border-radius: 50%;">
+            &#10006;
+          </span>
+          <iframe 
+            width="258px" 
+            height="150px" 
+            class="rounded"
+            src="https://www.youtube.com/embed/${videoId}" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>`;
+      videoPreviewContainer.html(iframe); // Insert the video preview into the container
+  
+      // Add click event to remove the video and clear the input
+      $(".remove-btn").on("click", function () {
+        videoPreviewContainer.empty(); // Clear the video preview
+        $("#utubeUrl").val(''); // Clear the input field
+        $(".mediaVidCenterBtn").attr("disabled", false); // Re-enable buttons
+        $("#newVidFileBTn").attr("disabled", false);
+      });
     }
   });
-
-
-
-    //     //video preview in modal
-    // const $modalVideo = $('#modalVideo');
-    // const $modalVideoSource = $modalVideo.find('source');
   
-    // // Handle thumbnail clicks
-    // $('.video-thumbnail').on('click', function () {
-    //   const videoSrc = $(this).data('video');
-    //   $modalVideoSource.attr('src', videoSrc);
-    //   $modalVideo[0].load(); // Load video in modal but do not play automatically
-    // });
   
-    // // Stop video playback and reset source when modal is closed
-    // $('#videoModal').on('hidden.bs.modal', function () {
-    //   $modalVideo[0].pause();
-    //   $modalVideo[0].currentTime = 0; // Reset video to the beginning
-    //   $modalVideoSource.attr('src', ''); // Clear the video source
-    // });
-  
-      // Initialize Select2
-  
+  //select lcations from location dropdown and change the table tbody
       $('#fbmTable tbody tr').show();
   
         // Handle Select2 change event
@@ -64,7 +174,8 @@
             $(`#fbmTable tbody tr[data-location="${selectedValue}"]`).show();
           }
         });
-      // Listen for change event on Select2
+      
+        //redirect the register brand page
       $("#brandSelector").on("select2:select", function (e) {
           const value = $(this).val(); // Get the selected value
           if (value === "addNew") {
@@ -78,7 +189,7 @@
           }
       });
 
-  // Classic editor
+  // Add Classic editor
   if ($('#productDesc').length > 0) {
     ClassicEditor.create($('#productDesc')[0])
         .catch(error => {
@@ -86,6 +197,7 @@
         });
 }
 
+//Add Classic editor
 // Check if the element exists before initializing CKEditor for #highlight
 if ($('#highlight').length > 0) {
     ClassicEditor.create($('#highlight')[0])
@@ -155,7 +267,6 @@ function handleImagePreviewSelection() {
       }
   });
 
-  console.log("Selected images moved to preview container.");
 }
 
 // Function to handle video preview selection (allow only one video)
@@ -173,12 +284,19 @@ function handleVideoPreviewSelection() {
 
       // Check if a video is already added in the preview container
       if ($videoPreviewContainer.find('video').length === 0) {
-          console.log("No video exists, adding a new one");
+
           $parentDiv.find('.form-check-input').remove(); // Remove checkbox in preview
 
           // Set width of video container to 'fit-content'
           $parentDiv.css('width', 'fit-content');
-
+          const inputSelector = $("#utubeUrl");
+          
+        
+          // Check if there is a video in the preview container
+          
+              // Disable the input if a video is present
+              inputSelector.prop('disabled', true);
+         
           // Create a cross icon for the video with the class '.remove-btn' and append it
           const $closeButton = $('<span class="remove-btn" style="position: absolute; top: 0; right: 0; cursor: pointer;">&#10006;</span>');
           $parentDiv.append($closeButton); // Add the close button to the video div
@@ -187,6 +305,8 @@ function handleVideoPreviewSelection() {
           $closeButton.on('click', function () {
               console.log("Video removed from preview container");
               $(this).closest('div').remove(); // Remove the parent div (video container)
+              inputSelector.prop('disabled', false);
+
               videoAlreadyAdded = false; // Reset the flag
           });
 
@@ -200,12 +320,16 @@ function handleVideoPreviewSelection() {
 
   // If a video already exists, show alert message
   if (videoAlreadyAdded) {
-      alert("A video is already added to the preview container!");
+      // alert("A video is already added to the preview container!");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "A video is already added to the preview container!"
+      });
   }
-
-  console.log("Selected videos moved to preview container.");
 }
 
+//Add the Images and Video From Media Center Modal
 $('#doneButton').on('click', function() {
   if ($("#doneButton").hasClass('pictureDoneBTn')) {
       handleImagePreviewSelection();
@@ -213,12 +337,6 @@ $('#doneButton').on('click', function() {
       handleVideoPreviewSelection();
   }
 });
-
-
-
-
-
-
 
 
 //upload images with preview
@@ -331,9 +449,22 @@ function handleFileUpload(inputId, containerId, errorContainerId) {
 
 // Attach event listeners to file inputs
 handleFileUpload("uploadImgSecinput", "previewContainer", "errorContainerUpload");
-handleFileUpload("medCenImg", "medCenPreviewContainer", "errorContainerMedCen");
+// handleFileUpload("medCenImg", "medCenPreviewContainer", "errorContainerMedCen");
 
 
+function toggleInputState(inputId, containerId) {
+  const inputSelector = $("#" + inputId);
+  const previewContainer = $("#" + containerId);
+
+  // Check if there is a video in the preview container
+  if (previewContainer.find("video").length > 0) {
+      // Disable the input if a video is present
+      inputSelector.prop('disabled', true);
+  } else {
+      // Enable the input if no video is present
+      inputSelector.prop('disabled', false);
+  }
+}
   function handleVideoUpload(inputId, containerId, errorContainerId) {
     const inputSelector = $("#" + inputId);
 
@@ -387,7 +518,6 @@ handleFileUpload("medCenImg", "medCenPreviewContainer", "errorContainerMedCen");
                 inputSelector.val('');
                 return false; // Stop further processing
             }
-
             // If valid, display video preview
             const videoWrapper = $("<div>").addClass("video-wrapper").css({
                 "display": "inline-block",
@@ -408,6 +538,7 @@ handleFileUpload("medCenImg", "medCenPreviewContainer", "errorContainerMedCen");
                 videoWrapper.remove(); // Remove video preview
                 errorContainer.empty().hide(); // Clear error messages
                 inputSelector.val(''); // Reset the input to allow re-adding files
+                toggleInputState("utubeUrl", containerId);
             });
 
             const fileName = $("<div>").addClass("file-name").text(file.name);
@@ -415,6 +546,8 @@ handleFileUpload("medCenImg", "medCenPreviewContainer", "errorContainerMedCen");
             // Append video, file name, and remove button
             videoWrapper.append(videoElement, fileName, removeBtn);
             previewContainer.append(videoWrapper);
+
+            toggleInputState("utubeUrl", containerId);
         });
 
         // Show error container if there are errors
@@ -428,43 +561,131 @@ handleFileUpload("medCenImg", "medCenPreviewContainer", "errorContainerMedCen");
 $(document).ready(function () {
     $("#newVidFileBTn, #medCenNewVidFileBTn").on("click", function () {
         handleVideoUpload("newVidFileBTn", "videoPreviewContainer", "errorMessage");
-        handleVideoUpload("medCenNewVidFileBTn", "medCenVideoPreviewContainer", "medCenVidErrMes");
+        // handleVideoUpload("medCenNewVidFileBTn", "medCenVideoPreviewContainer", "medCenVidErrMes");
     });
 });
 
-    // Calculate Pricing
-    function calculatPricing() {
-      let costPrice = parseInt($("#costPrice").val()) || 0;
-      let sellingPrice = parseInt($("#sellingPrice").val()) || 0;
-      let specialPrice = parseInt($("#specialPrice").val()) || 0;
-      let profitElement = $("#Profit");
-  
-      let profit = sellingPrice - costPrice;
-      let finalProfit = specialPrice - costPrice;
-      if (costPrice === 0) {
-        profitElement.text("0.00");
-        return; // Exit the function early
-      }
-      console.log("Special Price:", specialPrice);
-  
+
+// Format all price table inputs to two decimal places on blur
+$("input[type='number']").on("blur", function () {
+  let value = parseFloat($(this).val()) || 0;
+  $(this).val(value.toFixed(2));
+});
+
+// Special Price Validation
+$("#specialPrice").on("input", function () {
+  let sellingPrice = parseFloat($("#sellingPrice").val()) || 0;
+  let specialPrice = parseFloat($(this).val()) || 0;
+
+  // Check if Selling Price is entered
+  if (sellingPrice === 0) {
+    Swal.fire({
+      title: 'Error!',
+      text: 'Please enter a Selling Price first.',
+      icon: 'error',
+      confirmButtonText: 'OK'
+    }).then(() => {
+      $("#specialPrice").val("0.00"); // Reset Special Price to 0
+      $("#sellingPrice").focus(); // Focus Selling Price input
+    });
+    return; // Stop further processing
+  }
+  // Special Price must be less than Selling Price
+  if (specialPrice >= sellingPrice) {
+      Swal.fire({
+          title: 'Error!',
+          text: 'Special Price must be less than Selling Price',
+          icon: 'error',
+          confirmButtonText: 'OK'
+      }).then(() => {
+          // Reset Special Price to 0 after clicking OK
+          $("#specialPrice").val("0.00");
+      });
+  }
+});
+
+$("#costPriceErr").css('display','none')
+// Calculate Pricing
+function calculatPricing() {
+  let costPrice = parseFloat($("#costPrice").val()) || 0;
+  let sellingPrice = parseFloat($("#sellingPrice").val()) || 0;
+  let specialPrice = parseFloat($("#specialPrice").val()) || 0;
+  let profitElement = $("#Profit");
+  let profitPercentageElement = $("#profitPercentage");
+
+  // Get the manually entered profit percentage
+  let manualProfitPercentage = parseFloat(profitPercentageElement.val()) || 0;
+
+  // Reset fields if cost price is 0
+  if (costPrice === 0) {
+      profitElement.text("0.00");
+      // $("#sellingPrice").val("");
+      // $("#specialPrice").val("");
+      profitPercentageElement.val("");
+      $("#costPriceErr").css('display','block')
+      return;
+  }else{
+    $("#costPriceErr").css('display','none')
+  }
+
+  // If manually entering the profit percentage
+  if (document.activeElement.id === "profitPercentage" && manualProfitPercentage !== 0) {
+      let profitMargin = manualProfitPercentage / 100;
+      // Calculate selling price using the given formula
+      sellingPrice = costPrice / (1 - profitMargin);
+
+      // Check if Special Price is set
       if (specialPrice > 0) {
-        if (finalProfit > 0) {
-          profitElement.text(finalProfit);
-        } else {
-          profitElement.text("0.00");
-        }
+          specialPrice = costPrice / (1 - profitMargin);
+          
+          $("#specialPrice").val(specialPrice.toFixed(2));
+          profitElement.text((specialPrice - costPrice).toFixed(2));
       } else {
-        if (profit > 0) {
-          profitElement.text(profit);
-        } else {
-          profitElement.text("0.00");
-        }
+          // Otherwise, update Selling Price
+          $("#sellingPrice").val(sellingPrice.toFixed(2));
+          profitElement.text((sellingPrice - costPrice).toFixed(2));
       }
- 
-    }
+      return; // Stop further recalculations
+  }
 
+  // If manually entering the selling price
+  if (document.activeElement.id === "sellingPrice") {
+      let profit = sellingPrice - costPrice;
+      profitElement.text(profit.toFixed(2));
+      let profitPercentageAuto = ((sellingPrice - costPrice) / sellingPrice) * 100;
+      profitPercentageElement.val(profitPercentageAuto.toFixed(2));
+      return; // Stop further recalculations
+  }
 
+  // Automatic calculation based on other fields
+  let profit = sellingPrice - costPrice;
+  let finalProfit = specialPrice - costPrice;
 
+  if (specialPrice > 0) {
+      profitElement.text(finalProfit.toFixed(2));
+      let finalProfitPercentage = ((specialPrice - costPrice) / specialPrice) * 100;
+      if (document.activeElement.id !== "profitPercentage") {
+          profitPercentageElement.val(finalProfitPercentage.toFixed(2));
+      }
+  } else {
+      profitElement.text(profit.toFixed(2));
+      let profitPercentageAuto = ((sellingPrice - costPrice) / sellingPrice) * 100;
+      if (document.activeElement.id !== "profitPercentage") {
+          profitPercentageElement.val(profitPercentageAuto.toFixed(2));
+      }
+  }
+
+  // Handle case when Special Price is removed
+  if (!specialPrice && manualProfitPercentage > 0) {
+      let profitMargin = manualProfitPercentage / 100;
+      sellingPrice = costPrice / (1 - profitMargin);
+      $("#sellingPrice").val(sellingPrice.toFixed(2));
+      profitElement.text((sellingPrice - costPrice).toFixed(2));
+  }
+}
+
+  
+  
 
   $(document).ready(function () {
     $('.varParToChild').on('click', function () {
@@ -513,6 +734,7 @@ $(document).ready(function () {
             format: "DD MMM YYYY",
           },
           autoUpdateInput: false,
+          minDate: moment(), // Prevent selection of previous dates
         },
         function (start, end) {
           // Update the input field with the selected range
@@ -615,7 +837,178 @@ $(document).ready(function () {
 $("#digital_product").click(function () {
   if (this.checked) {
       $(".product_type").fadeOut(400); // Adjust the duration (400ms) as needed for smoothness
+      $("#packageWeight").removeClass("required")
   } else {
       $(".product_type").fadeIn(400); // Adjust the duration (400ms) as needed for smoothness
+      $("#packageWeight").addClass("required")
   }
+});
+
+
+
+
+$('#addProductForm').on('submit', function (e) {
+  e.preventDefault(); // Prevent form submission for validation
+
+  let isValid = true;
+  let firstInvalidElement = null;
+  let ckEditorTriggered = false; // Flag to track SweetAlert for CKEditor validation
+
+  // 1. Validate required fields
+  $('.required').each(function () {
+    const isSelect = $(this).is('select') && $(this).hasClass('select-dropdown');
+    const value = $(this).val()?.trim();
+    const isEmpty = isSelect ? !value : value === ''; // Check if the field is empty
+
+    if (isEmpty) {
+      isValid = false;
+      $(this).addClass('error-border'); // Add error border
+
+      // Handle select2-specific styling for select dropdowns
+      if (isSelect) {
+        $(this).next('.select2-container').addClass('error-border');
+      }
+
+      // Mark the first invalid element
+      if (!firstInvalidElement) {
+        firstInvalidElement = $(this);
+      }
+    } else {
+      $(this).removeClass('error-border'); // Remove error border if valid
+      if (isSelect) {
+        $(this).next('.select2-container').removeClass('error-border');
+      }
+    }
+  });
+
+  // 2. Validate image upload (Ensure at least one image is uploaded)
+  const previewContainer = $('#previewContainer');
+  if (previewContainer.children().length === 0) {
+    isValid = false;
+    $('#errorContainerUpload').text('Please upload at least one image!').show(); // Show upload error
+
+    if (!firstInvalidElement) {
+      firstInvalidElement = $('#uploadImgSec'); // Mark image upload section as invalid
+    }
+  } else {
+    $('#errorContainerUpload').hide(); // Hide upload error if valid
+  }
+
+  // 3. Validate CKEditor content (Ensure there are at least 3 non-empty items)
+  $(".ck-content").each(function () {
+    const ul = $(this).find("ul");
+    const liElements = ul.find("li").filter(function () {
+      return $(this).text().trim() !== ''; // Check for non-empty list items
+    });
+
+    if (liElements.length < 3) {
+      isValid = false;
+      $(this).addClass('error-border'); // Add error border to CKEditor content
+
+      // Mark the first invalid CKEditor element
+      if (!firstInvalidElement) {
+        firstInvalidElement = $(this);
+        console.log(firstInvalidElement)
+      }
+
+      if (!ckEditorTriggered) {
+        ckEditorTriggered = true; // Set CKEditor triggered flag to true
+        
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Please add at least 3 bullet points in Product Description",
+          allowOutsideClick: false,
+          allowEscapeKey: false,
+          confirmButtonText: "OK"
+        }).then(() => {
+          // After SweetAlert closes, scroll to the invalid CKEditor and focus it
+          $('html, body').animate({ scrollTop: $(this).offset().top - 100 }, 300);
+
+          const editorId = $(this).find('.ck-editor__editable').attr('id');
+          const editor = $(this).find('.ck-editor__editable').data('editor');
+
+
+          if (editor) {
+            editor.focus(); // Focus CKEditor instance
+          } else {
+            $(this).find('.ck-editor__editable').focus(); // Fallback: Focus the editable area directly
+          }
+        });
+      }
+
+      return false; // Stop iteration once we find invalid CKEditor content
+    } else {
+      $(this).removeClass('error-border'); // Remove error border if valid
+    }
+  });
+
+  // 4. Handle form submission if it's invalid
+  if (!isValid) {
+    if (firstInvalidElement && !ckEditorTriggered) {
+      if (firstInvalidElement.is('select')) {
+        firstInvalidElement.select2('open'); // Open the select dropdown if it's a select element
+      } else if (!firstInvalidElement.hasClass('ck-content')) {
+        // Scroll to the first invalid element and focus it
+        $('html, body').animate({ scrollTop: firstInvalidElement.offset().top - 100 }, 300);
+        firstInvalidElement.focus();
+      }
+    }
+
+    // Show SweetAlert for missing required fields
+    if (!ckEditorTriggered) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Please fill in all required fields!",
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        confirmButtonText: "OK"
+      }).then(() => {
+        // After SweetAlert closes, scroll to the first invalid element and focus it
+        $('html, body').animate({ scrollTop: firstInvalidElement.offset().top - 100 }, 300);
+        firstInvalidElement.focus();
+      });
+    }
+  } else {
+    // If the form is valid, submit the form
+    this.submit();
+  }
+});
+
+
+
+
+
+
+// Handle input typing to dynamically remove/add red border
+$(document).on('input', '.required', function () {
+  if ($(this).val().trim() === '') {
+    $(this).addClass('error-border');
+  } else {
+    $(this).removeClass('error-border');
+  }
+});
+
+// Handle the change event for select2 dropdown to dynamically remove red border
+$(document).on('change', '.select-dropdown', function () {
+  if ($(this).val()) {
+    $(this).next('.select2-container').removeClass('error-border');
+  } else {
+    $(this).next('.select2-container').addClass('error-border');
+  }
+});
+
+// Handle the change event for the digital product checkbox
+$('#digital_product').on('change', function () {
+  const packageWeightInput = $('#package_weight');
+  if ($(this).is(':checked')) {
+    // When the checkbox is checked, remove 'required' and add 'not-required'
+    packageWeightInput.removeClass('required').addClass('not-required').val('');
+    packageWeightInput.removeClass('error-border');
+  } else {
+    // When the checkbox is unchecked, restore 'required'
+    packageWeightInput.removeClass('not-required').addClass('required');
+  }
+
 });
