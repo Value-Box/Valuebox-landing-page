@@ -596,7 +596,7 @@ $("#specialPrice").on("input", function () {
       icon: 'error',
       confirmButtonText: 'OK'
     }).then(() => {
-      $("#specialPrice").val("0.00"); // Reset Special Price to 0
+      $("#specialPrice").val("0"); // Reset Special Price to 0
       $("#sellingPrice").focus(); // Focus Selling Price input
     });
     return; // Stop further processing
@@ -610,7 +610,7 @@ $("#specialPrice").on("input", function () {
           confirmButtonText: 'OK'
       }).then(() => {
           // Reset Special Price to 0 after clicking OK
-          $("#specialPrice").val("0.00");
+          $("#specialPrice").val("0");
       });
   }
 });
@@ -618,6 +618,35 @@ $("#costPrice").on("input", function () {
   $("#profitPercentage").val("0");
 });
 
+$("#profitPercentage").on("input", function () {
+  let sellingPrice = parseFloat($("#sellingPrice").val()) || 0;
+  let specialPrice = parseFloat($("#specialPrice").val()) || 0;
+  let costPrice = parseFloat($("#costPrice").val()) || 0;
+  let profitPercentageElement = $("#profitPercentage");
+  
+  if (specialPrice >= sellingPrice) {
+    Swal.fire({
+        icon: "error",
+        title: "Invalid Special Price",
+        text: "Special Price must be less than Selling Price.",
+        confirmButtonText: "OK",
+    }).then(() => {
+        // Reset Special Price to sellingPrice - 1
+        let newSpecialPrice = sellingPrice - 1;
+        $("#specialPrice").val(newSpecialPrice);
+
+        // Calculate the new profit percentage
+        if (costPrice > 0 && newSpecialPrice > 0) {
+            let profit = newSpecialPrice - costPrice;
+            let profitPercentage = (profit / newSpecialPrice) * 100;
+
+            // Update the profit percentage field with the recalculated value
+            profitPercentageElement.val(profitPercentage.toFixed(2));
+        }
+    });
+    return; // Stop further execution
+}
+});
 
 $("#costPriceErr").css('display','none')
 // Calculate Pricing
@@ -633,7 +662,7 @@ function calculatPricing() {
 
   // Reset fields if cost price is 0
   if (costPrice === 0) {
-      profitElement.text("0.00");
+      profitElement.text("0");
       // $("#sellingPrice").val("");
       // $("#specialPrice").val("");
       profitPercentageElement.val("0");
@@ -665,6 +694,7 @@ function calculatPricing() {
                 specialPrice = costPrice / (1 - profitMargin);
                 $("#specialPrice").val(specialPrice.toFixed(2));
                 profitElement.text((specialPrice - costPrice).toFixed(2));
+                
             } else {
                 $("#sellingPrice").val(sellingPrice.toFixed(2));
                 profitElement.text((sellingPrice - costPrice).toFixed(2));
@@ -681,42 +711,73 @@ function calculatPricing() {
 
     if (specialPrice > 0) {
         specialPrice = costPrice / (1 - profitMargin);
+
+        // Validate that Special Price is less than Selling Price
+      
         $("#specialPrice").val(specialPrice.toFixed(2));
         profitElement.text((specialPrice - costPrice).toFixed(2));
+        console.log(profitElement)
+        
     } else {
         $("#sellingPrice").val(sellingPrice.toFixed(2));
         profitElement.text((sellingPrice - costPrice).toFixed(2));
     }
     return; // Stop further recalculations
 }
-
-
-
   // If manually entering the selling price
   if (document.activeElement.id === "sellingPrice") {
-    if (sellingPrice < specialPrice) {
-      Swal.fire({
-        icon: "error",
-        title: "Invalid Selling Price",
-        text: "Selling Price must be greater than or equal to the Special Price!",
-        confirmButtonText: "OK",
-      }).then(() => {
-        $("#sellingPrice").focus(); // Focus the Selling Price input
-      });
+    if (sellingPrice <= costPrice) {
+      profitPercentageElement.val("0");
       return; // Stop further execution
-    }
-      let profit = sellingPrice - costPrice;
-      profitElement.text(profit.toFixed(2));
-      let profitPercentageAuto = ((sellingPrice - costPrice) / sellingPrice) * 100;
-      profitPercentageElement.val(profitPercentageAuto.toFixed(2));
-      return; // Stop further recalculations
   }
+    if (sellingPrice < specialPrice) {
+        Swal.fire({
+            icon: "error",
+            title: "Invalid Selling Price",
+            text: "Selling Price must be greater than or equal to the Special Price!",
+            confirmButtonText: "OK",
+        }).then(() => {
+            $("#sellingPrice").focus(); // Focus the Selling Price input
+        });
+        return; // Stop further execution
+    }
+
+    let profit = sellingPrice - costPrice;
+    let profitPercentageAuto = ((sellingPrice - costPrice) / sellingPrice) * 100;
+
+    if (profitPercentageAuto > 99) {
+        Swal.fire({
+            icon: "error",
+            title: "Invalid Selling Price",
+            text: "Profit Percentage cannot exceed 99%.",
+            confirmButtonText: "OK",
+        }).then(() => {
+            profitPercentageElement.val("99");
+
+            let profitMargin = 99 / 100;
+            sellingPrice = costPrice / (1 - profitMargin);
+
+            $("#sellingPrice").val(sellingPrice.toFixed(2));
+            profitElement.text((sellingPrice - costPrice).toFixed(2));
+        });
+        return; // Stop further execution
+    } else {
+        profitElement.text(profit.toFixed(2));
+        profitPercentageElement.val(profitPercentageAuto.toFixed(2));
+    }
+    return; // Stop further recalculations
+}
+
 
   // Automatic calculation based on other fields
   let profit = sellingPrice - costPrice;
   let finalProfit = specialPrice - costPrice;
 
   if (specialPrice > 0) {
+    if (specialPrice <= costPrice) {
+      profitPercentageElement.val("0");
+      return; // Stop further execution
+  }
       profitElement.text(finalProfit.toFixed(2));
       let finalProfitPercentage = ((specialPrice - costPrice) / specialPrice) * 100;
       if (document.activeElement.id !== "profitPercentage") {
@@ -985,7 +1046,7 @@ $('#addProductForm').on('submit', function (e) {
     $('#errorContainerUpload').hide(); // Hide upload error if valid
   }
 
-  // 4. Validate Product Description (150 characters minimum)
+  // 4. Validate Product Description (150 characters minimum and maximum 1500)
   if (cleanProductDescContent.length < 160 || cleanProductDescContent.length > 1500) {
     isValid = false;
     productDescEditor.addClass('error-border'); // Add error border for Product Description CKEditor
@@ -1006,7 +1067,7 @@ $('#addProductForm').on('submit', function (e) {
         confirmButtonText: "OK"
       }).then(() => {
         // After SweetAlert closes, scroll to the invalid CKEditor and focus it
-        $('html, body').animate({ scrollTop: productDescEditor.offset().top - 100 }, 300);
+        $('html, body').animate({ scrollTop: productDescEditor.offset().top - 200 }, 300);
         
         const editor = productDescEditor.find('.ck-editor__editable').data('editor');
         if (editor) {
@@ -1046,7 +1107,7 @@ if (highlightListItems.length < 3) {
       confirmButtonText: "OK"
     }).then(() => {
       // After SweetAlert closes, scroll to the invalid CKEditor and focus it
-      $('html, body').animate({ scrollTop: highlightEditor.offset().top - 100 }, 300);
+      $('html, body').animate({ scrollTop: highlightEditor.offset().top - 200 }, 300);
 
       const editor = highlightEditor.find('.ck-editor__editable').data('editor');
       if (editor) {
