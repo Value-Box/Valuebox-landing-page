@@ -598,7 +598,7 @@
                  <label for="customerInput">Enable customers to enter Input Text</label>
                </div>
                <div class="card mb-0 w-100 mt-40">
-                <p class="heading">Product Description <span>*</span></p>
+                <p class="heading">Product Description <span>*</span> <sub>(Product Description must contain 160 and 1500 characters!)</sub></p>
                 <div class="card-body p-0">
                     <div id="productDesc">
                         <!-- <p>This is some sample content.</p> -->
@@ -608,7 +608,7 @@
                 </div>
                 </div>
                 <div class="card mb-0 w-100 mt-40">
-                <p class="heading">Highlights <span>*</span></p>
+                <p class="heading">Highlights <span>*</span> <sub>Highlights must contain at least 3 bullet points!</sub></p>
                 <div class="card-body p-0">
                     <div id="highlight">
                         <!-- <p>This is some sample content.</p> -->
@@ -1270,21 +1270,8 @@
           <div class="col-12">
             <span class="subHeading-blue">Select file </span>
             <button id="closeModalBtn" type="button" class="btn-blue closeModalBtn rounded-circle" data-bs-dismiss="modal" aria-label="Close">
-              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
-                <g clip-path="url(#clip0_4143_7843)">
-                  <rect width="60" height="60" fill="url(#paint0_radial_4143_7843)"/>
-                  <path d="M30 0C13.2857 0 0 13.2857 0 30C0 46.7143 13.2857 60 30 60C46.7143 60 60 46.7143 60 30C60 13.2857 46.7143 0 30 0ZM41.5714 45L30 33.4286L18.4286 45L15 41.5714L26.5714 30L15 18.4286L18.4286 15L30 26.5714L41.5714 15L45 18.4286L33.4286 30L45 41.5714L41.5714 45Z" fill="#002882"/>
-                </g>
-                <defs>
-                  <radialGradient id="paint0_radial_4143_7843" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(30 30) rotate(90) scale(30)">
-                    <stop offset="0.80208" stop-color="white"/>
-                    <stop offset="1" stop-color="white" stop-opacity="0"/>
-                  </radialGradient>
-                  <clipPath id="clip0_4143_7843">
-                    <rect width="60" height="60" fill="white"/>
-                  </clipPath>
-                </defs>
-              </svg>
+              
+              <i class="fa-solid fa-xmark"></i>
             </button>
             
             <div class="modal-body px-0">
