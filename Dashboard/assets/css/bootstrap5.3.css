@@ -11890,6 +11890,9 @@ fieldset:disabled .btn {
   .gray-color {
     color: var(--Gray-Color);
   }
+  .dark-gray-color{
+    color: #999;
+  }
   .secondary-yellow {
     color: var(--Secondary-Yellow);
   }
@@ -12194,10 +12197,13 @@ fieldset:disabled .btn {
   .TableWrapper table tbody tr td {
     padding: 10px 20px;
     color: #999;
+    font-weight: 500;
+    
   }
   .TableWrapper table tbody tr {
     border-bottom: 1px solid #dbdbdb;
     background-color: var(--bs-white) ;
+    /* font-family: Sarabun; */
   }
   .input {
     display: flex;
@@ -12856,6 +12862,7 @@ background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
     .mt-30 {
       margin-top: 20px;
     }
+    
    .TableWrapper table thead tr th {
       padding: 10px 10px;
     }
