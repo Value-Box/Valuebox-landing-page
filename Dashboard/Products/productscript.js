@@ -730,17 +730,17 @@ function calculatPricing() {
       profitPercentageElement.val("0");
       return; // Stop further execution
   }
-    if (sellingPrice < specialPrice) {
-        Swal.fire({
-            icon: "error",
-            title: "Invalid Selling Price",
-            text: "Selling Price must be greater than or equal to the Special Price!",
-            confirmButtonText: "OK",
-        }).then(() => {
-            $("#sellingPrice").focus(); // Focus the Selling Price input
-        });
-        return; // Stop further execution
-    }
+    // if (sellingPrice > specialPrice) {
+    //     Swal.fire({
+    //         icon: "error",
+    //         title: "Invalid Selling Price",
+    //         text: "Selling Price must be greater than or equal to the Special Price!",
+    //         confirmButtonText: "OK",
+    //     }).then(() => {
+    //         $("#sellingPrice").focus(); // Focus the Selling Price input
+    //     });
+    //     return; // Stop further execution
+    // }
 
     let profit = sellingPrice - costPrice;
     let profitPercentageAuto = ((sellingPrice - costPrice) / sellingPrice) * 100;
