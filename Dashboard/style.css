@@ -2527,6 +2527,15 @@ button:disabled{
   max-height: 500px;
   overflow-y:auto;
 }
+.socialMediaCrossbtn{
+  border-radius: 50%;
+  border: 1px solid gray;
+  font-size: 12px;
+ 
+}
+.social-icon {
+        font-size: 20px;
+    }
 @media(max-width:1400px){
   .custom-modal-width{
     max-width: 1250px !important;
