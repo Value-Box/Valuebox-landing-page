@@ -575,16 +575,25 @@
        placeholder="Start Date">
        </div>
        <div class="text-center">
-           <p class="m-0">*Have End Date</p>
-           <div class="form-check form-switch p-0 d-flex justify-content-center gap-2 mt-2">
-            <input class="form-check-input m-0 toggleCheck" type="checkbox" id="flexSwitchCheckChecked" checked>
-          </div>
-       </div>
-       <div class="w-25">
-           <p class="m-0 ">*End Date</p>
-           <input type="date" class="form-control bg-transparent mt-1"
-       placeholder="End Date">
-       </div>
+        <p class="m-0">*Have End Date</p>
+        <div class="form-check form-switch p-0 d-flex justify-content-center gap-2 mt-2">
+          <input
+            class="form-check-input m-0 toggleCheck"
+            type="checkbox"
+            id="flexSwitchCheckChecked"
+          />
+        </div>
+      </div>
+      <div class="w-25">
+        <p class="m-0">*End Date</p>
+        <input
+          type="date"
+          class="form-control bg-transparent mt-1"
+          id="endDateInput"
+          placeholder="End Date"
+          disabled
+        />
+      </div>
    </div>
 </div>
 </div>
@@ -932,7 +941,18 @@ $(document).ready(function () {
     });
 });
 
-
+$(document).ready(function () {
+    // Event listener for the toggle switch
+    $('#flexSwitchCheckChecked').on('change', function () {
+      if ($(this).is(':checked')) {
+        // Enable the date input
+        $('#endDateInput').prop('disabled', false);
+      } else {
+        // Disable the date input and clear its value
+        $('#endDateInput').prop('disabled', true).val('');
+      }
+    });
+  });
         </script>
          
       

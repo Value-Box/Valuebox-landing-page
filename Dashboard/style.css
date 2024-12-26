@@ -1315,7 +1315,8 @@ background:  #F2F2F2;
   max-height: 0; /* Start with zero height */
   opacity: 0; /* Initially hidden */
   overflow: hidden; /* Hide content when collapsed */
-  width: 100%; /* Ensure it takes up the full width of the table */
+  width: 100%; /* Ensure it takes up the full width of the 
+   */
   transition: max-height 0.5s ease, opacity 0.5s ease;
   display: none; /* Initially hidden */
   position: relative; /* Ensure it's in normal flow, not absolute */
@@ -1668,7 +1669,7 @@ background: #F2F2F2;
   .modal-dialog {
     max-width: 1400px;
 }
-.custom-modal-width{
+.custom-modal-width{ 
   max-width: 1350px !important;
 }
 .closeModalBtn{
