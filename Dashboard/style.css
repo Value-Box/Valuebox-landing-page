@@ -1683,6 +1683,9 @@ background: #F2F2F2;
   right: -30px;
   top: -30px;
 }
+.closeModalBtn i{
+  font-size: 30px;
+}
 .payment-pending-orange{
   background-color: var(--Orange-100, #FFEAD5); /* Fallback color */
   color: #FB6514;
@@ -2349,7 +2352,7 @@ right: 3px;
   margin: 0px auto;
 }
 .variant_selection{
-  width: 350px;
+  /* width: 350px; */
     word-wrap: break-word;
 }
 #confirmationModal .modal-header,
