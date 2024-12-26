@@ -537,6 +537,7 @@
 <div class="row p-0 m-0">
 <h2 class="text-dark heading-one m-0 p-0">Basic Information</h2>
 </div>
+
 <div class="row mt-40 p-0">
 <h6 class="text-dark p-0"><span class="text-warning">*</span> Brand Name</h6>
 <p class="p-0">Enter a new Brand or Apply Against Existing Brand. This will be your brand identity</p>
@@ -641,13 +642,15 @@
     <div class="d-flex w-100 justify-content-between gap-2 p-0">
       <div class="form-group w-75 mb-0">
         <select id="queryCategory" name="queryCategory" class="select-dropdown p-0">
-          <option value="" selected>Please Select</option>
-          <option>Instagram</option>
-          <option>Facebook</option>
-          <option>Twitter</option>
-          <option>Youtube</option>
+            <option value="" data-icon="" selected>Please Select</option>
+            <option value="instagram" data-icon="fa-brands fa-instagram social-icon">Instagram</option>
+            <option value="facebook" data-icon="fa-brands fa-facebook social-icon">Facebook</option>
+            <option value="twitter" data-icon="fa-brands fa-twitter social-icon">Twitter</option>
+            <option value="youtube" data-icon="fa-brands fa-youtube social-icon">Youtube</option>
+            <option value="snapchat" data-icon="fa-brands fa-square-snapchat social-icon">Snapchat</option>
+            <option value="linkedin" data-icon="fa-brands fa-linkedin social-icon">LinkedIn</option>
         </select>
-      </div>
+    </div>
       <div class="w-100">
         <div class="input-group h-100" id="linkGroup">
           <span class="input-group-text fs-20" id="basic-addon1">
@@ -871,38 +874,53 @@ handleFileUpload("uploadImgSecinput", "previewContainer","errorContainerUpload")
 
 
 
-function formatOption(option) {
-                if (!option.id) {
-                    return option.text;
-                }
-                const iconUrl = $(option.element).data('icon');
-                return $(`<span><img src="${iconUrl}" class="social-icon"/> ${option.text}</span>`);
-            }
+        function formatOption(option) {
+    if (!option.id) {
+        return option.text;
+    }
+    const iconClass = $(option.element).data('icon'); // Get icon class from data-icon
+    return $(`<span><i class="${iconClass} social-icon"></i> ${option.text}</span>`);
+}
 
-        $(document).ready(function () {
+$(document).ready(function () {
+    // Format dropdown options with icons
+    $('#queryCategory').select2({
+        templateResult: formatOption,
+        templateSelection: formatOption,
+        minimumResultsForSearch: -1, // Disable search box in dropdown
+    });
+
     // Add link to the second div
     $('#add-link').on('click', function (e) {
         e.preventDefault();
-        const selectedOption = $('#queryCategory').find(':selected'); // Match the ID
-        const socialMedia = selectedOption.text();
-        const link = $('#linkGroup input').val(); // Get the input value inside the input group
 
-        if (link.trim() !== '') {
+        const selectedOption = $('#queryCategory').find(':selected'); // Get selected option
+        const socialMedia = selectedOption.text(); // Get option text
+        const iconClass = selectedOption.data('icon'); // Get icon class from data-icon
+        const link = $('#linkGroup input').val(); // Get the input value
+
+        if (link.trim() !== '' && iconClass) {
             const linkHtml = `
                 <div class="link-container w-auto socialMedia">
-                 <div class="col-3 d-flex justify-content-between">
-                  <span>${socialMedia}:</span>
-                <a class="text-secondary d-flex gap-1" href="${link}">
-                ${link}
-                 </a>
-                 <button class="btn-remove remove-link" onclick="this.closest('.socialMedia').remove();">
-                   <span aria-hidden="true">&times;</span>
-                 </button>
-    </div>
+                    <div class="d-flex gap-5 justify-content-between align-items-center  ">
+                      <div class="d-flex gap-2">
+                         <span><i class="${iconClass}"></i></span> <!-- Add the icon -->
+                        <a class="text-secondary d-flex gap-1" href="${link}" target="_blank">
+                            ${link}
+                        </a>
+                         </div>
+                  
+                       
+                        <button class=" remove-link socialMediaCrossbtn px-2" onclick="this.closest('.socialMedia').remove();">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
                 </div>
             `;
             $('#links-list').append(linkHtml);
             $('#linkGroup input').val(''); // Clear the input field
+        } else if (!iconClass) {
+            alert('Please select a social media platform!');
         } else {
             alert('Please enter a valid link!');
         }
@@ -910,9 +928,10 @@ function formatOption(option) {
 
     // Remove link on clicking the cross icon
     $('#links-list').on('click', '.remove-link', function () {
-        $(this).parent('.link-container').remove();
+        $(this).closest('.link-container').remove();
     });
 });
+
 
         </script>
          

@@ -1683,6 +1683,9 @@ background: #F2F2F2;
   right: -30px;
   top: -30px;
 }
+.closeModalBtn i{
+  font-size: 30px;
+}
 .payment-pending-orange{
   background-color: var(--Orange-100, #FFEAD5); /* Fallback color */
   color: #FB6514;
@@ -2349,7 +2352,7 @@ right: 3px;
   margin: 0px auto;
 }
 .variant_selection{
-  width: 350px;
+  /* width: 350px; */
     word-wrap: break-word;
 }
 #confirmationModal .modal-header,
@@ -2524,6 +2527,15 @@ button:disabled{
   max-height: 500px;
   overflow-y:auto;
 }
+.socialMediaCrossbtn{
+  border-radius: 50%;
+  border: 1px solid gray;
+  font-size: 12px;
+ 
+}
+.social-icon {
+        font-size: 20px;
+    }
 @media(max-width:1400px){
   .custom-modal-width{
     max-width: 1250px !important;
