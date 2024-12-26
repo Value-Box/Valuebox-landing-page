@@ -605,9 +605,9 @@ td {
   color: #1a1a1a;
   font-size: 25px;
 }
-.manageproducttableheading {
+/* .manageproducttableheading {
   border-spacing: 5px;
-}
+} */
 .tableactive span {
   border-radius: 10px;
   background-color: #d1fadf;
@@ -1593,7 +1593,7 @@ background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
 .orderdetail-input-text{
   display: flex;
 width: 150px;
-padding: 10px 20px;
+padding: 20px 30px;
 justify-content: center;
 align-items: center;
 gap: 17px;
@@ -1707,7 +1707,7 @@ background: #F2F2F2;
 }
 .Order-detail-line{
   position: relative;
-  left: 87px;
+  left: 90px;
 }
 .send-invoice-btn{
   position: absolute;
@@ -2509,7 +2509,7 @@ div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm){
   background-color: #002882 !important;
   color: white;
 }
-.newBrandModal{
+.scrollable-Modal{
   max-height: 500px;
   overflow-y:auto;
 }
