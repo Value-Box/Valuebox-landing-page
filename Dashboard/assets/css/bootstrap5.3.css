@@ -11954,7 +11954,7 @@ fieldset:disabled .btn {
   .paragraph-2 {
     font-size: clamp(14px, 4vw, 16px);
     line-height: clamp(20px, 5vw, 24px);
-    font-weight: 400;
+    font-weight: 500;
     color: var(--Gray-Color);
   }
   .paragraph-3 {
@@ -12037,9 +12037,8 @@ fieldset:disabled .btn {
   .bulk-btn:focus {
     border: 1px solid var(--Primary-Color-Dark-Blue, #002882);
   }
-  .btn-outline-blue:hover,
   .btn-outline-blue:hover {
-    color: var(--Brand-white-Color);
+    color: var(--Brand-Color);
     background-color: var(--Brand-Color);
     border: 1px solid var(--Brand-Color);
   }
@@ -12142,8 +12141,14 @@ fieldset:disabled .btn {
   .mt-40 {
     margin-top: 40px;
   }
+  .mt-30 {
+    margin-top: 30px;
+  }
   .mt-20 {
     margin-top: 20px;
+  }
+  .mt-15{
+    margin-top: 15px;
   }
   .mt-10 {
     margin-top: 10px !important;
@@ -12273,9 +12278,10 @@ fieldset:disabled .btn {
   }
   .text-brand-color {
     color: var(--Brand-Color);
-    font-weight: 400;
-  }
-  .bg-brand-color{
+    font-weight:400;
+}
+  
+.bg-brand-color{
    background-color: #002882;
   }
   .cursor-pointer {
@@ -13004,6 +13010,7 @@ background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
 .form-select-lg {
     height: 38px;
   }
+  
   }
 
   @media (min-width: 1400px) {
@@ -13021,4 +13028,7 @@ background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
 }
 .w-150{
   width: 150px;
+}
+.w-38{
+  width: 38px;
 }

@@ -1688,8 +1688,8 @@ background: #F2F2F2;
   font-size: 30px;
 }
 .payment-pending-orange{
-  background-color: var(--Orange-100, #FFEAD5); /* Fallback color */
-  color: #FB6514;
+  background-color: #FEF0C7; /* Fallback color */
+  color: #F79009;
   padding: 5px 10px;
   border-radius: 5px;
   display: block;
@@ -1722,14 +1722,23 @@ background: #F2F2F2;
 .orderidColor{
   color: #002882;
 }
-.rs-badge{
+.rs-badge-container {
+  display: flex;
+  align-items: center;
+  white-space: nowrap; /* Prevent text wrapping */
+  gap: 10px; /* Space between elements */
+}
+
+.rs-badge {
   background-color: #F2F2F2;
   border-radius: 5px;
-padding: 5px 10px;
-justify-content: center;
-align-items: center;
-gap: 10px;
+  padding: 5px 10px;
+  /* display: flex; /* Ensure inner elements align properly */
+  /* align-items: center; */
+  gap: 5px; /* Space between "1x" and "Rs." */
+  white-space: nowrap; /* Prevent text wrapping inside badge */
 }
+
 .orderdetaile-Line{
   content: "";
   width: 100px;
@@ -1740,7 +1749,7 @@ gap: 10px;
   content: "";
   width: 2px;
   height: 68px;
-  background: #999;
+  background: #CCC;
 }
 .modal-heading{
   color: var(--Natural-Color-00, #FCFCFC);
@@ -2524,10 +2533,31 @@ button:disabled{
   color: white;
   border: 1px solid gray;
 }
-.scrollable-Modal{
+.scrollable-Modal {
   max-height: 500px;
-  overflow-y:auto;
+  overflow-y: auto;
 }
+
+/* Customize the scrollbar for Webkit browsers (e.g., Chrome, Edge, Safari) */
+.scrollable-Modal::-webkit-scrollbar {
+  width: 6px; /* Set the scrollbar width */
+}
+
+.scrollable-Modal::-webkit-scrollbar-thumb {
+  background-color: #cccccc; /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Round edges of the thumb */
+}
+
+.scrollable-Modal::-webkit-scrollbar-track {
+  background-color: #f4f4f4; /* Background color of the scrollbar track */
+}
+
+/* For Firefox (modern versions) */
+.scrollable-Modal {
+  scrollbar-width: thin; /* Makes the scrollbar thinner */
+  scrollbar-color: #cccccc #f4f4f4; /* Thumb color and track color */
+}
+
 .socialMediaCrossbtn{
   border-radius: 50%;
   border: 1px solid gray;
@@ -2543,6 +2573,9 @@ button:disabled{
   }
   .tags-input-wrapper {
     min-height: 48px;
+  }
+  .tablecell1 h6{
+    font-size: 16px;
   }
 }
 @media(max-width:1400px){
