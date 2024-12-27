@@ -12037,9 +12037,8 @@ fieldset:disabled .btn {
   .bulk-btn:focus {
     border: 1px solid var(--Primary-Color-Dark-Blue, #002882);
   }
-  .btn-outline-blue:hover,
   .btn-outline-blue:hover {
-    color: var(--Brand-white-Color);
+    color: var(--Brand-Color);
     background-color: var(--Brand-Color);
     border: 1px solid var(--Brand-Color);
   }
@@ -13004,6 +13003,7 @@ background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
 .form-select-lg {
     height: 38px;
   }
+  
   }
 
   @media (min-width: 1400px) {
@@ -13021,4 +13021,7 @@ background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
 }
 .w-150{
   width: 150px;
+}
+.w-38{
+  width: 38px;
 }

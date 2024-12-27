@@ -2544,6 +2544,9 @@ button:disabled{
   .tags-input-wrapper {
     min-height: 48px;
   }
+  .tablecell1 h6{
+    font-size: 16px;
+  }
 }
 @media(max-width:1400px){
   .Order-detail-line{
