@@ -545,7 +545,7 @@
                   <thead>
                     <tr class="text-dark">
                       <th>
-                        <input class="form-check-input" type="checkbox" id="product1">
+                        <input class="form-check-input master-checkbox" type="checkbox" id="master-checkbox">
                         Order
                       </th>
                       <th>Date</th>
@@ -562,7 +562,7 @@
                     <tr class="paragraph-2 p-0">
                         <td>
                             <div class="d-flex gap-3 ">
-                             <input class="form-check-input" type="checkbox" id="product1" >  
+                              <input class="form-check-input row-checkbox" type="checkbox">  
                            <a class="dark-gray-color" href="orderDetails.html"><span class="">#568956</span></a>  
                             </div>
                            </td>
@@ -595,7 +595,7 @@
                        <tr class="paragraph-2 p-0">
                         <td>
                             <div class="d-flex gap-3">
-                             <input class=" form-check-input" type="checkbox" id="product2">  
+                             <input class=" form-check-input row-checkbox" type="checkbox" id="product2">  
                              <a class="dark-gray-color" href="orderDetails.html"><span class="">#568956</span></a> 
                             </div>
                            </td>
@@ -627,7 +627,7 @@
                        <tr class="paragraph-2 p-0">
                         <td>
                             <div class="d-flex gap-3 ">
-                             <input class="form-check-input" type="checkbox" id="product3" >  
+                             <input class="form-check-input row-checkbox" type="checkbox" id="product3" >  
                              <a class="dark-gray-color" href="orderDetails.html"><span class="">#568956</span></a> 
                             </div>
                            </td>
@@ -657,7 +657,7 @@
                        <tr class="paragraph-2 p-0">
                         <td>
                             <div class="d-flex gap-3 ">
-                             <input class="form-check-input" type="checkbox" id="product4" >  
+                             <input class="form-check-input row-checkbox" type="checkbox" id="product4" >  
                              <a class="dark-gray-color" href="orderDetails.html"><span class="">#568956</span></a> 
                             </div>
                            </td>
@@ -687,7 +687,7 @@
                        <tr class="paragraph-2 p-0">
                         <td>
                             <div class="d-flex gap-3 ">
-                             <input class="form-check-input" type="checkbox" id="product5" >  
+                             <input class="form-check-input row-checkbox" type="checkbox" id="product5" >  
                              <a class="dark-gray-color" href="orderDetails.html"><span class="">#568956</span></a> 
                             </div>
                            </td>
@@ -717,7 +717,7 @@
                        <tr class="paragraph-2 p-0">
                         <td>
                             <div class="d-flex gap-3 ">
-                             <input class="form-check-input" type="checkbox" id="product6">  
+                             <input class="form-check-input row-checkbox" type="checkbox" id="product6">  
                              <a class="dark-gray-color" href="orderDetails.html"><span class="dark-gray-color">#568956</span></a> 
                             </div>
                            </td>
@@ -746,7 +746,7 @@
                        <tr class="paragraph-2 p-0">
                         <td>
                             <div class="d-flex gap-3 ">
-                             <input class="form-check-input" type="checkbox" id="product7">  
+                             <input class="form-check-input row-checkbox" type="checkbox" id="product7">  
                              <a class="dark-gray-color" href="orderDetails.html"><span class="">#568956</span></a> 
                             </div>
                            </td>
@@ -995,7 +995,7 @@
 
 
 
-  
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="../assets/js/bootstrap.bundle.min.js"></script>
         <script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
         <script src="../assets/js/main.js"></script>
@@ -1024,7 +1024,21 @@
              document.querySelectorAll(".pagination").forEach(function (pagination) {
                paginationObserver.observe(pagination, { childList: true, subtree: true });
              });
-             
+             $(document).ready(function () {
+  // Handle master checkbox toggle
+  $('.master-checkbox').on('change', function () {
+    const isChecked = $(this).is(':checked');
+    $('.row-checkbox').prop('checked', isChecked);
+  });
+
+  // Handle individual row checkbox toggle
+  $('.row-checkbox').on('change', function () {
+    const totalRows = $('.row-checkbox').length;
+    const checkedRows = $('.row-checkbox:checked').length;
+    $('.master-checkbox').prop('checked', totalRows === checkedRows);
+  });
+});
+
                    </script> 
      
 </body>
