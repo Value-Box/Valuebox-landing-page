@@ -12038,7 +12038,7 @@ fieldset:disabled .btn {
     border: 1px solid var(--Primary-Color-Dark-Blue, #002882);
   }
   .btn-outline-blue:hover {
-    color: var(--Brand-Color);
+    color: var(--Brand-white-Color);
     background-color: var(--Brand-Color);
     border: 1px solid var(--Brand-Color);
   }
@@ -12337,7 +12337,7 @@ fieldset:disabled .btn {
   }
   
   .fs-12 {
-    font-size: 12px;
+    font-size: 12px !important;
     line-height: clamp(20px, 5vw, 24px);
     font-weight: 400;
   }
