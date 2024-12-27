@@ -1474,9 +1474,30 @@ outline: none;
   width: 1030px !important;
   }
   .scrollable-table {
-   overflow-x: auto; /* Enables horizontal scrolling */
-   white-space: nowrap; /* Prevents wrapping of columns */
- }
+    min-width: 800px; /* Adjust as per your requirement */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Prevents wrapping of text in cells */
+}
+  
+  /* Custom scrollbar styles */
+  .scrollable-table::-webkit-scrollbar {
+    height: 8px; /* Horizontal scrollbar height */
+}
+
+.scrollable-table::-webkit-scrollbar-thumb {
+    background-color: #cccccc; /* Thumb color */
+    border-radius: 4px;
+}
+
+.scrollable-table::-webkit-scrollbar-track {
+    background-color: #f4f4f4; /* Track color */
+}
+
+  
+  /* Optional: Add hover effect for the scrollbar thumb */
+  .scrollable-table::-webkit-scrollbar-thumb:hover {
+    background-color: #999999; /* Darker shade on hover */
+  }
  .table-container {
    overflow-x: auto; /* Enables horizontal scrolling */
    /* white-space: nowrap;  */
