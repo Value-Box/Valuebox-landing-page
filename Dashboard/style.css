@@ -2518,6 +2518,12 @@ div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm){
   background-color: #002882 !important;
   color: white;
 }
+button:disabled{
+  background-color: gray;
+  cursor: not-allowed;
+  color: white;
+  border: 1px solid gray;
+}
 .scrollable-Modal{
   max-height: 500px;
   overflow-y:auto;
