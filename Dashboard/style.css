@@ -596,18 +596,18 @@ td {
 }
 .tablecell1 h6 {
   color: #1a1a1a;
-  font-size: 16px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 28px;
 }
 .RS span {
   color: #1a1a1a;
-  font-size: 25px;
+  font-size: 18px;
 }
-.manageproducttableheading {
+/* .manageproducttableheading {
   border-spacing: 5px;
-}
+} */
 .tableactive span {
   border-radius: 10px;
   background-color: #d1fadf;
@@ -785,7 +785,7 @@ border: 1px solid #F2F2F2;
   }
   .RS span {
     color: var(--Natural-Color-100, #1a1a1a);
-    font-size: 25px;
+    font-size: 18px;
   }
 }
 @media (max-width: 1090px) {
@@ -1596,7 +1596,7 @@ background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
 .orderdetail-input-text{
   display: flex;
 width: 150px;
-padding: 10px 20px;
+padding: 20px 30px;
 justify-content: center;
 align-items: center;
 gap: 17px;
@@ -1713,7 +1713,7 @@ background: #F2F2F2;
 }
 .Order-detail-line{
   position: relative;
-  left: 87px;
+  left: 90px;
 }
 .send-invoice-btn{
   position: absolute;
@@ -2518,13 +2518,7 @@ div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm){
   background-color: #002882 !important;
   color: white;
 }
-button:disabled{
-  background-color: gray;
-  cursor: not-allowed;
-  color: white;
-  border: 1px solid gray;
-}
-.newBrandModal{
+.scrollable-Modal{
   max-height: 500px;
   overflow-y:auto;
 }

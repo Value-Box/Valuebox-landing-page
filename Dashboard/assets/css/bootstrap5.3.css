@@ -12140,6 +12140,9 @@ fieldset:disabled .btn {
   .mt-10 {
     margin-top: 10px !important;
   }
+  .mt-90 {
+    margin-top: 90px !important;
+  }
   .form-check-input {
     width: 20px;
     height: 20px;
@@ -12256,7 +12259,7 @@ fieldset:disabled .btn {
   .bg-light-gray-10 {
     background-color: #F2F2F2 !important;
   }
-  .text-brand-color {
+  .px-0 {
     color: var(--Brand-Color);
     font-weight: 400;
   }
@@ -12862,7 +12865,7 @@ background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
     .mt-30 {
       margin-top: 20px;
     }
-    
+
    .TableWrapper table thead tr th {
       padding: 10px 10px;
     }
