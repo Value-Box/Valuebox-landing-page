@@ -446,7 +446,7 @@
 }
 .select2-container--default
   .select2-results__option--highlighted.select2-results__option--selectable {
-  background-color: #5897fb;
+  background-color: #002882;
   color: white;
 }
 .select2-container--default .select2-results__group {
@@ -696,7 +696,7 @@
 }
 .select2-container--classic
   .select2-results__option--highlighted.select2-results__option--selectable {
-  background-color: #3875d7;
+  background-color: #002882;
   color: #fff;
 }
 .select2-container--classic .select2-results__group {

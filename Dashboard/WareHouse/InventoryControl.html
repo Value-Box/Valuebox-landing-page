@@ -4,41 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="../assets/css/bootstrap5.3.css">
-    <!-- <link rel="stylesheet" href="../assets/vendors/choices.js/choices.min.css" /> -->
-  
     <link rel="stylesheet" href="../assets/vendors/simple-datatables/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
-
-    <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/select2/css/select2.min.css" /><!--select2 css-->
     <link rel="stylesheet" href="../assets/css/app.css">
-    <link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/x-icon">
-    <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-    <style>
-      .select2-selection {
-        height: 38px !important;
-        display: flex !important;
-        align-items: center;
-        border: 1px solid #ccc !important;
-        border-radius: 5px !important;
-      }
-      .select2-container--default
-        .select2-selection--single
-        .select2-selection__arrow {
-        height: 38px;
-        color: #607080 !important;
-        position: absolute;
-    right: 3px;
-      }
-      .select2-selection__rendered{
-        color: #607080 !important;
-        font-weight: 500;
-      }
-    </style>
+    <link rel="stylesheet" href="../assets/daterangepicker/css/daterangepicker.css"><!--daterangepicker css-->
+
 </head>
 <body>
     <nav class="navbar navbar-expand-sm navbar-light bg-white sticky-top" id="navbar">
@@ -555,7 +527,7 @@
   
                     <div class="col p-0 ">
                       <span class="message-text">Created Time</span>
-                      <input class="form-control" name="daterange" type="text" id="date" placeholder="Start Date  |  End Date">
+                      <input class="form-control" name="daterange_inbound" type="text" id="date" placeholder="Start Date  |  End Date">
                     </div>
                    <div class="col p-0 ">
                       <span class="message-text">Inbound Warehouse</span>
@@ -583,52 +555,25 @@
                     
                   </div>
                   <div class="row mt-20 gap-20">
-                    
-                    <div class="col-3 p-0 ">
-                      <span class="message-text">Product Name</span>
-                      <input class="form-control" type="text" placeholder="Please Input">
-                    </div>
    
-                    <div class="col-3 p-0 inboundBox">
-                      <span class="message-text">On Time</span>
-                      <div>
-                        <input type="datetime-local" name="onTime" id="onTime" class="form-control">
-                      </div>
-                   </div>  
-                   
-                   <div class="col p-0 outboundBox">
-                    <span class="message-text">Outbound Time</span>
-                    <fieldset class="form-group">
-                      <select class="select-dropdown" id="basicSelect1">
-                          <option value="">Please Select</option>
-                          <option value="kachehri">Kachehri Warehouse</option>
-                          <option value="mda">MDA Warehouse</option>
-                      </select>
-                    </fieldset>  
-                  </div>
-                   
-                   <div class="col p-0 outboundBox">
+                    
+                   <div class="col-3 p-0 outboundBox">
                     <span class="message-text">Seller SKU</span>
                     <input class="form-control" type="text" placeholder="Please Input">
                   </div>
- 
-                  
-                 <div class="col p-0 outboundBox">
-                  <span class="message-text">Outbound Reason</span>
-                  <fieldset class="form-group">
-                    <select class="select-dropdown form-select" id="basicSelect4">
-                        <option value="">Please Select</option>
-                        <option value="kachehri">Kachehri Warehouse</option>
-                        <option value="mda">MDA Warehouse</option>
-                    </select>
-                </fieldset>  
-              </div>
+                  <div class="col-3 p-0 inboundBox">
+                    <span class="message-text">On Time</span>
+                    <div>
+                      <input type="datetime-local" name="onTime" id="onTime" class="form-control">
+                    </div>
+                 </div>  
+                 
                   </div>
 
 
                   
                 </div>
-                <!-- <div class="tab-pane fade" id="return_warehouse_fields" role="tabpanel" aria-labelledby="list-monday-list">
+                <div class="tab-pane fade" id="return_warehouse_fields" role="tabpanel" aria-labelledby="list-monday-list">
                   <div class="row mt-40 gap-20">
                        <div class="col p-0">
                          <span class="message-text">Outbound Order No.</span>
@@ -642,13 +587,7 @@
      
                        <div class="col p-0">
                          <span class="message-text">Outbound Time</span>
-                         <fieldset class="form-group">
-                           <select class="select-dropdown" id="basicSelect1">
-                               <option value="">Please Select</option>
-                               <option value="kachehri">Kachehri Warehouse</option>
-                               <option value="mda">MDA Warehouse</option>
-                           </select>
-                         </fieldset>  
+                         <input class="form-control" name="daterange" type="text" id="date" placeholder="Start Date  |  End Date">
                        </div>
      
                        <div class="col p-0">
@@ -700,7 +639,7 @@
                    </div>
      
                      </div>
-                   </div> -->
+                   </div>
                  </div>
                
              
@@ -864,18 +803,13 @@
 
     <script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="../assets/vendors/choices.js/choices.min.js"></script> -->
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/bootstrap.min.js"></script>
-
- <!-- jQuery -->
- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
- <!-- Moment.js -->
- <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
- <!-- Daterangepicker CSS and JS -->
- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+ <script src="../assets/jquery/jquery.min.js"></script><!-- jQuery js -->
+ <script src="../assets/moment/moment.min.js"></script>
+ <script src="../assets/daterangepicker/js/daterangepicker.min.js"></script>
+ <script src="../assets/select2/js/select2.min.js"></script><!-- select2 js -->
 
  <script>
   $(document).ready(function () {
@@ -883,7 +817,7 @@
         // $(".select-dropdown2").select2();
       });
   $(function() {
-    $('input[name="daterange"]').daterangepicker({
+    $('input[name="daterange_inbound"]').daterangepicker({
       opens: 'center',
       locale: {
         format: 'DD MMM YYYY' // Example: 01 Jan 2022
@@ -891,7 +825,7 @@
       autoUpdateInput: false  // This stops the input from updating automatically before selection
     }, function(start, end, label) {
       // When a user selects a range, update the input field with the selected dates
-      $('input[name="daterange"]').val(start.format('DD MMM YYYY') + ' | ' + end.format('DD MMM YYYY'));
+      $('input[name="daterange_inbound"]').val(start.format('DD MMM YYYY') + ' | ' + end.format('DD MMM YYYY'));
     });
   });
 
@@ -925,56 +859,56 @@ sendwarehouseTables.forEach(table => {
 
 
 
-  $(document).ready(function () {
-    const $sendWarehouse = $("#incont_send_warehouse");
-    const $returnWarehouse = $("#incont_return_warehouse");
-    const $sendWarehouseTxt = $("#send_warehouse_txt");
-    const $boundText = $(".boundText");
-    const $inboundBox = $(".inboundBox");
-    const $boundOrderNo = $(".boundOrderNo");
-    const $boundStatus = $(".boundStatus");
-    const $boundTime = $(".boundTime");
-    const $returnWarehouseTxt = $("#return_warehouse_txt");
-    const $outboundBox = $(".outboundBox");
-    const $ioBtn = $("#io_btn");
-    const $ooBtn = $("#oo_btn");
+//   $(document).ready(function () {
+//     const $sendWarehouse = $("#incont_send_warehouse");
+//     const $returnWarehouse = $("#incont_return_warehouse");
+//     const $sendWarehouseTxt = $("#send_warehouse_txt");
+//     const $boundText = $(".boundText");
+//     const $inboundBox = $(".inboundBox");
+//     const $boundOrderNo = $(".boundOrderNo");
+//     const $boundStatus = $(".boundStatus");
+//     const $boundTime = $(".boundTime");
+//     const $returnWarehouseTxt = $("#return_warehouse_txt");
+//     const $outboundBox = $(".outboundBox");
+//     const $ioBtn = $("#io_btn");
+//     const $ooBtn = $("#oo_btn");
 
 
-    $outboundBox.hide();
-    // Default state: Show the field only for Live Inventory
-    if (!$sendWarehouse.hasClass("active")) {
-        $ioBtn.show();
-        $sendWarehouseTxt.show();
+//     $outboundBox.hide();
+//     // Default state: Show the field only for Live Inventory
+//     if (!$sendWarehouse.hasClass("active")) {
+//         $ioBtn.show();
+//         $sendWarehouseTxt.show();
         
-    }
+//     }
 
-    // Event listener for tab clicks
-    $sendWarehouse.on("click", function () {
-        $ooBtn.hide(); // Hide field
-        $sendWarehouseTxt.show(); // Show field
-        $ioBtn.show();
-        $returnWarehouseTxt.hide();
-        $boundText.text("Inbound Order No.");
-        $boundOrderNo.text("Inbound Order No.");
-        $boundStatus.text("IO Status");
-        $boundTime.text("Inbound Time");
-        $inboundBox.show();
-        $outboundBox.hide();
-    });
+//     // Event listener for tab clicks
+//     $sendWarehouse.on("click", function () {
+//         $ooBtn.hide(); // Hide field
+//         $sendWarehouseTxt.show(); // Show field
+//         $ioBtn.show();
+//         $returnWarehouseTxt.hide();
+//         $boundText.text("Inbound Order No.");
+//         $boundOrderNo.text("Inbound Order No.");
+//         $boundStatus.text("IO Status");
+//         $boundTime.text("Inbound Time");
+//         $inboundBox.show();
+//         $outboundBox.hide();
+//     });
 
-    $returnWarehouse.on("click", function () {
-        $ooBtn.show(); // Show field
-        $sendWarehouseTxt.hide(); // Hide field
-        $returnWarehouseTxt.show();
-        $ioBtn.hide();
-        $boundText.text("Outbound Order No.");
-        $boundOrderNo.text("Outbound Order No.");
-        $boundStatus.text("OO Status");
-        $boundTime.text("Outbound Time");
-        $inboundBox.hide();
-        $outboundBox.show();
-    });
-});
+//     $returnWarehouse.on("click", function () {
+//         $ooBtn.show(); // Show field
+//         $sendWarehouseTxt.hide(); // Hide field
+//         $returnWarehouseTxt.show();
+//         $ioBtn.hide();
+//         $boundText.text("Outbound Order No.");
+//         $boundOrderNo.text("Outbound Order No.");
+//         $boundStatus.text("OO Status");
+//         $boundTime.text("Outbound Time");
+//         $inboundBox.hide();
+//         $outboundBox.show();
+//     });
+// });
 
   </script>
 </body>
