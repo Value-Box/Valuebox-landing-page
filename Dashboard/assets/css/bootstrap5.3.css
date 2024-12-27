@@ -12259,7 +12259,7 @@ fieldset:disabled .btn {
   .bg-light-gray-10 {
     background-color: #F2F2F2 !important;
   }
-  .text-brand-color {
+  .px-0 {
     color: var(--Brand-Color);
     font-weight: 400;
   }

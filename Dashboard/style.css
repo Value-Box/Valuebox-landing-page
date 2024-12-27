@@ -596,14 +596,14 @@ td {
 }
 .tablecell1 h6 {
   color: #1a1a1a;
-  font-size: 16px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 28px;
 }
 .RS span {
   color: #1a1a1a;
-  font-size: 25px;
+  font-size: 18px;
 }
 /* .manageproducttableheading {
   border-spacing: 5px;
@@ -785,7 +785,7 @@ border: 1px solid #F2F2F2;
   }
   .RS span {
     color: var(--Natural-Color-100, #1a1a1a);
-    font-size: 25px;
+    font-size: 18px;
   }
 }
 @media (max-width: 1090px) {
