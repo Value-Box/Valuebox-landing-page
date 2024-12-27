@@ -428,7 +428,7 @@
 }
 .select2-container--default
   .select2-results__option--highlighted[aria-selected] {
-  background-color: #5897fb;
+  background-color: #002882;
   color: white;
 }
 .select2-container--default .select2-results__group {
