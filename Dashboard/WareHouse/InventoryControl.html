@@ -518,6 +518,8 @@
                       <button class="btn-outline-gray">Reset</button>
                     </div>
                   </div>
+                  <div class="tab-content text-justify">
+
                   <div class="tab-pane fade show active " id="send_warehouse" role="tabpanel" aria-labelledby="list-sunday-list">
                   <div class="row mt-40 gap-20">
                     <div class="col p-0">
@@ -526,7 +528,7 @@
                     </div>
   
                     <div class="col p-0 ">
-                      <span class="message-text">Created Time</span>
+                      <span class="message-text">On Date</span>
                       <input class="form-control" name="daterange_inbound" type="text" id="date" placeholder="Start Date  |  End Date">
                     </div>
                    <div class="col p-0 ">
@@ -562,9 +564,9 @@
                     <input class="form-control" type="text" placeholder="Please Input">
                   </div>
                   <div class="col-3 p-0 inboundBox">
-                    <span class="message-text">On Time</span>
+                    <span class="message-text">Inbound Time</span>
                     <div>
-                      <input type="datetime-local" name="onTime" id="onTime" class="form-control">
+                      <input type="time" name="onTime" id="onTime" class="form-control">
                     </div>
                  </div>  
                  
@@ -581,13 +583,13 @@
                        </div>
      
                        <div class="col p-0">
-                         <span class="message-text">Created Time</span>
+                         <span class="message-text">On Date</span>
                          <input class="form-control" name="daterange" type="text" id="date" placeholder="Start Date  |  End Date">
                        </div>
      
                        <div class="col p-0">
                          <span class="message-text">Outbound Time</span>
-                         <input class="form-control" name="daterange" type="text" id="date" placeholder="Start Date  |  End Date">
+                         <input class="form-control" type="time" id="date" placeholder="Start Date  |  End Date">
                        </div>
      
                        <div class="col p-0">
@@ -640,6 +642,7 @@
      
                      </div>
                    </div>
+                  </div>
                  </div>
                
              
@@ -652,14 +655,14 @@
                   <div class="d-flex gap-3">
                     <button class="btn-outline-gray" id="import_btn">Import 
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M12 4V14M12 14L15 11M12 14L9 11" stroke="#999999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M12 20C9.87827 20 7.84344 19.1571 6.34315 17.6569C4.84285 16.1566 4 14.1217 4 12M20 12C20.0007 13.1994 19.7314 14.3835 19.2121 15.4646C18.6928 16.5457 17.9367 17.496 17 18.245" stroke="#999999" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M12 4V14M12 14L15 11M12 14L9 11"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 20C9.87827 20 7.84344 19.1571 6.34315 17.6569C4.84285 16.1566 4 14.1217 4 12M20 12C20.0007 13.1994 19.7314 14.3835 19.2121 15.4646C18.6928 16.5457 17.9367 17.496 17 18.245"  stroke-width="1.5" stroke-linecap="round"/>
                       </svg>
                     </button>
                     <button class="btn-outline-gray">Export 
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M12 20V10M12 10L15 13M12 10L9 13" stroke="#999999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12M20 12C20.0007 10.8006 19.7314 9.61651 19.2121 8.53542C18.6928 7.45434 17.9367 6.50403 17 5.755" stroke="#999999" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M12 20V10M12 10L15 13M12 10L9 13"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12M20 12C20.0007 10.8006 19.7314 9.61651 19.2121 8.53542C18.6928 7.45434 17.9367 6.50403 17 5.755"  stroke-width="1.5" stroke-linecap="round"/>
                       </svg>
                     </button>
                     <a href="createInBound.html" id="io_btn" class="btn-blue">Create New IO</a>
@@ -667,21 +670,22 @@
                   </div>
                 </div>
 
+               <div class="inboudTablesDiv">
                 <div class="col allbar collapse show d-flex gap-3 p-0 mt-40">
                   <div class="list-group d-flex gap-4 list-group-horizontal-sm mb-1 text-center fs-20 allbar" role="tablist">
-                    <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto active p-0" id="list-all-list" data-bs-toggle="list" href="#list-all" role="tab">All</a>
-                    <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto p-0" id="list-active-list" data-bs-toggle="list" href="#list-pending" role="tab">All Pending <span class="notification-badge">12</span></a>
-                    <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto p-0" id="list-active-list" data-bs-toggle="list" href="#list-approved" role="tab">All Approved <span class="notification-badge">27</span></a>
-                    <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto p-0" id="list-active-list" data-bs-toggle="list" href="#list-completed" role="tab">All Completed <span class="notification-badge">1</span></a>
+                    <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto active p-0" id="list-all-list" data-bs-toggle="list" href="#inbound-all" role="tab">All</a>
+                    <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto p-0" id="list-active-list" data-bs-toggle="list" href="#inbound-pending" role="tab">All Pending <span class="notification-badge">12</span></a>
+                    <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto p-0" id="list-active-list" data-bs-toggle="list" href="#inbound-approved" role="tab">All Approved <span class="notification-badge">27</span></a>
+                    <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto p-0" id="list-active-list" data-bs-toggle="list" href="#inbound-completed" role="tab">All Completed <span class="notification-badge">1</span></a>
                   </div>
                 </div>
 
               <div class="tab-content text-justify">
-                <div class="form-group w-100 TableWrapper tab-pane fade show active mt-40 pb-0" id="list-all">
-                  <table class="dataTable" id="send_wareh_Table">
+                <div class="form-group w-100 TableWrapper tab-pane fade show active mt-40 pb-0" id="inbound-all">
+                  <table class="dataTable" id="">
                     <thead>
                       <tr>
-                        <th class="boundOrderNo"><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Inbound Order No.</th>
+                        <th class="boundOrderNo"><input class="form-check-input me-1 master_inboundall_checkbox" type="checkbox" name="" id="pend_Adj_Sku"> Inbound Order No.</th>
                         <th class="boundStatus">IO Status</th> 
                         <th>Created Time</th>
                         <th>Estimated Time</th>
@@ -692,7 +696,7 @@
                     <tbody>
                       <tr>
                         <td class="d-flex gap-1">
-                          <input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku">
+                          <input class="form-check-input me-1 row_inboundall_checkbox" type="checkbox" name="" id="pend_Adj_Sku">
                            <a href="#">IO7845123895623</a>
                         </td>
                         <td>Cancelled by VaueBox</td>
@@ -707,11 +711,11 @@
                   
               </div>
 
-              <div class="form-group w-100 TableWrapper tab-pane fade  mt-40 pb-0" id="list-pending">
-                <table class="dataTable" id="send_wareh_Table">
+              <div class="form-group w-100 TableWrapper tab-pane fade  mt-40 pb-0" id="inbound-pending">
+                <table class="dataTable" id="">
                   <thead>
                     <tr>
-                      <th class="boundOrderNo"><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Inbound Order No.</th>
+                      <th class="boundOrderNo"><input class="form-check-input me-1 master_inboundpend_checkbox" type="checkbox" name="" id="pend_Adj_Sku"> Inbound Order No.</th>
                       <th class="boundStatus">IO Status</th> 
                       <th>Created Time</th>
                       <th>Estimated Time</th>
@@ -722,7 +726,7 @@
                   <tbody>
                     <tr>
                       <td class="d-flex gap-1">
-                        <input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku">
+                        <input class="form-check-input me-1 row_inboundpend_checkbox" type="checkbox" name="" id="pend_Adj_Sku">
                          <a href="#">IO7845123895623</a>
                       </td>
                       <td>Cancelled by VaueBox</td>
@@ -736,11 +740,11 @@
                 </table>
             </div>
 
-            <div class="form-group w-100 TableWrapper tab-pane fade  mt-40 pb-0" id="list-approved">
-              <table class="dataTable" id="send_wareh_Table">
+            <div class="form-group w-100 TableWrapper tab-pane fade  mt-40 pb-0" id="inbound-approved">
+              <table class="dataTable" id="">
                 <thead>
                   <tr>
-                    <th class="boundOrderNo"><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Inbound Order No.</th>
+                    <th class="boundOrderNo"><input class="form-check-input me-1 master_inboundapp_checkbox" type="checkbox" name="" id="pend_Adj_Sku"> Inbound Order No.</th>
                     <th class="boundStatus">IO Status</th> 
                     <th>Created Time</th>
                     <th>Estimated Time</th>
@@ -751,7 +755,7 @@
                 <tbody>
                   <tr>
                     <td class="d-flex gap-1">
-                      <input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku">
+                      <input class="form-check-input me-1 row_inboundapp_checkbox" type="checkbox" name="" id="pend_Adj_Sku">
                        <a href="#">IO7845123895623</a>
                     </td>
                     <td>Cancelled by VaueBox</td>
@@ -765,11 +769,11 @@
               </table>    
           </div>
 
-          <div class="form-group w-100 TableWrapper tab-pane fade mt-40 pb-0" id="list-completed">
-            <table class="dataTable" id="send_wareh_Table">
+          <div class="form-group w-100 TableWrapper tab-pane fade mt-40 pb-0" id="inbound-completed">
+            <table class="dataTable" id="">
               <thead>
                 <tr>
-                  <th class="boundOrderNo"><input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku"> Inbound Order No.</th>
+                  <th class="boundOrderNo"><input class="form-check-input me-1 master_inboundcomp_checkbox" type="checkbox" name="" id="pend_Adj_Sku"> Inbound Order No.</th>
                   <th class="boundStatus">IO Status</th> 
                   <th>Created Time</th>
                   <th>Estimated Time</th>
@@ -780,7 +784,7 @@
               <tbody>
                 <tr>
                   <td class="d-flex gap-1">
-                    <input class="form-check-input me-1" type="checkbox" name="" id="pend_Adj_Sku">
+                    <input class="form-check-input me-1 row_inboundcomp_checkbox" type="checkbox" name="" id="pend_Adj_Sku">
                      <a href="#">IO7845123895623</a>
                   </td>
                   <td>Cancelled by VaueBox</td>
@@ -794,6 +798,138 @@
             </table>    
         </div>
               </div>
+               </div>
+
+
+               <div class="outboudTablesDiv">
+                <div class="col allbar collapse show d-flex gap-3 p-0 mt-40">
+                  <div class="list-group d-flex gap-4 list-group-horizontal-sm mb-1 text-center fs-20 allbar" role="tablist">
+                    <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto active p-0" id="list-all-list" data-bs-toggle="list" href="#outboud-all" role="tab">All</a>
+                    <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto p-0" id="list-active-list" data-bs-toggle="list" href="#outboud-pending" role="tab">All Pending <span class="notification-badge">12</span></a>
+                    <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto p-0" id="list-active-list" data-bs-toggle="list" href="#outboud-approved" role="tab">All Approved <span class="notification-badge">27</span></a>
+                    <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto p-0" id="list-active-list" data-bs-toggle="list" href="#outboud-completed" role="tab">All Completed <span class="notification-badge">1</span></a>
+                  </div>
+                </div>
+
+              <div class="tab-content text-justify">
+                <div class="form-group w-100 TableWrapper tab-pane fade show active mt-40 pb-0" id="outboud-all">
+                  <table class="dataTable" id="send_wareh_Table">
+                    <thead>
+                      <tr>
+                        <th class="boundOrderNo"><input class="form-check-input me-1 master_outboundall_checkbox" type="checkbox" name="" id="pend_Adj_Sku"> outboud Order No.</th>
+                        <th class="boundStatus">OO Status</th> 
+                        <th>Created Time</th>
+                        <th>Estimated Time</th>
+                        <th class="boundTime">outboud Time</th>
+                        <th>Outbound warehouse</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="d-flex gap-1">
+                          <input class="form-check-input me-1 row_outboundall_checkbox" type="checkbox" name="" id="pend_Adj_Sku">
+                           <a href="#">IO7845123895623</a>
+                        </td>
+                        <td>Cancelled by VaueBox</td>
+                        <td>2024-06-11 23:28:26</td>
+                        <td>2024-06-11 23:28:26</td>
+                        <td>RS 1,299.00</td>
+                        <td></td>
+                    </tr>
+  
+                    </tbody>
+                  </table>
+                  
+              </div>
+
+              <div class="form-group w-100 TableWrapper tab-pane fade  mt-40 pb-0" id="outboud-pending">
+                <table class="dataTable" id="send_wareh_Table">
+                  <thead>
+                    <tr>
+                      <th class="boundOrderNo"><input class="form-check-input me-1 master_outboundpend_checkbox" type="checkbox" name="" id="pend_Adj_Sku"> outboud Order No.</th>
+                      <th class="boundStatus">OO Status</th> 
+                      <th>Created Time</th>
+                      <th>Estimated Time</th>
+                      <th class="boundTime">outboud Time</th>
+                      <th>Outbound warehouse</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="d-flex gap-1">
+                        <input class="form-check-input me-1 row_outboundpend_checkbox" type="checkbox" name="" id="pend_Adj_Sku">
+                         <a href="#">IO7845123895623</a>
+                      </td>
+                      <td>Cancelled by VaueBox</td>
+                      <td>2024-06-11 23:28:26</td>
+                      <td>2024-06-11 23:28:26</td>
+                      <td>RS 1,299.00</td>
+                      <td></td>
+                  </tr>
+
+                  </tbody>
+                </table>
+            </div>
+
+            <div class="form-group w-100 TableWrapper tab-pane fade  mt-40 pb-0" id="outboud-approved">
+              <table class="dataTable" id="send_wareh_Table">
+                <thead>
+                  <tr>
+                    <th class="boundOrderNo"><input class="form-check-input me-1 master_outboundapp_checkbox" type="checkbox" name="" id="pend_Adj_Sku"> outboud Order No.</th>
+                    <th class="boundStatus">OO Status</th> 
+                    <th>Created Time</th>
+                    <th>Estimated Time</th>
+                    <th class="boundTime">outboud Time</th>
+                    <th>Outbound warehouse</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="d-flex gap-1">
+                      <input class="form-check-input me-1 row_outboundapp_checkbox" type="checkbox" name="" id="pend_Adj_Sku">
+                       <a href="#">IO7845123895623</a>
+                    </td>
+                    <td>Cancelled by VaueBox</td>
+                    <td>2024-06-11 23:28:26</td>
+                    <td>2024-06-11 23:28:26</td>
+                    <td>RS 1,299.00</td>
+                    <td></td>
+                </tr>
+
+                </tbody>
+              </table>   
+          </div>
+
+          <div class="form-group w-100 TableWrapper tab-pane fade mt-40 pb-0" id="outboud-completed">
+            <table class="dataTable" id="send_wareh_Table">
+              <thead>
+                <tr>
+                  <th class="boundOrderNo"><input class="form-check-input me-1 master_outboundcomp_checkbox" type="checkbox" name="" id="pend_Adj_Sku"> outboud Order No.</th>
+                  <th class="boundStatus">OO Status</th> 
+                  <th>Created Time</th>
+                  <th>Estimated Time</th>
+                  <th class="boundTime">outboud Time</th>
+                  <th>Outbound warehouse</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="d-flex gap-1">
+                    <input class="form-check-input me-1 row_outboundcomp_checkbox" type="checkbox" name="" id="pend_Adj_Sku">
+                     <a href="#">IO7845123895623</a>
+                  </td>
+                  <td>Cancelled by VaueBox</td>
+                  <td>2024-06-11 23:28:26</td>
+                  <td>2024-06-11 23:28:26</td>
+                  <td>RS 1,299.00</td>
+                  <td></td>
+              </tr>
+
+              </tbody>
+            </table>    
+        </div>
+              </div>
+               </div>
                </div>
               
           </div>
@@ -859,57 +995,106 @@ sendwarehouseTables.forEach(table => {
 
 
 
-//   $(document).ready(function () {
-//     const $sendWarehouse = $("#incont_send_warehouse");
-//     const $returnWarehouse = $("#incont_return_warehouse");
-//     const $sendWarehouseTxt = $("#send_warehouse_txt");
-//     const $boundText = $(".boundText");
-//     const $inboundBox = $(".inboundBox");
-//     const $boundOrderNo = $(".boundOrderNo");
-//     const $boundStatus = $(".boundStatus");
-//     const $boundTime = $(".boundTime");
-//     const $returnWarehouseTxt = $("#return_warehouse_txt");
-//     const $outboundBox = $(".outboundBox");
-//     const $ioBtn = $("#io_btn");
-//     const $ooBtn = $("#oo_btn");
+  $(document).ready(function () {
+    const $sendWarehouse = $("#incont_send_warehouse");
+    const $returnWarehouse = $("#incont_return_warehouse");
+    const $sendWarehouseTxt = $("#send_warehouse_txt");
+    const $inboudTablesDiv = $(".inboudTablesDiv");
+    const $outboudTablesDiv = $(".outboudTablesDiv");
+    // const $boundText = $(".boundText");
+    // const $inboundBox = $(".inboundBox");
+    // const $boundOrderNo = $(".boundOrderNo");
+    // const $boundStatus = $(".boundStatus");
+    // const $boundTime = $(".boundTime");
+    const $returnWarehouseTxt = $("#return_warehouse_txt");
+    // const $outboundBox = $(".outboundBox");
+    const $ioBtn = $("#io_btn");
+    const $ooBtn = $("#oo_btn");
 
 
-//     $outboundBox.hide();
-//     // Default state: Show the field only for Live Inventory
-//     if (!$sendWarehouse.hasClass("active")) {
-//         $ioBtn.show();
-//         $sendWarehouseTxt.show();
+    // $outboundBox.hide();
+    // Default state: Show the field only for Live Inventory
+    if (!$sendWarehouse.hasClass("active")) {
+        $ioBtn.show();
+        $sendWarehouseTxt.show();
         
-//     }
+    }
+    $outboudTablesDiv.hide();
+    // Event listener for tab clicks
+    $sendWarehouse.on("click", function () {
+        $ooBtn.hide(); // Hide field
+        $sendWarehouseTxt.show(); // Show field
+        $ioBtn.show();
+        $inboudTablesDiv.show();
+        $returnWarehouseTxt.hide();
+        $outboudTablesDiv.hide();
+        // $boundText.text("Inbound Order No.");
+        // $boundOrderNo.text("Inbound Order No.");
+        // $boundStatus.text("IO Status");
+        // $boundTime.text("Inbound Time");
+        // $inboundBox.show();
+        // $outboundBox.hide();
+    });
 
-//     // Event listener for tab clicks
-//     $sendWarehouse.on("click", function () {
-//         $ooBtn.hide(); // Hide field
-//         $sendWarehouseTxt.show(); // Show field
-//         $ioBtn.show();
-//         $returnWarehouseTxt.hide();
-//         $boundText.text("Inbound Order No.");
-//         $boundOrderNo.text("Inbound Order No.");
-//         $boundStatus.text("IO Status");
-//         $boundTime.text("Inbound Time");
-//         $inboundBox.show();
-//         $outboundBox.hide();
-//     });
+    $returnWarehouse.on("click", function () {
+        $ooBtn.show(); // Show field
+        $sendWarehouseTxt.hide(); // Hide field
+        $returnWarehouseTxt.show();
+        $outboudTablesDiv.show();
+        $ioBtn.hide();
+        $inboudTablesDiv.hide();
+        // $boundText.text("Outbound Order No.");
+        // $boundOrderNo.text("Outbound Order No.");
+        // $boundStatus.text("OO Status");
+        // $boundTime.text("Outbound Time");
+        // $inboundBox.hide();
+        // $outboundBox.show();
+    });
+});
 
-//     $returnWarehouse.on("click", function () {
-//         $ooBtn.show(); // Show field
-//         $sendWarehouseTxt.hide(); // Hide field
-//         $returnWarehouseTxt.show();
-//         $ioBtn.hide();
-//         $boundText.text("Outbound Order No.");
-//         $boundOrderNo.text("Outbound Order No.");
-//         $boundStatus.text("OO Status");
-//         $boundTime.text("Outbound Time");
-//         $inboundBox.hide();
-//         $outboundBox.show();
-//     });
-// });
 
+function handleCheckbox(master, rows) {
+      $(master).on('change', () => $(rows).prop('checked', $(master).is(':checked')));
+      $(rows).on('change', () => $(master).prop('checked', $(rows + ':checked').length === $(rows).length));
+    }
+
+    // Initialize
+    $(document).ready(() => handleCheckbox('.master_inboundall_checkbox', '.row_inboundall_checkbox'));
+    $(document).ready(() => handleCheckbox('.master_inboundpend_checkbox', '.row_inboundpend_checkbox'));
+    $(document).ready(() => handleCheckbox('.master_inboundapp_checkbox', '.row_inboundapp_checkbox'));
+    $(document).ready(() => handleCheckbox('.master_inboundcomp_checkbox', '.row_inboundcomp_checkbox'));
+
+    $(document).ready(() => handleCheckbox('.master_outboundall_checkbox', '.row_outboundall_checkbox'));
+    $(document).ready(() => handleCheckbox('.master_outboundpend_checkbox', '.row_outboundpend_checkbox'));
+    $(document).ready(() => handleCheckbox('.master_outboundapp_checkbox', '.row_outboundapp_checkbox'));
+    $(document).ready(() => handleCheckbox('.master_outboundcomp_checkbox', '.row_outboundcomp_checkbox'));
+   
+
+    $(document).ready(function () {
+    // Listen for tab switch events
+    $('a[data-bs-toggle="list"]').on('shown.bs.tab', function (e) {
+        // Get the ID of the current tab content (newly activated tab)
+        var currentTab = $(this).attr('href');
+
+        // Get the ID of the previously active tab content (the one that was deactivated)
+        var previousTab = $(e.relatedTarget.hash);
+
+        // Log the current and previous tabs
+        console.log("Previous Tab: " + previousTab.attr('id'));
+        console.log("Current Tab: " + currentTab);
+
+        // Ensure we are working with the correct tab content
+        // Uncheck checkboxes in the previous tab
+        previousTab.find('input[type="checkbox"]').each(function () {
+            if ($(this).prop('checked')) {
+                $(this).prop('checked', false).trigger('change'); // Uncheck and trigger change event
+            }
+        });
+
+        // Log if the checkboxes were successfully unchecked
+        console.log("Checkboxes unchecked in " + previousTab.attr('id') + ": " + (previousTab.find('input[type="checkbox"]:checked').length === 0 ? "Yes" : "No"));
+    });
+});
   </script>
 </body>
 </html>

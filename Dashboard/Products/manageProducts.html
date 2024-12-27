@@ -609,79 +609,76 @@
                   <a class="list-group-item list-group-item-action menu-item w-auto border-0 fs-20 h-auto p-0" id="list-deleted-list"
                   data-bs-toggle="list" href="#list-deleted" role="tab"> Deleted</a>
               </div>
-              <div class="tab-content text-justify ">
-                <div class="tab-pane fade show active" id="list-all" role="tabpanel"
-                  aria-labelledby="list-all-list">
-                  
-                    <div class="container-fluid form1 mt-40">
-                     <div class=" col d-flex gap-3 filterproduct py-2">
-                          <span class="mt-2">Filter Product:</span>
-                          <button class="btn-gray">Out of stock</button>
-                          <button class="btn-gray">Soon Out of stock</button>
-                      </div>
-                      <div class="row mt-20">
-                      <!-- Search Input -->
-                      <div class="col-md-3 m-0">
-                      <div class="input-group">
-                          <select class="custom-addon input-group-addon">
-                            <option>Product Name</option>
-                            <option>Option 2</option>
-                          </select>
-                          <input type="text" id="filters" name="filters" class="form-control " placeholder="Please Input"/>
-                          <span class="input-group-text " id="basic-addon1"><i class="bi bi-search"></i></span>
+              <div class="container-fluid form1 mt-40">
+                <div class=" col d-flex gap-3 filterproduct py-2">
+                     <span class="mt-2">Filter Product:</span>
+                     <button class="btn-gray">Out of stock</button>
+                     <button class="btn-gray">Soon Out of stock</button>
+                 </div>
+                 <div class="row mt-20">
+                 <!-- Search Input -->
+                 <div class="col-md-3 m-0">
+                 <div class="input-group">
+                     <select class="custom-addon input-group-addon">
+                       <option>Product Name</option>
+                       <option>Option 2</option>
+                     </select>
+                     <input type="text" id="filters" name="filters" class="form-control " placeholder="Please Input"/>
+                     <span class="input-group-text " id="basic-addon1"><i class="bi bi-search"></i></span>
 
+                   </div>
+                 </div>
+   
+                 <div class="col-md-3 m-0">
+                   <div class="input-group">
+                     <span class="input-group-text"
+                       >Select Category</span>
+                     <select
+                       id="queryCategory"
+                       name="queryCategory"
+                       class="form-select">
+                       <option value="" selected disabled>Select</option>
+                     </select>
+                   </div>
+                 </div>
+                 <!-- Select Category -->
+                 <div class="col-md-3 m-0">
+                   <div class="input-group">
+                     <span class="input-group-text"
+                       >Tags</span>
+                     <select
+                       id="queryCategory"
+                       name="queryCategory"
+                       class="form-select">
+                       <option value="" selected disabled>Enter Tags</option>
+                     </select>
+                   </div>
+                 </div>
+   
+                 <!-- Sort By -->
+                 <div class="col-md-3 m-0">
+                   <div class="input-group">
+                     <span class="input-group-text"
+                       >Sort By</span>
+                     <select
+                       id="queryCategory"
+                       name="queryCategory"
+                       class="form-select">
+                       <option value="" selected disabled>Please Input</option>
+                     </select>
+                   </div>
+                 </div>
                         </div>
-                      </div>
-        
-                      <div class="col-md-3 m-0">
-                        <div class="input-group">
-                          <span class="input-group-text"
-                            >Select Category</span>
-                          <select
-                            id="queryCategory"
-                            name="queryCategory"
-                            class="form-select">
-                            <option value="" selected disabled>Select</option>
-                          </select>
-                        </div>
-                      </div>
-                      <!-- Select Category -->
-                      <div class="col-md-3 m-0">
-                        <div class="input-group">
-                          <span class="input-group-text"
-                            >Tags</span>
-                          <select
-                            id="queryCategory"
-                            name="queryCategory"
-                            class="form-select">
-                            <option value="" selected disabled>Enter Tags</option>
-                          </select>
-                        </div>
-                      </div>
-        
-                      <!-- Sort By -->
-                      <div class="col-md-3 m-0">
-                        <div class="input-group">
-                          <span class="input-group-text"
-                            >Sort By</span>
-                          <select
-                            id="queryCategory"
-                            name="queryCategory"
-                            class="form-select">
-                            <option value="" selected disabled>Please Input</option>
-                          </select>
-                        </div>
-                      </div>
-                             </div>
-                         </div>
-                     <div class="container-fluid form1 mt-40">
-                      <div class="py-3 d-flex gap-2">
-                       <button class="btn productsselectedbtn">32 Products Selected</button>
-                       <button class="btn-gray">Deactivate</button>
-                       <button class="btn-gray">Delete</button>
-                       <button class="btn-gray">Export Selected Products</button>
-                      </div>
-                      <div class="TableWrapper dataTable-container">
+                    </div>
+              <div class="tab-content text-justify container-fluid form1 mt-40">
+                <div class="py-3 d-flex gap-2">
+                  <button class="btn productsselectedbtn">32 Products Selected</button>
+                  <button class="btn-gray">Deactivate</button>
+                  <button class="btn-gray">Delete</button>
+                  <button class="btn-gray">Export Selected Products</button>
+                 </div>
+
+                      <div class="TableWrapper dataTable-container tab-pane fade show active" id="list-all" role="tabpanel" aria-labelledby="list-all-list">
                           <table class="w-100 w-min-1000" id="manage_product_Table">
                            <thead>
                                <tr class="text-dark">
@@ -951,82 +948,8 @@
                          </tbody>
                           </table>
                       </div>
-                     </div>
-                   
-                </div>
-                <div class="tab-pane fade" id="list-active" role="tabpanel"
-                  aria-labelledby="list-active-list">
-                  
-                    <div class="container-fluid form1 mt-40">
-                   
-                      <div class=" col d-flex gap-3 filterproduct py-2">
-                          <span class="mt-2">Filter Product:</span>
-                          <button class="btn-gray">Out of stock</button>
-                          <button class="btn-gray">Soon Out of stock</button>
-                      </div>
-                      <div class="row mt-20">
-                      <!-- Search Input -->
-                      <div class="col-md-3 m-0">
-                      <div class="input-group">
-                          <select class="custom-addon input-group-addon">
-                            <option>Product Name</option>
-                            <option>Option 2</option>
-                          </select>
-                          <input type="text" id="filters" name="filters" class="form-control " placeholder="Please Input"/>
-                          <span class="input-group-text " id="basic-addon1"><i class="bi bi-search"></i></span>
 
-                        </div>
-                      </div>
-        
-                      <div class="col-md-3 m-0">
-                        <div class="input-group">
-                          <span class="input-group-text"
-                            >Select Category</span>
-                          <select
-                            id="queryCategory"
-                            name="queryCategory"
-                            class="form-select">
-                            <option value="" selected disabled>Select</option>
-                          </select>
-                        </div>
-                      </div>
-                      <!-- Select Category -->
-                      <div class="col-md-3 m-0">
-                        <div class="input-group">
-                          <span class="input-group-text"
-                            >Tags</span>
-                          <select
-                            id="queryCategory"
-                            name="queryCategory"
-                            class="form-select">
-                            <option value="" selected disabled>Enter Tags</option>
-                          </select>
-                        </div>
-                      </div>
-        
-                      <!-- Sort By -->
-                      <div class="col-md-3 m-0">
-                        <div class="input-group">
-                          <span class="input-group-text"
-                            >Sort By</span>
-                          <select
-                            id="queryCategory"
-                            name="queryCategory"
-                            class="form-select">
-                            <option value="" selected disabled>Please Input</option>
-                          </select>
-                        </div>
-                      </div>
-                             </div>
-                         </div>
-                     <div class="container-fluid form1 mt-40">
-                      <div class="py-3 d-flex gap-2">
-                       <button class="btn productsselectedbtn">32 Products Selected</button>
-                       <button class="btn-gray">Deactivate</button>
-                       <button class="btn-gray">Delete</button>
-                       <button class="btn-gray">Export Selected Products</button>
-                      </div>
-                      <div class="TableWrapper dataTable-container">
+                      <div class="TableWrapper dataTable-container tab-pane fade" id="list-active" role="tabpanel" aria-labelledby="list-active-list">
                         <table class="w-100 w-min-1000" id="active_product_Table">
                           <thead>
                               <tr class="text-dark">
@@ -1204,82 +1127,8 @@
                         </tbody>
                          </table>
                       </div>
-                     </div>
-                   
-                </div>
-                <div class="tab-pane fade" id="list-inactive" role="tabpanel"
-                aria-labelledby="list-inactive-list">
-                
-                  <div class="container-fluid form1 mt-40">
-                 
-                    <div class=" col d-flex gap-3 filterproduct py-2">
-                        <span class="mt-2">Filter Product:</span>
-                        <button class="btn-gray">Out of stock</button>
-                        <button class="btn-gray">Soon Out of stock</button>
-                    </div>
-                    <div class="row mt-20">
-                    <!-- Search Input -->
-                    <div class="col-md-3 m-0">
-                    <div class="input-group">
-                        <select class="custom-addon input-group-addon">
-                          <option>Product Name</option>
-                          <option>Option 2</option>
-                        </select>
-                        <input type="text" id="filters" name="filters" class="form-control " placeholder="Please Input"/>
-                        <span class="input-group-text " id="basic-addon1"><i class="bi bi-search"></i></span>
 
-                      </div>
-                    </div>
-      
-                    <div class="col-md-3 m-0">
-                      <div class="input-group">
-                        <span class="input-group-text"
-                          >Select Category</span>
-                        <select
-                          id="queryCategory"
-                          name="queryCategory"
-                          class="form-select">
-                          <option value="" selected disabled>Select</option>
-                        </select>
-                      </div>
-                    </div>
-                    <!-- Select Category -->
-                    <div class="col-md-3 m-0">
-                      <div class="input-group">
-                        <span class="input-group-text"
-                          >Tags</span>
-                        <select
-                          id="queryCategory"
-                          name="queryCategory"
-                          class="form-select">
-                          <option value="" selected disabled>Enter Tags</option>
-                        </select>
-                      </div>
-                    </div>
-      
-                    <!-- Sort By -->
-                    <div class="col-md-3 m-0">
-                      <div class="input-group">
-                        <span class="input-group-text"
-                          >Sort By</span>
-                        <select
-                          id="queryCategory"
-                          name="queryCategory"
-                          class="form-select">
-                          <option value="" selected disabled>Please Input</option>
-                        </select>
-                      </div>
-                    </div>
-                           </div>
-                       </div>
-                   <div class="container-fluid form1 mt-40">
-                    <div class="py-3 d-flex gap-2">
-                     <button class="btn productsselectedbtn">32 Products Selected</button>
-                     <button class="btn-gray">Deactivate</button>
-                     <button class="btn-gray">Delete</button>
-                     <button class="btn-gray">Export Selected Products</button>
-                    </div>
-                    <div class="TableWrapper dataTable-container">
+                    <div class="TableWrapper dataTable-container tab-pane fade" id="list-inactive" role="tabpanel" aria-labelledby="list-inactive-list">
                       <table class="w-100 w-min-1000" id="inactive_product_Table">
                         <thead>
                             <tr class="text-dark">
@@ -1457,82 +1306,8 @@
                       </tbody>
                        </table>
                     </div>
-                   </div>
-                
-              </div>
-              <div class="tab-pane fade" id="list-draft" role="tabpanel"
-              aria-labelledby="list-draft-list">
-              
-                <div class="container-fluid form1 mt-40">
-               
-                  <div class=" col d-flex gap-3 filterproduct py-2">
-                      <span class="mt-2">Filter Product:</span>
-                      <button class="btn-gray">Out of stock</button>
-                      <button class="btn-gray">Soon Out of stock</button>
-                  </div>
-                  <div class="row mt-20">
-                  <!-- Search Input -->
-                  <div class="col-md-3 m-0">
-                  <div class="input-group">
-                      <select class="custom-addon input-group-addon">
-                        <option>Product Name</option>
-                        <option>Option 2</option>
-                      </select>
-                      <input type="text" id="filters" name="filters" class="form-control " placeholder="Please Input"/>
-                      <span class="input-group-text " id="basic-addon1"><i class="bi bi-search"></i></span>
-
-                    </div>
-                  </div>
-    
-                  <div class="col-md-3 m-0">
-                    <div class="input-group">
-                      <span class="input-group-text"
-                        >Select Category</span>
-                      <select
-                        id="queryCategory"
-                        name="queryCategory"
-                        class="form-select">
-                        <option value="" selected disabled>Select</option>
-                      </select>
-                    </div>
-                  </div>
-                  <!-- Select Category -->
-                  <div class="col-md-3 m-0">
-                    <div class="input-group">
-                      <span class="input-group-text"
-                        >Tags</span>
-                      <select
-                        id="queryCategory"
-                        name="queryCategory"
-                        class="form-select">
-                        <option value="" selected disabled>Enter Tags</option>
-                      </select>
-                    </div>
-                  </div>
-    
-                  <!-- Sort By -->
-                  <div class="col-md-3 m-0">
-                    <div class="input-group">
-                      <span class="input-group-text"
-                        >Sort By</span>
-                      <select
-                        id="queryCategory"
-                        name="queryCategory"
-                        class="form-select">
-                        <option value="" selected disabled>Please Input</option>
-                      </select>
-                    </div>
-                  </div>
-                         </div>
-                     </div>
-                 <div class="container-fluid form1 mt-40">
-                  <div class="py-3 d-flex gap-2">
-                   <button class="btn productsselectedbtn">32 Products Selected</button>
-                   <button class="btn-gray">Deactivate</button>
-                   <button class="btn-gray">Delete</button>
-                   <button class="btn-gray">Export Selected Products</button>
-                  </div>
-                  <div class="TableWrapper dataTable-container">
+                  
+                  <div class="TableWrapper dataTable-container tab-pane fade" id="list-draft" role="tabpanel" aria-labelledby="list-draft-list">
                     <table class="w-100 w-min-1000" id="draft_product_Table">
                       <thead>
                           <tr class="text-dark">
@@ -1710,82 +1485,8 @@
                     </tbody>
                      </table>
                   </div>
-                 </div>
-               
-            </div>
-            <div class="tab-pane fade" id="list-pendingqc" role="tabpanel"
-            aria-labelledby="list-pendingqc-list">
-            
-              <div class="container-fluid form1 mt-40">
-             
-                <div class=" col d-flex gap-3 filterproduct py-2">
-                    <span class="mt-2">Filter Product:</span>
-                    <button class="btn-gray">Out of stock</button>
-                    <button class="btn-gray">Soon Out of stock</button>
-                </div>
-                <div class="row mt-20">
-                <!-- Search Input -->
-                <div class="col-md-3 m-0">
-                <div class="input-group">
-                    <select class="custom-addon input-group-addon">
-                      <option>Product Name</option>
-                      <option>Option 2</option>
-                    </select>
-                    <input type="text" id="filters" name="filters" class="form-control " placeholder="Please Input"/>
-                    <span class="input-group-text " id="basic-addon1"><i class="bi bi-search"></i></span>
 
-                  </div>
-                </div>
-  
-                <div class="col-md-3 m-0">
-                  <div class="input-group">
-                    <span class="input-group-text"
-                      >Select Category</span>
-                    <select
-                      id="queryCategory"
-                      name="queryCategory"
-                      class="form-select">
-                      <option value="" selected disabled>Select</option>
-                    </select>
-                  </div>
-                </div>
-                <!-- Select Category -->
-                <div class="col-md-3 m-0">
-                  <div class="input-group">
-                    <span class="input-group-text"
-                      >Tags</span>
-                    <select
-                      id="queryCategory"
-                      name="queryCategory"
-                      class="form-select">
-                      <option value="" selected disabled>Enter Tags</option>
-                    </select>
-                  </div>
-                </div>
-  
-                <!-- Sort By -->
-                <div class="col-md-3 m-0">
-                  <div class="input-group">
-                    <span class="input-group-text"
-                      >Sort By</span>
-                    <select
-                      id="queryCategory"
-                      name="queryCategory"
-                      class="form-select">
-                      <option value="" selected disabled>Please Input</option>
-                    </select>
-                  </div>
-                </div>
-                       </div>
-                   </div>
-               <div class="container-fluid form1 mt-40">
-                <div class="py-3 d-flex gap-2">
-                 <button class="btn productsselectedbtn">32 Products Selected</button>
-                 <button class="btn-gray">Deactivate</button>
-                 <button class="btn-gray">Delete</button>
-                 <button class="btn-gray">Export Selected Products</button>
-                </div>
-                <div class="TableWrapper dataTable-container">
+                <div class="TableWrapper dataTable-container tab-pane fade" id="list-pendingqc" role="tabpanel" aria-labelledby="list-pendingqc-list">
                   <table class="w-100 w-min-1000" id="pending_product_Table">
                     <thead>
                         <tr class="text-dark">
@@ -1963,82 +1664,8 @@
                   </tbody>
                    </table>
                 </div>
-               </div>
-             
-          </div>
-          <div class="tab-pane fade" id="list-hold" role="tabpanel"
-          aria-labelledby="list-violation-list">
-          
-            <div class="container-fluid form1 mt-40">
-           
-              <div class=" col d-flex gap-3 filterproduct py-2">
-                  <span class="mt-2">Filter Product:</span>
-                  <button class="btn-gray">Out of stock</button>
-                  <button class="btn-gray">Soon Out of stock</button>
-              </div>
-              <div class="row mt-20">
-              <!-- Search Input -->
-              <div class="col-md-3 m-0">
-              <div class="input-group">
-                  <select class="custom-addon input-group-addon">
-                    <option>Product Name</option>
-                    <option>Option 2</option>
-                  </select>
-                  <input type="text" id="filters" name="filters" class="form-control " placeholder="Please Input"/>
-                  <span class="input-group-text " id="basic-addon1"><i class="bi bi-search"></i></span>
-
-                </div>
-              </div>
-
-              <div class="col-md-3 m-0">
-                <div class="input-group">
-                  <span class="input-group-text"
-                    >Select Category</span>
-                  <select
-                    id="queryCategory"
-                    name="queryCategory"
-                    class="form-select">
-                    <option value="" selected disabled>Select</option>
-                  </select>
-                </div>
-              </div>
-              <!-- Select Category -->
-              <div class="col-md-3 m-0">
-                <div class="input-group">
-                  <span class="input-group-text"
-                    >Tags</span>
-                  <select
-                    id="queryCategory"
-                    name="queryCategory"
-                    class="form-select">
-                    <option value="" selected disabled>Enter Tags</option>
-                  </select>
-                </div>
-              </div>
-
-              <!-- Sort By -->
-              <div class="col-md-3 m-0">
-                <div class="input-group">
-                  <span class="input-group-text"
-                    >Sort By</span>
-                  <select
-                    id="queryCategory"
-                    name="queryCategory"
-                    class="form-select">
-                    <option value="" selected disabled>Please Input</option>
-                  </select>
-                </div>
-              </div>
-                     </div>
-                 </div>
-             <div class="container-fluid form1 mt-40">
-              <div class="py-3 d-flex gap-2">
-               <button class="btn productsselectedbtn">32 Products Selected</button>
-               <button class="btn-gray">Deactivate</button>
-               <button class="btn-gray">Delete</button>
-               <button class="btn-gray">Export Selected Products</button>
-              </div>
-              <div class="TableWrapper dataTable-container">
+              
+              <div class="TableWrapper dataTable-container tab-pane fade" id="list-hold" role="tabpanel" aria-labelledby="list-violation-list">
                 <table class="w-100 w-min-1000" id="hold_product_Table">
                   <thead>
                       <tr class="text-dark">
@@ -2216,82 +1843,8 @@
                 </tbody>
                  </table>
               </div>
-             </div>
-           
-        </div>
-        <div class="tab-pane fade" id="list-deleted" role="tabpanel"
-        aria-labelledby="list-deleted-list">
-        
-          <div class="container-fluid form1 mt-40">
-         
-            <div class=" col d-flex gap-3 filterproduct py-2">
-                <span class="mt-2">Filter Product:</span>
-                <button class="btn-gray">Out of stock</button>
-                <button class="btn-gray">Soon Out of stock</button>
-            </div>
-            <div class="row mt-20">
-            <!-- Search Input -->
-            <div class="col-md-3 m-0">
-            <div class="input-group">
-                <select class="custom-addon input-group-addon">
-                  <option>Product Name</option>
-                  <option>Option 2</option>
-                </select>
-                <input type="text" id="filters" name="filters" class="form-control " placeholder="Please Input"/>
-                <span class="input-group-text " id="basic-addon1"><i class="bi bi-search"></i></span>
 
-              </div>
-            </div>
-
-            <div class="col-md-3 m-0">
-              <div class="input-group">
-                <span class="input-group-text"
-                  >Select Category</span>
-                <select
-                  id="queryCategory"
-                  name="queryCategory"
-                  class="form-select">
-                  <option value="" selected disabled>Select</option>
-                </select>
-              </div>
-            </div>
-            <!-- Select Category -->
-            <div class="col-md-3 m-0">
-              <div class="input-group">
-                <span class="input-group-text"
-                  >Tags</span>
-                <select
-                  id="queryCategory"
-                  name="queryCategory"
-                  class="form-select">
-                  <option value="" selected disabled>Enter Tags</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- Sort By -->
-            <div class="col-md-3 m-0">
-              <div class="input-group">
-                <span class="input-group-text"
-                  >Sort By</span>
-                <select
-                  id="queryCategory"
-                  name="queryCategory"
-                  class="form-select">
-                  <option value="" selected disabled>Please Input</option>
-                </select>
-              </div>
-            </div>
-                   </div>
-               </div>
-           <div class="container-fluid form1 mt-40">
-            <div class="py-3 d-flex gap-2">
-             <button class="btn productsselectedbtn">32 Products Selected</button>
-             <button class="btn-gray">Deactivate</button>
-             <button class="btn-gray">Delete</button>
-             <button class="btn-gray">Export Selected Products</button>
-            </div>
-            <div class="TableWrapper dataTable-container">
+            <div class="TableWrapper dataTable-container tab-pane fade" id="list-deleted" role="tabpanel" aria-labelledby="list-deleted-list">
               <table class="w-100 w-min-1000" id="deleted_product_Table">
                 <thead>
                     <tr class="text-dark">
@@ -2469,13 +2022,10 @@
               </tbody>
                </table>
             </div>
-           </div>
-         
-      </div>
+
               </div>
             </div>
-            
-            
+
           </div>
       </div>
        </div>
@@ -2569,7 +2119,7 @@
           </button>
           
           <div class="TableWrapper w-100 dataTable-container mt-20">
-            <table class="table-bordered w-100" id="bulkManageModalTable">
+            <table class="w-100" id="bulkManageModalTable">
              <thead>
                  <tr class="text-dark">
                      <th style="width: 40%; text-align: start;">
@@ -2589,7 +2139,7 @@
         </div>
         
          </div>
-         <div class="modal-footer">
+         <div class="modal-footer px-2 pt-3 pb-0">
           <button type="button" class="btn-gray" data-bs-dismiss="modal">Cancel</button>
           <button type="button" class="saveBtn btn-blue">Save</button>
         </div>
