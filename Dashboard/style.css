@@ -1457,6 +1457,7 @@ font-style: normal;
 font-weight: 500;
 line-height: 24px;
 }
+
 @media(max-width:1450px){
   .socialMedia a{
     font-size: 14px;
@@ -1721,6 +1722,7 @@ background: #F2F2F2;
 }
 .orderidColor{
   color: #002882;
+  font-size: 16px;
 }
 .rs-badge-container {
   display: flex;
@@ -1774,9 +1776,7 @@ line-height: 30px; /* 150% */
   display: flex;
 padding: 20px;
 flex-direction: column;
-justify-content: space-between;
 align-items: flex-start;
-flex: 1 0 0;
 align-self: stretch;
 border-radius: 12px;
 background: var(--Secondary-Color-Mon-Yellow-10, #FEF6E6);
@@ -2084,7 +2084,10 @@ align-self: stretch;
 }
 
 /* Alternatively, make it flexible */
-
+.uploadauthentication span{
+  background-color: #E6EAF3;
+  color: #33539B;
+}
 .uploadfile{
   display: flex;
 
@@ -2095,6 +2098,7 @@ align-self: stretch;
 border-radius: 10px;
 background: var(--Secondary-Color-Mon-Yellow-10, #FEF6E6);
 }
+
 .MyIncomecard{
  
 padding: 20px;
@@ -2567,6 +2571,12 @@ button:disabled{
 .social-icon {
         font-size: 20px;
     }
+    .vertical-line {
+      border-left: 1px solid #ccc; /* Line color */
+      height: 1em; /* Adjust to match text height */
+      margin: 0 8px; /* Add spacing around the line */
+    }
+    
 @media(max-width:1400px){
   .custom-modal-width{
     max-width: 1250px !important;
@@ -2606,5 +2616,18 @@ button:disabled{
     height: 48px !important;
   } */
   }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
 
- 
+  
+  #bulkManageModalTable tbody tr td {
+   border-bottom: 0px;
+   border-right: 0px;
+  }
+  

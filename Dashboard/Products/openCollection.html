@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/bootstrap5.3.css">
-   <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="../assets/css/app.css">
-    <link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/x-icon">
-    <!-- <link rel="stylesheet" href="style.css" /> -->
+
+    <link rel="stylesheet" href="../assets/select2/css/select2.min.css" /><!--select2 css-->
+    <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body>
@@ -513,27 +511,31 @@
          </div>
     <div class="row bg-white shadow-sm p-3 mb-5 bg-body rounded m-0 ">
          <h1 class="subHeading p-0">Products</h1>
-        <div class="col-4 d-flex gap-2 p-0">
-        <a class="btn-blue h-auto" href="addProduct.html">Add New Product</a>
-        <a class="btn-blue text-brand-color border-0 bg-light h-auto" href="addProduct.html">Add Existing Product</a>
-        <!-- <button class="btn-blue bg-natural shadow-sm border-0 text-brand-color">Browse</button> -->
+        <div class="row p-0">
+          <div class="col-5 col-xl-4 d-flex gap-2 p-0">
+            <a class="btn-blue h-auto" href="addProduct.html">Add New Product</a>
+            <button class="btn-blue text-brand-color border-0 bg-light h-auto shadow-sm " data-bs-target="#addExistingProduct" data-bs-toggle="modal" data-bs-dismiss="modal">Add Existing Product</button>
+            <!-- <button class="btn-blue bg-natural shadow-sm border-0 text-brand-color">Browse</button> -->
+          </div>
+          <div class="col-7 col-xl-8 d-flex gap-2 p-0">
+            <div class="input-group h-38">
+              <input type="text" id="filters" name="filters" class="form-control" placeholder="Search products">
+              <span class="input-group-text " id="basic-addon1"><i class="bi bi-search"></i></span>
+            </div>
+            <div class="form-group w-100">
+              <fieldset class="form-group">
+                <select class="select-dropdown form-select" id="basicSelect">
+                    <option value="">Please Select</option>
+                    <option value="kachehri">Top Rated</option>
+                    <option value="mda">More Selling</option>
+                </select>
+            </fieldset>
+            </div>   
+              
+      
+            <!-- <input type="text" id="filters" name="filters" class="form-control" placeholder="Best Selling"> -->
+          </div>
         </div>
-    <div class="col-8 d-flex gap-2 p-0">
-      <div class="input-group ">
-        <input type="text" id="filters" name="filters" class="form-control" placeholder="Search products">
-        <span class="input-group-text " id="basic-addon1"><i class="bi bi-search"></i></span>
-      </div>
-      <div class="input-group w-50">
-        <input type="text" id="change_filter_val" name="filters" class="form-control " placeholder="Best Selling" readonly>
-        <span class="input-group-text bg-transparent border-start-0 d-flex flex-column gap-0" id="basic-addon1">
-            <i class="fa-solid fa-chevron-up fs-12 arrow-up"></i>
-            <i class="fa-solid fa-chevron-down fs-12 arrow-down"></i>
-        </span>
-    </div>
-        
-
-      <!-- <input type="text" id="filters" name="filters" class="form-control" placeholder="Best Selling"> -->
-    </div>
          
        <div class="d-flex gap-2 d-flex w-100 p-0">
             <div class="table-container TableWrapper p-0 my-4 w-100">
@@ -550,8 +552,7 @@
                                     </div>
                                    </td>
                                    <td > 
-                                    <div class="bg-success-light">Active
-                                    </div>    
+                                    <span class="bg-success-light">Active</span>     
                                    </td>
                                    <td><svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                                     <path d="M17.375 7.125L7.625 16.875M7.625 7.125L17.375 16.875" stroke="#999999" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
@@ -568,8 +569,7 @@
                                     </div>
                                    </td>
                                    <td > 
-                                    <div class="bg-orange-light">Inactive
-                                    </div>    
+                                    <span class="bg-success-light">Active</span>    
                                    </td>
                                    <td><svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                                     <path d="M17.375 7.125L7.625 16.875M7.625 7.125L17.375 16.875" stroke="#999999" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
@@ -582,43 +582,85 @@
             </div>
     </div> 
  </main>
-  
-
-
-
-
-  
-    
+ <div class="modal fade" id="addExistingProduct" aria-hidden="true" aria-labelledby="addExistingProduct" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered d-flex justify-content-center position-relative">
+    <div class="modal-content mt-90" id="cancel-order-modal">
+     <div class=" p-4 ">
+      <div class="modal-header mb-3 p-0 ">
+        <span class="subHeading p-0">Add Existing Product</span>
+       
+          <div id="closeModalBtn" class="btn-blue closeModalBtn rounded-circle cursor-pointer" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+      <div class="modal-body d-flex flex-column gap-3 p-0">
+        <div class="table-container TableWrapper p-0 my-4 w-100">
+          <table class="mediatable mb-0 w-100 table table-bordered">
+            <thead>
+              <tr>
+                <th><input class="mediacheckBox form-check-input master-checkbox" type="checkbox" id="product1"> <span class="ms-2">Product Name</span></th>
+                <th class="text-center">Status</th>
+              </tr>
+            </thead>
+                  <tbody class="py-5">
+                      <tr class="w-100">
+                          <td>
+                              <div class="d-flex gap-3 align-items-center ">
+                               <input class="mediacheckBox form-check-input row-checkbox" type="checkbox" id="product1">  
+                               <img class="w-38" src="../Images/manage product image1.svg" alt="">
+                               <div class="mediarow">
+                               <a href=""class="subHeading-4">T-Shirts</a>
+                               </div>
+                              </div>
+                             </td>
+                             <td> 
+                              <span class="bg-success-light mx-auto">Active</span>    
+                             </td>
+                             
+                         </tr>
+                         <tr class="w-100">
+                          <td>
+                              <div class="d-flex gap-3 align-items-center">
+                               <input class="mediacheckBox form-check-input row-checkbox" type="checkbox" id="product1">  
+                               <img class="w-38" src="../Images/manage product image1.svg" alt="">
+                               <div class="mediarow">
+                               <a href=""class="subHeading-4">Cloths</a>
+                               </div>
+                              </div>
+                             </td>
+                             <td> 
+                              <span class="bg-success-light mx-auto">Active</span>    
+                             </td>
+                         </tr>
+                     </tbody>
+                   </table>
+                 </div>
+      </div>
+      <div class="d-flex gap-2 mt-40 justify-content-end">
+        <button class="btn-blue submit-btn">Add</button>
+       <button class="btn-gray" data-bs-dismiss="modal">Cancel</button>
+      </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/jquery/jquery.min.js"></script><!-- jQuery js -->
+    <script src="../assets/select2/js/select2.min.js"></script><!-- select2 js -->
     <script src="../assets/js/main.js"></script>
     <script>
-$(document).ready(function () {
-    // List of values to cycle through
-    const values = ["Best Selling", "Price: Low to High", "Price: High to Low", "Newest Arrivals"];
-    let currentIndex = 0; // Track the current index
+        $(document).ready(function () {
+        $(".select-dropdown").select2();
+      });
 
-    // Function to update the input value
-    const updateInputValue = () => {
-        $('#change_filter_val').val(values[currentIndex]);
-    };
+      function handleCheckbox(master, rows) {
+      $(master).on('change', () => $(rows).prop('checked', $(master).is(':checked')));
+      $(rows).on('change', () => $(master).prop('checked', $(rows + ':checked').length === $(rows).length));
+    }
 
-    // Initialize input with the first value
-    updateInputValue();
-
-    // Handle the up arrow click
-    $('.arrow-up').on('click', function () {
-        currentIndex = (currentIndex - 1 + values.length) % values.length; // Move to the previous value
-        updateInputValue();
-    });
-
-    // Handle the down arrow click
-    $('.arrow-down').on('click', function () {
-        currentIndex = (currentIndex + 1) % values.length; // Move to the next value
-        updateInputValue();
-    });
-});
-
+    // Initialize
+    $(document).ready(() => handleCheckbox('.master-checkbox', '.row-checkbox'));
     </script>
 </body>
 </html>
