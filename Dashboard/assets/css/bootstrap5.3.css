@@ -12608,6 +12608,9 @@ fieldset:disabled .btn {
   .w-min-1200{
     min-width: 1200px !important;
   }
+  .w-min-1300{
+    min-width: 1300px !important;
+  }
   .input-group-addon {
     padding: 10px 10px;
     font-size: 14px;
@@ -13044,4 +13047,13 @@ background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
 }
 .w-38{
   width: 38px;
+}
+.custom-width {
+  width: 100%;
+}
+
+@media (max-width: 1200px) { /* for xl screens and above */
+  .custom-width {
+    width: 40%;
+  }
 }

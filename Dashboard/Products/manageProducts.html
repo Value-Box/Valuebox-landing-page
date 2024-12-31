@@ -617,7 +617,7 @@
                  </div>
                  <div class="row mt-20">
                  <!-- Search Input -->
-                 <div class="col-md-3 m-0">
+                 <div class="col-6 col-xxl-3 m-0">
                  <div class="input-group">
                      <select class="custom-addon input-group-addon">
                        <option>Product Name</option>
@@ -629,7 +629,7 @@
                    </div>
                  </div>
    
-                 <div class="col-md-3 m-0">
+                 <div class="col-6 col-xxl-3 m-0">
                    <div class="input-group">
                      <span class="input-group-text"
                        >Select Category</span>
@@ -642,7 +642,7 @@
                    </div>
                  </div>
                  <!-- Select Category -->
-                 <div class="col-md-3 m-0">
+                 <div class="col-6 col-xxl-3 mt-3 m-xxl-0">
                    <div class="input-group">
                      <span class="input-group-text"
                        >Tags</span>
@@ -656,7 +656,7 @@
                  </div>
    
                  <!-- Sort By -->
-                 <div class="col-md-3 m-0">
+                 <div class="col-6 col-xxl-3 mt-3 m-xxl-0">
                    <div class="input-group">
                      <span class="input-group-text"
                        >Sort By</span>
@@ -682,7 +682,7 @@
 
                       <div class="TableWrapper dataTable-container tab-pane fade show active" id="list-all" role="tabpanel" aria-labelledby="list-all-list">
                         <!-- Click on this product link to view it on the customer's website.  -->
-                        <table class="w-100 w-min-1000" id="manage_product_Table">
+                        <table class="w-100 w-min-1300" id="manage_product_Table">
                            <thead>
                                <tr class="text-dark">
                                        
@@ -953,7 +953,7 @@
                       </div>
 
                       <div class="TableWrapper dataTable-container tab-pane fade" id="list-active" role="tabpanel" aria-labelledby="list-active-list">
-                        <table class="w-100 w-min-1000" id="active_product_Table">
+                        <table class="w-100 w-min-1300" id="active_product_Table">
                           <thead>
                               <tr class="text-dark">
                                       
@@ -1224,7 +1224,7 @@
                       </div>
 
                     <div class="TableWrapper dataTable-container tab-pane fade" id="list-inactive" role="tabpanel" aria-labelledby="list-inactive-list">
-                      <table class="w-100 w-min-1000" id="inactive_product_Table">
+                      <table class="w-100 w-min-1300" id="inactive_product_Table">
                         <thead>
                             <tr class="text-dark">
                                     
@@ -1495,7 +1495,7 @@
                     </div>
                   
                   <div class="TableWrapper dataTable-container tab-pane fade" id="list-draft" role="tabpanel" aria-labelledby="list-draft-list">
-                    <table class="w-100 w-min-1000" id="draft_product_Table">
+                    <table class="w-100 w-min-1300" id="draft_product_Table">
                       <thead>
                           <tr class="text-dark">
                                   
@@ -1766,7 +1766,7 @@
                   </div>
 
                 <div class="TableWrapper dataTable-container tab-pane fade" id="list-pendingqc" role="tabpanel" aria-labelledby="list-pendingqc-list">
-                  <table class="w-100 w-min-1000" id="pending_product_Table">
+                  <table class="w-100 w-min-1300" id="pending_product_Table">
                     <thead>
                         <tr class="text-dark">
                                 
@@ -2037,7 +2037,7 @@
                 </div>
               
               <div class="TableWrapper dataTable-container tab-pane fade" id="list-hold" role="tabpanel" aria-labelledby="list-violation-list">
-                <table class="w-100 w-min-1000" id="hold_product_Table">
+                <table class="w-100 w-min-1300" id="hold_product_Table">
                   <thead>
                       <tr class="text-dark">
                               
@@ -2308,7 +2308,7 @@
               </div>
 
             <div class="TableWrapper dataTable-container tab-pane fade" id="list-deleted" role="tabpanel" aria-labelledby="list-deleted-list">
-              <table class="w-100 w-min-1000" id="deleted_product_Table">
+              <table class="w-100 w-min-1300" id="deleted_product_Table">
                 <thead>
                     <tr class="text-dark">
                             
@@ -2579,7 +2579,7 @@
             </div>
 
             <div class="TableWrapper dataTable-container tab-pane fade" id="list-out-stock" role="tabpanel" aria-labelledby="list-deleted-list">
-              <table class="w-100 w-min-1000" id="out_stock_product_Table">
+              <table class="w-100 w-min-1300" id="out_stock_product_Table">
                 <thead>
                     <tr class="text-dark">
                             
@@ -2850,7 +2850,7 @@
             </div>
 
             <div class="TableWrapper dataTable-container tab-pane fade" id="list-soon-out-stock" role="tabpanel" aria-labelledby="list-deleted-list">
-              <table class="w-100 w-min-1000" id="soon_out_stock_product_Table">
+              <table class="w-100 w-min-1300" id="soon_out_stock_product_Table">
                 <thead>
                     <tr class="text-dark">
                             
@@ -3253,14 +3253,6 @@
  <script src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
 
 <script>
-  
-//  $(document).ready(function () {
-//   // Function to toggle all checkboxes
-//   $('#selectAllCheckbox').on('change', function () {
-//     const isChecked = $(this).prop('checked'); // Check if the "select all" checkbox is checked
-//     $('tbody input[type="checkbox"]').prop('checked', isChecked); // Set all checkboxes to the same state
-//   });
-// });
 
 $(document).on('input', '.cost-price, .selling-price, .special-price', function() {
     var value = $(this).val();
@@ -3352,12 +3344,9 @@ $(document).ready(function() {
 });
 
 
-
-
-
-
-      let registerProTable = document.querySelector('#manage_product_Table');
-      new simpleDatatables.DataTable(registerProTable);
+$('table').each(function () {
+        new simpleDatatables.DataTable(this);
+    });
 
       function replaceArrows() {
   // Select all elements with the page-link class
@@ -3378,9 +3367,6 @@ const paginationObserver = new MutationObserver(replaceArrows);
 document.querySelectorAll(".pagination").forEach(function (pagination) {
   paginationObserver.observe(pagination, { childList: true, subtree: true });
 });
-
-
-
 
 
 $(document).ready(function () {
@@ -3408,7 +3394,6 @@ $(document).ready(function () {
         console.log("Checkboxes unchecked in " + previousTab.attr('id') + ": " + (previousTab.find('input[type="checkbox"]:checked').length === 0 ? "Yes" : "No"));
     });
 });
-
 
 
 $(document).ready(function () {
@@ -3472,11 +3457,6 @@ $(document).ready(function () {
         }
     });
 }
-
-
-
-
-
 
 // Initialize for multiple tables with their specific checkboxes
 $(document).ready(function () {
@@ -3575,14 +3555,7 @@ $('.list-group a').on('click', function () {
     });
 });
 
-
-
-
-
-
-</script> 
-<script>
-  $('.deleteBtn').on('click', function () {
+$('.deleteBtn').on('click', function () {
       Swal.fire({
         title: 'Are you sure?',
         text: "You won't be able to revert this!",
@@ -3599,6 +3572,6 @@ $('.list-group a').on('click', function () {
         }
       });
     });
-</script>
+</script> 
 </body>
 </html>

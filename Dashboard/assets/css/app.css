@@ -1148,14 +1148,13 @@ padding: 15px 20px;
 }
 
 .dataTable-container::-webkit-scrollbar {
-height: 8px; /* Adjust the height of the scrollbar track */
-background-color: #000; /* Background color of the scrollbar track */
+height: 15px; /* Adjust the height of the scrollbar track */
 }
 
 .dataTable-container::-webkit-scrollbar-thumb {
 height: 8px; /* Height matches the track for consistency */
 background-color: #888; /* Color of the scrollbar thumb */
-border-radius: 5px; /* Rounded corners for a smoother look */
+border-radius: 2px; /* Rounded corners for a smoother look */
 }
 
 /* Optional: Add hover effects for better UX */
