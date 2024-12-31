@@ -2606,5 +2606,18 @@ button:disabled{
     height: 48px !important;
   } */
   }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
 
- 
+  
+  #bulkManageModalTable tbody tr td {
+   border-bottom: 0px;
+   border-right: 0px;
+  }
+  
