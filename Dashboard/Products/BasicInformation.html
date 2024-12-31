@@ -607,7 +607,7 @@
 <span class="subHeading-4 p-0"><span class="text-warning">*</span> Authentication Documents</span>
 </div>
 <div class="row uploadfile justify-content-between mt-10">
-<div class="col-2">
+<div class="col-3">
 <label for="uploadImgSecinput" class="uploadFileContainer d-flex flex-column text-center align-items-center">
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
 <path d="M12 15V2M12 2L15 5.5M12 2L9 5.5" stroke="#002882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -615,10 +615,10 @@
 <path d="M8 22H16C18.828 22 20.243 22 21.121 21.122C22 20.242 22 18.829 22 16V15C22 12.172 22 10.758 21.121 9.87895C20.353 9.11095 19.175 9.01395 17 9.00195M7 9.00195C4.825 9.01395 3.647 9.11095 2.879 9.87895C2 10.758 2 12.172 2 15V16C2 18.829 2 20.243 2.879 21.122C3.179 21.422 3.541 21.619 4 21.749" stroke="#002882" stroke-width="1.5" stroke-linecap="round"/>
 <path d="M8 22H16C18.828 22 20.243 22 21.121 21.122C22 20.242 22 18.829 22 16V15C22 12.172 22 10.758 21.121 9.87895C20.353 9.11095 19.175 9.01395 17 9.00195M7 9.00195C4.825 9.01395 3.647 9.11095 2.879 9.87895C2 10.758 2 12.172 2 15V16C2 18.829 2 20.243 2.879 21.122C3.179 21.422 3.541 21.619 4 21.749" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"/>
 </svg>
-<label for="auth_docuument">Upload File</label>
+<span class="text-brand-color">Upload File</span>
 </label>
 <p id="errorContainerUpload"></p>
-<div class="mt-20 d-flex gap-2" id="previewContainer">
+<div class="mt-20 d-flex flex-wrap gap-3" id="previewContainer">
   
 </div>
 <input type="file" class="d-none" multiple="multiple" id="uploadImgSecinput" accept=".jpg,.webp,.pdf,.png,">
@@ -803,15 +803,12 @@ function handleFileUpload(inputId, containerId, errorContainerId) {
         // Add valid file to processedFiles set and display preview
         processedFiles.add(file.name);
 
-        const reader = new FileReader();
-
         // Create a container for the file preview
         const fileContainer = $("<div>")
           .addClass("file-container")
           .css({
             display: "inline-block",
             position: "relative",
-            
           });
 
         const filePreview = $("<div>").addClass("file-preview");
@@ -826,19 +823,45 @@ function handleFileUpload(inputId, containerId, errorContainerId) {
         });
 
         if (file.type.startsWith("image")) {
+          // Handle image preview
           const img = $("<img>")
-            .addClass("w-100px rounded-2")
+            .addClass("rounded-2")
             .css({
-              width: "100px",
+              width: "70px",
+              height: "70px",
               borderRadius: "4px",
             });
 
+          const reader = new FileReader();
           reader.onload = function (e) {
             img.attr("src", e.target.result);
           };
           reader.readAsDataURL(file);
 
           filePreview.append(img);
+        } else if (file.type === "application/pdf") {
+          // Handle PDF preview using a pre-defined image
+          const pdfPreviewImagePath = `../Images/pdf.jpg`;
+          const img = $("<img>")
+            .attr("src", pdfPreviewImagePath)
+            .addClass("rounded-2")
+            .css({
+              width: "70px",
+              height: "70px",
+              borderRadius: "4px",
+            });
+
+            const fileName = $("<p>")
+    .text(file.name)
+    .css({
+      fontSize: "12px",
+      width: "70px",
+      textAlign: "center",
+      marginTop: "5px",
+      wordWrap: "break-word",
+    });
+
+  filePreview.append(img).append(fileName); // Add image and name to the preview
         }
 
         fileContainer.append(filePreview).append(removeBtn);
@@ -875,8 +898,8 @@ function handleFileUpload(inputId, containerId, errorContainerId) {
 }
 
 // Attach event listeners to file inputs
-// handleFileUpload("uploadImgSecinput", "previewContainer", "errorContainerUpload");
-handleFileUpload("uploadImgSecinput", "previewContainer","errorContainerUpload");
+handleFileUpload("uploadImgSecinput", "previewContainer", "errorContainerUpload");
+
         function toggleCheckboxes(source) {
           const checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
           checkboxes.forEach(checkbox => checkbox.checked = source.checked);
@@ -911,10 +934,10 @@ $(document).ready(function () {
 
         if (link.trim() !== '' && iconClass) {
             const linkHtml = `
-                <div class="link-container w-auto socialMedia">
-                    <div class="d-flex gap-5 justify-content-between align-items-center  ">
+                <div class="link-container socialMedia">
+                    <div class="d-flex gap-5 justify-content-between align-items-center w-100 ">
                       <div class="d-flex gap-2">
-                         <span><i class="${iconClass}"></i></span> <!-- Add the icon -->
+                         <span class="d-flex align-items-center"><i class="${iconClass}"></i></span> <!-- Add the icon -->
                         <a class="text-secondary d-flex gap-1" href="${link}" target="_blank">
                             ${link}
                         </a>
@@ -929,6 +952,7 @@ $(document).ready(function () {
             `;
             $('#links-list').append(linkHtml);
             $('#linkGroup input').val(''); // Clear the input field
+            $('#queryCategory').val(null).trigger('change');
         } else if (!iconClass) {
             alert('Please select a social media platform!');
         } else {

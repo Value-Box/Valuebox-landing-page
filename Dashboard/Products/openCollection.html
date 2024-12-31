@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../assets/css/bootstrap5.3.css">
     <link rel="stylesheet" href="../assets/css/app.css">
-
+    <link rel="stylesheet" href="../assets/vendors/simple-datatables/style.css">
     <link rel="stylesheet" href="../assets/select2/css/select2.min.css" /><!--select2 css-->
     <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="../style.css" />
@@ -511,7 +511,7 @@
          </div>
     <div class="row bg-white shadow-sm p-3 mb-5 bg-body rounded m-0 ">
          <h1 class="subHeading p-0">Products</h1>
-        <div class="row p-0">
+        <div class="row p-0 align-items-center">
           <div class="col-5 col-xl-4 d-flex gap-2 p-0">
             <a class="btn-blue h-auto" href="addProduct.html">Add New Product</a>
             <button class="btn-blue text-brand-color border-0 bg-light h-auto shadow-sm " data-bs-target="#addExistingProduct" data-bs-toggle="modal" data-bs-dismiss="modal">Add Existing Product</button>
@@ -539,7 +539,7 @@
          
        <div class="d-flex gap-2 d-flex w-100 p-0">
             <div class="table-container TableWrapper p-0 my-4 w-100">
-                <table class="mediatable w-100">
+                <table class="mediatable datatable w-100">
                         <tbody class="py-5">
                             <tr class="w-100">
                                 <td>
@@ -575,6 +575,7 @@
                                     <path d="M17.375 7.125L7.625 16.875M7.625 7.125L17.375 16.875" stroke="#999999" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
                                   </svg></td>
                                </tr>
+                               
                            </tbody>
                          </table>
                        </div>
@@ -595,7 +596,7 @@
       </div>
       <div class="modal-body d-flex flex-column gap-3 p-0">
         <div class="table-container TableWrapper p-0 my-4 w-100">
-          <table class="mediatable mb-0 w-100 table table-bordered">
+          <table class="mediatable datatable mb-0 w-100 table table-bordered">
             <thead>
               <tr>
                 <th><input class="mediacheckBox form-check-input master-checkbox" type="checkbox" id="product1"> <span class="ms-2">Product Name</span></th>
@@ -645,6 +646,8 @@
     </div>
   </div>
 </div>
+
+    <script src="../assets/vendors/simple-datatables/simple-datatables.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/jquery/jquery.min.js"></script><!-- jQuery js -->
     <script src="../assets/select2/js/select2.min.js"></script><!-- select2 js -->
@@ -661,6 +664,32 @@
 
     // Initialize
     $(document).ready(() => handleCheckbox('.master-checkbox', '.row-checkbox'));
+
+    $('.datatable').each(function () {
+        new simpleDatatables.DataTable(this); // Initialize DataTable for each table with the class "datatable"
+    });
+    $('.datatable').first().find('thead').remove();
+
+
+    function replaceArrows() {
+  // Select all elements with the page-link class
+  document.querySelectorAll(".page-link").forEach(function (link) {
+    if (link.innerHTML === "‹") {
+      link.innerHTML = "Previous"; // Replace left arrow with "Previous"
+    } else if (link.innerHTML === "›") {
+      link.innerHTML = "Next"; // Replace right arrow with "Next"
+    }
+  });
+}
+
+// Call this function once on page load
+replaceArrows();
+
+// Observe for changes in pagination to handle dynamic updates
+const paginationObserver = new MutationObserver(replaceArrows);
+document.querySelectorAll(".pagination").forEach(function (pagination) {
+  paginationObserver.observe(pagination, { childList: true, subtree: true });
+});
     </script>
 </body>
 </html>

@@ -1416,7 +1416,8 @@ line-height: 32px;
  }
  .socialMedia{
   display: flex;
-padding: 10px 20px;
+  width: 32.87%;
+padding: 10px 10px;
 align-items: center;
 gap: 12px;
 border-radius: 5px;
@@ -1432,11 +1433,9 @@ font-family: Sarabun;
 font-size: 16px;
 font-style: normal;
 font-weight: 500;
-line-height: 24px; /* 150% */
+line-height: 15px; /* 150% */
  }
-#linkGroup{
 
-}
 .basicInformationNote p{
   color: var(--Natural-Color-60, #666);
 
@@ -2565,8 +2564,12 @@ button:disabled{
 .socialMediaCrossbtn{
   border-radius: 50%;
   border: 1px solid gray;
-  font-size: 12px;
- 
+  font-size: 16px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .social-icon {
         font-size: 20px;
