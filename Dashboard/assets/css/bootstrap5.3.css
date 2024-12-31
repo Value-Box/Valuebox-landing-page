@@ -7695,6 +7695,9 @@ fieldset:disabled .btn {
 .h-25 {
   height: 25% !important;
 }
+.h-38{
+  height: 38px;
+}
 .h-50 {
   height: 50% !important;
 }
