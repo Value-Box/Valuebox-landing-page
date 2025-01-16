@@ -662,37 +662,30 @@ $("#costPrice").on("input", function () {
           text: "Special Price must be less than Selling Price.",
           confirmButtonText: "OK",
       }).then(() => {
-          // Reset Special Price to sellingPrice - 1
           let newSpecialPrice = sellingPrice - 1;
           $("#specialPrice").val(newSpecialPrice);
 
-          // Calculate the new profit percentage
+          // Recalculate profit percentage for Special Price
           if (costPrice > 0 && newSpecialPrice > 0) {
               let profit = newSpecialPrice - costPrice;
               let profitPercentage = (profit / newSpecialPrice) * 100;
-
-              // Update the profit percentage field with the recalculated value
               profitPercentageElement.val(profitPercentage.toFixed(2));
           }
       });
-      return; // Stop further execution
+      return;
   }
 
-  // Automatic Profit Percentage Calculation
-  if (costPrice > 0 && sellingPrice > 0) {
-      let profit = sellingPrice - costPrice;
-      let profitPercentage = (profit / sellingPrice) * 100;
-
-      // Update profit percentage field
-      profitPercentageElement.val(profitPercentage.toFixed(2));
-  }
-
-  if (costPrice > 0 && specialPrice > 0) {
-      let profit = specialPrice - costPrice;
-      let profitPercentage = (profit / specialPrice) * 100;
-
-      // Update profit percentage field if Special Price exists
-      profitPercentageElement.val(profitPercentage.toFixed(2));
+  // Recalculate profit percentage without changing Selling Price
+  if (costPrice > 0) {
+      if (specialPrice > 0) {
+          let profit = specialPrice - costPrice;
+          let profitPercentage = (profit / specialPrice) * 100;
+          profitPercentageElement.val(profitPercentage.toFixed(2));
+      } else if (sellingPrice > 0) {
+          let profit = sellingPrice - costPrice;
+          let profitPercentage = (profit / sellingPrice) * 100;
+          profitPercentageElement.val(profitPercentage.toFixed(2));
+      }
   }
 });
 
@@ -833,7 +826,7 @@ function calculatPricing() {
   if (!specialPrice && manualProfitPercentage > 0) {
       let profitMargin = manualProfitPercentage / 100;
       sellingPrice = costPrice / (1 - profitMargin);
-      $("#sellingPrice").val(sellingPrice.toFixed(2));
+      // $("#sellingPrice").val(sellingPrice.toFixed(2));
       profitElement.text((sellingPrice - costPrice).toFixed(2));
   }
 }
