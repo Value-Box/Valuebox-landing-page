@@ -12501,6 +12501,7 @@ fieldset:disabled .btn {
     position: absolute;
     right: 10px;
     top: 10px;
+    width: 100%;
   }
   .circle-2 {
     background-color: var(--bs-orange-40);
@@ -12783,6 +12784,16 @@ background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
 .overflow-y{
   overflow-y: hidden;
 }
+@media (min-width: 1454px) {
+  .flex-2xl-row {
+      flex-direction: row !important;
+  }
+}
+@media (max-width: 1454px) {
+  .flex-2xl-row {
+      flex-direction: column !important;
+  }
+}
   @media(max-width:1400px){
     .heading-one {
       font-size: clamp(20px, 4vw, 24px);
@@ -12993,8 +13004,8 @@ background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
     }
     .circle {
       background-color: var(--bs-orange-40);
-      width: 315px;
-      height: 315px;
+      width: 250px;
+      height: 250px;
       border-radius: 50%;
       position: absolute;
       top: 12px;
@@ -13006,6 +13017,7 @@ background: var(--Primary-Color-Dark-Blue-10, #E6EAF3);
       border-radius: 50%;
       position: absolute;
     }
+
     .top-rouned-btn{
     padding: 8px;
     font-size: 18px;

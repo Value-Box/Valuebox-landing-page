@@ -648,6 +648,55 @@ $("#profitPercentage").on("input", function () {
 }
 });
 
+$("#costPrice").on("input", function () {
+  let sellingPrice = parseFloat($("#sellingPrice").val()) || 0;
+  let specialPrice = parseFloat($("#specialPrice").val()) || 0;
+  let costPrice = parseFloat($("#costPrice").val()) || 0;
+  let profitPercentageElement = $("#profitPercentage");
+
+  // Validate Special Price
+  if (specialPrice >= sellingPrice && sellingPrice > 0) {
+      Swal.fire({
+          icon: "error",
+          title: "Invalid Special Price",
+          text: "Special Price must be less than Selling Price.",
+          confirmButtonText: "OK",
+      }).then(() => {
+          // Reset Special Price to sellingPrice - 1
+          let newSpecialPrice = sellingPrice - 1;
+          $("#specialPrice").val(newSpecialPrice);
+
+          // Calculate the new profit percentage
+          if (costPrice > 0 && newSpecialPrice > 0) {
+              let profit = newSpecialPrice - costPrice;
+              let profitPercentage = (profit / newSpecialPrice) * 100;
+
+              // Update the profit percentage field with the recalculated value
+              profitPercentageElement.val(profitPercentage.toFixed(2));
+          }
+      });
+      return; // Stop further execution
+  }
+
+  // Automatic Profit Percentage Calculation
+  if (costPrice > 0 && sellingPrice > 0) {
+      let profit = sellingPrice - costPrice;
+      let profitPercentage = (profit / sellingPrice) * 100;
+
+      // Update profit percentage field
+      profitPercentageElement.val(profitPercentage.toFixed(2));
+  }
+
+  if (costPrice > 0 && specialPrice > 0) {
+      let profit = specialPrice - costPrice;
+      let profitPercentage = (profit / specialPrice) * 100;
+
+      // Update profit percentage field if Special Price exists
+      profitPercentageElement.val(profitPercentage.toFixed(2));
+  }
+});
+
+
 $("#costPriceErr").css('display','none')
 // Calculate Pricing
 function calculatPricing() {
@@ -665,7 +714,7 @@ function calculatPricing() {
       profitElement.text("0");
       // $("#sellingPrice").val("");
       // $("#specialPrice").val("");
-      profitPercentageElement.val("0");
+      // profitPercentageElement.val("0");
       $("#costPriceErr").css('display','block')
       return;
   }else{
@@ -730,17 +779,6 @@ function calculatPricing() {
       profitPercentageElement.val("0");
       return; // Stop further execution
   }
-    // if (sellingPrice > specialPrice) {
-    //     Swal.fire({
-    //         icon: "error",
-    //         title: "Invalid Selling Price",
-    //         text: "Selling Price must be greater than or equal to the Special Price!",
-    //         confirmButtonText: "OK",
-    //     }).then(() => {
-    //         $("#sellingPrice").focus(); // Focus the Selling Price input
-    //     });
-    //     return; // Stop further execution
-    // }
 
     let profit = sellingPrice - costPrice;
     let profitPercentageAuto = ((sellingPrice - costPrice) / sellingPrice) * 100;
