@@ -653,6 +653,7 @@ $("#costPrice").on("input", function () {
   let specialPrice = parseFloat($("#specialPrice").val()) || 0;
   let costPrice = parseFloat($("#costPrice").val()) || 0;
   let profitPercentageElement = $("#profitPercentage");
+  let profitElement = $("#Profit");
 
   // Validate Special Price
   if (specialPrice >= sellingPrice && sellingPrice > 0) {
@@ -681,12 +682,15 @@ $("#costPrice").on("input", function () {
           let profit = specialPrice - costPrice;
           let profitPercentage = (profit / specialPrice) * 100;
           profitPercentageElement.val(profitPercentage.toFixed(2));
+          profitElement.text((specialPrice - costPrice).toFixed(2));
       } else if (sellingPrice > 0) {
           let profit = sellingPrice - costPrice;
           let profitPercentage = (profit / sellingPrice) * 100;
           profitPercentageElement.val(profitPercentage.toFixed(2));
+          profitElement.text((sellingPrice - costPrice).toFixed(2));
       }
   }
+
 });
 
 
